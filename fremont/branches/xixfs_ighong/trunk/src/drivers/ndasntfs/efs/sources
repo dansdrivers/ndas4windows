@@ -1,0 +1,40 @@
+!IF 0
+
+Copyright (c) 1989  Microsoft Corporation
+
+!ENDIF
+
+TARGETNAME=efs
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+MSC_WARNING_LEVEL=/W3 /WX
+
+INCLUDES=$(INCLUDES);$(IFSKIT_INC_PATH);$(DDK_INC_PATH)
+
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\base\inc
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\base\ntos\inc
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\public\internal\base\inc
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\public\internal\ds\inc
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\public\internal\ds\inc\crypto
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\public\internal\net\inc
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\public\internal\sdktools\inc
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\public\internal\drivers\inc
+
+INCLUDES=$(INCLUDES);$(NDAS_INC_PATH)
+INCLUDES=$(INCLUDES);$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel
+
+SOURCES=efs.c   \
+        efs.rc  \
+        create.c \
+        control.c \
+        efsrtl.c \
+        efsrtlsp.c \
+        encrypt.c
+
+
+
+
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n

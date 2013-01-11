@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Module Id="NDASMSM" 
+		Guid="$(var.TargetProductCode)"
+		Language="$(var.TargetLanguage)"
+		Version="$(var.TargetVersion)">
+
+		<Package Id="????????-????-????-????-????????????" 
+			Description="$(loc.Description) $(var.TargetDisplayVersion)"
+			Comments="$(loc.Comments) $(var.TargetDisplayVersion)" 
+			Manufacturer="$(loc.Manufacturer)" 
+			InstallerVersion="200"
+			SummaryCodepage="$(var.SISCodepage)"
+			Languages="$(var.SISLanguages)"
+			Platforms="$(var.SISPlatforms)" 
+			/>
+
+		<?ifdef Win64Build?>
+		<!-- Win64Build does not require MSVCRTs -->
+		<?else?>
+		<Dependency 
+		   RequiredId="MSVCP60.51D569E3_8A28_11D2_B962_006097C4DE24" 
+		   RequiredLanguage="0" 
+		   RequiredVersion="6.0.8168.0" />
+
+		<Dependency
+		   RequiredId="MSVCRT.51D569E0_8A28_11D2_B962_006097C4DE24"
+		   RequiredLanguage="0" />
+		<?endif?>
+
+		<Configuration
+			DefaultValue="INSTALLDIR"
+			DisplayName="NDAS System Component Directory"
+			Description="This specifies the directory for NDAS service and API DLL binaries."
+			Format="Text"
+			Name="DIR_RETARGET_NDAS" 
+			ContextData="NdasMsmRedistDirParent"
+			NonNullable="yes"
+			/>
+
+		<Configuration
+			DefaultValue="NdasSysCompDir.D790633D_974B_4B0F_A30A_2D4CE2B4F532"
+			DisplayName="NDAS Drivers Parent Directory"
+			Description="This specifies the parent directory of the driver source directory."
+			Format="Text"
+			Name="DIR_RETARGET_NDAS_DRIVERS" 
+			ContextData="NdasMsmDriverDirParent"
+			NonNullable="yes"
+			/>
+
+		<Configuration
+			DefaultValue="DRIVERS:Drivers"
+			DisplayName="NDAS Drivers Directory Name"
+			Description="This specifies the name of the driver source directory."
+			Format="Text"
+			Name="DIR_RENAME_NDAS_DRIVERS" 
+			ContextData="NdasMsmDriverDirName"
+			NonNullable="yes"
+			/>
+
+		<Substitution
+			Table="Directory"
+			Row="NdasRedist"
+			Column="Directory_Parent"
+			Value="[=DIR_RETARGET_NDAS]"
+			/>
+
+		<Substitution
+			Table="Directory"
+			Row="NdasDriverParentDir"
+			Column="Directory_Parent"
+			Value="[=DIR_RETARGET_NDAS_DRIVERS]"
+			/>
+
+		<Substitution
+			Table="Directory"
+			Row="NdasDriverParentDir"
+			Column="DefaultDir"
+			Value="[=DIR_RENAME_NDAS_DRIVERS]"
+			/>
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="NdasRedist" Name=".">
+				<Directory Id="NdasSysCompDir" Name=".">
+					<Directory Id="NdasDriverParentDir" Name="DRIVERS" SourceName="Drivers">
+						<Directory Id="NdasDriverDir" Name="."/>
+					</Directory>
+				</Directory>
+			</Directory>
+			<!-- 
+			Use of SystemFolder is preferred, WiX should change this to SystemFolder.MODID
+			As of 2.0.2912.0, WiX has a bug not to modularize SystemFolder property.
+			As a workaround, we are using SystemFolder_ , which mergemod.dll will
+			generate a custom action also. 
+			-->
+			<Directory Id="SystemFolder_">
+			</Directory>
+		</Directory>
+
+		<!-- 
+		<FragmentRef Id="NDASMSM_Error" /> 
+		<FragmentRef Id="NDASMSM_ActionText" />
+		-->
+		<FragmentRef Id="NDASMSM_CustomActions" />
+		<FragmentRef Id="NDASMSM_InstallExecuteSequence" />
+		<FragmentRef Id="NDASMSM_InstallUISequence" />
+		<FragmentRef Id="NDASMSM_Components" />
+
+		<ComponentRef Id="NDAS_INSTALLINFO" />
+		<ComponentRef Id="NDAS_CUSTOMINFO" />
+		<ComponentRef Id="RunOnceWorkaround" />
+		<ComponentRef Id="NDAS_NDASSVC_EXE" />
+		<?ifndef NdasSetupFlags_ExcludeNDASIOMGDLL ?>
+		<ComponentRef Id="NDAS_NDASIOMG_DLL" />
+		<?endif?>
+		<ComponentRef Id="NDAS_NDASUSER_DLL" />
+		<ComponentRef Id="NDAS_NDASOP_DLL" />
+		<ComponentRef Id="NDAS_NDASMSG_DLL" />
+		<ComponentRef Id="NDAS_NDASCOMM_DLL" />
+		<ComponentRef Id="NDAS_NDASNIF_DLL" />
+		<ComponentRef Id="NDAS_NDASVOL_DLL" />
+		<ComponentRef Id="NDAS_NDASSCSI_SYS" />
+		<ComponentRef Id="NDAS_NDASBUS_SYS" />
+		<ComponentRef Id="NDAS_LPX_SYS" />
+		<ComponentRef Id="NDAS_LFSFILT_SYS" />
+		<ComponentRef Id="NDAS_ROFILT_SYS" />
+		<?ifdef NdasSetupFlags_HAVE_NDASNTFS ?>
+		<ComponentRef Id="NDAS_NDASNTFS_SYS" />
+		<?endif?>
+		<?ifdef NdasSetupFlags_HAVE_NDASFAT ?>
+		<ComponentRef Id="NDAS_NDASFAT_SYS" />
+		<?endif?>
+		<Property Id="NDAS_INSTALLED_REG_VER">
+			<RegistrySearch 
+				Id="RsInstalledNdasVersion"
+				Root="HKLM"
+				Key="Software\NDAS\Install"
+				Type="raw"
+				Name="ProductVersion" />
+		</Property>
+		<Property Id="NDAS_INSTALLED_REG_TAG">
+			<RegistrySearch 
+				Id="RsInstalledNdasVersionTag"
+				Root="HKLM"
+				Key="Software\NDAS\Install"
+				Type="raw"
+				Name="ProductReleaseTag" />
+		</Property>
+		<Property Id="NDAS_INSTALLED_MSM_REG_VER">
+			<RegistrySearch 
+				Id="RsInstalledNdasMsmVersion"
+				Root="HKLM"
+				Key="Software\NDAS\Install"
+				Type="raw"
+				Name="MsmVersion" />
+		</Property>
+		<Property Id="NDAS_INSTALLED_MSM_REG_TAG">
+			<RegistrySearch 
+				Id="RsInstalledNdasMsmVersionTag"
+				Root="HKLM"
+				Key="Software\NDAS\Install"
+				Type="raw"
+				Name="MsmReleaseTag" />
+		</Property>
+
+		<Property Id="NdasMsmVersion" Value="$(var.TargetVersion)" />
+		<Property Id="NdasMsmReleaseTag" Value="NDASSCMSM" />
+
+		<!-- <IgnoreModularization Name="NDAS_DONT_PREREMOVE_DRIVERS" Type="Property" /> -->
+		<!-- <IgnoreModularization Name="NDAS_SAFE_UPGRADE" Type="Property" /> -->
+		<IgnoreModularization Name="NDASMSM_USE_SAFE_UPGRADE" Type="Property" />
+		<IgnoreModularization Name="NDASMSM_NO_DRIVER_REMOVE" Type="Property" />
+		<IgnoreModularization Name="NDASMSM_NO_OEMINF_REMOVE" Type="Property" />
+		<IgnoreModularization Name="NDASMSM_NO_INSTANCE_CHECK" Type="Property" />
+		<IgnoreModularization Name="NDASMSM_AR_SCOPENAME" Type="Property" />
+		<IgnoreModularization Name="NDASMSM_EC_KEYFILE" Type="Property" />
+
+		<IgnoreModularization Name="NDAS_INSTALLED_REG_VER" Type="Property" />
+		<IgnoreModularization Name="NDAS_INSTALLED_REG_TAG" Type="Property" />
+		<IgnoreModularization Name="NDAS_INSTALLED_MSM_REG_VER" Type="Property" />
+		<IgnoreModularization Name="NDAS_INSTALLED_MSM_REG_TAG" Type="Property" />
+
+		
+		<!-- Not implemented yet -->
+		<IgnoreModularization Name="NDASMSM_NO_LFSFILT" Type="Property" />
+		<IgnoreModularization Name="NDASMSM_USE_ROFILT" Type="Property" />
+
+		<!-- Internal properties -->
+		<IgnoreModularization Name="CustomActionData" Type="Property" />
+		<IgnoreModularization Name="NdasMsmUpgradeSafeRemove" Type="Property" />
+		<IgnoreModularization Name="NdasCAPrebootRequired" Type="Property" />
+
+		<IgnoreModularization Name="NdasMsmVersion" />
+		<IgnoreModularization Name="NdasMsmReleaseTag" />
+
+	</Module>
+</Wix>
+

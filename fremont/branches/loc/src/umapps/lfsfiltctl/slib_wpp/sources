@@ -1,0 +1,8 @@
+TARGETNAME=liblfsfiltctl_wpp
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+BUILD_PRODUCES=liblfsfiltctl_wpp
+
+ENABLE_WPP=1
+!include ..\sources.inc

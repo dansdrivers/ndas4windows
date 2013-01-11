@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="FullBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <Compile Include="*.wxs" />
+    <LocalizedStringFile Include="*.wxl" />
+  </ItemGroup>
+
+  <!-- Targets -->
+
+  <PropertyGroup>
+    <OutputType Condition="'$(OutputType)'==''">module</OutputType>
+    <OutputName>ndassc</OutputName>
+	<Config Condition="'$(Config)'==''">retail</Config>
+    <DefineConstants>$(DefineConstants);SetupLanguage=0</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Config)'=='retail'">
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Config)'=='fs'">
+    <OutputName>$(OutputName)-fs</OutputName>
+    <DefineConstants>$(DefineConstants);NdasSetupFlags_HAVE_NDASNTFS=yes</DefineConstants>
+    <DefineConstants>$(DefineConstants);NdasSetupFlags_HAVE_NDASFAT=yes</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(SetupDataDir)'!=''">
+	<DefineConstants>$(DefineConstants);SourceDir=$(SetupDataDir)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);$(AdditonalCandleDefines)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <WixProjectRoot>..</WixProjectRoot>
+  </PropertyGroup>
+
+  <!-- import common project targets -->
+  <Import Project="..\bin\msbuild\ndaswix2.targets" />
+
+  <Target Name="PostBuild"
+		  Inputs="$(TargetPath)"
+		  Outputs="$(PostBuildOutput)"
+		  DependsOnTargets="SetPropertiesForPostBuild">
+    <Copy SourceFiles="$(TargetPath)" 
+		  DestinationFiles="$(PostBuildOutput)" />
+  </Target>
+
+  <Target Name="SetPropertiesForPostBuild">
+	<Message Text="ProductVersion=$(MsiProductVersion)" />
+	<CreateProperty Value="_$(MsiProductVersion)">
+	  <Output TaskParameter="Value" PropertyName="ProductVersionSuffix" />
+	</CreateProperty>
+	<CreateProperty Condition="'$(ProductVersionSuffix)'=='_'" Value="">
+	  <Output TaskParameter="Value" PropertyName="ProductVersionSuffix" />
+	</CreateProperty>
+	<CreateProperty Value="$(BinDropDir)\$(OutputName)$(ProductVersionSuffix)$(PlatformSuffix)$(SetupLanguageSuffix)$(TargetExt)">
+	  <Output TaskParameter="Value" PropertyName="PostBuildOutput" />
+	</CreateProperty>
+  </Target>
+
+</Project>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="FullBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <SetupLanguage Condition="'$(SetupLanguage)'==''">en-US</SetupLanguage>
+	<wxldir>.</wxldir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="*.wxs" />
+	<BaseLocalizedStringFile Include="*.wxl" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <DefineConstants Condition="'$(SetupLanguage)'!=''">$(DefineConstants);SetupLanguage=$(SetupLanguage)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<DefineConstants Condition="'$(SetupDataDir)'!=''">$(DefineConstants);SourceDir=$(SetupDataDir)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputType Condition="'$(OutputType)'==''">module</OutputType>
+    <OutputName>ndasscui</OutputName>
+	<Config Condition="'$(Config)'==''">retail</Config>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Config)'=='retail'">
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Config)'=='fs'">
+    <OutputName>$(OutputName)-fs</OutputName>
+    <DefineConstants>$(DefineConstants);NdasSetupFlags_HAVE_NDASNTFS=yes</DefineConstants>
+    <DefineConstants>$(DefineConstants);NdasSetupFlags_HAVE_NDASFAT=yes</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);$(AdditonalCandleDefines)</DefineConstants>
+  </PropertyGroup>
+
+  <!-- be sure to declare WixProjectRoot before importing ndaswix.targets -->
+  <PropertyGroup>
+    <OutputName>$(OutputName)</OutputName>
+    <WixProjectRoot>..</WixProjectRoot>
+  </PropertyGroup>
+
+  <!-- import common project targets -->
+  <!-- <Import Project="..\bin\msbuild\ndaswix.targets" /> -->
+  <Import Project="..\bin\msbuild\ndaswix2.targets" />
+  <Import Project="..\bin\msbuild\codesign.targets" />
+
+  <Target Name="CreateSigningTargets">
+    <CreateItem Include="$(TargetPath)">
+      <Output TaskParameter="Include" ItemName="SigningFile" />
+    </CreateItem>
+  </Target>
+
+  <Target Name="SignTarget" 
+          DependsOnTargets="CreateSigningTargets;SignCode" 
+          Condition="'$(XM_SIGNCODE_CMD)'!=''"/>
+
+  <PropertyGroup>
+    <SetupLanguageSuffix Condition="'$(SetupLanguage)'==''"></SetupLanguageSuffix>
+    <SetupLanguageSuffix Condition="'$(SetupLanguage)'!=''">_$(SetupLanguage)</SetupLanguageSuffix>
+    <SetupLanguageSuffix Condition="'$(SetupLanguage)'=='NEU'"></SetupLanguageSuffix>
+    <SetupLanguageSuffix Condition="'$(SetupLanguage)'=='0'"></SetupLanguageSuffix>
+    <PlatformSuffix Condition="'$(Platform)'==''"></PlatformSuffix>
+    <PlatformSuffix Condition="'$(Platform)'!=''">_$(Platform)</PlatformSuffix>
+  </PropertyGroup>
+
+  <Target Name="PostBuild"
+		  Inputs="$(TargetPath)"
+		  Outputs="$(PostBuildOutput)"
+		  DependsOnTargets="SignTarget;SetPropertiesForPostBuild">
+    <Copy SourceFiles="$(TargetPath)" 
+		  DestinationFiles="$(PostBuildOutput)" />
+  </Target>
+
+  <Target Name="SetPropertiesForPostBuild">
+	<Message Text="ProductVersion=$(MsiProductVersion)" />
+	<CreateProperty Value="_$(MsiProductVersion)">
+	  <Output TaskParameter="Value" PropertyName="ProductVersionSuffix" />
+	</CreateProperty>
+	<CreateProperty Condition="'$(ProductVersionSuffix)'=='_'" Value="">
+	  <Output TaskParameter="Value" PropertyName="ProductVersionSuffix" />
+	</CreateProperty>
+	<CreateProperty Value="$(BinDropDir)\$(OutputName)$(ProductVersionSuffix)$(PlatformSuffix)$(SetupLanguageSuffix)$(TargetExt)">
+	  <Output TaskParameter="Value" PropertyName="PostBuildOutput" />
+	</CreateProperty>
+  </Target>
+
+  <Target Name="PreBuild">
+    <MakeDir Directories="$(ObjectDir)" />
+	<CreateItem Include="$(wxldir)\%(BaseLocalizedStringFile.filename)%(BaseLocalizedStringFile.extension)">
+	  <Output TaskParameter="Include" ItemName="LocalizedStringFile" />
+	</CreateItem>
+  </Target>
+
+</Project>

@@ -1,0 +1,124 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=ndassvc
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+NTTARGETFILE0=mofcomp
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+UMENTRY=wmain
+UMTYPE=console
+INCLUDES=$(NDAS_INC_PATH);$(NDAS_PUBLIC_INC_PATH);$(PSDK_INC_PATH);$(BOOST_INC_PATH)
+USER_INCLUDES=.\inc;..\inc;..\support
+RCOPTIONS=/i $(NDAS_INC_PATH)
+USECXX_FLAG=/Tp
+USE_NATIVE_EH=1
+USE_STL=1
+
+MSC_WARNING_LEVEL=-W3 -Wp64 
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+MSC_OPTIMIZATION=/Ox
+#LINK_TIME_CODE_GENERATION=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+#CRT_VER=80
+!IF "$(CRT_VER)" == "80"
+C_DEFINES=$(C_DEFINES) /D_SECURE_SCL=1
+CRT_INC_PATH=$(XM_VENDOR_PATH)\crt80\inc\crt
+CRT_LIB_PATH=$(XM_VENDOR_PATH)\crt80\lib
+!ENDIF
+
+BUILD_CONSUMES=ndassvc_support
+BUILD_CONSUMES=liblpxtrans_wpp
+BUILD_CONSUMES=libdes
+BUILD_CONSUMES=libscrc32
+BUILD_CONSUMES=liblsbusctl
+BUILD_CONSUMES=liblfsfiltctl_wpp
+BUILD_CONSUMES=librofiltctl
+BUILD_CONSUMES=libndasvol
+
+TARGETLIBS= \
+	..\lib\$(DDKBUILDENV)\*\libndassvc_support.lib \
+	$(NDAS_PUBLIC_LIB_PATH)\ndasop.lib \
+	$(NDAS_PUBLIC_LIB_PATH)\ndascomm.lib \
+	$(NDAS_LIB_PATH)\libndasvol.lib \
+	$(NDAS_LIB_PATH)\liblpxtrans.lib \
+	$(NDAS_LIB_PATH)\libdes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(NDAS_LIB_PATH)\libndasbusctl.lib \
+	$(NDAS_LIB_PATH)\liblfsfiltctl.lib \
+	$(NDAS_LIB_PATH)\librofiltctl.lib \
+	$(NDAS_LIB_PATH)\libndascntenc.lib \
+	$(NDAS_LIB_PATH)\libndassyscfg.lib \
+	$(NDAS_LIB_PATH)\libndasautrs.lib \
+	$(NDAS_LIB_PATH)\libxcrypt.lib \
+	$(NDAS_LIB_PATH)\libxregcfg.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib \
+	$(PSDK_LIB_PATH)\crypt32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(PSDK_LIB_PATH)\iphlpapi.lib \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\gdi32.lib
+
+PRECOMPILED_INCLUDE=stdafx.h
+PRECOMPILED_CXX=1
+
+SOURCES= \
+	ndassvc.rc \
+	ndassvc.cpp \
+	lpxcomm.cpp \
+	ndasdev.cpp \
+	ndasunitdev.cpp \
+	ndasdevreg.cpp \
+	ndaslogdev.cpp \
+	ndaslogdevman.cpp \
+	ndasdevhb.cpp \
+	ndasmain.cpp \
+	ndascmdproc.cpp \
+	ndascmdserver.cpp \
+	ndaspnp.cpp \
+	ndascfg.cpp \
+	ndaseventmon.cpp \
+	ndaseventpub.cpp \
+	ndasix.cpp \
+	sysutil.cpp \
+	ndashixutil.cpp \
+	ndashixcli.cpp \
+	ndashixsrv.cpp \
+	ndasobjs.cpp \
+	ndasautoreg.cpp \
+	ndashostinfocache.cpp \
+	ndasdevcomm.cpp \
+	ndasunitdevfactory.cpp \
+	eventlog.cpp \
+	ndaseventsub.cpp
+
+!IF 0
+!IF $(FREEBUILD)
+!IF $(_NT_TARGET_VERSION) <= 0x500
+WPP_TEMPLATE=um-w2k.tpl
+!ELSE
+WPP_TEMPLATE=um-default.tpl
+!ENDIF
+
+RUN_WPP=$(SOURCES) -um -gen:{$(WPP_TEMPLATE)}*.tmh \
+	-func:XTLTRACE{FLAG=xtlTraceGeneric,LEVEL=TRACE_LEVEL_ERROR}(MSG,...) \
+	-func:XTLTRACE1{FLAG=xtlTraceGeneric}(LEVEL,MSG,...) \
+	-func:XTLTRACE2(FLAG,LEVEL,MSG,...)
+!ENDIF
+!ENDIF

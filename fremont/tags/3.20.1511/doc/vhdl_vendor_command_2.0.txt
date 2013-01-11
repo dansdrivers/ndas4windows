@@ -1,0 +1,73 @@
+	constant VENDOR_SET_MAX_RET_TIME : std_logic_vector(7 downto 0)
+				:= "00000001";
+	constant VENDOR_SET_MAX_CONN_TIME : std_logic_vector(7 downto 0)
+				:= "00000010";
+	constant VENDOR_GET_MAX_RET_TIME : std_logic_vector(7 downto 0)
+				:= "00000011";
+	constant VENDOR_GET_MAX_CONN_TIME : std_logic_vector(7 downto 0)
+				:= "00000100";
+	constant VENDOR_SET_SEMA : std_logic_vector(7 downto 0)
+				:= "00000101";
+	constant VENDOR_FREE_SEMA : std_logic_vector(7 downto 0)
+				:= "00000110";
+	constant VENDOR_GET_SEMA : std_logic_vector(7 downto 0)
+				:= "00000111";
+	constant VENDOR_GET_OWNER_SEMA : std_logic_vector(7 downto 0)
+				:= "00001000";
+	constant VENDOR_SET_DYNAMIC_MAX_CONN_TIME : std_logic_vector(7 downto 0)
+				:= "00001010";
+	constant VENDOR_SET_SUSER_PASSWD : std_logic_vector(7 downto 0)
+				:= "00010001";
+	constant VENDOR_SET_USER_PASSWD : std_logic_vector(7 downto 0)
+				:= "00010010";
+	constant VENDOR_SET_ENC_OPT : std_logic_vector(7 downto 0)
+				:= "00010011";
+	constant VENDOR_SET_STANBY_TIMER : std_logic_vector(7 downto 0)
+				:= "00010100";
+	constant VENDOR_GET_STANBY_TIMER : std_logic_vector(7 downto 0)
+				:= "00010101";
+
+	constant VENDOR_SET_DELAY : std_logic_vector(7 downto 0)
+				:= "00010110";
+	constant VENDOR_GET_DELAY : std_logic_vector(7 downto 0)
+				:= "00010111";
+	constant VENDOR_SET_DYNAMIC_MAX_RET_TIME : std_logic_vector(7 downto 0)
+				:= "00011000";
+	constant VENDOR_GET_DYNAMIC_MAX_RET_TIME : std_logic_vector(7 downto 0)
+				:= "00011001";
+	constant VENDOR_SET_D_ENC : std_logic_vector(7 downto 0)
+				:= "00011010";
+	constant VENDOR_GET_D_ENC : std_logic_vector(7 downto 0)
+				:= "00011011";
+
+	constant VENDOR_SET_MAC : std_logic_vector(7 downto 0)
+				:= "11111110";
+	constant VENDOR_RESET : std_logic_vector(7 downto 0)
+				:= "11111111";
+
+
+super user
+			when VENDOR_SET_MAX_RET_TIME |
+			VENDOR_SET_MAC |
+			VENDOR_SET_MAX_CONN_TIME |
+			VENDOR_SET_SUSER_PASSWD |
+			VENDOR_SET_USER_PASSWD |
+			VENDOR_RESET |
+			VENDOR_SET_ENC_OPT |
+			VENDOR_SET_STANBY_TIMER |
+			VENDOR_GET_MAX_RET_TIME |
+			VENDOR_GET_MAX_CONN_TIME |
+			VENDOR_GET_STANBY_TIMER =>
+
+Normal user
+			when VENDOR_SET_SEMA | VENDOR_FREE_SEMA |
+			VENDOR_GET_SEMA | VENDOR_GET_OWNER_SEMA |
+			VENDOR_SET_DELAY | VENDOR_GET_DELAY | 
+			VENDOR_GET_MAX_RET_TIME |
+			VENDOR_GET_MAX_CONN_TIME |
+			VENDOR_GET_STANBY_TIMER |
+ 			VENDOR_SET_D_ENC |
+ 			VENDOR_GET_D_ENC |
+			VENDOR_SET_DYNAMIC_MAX_RET_TIME |
+			VENDOR_GET_DYNAMIC_MAX_RET_TIME |
+			VENDOR_SET_DYNAMIC_MAX_CONN_TIME =>

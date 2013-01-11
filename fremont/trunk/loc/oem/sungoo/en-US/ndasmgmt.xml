@@ -1,0 +1,1143 @@
+ring id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+    <base><![CDATA[Requested access to the NDAS logical device is failed.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_UNMOUNTED">
+    <base><![CDATA[NDAS logical device is not in a mountable status.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_UNITDEVICE_NOT_MOUNTED">
+    <base><![CDATA[NDAS Unit device is not mounted.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_HOST_INFO_NOT_FOUND">
+    <base><![CDATA[NDAS Host Information cannot be found.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_DEVICE_COMMUNICATION_FAILURE">
+    <base><![CDATA[Communication to the NDAS Device has failed.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_MULTIPLE_WRITE_ACCESS_NOT_ALLOWED">
+    <base><![CDATA[Multiple Write Access is not allowed for the specified NDAS unit device.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_INCOMPATIBLE_HOSTS_FOR_MULTIPLE_WRITE_ACCESS">
+    <base><![CDATA[Incompatible NDAS hosts for multiple write-access are found for the specified NDAS unit device.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NO_MORE_DVD_WRITE_ACCESS_INSTANCE_ALLOWED">
+    <base><![CDATA[No more than constrained instances of DVD Drives as Read/Write mode is allowed.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_CORRUPTED_BIND_INFORMATION">
+    <base><![CDATA[The NDAS device is corrupted and need to be recovered before mounting.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNKNOWN_VENDOR_ID">
+    <base><![CDATA[The NDAS device ID cannot be used with the current version of the software. Upgrade the software to the most recent version or use the vendor-provided software.]]></base>
+    <translation>The NDAS device cannot be used with the current NDAS software version. Please use the newest version from our webpage (www.sungoo.de) and try again.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+    <base><![CDATA[Command version is unsupported.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+    <base><![CDATA[Unsupported Read-only filter version.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SERVICE_PARAMETER">
+    <base><![CDATA[Invalid service parameter.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+    <base><![CDATA[Communication to the NDAS service failed.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+    <base><![CDATA[NDAS Device ID or Key is invalid.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+    <base><![CDATA[NDAS Device ID is invalid.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+    <base><![CDATA[NDAS Device Key is invalid.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base><![CDATA[NDAS Logical device access denied.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+    <base><![CDATA[NDAS Service does not support the requested operation.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+    <base><![CDATA[Operation is invalid to the NDAS service.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+    <base><![CDATA[NDAS Service is terminating.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+    <base><![CDATA[Unsupported NDAS service version.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+    <base><![CDATA[Unsupport NDAS service event version.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+    <base><![CDATA[No more NDAS event callback is available.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+    <base><![CDATA[Invalid NDAS event callback handle.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INTERNAL">
+    <base><![CDATA[Internal error.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_WARNING_CONNECTION_FAIL">
+    <base><![CDATA[Connection failed to the NDAS device.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_COMMUNICATION">
+    <base><![CDATA[Communication error during login process.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_NOT_EXIST.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_NOT_EXIST.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BROKEN_DATA">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_AUTH_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_AUTH_FAILED.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+    <base><![CDATA[Unknown error for login process.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RW_USER_EXIST">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s) with read-write access privilege.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_PROTOCOL">
+    <base><![CDATA[Lanscsi protocol error.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_OPERATION">
+    <base><![CDATA[Invalid operation.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_FAIL">
+    <base><![CDATA[Accessing to the device is failed.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_SINGLE_DISK">
+    <base><![CDATA[The NDAS device must be a single disk to operate this job.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+    <base><![CDATA[The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_BOUND_DISK">
+    <base><![CDATA[The NDAS device must be a bound disk to operate this job.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_DISK_COUNT">
+    <base><![CDATA[Incorrect disk count to bind disks.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_ALREADY_USED">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s).]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+    <base><![CDATA[The NDAS device has invalid bind information to migrate.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_SIZE_LIMIT">
+    <base><![CDATA[The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+    <base><![CDATA[There is too many missing member to replace(repair) in bound disks.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NO_MISSING_MEMBER">
+    <base><![CDATA[There is no missing NDAS device to replace(repair) in bound disks.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_CRITICAL_REPAIR">
+    <base><![CDATA[There was a critical error while replacing(repairing) bound disks.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_REPLACE_TOO_SMALL">
+    <base><![CDATA[Size of a replacement disk is too small.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_UNSUPPORTED">
+    <base><![CDATA[This type of RAID does not support the requested command.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_CAPACITY">
+    <base><![CDATA[The device does not have enough capacity to operate request command.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASVOL_ERROR_NON_NDAS_VOLUME">
+    <base><![CDATA[The specified volume is not related with the NDAS devices.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+    <base><![CDATA[Non-SCSI type device is found.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+    <base><![CDATA[SRB IO CONTROL Error]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+    <base><![CDATA[The NDAS disk is encrypted and the corresponding NDAS system key is not registered in the system.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+    <base><![CDATA[NDAS system key does not match with the NDAS disk key.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+    <base><![CDATA[Invalid CEB CRC.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+    <base><![CDATA[Unsupported CEB Revision.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+    <base><![CDATA[CEB Key Length is invalid.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+    <base><![CDATA[Failed to read CEB.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+    <base><![CDATA[CE key generation failed.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+    <base><![CDATA[A new NDAS Device is found from the network and is being registered.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+    <base><![CDATA[Unsupported hardware version (%2) detected from the NDAS Device (%1).]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+</localization>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        INDX( 	 {'PM            (     è                             À|    € l     ¿|    k u©EÌ ’5jdaÊk u©EÌ(+ükLÌ °      ¡¡              n d a s b i n d . x m l . s v n - b a s e     À|    p Z     ¿|    k u©EÌ ’5jdaÊk u©EÌ(+ükLÌ °      ¡¡              N D A S B I ~ 1 . S V N       Á|    € l     ¿|    ¾ñ!u©EÌ ’5jdaÊ¾ñ!u©EÌto+ükLÌ ð      â              n d a s m g m t . x m l . s v n - b a s e     Á|    p Z     ¿|    ¾ñ!u©EÌ ’5jdaÊ¾ñ!u©EÌto+ükLÌ ð      â             N D A S M G ~ 1 . S V N       Â|    € j     ¿|    ¾ñ!u©EÌ ’5jdaÊ¾ñ!u©EÌÔ×+ükLÌ P      ¸I              n d a s m s g . x m l . s v n - b a s e       Â|    p Z     ¿|    ¾ñ!u©EÌ ’5jdaÊ¾ñ!u©EÌÔ×+ükLÌ P      ¸I              N D A S M S ~ 1 . S V N                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/193/00">
+    <base><![CDATA[Automatic]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/193/01">
+    <base><![CDATA[Changing the user interface language requires application restart. Do you want to restart the application now?]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/193/11">
+    <base><![CDATA[Unavailable]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/193/14">
+    <base><![CDATA[Mounted in Read-only mode]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/193/15">
+    <base><![CDATA[Mounted in Read/Write mode]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/00">
+    <base><![CDATA[Mounting]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/01">
+    <base><![CDATA[Not Mountable]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/02">
+    <base><![CDATA[Unknown Status (0x%1!08X!)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/03">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/04">
+    <base><![CDATA[Dismounting]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/05">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/06">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/08">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/09">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/10">
+    <base><![CDATA[MO Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/11">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/12">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/13">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/14">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/194/15">
+    <base><![CDATA[Online]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/00">
+    <base><![CDATA[Deactivated]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/01">
+    <base><![CDATA[Offline]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/02">
+    <base><![CDATA[Unknown]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/03">
+    <base><![CDATA[NDAS Device %1!d!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/04">
+    <base><![CDATA[(No NDAS Device)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/05">
+    <base><![CDATA[Do not show the confirmation dialog on exit]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/06">
+    <base><![CDATA[Show NDAS Device Status text]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/07">
+    <base><![CDATA[Show Dismount All command]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/08">
+    <base><![CDATA[Options]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/09">
+    <base><![CDATA[Confirmation]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/10">
+    <base><![CDATA[Menu]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/11">
+    <base><![CDATA[You have successfully completed the NDAS device Registration Wizard.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/12">
+    <base><![CDATA[You have successfully registered the NDAS device. \r\n\r\nHowever, the NDAS device is not found and cannot be connected at this time. Please check the NDAS device connection.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/13">
+    <base><![CDATA[You have successfully registered and the NDAS device is connected. \r\n\r\nHowever, there is no mountable NDAS device found at this time. Please check the status from the task bar icon menu.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/14">
+    <base><![CDATA[Remo&ve]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/195/15">
+    <base><![CDATA[Are you sure you want to remove the Write Key?\r\nYou cannot mount this device as Read/Write anymore without the Write Key.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/00">
+    <base><![CDATA[Remove Write Key]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/01">
+    <base><![CDATA[This NDAS device is being used by another host who has the Read/Write access to the NDAS device. And shared-write mode cannot be used at this time.\r\nWould you like to request the Read/Write access of the NDAS device?]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/02">
+    <base><![CDATA[&Properties...]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/03">
+    <base><![CDATA[Please wait while connecting to the host...]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/04">
+    <base><![CDATA[Waiting for a response...]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/05">
+    <base><![CDATA[Unit Device information is not available]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/06">
+    <base><![CDATA[Other]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/07">
+    <base><![CDATA[Mounted]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/08">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/10">
+    <base><![CDATA[Unknown (%1!d!)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/11">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/12">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/13">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/14">
+    <base><![CDATA[MO Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/196/15">
+    <base><![CDATA[Unknown Type (%1!08X!)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/00">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/01">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/02">
+    <base><![CDATA[Member of Aggregated Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/03">
+    <base><![CDATA[Member of Mirrored Disk (Primary)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/04">
+    <base><![CDATA[Member of Mirrored Disk (Secondary)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/05">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/06">
+    <base><![CDATA[Disk Drive (Unrecognized Type %1!04X!)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/07">
+    <base><![CDATA[Unknown Type (0x%1!04X!)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/08">
+    <base><![CDATA[Unknown Unit Device Type]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/09">
+    <base><![CDATA[&Deregister]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/10">
+    <base><![CDATA[None]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/11">
+    <base><![CDATA[Present]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/12">
+    <base><![CDATA[Do not show a confirmation dialog on removing the Write Key]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/13">
+    <base><![CDATA[Do not show a confirmation dialog on deregistering an NDAS device]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/14">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting an NDAS device]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/197/15">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting all of the NDAS devices]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/00">
+    <base><![CDATA[Use Wizard for Registration]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/01">
+    <base><![CDATA[NDAS Device Management is running now.\r\nClick here to register a new NDAS Device to your system.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/02">
+    <base><![CDATA[NDAS Device Management is running]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/03">
+    <base><![CDATA[NDAS Device Management is already running.\r\nClick the task bar icon to show the menu such that you can access the features.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/04">
+    <base><![CDATA[NDAS Device Management is already running]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/05">
+    <base><![CDATA[Access]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/06">
+    <base><![CDATA[Hostname]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/07">
+    <base><![CDATA[Network Address]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/08">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/09">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Not registered)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/10">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Unavailable)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/11">
+    <base><![CDATA[Please wait while mounting a requested NDAS device...]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/12">
+    <base><![CDATA[Please wait while dismounting a requested NDAS device...]]></base>
+    // NetdiskTest.h : main header file for the NETDISKTEST application
+//
+
+#if !defined(AFX_NETDISKTEST_H__8B13DA8C_EFA0_46BF_9B15_B61DC3198BBF__INCLUDED_)
+#define AFX_NETDISKTEST_H__8B13DA8C_EFA0_46BF_9B15_B61DC3198BBF__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#ifndef __AFXWIN_H__
+	#error include 'stdafx.h' before including this file for PCH
+#endif
+
+#include "resource.h"		// main symbols
+
+/////////////////////////////////////////////////////////////////////////////
+// CNetdiskTestApp:
+// See NetdiskTest.cpp for the implementation of this class
+//
+
+class CNetdiskTestApp : public CWinApp
+{
+public:
+	CNetdiskTestApp();
+
+// Overrides
+	// ClassWizard generated virtual function overrides
+	//{{AFX_VIRTUAL(CNetdiskTestApp)
+	public:
+	virtual BOOL InitInstance();
+	//}}AFX_VIRTUAL
+
+// Implementation
+
+	//{{AFX_MSG(CNetdiskTestApp)
+		// NOTE - the ClassWizard will add and remove member functions here.
+		//    DO NOT EDIT what you see in these blocks of generated code !
+	//}}AFX_MSG
+	DECLARE_MESSAGE_MAP()
+};
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+//{{AFX_INSERT_LOCATION}}
+// Microsoft Visual C++ will insert additional declarations immediately before the previous line.
+
+#endif // !defined(AFX_NETDISKTEST_H__8B13DA8C_EFA0_46BF_9B15_B61DC3198BBF__INCLUDED_)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             // Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\NetdiskTest.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NetdiskTest.ico"
+IDI_CIRCLE_GREEN        ICON                    "res\\icon1.ico"
+IDI_CIRCLE_RED          ICON                    "res\\icon2.ico"
+IDI_CIRCLE_WHITE        ICON                    "res\\circle_r.ico"
+IDI_CIRCLE_YELLOW       ICON                    "res\\circle_w.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NetdiskTest"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "NetdiskTest Version 0.1",IDC_STATIC,11,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) Ximeta Technology, 2003",IDC_STATIC,11,25,128,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_NETDISKTEST_DIALOG DIALOGEX 0, 0, 419, 343
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SureNetdisk"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_SEQ0,59,51,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS0,125,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #0",IDC_STATIC_N0,15,55,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ1,59,91,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS1,125,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #1",IDC_STATIC_N1,15,95,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ2,59,131,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS2,125,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #2",IDC_STATIC_N2,15,135,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ3,59,171,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS3,125,171,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #3",IDC_STATIC_N3,15,175,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ4,260,51,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS4,327,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #4",IDC_STATIC_N4,219,55,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ5,260,91,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS5,327,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #5",IDC_STATIC_N5,219,95,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ6,260,131,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS6,327,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #6",IDC_STATIC_N6,219,135,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ7,260,172,62,16,ES_CENTER | ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_PASS7,327,172,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_GROUP
+    LTEXT           "NetDisk #7",IDC_STATIC_N7,219,176,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_GRP_LEFT,7,36,200,172,BS_LEFT
+    PUSHBUTTON      "Refresh",IDC_BUTTON_REFRESH,158,212,94,19
+    LTEXT           "Netdisk Test Ver 2.0.0002",IDC_STATIC_T1,9,9,128,12,0,WS_EX_TRANSPARENT
+    RTEXT           "Copyright (C) Ximeta Technology, 2003-2006",IDC_STATIC_T2,211,9,201,12,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH0,71,73,128,13,ES_RIGHT | ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH1,71,113,128,13,ES_RIGHT | ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH2,71,153,128,13,ES_RIGHT | ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH3,71,193,128,12,ES_RIGHT | ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH4,275,76,128,13,ES_RIGHT | ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH5,275,116,128,13,ES_RIGHT | ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH6,275,154,128,13,ES_RIGHT | ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH7,275,190,128,13,ES_RIGHT | ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT1_LOT,342,234,43,14,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_VISIBLE,WS_EX_RIGHT
+    LTEXT           "LOT",IDC_STATIC,322,239,14,8,NOT WS_VISIBLE
+    GROUPBOX        "",IDC_GRP_RIGHT,210,36,202,172,BS_LEFT
+    EDITTEXT        IDC_EDIT_PASS02,151,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS03,177,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS12,151,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS13,177,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS22,151,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS23,177,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS32,151,171,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS33,177,171,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS42,354,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS43,381,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS52,354,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS53,381,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS62,354,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS63,381,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS72,354,172,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS73,381,172,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_01,15,63,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_02,34,64,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_03,55,64,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_11,14,104,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_12,34,105,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_13,54,105,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_21,15,148,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_22,34,149,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_23,55,149,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_31,16,185,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_32,35,185,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_33,56,185,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_41,215,68,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_42,234,69,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_43,255,69,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_51,215,106,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_52,234,107,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_53,255,107,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_61,216,150,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_62,235,151,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_63,256,151,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_71,215,183,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_72,234,184,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_73,255,184,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    EDITTEXT        IDC_EDIT_DBG,7,248,405,88,ES_AUTOHSCROLL
+    CONTROL         "1 MB",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,13,216,31,10
+    CONTROL         "5 MB",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,64,216,31,10
+    CONTROL         "10 MB",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,115,216,34,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,2,0
+ PRODUCTVERSION 2,0,2,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "NetdiskTest MFC Application"
+            VALUE "FileVersion", "2, 0, 2, 0"
+            VALUE "InternalName", "NetdiskTest"
+            VALUE "LegalCopyright", "Copyright (C) 2003"
+            VALUE "OriginalFilename", "NetdiskTest.EXE"
+            VALUE "ProductName", "NetdiskTest Application"
+            VALUE "ProductVersion", "2, 0, 2, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_NETDISKTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 412
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 336
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About NetdiskTest..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\NetdiskTest.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              // NetdiskTestDlg.cpp : implementation file
+//
+
+#include "stdafx.h"
+#include "NetdiskTest.h"
+#include "NetdiskTestDlg.h"
+//#include "PnpModule.h"
+//#include "UpdateModule.h"
+
+extern HANDLE			hUpdateEvent;
+extern UINT				uiLot;
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+extern CPnpModule				PnpModule;
+extern CUpdateModule			UpdateModule;
+
+BOOL bDlgInitialized = FALSE;
+HICON hIconGreen = NULL;
+HICON hIconRed = NULL;
+HICON hIconWhite = NULL;
+HICON hIconYellow = NULL;
+
+int iTestSize = 0;		// Default : 5 MB
+
+/////////////////////////////////////////////////////////////////////////////
+// CAboutDlg dialog used for App About
+
+class CAboutDlg : public CDialog
+{
+public:
+	CAboutDlg();
+
+// Dialog Data
+	//{{AFX_DATA(CAboutDlg)
+	enum { IDD = IDD_ABOUTBOX };
+	//}}AFX_DATA
+
+	// ClassWizard generated virtual function overrides
+	//{{AFX_VIRTUAL(CAboutDlg)
+	protected:
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
+	//}}AFX_VIRTUAL
+
+// Implementation
+protected:
+	//{{AFX_MSG(CAboutDlg)
+	//}}AFX_MSG
+	DECLARE_MESSAGE_MAP()
+};
+
+CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
+{
+	//{{AFX_DATA_INIT(CAboutDlg)
+	//}}AFX_DATA_INIT
+}
+
+void CAboutDlg::DoDataExchange(CDataExchange* pDX)
+{
+	CDialog::DoDataExchange(pDX);
+	//{{AFX_DATA_MAP(CAboutDlg)
+	//}}AFX_DATA_MAP
+}
+
+BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
+	//{{AFX_MSG_MAP(CAboutDlg)
+		// No message handlers
+	//}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CNetdiskTestDlg dialog
+
+CNetdiskTestDlg::CNetdiskTestDlg(CWnd* pParent /*=NULL*/)
+	: CDialog(CNetdiskTestDlg::IDD, pParent)
+{
+	//{{AFX_DATA_INIT(CNetdiskTestDlg)
+	m_pass0 = _T("");
+	m_pass1 = _T("");
+	m_pass2 = _T("");
+	m_pass3 = _T("");
+	m_pass4 = _T("");
+	m_pass5 = _T("");
+	m_pass6 = _T("");
+	m_pass7 = _T("");
+	m_seq0 = _T("");
+	m_seq1 = _T("");
+	m_seq2 = _T("");
+	m_seq3 = _T("");
+	m_seq4 = _T("");
+	m_seq5 = _T("");
+	m_seq6 = _T("");
+	m_seq7 = _T("");
+	m_eth0 = _T("");
+	m_eth1 = _T("");
+	m_eth2 = _T("");
+	m_eth3 = _T("");
+	m_eth4 = _T("");
+	m_eth5 = _T("");
+	m_eth6 = _T("");
+	m_eth7 = _T("");
+	m_lot = _T("0");
+	m_pass02 = _T("");
+	m_pass03 = _T("");
+	m_pass12 = _T("");
+	m_pass13 = _T("");
+	m_pass22 = _T("");
+	m_pass23 = _T("");
+	m_pass32 = _T("");
+	m_pass33 = _T("");
+	m_pass42 = _T("");
+	m_pass43 = _T("");
+	m_pass52 = _T("");
+	m_pass53 = _T("");
+	m_pass62 = _T("");
+	m_pass63 = _T("");
+	m_pass72 = _T("");
+	m_pass73 = _T("");
+	m_strDBG = _T("");
+	//}}AFX_DATA_INIT
+	// Note that LoadIcon does not require a subsequent DestroyIcon in Win32
+	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+}
+
+void CNetdiskTestDlg::DoDataExchange(CDataExchange* pDX)
+{
+	CDialog::DoDataExchange(pDX);
+	//{{AFX_DATA_MAP(CNetdiskTestDlg)
+	DDX_Control(pDX, IDC_STAT_73, m_ctrlStat73);
+	DDX_Control(pDX, IDC_STAT_72, m_ctrlStat72);
+	DDX_Control(pDX, IDC_STAT_71, m_ctrlStat71);
+	DDX_Control(pDX, IDC_STAT_63, m_ctrlStat63);
+	DDX_Control(pDX, IDC_STAT_62, m_ctrlStat62);
+	DDX_Control(pDX, IDC_STAT_61, m_ctrlStat61);
+	DDX_Control(pDX, IDC_STAT_53, m_ctrlStat53);
+	DDX_Control(pDX, IDC_STAT_52, m_ctrlStat52);
+	DDX_Control(pDX, IDC_STAT_51, m_ctrlStat51);
+	DDX_Control(pDX, IDC_STAT_43, m_ctrlStat43);
+	DDX_Control(pDX, IDC_STAT_42, m_ctrlStat42);
+	DDX_Control(pDX, IDC_STAT_41, m_ctrlStat41);
+	DDX_Control(pDX, IDC_STAT_33, m_ctrlStat33);
+	DDX_Control(pDX, IDC_STAT_32, m_ctrlStat32);
+	DDX_Control(pDX, IDC_STAT_31, m_ctrlStat31);
+	DDX_Control(pDX, IDC_STAT_23, m_ctrlStat23);
+	DDX_Control(pDX, IDC_STAT_22, m_ctrlStat22);
+	DDX_Control(pDX, IDC_STAT_21, m_ctrlStat21);
+	DDX_Control(pDX, IDC_STAT_03, m_ctrlStat03);
+	DDX_Control(pDX, IDC_STAT_02, m_ctrlStat02);
+	DDX_Control(pDX, IDC_STAT_01, m_ctrlStat01);
+	DDX_Control(pDX, IDC_STAT_13, m_ctrlStat13);
+	DDX_Control(pDX, IDC_STAT_12, m_ctrlStat12);
+	DDX_Control(pDX, IDC_STAT_11, m_ctrlStat11);
+	DDX_Text(pDX, IDC_EDIT_PASS0, m_pass0);
+	DDX_Text(pDX, IDC_EDIT_PASS1, m_pass1);
+	DDX_Text(pDX, IDC_EDIT_PASS2, m_pass2);
+	DDX_Text(pDX, IDC_EDIT_PASS3, m_pass3);
+	DDX_Text(pDX, IDC_EDIT_PASS4, m_pass4);
+	DDX_Text(pDX, IDC_EDIT_PASS5, m_pass5);
+	DDX_Text(pDX, IDC_EDIT_PASS6, m_pass6);
+	DDX_Text(pDX, IDC_EDIT_PASS7, m_pass7);
+	DDX_Text(pDX, IDC_EDIT_SEQ0, m_seq0);
+	DDX_Text(pDX, IDC_EDIT_SEQ1, m_seq1);
+	DDX_Text(pDX, IDC_EDIT_SEQ2, m_seq2);
+	DDX_Text(pDX, IDC_EDIT_SEQ3, m_seq3);
+	DDX_Text(pDX, IDC_EDIT_SEQ4, m_seq4);
+	DDX_Text(pDX, IDC_EDIT_SEQ5, m_seq5);
+	DDX_Text(pDX, 

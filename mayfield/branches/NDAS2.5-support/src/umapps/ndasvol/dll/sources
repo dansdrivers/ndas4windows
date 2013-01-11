@@ -1,0 +1,28 @@
+TARGETNAME=ndasvol
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+BUILD_PRODUCES=ndasvol
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+MSC_OPTIMIZATION=/Ox
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+PRECOMPILED_INCLUDE=..\precomp.hpp
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib
+
+SOURCES_USED=..\sources.inc
+!include ..\sources.inc
+
+SOURCES=$(SOURCES) \
+	..\dllentry.cpp \
+	..\ndasvol.rc
+

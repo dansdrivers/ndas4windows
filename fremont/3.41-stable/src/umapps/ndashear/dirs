@@ -1,0 +1,2 @@
+DIRS=dll slib exe
+OPTIONAL_DIRS=dlltest

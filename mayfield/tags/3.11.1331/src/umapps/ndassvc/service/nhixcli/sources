@@ -1,0 +1,44 @@
+TARGETNAME=nhixcli
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=/DUNICODE /D_UNICODE
+INCLUDES=..\;..\..\inc;..\..\support;$(NDAS_INC_PATH);$(NDAS_INC_PATH)\ndas
+RCOPTIONS=/i $(NDAS_SDK_INC_PATH)
+USECXX_FLAG=/TP
+USE_NATIVE_EH=1
+USER_C_FLAGS=/Wp64
+USE_STL=1
+UMENTRY=wmain
+UMTYPE=console
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+PARENT_LIB_PATH=..\..\lib\$(DDKBUILDENV)\*
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib \
+	$(NDAS_LIB_PATH)\lfsfiltctl.lib \
+	$(PARENT_LIB_PATH)\lpxtrans.lib
+
+MSC_WARNING_LEVEL=-W3 -WX
+MSC_OPTIMIZATION=/Oitb2
+
+#PRECOMPILED_INCLUDE=../stdafx.h
+#PRECOMPILED_CXX=1
+
+SOURCES= \
+	main.cpp \
+	../ndashixcli.cpp \
+	../ndashixutil.cpp \
+	../ndashostinfocache.cpp
+

@@ -1,0 +1,4 @@
+EXPORTS
+	NdasFatMsiShutdown PRIVATE
+	NdasNtfsMsiShutdown PRIVATE
+	NdasRofsMsiShutdown PRIVATE

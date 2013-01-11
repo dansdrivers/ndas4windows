@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="" version="" lang="dan" oem="base" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="NDAS_ERROR_INVALID_ID_FORMAT">
+    <base><![CDATA[NDAS device ID or Key is invalid.]]></base>
+    <translation>NDAS-enhedens ID eller nøgle er ugyldig.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Device Entry Not Found.]]></base>
+    <translation>NDAS-enhedens registrering ikke fundet.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNITDEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Unit Device Entry Not Found.]]></base>
+    <translation>Den ønskede slot bruges af en anden enhed.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Logical Device Entry Not Found.]]></base>
+    <translation>Den logiske NDAS-enheds registrering ikke fundet.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_DISABLE_MOUNTED_DEVICE">
+    <base><![CDATA[Disabling the NDAS device containing any of the mounted unit device is not allowed.]]></base>
+    <translation>Deaktivering af NDAS-enheden, der indeholder en af de tilsluttede enheder, er ikke tilladt.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_UNREGISTER_ENABLED_DEVICE">
+    <base><![CDATA[Unregistering an enabled NDAS device is not permitted.]]></base>
+    <translation>Det er ikke tilladt at afregistrere en aktiveret NDAS-enhed.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SLOT_NUMBER">
+    <base><![CDATA[Invalid NDAS slot number.]]></base>
+    <translation>Ugyldigt NDAS-slotnummer.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_SLOT_ALREADY_OCCUPIED">
+    <base><![CDATA[Requested slot is used by another device.]]></base>
+    <translation>Den ønskede slot bruges af en anden enhed.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_DEVICE_ENTRY">
+    <base><![CDATA[The requested NDAS device already exists.]]></base>
+    <translation>Den ønskede NDAS-enhed eksisterer allerede.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_SLOT_FULL">
+    <base><![CDATA[No more NDAS device slot is available.]]></base>
+    <translation>Der er ikke flere tilgængelige NDAS-enhedsslots.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_INITIALIZED">
+    <base><![CDATA[NDAS Logical device is not initialized.]]></base>
+    <translation>Den logiske NDAS-enhed er ikke initialiseret.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MEMBER_MISSING">
+    <base><![CDATA[Some NDAS logical device members are missing in the entry.]]></base>
+    <translation>Nogle elementer i den logiske NDAS-enhed mangler i reistreringen.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_MOUNTED">
+    <base><![CDATA[NDAS Logical device is not mounted.]]></base>
+    <translation>Den logiske NDAS-enhed er ikke tilsluttet.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_CONFLICT_LOGICALDEVICE_ENTRY">
+    <base><![CDATA[NDAS Logical device entry is conflicts with existing entries.]]></base>
+    <translation>Den logiske NDAS-enheds registrering er i konflikt med eksisterende registreringer.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_LOGICALDEVICE_ENTRY">
+    <base><![CDATA[The requested NDAS logical device already exists.]]></base>
+    <translation>Den ønskede logiske NDAS-enhed eksisterer allerede.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_SLOT_FULL">
+    <base><![CDATA[No more NDAS logical device slot is available.]]></base>
+    <translation>Der er ikke flere tilgængelige slots til den logiske NDAS-enhed.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNSUPPORTED_LOGICALDEVICE_TYPE">
+    <base><![CDATA[Unsupported NDAS logical device type.]]></base>
+    <translation>Denne type logiske NDAS-enhed understøttes ikke.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_INVALID_BIND_INFORMATION">
+    <base><![CDATA[The bind information in NDAS device is invalid.]]></base>
+    <translation>Bindingsinformation i NDAS-enheden er ugyldig.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MODIFIED_BIND_INFORMATION">
+    <base><![CDATA[The bind information in NDAS device is changed.]]></base>
+    <translation>Bindingsinformation i NDAS-enheden er ændret.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base><![CDATA[Granted access for the NDAS logical device is insufficient to complete the operation.]]></base>
+    <translation>Adgangsgivning til den logiske NDAS-enhed er utilstrækkelig til at gennemføre handling.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+    <base><![CDATA[Requested access to the NDAS logical device is failed.]]></base>
+    <translation>Ønsket adgang til den logiske NDAS-enhed mislykket.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_UNMOUNTED">
+    <base><![CDATA[NDAS logical device is not in a mountable status.]]></base>
+    <translation>Den logiske NDAS-enhed er ikke i tilslutningstilstand.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_UNITDEVICE_NOT_MOUNTED">
+    <base><![CDATA[NDAS Unit device is not mounted.]]></base>
+    <translation>NDAS-enheden er ikke tilsluttet.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_HOST_INFO_NOT_FOUND">
+    <base><![CDATA[NDAS Host Information cannot be found.]]></base>
+    <translation>NDAS værtsinformation kan ikke findes.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_DEVICE_COMMUNICATION_FAILURE">
+    <base><![CDATA[Communication to the NDAS Device has failed.]]></base>
+    <translation>Mislykket kommunikation til NDAS-enheden.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_MULTIPLE_WRITE_ACCESS_NOT_ALLOWED">
+    <base><![CDATA[Multiple Write Access is not allowed for the specified NDAS unit device.]]></base>
+    <translation>Flere Skrive-adgange er ikke tilladt for den specificerede NDAS-enhed.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_INCOMPATIBLE_HOSTS_FOR_MULTIPLE_WRITE_ACCESS">
+    <base><![CDATA[Incompatible NDAS hosts for multiple write-access are found for the specified NDAS unit device.]]></base>
+    <translation>Inkompatible NDAS-værter til multiple write-access er fundet til den specificerede NDAS-enhed.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NO_MORE_DVD_WRITE_ACCESS_INSTANCE_ALLOWED">
+    <base><![CDATA[No more than constrained instances of DVD Drives as Read/Write mode is allowed.]]></base>
+    <translation>Kun tvungne tilfælde af DVD-drev er tilladt som Læs/Skriv-funktion.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_CORRUPTED_BIND_INFORMATION">
+    <base><![CDATA[The NDAS device is corrupted and need to be recovered before mounting.]]></base>
+    <translation>NDAS-enheden er beskadiget og skal genoprettes inden tilslutning.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNKNOWN_VENDOR_ID">
+    <base><![CDATA[The NDAS device ID cannot be used with the current version of the software. Upgrade the software to the most recent version or use the vendor-provided software.]]></base>
+    <translation>NDAS-enhedens ID kan ikke bruges med den aktuelle version af softwaren. Opgrader softwaren til den seneste version eller brug den software, som leveres af forhandleren.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+    <base><![CDATA[Command version is unsupported.]]></base>
+    <translation>Kommandoversionen understøttes ikke.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>Den ønskede funktion understøttes ikke.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+    <base><![CDATA[Unsupported Read-only filter version.]]></base>
+    <translation>Ikke-understøttet skrivebeskyttet filterversion</translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SERVICE_PARAMETER">
+    <base><![CDATA[Invalid service parameter.]]></base>
+    <translation>Ugyldig serviceparameter.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+    <base><![CDATA[Communication to the NDAS service failed.]]></base>
+    <translation>Mislykket kommunikation til NDAS-servicen.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+    <base><![CDATA[NDAS Device ID or Key is invalid.]]></base>
+    <translation>NDAS-enhedens ID eller nøgle er ugyldig.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+    <base><![CDATA[NDAS Device ID is invalid.]]></base>
+    <translation>NDAS-enhedens ID er ugyldig.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+    <base><![CDATA[NDAS Device Key is invalid.]]></base>
+    <translation>NDAS-enhedens nøgle er ugyldig.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>Ugyldig parameter.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base><![CDATA[NDAS Logical device access denied.]]></base>
+    <translation>Adgang nægtet til den logiske NDAS-enhed.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+    <base><![CDATA[NDAS Service does not support the requested operation.]]></base>
+    <translation>NDAS-service understøtter ikke den ønskede handling.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+    <base><![CDATA[Operation is invalid to the NDAS service.]]></base>
+    <translation>Ugyldig handling for NDAS-service.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+    <base><![CDATA[NDAS Service is terminating.]]></base>
+    <translation>NDAS-service afslutter.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+    <base><![CDATA[Unsupported NDAS service version.]]></base>
+    <translation>Ikke-understøttet NDAS-serviceversion.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+    <base><![CDATA[Unsupport NDAS service event version.]]></base>
+    <translation>Ikke-understøttet NDAS-servicehændelse.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+    <base><![CDATA[No more NDAS event callback is available.]]></base>
+    <translation>Der er ikke flere tilgængelige NDAS-tilbagemeldinger.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+    <base><![CDATA[Invalid NDAS event callback handle.]]></base>
+    <translation>Ugyldig NDAS-tilbagemeldingsbearbejdning.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>Den ønskede funktion understøttes ikke.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INTERNAL">
+    <base><![CDATA[Internal error.]]></base>
+    <translation>Intern fejl.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>Den ønskede funktion understøttes ikke.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>Ugyldig parameter.</translation>
+  </string>
+  <string id="NDASCOMM_WARNING_CONNECTION_FAIL">
+    <base><![CDATA[Connection failed to the NDAS device.]]></base>
+    <translation>Mislykket forbindelse til NDAS-enheden.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_COMMUNICATION">
+    <base><![CDATA[Communication error during login process.]]></base>
+    <translation>Kommunikationsfejl under login-proces</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_NOT_EXIST.]]></base>
+    <translation>Intern fejl : NDASCOMM_ERROR_RI_NOT_EXIST.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.]]></base>
+    <translation>Intern fejl : NDASCOMM_ERROR_RI_BAD_COMMAND.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.]]></base>
+    <translation>Intern fejl : NDASCOMM_ERROR_RI_COMMAND_FAILED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.]]></base>
+    <translation>Intern fejl : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_NOT_EXIST.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BROKEN_DATA">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_AUTH_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_AUTH_FAILED.]]></base>
+    <translation>Intern fejl : NDASCOMM_ERROR_RI_AUTH_FAILED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+    <base><![CDATA[Unknown error for login process.]]></base>
+    <translation>Ukendt fejl for login-proces.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RW_USER_EXIST">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s) with read-write access privilege.]]></base>
+    <translation>NDAS-enheden bruges af anden/andre proces(ser) eller vært(er) med læse-skrive adgangsprivilegium.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation>Ikke tilstrækkelig hukommelse til at udføre job.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_PROTOCOL">
+    <base><![CDATA[Lanscsi protocol error.]]></base>
+    <translation>Lanscsi protokolfejl.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_OPERATION">
+    <base><![CDATA[Invalid operation.]]></base>
+    <translation>Ugyldig handling.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>Den ønskede funktion understøttes ikke.</translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_FAIL">
+    <base><![CDATA[Accessing to the device is failed.]]></base>
+    <translation>Adgang til enheden mislykket.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_SINGLE_DISK">
+    <base><![CDATA[The NDAS device must be a single disk to operate this job.]]></base>
+    <translation>NDAS-enheden skal være en enkelt disk for at udføre dette job.</translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+    <base><![CDATA[The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.]]></base>
+    <translation>NDAS-enheden understøttes ikke. Hvis enheden er et harddiskdrev (HDD), skal enheden konverteres til en enkelt disk inden udførelse af dette job.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_BOUND_DISK">
+    <base><![CDATA[The NDAS device must be a bound disk to operate this job.]]></base>
+    <translation>NDAS-enheden skal være en bunden disk for at udføre dette job.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>Ugyldig parameter.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation>Ikke tilstrækkelig hukommelse til at udføre job.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_DISK_COUNT">
+    <base><![CDATA[Incorrect disk count to bind disks.]]></base>
+    <translation>Ukorrekt diskantal til binding af diske.</translation>
+  </string>
+  <string id="NDASOP_ERROR_ALREADY_USED">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s).]]></base>
+    <translation>NDAS-enheden bruges af anden/andre proces(ser) eller vært(er).</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+    <base><![CDATA[The NDAS device has invalid bind information to migrate.]]></base>
+    <translation>NDAS-enheden har ugyldig bindingsinformation til migrering.</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_SIZE_LIMIT">
+    <base><![CDATA[The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.]]></base>
+    <translation>Den totale størrelse af de bundne diske kan ikke overstige 2TB. Denne negrænsning er pålagt af Windows OS.</translation>
+  </string>
+  <string id="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+    <base><![CDATA[There is too many missing member to replace(repair) in bound disks.]]></base>
+    <translation>Der er for mange manglende elementer, der skal udskiftes(repareres) i bundne diske.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NO_MISSING_MEMBER">
+    <base><![CDATA[There is no missing NDAS device to replace(repair) in bound disks.]]></base>
+    <translation>Der er ingen manglende NDAS-enhed, der skal udskiftes(repareres) i bundne diske.</translation>
+  </string>
+  <string id="NDASOP_ERROR_CRITICAL_REPAIR">
+    <base><![CDATA[There was a critical error while replacing(repairing) bound disks.]]></base>
+    <translation>Der var en kritisk fejl under udskiftning(reparation) af bundne diske.</translation>
+  </string>
+  <string id="NDASOP_ERROR_REPLACE_TOO_SMALL">
+    <base><![CDATA[Size of a replacement disk is too small.]]></base>
+    <translation>Størrelsen af erstatningsdisken er for lille.</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_UNSUPPORTED">
+    <base><![CDATA[This type of RAID does not support the requested command.]]></base>
+    <translation>Denne type RAID understøtter ikke den ønskede kommando.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_CAPACITY">
+    <base><![CDATA[The device does not have enough capacity to operate request command.]]></base>
+    <translation>Enheden har ikke tilstrækkelig kapacitet til at udføre den ønskede kommando.</translation>
+  </string>
+  <string id="NDASVOL_ERROR_NON_NDAS_VOLUME">
+    <base><![CDATA[The specified volume is not related with the NDAS devices.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>Den ønskede funktion understøttes ikke.</translation>
+  </string>
+  <string id="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+    <base><![CDATA[Non-SCSI type device is found.]]></base>
+    <translation>Ikke-SCSI-type enhed fundet.</translation>
+  </string>
+  <string id="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+    <base><![CDATA[SRB IO CONTROL Error]]></base>
+    <translation>SRB IO CONTROL fejl</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+    <base><![CDATA[The NDAS disk is encrypted and the corresponding NDAS system key is not registered in the system.]]></base>
+    <translation>NDAS-disken er krypteret og den den tilsvarende NDAS-systemnøgle er ikke registreret in systemet.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+    <base><![CDATA[NDAS system key does not match with the NDAS disk key.]]></base>
+    <translation>NDAS systemnøglen passer ikke til NDAS disknøglen.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+    <base><![CDATA[Invalid CEB CRC.]]></base>
+    <translation>Ugyldig CEB CRC. </translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+    <base><![CDATA[Unsupported CEB Revision.]]></base>
+    <translation>Ikke-understøttet CEB Revision.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+    <base><![CDATA[CEB Key Length is invalid.]]></base>
+    <translation>Længden af CEB-nøglen er ugyldig.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+    <base><![CDATA[Failed to read CEB.]]></base>
+    <translation>Det mislykkedes at læse CEB.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+    <base><![CDATA[CE key generation failed.]]></base>
+    <translation>Generering af CE-nøgle mislykkedes.</translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+    <base><![CDATA[A new NDAS Device is found from the network and is being registered.]]></base>
+    <translation>En ny NDAS-enhed er fundet på netværket og bliver registreret.</translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+    <base><![CDATA[Unsupported hardware version (%2) detected from the NDAS Device (%1).]]></base>
+    <translation>Ikke-understøttet hardwareversion (%2) er registreret fra NDAS-enheden (%1).</translation>
+  </string>
+</localization>

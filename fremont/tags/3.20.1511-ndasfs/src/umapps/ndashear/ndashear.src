@@ -1,0 +1,6 @@
+LIBRARY ndashear
+EXPORTS
+	NdasHeartbeatInitialize @1 NONAME
+	NdasHeartbeatUninitialize @2 NONAME
+	NdasHeartbeatRegisterNotification @3 NONAME
+	NdasHeartbeatUnregisterNotification @4 NONAME

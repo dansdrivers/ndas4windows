@@ -1,0 +1,98 @@
+TARGETNAME=ndasscsi
+TARGETPATH=obj
+
+BUILD_PRODUCES=lanscsiminiport
+BUILD_CONSUMES=lanscsiklib lpxtdi
+
+# We do not support interrupt after NDASDRV 3.07 version.
+# INTERRUPT_SUPPORT1=interruptsupport
+COMPLETION=completion
+
+!IFDEF INTERRUPT_SUPPORT
+TARGETTYPE=DRIVER
+TARGETLIBS=$(DDK_LIB_PATH)\scsiport.lib
+!ELSE
+!  IFDEF COMPLETION 
+TARGETTYPE=MINIPORT
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\scsiport.lib \
+    $(DDK_LIB_PATH)\scsiwmi.lib \
+	$(DDK_LIB_PATH)\ntoskrnl.lib \
+	$(DDK_LIB_PATH)\hal.lib
+!  ELSE
+TARGETTYPE=MINIPORT
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\scsiport.lib \
+    $(DDK_LIB_PATH)\scsiwmi.lib \
+	$(DDK_LIB_PATH)\ntoskrnl.lib \
+	$(DDK_LIB_PATH)\hal.lib
+!  ENDIF
+!ENDIF
+
+!IF $(ALPHA) || $(AXP64) || $(IA64)
+TARGETLIBS=$(TARGETLIBS) $(CRT_LIB_PATH)\libcntpr.lib
+!ENDIF
+
+BUILD_CONSUMES=hash
+BUILD_CONSUMES=aes
+BUILD_CONSUMES=lpxtdi
+BUILD_CONSUMES=lanscsiklib
+
+TARGETLIBS=\
+	$(TARGETLIBS) \
+	$(NDAS_LIB_PATH)\hash.lib \
+	$(NDAS_LIB_PATH)\aes.lib \
+	$(NDAS_DRIVER_LIB_PATH)\lpxtdi.lib \
+	$(NDAS_DRIVER_LIB_PATH)\lanscsiklib.lib
+
+!IFDEF INTERRUPT_SUPPORT
+C_DEFINES=-DSCSIDBG_ENABLED=DBG -DUSE_RTL_BITMAP=1 -DDISABLE_ADAPTER_POWER=0 -DBUGBUG
+C_DEFINES = -D__INTERRUPT__ $(C_DEFINES)
+!ELSE
+!  IFDEF COMPLETION
+C_DEFINES = -D__COMPLETION__
+!  ENDIF
+!ENDIF
+
+C_DEFINES = -D__ALLOCATE_CCB_FROM_POOL__ $(C_DEFINES)
+C_DEFINES = -D__LSMP_MAXIMIZE_DATASIZE__ $(C_DEFINES)
+
+!IF	"$(DDKBUILDENV)"=="fre"
+USER_C_FLAGS=/O2
+!ENDIF
+
+INCLUDES=$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+#
+# Set INI File Version
+#
+INFFILENAME=$(TARGETNAME)
+POST_BUILD_CMD=$(NDAS_TOOLS)\setinfver $(O)\$(TARGETNAME).sys $(INFFILENAME).inf $(O)\$(INFFILENAME).inf
+BINPLACE_FLAGS=$(O)\$(INFFILENAME).inf
+
+SOURCES=control.c  \
+        dispatch.c \
+        enable.c   \
+        enum.c     \
+        init.c     \
+        internal.c \
+        lock.c     \
+        map.c      \
+        pdo.c      \
+        pnp.c      \
+        pnpstop.c  \
+        port.c     \
+        power.c    \
+        prop.c     \
+        remove.c   \
+        utils.c    \
+        wmi.c      \
+        lanscsiminiport.c	\
+        lsmpioctl.c \
+        communication.c	\
+        scsiport.rc
+
+PRECOMPILED_INCLUDE=port.h
+PRECOMPILED_PCH=portpch.pch
+PRECOMPILED_OBJ=portpch.obj

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ndassvc_support"
+	ProjectGUID="{FDDA59D9-1C02-4BC6-BDC0-53E1CBF689A6}"
+	RootNamespace=""
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\ddkbuild -WNET2K chk . -e"
+				ReBuildCommandLine="..\..\..\..\bin\ddkbuild -WNET2K chk . -ceZ"
+				CleanCommandLine="..\..\..\..\bin\ddkbuild -WNET2K chk . -c0"
+				Output="objchk_w2k_x86\i386\ndassup.exe"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\ddkbuild -WNET2K fre . -e"
+				ReBuildCommandLine="..\..\..\..\bin\ddkbuild -WNET2K fre . -ceZ"
+				CleanCommandLine="..\..\..\..\bin\ddkbuild -WNET2K fre . -c0"
+				Output="objfre_w2k_x86\i386\ndassup.exe"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\confmgr.cpp">
+			</File>
+			<File
+				RelativePath=".\pnpevent.cpp">
+			</File>
+			<File
+				RelativePath=".\svchelp.cpp">
+			</File>
+			<File
+				RelativePath=".\syncobj.cpp">
+			</File>
+			<File
+				RelativePath=".\task.cpp">
+			</File>
+			<File
+				RelativePath=".\transport.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\confmgr.h">
+			</File>
+			<File
+				RelativePath=".\extobj.h">
+			</File>
+			<File
+				RelativePath=".\ndastypestr.h">
+			</File>
+			<File
+				RelativePath=".\observer.h">
+			</File>
+			<File
+				RelativePath=".\packetppt.h">
+			</File>
+			<File
+				RelativePath=".\pnpevent.h">
+			</File>
+			<File
+				RelativePath=".\stdafx.h">
+			</File>
+			<File
+				RelativePath=".\stdutils.h">
+			</File>
+			<File
+				RelativePath=".\svchelp.h">
+			</File>
+			<File
+				RelativePath=".\syncobj.h">
+			</File>
+			<File
+				RelativePath=".\task.h">
+			</File>
+			<File
+				RelativePath=".\transport.h">
+			</File>
+			<File
+				RelativePath=".\xguid.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+		</Filter>
+		<File
+			RelativePath=".\makefile">
+		</File>
+		<File
+			RelativePath=".\sources">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

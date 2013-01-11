@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+	<?include config.wxi?>
+
+	<?ifdef WixCustomTableLocBug?>
+	<?define ActionData.NDASFS   = "NDAS File System Mini Filter" ?>
+	<?endif?>
+
+	<Fragment>
+
+		<?ifdef Include.NDASFS?>
+
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.SetupFileSource)">
+			<Component Id="ndasfs" Guid="$(var.NDASFS.GUID)" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasfs.sys" Name="ndasfs.sys" KeyPath="yes" Checksum="yes" />
+				<File Id="ndasfs.inf" Name="ndasfs.inf" Checksum="yes" />
+				<File Id="ndasfs.cat" Name="ndasfs.cat" Checksum="yes" />
+				<Registry Id="ndasfs" Root="HKLM" Key="SOFTWARE\NDAS\Install\OEMINF" Type="string" Name="NDASFS" />
+			</Component>
+		</DirectoryRef>
+
+		<CustomTable Id="xDriverInstall">
+			<Row>
+				<Data Column="Id">StopNDASFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASFS)</Data>
+				<?endif?>
+				<Data Column="Phase">3</Data>
+				<Data Column="Type">StopService</Data>
+				<Data Column="HardwareId">ndasfs</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASFS.Stop)</Data>
+				<Data Column="Condition">(?ndasfs=3) AND ($ndasfs=2 OR $ndasfs=4)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">UninstallNDASFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASFS)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultUninstall</Data>
+				<Data Column="INF">[#ndasfs.inf]</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASFS.Uninstall)</Data>
+				<Data Column="Condition">(?ndasfs=3) AND ($ndasfs=2 OR $ndasfs=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasfs</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">InstallNDASFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASFS)</Data>
+				<?endif?>
+				<Data Column="Phase">2</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultInstall;DefaultUninstall</Data>
+				<Data Column="INF">[#ndasfs.inf]</Data>
+				<Data Column="Flags">2</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASFS.Install)</Data>
+				<Data Column="Condition">($ndasfs=3)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasfs</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">StartNDASFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASFS)</Data>
+				<?endif?>
+				<Data Column="Phase">4</Data>
+				<Data Column="Type">StartService</Data>
+				<Data Column="HardwareId">ndasfs</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASFS.Start)</Data>
+				<Data Column="Condition">($ndasfs=3)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+		</CustomTable>
+
+		<?endif?>
+
+	</Fragment>
+</Wix>

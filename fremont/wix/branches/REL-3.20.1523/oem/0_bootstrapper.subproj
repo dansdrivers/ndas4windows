@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+	<PackageDir />
+	<SupplementsDir>..\supplements\bootstrap</SupplementsDir>
+	<Platform>x86</Platform>
+	<BaseFileDir>$(SupplementsDir)\$(platform)</BaseFileDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<MsiSql>SELECT Value FROM Property WHERE Property = 'ProductLanguage'</MsiSql>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<BaseFile Include="$(BaseFileDir)\*.*" 
+			  Exclude="$(BaseFileDir)\*.template" />
+	<!-- <BaseFile Include="$(BaseFileDir)\setup.exe" /> -->
+	<BaseTemplateFile Include="$(BaseFileDir)\*.template" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<MSIFile Include="$(PackageDir)\*.msi" />
+	<MSTFile Include="$(PackageDir)\*.mst" />
+  </ItemGroup>
+
+  <Target Name="GenerateBootstrapper" 
+		  DependsOnTargets="CopyBootstrapperFiles;
+							CopyTemplateFiles;
+							ConfigureBootstrapper">
+  </Target>
+
+  <Target Name="CopyBootstrapperFiles">
+	<Copy SourceFiles="@(BaseFile)" DestinationFolder="$(PackageDir)" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyTemplateFiles"
+		  Inputs="@(BaseTemplateFile)"
+		  Outputs="@(TemplateFile)"
+		  DependsOnTargets="CreateItemsForCopyTemplateFiles">
+	<Copy SourceFiles="@(BaseTemplateFile)" DestinationFiles="@(TemplateFile)" />
+  </Target>
+
+  <Target Name="CreateItemsForCopyTemplateFiles">
+	<CreateItem Include="$(PackageDir)\%(BaseTemplateFile.filename)">
+	  <Output TaskParameter="Include" ItemName="TemplateFile" />
+	</CreateItem>
+  </Target>
+  
+  <UsingTask TaskName="XIMETA.WriteToINI" AssemblyFile="..\bin\msbuild\XIMETA.Tasks.dll" />
+
+  <Target Name="ReadMSTLanguage"
+		  Inputs="@(MSTFile);@(MSIFile)"
+		  Outputs="$(PackageDir)\setup.ini" >
+	<!-- adjust setup.ini -->
+	<!-- for each mst files, we need to read the ProductLanguage property -->
+	<!-- query is "SELECT Value FROM Property WHERE Property = 'ProductLanguage'" -->
+
+	<XIMETA.WriteToINI 
+	   FileName="$(PackageDir)\setup.ini"
+	   Section="MSI" Key="MSI" Value="@(MSIFile->'%(filename)%(extension)')" />
+	
+	<CreateProperty Value="AdjustingMSI=%(MSIFile.identity);AdjustingINI=$(PackageDir)\setup.ini">
+	  <Output TaskParameter="Value" PropertyName="SubProjectProperties" />
+	</CreateProperty>
+
+	<MSBuild Projects="$(MSBuildProjectFile)"
+			 Targets="SetSetupINIValues"
+			 Properties="$(SubProjectProperties);AdjustingMST=%(MSTFile.identity)" 
+			 Condition="'@(MSTFile)'!=''" />
+  </Target>
+
+  <Target Name="ConfigureBootstrapper" 
+		  DependsOnTargets="ConfigureMSI;ConfigureMST" />
+
+  <Target Name="ConfigureMST" Inputs="" Outputs="__%(MSTFile.identity)__"
+		  Condition="'@(MSTFile)'!=''">
+
+	<CreateItem Include="$(PackageDir)\msiquery.tmp">
+	  <Output TaskParameter="Include" ItemName="TmpDataFile" />
+	</CreateItem>
+
+	<CreateProperty Value="@(MSIFile)">
+	  <Output TaskParameter="Value" PropertyName="TargetMSIFile" />
+	</CreateProperty>
+							 
+	<Exec Command="..\bin\msiquery.exe $(TargetMSIFile) /t %(MSTFile.identity) &quot;$(MsiSql)&quot; > @(TmpDataFile)" />
+
+	<ReadLinesFromFile File="@(TmpDataFile)">
+	  <Output TaskParameter="Lines" PropertyName="MSTLangID" />
+	</ReadLinesFromFile>
+
+	<Message Text="Language ID of @(MSTFile->'%(filename)%(extension)') is $(MSTLangID)." />
+
+	<XIMETA.WriteToINI 
+	   FileName="$(PackageDir)\setup.ini"
+	   Section="MUI" Key="$(MSTLangID)" Value="1" />
+
+	<XIMETA.WriteToINI 
+	   FileName="$(PackageDir)\setup.ini"
+	   Section="MST.$(MSTLangID)" Key="MST1" Value="@(MSTFile->'%(filename)%(extension)')" />
+
+	<Delete Files="@(TmpDataFile)" />
+	
+  </Target>
+
+  <Target Name="ConfigureMSI" Inputs="" Outputs="__%(MSIFile.identity)__">
+	<XIMETA.WriteToINI 
+	   FileName="$(PackageDir)\setup.ini"
+	   Section="MSI" Key="MSI" Value="@(MSIFile->'%(filename)%(extension)')" />
+  </Target>
+  
+  <Target Name="SetSetupINIValues"
+		  Condition="'$(AdjustingMSI)'!='' and
+					 '$(AdjustingMST)'!='' and 
+					 '$(AdjustingINI)'!=''">
+
+	<!-- requires AdjustingMSI, AdjustingMST and AdjustingINI -->
+	<CreateItem Include="$(PackageDir)\msiquery.tmp">
+	  <Output TaskParameter="Include" ItemName="TmpDataFile" />
+	</CreateItem>
+
+	<CreateItem Include="$(AdjustingMST)">
+	  <Output TaskParameter="Include" ItemName="AdjustingMSTFileItem" />
+	</CreateItem>
+
+	<Exec Command="..\bin\msiquery.exe $(AdjustingMSI) /t $(AdjustingMST) &quot;$(MsiSql)&quot; > @(TmpDataFile)" />
+	<ReadLinesFromFile File="@(TmpDataFile)">
+	  <Output TaskParameter="Lines" PropertyName="MSTLangID" />
+	</ReadLinesFromFile>
+
+	<Message Text="Language ID of @(AdjustingMSTFileItem->'%(filename)%(extension)') is $(MSTLangID)." />
+
+	<XIMETA.WriteToINI 
+	   FileName="$(AdjustingINI)"
+	   Section="MUI" Key="$(MSTLangID)" Value="1" />
+
+	<XIMETA.WriteToINI 
+	   FileName="$(AdjustingINI)"
+	   Section="MST.$(MSTLangID)" Key="MST1" Value="@(AdjustingMSTFileItem->'%(filename)%(extension)')" />
+
+	<Delete Files="@(TmpDataFile)" />
+
+  </Target>
+
+</Project>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="_inc_ndas_drivers" ProjectGUID="{878CAB34-D312-442D-A15C-6E2B371C4DD1}" RootNamespace="_inc_ndas_drivers" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+		<Platform Name="x64" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+  <File RelativePath=".\_project.xml" /><Filter Name=".kernel" Filter="" UniqueIdentifier="{F9053ABC-2A9C-460A-BBBA-353229BF7252}"><File RelativePath=".\kernel\cipher.h" /><File RelativePath=".\kernel\devreg.h" /><File RelativePath=".\kernel\kdebug.h" /><File RelativePath=".\kernel\lpxtdiproc.h" /><File RelativePath=".\kernel\lsccb.h" /><File RelativePath=".\kernel\lsklib.h" /><File RelativePath=".\kernel\lslurn.h" /><File RelativePath=".\kernel\lslurnide.h" /><File RelativePath=".\kernel\lsproto.h" /><File RelativePath=".\kernel\lsprotoide.h" /><File RelativePath=".\kernel\lstransport.h" /><File RelativePath=".\kernel\lsutils.h" /><File RelativePath=".\kernel\tcptdiproc.h" /></Filter></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

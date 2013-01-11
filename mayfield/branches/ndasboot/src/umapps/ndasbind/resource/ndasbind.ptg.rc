@@ -1,0 +1,592 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include ""windows.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Refresh Status",             IDM_AGGR_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Tool"
+    BEGIN
+        MENUITEM "&Bind",                       IDM_AGGR_BIND
+        MENUITEM "&Unbind",                     IDM_AGGR_UNBIND
+        MENUITEM "&Copy and Mirror",                 IDM_AGGR_ADDMIRROR
+        MENUITEM "&Recover Bind",                 IDM_AGGR_SYNCHRONIZE
+        MENUITEM "&Reset to single",   IDM_AGGR_SINGLE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "About",                       IDM_HELP_ABOUT
+    END
+END
+
+IDR_CONTEXT_MENU MENU
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "Properties",                  IDM_AGGR_PROPERTY
+    END
+END
+
+IDR_MIRROR_MENU MENU
+BEGIN
+    POPUP "Mirror"
+    BEGIN
+        MENUITEM "&Copy and Mirror",                 IDM_AGGR_ADDMIRROR
+        MENUITEM "&Recover Bind",                 IDM_AGGR_SYNCHRONIZE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ndasbind.ico"
+IDI_NDAGGR_BROKEN       ICON                    "res\\aggr_tv_aggr_bad.ico"
+IDI_NDAGGR_OK           ICON                    "res\\aggr_tv_aggr_normal.ico"
+IDI_ND_SLAVE            ICON                    "res\\aggr_tv_mirror_slave.ico"
+IDI_ND_BADKEY           ICON                    "res\\aggr_tv_netdisk_badkey.ico"
+//IDI_ND_DISABLED         ICON                    "res\\aggr_tv_netdisk_disabled.ico"
+IDI_ND_INUSE            ICON                    "res\\aggr_tv_netdisk_inuse.ico"
+IDI_ND_NOEXIST          ICON                    "res\\aggr_tv_netdisk_noexist.ico"
+//IDI_ND_RO               ICON                    "res\\aggr_tv_netdisk_readonly.ico"
+//IDI_ND_RW               ICON                    "res\\aggr_tv_netdisk_readwrite.ico"
+IDI_NDMIRR_OK           ICON                    "res\\aggr_tv_mirror_normal.ico"
+IDI_NDMIRR_BROKEN       ICON                    "res\\aggr_tv_mirror_broken.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ERROR DIALOGEX 0, 0, 304, 120
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "NDAS Bind Management Error"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,247,100,50,14
+    LTEXT           "{Place Hoder : Error Message}",IDC_ERROR_MESSAGE,37,11,
+                    260,33
+    EDITTEXT        IDC_ERROR_DESCRIPTION,37,48,260,47,ES_MULTILINE |
+                    ES_READONLY | NOT WS_BORDER
+    ICON            "",IDC_ERROR_ICON,7,11,21,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,38,44,260,1
+END
+
+IDD_UNBIND DIALOGEX 0, 0, 191, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Unbind"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDOK,40,145,50,14
+    PUSHBUTTON      "No",IDCANCEL,99,145,50,14
+    CONTROL         "",IDC_LIST_UNBIND,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    33,177,104,WS_EX_STATICEDGE
+    LTEXT           "Data in the following disks will be deleted.\nAre you sure you want to unbind them?",
+                    IDC_STATIC,13,11,152,20
+END
+
+IDD_RECOVER DIALOGEX 0, 0, 230, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "Synchronize"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Bind Type:",IDC_STATIC,15,17,40,8
+    LTEXT           "Type",IDC_TEXT_BIND_TYPE,84,17,100,8
+    LTEXT           "Target:",IDC_STATIC,15,30,54,8
+    LTEXT           "Name",IDC_TEXT_DEST,84,30,100,8
+    GROUPBOX        "",IDC_STATIC,10,7,211,37
+    LTEXT           "{Place Holder : Phase}",IDC_TEXT_PHASE,15,
+                    52,183,8
+    LTEXT           "Time Remaining:",IDC_STATIC,15,61,53,8
+    RTEXT           "MB/s",IDC_STATIC,190,61,19,8
+    PUSHBUTTON      "Start",IDOK,145,93,34,14
+    PUSHBUTTON      "{Place Holder : Cancel & Close}",IDCANCEL,184,93,34,14
+    GROUPBOX        "",IDC_STATIC,10,41,211,47
+    LTEXT           "00:00:00",IDC_TEXT_LEFTTIME,68,61,30,8
+    CONTROL         "",IDC_PROGBAR,"msctls_progress32",WS_BORDER,15,71,199,
+                    13
+    RTEXT           "0.0",IDC_TEXT_RATE,153,61,40,8
+END
+
+IDD_BIND_PAGE1 DIALOGEX 0, 0, 322, 238
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Aggregation",IDC_BIND_TYPE_AGGR, "Button",BS_AUTORADIOBUTTON | WS_GROUP,38,46,150,10
+    CONTROL         "Stripe(RAID 0)",IDC_BIND_TYPE_RAID0,"Button",BS_AUTORADIOBUTTON,38,58,150,10
+    CONTROL         "Mirror(RAID 1)",IDC_BIND_TYPE_RAID1,"Button",BS_AUTORADIOBUTTON,38,69,150,10
+    CONTROL         "RAID4",IDC_BIND_TYPE_RAID4,"Button",BS_AUTORADIOBUTTON,38,80,150,10
+    LTEXT           "Number of disks :",IDC_STATIC,181,133,59,8
+    COMBOBOX        IDC_COMBO_DISKCOUNT,241,130,52,14,CBS_DROPDOWNLIST | CBS_SORT |
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Select a binding type and number of disks to bind",
+                    IDC_STATIC,17,14,160,8
+    GROUPBOX        "Binding type",IDC_STATIC,13,33,288,68
+    GROUPBOX        "Number of disks to bind",IDC_STATIC,13,110,288,54
+END
+
+IDD_BIND_PAGE2 DIALOGEX 0, 0, 322, 238
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT |
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER |
+                    WS_TABSTOP,7,114,132,98
+    CONTROL         "",IDC_DISKLIST,"Static",SS_BLACKRECT,30,7,254,84
+    LTEXT           "Select disks to bind.",IDC_STATIC,8,102,92,10
+    PUSHBUTTON      "",IDC_BTN_ADD,144,139,16,14
+    PUSHBUTTON      "",IDC_BTN_REMOVE,144,158,16,14
+    CONTROL         "",IDC_LIST_BIND,"SysListView32",LVS_REPORT |
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER |
+                    WS_BORDER | WS_TABSTOP,163,114,132,98
+//    PUSHBUTTON      "",IDC_BTN_UP,299,139,16,14
+//    PUSHBUTTON      "",IDC_BTN_DOWN,299,158,16,14
+    LTEXT           "Note : The data on the disks will be deleted once binding is completed.",
+                    IDC_STATIC,9,218,184,8
+END
+
+IDD_SELSOURCE DIALOGEX 0, 0, 191, 127
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Select Source Disk"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,99,106,50,14
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    52,177,46,WS_EX_STATICEDGE
+    LTEXT           "Disks are no long in sync.\nSelect a disk.\nData from the disk you have selected will be copied onto the other disk.",
+                    IDC_STATIC,12,11,152,36
+END
+
+IDD_PROPERTY_PAGE1 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Device Name:",IDC_STATIC,11,21,45,8
+    LTEXT           "Device ID:",IDC_DEVICE_ID,11,39,34,8
+    LTEXT           "Write Key:",IDC_STATIC,11,57,35,8
+    EDITTEXT        IDC_EDIT_NAME,62,18,172,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_ID,62,36,172,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_WRITEKEY,62,54,172,14,ES_AUTOHSCROLL |
+                    ES_READONLY
+    LTEXT           "Capacity:",IDC_STATIC,11,75,32,8
+    EDITTEXT        IDC_EDIT_CAPACITY,62,72,172,14,ES_AUTOHSCROLL |
+                    ES_READONLY
+    GROUPBOX        "Note",IDC_ST_MIGRATE,17,92,205,57,NOT WS_VISIBLE
+    LTEXT           "The disk's binding information has been written by an earlier version of the driver. To convert it into current version's binding information please press 'Migrate' button.",
+                    IDC_TEXT_MIGRATE,23,102,186,26,NOT WS_VISIBLE
+    PUSHBUTTON      "Migrate",IDC_BTN_MIGRATE,161,128,50,14,NOT WS_VISIBLE
+END
+
+IDD_PROPERTY_PAGE2 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_PROPERTY,"SysListView32",LVS_REPORT |
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,17,18,208,130
+END
+
+IDD_ADDMIR DIALOGEX 0, 0, 191, 161
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Add a Mirror Disk"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,137,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,99,137,50,14
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    23,177,104,WS_EX_STATICEDGE
+    LTEXT           "Select a disk to be used as a mirrored disk",IDC_STATIC,12,11,
+                    152,10
+END
+
+IDD_PROPERTY_PAGE3 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "The binding information on the disk cannot be recognized. If you would like to use this disk, convert the binding information using 'initialize' command or install the newer driver.",
+                    IDC_STATIC,22,52,190,42
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,208,178,50,14
+	LTEXT           "NDAS Software",IDC_APPNAME,7,48,251,14
+    LTEXT           "Version %1!s!",IDC_APPVER,7,60,251,8
+    LTEXT           "http://www.ximeta.com",IDC_LINK,7,71,251,8,WS_TABSTOP
+    LTEXT           "All rights reserved.",IDC_STATIC,7,94,251,13
+    GROUPBOX        "Components",IDC_STATIC,7,106,251,67
+    CONTROL         "",IDC_COMPVER,"SysListView32",LVS_REPORT |
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,119,236,47
+    LTEXT           "Copyright \251 2002-2004 XIMETA, Inc.",IDC_COPYWRITE,7,85,
+                    251,9
+    CONTROL         "",IDC_IMAGE,"Static",SS_BLACKRECT,0,0,265,45
+END
+
+IDD_UNBIND_MIRROR DIALOGEX 0, 0, 191, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Unbind"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDOK,40,145,50,14
+    PUSHBUTTON      "No",IDCANCEL,99,145,50,14
+    CONTROL         "",IDC_LIST_UNBIND,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    33,177,104,WS_EX_STATICEDGE
+    LTEXT           "Data on the following disks will be deleted.\nAre you sure you want to unbind them?",
+                    IDC_STATIC,13,11,152,20
+    LTEXT           "The following disks will be unbound.\nAre you sure you want to unbind them?",
+                    IDC_STATIC,13,11,152,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_UNBIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_RECOVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_BIND_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_BIND_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_SELSOURCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_PROPERTY_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_PROPERTY_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_ADDMIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_PROPERTY_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_UNBIND_MIRROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    VK_F1,          IDM_HELP_ABOUT,         VIRTKEY, NOINVERT
+    VK_F5,          IDM_AGGR_REFRESH,         VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  32, 32
+BEGIN
+    BUTTON      IDM_AGGR_BIND
+    BUTTON      IDM_AGGR_UNBIND
+    BUTTON      IDM_AGGR_MIRROR
+    BUTTON      IDM_AGGR_REFRESH
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\ndasbind.bmp"
+IDB_MAINFRAME           BITMAP                  "res\\ndasbind.bmp"
+IDB_DRAG                BITMAP                  "res\\drag.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// IMAGE
+//
+
+IDB_ABOUT_HEADER        IMAGE                   "res\\aboutheader.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Displays program information, version number and copyright\nAbout"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_EXIT                "Quit application\nExit"
+    IDM_AGGR_BIND           "Bind disks\nBind"
+    IDM_AGGR_UNBIND         "Unbind aggregated/mirrored disks into single disks\nUnbind"
+    IDM_AGGR_SINGLE         "Convert the selected disk to a single disk"
+    IDM_AGGR_SYNCHRONIZE    "Recover the recoverable bound disks\nRecover Bind"
+    IDM_AGGR_MIRROR         "Tools"
+    IDM_AGGR_REFRESH        "Refresh"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_AGGR_ADDMIRROR      "Add a mirrored disk to a single disk\nCopy and Mirror"
+    IDS_APPLICATION         "NDAS Bind Management"
+END
+
+STRINGTABLE
+BEGIN
+	IDS_BINDPAGE_CAPTION "NDAS Device Bind Wizard"
+	  IDS_LOGDEV_TYPE "Bind type"
+    IDS_LOGDEV_TYPE_DISK_RAID0 "Disk Stripe(RAID 0)"
+    IDS_LOGDEV_TYPE_DISK_RAID1 "Disk Mirror(RAID 1)"
+    IDS_LOGDEV_TYPE_DISK_RAID2 "Disk (RAID 2)"
+    IDS_LOGDEV_TYPE_DISK_RAID3 "Disk (RAID 3)"
+    IDS_LOGDEV_TYPE_DISK_RAID4 "Disk (RAID 4)"
+    IDS_LOGDEV_TYPE_DISK_RAID5 "Disk (RAID 5)"
+    IDS_LOGDEV_TYPE_AGGREGATED_DISK "Aggregated Disk"
+    IDS_LOGDEV_TYPE_CF_DRIVE "Compact Flash Drive"
+    IDS_LOGDEV_TYPE_DVD_DRIVE "DVD Drive"
+    IDS_LOGDEV_TYPE_MIRRORED_DISK "Mirrored Disk"
+    IDS_LOGDEV_TYPE_MO_DRIVE "MO Drive"
+    IDS_LOGDEV_TYPE_SINGLE_DISK "Disk (Single)"
+    IDS_LOGDEV_TYPE_UNKNOWN_FMT "Unknown Type (0x%1!08X!)"
+    IDS_LOGDEV_TYPE_VIRTUAL_DVD_DRIVE "Virtual DVD Drive"
+    IDS_UNIDEV_TYPE_DISK_EMPTY "Device not found"
+	IDS_STATUS_REFRESH "Refreshing NDAS device status. Please wait..."
+	IDS_BIND_FAIL_AT_SINGLE_NDAS_FMT "A problem occurred while operating on the NDAS device '%1!s!'."
+	IDS_BIND_FAIL "A problem occurred while operating on the NDAS devices."
+	IDS_MAINFRAME_SERVICE_FAIL_AT_START "Failed to retrieve the device list from the service.\nCannot start the application."
+	IDS_MAINFRAME_NO_DISK_TO_MIRROR "There is no disk available to Mirror."
+	IDS_FAIL_TO_ACCESS_EXCLUSIVELY "A Ndas Device is not reachable or is being accessed by other programs/computers."
+	IDS_MAINFRAME_SINGLE_ACCESS_FAIL "Failed to convert the selected disk to a single disk."
+	IDS_MAINFRAME_OLD_VERSION "Mirror built by the earlier version cannot be reestablished."
+	IDS_MAINFRAME_SERVICE_FAIL "Failed to retrieve the device list from the service."
+	IDS_ERROR_TITLE "NDAS Bind Error"
+	IDS_ERROR_NDAS_DESCRIPTION_FMT "Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!"
+	IDS_ERROR_SYSTEM_DESCRIPTION_FMT "Error Code: %1!u! (0x%1!04X!)\r\n%2!s!"
+	IDS_ERROR_NOT_REGISTERD_WRITE_FMT "%1!s! does not have Write access privilege. The NDAS device's Write Key needs to be registered to gain Write access."
+	IDS_WARNING_NOT_NEED_RECOVER "Any defection on the disks are not found."
+	IDS_WARNING_BIND "All of the data will be lost once the disks are bound. Are you sure you want to bind the disks?"
+	IDS_WARNING_BIND_AFTER "Selected disks are successfully bound. You must first mount the disk and then format the disk before using it."
+	IDS_WARNING_UNBIND "All of the data will be lost once the disks are unbound. Are you sure you want to unbind the disks?"
+	IDS_WARNING_UNBIND_AFTER "Selected disks are successfully unbound. You must first mount the disk and then format the disk before using it."
+	IDS_WARNING_SINGLE "All of the data will be lost once the disk is reset to a single disk. Would you like to continue?"
+	IDS_WARNING_SINGLE_AFTER "Selected disk is converted to single disk. You must first mount and then format the disk before using it."
+	IDS_WARNING_ADD_MIRROR "Data on the selected NDAS device will be lost.  Would you like to continue?"
+	IDS_RECOVER_BTN_CANCEL "Cancel"
+	IDS_RECOVER_BTN_CLOSE "Close"
+	IDS_RECOVERDLG_TASK_ADD_MIRROR "Synchronize mirrored devices"
+	IDS_RECOVERDLG_TASK_RECOVER "Recover bound devices"
+	IDS_RECOVERDLG_PHASE_READY "Press the start button to continue."
+	IDS_RECOVERDLG_PHASE_SYNC "Synchronizing devices..."
+	IDS_RECOVERDLG_PHASE_DONE "Synchronization complete."
+	IDS_RECOVERDLG_FAIL "Failed to synchronize devices."
+	IDS_DISKPROPERTYPAGE_CAPTION "Disk Properties"
+	IDS_DISKPROPERTYPAGE_MIGRATE_DISK_NOT_EXIST "All disks bound to this disk should exist."
+	IDS_DISKPROPERTYPAGE_MIGRATE_CONFIRM "Binding information on the disks will be migrated.\nAre you sure you want to migrate the binding information?"
+	IDS_DISKPROPERTYPAGE_MIGRATE_FAIL "Failed to migrate"
+	IDS_DISKPROPERTYPAGE_MIGRATE_FAIL_AT_FMT "Failed to migrate '%1!s!'"
+	IDS_DISKPROPERTYPAGE_MIGRATE_SUCCESS "Migration is successfully finished"
+	IDS_DISKPROPERTYPAGE_WRITEKEY_PRESENT "Present"
+	IDS_DISKPROPERTYPAGE_WRITEKEY_NOT_PRESENT "None"
+	IDS_DISKPROPERTYPAGE_LIST_COL_NAME "Name"
+	IDS_DISKPROPERTYPAGE_LIST_COL_VALUE "Value"
+	IDS_DISKPROPERTYPAGE_SIZE_IN_GB "%1!3d!.%2!02d!GB"
+	IDS_SELECTMIRDLG_NO_DISK_SELECTED "No disk is selected"
+	IDS_SELECTMIRDLG_SMALLER_DISK "A disk cannot be mirrored by a smaller sized disk."
+	IDS_UIHANDLER_PROPERTY_NUM_BOUND_DISK "Number of bound disks"
+	IDS_UIHANDLER_PROPERTY_NUM_BOUND_DISK_TOOLTIP "Number of bound disks"
+	IDS_UIHANDLER_PROPERTY_DIRTY "Dirty"
+	IDS_UIHANDLER_PROPERTY_DIRTY_TRUE "True"
+	IDS_UIHANDLER_PROPERTY_DIRTY_FALSE "False"
+	IDS_UIHANDLER_PROPERTY_DIRTY_TOOLTIP "Dirty becomes TRUE when Mirrored disk's data become defected."
+	IDS_UIHANDLER_PROPERTY_MODEL "Model"
+	IDS_UIHANDLER_PROPERTY_MODEL_TOOLTIP "Disk manufacture's model name"
+	IDS_UIHANDLER_PROPERTY_SERIALNO "Serial No"
+	IDS_UIHANDLER_PROPERTY_SERIALNO_TOOLTIP "Disk manufacture's serial no"
+	IDS_UIHANDLER_CLEARDIB_CONFIRM "Any binding information on the disk will be deleted.\nAre you sure you want to initialize '%1!s!'?"
+	IDS_UIHANDLER_CLEARDIB_FAIL		"Failed to initialize the disk."
+	IDS_UIHANDLER_CLEARDIB_SUCCESS  "Disk's binding information is successfully initialized"
+	IDS_DISKPROPERTYPAGE_GENERALTAB "General"
+	IDS_DISKPROPERTYPAGE_HARDWARETAB "Hardware"
+	IDS_ABOUTDLG_PRODUCT_NAME "NDAS Bind Management"
+	IDS_ABOUTDLG_PRODUCT_VER  "Version %1!d!.%2!d!.%3!d!.%4!d!"
+	IDS_ABOUTDLG_COL_COMPONENT "Component"
+	IDS_ABOUTDLG_COL_VERSION "Version"
+	IDS_ABOUTDLG_COMPONENT_VER "%1!d!.%2!d!.%3!d!.%4!d!"
+	IDS_LISTVIEW_SIZE_IN_GB "%1!3d!.%2!02d!GB"
+	IDS_LISTVIEW_COL_NAME   "Name"
+	IDS_LISTVIEW_COL_ID		"ID"
+	IDS_LISTVIEW_COL_SIZE	"Size"
+	IDS_LISTVIEW_COL_EMPTY	"No"
+	IDS_COMMAND_BIND	"&Bind"
+	IDS_COMMAND_UNBIND	"&Unbind"
+	IDS_COMMAND_SINGLE	"&Single"
+	IDS_COMMAND_SYNCHRONIZE "&Recover bind"
+	IDS_COMMAND_ADDMIRROR	"&Copy and mirror"
+	IDS_COMMAND_CLEARDIB	"&Initialize"
+END
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="ndasmsg" version="3.20.1519" lang="cht" oem="digiland" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="NDAS_ERROR_INVALID_ID_FORMAT">
+    <base>NDAS device ID or Key is invalid.</base>
+    <translation>NDAS 裝置碼或者寫鑰無效。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_NOT_FOUND">
+    <base>NDAS Device Entry Not Found.</base>
+    <translation>沒有找到 NDAS 裝置。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNITDEVICE_ENTRY_NOT_FOUND">
+    <base>NDAS Unit Device Entry Not Found.</base>
+    <translation>沒有找到 NDAS 裝置。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_ENTRY_NOT_FOUND">
+    <base>NDAS Logical Device Entry Not Found.</base>
+    <translation>沒有找到 NDAS 邏輯裝置。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_DISABLE_MOUNTED_DEVICE">
+    <base>Disabling the NDAS device containing any of the mounted unit device is not allowed.</base>
+    <translation>想要停止 NDAS 裝置，必需要取消裝配才可以進行。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_UNREGISTER_ENABLED_DEVICE">
+    <base>Unregistering an enabled NDAS device is not permitted.</base>
+    <translation>不允許取消 NDAS 裝置註冊。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SLOT_NUMBER">
+    <base><![CDATA[Invalid NDAS slot number.]]></base>
+    <translation>無效的 NDAS 槽數。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_SLOT_ALREADY_OCCUPIED">
+    <base>Requested slot is used by another device.</base>
+    <translation>請求的槽已給另一個裝置使用了。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_DEVICE_ENTRY">
+    <base>The requested NDAS device already exists.</base>
+    <translation>NDAS 裝置已經存在。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_SLOT_FULL">
+    <base>No more NDAS device slot is available.</base>
+    <translation>NDAS 裝置槽不可以使用。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_INITIALIZED">
+    <base>NDAS Logical device is not initialized.</base>
+    <translation>NDAS 邏輯裝置還沒有初始化。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MEMBER_MISSING">
+    <base>Some NDAS logical device members are missing in the entry.</base>
+    <translation>有一些 NDAS 邏輯裝置找不到。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_MOUNTED">
+    <base>NDAS Logical device is not mounted.</base>
+    <translation>NDAS 邏輯裝置並沒有裝配。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_CONFLICT_LOGICALDEVICE_ENTRY">
+    <base>NDAS Logical device entry is conflicts with existing entries.</base>
+    <translation>NDAS 邏輯裝置出現衝突。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_LOGICALDEVICE_ENTRY">
+    <base>The requested NDAS logical device already exists.</base>
+    <translation>NDAS 裝置已經存在。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_SLOT_FULL">
+    <base>No more NDAS logical device slot is available.</base>
+    <translation>請求的槽已給另一個裝置使用了。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNSUPPORTED_LOGICALDEVICE_TYPE">
+    <base>Unsupported NDAS logical device type.</base>
+    <translation>不支援的 NDAS 邏輯裝置種類。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_INVALID_BIND_INFORMATION">
+    <base>The bind information in NDAS device is invalid.</base>
+    <translation>無效的 NDAS 裝置合併資訊。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MODIFIED_BIND_INFORMATION">
+    <base>The bind information in NDAS device is changed.</base>
+    <translation>NDAS 裝置的合併資訊已經被改變了。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base>Granted access for the NDAS logical device is insufficient to complete the operation.</base>
+    <translation>NDAS 邏輯裝置不能完成操作。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+    <base>Requested access to the NDAS logical device is failed.</base>
+    <translation>請求 NDAS 邏輯裝置失敗。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_UNMOUNTED">
+    <base>NDAS logical device is not in a mountable status.</base>
+    <translation>NDAS 邏輯裝置不在裝配的狀態。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_UNITDEVICE_NOT_MOUNTED">
+    <base>NDAS Unit device is not mounted.</base>
+    <translation>NDAS 裝置並沒有進行裝配。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_HOST_INFO_NOT_FOUND">
+    <base>NDAS Host Information cannot be found.</base>
+    <translation>找不到用戶的資訊。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_DEVICE_COMMUNICATION_FAILURE">
+    <base>Communication to the NDAS Device has failed.</base>
+    <translation>跟 NDAS 裝置的通訊失敗。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_MULTIPLE_WRITE_ACCESS_NOT_ALLOWED">
+    <base>Multiple Write Access is not allowed for the specified NDAS unit device.</base>
+    <translation>多用戶存寫不允許。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_INCOMPATIBLE_HOSTS_FOR_MULTIPLE_WRITE_ACCESS">
+    <base>Incompatible NDAS hosts for multiple write-access are found for the specified NDAS unit device.</base>
+    <translation>該裝置不支援多用戶存寫。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NO_MORE_DVD_WRITE_ACCESS_INSTANCE_ALLOWED">
+    <base>No more than constrained instances of DVD Drives as Read/Write mode is allowed.</base>
+    <translation>讀/寫的限制不可用。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_CORRUPTED_BIND_INFORMATION">
+    <base>The NDAS device is corrupted and need to be recovered before mounting.</base>
+    <translation>NDAS 裝置出現錯誤和發生衝突問題。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNKNOWN_VENDOR_ID">
+    <base><![CDATA[The NDAS device ID cannot be used with the current version of the software. Upgrade the software to the most recent version or use the vendor-provided software.]]></base>
+    <translation>NDAS 裝置碼不能用在這版本的軟件。請提升或和供應商獲取最新軟件。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+    <base>Command version is unsupported.</base>
+    <translation>並不支援的指令。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NOT_IMPLEMENTED">
+    <base>Requested feature is not supported.</base>
+    <translation>請求的特性並不支援。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+    <base>Unsupported Read-only filter version.</base>
+    <translation>不支援的唯讀過濾版本。</translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SERVICE_PARAMETER">
+    <base>Invalid service parameter.</base>
+    <translation>無效的服務參數。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+    <base>Communication to the NDAS service failed.</base>
+    <translation>NDAS 的服務溝通失敗。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+    <base><![CDATA[NDAS Device ID or Key is invalid.]]></base>
+    <translation>NDAS 裝置碼或者寫鑰無效。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+    <base>NDAS Device ID is invalid.</base>
+    <translation>NDAS 裝置碼無效。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+    <base>NDAS Device Key is invalid.</base>
+    <translation>NDAS 裝置寫鑰無效。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>無效的參數。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base>NDAS Logical device access denied.</base>
+    <translation>NDAS 邏輯裝置禁止讀取。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+    <base>NDAS Service does not support the requested operation.</base>
+    <translation>NDAS 的服務並不支援該類的操作。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+    <base>Operation is invalid to the NDAS service.</base>
+    <translation>NDAS 的服務操作無效。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+    <base>NDAS Service is terminating.</base>
+    <translation>正在停止 NDAS 服務。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+    <base>Unsupported NDAS service version.</base>
+    <translation>不支援的 NDAS 服務版本。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+    <base>Unsupport NDAS service event version.</base>
+    <translation>不支援的 NDAS 服務版本。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+    <base>No more NDAS event callback is available.</base>
+    <translation>不允許 NDAS 回傳處理。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+    <base>Invalid NDAS event callback handle.</base>
+    <translation>無效的 NDAS 回傳處理。</translation>
+  </string>
+  <string id="NDASUSER_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>請求的特性並不支援。</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INTERNAL">
+    <base>Internal error.</base>
+    <translation>內部錯誤。</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>請求的特性並不支援。</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>無效的參數。</translation>
+  </string>
+  <string id="NDASCOMM_WARNING_CONNECTION_FAIL">
+    <base>Connection failed to the NDAS device.</base>
+    <translation>跟 NDAS 裝置的連接失敗。</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_COMMUNICATION">
+    <base>Communication error during login process.</base>
+    <translation>登入時發生錯誤。</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_NOT_EXIST.]]></base>
+    <translation>內部錯誤 : NDASCOMM_ERROR_RI_NOT_EXIST.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.]]></base>
+    <translation>內部錯誤 : NDASCOMM_ERROR_RI_BAD_COMMAND.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.]]></base>
+    <translation>內部錯誤 : NDASCOMM_ERROR_RI_COMMAND_FAILED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+    <base>Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</base>
+    <translation>內部錯誤 : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_NOT_EXIST.]]></base>
+    <translation>內部錯誤 : NDASCOMM_ERROR_T_NOT_EXIST.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.]]></base>
+    <translation>內部錯誤 : NDASCOMM_ERROR_T_BAD_COMMAND.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.]]></base>
+    <translation>內部錯誤 : NDASCOMM_ERROR_T_COMMAND_FAILED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BROKEN_DATA">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.]]></base>
+    <translation>內部錯誤 : NDASCOMM_ERROR_T_BROKEN_DATA.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_AUTH_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_AUTH_FAILED.]]></base>
+    <translation>內部錯誤 : NDASCOMM_ERROR_RI_AUTH_FAILED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+    <base>Unknown error for login process.</base>
+    <translation>登入時發生不知名的錯誤。</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RW_USER_EXIST">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s) with read-write access privilege.]]></base>
+    <translation>NDAS 裝置正被另一個程式或主機佔用讀寫權限。</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+    <base>Not enough memory to complete job.</base>
+    <translation>沒有足夠的記憶體來完成。</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_PROTOCOL">
+    <base>Lanscsi protocol error.</base>
+    <translation>Lanscsi 協定錯誤。</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_OPERATION">
+    <base><![CDATA[Invalid operation.]]></base>
+    <translation>無效的操作。</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>請求的特性並不支援。</translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_FAIL">
+    <base>Accessing to the device is failed.</base>
+    <translation>讀取裝置失敗。</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_SINGLE_DISK">
+    <base>The NDAS device must be a single disk to operate this job.</base>
+    <translation>NDAS 裝置必需要是一個基本盤才可以進行。</translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+    <base>The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.</base>
+    <translation>NDAS 裝置並不支援，如果是硬碟，請先轉成基本盤，然後再試。</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_BOUND_DISK">
+    <base>The NDAS device must be a bound disk to operate this job.</base>
+    <translation>NDAS 裝置必需要是已合併的盤才能進行。</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>無效的參數。</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation>沒有足夠的記憶體來完成。</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_DISK_COUNT">
+    <base>Incorrect disk count to bind disks.</base>
+    <translation>不對的盤數來進行合併。</translation>
+  </string>
+  <string id="NDASOP_ERROR_ALREADY_USED">
+    <base>The NDAS device is being used by another process(es) or host(s).</base>
+    <translation>NDAS 裝置正在給另應用中。</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+    <base>The NDAS device has invalid bind information to migrate.</base>
+    <translation>這個 NDAS 裝置有無效的合併資訊來進行引進。</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_SIZE_LIMIT">
+    <base>The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.</base>
+    <translation>合併的總容量不能超過 2TB，這是視窗的限制。</translation>
+  </string>
+  <string id="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+    <base>There is too many missing member to replace(repair) in bound disks.</base>
+    <translation>在在合併的盤有太多缺失的成員需要替換(修復)。</translation>
+  </string>
+  <string id="NDASOP_ERROR_NO_MISSING_MEMBER">
+    <base>There is no missing NDAS device to replace(repair) in bound disks.</base>
+    <translation>並沒有缺失的 NDAS 裝置可進行替換(修復)給合併的盤。</translation>
+  </string>
+  <string id="NDASOP_ERROR_CRITICAL_REPAIR">
+    <base>There was a critical error while replacing(repairing) bound disks.</base>
+    <translation>發生嚴重的錯誤當進行替換(修復)合併的盤之時。</translation>
+  </string>
+  <string id="NDASOP_ERROR_REPLACE_TOO_SMALL">
+    <base>Size of a replacement disk is too small.</base>
+    <translation>揩換盤的容量太小。</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_UNSUPPORTED">
+    <base>This type of RAID does not support the requested command.</base>
+    <translation>這種 RAID 的指令並不支援。</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_CAPACITY">
+    <base>The device does not have enough capacity to operate request command.</base>
+    <translation>裝置並沒有足夠的容量來處理請求的指令。</translation>
+  </string>
+  <string id="NDASVOL_ERROR_NON_NDAS_VOLUME">
+    <base>The specified volume is not related with the NDAS devices.</base>
+    <translation>對應的容量跟 NDAS 裝置無闔。</translation>
+  </string>
+  <string id="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>請求的特性並不支援。</translation>
+  </string>
+  <string id="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+    <base>Non-SCSI type device is found.</base>
+    <translation>找到 Non-SCSI 裝置。</translation>
+  </string>
+  <string id="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+    <base>SRB IO CONTROL Error</base>
+    <translation>SRB IO 控制錯誤。</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+    <base>The NDAS disk is encrypted and the corresponding NDAS system key is not registered in the system.</base>
+    <translation>NDAS 已經加密和裝置碼並沒有註冊到系統裏。</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+    <base>NDAS system key does not match with the NDAS disk key.</base>
+    <translation>NDAS 的系統碼跟 NDAS 的裝置碼不相配。</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+    <base><![CDATA[Invalid CEB CRC.]]></base>
+    <translation>無效的 CEB CRC。</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+    <base>Unsupported CEB Revision.</base>
+    <translation>不支援的 CEB 版本。</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+    <base>CEB Key Length is invalid.</base>
+    <translation>CEB 不長度不對。</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+    <base>Failed to read CEB.</base>
+    <translation>讀取 CEB 失敗。</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+    <base>CE key generation failed.</base>
+    <translation>産生 CE 碼失敗。</translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+    <base>A new NDAS Device is found from the network and is being registered.</base>
+    <translation>網路上找到一個新的 NDAS 裝置，正在進行註冊。</translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+    <base>Unsupported hardware version (%2) detected from the NDAS Device (%1).</base>
+    <translation>從 NDAS 裝置 (%1) 偵測到不支援的硬體版本 (%2)。</translation>
+  </string>
+</localization>

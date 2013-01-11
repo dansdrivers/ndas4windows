@@ -1,0 +1,11 @@
+LIBRARY xmsica
+EXPORTS
+    xDiMsiProcessDrivers
+    xDiMsiProcessDrivers1
+    xDiMsiProcessDrivers2
+    xDiMsiProcessDrivers3
+    xDiMsiProcessDrivers4
+    xDiMsiProcessDrivers5
+	xDiMsiProcessDriverScheduled
+	xDiMsiUpdateScheduledReboot
+	xDiMsiUpdateForceReboot

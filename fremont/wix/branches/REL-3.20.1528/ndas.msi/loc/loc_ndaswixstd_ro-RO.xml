@@ -1,0 +1,1784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="ActionText.CostInitialize">
+    <base>Computing space requirements</base>
+    <translation>Calcularea spaţiului necesar</translation>
+  </string>
+  <string id="ActionText.AppSearch">
+    <base>Searching for installed applications</base>
+    <translation>Căutare pentru aplicaţii instalate</translation>
+  </string>
+  <string id="ActionText.AppSearch.Template">
+    <base>Property: [1], Signature: [2]</base>
+    <translation>Proprietate: [1], Semnătură: [2]</translation>
+  </string>
+  <string id="ActionText.BindImage">
+    <base>Binding executables</base>
+    <translation>Legare executabile</translation>
+  </string>
+  <string id="ActionText.BindImage.Template">
+    <base>File: [1]</base>
+    <translation>Fişier: [1]</translation>
+  </string>
+  <string id="ActionText.CCPSearch">
+    <base>Unregistering modules</base>
+    <translation>De-înregistrare module</translation>
+  </string>
+  <string id="ActionText.CostFinalize">
+    <base>Computing space requirements</base>
+    <translation>Calcularea spaţiului necesar</translation>
+  </string>
+  <string id="ActionText.FileCost">
+    <base>Computing space requirements</base>
+    <translation>Calcularea spaţiului necesar</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage">
+    <base>Copying files to the network</base>
+    <translation>Copiere fişiere în reţea</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage.Template">
+    <base>File: [1], Directory: [9], Size: [6]</base>
+    <translation>Fişier: [1], Director: [9], Dimensiune: [6]</translation>
+  </string>
+  <string id="ActionText.InstallFiles">
+    <base>Copying new files</base>
+    <translation>Copiere fişiere noi</translation>
+  </string>
+  <string id="ActionText.InstallFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>Fişier: [1],  Director: [9],  Dimensiune: [6]</translation>
+  </string>
+  <string id="ActionText.InstallValidate">
+    <base>Validating install</base>
+    <translation>Validare instalare</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts">
+    <base>Creating shortcuts</base>
+    <translation>Creare scurtături</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>Scurtătură: [1]</translation>
+  </string>
+  <string id="ActionText.PublishComponents">
+    <base>Publishing qualified components</base>
+    <translation>Listare componente calificate</translation>
+  </string>
+  <string id="ActionText.PublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>ID componentă: [1], Calificator: [2]</translation>
+  </string>
+  <string id="ActionText.PublishFeatures">
+    <base>Publishing product features</base>
+    <translation>Listare opţiuni produs</translation>
+  </string>
+  <string id="ActionText.PublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>Opţiune: [1]</translation>
+  </string>
+  <string id="ActionText.PublishProduct">
+    <base>Publishing product information</base>
+    <translation>Listare informaţii produs</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo">
+    <base>Registering class servers</base>
+    <translation>Înregistrare servere clasă</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>ID clasă: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo">
+    <base>Registering extension servers</base>
+    <translation>Înregistrare servere extensie</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>Extensie: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo">
+    <base>Registering MIME info</base>
+    <translation>Înregistrare informaţii MIME</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>Tip conţinut MIME: [1], Extensie: [2]</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo">
+    <base>Registering program identifiers</base>
+    <translation>De-înregistrarea identificatorilor program</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>IdProg: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries">
+    <base>Registering type libraries</base>
+    <translation>Înregistrare biblioteci tip</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>IdBibl: [1]</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace">
+    <base>Allocating registry space</base>
+    <translation>Alocare spaţiu registry</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace.Template">
+    <base>Free space: [1]</base>
+    <translation>Spaţiu liber: [1]</translation>
+  </string>
+  <string id="ActionText.CreateFolders">
+    <base>Creating folders</base>
+    <translation>Creare foldere</translation>
+  </string>
+  <string id="ActionText.CreateFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>Folder: [1]</translation>
+  </string>
+  <string id="ActionText.DeleteServices">
+    <base>Deleting services</base>
+    <translation>Ştergere servicii</translation>
+  </string>
+  <string id="ActionText.DeleteServices.Template">
+    <base>Service: [1]</base>
+    <translation>Serviciu: [1]</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles">
+    <base>Creating duplicate files</base>
+    <translation>Creare fişiere duplicate</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>Fişier: [1],  Director: [9],  Dimensiune: [6]</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts">
+    <base>Searching for related applications</base>
+    <translation>Căutare pentru aplicaţii înrudite</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts.Template">
+    <base>Found application: [1]</base>
+    <translation>A fost găsită aplicaţia: [1]</translation>
+  </string>
+  <string id="ActionText.InstallODBC">
+    <base>Installing ODBC components</base>
+    <translation>Instalare componente ODBC</translation>
+  </string>
+  <string id="ActionText.InstallServices">
+    <base>Installing new services</base>
+    <translation>Instalare servicii noi</translation>
+  </string>
+  <string id="ActionText.InstallServices.Template">
+    <base>Service: [2]</base>
+    <translation>Serviciu: [2]</translation>
+  </string>
+  <string id="ActionText.LaunchConditions">
+    <base>Evaluating launch conditions</base>
+    <translation>Evaluare condiţii de lansare</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates">
+    <base>Migrating feature states from related applications</base>
+    <translation>Migrare stări opţiuni de la aplicaţiile înrudite</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates.Template">
+    <base>Application: [1]</base>
+    <translation>Aplicaţia: [1]</translation>
+  </string>
+  <string id="ActionText.MoveFiles">
+    <base>Moving files</base>
+    <translation>Mutare fişiere</translation>
+  </string>
+  <string id="ActionText.MoveFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>Fişier: [1],  Director: [9],  Dimensiune: [6]</translation>
+  </string>
+  <string id="ActionText.PatchFiles">
+    <base>Patching files</base>
+    <translation>Corectare (patching) fişiere</translation>
+  </string>
+  <string id="ActionText.PatchFiles.Template">
+    <base>File: [1],  Directory: [2],  Size: [3]</base>
+    <translation>Fişier: [1],  Director: [2],  Dimensiune: [3]</translation>
+  </string>
+  <string id="ActionText.ProcessComponents">
+    <base>Updating component registration</base>
+    <translation>Actualizare înregistrare componente</translation>
+  </string>
+  <string id="ActionText.RMCCPSearch">
+    <base>Searching for qualifying products</base>
+    <translation>Căutare pentru definirea produselor</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus">
+    <base>Registering COM+ Applications and Components</base>
+    <translation>Înregistrare aplicaţii şi componente COM+</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2], Users: [3], RSN: [4]}}</base>
+    <translation>IdApl: [1]{{, TipApl: [2], Utilizatori: [3], RSN: [4]}}</translation>
+  </string>
+  <string id="ActionText.RegisterFonts">
+    <base>Registering fonts</base>
+    <translation>Înregistrare fonturi</translation>
+  </string>
+  <string id="ActionText.RegisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>Font: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterProduct">
+    <base>Registering product</base>
+    <translation>Înregistrare produs</translation>
+  </string>
+  <string id="ActionText.RegisterProduct.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RegisterUser">
+    <base>Registering user</base>
+    <translation>Înregistrare utilizator</translation>
+  </string>
+  <string id="ActionText.RegisterUser.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles">
+    <base>Removing duplicated files</base>
+    <translation>Înlăturare fişiere duplicat</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>Fişier: [1], Director: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>Actualizare şiruri mediu</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>Nume: [1], Valoare: [2], Acţiune [3]</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts">
+    <base>Removing applications</base>
+    <translation>Înlăturare aplicaţii</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts.Template">
+    <base>Application: [1], Command line: [2]</base>
+    <translation>Aplicaţie: [1], Linie comandă: [2]</translation>
+  </string>
+  <string id="ActionText.RemoveFiles">
+    <base>Removing files</base>
+    <translation>Înlăturare fişiere</translation>
+  </string>
+  <string id="ActionText.RemoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>Fişier: [1], Director: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveFolders">
+    <base>Removing folders</base>
+    <translation>Înlăturare foldere</translation>
+  </string>
+  <string id="ActionText.RemoveFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>Folder: [1]</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues">
+    <base>Removing INI file entries</base>
+    <translation>Înlăturare intrări fişier INI</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>Fişier: [1],  Secţiune: [2],  Cheie: [3], Valoare: [4]</translation>
+  </string>
+  <string id="ActionText.RemoveODBC">
+    <base>Removing ODBC components</base>
+    <translation>Înlăturare componente ODBC</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues">
+    <base>Removing system registry values</base>
+    <translation>Înlăturare valori registry sistem</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues.Template">
+    <base>Key: [1], Name: [2]</base>
+    <translation>Cheie: [1], Nume: [2].</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts">
+    <base>Removing shortcuts</base>
+    <translation>Înlăturare scurtături</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>Scurtătură: [1]</translation>
+  </string>
+  <string id="ActionText.SelfRegModules">
+    <base>Registering modules</base>
+    <translation>Înregistrare module</translation>
+  </string>
+  <string id="ActionText.SelfRegModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>Fişier: [1], Folder: [2]</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules">
+    <base>Unregistering modules</base>
+    <translation>De-înregistrare module</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>Fişier: [1], Folder: [2]</translation>
+  </string>
+  <string id="ActionText.SetODBCFolders">
+    <base>Initializing ODBC directories</base>
+    <translation>Iniţializare drectoare ODBC</translation>
+  </string>
+  <string id="ActionText.StartServices">
+    <base>Starting services</base>
+    <translation>Pornire servicii</translation>
+  </string>
+  <string id="ActionText.StartServices.Template">
+    <base>Service: [1]</base>
+    <translation>Serviciu: [1]</translation>
+  </string>
+  <string id="ActionText.StopServices">
+    <base>Stopping services</base>
+    <translation>Oprire servicii</translation>
+  </string>
+  <string id="ActionText.StopServices.Template">
+    <base>Service: [1]</base>
+    <translation>Serviciu: [1]</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents">
+    <base>Unpublishing Qualified Components</base>
+    <translation>Nelistare componente calificate</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>ID componentă: [1], Calificator: [2]</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures">
+    <base>Unpublishing product features</base>
+    <translation>Nelistare opţiuni produs</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>Opţiune: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo">
+    <base>Unregister class servers</base>
+    <translation>De-înregistrare servere clasă</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>ID clasă: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus">
+    <base>Unregistering COM+ Applications and Components</base>
+    <translation>De-înregistrare aplicaţii şi componente COM+</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2]}}</base>
+    <translation>IdApl: [1]{{, TipApl: [2]}}</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo">
+    <base>Unregistering extension servers</base>
+    <translation>De-înregistrare servere extensie</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>Extensie: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts">
+    <base>Unregistering fonts</base>
+    <translation>De-înregistrare fonturi</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>Font: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo">
+    <base>Unregistering MIME info</base>
+    <translation>De-înregistrare informaţii MIME</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>Tip conţinut MIME: [1], Extensie: [2]</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo">
+    <base>Unregistering program identifiers</base>
+    <translation>De-înregistrarea identificatorilor program</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>IdProg: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries">
+    <base>Unregistering type libraries</base>
+    <translation>De-înregistrarea biblioteci tip</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>IdBibl: [1]</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>Actualizare şiruri mediu</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>Nume: [1], Valoare: [2], Acţiune [3]</translation>
+  </string>
+  <string id="ActionText.WriteIniValues">
+    <base>Writing INI file values</base>
+    <translation>Scriere valori fişier INI</translation>
+  </string>
+  <string id="ActionText.WriteIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>Fişier: [1],  Secţiune: [2],  Cheie: [3], Valoare: [4]</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues">
+    <base>Writing system registry values</base>
+    <translation>Scriere valori registry sistem</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues.Template">
+    <base>Key: [1], Name: [2], Value: [3]</base>
+    <translation>Cheie: [1], Nume: [2], Valoare: [3]</translation>
+  </string>
+  <string id="ActionText.Advertise">
+    <base>Advertising application</base>
+    <translation>Aplicaţia de publicitate</translation>
+  </string>
+  <string id="ActionText.GenerateScript">
+    <base>Generating script operations for action:</base>
+    <translation>Generare operaţii script pentru acţiune:</translation>
+  </string>
+  <string id="ActionText.GenerateScript.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile">
+    <base>Installing system catalog</base>
+    <translation>Instalarea catalogului sistemului</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile.Template">
+    <base>File: [1],  Dependencies: [2]</base>
+    <translation>File: [1],  Dependenţe: [2]</translation>
+  </string>
+  <string id="ActionText.Rollback">
+    <base>Rolling back action:</base>
+    <translation>Acţiune rollback:</translation>
+  </string>
+  <string id="ActionText.Rollback.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup">
+    <base>Removing backup files</base>
+    <translation>Înlăturare fişiere backup</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup.Template">
+    <base>File: [1]</base>
+    <translation>Fişier: [1]</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles">
+    <base>Removing moved files</base>
+    <translation>Înlăturare fişiere mutate</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>Fişier: [1], Director: [9]</translation>
+  </string>
+  <string id="ActionText.UnpublishProduct">
+    <base>Unpublishing product information</base>
+    <translation>Nelistare informaţii produs</translation>
+  </string>
+  <string id="ActionText.caCreateVRoots">
+    <base>Creating IIS Virtual Roots...</base>
+    <translation>Se creaza IIS Virtual Roots...</translation>
+  </string>
+  <string id="ActionText.caRemoveVRoots">
+    <base>Removing IIS Virtual Roots...</base>
+    <translation>Se inlatura IIS Virtual Roots...</translation>
+  </string>
+  <string id="Text.Title">
+    <base>[ProductName] Setup</base>
+    <translation>-</translation>
+  </string>
+  <string id="Text.ErrorTitle">
+    <base>[ProductName] Installer Information</base>
+    <translation>[ProductName] Informaţii Installer</translation>
+  </string>
+  <string id="Text.PatchTitle">
+    <base>[ProductName] Patch Setup</base>
+    <translation>-</translation>
+  </string>
+  <string id="Text.OK">
+    <base>OK</base>
+    <translation>{&amp;Tahoma8}OK</translation>
+  </string>
+  <string id="Text.Cancel">
+    <base>Cancel</base>
+    <translation>Anulează</translation>
+  </string>
+  <string id="Text.Next">
+    <base>&amp;Next &gt;</base>
+    <translation>&amp;Următorul &gt;</translation>
+  </string>
+  <string id="Text.Back">
+    <base>&lt; &amp;Back</base>
+    <translation>&lt; &amp;Înapoi</translation>
+  </string>
+  <string id="Text.Y">
+    <base>&amp;Yes</base>
+    <translation>{&amp;Tahoma8}&amp;Da</translation>
+  </string>
+  <string id="Text.N">
+    <base>&amp;No</base>
+    <translation>{&amp;Tahoma8}&amp;Nu</translation>
+  </string>
+  <string id="Text.A">
+    <base>&amp;Abort</base>
+    <translation>{&amp;Tahoma8}Renu&amp;nţare</translation>
+  </string>
+  <string id="Text.C">
+    <base>&amp;Cancel</base>
+    <translation>{&amp;Tahoma8}&amp;Anulare</translation>
+  </string>
+  <string id="Text.I">
+    <base>&amp;Ignore</base>
+    <translation>{&amp;Tahoma8}&amp;Ignorare</translation>
+  </string>
+  <string id="Text.O">
+    <base>&amp;OK</base>
+    <translation>{&amp;Tahoma8}&amp;OK</translation>
+  </string>
+  <string id="Text.R">
+    <base>&amp;Retry</base>
+    <translation>{&amp;Tahoma8}&amp;Reîncercare</translation>
+  </string>
+  <string id="Text.Install">
+    <base>&amp;Install</base>
+    <translation>{&amp;Tahoma8}&amp;Instalare</translation>
+  </string>
+  <string id="Text.Exit">
+    <base>&amp;Exit</base>
+    <translation>{&amp;Tahoma8}&amp;Ieşire</translation>
+  </string>
+  <string id="Text.Remove">
+    <base>&amp;Remove</base>
+    <translation>{&amp;Tahoma8}&amp;Înlăturare</translation>
+  </string>
+  <string id="Text.Change">
+    <base>&amp;Change...</base>
+    <translation>&amp;Schimbă...</translation>
+  </string>
+  <string id="Text.Finish">
+    <base>&amp;Finish</base>
+    <translation>{&amp;Tahoma8}S&amp;fârşit</translation>
+  </string>
+  <string id="Text.FolderName">
+    <base>&amp;Folder name:</base>
+    <translation>{&amp;Tahoma8}Nume &amp;folder:</translation>
+  </string>
+  <string id="Text.Help">
+    <base>&amp;Help</base>
+    <translation>{&amp;Tahoma8}A&amp;jutor</translation>
+  </string>
+  <string id="Text.LookIn">
+    <base>&amp;Look in:</base>
+    <translation>{&amp;Tahoma8}&amp;Căută în:</translation>
+  </string>
+  <string id="Text.NetworkLocation">
+    <base>&amp;Network location:</base>
+    <translation>{&amp;Tahoma8}Locaţie &amp;reţea:</translation>
+  </string>
+  <string id="Text.Space">
+    <base>&amp;Space</base>
+    <translation>{&amp;Tahoma8}&amp;Spaţiu</translation>
+  </string>
+  <string id="Text.Update">
+    <base>&amp;Update &gt;</base>
+    <translation>A&amp;ctualizare &gt;</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}Răsfoieşte până la folderul destinaţie.</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Modificare folder destinaţie curent</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgDesc">
+    <base>Specify a network location for the server image of the product.</base>
+    <translation>{&amp;Tahoma8}Specificaţi o locaţie reţea pentru imaginea server a produsului.</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgTitle">
+    <base>{&amp;MSSansBold8}Network Location</base>
+    <translation>{&amp;MSSansBold8}Locaţie de reţea</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgText">
+    <base>Enter the network location or click Change to browse to a location.  Click Install to create a server image of [ProductName] at the specified network location or click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Introduceţi locaţia de reţea sau apăsaţi Modificare pentru a răsfoi până la locaţie. Apăsaţi Instalare pentru a crea o imagine server pentru [ProductName] la locaţia de reţea specificată sau apăsaţi Anulare pentru a ieşi din vrăjitor.</translation>
+  </string>
+  <string id="AdminWelcome.TextLine2">
+    <base>The Setup Wizard will create a server image of [ProductName] at a specified network location. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="AdminWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="CancelSetup.Text">
+    <base>Are you sure you want to cancel [ProductName] installation?</base>
+    <translation>{&amp;Tahoma8}Sunteţi sigur că vreţi să anulaţi instalarea [ProductName]?</translation>
+  </string>
+  <string id="CustomSetup.DlgDesc">
+    <base>Select the program features you want installed.</base>
+    <translation>{&amp;Tahoma8}Selectaţi opţiunile programului pe care vreţi să le instalaţi.</translation>
+  </string>
+  <string id="CustomSetup.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup</base>
+    <translation>{&amp;MSSansBold8}Setup personalizat</translation>
+  </string>
+  <string id="CustomSetup.DlgText">
+    <base>Click on an icon in the list below to change how a feature is installed.</base>
+    <translation>{&amp;Tahoma8}Apăsaţi pe o icoană din lista de mai jos pentru a modifica modul de instalare a unei opţiuni.</translation>
+  </string>
+  <string id="CustomSetup.ItemDescription">
+    <base>Multiline description of the currently selected item</base>
+    <translation>{&amp;Tahoma8}Descriere pe mai multe linii a elementului selectat</translation>
+  </string>
+  <string id="CustomSetup.Size">
+    <base>Feature size</base>
+    <translation>{&amp;Tahoma8}Dimensiune opţiune</translation>
+  </string>
+  <string id="CustomSetup.InstallLabel">
+    <base>Install to:</base>
+    <translation>{&amp;Tahoma8}Instalare la:</translation>
+  </string>
+  <string id="CustomSetup.Location">
+    <base>&lt;selected feature path&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;cale opţiune selectată&gt;</translation>
+  </string>
+  <string id="CustomSetup.FeatureGroup">
+    <base>Feature Description</base>
+    <translation>{&amp;Tahoma8}Descriere opţiune</translation>
+  </string>
+  <string id="CustomSetupTips.DlgDesc">
+    <base>Custom Setup allows you to selectively install program features.</base>
+    <translation>{&amp;Tahoma8}Setup personalizat vă permite să instalaţi selectiv opţiunile programului.</translation>
+  </string>
+  <string id="CustomSetupTips.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup Tips</base>
+    <translation>{&amp;MSSansBold8}Sfaturi setup personalizat</translation>
+  </string>
+  <string id="CustomSetupTips.DontInstallText">
+    <base>Will not be installed.</base>
+    <translation>{&amp;Tahoma8}Nu va fi instalat.</translation>
+  </string>
+  <string id="CustomSetupTips.FirstInstallText">
+    <base>Will be installed on first use. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}Va fi instalată la prima folosire. (Disponibilă numai dacă opţiunea suportă această facilitate.)</translation>
+  </string>
+  <string id="CustomSetupTips.InstallStateText">
+    <base>This install state means the feature...</base>
+    <translation>{&amp;Tahoma8}Această stare instalare înseamnă că opţiunea...</translation>
+  </string>
+  <string id="CustomSetupTips.InstallText">
+    <base>Will be completely installed to the local hard drive.</base>
+    <translation>{&amp;Tahoma8}Va fi instalată complet pe discul local.</translation>
+  </string>
+  <string id="CustomSetupTips.MenuText">
+    <base>The icon next to the feature name indicates the install state of the feature. Click the icon to drop down the install state menu for each feature.</base>
+    <translation>{&amp;Tahoma8}Icoana de lângă numele opţiunii indică starea instalării opţiunii. Apăsaţi icoana pentru a deschide meniul derulant stare instalare pentru fiecare opţiune.</translation>
+  </string>
+  <string id="CustomSetupTips.NetworkInstallText">
+    <base>Will be installed to run from the network. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}Va fi instalată să ruleze din reţea. (Disponibilă numai dacă opţiunea suportă această facilitate.)</translation>
+  </string>
+  <string id="CustomSetupTips.PartialText">
+    <base>Will have some subfeatures installed to the local hard drive. (Available only if the feature has subfeatures.)</base>
+    <translation>{&amp;Tahoma8}Vor avea unele sub-opţiuni instalate pe discul local. (Disponibilă numai dacă opţiunea are sub-opţiuni.)</translation>
+  </string>
+  <string id="DestinationFolder.DlgDesc">
+    <base>Click Next to install to this folder, or click Change to install to a different folder.</base>
+    <translation>{&amp;Tahoma8}Apăsaţi Următorul pentru a instala în acest folder sau apăsaţi Modificare pentru a instala într-un alt folder.</translation>
+  </string>
+  <string id="DestinationFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Folder destinaţie</translation>
+  </string>
+  <string id="DestinationFolder.LocLabel">
+    <base>Install [ProductName] to:</base>
+    <translation>{&amp;Tahoma8}Instalare [ProductName] la:</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgDesc">
+    <base>The disk space required for the installation of the selected features.</base>
+    <translation>{&amp;Tahoma8}Spaţiul de disc necesar pentru instalarea opţiunilor selectate.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgTitle">
+    <base>{&amp;MSSansBold8}Disk Space Requirements</base>
+    <translation>{&amp;MSSansBold8}Cerinţe spaţiu de disc</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}Volumele evidenţiate nu au destul spaţiu de disc disponibil pentru opţiunile selectate. Puteţi înlătura fişiere de pe volumele selectate, alege să instalaţi mai puţine opţiuni pe discurile locale sau selectaţi alte discuri de destinaţie.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="FilesInUse.DlgDesc">
+    <base>Some files that need to be updated are currently in use.</base>
+    <translation>{&amp;Tahoma8}Unele fişiere care trebuiesc actualizate sunt în uz.</translation>
+  </string>
+  <string id="FilesInUse.DlgTitle">
+    <base>{&amp;MSSansBold8}Files in Use</base>
+    <translation>{&amp;MSSansBold8}Fişiere în uz</translation>
+  </string>
+  <string id="FilesInUse.DlgText">
+    <base>The following applications are using files that need to be updated by this setup. Close these applications and click Retry to continue.</base>
+    <translation>{&amp;Tahoma8}Următoarele aplicaţii folosesc fişiere care trebuie actualizate de acest setup. Închideţi aceste aplicaţii şi apăsaţi Reîncercare pentru a continua.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}Răsfoieşte până la folderul destinaţie.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Modificare folder destinaţie curent</translation>
+  </string>
+  <string id="InstallWelcome.Copyright">
+    <base>WARNING: This program is protected by copyright law and international treaties.</base>
+    <translation>ATENŢIE: Acest program este protejat prin legea dreptului de autor şi tratate internaţionale.</translation>
+  </string>
+  <string id="InstallWelcome.TextLine2">
+    <base>Setup will install [ProductName] on your computer. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="InstallWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="LicenseAgreement.DlgDesc">
+    <base>Please read the following license agreement carefully.</base>
+    <translation>{&amp;Tahoma8}Vă rugăm citiţi cu atenţie următorul acord de licenţă.</translation>
+  </string>
+  <string id="LicenseAgreement.DlgTitle">
+    <base>{&amp;MSSansBold8}License Agreement</base>
+    <translation>{&amp;MSSansBold8}Acord de licenţă</translation>
+  </string>
+  <string id="LicenseAgreement.DontAgree">
+    <base>I &amp;do not accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}&amp;Nu accept termenii din acordul de licenţă</translation>
+  </string>
+  <string id="LicenseAgreement.Agree">
+    <base>I &amp;accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}&amp;Accept termenii din acordul de licenţă</translation>
+  </string>
+  <string id="MaintenanceType.DlgDesc">
+    <base>Modify, repair, or remove the program.</base>
+    <translation>{&amp;Tahoma8}Modifică, repară sau înlătură programul.</translation>
+  </string>
+  <string id="MaintenanceType.DlgTitle">
+    <base>{&amp;MSSansBold8}Program Maintenance</base>
+    <translation>{&amp;MSSansBold8}Mentenanţă program</translation>
+  </string>
+  <string id="MaintenanceType.Text1">
+    <base>Change which program features are installed. This option displays the Custom Selection dialog in which you can change the way features are installed.</base>
+    <translation>{&amp;Tahoma8}Modifică ce opţiuni program se instalează. Această opţiune afişează dialogul Selectare personală în care puteţi modifica modul de instalare al opţiunilor.</translation>
+  </string>
+  <string id="MaintenanceType.Text2">
+    <base>Repair installation errors in the program. This option fixes missing or corrupt files, shortcuts, and registry entries.</base>
+    <translation>{&amp;Tahoma8}Repară erori de instalare din program. Această opţiune corectează fişierele lipsă sau corupte, scurtături sau intrări registry.</translation>
+  </string>
+  <string id="MaintenanceType.Text3">
+    <base>Remove [ProductName] from your computer.</base>
+    <translation>{&amp;Tahoma8}Înlătură [ProductName] de pe calculator.</translation>
+  </string>
+  <string id="MaintenanceType.Modify">
+    <base>{&amp;MSSansBold8}&amp;Modify</base>
+    <translation>{&amp;MSSansBold8}&amp;Modificare</translation>
+  </string>
+  <string id="MaintenanceType.Repair">
+    <base>{&amp;MSSansBold8}Re&amp;pair</base>
+    <translation>{&amp;MSSansBold8}Re&amp;parare</translation>
+  </string>
+  <string id="MaintenanceType.Remove">
+    <base>{&amp;MSSansBold8}&amp;Remove</base>
+    <translation>{&amp;MSSansBold8}În&amp;lăturare</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine2">
+    <base>The Setup Wizard will allow you to modify, repair, or remove [ProductName]. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="OutOfSpace.DlgDesc">
+    <base>Disk space required for the installation exceeds available disk space.</base>
+    <translation>{&amp;Tahoma8}Spaţiul de disc necesar pentru instalare depăşeşte spaţiul de disc disponibil.</translation>
+  </string>
+  <string id="OutOfSpace.DlgTitle">
+    <base>{&amp;MSSansBold8}Out of Disk Space</base>
+    <translation>{&amp;MSSansBold8}Fără spaţiu liber pe disc</translation>
+  </string>
+  <string id="OutOfSpace.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}Volumele evidenţiate nu au destul spaţiu de disc disponibil pentru opţiunile selectate. Puteţi înlătura fişiere de pe volumele selectate, alege să instalaţi mai puţine opţiuni pe discurile locale sau selectaţi alte discuri de destinaţie.</translation>
+  </string>
+  <string id="OutOfSpace.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="PatchWelcome.TextLine2">
+    <base>The Setup Wizard will install the Patch for [ProductName] on your computer.  To continue, click Update.</base>
+    <translation>-</translation>
+  </string>
+  <string id="PatchWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Patch for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}Bine aţi venit la Corecţia pentru [ProductName]</translation>
+  </string>
+  <string id="ReadyToInstall.DlgDesc">
+    <base>The wizard is ready to begin installation.</base>
+    <translation>{&amp;Tahoma8}Vrăjitorul este gata să înceapă instalarea.</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle">
+    <base>{&amp;MSSansBold8}Ready to Modify the Program</base>
+    <translation>{&amp;MSSansBold8}Gata de modificare program</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText">
+    <base>Click Install to begin the installation.</base>
+    <translation>{&amp;Tahoma8}Apăsaţi Instalare pentru a începe instalarea.</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle2">
+    <base>{&amp;MSSansBold8}Ready to Repair the Program</base>
+    <translation>{&amp;MSSansBold8}Gata de reparare program</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle3">
+    <base>{&amp;MSSansBold8}Ready to Install the Program</base>
+    <translation>{&amp;MSSansBold8}Gata de instalare program</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText1">
+    <base>If you want to review or change any of your installation settings, click Back. Click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Dacă vreţi să revizuiţi sau să modificaţi oricare din setările pentru instalare, apăsaţi Înapoi. Apăsaţi Anulare pentru a ieşi din vrăjitor.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgDesc">
+    <base>You have chosen to remove the program from your system.</base>
+    <translation>{&amp;Tahoma8}Aţi ales să înlăturaţi programul din sistem.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgTitle">
+    <base>{&amp;MSSansBold8}Remove the Program</base>
+    <translation>{&amp;MSSansBold8}Înnlătură programul</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText">
+    <base>Click Remove to remove [ProductName] from your computer. After removal, this program will no longer be available for use.</base>
+    <translation>{&amp;Tahoma8}Apăsaţi Înlăturare ca să ştergeţi [ProductName] de pe calculator. După înlăturare, acest program nu va mai fi disponibil pentru folosire.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText1">
+    <base>If you want to review or change any settings, click Back.</base>
+    <translation>{&amp;Tahoma8}Dacă vreţi să revizuiţi sau să modificaţi oricare din setări, apăsaţi Înapoi.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText1">
+    <base>Your system has not been modified. To complete installation at another time, please run setup again.</base>
+    <translation>{&amp;Tahoma8}Sistemul nu a fost modificat. Pentru a termina instalarea altă dată, vă rugăm să rulaţi setup din nou.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Apăsaţi Sfârşit pentru a ieşi din vrăjitor.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}Puteţi fie să păstraţi elementele instalate pe sistem pentru a continua instalarea altă dată, fie puteţi restaura sistemul la starea  originală dinaintea instalării.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Apăsaţi Restaurare sau Continuare mai târziu pentru a ieşi din vrăjitor.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}Vrăjitorul a fost întrerupt înainte ca [ProductName] să fie complet instalat.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine2">
+    <base>The Setup Wizard has successfully installed [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckForUpdatesText">
+    <base>&amp;Yes, check for program updates (Recommended) after the setup completes.</base>
+    <translation>&amp;Da, verifica daca sint actualizari ale programului (Recomandat) dupa ce instalarea este terminata.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine3">
+    <base>The Setup Wizard has successfully uninstalled [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine1">
+    <base>Setup has finished installing [ProductName].</base>
+    <translation>Setup a terminat instalarea [ProductName].</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine2">
+    <base>Some program files might have been updated since you purchased your copy of [ProductName].</base>
+    <translation>Este posibil ca anumite fisiere program sa fi fost actualizate de cind ati cumparat copia dvs. a [ProductName].</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine3">
+    <base>Your Internet connection can be used to make sure that you have the latest updates.</base>
+    <translation>Puteti sa folositi conexiunea dvs. la  Internet pentru a va asigura ca aveti cele mai recente actualizari.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchProgramText">
+    <base>Launch [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchReadmeText">
+    <base>Show the readme file</base>
+    <translation>Arată fişierul readme</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckBoxUpdates">
+    <base>CheckBox1</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupError.ErrorText">
+    <base>&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</translation>
+  </string>
+  <string id="SetupInitialization.TextLine2">
+    <base>[ProductName] Setup is preparing the Setup Wizard which will guide you through the program setup process.  Please wait.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupInitialization.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText1">
+    <base>Your system has not been modified. To install this program at a later time, please run the installation again.</base>
+    <translation>{&amp;Tahoma8}Sistemul nu a fost modificat. Pentru a instala acest program mai târziu, vă rugăm să rulaţi instalarea din nou.</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Apăsaţi Sfârşit pentru a ieşi din vrăjitor.</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}Puteţi fie să păstraţi elementele instalate pe sistem pentru a continua instalarea altă dată, fie puteţi restaura sistemul la starea  originală dinaintea instalării.</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Apăsaţi Restaurare sau Continuare mai târziu pentru a ieşi din vrăjitor.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}Vrăjitorul a fost întrerupt înainte ca [ProductName] să fie complet instalat.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc">
+    <base>The program features you selected are being installed.</base>
+    <translation>{&amp;Tahoma8}Opţiunile program selectate sunt instalate.</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle">
+    <base>{&amp;MSSansBold8}Installing [ProductName]</base>
+    <translation>{&amp;MSSansBold8}Instalare [ProductName]</translation>
+  </string>
+  <string id="SetupProgress.DlgText">
+    <base>Please wait while the Setup Wizard installs [ProductName]. This may take several minutes.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle2">
+    <base>{&amp;MSSansBold8}Uninstalling [ProductName]</base>
+    <translation>{&amp;MSSansBold8}Dezinstalare [ProductName]</translation>
+  </string>
+  <string id="SetupProgress.DlgText2">
+    <base>Please wait while the Setup Wizard uninstalls [ProductName]. This may take several minutes.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc2">
+    <base>The program features you selected are being uninstalled.</base>
+    <translation>{&amp;Tahoma8}Opţiunile program selectate sunt dezinstalate.</translation>
+  </string>
+  <string id="SetupProgress.TextTime">
+    <base>)Hidden for now)Estimated time remaining:</base>
+    <translation>{&amp;Tahoma8}(Ascuns acum)Timp rămas estimat:</translation>
+  </string>
+  <string id="SetupProgress.LbStatus">
+    <base>Status:</base>
+    <translation>{&amp;Tahoma8}Stare:</translation>
+  </string>
+  <string id="SetupProgress.LbSec">
+    <base>(Hidden for now)Sec.</base>
+    <translation>{&amp;Tahoma8}(Ascuns acum)Sec.</translation>
+  </string>
+  <string id="SetupProgress.ShowTime">
+    <base>(Hidden for now)</base>
+    <translation>{&amp;Tahoma8}(Ascuns acum)</translation>
+  </string>
+  <string id="SetupProgress.ActionProgress95">
+    <base>Progress done</base>
+    <translation>S-a terminat</translation>
+  </string>
+  <string id="SetupResume.PreselectedText">
+    <base>The Setup Wizard will complete the installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupResume.ResumeText">
+    <base>The Setup Wizard will complete the suspended installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupResume.TextLine1">
+    <base>{&amp;TahomaBold10}Resuming the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupType.DlgDesc">
+    <base>Choose the setup type that best suits your needs.</base>
+    <translation>{&amp;Tahoma8}Alegeţi tipul de setup care se potriveşte cel mai bine necesităţilor.</translation>
+  </string>
+  <string id="SetupType.DlgTitle">
+    <base>{&amp;MSSansBold8}Setup Type</base>
+    <translation>{&amp;MSSansBold8}Tip setup</translation>
+  </string>
+  <string id="SetupType.DlgText">
+    <base>Please select a setup type.</base>
+    <translation>{&amp;Tahoma8}Vă rugăm selectaţi un tip de setup.</translation>
+  </string>
+  <string id="SetupType.CompText">
+    <base>All program features will be installed. (Requires the most disk space.)</base>
+    <translation>{&amp;Tahoma8}Toate opţiunile vor fi instalate. (Necesită cel mai mare spaţiu pe disc.)</translation>
+  </string>
+  <string id="SetupType.CustText">
+    <base>Choose which program features you want installed and where they will be installed. Recommended for advanced users.</base>
+    <translation>{&amp;Tahoma8}Alegeţi ce opţiuni doriţi să instalaţi şi unde vor fi instalate. Este recomandat pentru utilizatorii avansaţi.</translation>
+  </string>
+  <string id="SetupType.Complete">
+    <base>{&amp;MSSansBold8}&amp;Complete</base>
+    <translation>{&amp;MSSansBold8}&amp;Complet</translation>
+  </string>
+  <string id="SetupType.Custom">
+    <base>{&amp;MSSansBold8}Cu&amp;stom</base>
+    <translation>{&amp;MSSansBold8}Per&amp;sonalizat</translation>
+  </string>
+  <string id="Error.0">
+    <base>{{Fatal error: }}</base>
+    <translation>{{Eroare fatală: }}</translation>
+  </string>
+  <string id="Error.1">
+    <base>Error [1].</base>
+    <translation>Eroare [1].</translation>
+  </string>
+  <string id="Error.2">
+    <base>Warning [1].</base>
+    <translation>Avertisment [1].</translation>
+  </string>
+  <string id="Error.4">
+    <base>Info [1].</base>
+    <translation>Info [1].</translation>
+  </string>
+  <string id="Error.5">
+    <base>Internal Error [1]. [2]{, [3]}{, [4]}</base>
+    <translation>Eroare internă [1]. [2]{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.7">
+    <base>{{Disk full: }}</base>
+    <translation>{{Disc plin: }}</translation>
+  </string>
+  <string id="Error.8">
+    <base>Action [Time]: [1]. [2]</base>
+    <translation>Acţiune [Time]: [1]. [2]</translation>
+  </string>
+  <string id="Error.9">
+    <base>[ProductName]</base>
+    <translation>[ProductName]</translation>
+  </string>
+  <string id="Error.10">
+    <base>{[2]}{, [3]}{, [4]}</base>
+    <translation>{[2]}{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.11">
+    <base>Message type: [1], Argument: [2]</base>
+    <translation>Tip mesaj: [1], Argument: [2]</translation>
+  </string>
+  <string id="Error.12">
+    <base>=== Logging started: [Date]  [Time] ===</base>
+    <translation>=== Înregistrarea în istoric a pornit: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.13">
+    <base>=== Logging stopped: [Date]  [Time] ===</base>
+    <translation>=== Înregistrarea în istoric s-a oprit: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.14">
+    <base>Action start [Time]: [1].</base>
+    <translation>Pornire acţiune [Time]: [1].</translation>
+  </string>
+  <string id="Error.15">
+    <base>Action ended [Time]: [1]. Return value [2].</base>
+    <translation>Acţiune terminată [Time]: [1]. Valoare returnată [2].</translation>
+  </string>
+  <string id="Error.16">
+    <base>Time remaining: {[1] minutes }{[2] seconds}</base>
+    <translation>Timp rămas: {[1] minute }{[2] secunde}</translation>
+  </string>
+  <string id="Error.17">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>Memorie insuficientă. Opriţi alte aplicaţii şi încercaţi din nou.</translation>
+  </string>
+  <string id="Error.18">
+    <base>Installer is no longer responding.</base>
+    <translation>Installer nu mai răspunde.</translation>
+  </string>
+  <string id="Error.19">
+    <base>Installer terminated prematurely.</base>
+    <translation>Installer s-a terminat prematur.</translation>
+  </string>
+  <string id="Error.20">
+    <base>Please wait while Windows configures [ProductName]</base>
+    <translation>Vă rog aşteptaţi până când Windows configurează [ProductName].</translation>
+  </string>
+  <string id="Error.21">
+    <base>Gathering required information...</base>
+    <translation>Strângerea informaţiilor necesare...</translation>
+  </string>
+  <string id="Error.22">
+    <base>Removing older versions of this application</base>
+    <translation>Înlăturare versiuni mai vechi ale acestor aaplicaţii</translation>
+  </string>
+  <string id="Error.23">
+    <base>Preparing to remove older versions of this application</base>
+    <translation>Pregătitire pentru înlăturarea versiunilor mai vechi ale acestor aaplicaţii</translation>
+  </string>
+  <string id="Error.32">
+    <base>{[ProductName] }Setup completed successfully.</base>
+    <translation>{[ProductName] }Setup s-a terminat cu succes.</translation>
+  </string>
+  <string id="Error.33">
+    <base>{[ProductName] }Setup failed.</base>
+    <translation>{[ProductName] }Setup a eşuat.</translation>
+  </string>
+  <string id="Error.1101">
+    <base>Error reading from file: [2]. {{ System error [3].}}  Verify that the file exists and that you can access it.</base>
+    <translation>Eroare la citirea fişierului: [2]. {{ Eroare sistem [3].}}  Verificaţi că fişierul există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1301">
+    <base>Cannot create the file [3].  A directory with this name already exists.  Cancel the installation and try installing to a different location.</base>
+    <translation>Nu s-a putut crea fişierul [3].  Un director cu acest nume există deja. Anulaţi instalarea şi încercaţi instalarea într-o altă locaţie.</translation>
+  </string>
+  <string id="Error.1302">
+    <base>Please insert the disk: [2]</base>
+    <translation>Vă rugăm introduceţi discul: [2]</translation>
+  </string>
+  <string id="Error.1303">
+    <base>The installer has insufficient privileges to access this directory: [2].  The installation cannot continue.  Log on as an administrator or contact your system administrator.</base>
+    <translation>Programul de instalare are drepturi insuficiente pentru a accesa directorul: [2].  Instalarea nu poate continua.  Intraţi (log on) ca administrator sau contactaţi administratorul sistem.</translation>
+  </string>
+  <string id="Error.1304">
+    <base>Error writing to file [2].  Verify that you have access to that directory.</base>
+    <translation>Eroare la scriere în fişierul [2].  Verificaţi că aveţi acces la acest director.</translation>
+  </string>
+  <string id="Error.1305">
+    <base>Error reading from file [2].  Verify that the file exists and that you can access it.</base>
+    <translation>Eroare la citirea din fişierul [2].  Verificaţi că fişierul există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1306">
+    <base>Another application has exclusive access to the file [2].  Please shut down all other applications, then click Retry.</base>
+    <translation>O altă aplicaţie are acces exclusiv la fişierul [2].  Vă rugăm opriţi celelalte aplicaţii şi apoi apăsaţi Reîncercare.</translation>
+  </string>
+  <string id="Error.1307">
+    <base>There is not enough disk space to install the file [2].  Free some disk space and click Retry, or click Cancel to exit.</base>
+    <translation>Nu este destul spaţiu pentru a instala acest fişier [2]. Eliberaţi ceva spaţiu pe disc şi apăsaţi Reîncercare sau apăsaţi Anulare pentru a ieşi.</translation>
+  </string>
+  <string id="Error.1308">
+    <base>Source file not found: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>Nu a fost găsit fişierul sursă: [2].  Verificaţi că fişierul există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1309">
+    <base>Error reading from file: [3]. {{ System error [2].}}  Verify that the file exists and that you can access it.</base>
+    <translation>Eroare la citirea din fişierul: [3]. {{ Eroare sistem [2].}}  Verificaţi că fişierul există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1310">
+    <base>Error writing to file: [3]. {{ System error [2].}}  Verify that you have access to that directory.</base>
+    <translation>Eroare la scriere în fişierul [3]. {{ Eroare sistem [2].}}  Verificaţi că aveţi acces la acest director.</translation>
+  </string>
+  <string id="Error.1311">
+    <base>Source file not found{{(cabinet)}}: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>Nu a fost găsit fişierul sursă{{(cabinet)}}: [2].  Verificaţi că fişierul există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1312">
+    <base>Cannot create the directory [2].  A file with this name already exists.  Please rename or remove the file and click Retry, or click Cancel to exit.</base>
+    <translation>Nu s-a putut crea directorul [2].  Un fişier cu acest nume există deja.  Vă rog renumiţi sau înlăturaţi fişierul şi apăsaţi Reîncercare sau apăsaţi Anulare pentru a ieşi.</translation>
+  </string>
+  <string id="Error.1313">
+    <base>The volume [2] is currently unavailable.  Please select another.</base>
+    <translation>Volumul [2] nu este disponibil. Vă rugăm să selectaţi un altul.</translation>
+  </string>
+  <string id="Error.1314">
+    <base>The specified path [2] is unavailable.</base>
+    <translation>Calea specificată [2] nu este disponibilă.</translation>
+  </string>
+  <string id="Error.1315">
+    <base>Unable to write to the specified folder [2].</base>
+    <translation>Nu s-a putut scrie în folderul specificat [2].</translation>
+  </string>
+  <string id="Error.1316">
+    <base>A network error occurred while attempting to read from the file [2]</base>
+    <translation>A apărut o eroare reţea la încercarea de citire din fişierul [2]</translation>
+  </string>
+  <string id="Error.1317">
+    <base>An error occurred while attempting to create the directory [2]</base>
+    <translation>A apărut o eroare la încercarea de creare a directorului [2]</translation>
+  </string>
+  <string id="Error.1318">
+    <base>A network error occurred while attempting to create the directory [2]</base>
+    <translation>A apărut o eroare reţea la încercarea de creare a directorului [2]</translation>
+  </string>
+  <string id="Error.1319">
+    <base>A network error occurred while attempting to open the source file cabinet [2].</base>
+    <translation>A apărut o eroare reţea la încercarea de deschidere cabinet fişier sursă [2].</translation>
+  </string>
+  <string id="Error.1320">
+    <base>The specified path is too long [2].</base>
+    <translation>Calea specificată [2] este prea lungă.</translation>
+  </string>
+  <string id="Error.1321">
+    <base>The Installer has insufficient privileges to modify the file [2].</base>
+    <translation>Programul de instalare are drepturi insuficiente pentru a modifica fişierul [2].</translation>
+  </string>
+  <string id="Error.1322">
+    <base>A portion of the path [2] exceeds the length allowed by the system.</base>
+    <translation>O parte din cale [2] depăşeşte lungimea permisă de sistem.</translation>
+  </string>
+  <string id="Error.1323">
+    <base>The path [2] contains words that are not valid in folders.</base>
+    <translation>Calea [2] conţine cuvinte care nu sunt valide pentru foldere.</translation>
+  </string>
+  <string id="Error.1324">
+    <base>The path [2] contains an invalid character.</base>
+    <translation>Calea [2] conţine un caracter invalid.</translation>
+  </string>
+  <string id="Error.1325">
+    <base>[2] is not a valid short file name.</base>
+    <translation>[2] nu este un nume scurt valid pentru fişier.</translation>
+  </string>
+  <string id="Error.1326">
+    <base>Error getting file security: [3] GetLastError: [2]</base>
+    <translation>Eroare la obţinerea securităţii fişierului: [3] GetLastError: [2]</translation>
+  </string>
+  <string id="Error.1327">
+    <base>Invalid Drive: [2]</base>
+    <translation>Unitate invalidă: [2]</translation>
+  </string>
+  <string id="Error.1328">
+    <base>Error applying patch to file [2].  It has probably been updated by other means, and can no longer be modified by this patch.  For more information contact your patch vendor.  {{System Error: [3]}}</base>
+    <translation>Eroare la aplicarea corecţiei (patch) fişierului [2].  A fost actualizat prin alte mijloace şi nu mai poate fi mofificat prin acest petec (patch).  Pentru mai multe informaţii, contactaţi vânzătorul petecului (patch file).  {{Eroare sistem: [3]}}</translation>
+  </string>
+  <string id="Error.1401">
+    <base>Could not create key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Nu s-a putut crea cheia [2]. {{ Eroare sistem [3].}}  Verificaţi că aveţi acces suficient la această cheie sau contactaţi personalul care vă asigură suportul.</translation>
+  </string>
+  <string id="Error.1402">
+    <base>Could not open key: [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Nu s-a putut deschide cheia [2]. {{ Eroare sistem [3].}}  Verificaţi că aveţi acces suficient la această cheie sau contactaţi personalul care vă asigură suportul.</translation>
+  </string>
+  <string id="Error.1403">
+    <base>Could not delete value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Nu s-a putut şterge valoarea [2] din cheia [3]. {{ Eroare sistem [4].}}  Verificaţi că aveţi acces suficient la această cheie sau contactaţi personalul care vă asigură suportul.</translation>
+  </string>
+  <string id="Error.1404">
+    <base>Could not delete key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Nu s-a putut şterge cheia [2]. {{ Eroare sistem [3].}}  Verificaţi că aveţi acces suficient la această cheie sau contactaţi personalul care vă asigură suportul.</translation>
+  </string>
+  <string id="Error.1405">
+    <base>Could not read value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Nu s-a putut citi valoarea [2] din cheia [3]. {{ Eroare sistem [4].}}  Verificaţi că aveţi acces suficient la această cheie sau contactaţi personalul care vă asigură suportul.</translation>
+  </string>
+  <string id="Error.1406">
+    <base>Could not write value [2] to key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Nu s-a putut scrie valoarea [2] la cheia [3]. {{ Eroare sistem [4].}}  Verificaţi că aveţi acces suficient la această cheie sau contactaţi personalul care vă asigură suportul.</translation>
+  </string>
+  <string id="Error.1407">
+    <base>Could not get value names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Nu s-au putut obţine numele de valori pentru cheia [2]. {{ Eroare sistem [3].}}  Verificaţi că aveţi acces suficient la această cheie sau contactaţi personalul care vă asigură suportul.</translation>
+  </string>
+  <string id="Error.1408">
+    <base>Could not get sub key names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Nu s-au putut obţine numele de sub-chei pentru cheia [2]. {{ Eroare sistem [3].}}  Verificaţi că aveţi acces suficient la această cheie sau contactaţi personalul care vă asigură suportul.</translation>
+  </string>
+  <string id="Error.1409">
+    <base>Could not read security information for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Nu s-au putut citi informaţiile de securitate pentru cheia [2]. {{ Eroare sistem [3].}}  Verificaţi că aveţi acces suficient la această cheie sau contactaţi personalul care vă asigură suportul.</translation>
+  </string>
+  <string id="Error.1410">
+    <base>Could not increase the available registry space. [2] KB of free registry space is required for the installation of this application.</base>
+    <translation>Nu s-a putut creşte spaţiu disponibil registry. [2] KB spaţiu liber registry este necesar pentru instalarea acestei aplicaţii.</translation>
+  </string>
+  <string id="Error.1500">
+    <base>Another installation is in progress. You must complete that installation before continuing this one.</base>
+    <translation>O altă instalare este în curs de desfăşurare. Trebuie să terminaţi acea instalare înainte de a o continua pe aceasta.</translation>
+  </string>
+  <string id="Error.1501">
+    <base>Error accessing secured data. Please make sure the Windows Installer is configured properly and try the installation again.</base>
+    <translation>Eroare la accesarea datelor securizate. Vă rugăm verificaţi că Windows Installer este configurat corespunzător şi reporniţi instalarea.</translation>
+  </string>
+  <string id="Error.1502">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.  Your current installation will now continue.</base>
+    <translation>Utilizatorul [2] a iniţiat o instalare pentru produsul [3].  Acel utilizator va trebui să ruleze acea instalare din nou înainte de folosirea produsului.  Instalarea dumneavoastră curentă va continua acum.</translation>
+  </string>
+  <string id="Error.1503">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.</base>
+    <translation>Utilizatorul [2] a iniţiat o instalare pentru produsul [3].  Acel utilizator va trebui să ruleze acea instalare din nou înainte de folosirea produsului.</translation>
+  </string>
+  <string id="Error.1601">
+    <base>Out of disk space -- Volume: '[2]'; required space: [3] KB; available space: [4] KB.  Free some disk space and retry.</base>
+    <translation>Spaţiu pe disc insuficient -- Volum: '[2]'; spaţiu necesar: [3] KB; spaţiu disponibil: [4] KB.  Eliberaţi ceva spaţiu pe disc şi reîncercaţi.</translation>
+  </string>
+  <string id="Error.1602">
+    <base>Are you sure you want to cancel?</base>
+    <translation>Sunteţi sigur că vreţi să anulaţi?</translation>
+  </string>
+  <string id="Error.1603">
+    <base>The file [2][3] is being held in use{ by the following process: Name: [4], ID: [5], Window Title: [6]}.  Close that application and retry.</base>
+    <translation>Fişierul [2][3] este blocat la folosire { de următorul proces: Nume: [4], ID: [5], Titlu fereastră: [6]}.  Închideţi aplicaţia şi reîncercaţi.</translation>
+  </string>
+  <string id="Error.1604">
+    <base>The product [2] is already installed, preventing the installation of this product.  The two products are incompatible.</base>
+    <translation>Produsul [2] este instalat deja, împiedicând instalarea acestui produs.  Aceste două produse sunt incompatibile.</translation>
+  </string>
+  <string id="Error.1605">
+    <base>Out of disk space -- Volume: [2]; required space: [3] KB; available space: [4] KB.  If rollback is disabled, enough space is available. Click Cancel to quit, Retry to check available disk space again, or Ignore to continue without rollback.</base>
+    <translation>Spaţiu pe disc insuficient -- Volum: [2]; spaţiu necesar: [3] KB; spaţiu disponibil: [4] KB.  Dacă rollback este dezactivat, este destul spaţiu disponibil. Apăsaţi Anulare pentru a renunţa, Reîncercare pentru a verifica din nou spaţiu disponibil sau Ignorare pentru a continua fără rollback.</translation>
+  </string>
+  <string id="Error.1606">
+    <base>Could not access network location [2].</base>
+    <translation>Nu s-a putut accesa locaţia de reţea [2].</translation>
+  </string>
+  <string id="Error.1607">
+    <base>The following applications should be closed before continuing the installation:</base>
+    <translation>Următoarele aplicaţii vor fi închise înainte de a continua instalarea:</translation>
+  </string>
+  <string id="Error.1608">
+    <base>Could not find any previously installed compliant products on the machine for installing this product.</base>
+    <translation>Nu s-au putut găsi produse compatibile instalate anterior pe maşină pentru instalarea acestui produs.</translation>
+  </string>
+  <string id="Error.1701">
+    <base>The key [2] is not valid.  Verify that you entered the correct key.</base>
+    <translation>Cheia [2] nu este validă.  Verificaţi că aţi introdus cheia corectă.</translation>
+  </string>
+  <string id="Error.1702">
+    <base>The installer must restart your system before configuration of [2] can continue.  Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>Programul de instalare trebuie să repornească sistemul înainte de configurarea lui [2] poate continua.  Apăsaţi Da pentru a reporni acum sau Nu dacă plănuiţi să reporniţi mai târziu.</translation>
+  </string>
+  <string id="Error.1703">
+    <base>You must restart your system for the configuration changes made to [2] to take effect. Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>Trebuie să reporniţi sistemul pentru ca modificările făcute la [2] să aibă efect. Apăsaţi Da pentru a reporni acum sau Nu dacă plănuiţi să reporniţi mai târziu.</translation>
+  </string>
+  <string id="Error.1704">
+    <base>An installation for [2] is currently suspended.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>O instalare pentru [2] este suspendată.  Pentru a continua trebuie să renunţaţi (undo) la modificările făcute de această instalare. Doriţi să renunţaţi la aceste modificări?</translation>
+  </string>
+  <string id="Error.1705">
+    <base>A previous installation for this product is in progress.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>O instalare anterioară pentru acest produs este în curs de desfăşurare.  Pentru a continua trebuie să renunţaţi (undo) la modificările făcute de această instalare. Doriţi să renunţaţi la aceste modificări?</translation>
+  </string>
+  <string id="Error.1706">
+    <base>No valid source could be found for product [2].  The Windows Installer cannot continue.</base>
+    <translation>Nu s-a putut găsi o sursă validă pentru produsul [2].  Windows Installer nu mai poate continua.</translation>
+  </string>
+  <string id="Error.1707">
+    <base>Installation operation completed successfully.</base>
+    <translation>Operaţia de instalare s-a terminat cu succes.</translation>
+  </string>
+  <string id="Error.1708">
+    <base>Installation operation failed.</base>
+    <translation>Operaţia de instalare a eşuat.</translation>
+  </string>
+  <string id="Error.1709">
+    <base>Product: [2] -- [3]</base>
+    <translation>Produs: [2] -- [3]</translation>
+  </string>
+  <string id="Error.1710">
+    <base>You may either restore your computer to its previous state or continue the installation later. Would you like to restore?</base>
+    <translation>Puteţi fie restaura calculatorul în starea anterioră sau fie continua instalarea mai târziu. Doriţi să restauraţi?</translation>
+  </string>
+  <string id="Error.1711">
+    <base>An error occurred while writing installation information to disk.  Check to make sure enough disk space is available, and click Retry, or Cancel to end the installation.</base>
+    <translation>A apărut o eroare la scrierea informaţiilor de instalare pe disc. Verificaţi pentru a vă asigura că este disponibil destul spaţiu pe disc li apăsaţi Reîncercare sau Anulare pentru a termina instalarea.</translation>
+  </string>
+  <string id="Error.1712">
+    <base>One or more of the files required to restore your computer to its previous state could not be found.  Restoration will not be possible.</base>
+    <translation>Unul sau mai multe fişiere necesare pentru restaurarea stării anterioare a calculatorului nu a putut fi găsită.  Restaurarea nu va fi posibilă.</translation>
+  </string>
+  <string id="Error.1713">
+    <base>[2] cannot install one of its required products. Contact your technical support group.  {{System Error: [3].}}</base>
+    <translation>[2] nu a putut instala unul din produsele cerute. Contactaţi personalul care asigură suportul tehnic. {{Eroare sistem: [3].}}</translation>
+  </string>
+  <string id="Error.1714">
+    <base>The older version of [2] cannot be removed.  Contact your technical support group.  {{System Error [3].}}</base>
+    <translation>Versiunea mai veche a lui [2] nu a putut fi înlăturată. Contactaţi personalul care asigură suportul tehnic. {{Eroare sistem [3].}}</translation>
+  </string>
+  <string id="Error.1801">
+    <base>The path [2] is not valid.  Please specify a valid path.</base>
+    <translation>Calea [2] nu este validă.  Vă rugăm să specificaţi o cale validă.</translation>
+  </string>
+  <string id="Error.1802">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>Memorie insuficientă. Opriţi alte aplicaţii şi încercaţi din nou.</translation>
+  </string>
+  <string id="Error.1803">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to go back to the previously selected volume.</base>
+    <translation>Nu există disc în unitatea [2]. Vă rugăm introduceţi unul şi apăsaţi Reîncercare sau apăsaţi Anulare pentru a vă întoarce la volumul selectat anterior.</translation>
+  </string>
+  <string id="Error.1804">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to return to the browse dialog and select a different volume.</base>
+    <translation>Nu există disc în unitatea [2]. Vă rugăm introduceţi unul şi apăsaţi Reîncercare sau apăsaţi Anulare pentru a vă întoarce la dialogul de răsfoire pentru a selecta un alt volum.</translation>
+  </string>
+  <string id="Error.1805">
+    <base>The folder [2] does not exist.  Please enter a path to an existing folder.</base>
+    <translation>Folderul [2] nu există.  Vă rugăm introduceţi o cale la un folder existent.</translation>
+  </string>
+  <string id="Error.1806">
+    <base>You have insufficient privileges to read this folder.</base>
+    <translation>Nu aveţi drepturi suficiente pentru a citi acest folder.</translation>
+  </string>
+  <string id="Error.1807">
+    <base>A valid destination folder for the installation could not be determined.</base>
+    <translation>Nu a putut fi determinat un folder destinaţie valid pentru instalare.</translation>
+  </string>
+  <string id="Error.1901">
+    <base>Error attempting to read from the source installation database: [2].</base>
+    <translation>Eroare la încercarea de citire din baza de date sursă pentru instalare: [2].</translation>
+  </string>
+  <string id="Error.1902">
+    <base>Scheduling reboot operation: Renaming file [2] to [3]. Must reboot to complete operation.</base>
+    <translation>Planificare operaţie reboot: Redenumire fişier [2] la [3]. Trebuie rebootat pentru a termina operaţia.</translation>
+  </string>
+  <string id="Error.1903">
+    <base>Scheduling reboot operation: Deleting file [2]. Must reboot to complete operation.</base>
+    <translation>Planificare operaţie reboot: Ştergere fişier [2]. Trebuie rebootat pentru a termina operaţia.</translation>
+  </string>
+  <string id="Error.1904">
+    <base>Module [2] failed to register.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>Modulul [2] nu s-a putut înregistra.  HRESULT [3].  Contactaţi personalul care asigură suportul.</translation>
+  </string>
+  <string id="Error.1905">
+    <base>Module [2] failed to unregister.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>Modulul [2] nu s-a putut de-înregistra.  HRESULT [3].  Contactaţi personalul care asigură suportul.</translation>
+  </string>
+  <string id="Error.1906">
+    <base>Failed to cache package [2]. Error: [3]. Contact your support personnel.</base>
+    <translation>Nu a putut memora în cache pachetul [2]. Eroare: [3]. Contactaţi personalul care asigură suportul.</translation>
+  </string>
+  <string id="Error.1907">
+    <base>Could not register font [2].  Verify that you have sufficient permissions to install fonts, and that the system supports this font.</base>
+    <translation>Nu s-a putut înregistra fontul [2].  Verificaţi că aveţi destule drepturi pentru a instala fonturi şi că sistemul suportă acest font.</translation>
+  </string>
+  <string id="Error.1908">
+    <base>Could not unregister font [2]. Verify that you have sufficient permissions to remove fonts.</base>
+    <translation>Nu s-a putut de-înregistra fontul [2]. Verificaţi că aveţi suficiente drepturi pentru a înlătura fonturi.</translation>
+  </string>
+  <string id="Error.1909">
+    <base>Could not create shortcut [2]. Verify that the destination folder exists and that you can access it.</base>
+    <translation>Nu s-a putut crea scurtătura [2]. Verificaţi că folderul destinaţie există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1910">
+    <base>Could not remove shortcut [2]. Verify that the shortcut file exists and that you can access it.</base>
+    <translation>Nu s-a putut înlătura [2]. Verificaţi că fişierul scurtătură există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1911">
+    <base>Could not register type library for file [2].  Contact your support personnel.</base>
+    <translation>Nu s-a putut înregistra biblioteca tip pentru fişierul [2].  Contactaţi personalul care asigură suportul.</translation>
+  </string>
+  <string id="Error.1912">
+    <base>Could not unregister type library for file [2].  Contact your support personnel.</base>
+    <translation>Nu s-a putut de-înregistra biblioteca tip pentru fişierul [2].  Contactaţi personalul care asigură suportul.</translation>
+  </string>
+  <string id="Error.1913">
+    <base>Could not update the INI file [2][3].  Verify that the file exists and that you can access it.</base>
+    <translation>Nu s-a putut actualiza fişierul INI [2][3].  Verificaţi că fişierul există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1914">
+    <base>Could not schedule file [2] to replace file [3] on reboot.  Verify that you have write permissions to file [3].</base>
+    <translation>Nu s-a putut planifica fişierul [2] să-l înlocuiască la reboot-are fişierul [3].  Verificaţi că aveţi permisiuni la scriere asupra fişierului [3].</translation>
+  </string>
+  <string id="Error.1915">
+    <base>Error removing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>Eroare la înlăturarea managerului de driver ODBC, eroare ODBC [2]: [3]. Contactaţi personalul care asigură suportul.</translation>
+  </string>
+  <string id="Error.1916">
+    <base>Error installing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>Eroare la instalarea managerului de driver ODBC, eroare ODBC [2]: [3]. Contactaţi personalul care asigură suportul.</translation>
+  </string>
+  <string id="Error.1917">
+    <base>Error removing ODBC driver [4], ODBC error [2]: [3]. Verify that you have sufficient privileges to remove ODBC drivers.</base>
+    <translation>Eroare la înlăturarea driver-ului ODBC [4], eroare ODBC [2]: [3]. Verificaţi că aveţi suficiente drepturi pentru a înlătura driverele ODBC.</translation>
+  </string>
+  <string id="Error.1918">
+    <base>Error installing ODBC driver [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>Eroare la instalarea driver-ului ODBC [4], eroare ODBC [2]: [3]. Verificaţi că fişierul [4] există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1919">
+    <base>Error configuring ODBC data source [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>Eroare la configurarea sursei de date ODBC [4], eroare ODBC [2]: [3]. Verificaţi că fişierul [4] există şi că îl puteţi accesa.</translation>
+  </string>
+  <string id="Error.1920">
+    <base>Service [2] ([3]) failed to start.  Verify that you have sufficient privileges to start system services.</base>
+    <translation>Serviciul [2] ([3]) a eşuat la pornire.  Verificaţi că aveţi suficiente drepturi pentru a porni serviciile sistem.</translation>
+  </string>
+  <string id="Error.1921">
+    <base>Service [2] ([3]) could not be stopped.  Verify that you have sufficient privileges to stop system services.</base>
+    <translation>Serviciul [2] ([3]) a eşuat la oprire.  Verificaţi că aveţi suficiente drepturi pentru a opri serviciile sistem.</translation>
+  </string>
+  <string id="Error.1922">
+    <base>Service [2] ([3]) could not be deleted.  Verify that you have sufficient privileges to remove system services.</base>
+    <translation>Serviciul [2] ([3]) nu a putut fi şters.  Verificaţi că aveţi suficiente drepturi pentru a şterge serviciile sistem.</translation>
+  </string>
+  <string id="Error.1923">
+    <base>Service [2] ([3]) could not be installed.  Verify that you have sufficient privileges to install system services.</base>
+    <translation>Serviciul [2] ([3]) nu a putut fi instalat.  Verificaţi că aveţi suficiente drepturi pentru a instala serviciile sistem.</translation>
+  </string>
+  <string id="Error.1924">
+    <base>Could not update environment variable [2].  Verify that you have sufficient privileges to modify environment variables.</base>
+    <translation>Nu s-a putut actualiza variabila de mediu [2].  Verificaţi că aveţi suficiente drepturi pentru a modifica variabilele de mediu.</translation>
+  </string>
+  <string id="Error.1925">
+    <base>You do not have sufficient privileges to complete this installation for all users of the machine.  Log on as an administrator and then retry this installation.</base>
+    <translation>Nu aveţi drepturi suficiente pentru a termina această instalare pentru toţi utilizatorii acestei maşini. Intraţi (log on) ca administrator şi reîncercaţi instalarea.</translation>
+  </string>
+  <string id="Error.1926">
+    <base>Could not set file security for file [3]. Error: [2].  Verify that you have sufficient privileges to modify the security permissions for this file.</base>
+    <translation>Nu s-a putut seta securitatea fişier pentru fişierul [3]. Eroare: [2].  Verificaţi că aveţi suficiente drepturi pentru a modifica permisiunile de securitate pentru acest fişier.</translation>
+  </string>
+  <string id="Error.1927">
+    <base>Component Services (COM+ 1.0) are not installed on this computer.  This installation requires Component Services in order to complete successfully.  Component Services are available on Windows 2000.</base>
+    <translation>Component Services (COM+ 1.0) nu sunt instalate pe acest calculator.  Această instalare are nevoie de Component Services pentru a se termina cu succes. Component Services sunt disponibile pe Windows 2000.</translation>
+  </string>
+  <string id="Error.1928">
+    <base>Error registering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>Eroare înregistrare aplicaţie COM+.  Contactaţi personalul care asigură suportul pentru mai multe informaţii.</translation>
+  </string>
+  <string id="Error.1929">
+    <base>Error unregistering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>Eroare de-înregistrare aplicaţie COM+.  Contactaţi personalul care asigură suportul pentru mai multe informaţii.</translation>
+  </string>
+  <string id="Error.1930">
+    <base>The description for service '[2]' ([3]) could not be changed.</base>
+    <translation>Descrierea serviciului '[2]' ([3]) nu a putut fi modificată.</translation>
+  </string>
+  <string id="Error.1931">
+    <base>The Windows Installer service cannot update the system file [2] because the file is protected by Windows.  You may need to update your operating system for this program to work correctly. {{Package version: [3], OS Protected version: [4]}}</base>
+    <translation>Serviciul Windows Installer nu a putut actualiza fişierul sistemului [2] deoarece fişierul este protejat de Windows.  S-ar putea să trebuiască să actualizaţi sistemul de operare pentru ca acest program să funcţioneze corect. {{Versiune pachet: [3], Versiune protejată de SO: [4]}}</translation>
+  </string>
+  <string id="Error.1932">
+    <base>The Windows Installer service cannot update the protected Windows file [2]. {{Package version: [3], OS Protected version: [4], SFP Error: [5]}}</base>
+    <translation>Serviciul Windows Installer nu a putut actualiza fişierul protejat Windows [2]. {{Versiune pachet: [3], Versiune protejată de SO: [4], Eroare SFP: [5]}}</translation>
+  </string>
+  <string id="Error.1933">
+    <base>The Windows Installer service cannot update one or more protected Windows files. SFP Error: [2]. List of protected files: [3]</base>
+    <translation>Serviciul Windows Installer nu poate actualiza unul sau mai multe fişiere Windows protejate. Eroare SFP: [2]. Lista fişierelor protejate: [3]</translation>
+  </string>
+  <string id="Error.1934">
+    <base>User installations are disabled via policy on the machine.</base>
+    <translation>Politica furnizorului echipamentului nu permite utilizatorului să realizeze instalări.</translation>
+  </string>
+  <string id="UIText.NewFolder">
+    <base>Fldr|New Folder</base>
+    <translation>Fldr|Folder nou</translation>
+  </string>
+  <string id="UIText.bytes">
+    <base>bytes</base>
+    <translation>octeţi</translation>
+  </string>
+  <string id="UIText.GB">
+    <base>GB</base>
+    <translation>GB</translation>
+  </string>
+  <string id="UIText.KB">
+    <base>KB</base>
+    <translation>KB</translation>
+  </string>
+  <string id="UIText.MB">
+    <base>MB</base>
+    <translation>MB</translation>
+  </string>
+  <string id="UIText.AbsentPath">
+    <base>
+    </base>
+    <translation>{&amp;Tahoma8}</translation>
+  </string>
+  <string id="UIText.MenuAbsent">
+    <base>This feature will not be available.</base>
+    <translation>Această opţiune nu va fi disponibilă.</translation>
+  </string>
+  <string id="UIText.MenuAdvertise">
+    <base>This feature will be installed when required.</base>
+    <translation>Această opţiune va fi instalată când este cerută.</translation>
+  </string>
+  <string id="UIText.MenuAllCD">
+    <base>This feature, and all subfeatures, will be installed to run from the CD.</base>
+    <translation>Această opţiune şi toate sub-opţiunile vor fi instalate să ruleze de pe CD.</translation>
+  </string>
+  <string id="UIText.MenuAllLocal">
+    <base>This feature, and all subfeatures, will be installed on local hard drive.</base>
+    <translation>Această opţiune şi toate sub-opţiunile vor fi instalate pe discul local.</translation>
+  </string>
+  <string id="UIText.MenuAllNetwork">
+    <base>This feature, and all subfeatures, will be installed to run from the network.</base>
+    <translation>Această opţiune şi toate sub-opţiunile vor fi instalate să ruleze din reţea.</translation>
+  </string>
+  <string id="UIText.MenuCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation>Această opţiune va fi instalată să ruleze de pe CD.</translation>
+  </string>
+  <string id="UIText.MenuLocal">
+    <base>This feature will be installed on local hard drive.</base>
+    <translation>Această opţiune va fi instalată pe discul local.</translation>
+  </string>
+  <string id="UIText.MenuNetwork">
+    <base>This feature will be installed to run from network.</base>
+    <translation>Această opţiune va fi instalată să ruleze din reţea.</translation>
+  </string>
+  <string id="UIText.SelAbsentAbsent">
+    <base>GB</base>
+    <translation>GB</translation>
+  </string>
+  <string id="UIText.SelAbsentAdvertise">
+    <base>This feature will be set to be installed when required.</base>
+    <translation>Această opţiune va fi setată să fie instalată când este cerută.</translation>
+  </string>
+  <string id="UIText.SelAbsentCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation>Această opţiune va fi instalată să ruleze de pe CD.</translation>
+  </string>
+  <string id="UIText.SelAbsentLocal">
+    <base>This feature will be installed on the local hard drive.</base>
+    <translation>Această opţiune va fi instalată pe discul local.</translation>
+  </string>
+  <string id="UIText.SelAbsentNetwork">
+    <base>This feature will be installed to run from the network.</base>
+    <translation>Această opţiune va fi instalată să ruleze din reţea.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAbsent">
+    <base>This feature will become unavailable.</base>
+    <translation>Această opţiune va deveni indisponibilă.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAdvertise">
+    <base>Will be installed when required.</base>
+    <translation>Va fi instalată când este cerută.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseCD">
+    <base>This feature will be available to run from CD.</base>
+    <translation>Această opţiune va fi disponibilă să ruleze de pe CD.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseLocal">
+    <base>This feature will be installed on your local hard drive.</base>
+    <translation>Această opţiune va fi instalată pe discul local.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseNetwork">
+    <base>This feature will be available to run from the network.</base>
+    <translation>Această opţiune va fi disponibilă să ruleze din reţea.</translation>
+  </string>
+  <string id="UIText.SelCDAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from CD.</base>
+    <translation>Această opţiune va fi dezinstalată complet şi nu veţi fi în stare să o rulaţi de pe CD.</translation>
+  </string>
+  <string id="UIText.SelCDAdvertise">
+    <base>This feature was run from the CD but will be set to be installed when required.</base>
+    <translation>Această opţiune a fost rulată de pe CD, dar va fi setată să fie instalată când este cerută.</translation>
+  </string>
+  <string id="UIText.SelCDCD">
+    <base>This feature will continue to be run from the CD</base>
+    <translation>Această opţiune va continua să ruleze de pe CD.</translation>
+  </string>
+  <string id="UIText.SelCDLocal">
+    <base>This feature was run from the CD but will be installed on the local hard drive.</base>
+    <translation>Această opţiune a fost rulată de pe CD, dar va fi instalată pe discul local.</translation>
+  </string>
+  <string id="UIText.SelChildCostNeg">
+    <base>This feature frees up [1] on your hard drive.</base>
+    <translation>Această opţiune eliberează [1] pe disc.</translation>
+  </string>
+  <string id="UIText.SelChildCostPos">
+    <base>This feature requires [1] on your hard drive.</base>
+    <translation>Această opţiune necesită [1] pe disc.</translation>
+  </string>
+  <string id="UIText.SelCostPending">
+    <base>Compiling cost for this feature...</base>
+    <translation>Compilare cost pentru această opţiune...</translation>
+  </string>
+  <string id="UIText.SelLocalAbsent">
+    <base>This feature will be completely removed.</base>
+    <translation>Această opţiune va fi înlăturată complet.</translation>
+  </string>
+  <string id="UIText.SelLocalAdvertise">
+    <base>This feature will be removed from your local hard drive but will be set to be installed when required.</base>
+    <translation>Această opţiune va fi înlăturată de pe discul local, dar va fi setată să fie instalată când este cerută.</translation>
+  </string>
+  <string id="UIText.SelLocalCD">
+    <base>This feature will be removed from your local hard drive but will still be available to run from CD.</base>
+    <translation>Această opţiune va fi înlăturată de pe discul local, dar va mai fi disponibilă să fie rulată de pe CD.</translation>
+  </string>
+  <string id="UIText.SelLocalLocal">
+    <base>This feature will remain on your local hard drive.</base>
+    <translation>Această opţiune va rămâne pe discul local.</translation>
+  </string>
+  <string id="UIText.SelLocalNetwork">
+    <base>This feature will be removed from your local hard drive, but will be still available to run from the network.</base>
+    <translation>Această opţiune va fi înlăturată de pe discul local, dar va mai fi disponibilă să fie rulată din reţea.</translation>
+  </string>
+  <string id="UIText.SelNetworkAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from the network.</base>
+    <translation>Această opţiune va fi dezinstalată complet şi nu veţi fi în stare să o rulaţi din reţea.</translation>
+  </string>
+  <string id="UIText.SelNetworkAdvertise">
+    <base>This feature was run from the network but will be installed when required.</base>
+    <translation>Această opţiune a fost rulată din reţea, dar va fi instalată la cerere.</translation>
+  </string>
+  <string id="UIText.SelNetworkLocal">
+    <base>This feature was run from the network but will be installed on the local hard drive.</base>
+    <translation>Această opţiune a fost rulată din reţea, dar va fi instalată pe discul local.</translation>
+  </string>
+  <string id="UIText.SelNetworkNetwork">
+    <base>This feature will continue to be run from the network</base>
+    <translation>Această opţiune va continua să ruleze din reţea.</translation>
+  </string>
+  <string id="UIText.SelParentCostNegNeg">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation>Această opţiune eliberează [1] pe disc. A avut selectate [2] din [3] sub-opţiuni. Sub-opţiunile eliberează [4] pe disc.</translation>
+  </string>
+  <string id="UIText.SelParentCostNegPos">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation>Această opţiune eliberează [1] pe disc. A avut selectate [2] din [3] sub-opţiuni. Sub-opţiunile necesită [4] pe disc.</translation>
+  </string>
+  <string id="UIText.SelParentCostPosNeg">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation>Această opţiune necesită [1] pe disc. A avut selectate [2] din [3] sub-opţiuni. Sub-opţiunile eliberează [4] pe disc.</translation>
+  </string>
+  <string id="UIText.SelParentCostPosPos">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation>Această opţiune necesită [1] pe disc. A avut selectate [2] din [3] sub-opţiuni. Sub-opţiunile necesită [4] pe disc.</translation>
+  </string>
+  <string id="UIText.TimeRemaining">
+    <base>Time remaining: {[1] min }[2] sec</base>
+    <translation>Timp rămas: {[1] min }{[2] sec</translation>
+  </string>
+  <string id="UIText.VolumeCostAvailable">
+    <base>Available</base>
+    <translation>Disponibil</translation>
+  </string>
+  <string id="UIText.VolumeCostDifference">
+    <base>Differences</base>
+    <translation>Diferenţe</translation>
+  </string>
+  <string id="UIText.VolumeCostRequired">
+    <base>Required</base>
+    <translation>Necesar</translation>
+  </string>
+  <string id="UIText.VolumeCostSize">
+    <base>Disk Size</base>
+    <translation>Dimensiune disc</translation>
+  </string>
+  <string id="UIText.VolumeCostVolume">
+    <base>Volume</base>
+    <translation>Volum</translation>
+  </string>
+</localization>

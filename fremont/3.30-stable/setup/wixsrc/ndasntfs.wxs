@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+	<?include config.wxi?>
+
+	<?ifdef WixCustomTableLocBug?>
+	<?define ActionData.NDASNTFS   = "NDAS NTFS File System" ?>
+	<?endif?>
+
+	<Fragment>
+
+		<?ifdef Include.NDASNTFS?>
+
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.SetupFileSource)">
+			<Component Id="ndasntfs" Guid="$(var.NDASNTFS.GUID)" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasntfs.sys" Name="ndasntfs.sys" KeyPath="yes" Checksum="yes" />
+				<File Id="ndasntfs.inf" Name="ndasntfs.inf" Checksum="yes" />
+				<File Id="ndasntfs.cat" Name="ndasntfs.cat" Checksum="yes" />
+				<Registry Id="ndasntfs" Root="HKLM" Key="SOFTWARE\NDAS\Install\OEMINF" Type="string" Name="NDASNTFS" />
+			</Component>
+		</DirectoryRef>
+
+		<CustomTable Id="xDriverInstall">
+			<Row>
+				<Data Column="Id">StopNDASNTFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASNTFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASNTFS)</Data>
+				<?endif?>
+				<Data Column="Phase">3</Data>
+				<Data Column="Type">StopService</Data>
+				<Data Column="HardwareId">ndasntfs</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASNTFS.Stop)</Data>
+				<Data Column="Condition">(?ndasntfs=3) AND ($ndasntfs=2 OR $ndasntfs=4)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">UninstallNDASNTFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASNTFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASNTFS)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultUninstall</Data>
+				<Data Column="INF">[#ndasntfs.inf]</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASNTFS.Uninstall)</Data>
+				<Data Column="Condition">(?ndasntfs=3) AND ($ndasntfs=2 OR $ndasntfs=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasntfs</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">InstallNDASNTFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASNTFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASNTFS)</Data>
+				<?endif?>
+				<Data Column="Phase">2</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultInstall;DefaultUninstall</Data>
+				<Data Column="INF">[#ndasntfs.inf]</Data>
+				<Data Column="Flags">2</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASNTFS.Install)</Data>
+				<Data Column="Condition">($ndasntfs=3)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasntfs</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">StartNDASNTFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASNTFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASNTFS)</Data>
+				<?endif?>
+				<Data Column="Phase">4</Data>
+				<Data Column="Type">StartService</Data>
+				<Data Column="HardwareId">ndasntfs</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASNTFS.Start)</Data>
+				<Data Column="Condition">($ndasntfs=3)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+		</CustomTable>
+
+		<?endif?>
+
+	</Fragment>
+</Wix>

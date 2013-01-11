@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="COND_X64_IS_NOT_SUPPORTED">
+    <base>This setup package is for 32-bit version of Windows. Please install the 64-bit version of this software.</base>
+    <translation>Denne opsætningspakke er til 32-bitudgaven af Windows. Installér 64-bitudgaven af denne software.</translation>
+  </string>
+  <string id="COND_REQUIRE_WIN2000">
+    <base>[ProductName] requires that your computer is running Windows 2000, Windows XP or Windows 2003 Server.</base>
+    <translation>[ProductName] kræver, at din computer kører Windows 2000, Windows XP eller Windows 2003 server.</translation>
+  </string>
+  <string id="COND_NOT_PRIVILEGED">
+    <base>You do not have sufficient privileges to complete this installation. Log on as an administrator and then retry this installation.</base>
+    <translation>Du har ikke de nødvendige rettigheder til at fuldføre denne installation. Log på som administrator og prøv at installere igen.</translation>
+  </string>
+  <string id="ProductName64Suffix">
+    <base> (64-bit Windows)</base>
+    <translation>(64-bit Windows)</translation>
+  </string>
+  <string id="Text.SetupVersion">
+    <base>[NdasSetupVersion]</base>
+    <translation>[NdasSetupVersion]</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText2">
+    <base>It is recommended that this product is used in 100Mbps wired LAN or 802.11g/a wireless LAN environment.</base>
+    <translation>Det anbefales, at dette produkt bruges på et kabelforbundet 100Mbps LAN- eller 802.11g/a trådløst LAN-netværk.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText1">
+    <base>If you are using this product in a wired 10Mbps LAN or wireless 802.11b LAN environment, there is a possiblity of data transmit error or unstable connection.</base>
+    <translation>Hvis du bruger dette produkt på et kabelforbundet 10Mbps LAN- eller et trådløst 802.11b LAN-netværk, er der mulighed for dataoverførselsfejl eller ustabil forbindelse.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeGroupBox">
+    <base>Notice</base>
+    <translation>Bemærk</translation>
+  </string>
+  <string id="SFWarning.SFWarnCheck">
+    <base>I &amp;acknowledge this warning message.</base>
+    <translation>Jeg &amp;godkender denne advarselsmeddelelse.</translation>
+  </string>
+  <string id="SFWarning.DlgDesc">
+    <base>Setup detected a software.</base>
+    <translation>Opsætning fandt software.</translation>
+  </string>
+  <string id="SFWarning.DlgTitle">
+    <base>{&amp;MSSansBold8}Compatibility Warning</base>
+    <translation>{&amp;MSSansBold8}Kompatibilitetsadvarsel</translation>
+  </string>
+  <string id="SFWarning.MemoLine1">
+    <base>{&amp;Arial8BoldBlue}Setup has found that StarForce Copy Protection software is installed in your system. Some old versions of this software may cause a system crash for using thirdy party storage device drivers.</base>
+    <translation>{&amp;Arial8BoldBlue}Opsætning har opdaget, at StarForce Copy Protection-softwaren er installeret på dit system. Nogle ældre versioner af denne software kan forårsage systemnedbrud ved brug af tredjeparts lagringsenhedsdriver.</translation>
+  </string>
+  <string id="SFWarning.MemoLine2">
+    <base>It is highly recommended to update the StarForce Copy Protection software before proceeding the installation. Check the web site of the Protection Technology (http://www.star-force.com) for the updates.</base>
+    <translation>Det anbefales på det kraftigste at opdatere StarForce Copy Protection-softwaren, før installationen fortsættes. Se på hjemmesiden (http://www.star-force.com) efter opdateringer.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgDesc">
+    <base>Setup has found a previous version of the software.</base>
+    <translation>Opsætning har fundet en tidligere version af softwaren.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgTitle">
+    <base>{&amp;MSSansBold8}Upgrade Confirmation</base>
+    <translation>{&amp;MSSansBold8}Bekræft opgradering</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine1">
+    <base>Setup has found a previous version of the software and will perform an upgrade. During an upgrade, you may have to reboot the system twice.</base>
+    <translation>Opsætning har fundet en tidligere version af softwaren og udfører en opgradering. Under en opgradering skal du måske genstarte systemet to gange.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine2">
+    <base>To ensure proper operation, please do not interrupt the system reboot and follow the instructions until the setup is completed.</base>
+    <translation>For at sikre korrekt drift må systemets genstart ikke afbrydes, og anvisningerne skal følges, indtil opsætningen er fuldført.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine3">
+    <base>Click Next to continue installation.</base>
+    <translation>Klik på Næste for at fortsætte installationen.</translation>
+  </string>
+  <string id="Error.25900">
+    <base>Newer version of the software is already installed. If you have to downgrade the software, uninstall the higher version software first.</base>
+    <translation>Der er allerede installeret en nyere version af softwaren. Hvis du vil nedgradere softwaren, skal den nyere softwareversion først afinstalleres.</translation>
+  </string>
+  <string id="Error.27500">
+    <base>This setup requires Internet Information Server 4.0 or higher for configuring IIS Virtual Roots. Please make sure that you have IIS 4.0 or higher.</base>
+    <translation>Denne opsætning kræver Internet Information Server 4.0 eller højere for konfigurering af IIS Virtual Roots. Kontrollér, at du har IIS 4.0 eller højere.</translation>
+  </string>
+  <string id="Error.27501">
+    <base>This setup requires Administrator privileges for configuring IIS Virtual Roots.</base>
+    <translation>Denne opsætning kræver Administrator-rettigheder til konfigurering af IIS Virtual Roots.</translation>
+  </string>
+</localization>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="_inc_ndas_drivers"
+	ProjectGUID="{A9500062-6A3B-4265-A0D8-45E73CC80759}"
+	RootNamespace="_inc_ndas_drivers"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="echo."
+				ReBuildCommandLine="echo."
+				CleanCommandLine="echo."
+				Output=".\."
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="echo."
+				ReBuildCommandLine="echo."
+				CleanCommandLine="echo."
+				Output=".\."
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug (x64)|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="echo."
+				ReBuildCommandLine="echo."
+				CleanCommandLine="echo."
+				Output=".\."
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release (x64)|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="echo."
+				ReBuildCommandLine="echo."
+				CleanCommandLine="echo."
+				Output=".\."
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<File
+			RelativePath=".\_project.xml" />
+		<Filter
+			Name=".kernel"
+			Filter=""
+			UniqueIdentifier="{D4C5784E-51D3-4B5D-A63A-9D335D363BA5}">
+			<File
+				RelativePath=".\kernel\cipher.h" />
+			<File
+				RelativePath=".\kernel\devreg.h" />
+			<File
+				RelativePath=".\kernel\kdebug.h" />
+			<File
+				RelativePath=".\kernel\lpxtdiproc.h" />
+			<File
+				RelativePath=".\kernel\lsccb.h" />
+			<File
+				RelativePath=".\kernel\lsklib.h" />
+			<File
+				RelativePath=".\kernel\lslurn.h" />
+			<File
+				RelativePath=".\kernel\lslurnide.h" />
+			<File
+				RelativePath=".\kernel\lsproto.h" />
+			<File
+				RelativePath=".\kernel\lsprotoide.h" />
+			<File
+				RelativePath=".\kernel\lstransport.h" />
+			<File
+				RelativePath=".\kernel\lsutils.h" />
+			<File
+				RelativePath=".\kernel\tcptdiproc.h" />
+		</Filter>
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

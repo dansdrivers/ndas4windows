@@ -1,0 +1,1784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="ActionText.CostInitialize">
+    <base>Computing space requirements</base>
+    <translation>Alan gereksinimleri hesaplanıyor</translation>
+  </string>
+  <string id="ActionText.AppSearch">
+    <base>Searching for installed applications</base>
+    <translation>Yüklü uygulamalar aranıyor</translation>
+  </string>
+  <string id="ActionText.AppSearch.Template">
+    <base>Property: [1], Signature: [2]</base>
+    <translation>Özellik: [1], İmza: [2]</translation>
+  </string>
+  <string id="ActionText.BindImage">
+    <base>Binding executables</base>
+    <translation>Çalıştırılabilir dosyalar bağlanıyor</translation>
+  </string>
+  <string id="ActionText.BindImage.Template">
+    <base>File: [1]</base>
+    <translation>Dosya: [1]</translation>
+  </string>
+  <string id="ActionText.CCPSearch">
+    <base>Unregistering modules</base>
+    <translation>Birimlerin kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.CostFinalize">
+    <base>Computing space requirements</base>
+    <translation>Alan gereksinimleri hesaplanıyor</translation>
+  </string>
+  <string id="ActionText.FileCost">
+    <base>Computing space requirements</base>
+    <translation>Alan gereksinimleri hesaplanıyor</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage">
+    <base>Copying files to the network</base>
+    <translation>Ağ yükleme dosyaları kopyalanıyor</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage.Template">
+    <base>File: [1], Directory: [9], Size: [6]</base>
+    <translation>Dosya: [1], Dizin: [9], Boyut: [6]</translation>
+  </string>
+  <string id="ActionText.InstallFiles">
+    <base>Copying new files</base>
+    <translation>Yeni dosyalar kopyalanıyor</translation>
+  </string>
+  <string id="ActionText.InstallFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>Dosya: [1],  Dizin: [9],  Boyut: [6]</translation>
+  </string>
+  <string id="ActionText.InstallValidate">
+    <base>Validating install</base>
+    <translation>Yükleme doğrulanıyor</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts">
+    <base>Creating shortcuts</base>
+    <translation>Kısayollar oluşturuluyor</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>Kısayol: [1]</translation>
+  </string>
+  <string id="ActionText.PublishComponents">
+    <base>Publishing qualified components</base>
+    <translation>Yetki Alan Bileşenler Yayımlanıyor</translation>
+  </string>
+  <string id="ActionText.PublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>Bilesen Kimliği: [1], Yetki Veren: [2]</translation>
+  </string>
+  <string id="ActionText.PublishFeatures">
+    <base>Publishing product features</base>
+    <translation>Ürün Özellikleri Yayımlanıyor</translation>
+  </string>
+  <string id="ActionText.PublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>Özellik: [1]</translation>
+  </string>
+  <string id="ActionText.PublishProduct">
+    <base>Publishing product information</base>
+    <translation>Ürün bilgisi yayımlanıyor</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo">
+    <base>Registering class servers</base>
+    <translation>Sınıf sunucuları kaydettiriliyor</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Sınıf Kimliği: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo">
+    <base>Registering extension servers</base>
+    <translation>Uzantı sunucuları kaydettiriliyor</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>Uzantı: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo">
+    <base>Registering MIME info</base>
+    <translation>MIME bilgisi kaydettiriliyor</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>MIME İçerik Türü: [1], Uzantı: [2]</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo">
+    <base>Registering program identifiers</base>
+    <translation>Program tanıtıcılarının kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>Program Kimliği: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries">
+    <base>Registering type libraries</base>
+    <translation>Tür kitaplıkları kaydettiriliyor</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>Kitaplık Kimliği: [1]</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace">
+    <base>Allocating registry space</base>
+    <translation>Kayıt alanı ayrılıyor</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace.Template">
+    <base>Free space: [1]</base>
+    <translation>Bos alan: [1]</translation>
+  </string>
+  <string id="ActionText.CreateFolders">
+    <base>Creating folders</base>
+    <translation>Klasörler oluşturuluyor</translation>
+  </string>
+  <string id="ActionText.CreateFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>Klasör: [1]</translation>
+  </string>
+  <string id="ActionText.DeleteServices">
+    <base>Deleting services</base>
+    <translation>Hizmetler siliniyor</translation>
+  </string>
+  <string id="ActionText.DeleteServices.Template">
+    <base>Service: [1]</base>
+    <translation>Hizmet: [1]</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles">
+    <base>Creating duplicate files</base>
+    <translation>Çift dosyalar oluşturuluyor</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>Dosya: [1],  Dizin: [9],  Boyut: [6]</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts">
+    <base>Searching for related applications</base>
+    <translation>İlgili uygulamalar aranıyor</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts.Template">
+    <base>Found application: [1]</base>
+    <translation>Uygulama bulundu: [1]</translation>
+  </string>
+  <string id="ActionText.InstallODBC">
+    <base>Installing ODBC components</base>
+    <translation>ODBC bileşenleri yükleniyor</translation>
+  </string>
+  <string id="ActionText.InstallServices">
+    <base>Installing new services</base>
+    <translation>Yeni hizmetler yükleniyor</translation>
+  </string>
+  <string id="ActionText.InstallServices.Template">
+    <base>Service: [2]</base>
+    <translation>Hizmet: [2]</translation>
+  </string>
+  <string id="ActionText.LaunchConditions">
+    <base>Evaluating launch conditions</base>
+    <translation>Başlatma durumları değerlendiriliyor</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates">
+    <base>Migrating feature states from related applications</base>
+    <translation>İlgili uygulamalardan özellik durumları alınıyor</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates.Template">
+    <base>Application: [1]</base>
+    <translation>Uygulama: [1]</translation>
+  </string>
+  <string id="ActionText.MoveFiles">
+    <base>Moving files</base>
+    <translation>Dosyalar taşınıyor</translation>
+  </string>
+  <string id="ActionText.MoveFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>Dosya: [1],  Dizin: [9],  Boyut: [6]</translation>
+  </string>
+  <string id="ActionText.PatchFiles">
+    <base>Patching files</base>
+    <translation>Yazılım eki dosyaları</translation>
+  </string>
+  <string id="ActionText.PatchFiles.Template">
+    <base>File: [1],  Directory: [2],  Size: [3]</base>
+    <translation>Dosya: [1],  Dizin: [2],  Boyut: [3]</translation>
+  </string>
+  <string id="ActionText.ProcessComponents">
+    <base>Updating component registration</base>
+    <translation>Bilesen kaydı güncelleştiriliyor</translation>
+  </string>
+  <string id="ActionText.RMCCPSearch">
+    <base>Searching for qualifying products</base>
+    <translation>Yankı veren uygulamalar aranıyor</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus">
+    <base>Registering COM+ Applications and Components</base>
+    <translation>COM+ Uygulamaları ve Bileşenleri kaydettiriliyor</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2], Users: [3], RSN: [4]}}</base>
+    <translation>AppId: [1]{{, Uyg. Türü: [2], Kullanıcılar: [3], RSN: [4]}}</translation>
+  </string>
+  <string id="ActionText.RegisterFonts">
+    <base>Registering fonts</base>
+    <translation>Yazı tipleri kaydettiriliyor</translation>
+  </string>
+  <string id="ActionText.RegisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>Yazı tipi: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterProduct">
+    <base>Registering product</base>
+    <translation>Ürün kaydettiriliyor</translation>
+  </string>
+  <string id="ActionText.RegisterProduct.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RegisterUser">
+    <base>Registering user</base>
+    <translation>Kullanıcı kaydettiriliyor</translation>
+  </string>
+  <string id="ActionText.RegisterUser.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles">
+    <base>Removing duplicated files</base>
+    <translation>Yenilenen dosyalar kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>Dosya: [1], Dizin: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>Ortam ayarları güncelleştiriliyor</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>Ad: [1], Değer: [2], Eylem [3]</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts">
+    <base>Removing applications</base>
+    <translation>Uygulamalar kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts.Template">
+    <base>Application: [1], Command line: [2]</base>
+    <translation>Uygulama: [1], Komut satiri: [2]</translation>
+  </string>
+  <string id="ActionText.RemoveFiles">
+    <base>Removing files</base>
+    <translation>Dosyalar kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RemoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>Dosya: [1], Dizin: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveFolders">
+    <base>Removing folders</base>
+    <translation>Klasörler kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RemoveFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>Klasör: [1]</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues">
+    <base>Removing INI file entries</base>
+    <translation>INI dosyası girdileri kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>Dosya: [1],  Kısım: [2],  Anahtar: [3], Değer: [4]</translation>
+  </string>
+  <string id="ActionText.RemoveODBC">
+    <base>Removing ODBC components</base>
+    <translation>ODBC bileşenleri kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues">
+    <base>Removing system registry values</base>
+    <translation>Sistem kayıt değerleri kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues.Template">
+    <base>Key: [1], Name: [2]</base>
+    <translation>Anahtar: [1], Ad: [2]</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts">
+    <base>Removing shortcuts</base>
+    <translation>Kısayollar kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>Kısayol: [1]</translation>
+  </string>
+  <string id="ActionText.SelfRegModules">
+    <base>Registering modules</base>
+    <translation>Birimler kaydettiriliyor</translation>
+  </string>
+  <string id="ActionText.SelfRegModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>Dosya: [1], Klasör: [2]</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules">
+    <base>Unregistering modules</base>
+    <translation>Birimlerin kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>Dosya: [1], Klasör: [2]</translation>
+  </string>
+  <string id="ActionText.SetODBCFolders">
+    <base>Initializing ODBC directories</base>
+    <translation>ODBC dizinleri başlatılıyor</translation>
+  </string>
+  <string id="ActionText.StartServices">
+    <base>Starting services</base>
+    <translation>Hizmetler başlatılıyor</translation>
+  </string>
+  <string id="ActionText.StartServices.Template">
+    <base>Service: [1]</base>
+    <translation>Hizmet: [1]</translation>
+  </string>
+  <string id="ActionText.StopServices">
+    <base>Stopping services</base>
+    <translation>Hizmetler durduruluyor</translation>
+  </string>
+  <string id="ActionText.StopServices.Template">
+    <base>Service: [1]</base>
+    <translation>Hizmet: [1]</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents">
+    <base>Unpublishing Qualified Components</base>
+    <translation>Yetkili Bileşenler Yayımdan Kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>Bilesen Kimliği: [1], Yetki Veren: [2]</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures">
+    <base>Unpublishing product features</base>
+    <translation>Ürün Özellikleri Yayımdan Kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>Özellik: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo">
+    <base>Unregister class servers</base>
+    <translation>Sınıf sunucularının kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Sınıf Kimliği: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus">
+    <base>Unregistering COM+ Applications and Components</base>
+    <translation>Unregistering COM+ Uygulamalarının ve Bileşenlerinin kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2]}}</base>
+    <translation>Uyg. Kimliği: [1]{{, Uyg. Türü: [2]}}</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo">
+    <base>Unregistering extension servers</base>
+    <translation>Uzantı sunucularının kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>Uzantı: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts">
+    <base>Unregistering fonts</base>
+    <translation>Yazı tiplerinin kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>Yazı tipi: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo">
+    <base>Unregistering MIME info</base>
+    <translation>MIME bilgisi kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>MIME İçerik Türü: [1], Uzantı: [2]</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo">
+    <base>Unregistering program identifiers</base>
+    <translation>Program tanıtıcılarının kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>Program Kimliği: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries">
+    <base>Unregistering type libraries</base>
+    <translation>Tür kitaplıklarının kaydı kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>Kitaplık Kimliği: [1]</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>Ortam ayarları güncelleştiriliyor</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>Ad: [1], Değer: [2], Eylem [3]</translation>
+  </string>
+  <string id="ActionText.WriteIniValues">
+    <base>Writing INI file values</base>
+    <translation>INI dosya değerleri yazılıyor</translation>
+  </string>
+  <string id="ActionText.WriteIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>Dosya: [1],  Kısım: [2],  Anahtar: [3], Değer: [4]</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues">
+    <base>Writing system registry values</base>
+    <translation>Sistem kaydı değerleri yazılıyor</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues.Template">
+    <base>Key: [1], Name: [2], Value: [3]</base>
+    <translation>Anahtar: [1], Ad: [2], Değer: [3]</translation>
+  </string>
+  <string id="ActionText.Advertise">
+    <base>Advertising application</base>
+    <translation>Uygulama yayımlanıyor</translation>
+  </string>
+  <string id="ActionText.GenerateScript">
+    <base>Generating script operations for action:</base>
+    <translation>Eylem için komut dosyası işlemleri üretiliyor:</translation>
+  </string>
+  <string id="ActionText.GenerateScript.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile">
+    <base>Installing system catalog</base>
+    <translation>Sistem kataloğu yükleniyor</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile.Template">
+    <base>File: [1],  Dependencies: [2]</base>
+    <translation>Dosya: [1], Bağımlılıklar: [2]</translation>
+  </string>
+  <string id="ActionText.Rollback">
+    <base>Rolling back action:</base>
+    <translation>Toparlama eylemi:</translation>
+  </string>
+  <string id="ActionText.Rollback.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup">
+    <base>Removing backup files</base>
+    <translation>Yedek dosyalar kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup.Template">
+    <base>File: [1]</base>
+    <translation>Dosya: [1]</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles">
+    <base>Removing moved files</base>
+    <translation>Taşınan dosyalar kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>Dosya: [1], Dizin: [9]</translation>
+  </string>
+  <string id="ActionText.UnpublishProduct">
+    <base>Unpublishing product information</base>
+    <translation>Ürün bilgisi yayımdan kaldırılıyor</translation>
+  </string>
+  <string id="ActionText.caCreateVRoots">
+    <base>Creating IIS Virtual Roots...</base>
+    <translation>IIS Sanal Kökleri olusturuluyor...</translation>
+  </string>
+  <string id="ActionText.caRemoveVRoots">
+    <base>Removing IIS Virtual Roots...</base>
+    <translation>IIS Sanal Kökleri kaldiriliyor...</translation>
+  </string>
+  <string id="Text.Title">
+    <base>[ProductName] Setup</base>
+    <translation>-</translation>
+  </string>
+  <string id="Text.ErrorTitle">
+    <base>[ProductName] Installer Information</base>
+    <translation>[ProductName] Yükleyici Bilgileri</translation>
+  </string>
+  <string id="Text.PatchTitle">
+    <base>[ProductName] Patch Setup</base>
+    <translation>-</translation>
+  </string>
+  <string id="Text.OK">
+    <base>OK</base>
+    <translation>{&amp;Tahoma8}&amp;Tamam</translation>
+  </string>
+  <string id="Text.Cancel">
+    <base>Cancel</base>
+    <translation>İptal</translation>
+  </string>
+  <string id="Text.Next">
+    <base>&amp;Next &gt;</base>
+    <translation>İl&amp;eri &gt;</translation>
+  </string>
+  <string id="Text.Back">
+    <base>&lt; &amp;Back</base>
+    <translation>&lt; &amp;Geri</translation>
+  </string>
+  <string id="Text.Y">
+    <base>&amp;Yes</base>
+    <translation>{&amp;Tahoma8}&amp;Evet</translation>
+  </string>
+  <string id="Text.N">
+    <base>&amp;No</base>
+    <translation>{&amp;Tahoma8}&amp;Hayır</translation>
+  </string>
+  <string id="Text.A">
+    <base>&amp;Abort</base>
+    <translation>{&amp;Tahoma8}&amp;Durdur</translation>
+  </string>
+  <string id="Text.C">
+    <base>&amp;Cancel</base>
+    <translation>{&amp;Tahoma8}İp&amp;tal</translation>
+  </string>
+  <string id="Text.I">
+    <base>&amp;Ignore</base>
+    <translation>{&amp;Tahoma8}&amp;Yoksay</translation>
+  </string>
+  <string id="Text.O">
+    <base>&amp;OK</base>
+    <translation>{&amp;Tahoma8}&amp;Tamam</translation>
+  </string>
+  <string id="Text.R">
+    <base>&amp;Retry</base>
+    <translation>{&amp;Tahoma8}Ye&amp;niden Dene</translation>
+  </string>
+  <string id="Text.Install">
+    <base>&amp;Install</base>
+    <translation>{&amp;Tahoma8}&amp;Yükle</translation>
+  </string>
+  <string id="Text.Exit">
+    <base>&amp;Exit</base>
+    <translation>{&amp;Tahoma8}Çı&amp;kış</translation>
+  </string>
+  <string id="Text.Remove">
+    <base>&amp;Remove</base>
+    <translation>{&amp;Tahoma8}&amp;Kaldır</translation>
+  </string>
+  <string id="Text.Change">
+    <base>&amp;Change...</base>
+    <translation>&amp;Değiştir...</translation>
+  </string>
+  <string id="Text.Finish">
+    <base>&amp;Finish</base>
+    <translation>{&amp;Tahoma8}&amp;Son</translation>
+  </string>
+  <string id="Text.FolderName">
+    <base>&amp;Folder name:</base>
+    <translation>{&amp;Tahoma8}&amp;Klasör adı:</translation>
+  </string>
+  <string id="Text.Help">
+    <base>&amp;Help</base>
+    <translation>{&amp;Tahoma8}&amp;Yardim</translation>
+  </string>
+  <string id="Text.LookIn">
+    <base>&amp;Look in:</base>
+    <translation>{&amp;Tahoma8}&amp;Ara:</translation>
+  </string>
+  <string id="Text.NetworkLocation">
+    <base>&amp;Network location:</base>
+    <translation>{&amp;Tahoma8}&amp;Ağ konumu:</translation>
+  </string>
+  <string id="Text.Space">
+    <base>&amp;Space</base>
+    <translation>{&amp;Tahoma8}&amp;Boşluk</translation>
+  </string>
+  <string id="Text.Update">
+    <base>&amp;Update &gt;</base>
+    <translation>Gü&amp;ncelleştir &gt;</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}Hedef klasöre gözat.</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Geçerli Hedef Klasörü Değiştir</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgDesc">
+    <base>Specify a network location for the server image of the product.</base>
+    <translation>{&amp;Tahoma8}Ürünün sunucu görüntüsü için bir ağ konumu belirtin.</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgTitle">
+    <base>{&amp;MSSansBold8}Network Location</base>
+    <translation>{&amp;MSSansBold8}Ağ Konumu</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgText">
+    <base>Enter the network location or click Change to browse to a location.  Click Install to create a server image of [ProductName] at the specified network location or click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Ağ konumunu girin veya başka bir konuma gözatmak için Değiştir'i tıklatın.  Belirtilen ağ konumunda bir [ProductName] sunucu görüntüsü oluşturmak için Yükle'yi tıklatın veya sihirbazdan çıkmak için İptal'i tıklatın.</translation>
+  </string>
+  <string id="AdminWelcome.TextLine2">
+    <base>The Setup Wizard will create a server image of [ProductName] at a specified network location. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="AdminWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="CancelSetup.Text">
+    <base>Are you sure you want to cancel [ProductName] installation?</base>
+    <translation>{&amp;Tahoma8}[ProductName] yüklemesini iptal etmek istediğinizden emin misiniz?</translation>
+  </string>
+  <string id="CustomSetup.DlgDesc">
+    <base>Select the program features you want installed.</base>
+    <translation>{&amp;Tahoma8}Yüklenmesini istediğiniz program özelliklerini seçin.</translation>
+  </string>
+  <string id="CustomSetup.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup</base>
+    <translation>{&amp;MSSansBold8}Özel Kurulum</translation>
+  </string>
+  <string id="CustomSetup.DlgText">
+    <base>Click on an icon in the list below to change how a feature is installed.</base>
+    <translation>{&amp;Tahoma8}Bir özelliğin yüklenme biçimini değiştirmek için aşağıdaki listede ilgili simgeyi tıklatın.</translation>
+  </string>
+  <string id="CustomSetup.ItemDescription">
+    <base>Multiline description of the currently selected item</base>
+    <translation>{&amp;Tahoma8}Su anda seçili olan öğenin birkaç satirlik açıklaması</translation>
+  </string>
+  <string id="CustomSetup.Size">
+    <base>Feature size</base>
+    <translation>{&amp;Tahoma8}Özellik boyutu</translation>
+  </string>
+  <string id="CustomSetup.InstallLabel">
+    <base>Install to:</base>
+    <translation>{&amp;Tahoma8}Yükleme konumu:</translation>
+  </string>
+  <string id="CustomSetup.Location">
+    <base>&lt;selected feature path&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;seçili özellik yolu&gt;</translation>
+  </string>
+  <string id="CustomSetup.FeatureGroup">
+    <base>Feature Description</base>
+    <translation>{&amp;Tahoma8}Özellik Açıklaması:</translation>
+  </string>
+  <string id="CustomSetupTips.DlgDesc">
+    <base>Custom Setup allows you to selectively install program features.</base>
+    <translation>{&amp;Tahoma8}Özel Kurulum, program özelliklerini seçerek yüklemenize olanak tanır.</translation>
+  </string>
+  <string id="CustomSetupTips.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup Tips</base>
+    <translation>{&amp;MSSansBold8}Özel Kurulum İpuçları</translation>
+  </string>
+  <string id="CustomSetupTips.DontInstallText">
+    <base>Will not be installed.</base>
+    <translation>{&amp;Tahoma8}Yüklenmeyecek.</translation>
+  </string>
+  <string id="CustomSetupTips.FirstInstallText">
+    <base>Will be installed on first use. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}İlk kullanımda yüklenecek. (Yalnızca özellik bu seçeneği destekliyorsa kullanılabilir.)</translation>
+  </string>
+  <string id="CustomSetupTips.InstallStateText">
+    <base>This install state means the feature...</base>
+    <translation>{&amp;Tahoma8}Bu yüklenme durumunun anlamı...</translation>
+  </string>
+  <string id="CustomSetupTips.InstallText">
+    <base>Will be completely installed to the local hard drive.</base>
+    <translation>{&amp;Tahoma8}Tamamen yerel sabit diske yüklenecek.</translation>
+  </string>
+  <string id="CustomSetupTips.MenuText">
+    <base>The icon next to the feature name indicates the install state of the feature. Click the icon to drop down the install state menu for each feature.</base>
+    <translation>{&amp;Tahoma8}Özellik adının yanındaki simge, özelliğin yüklenme durumunu gösterir. Her özelliğin yüklenme durumunu görmek için simgeyi tıklatın.</translation>
+  </string>
+  <string id="CustomSetupTips.NetworkInstallText">
+    <base>Will be installed to run from the network. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}Ağdan çalıştırılacak şekilde yüklenecek. (Yalnızca özellik bu seçeneği destekliyorsa kullanılabilir.)</translation>
+  </string>
+  <string id="CustomSetupTips.PartialText">
+    <base>Will have some subfeatures installed to the local hard drive. (Available only if the feature has subfeatures.)</base>
+    <translation>{&amp;Tahoma8}Bazı alt özellikler yerel sabit diske yüklenecek. (Yalnızca özelliğin alt özellikleri varsa kullanılabilir.)</translation>
+  </string>
+  <string id="DestinationFolder.DlgDesc">
+    <base>Click Next to install to this folder, or click Change to install to a different folder.</base>
+    <translation>{&amp;Tahoma8}Bu klasöre yüklemek için İleri'yi tıklatın veya Değiştir'i tıklatarak başka bir klasöre yükleyin.</translation>
+  </string>
+  <string id="DestinationFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Hedef Klasör</translation>
+  </string>
+  <string id="DestinationFolder.LocLabel">
+    <base>Install [ProductName] to:</base>
+    <translation>{&amp;Tahoma8}[ProductName] yükleme yeri:</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgDesc">
+    <base>The disk space required for the installation of the selected features.</base>
+    <translation>{&amp;Tahoma8}Seçilen özelliklerin yüklenmesi için gerekli disk alanı.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgTitle">
+    <base>{&amp;MSSansBold8}Disk Space Requirements</base>
+    <translation>{&amp;MSSansBold8}Disk Alanı Gereksinimleri</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}Vurgulanmış durumdaki birimler, su anda seçili özellikler için yeterli kullanılabilir disk alanı içermiyor. Vurgulanmış durumdaki birimlerden dosya kaldırabilir, yerel sürücülere daha az sayıda özellik yüklemeyi seçebilir veya farklı hedef sürücüleri seçebilirsiniz.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="FilesInUse.DlgDesc">
+    <base>Some files that need to be updated are currently in use.</base>
+    <translation>{&amp;Tahoma8}Güncelleştirilmesi gereken bazı dosyalar su anda kullanımda.</translation>
+  </string>
+  <string id="FilesInUse.DlgTitle">
+    <base>{&amp;MSSansBold8}Files in Use</base>
+    <translation>{&amp;MSSansBold8}Kullanımdaki Dosyalar</translation>
+  </string>
+  <string id="FilesInUse.DlgText">
+    <base>The following applications are using files that need to be updated by this setup. Close these applications and click Retry to continue.</base>
+    <translation>{&amp;Tahoma8}Aşağıdaki uygulamalar, bu kurulum tarafından güncelleştirilmesi gereken dosyaları kullanıyor. Bu uygulamaları kapatın ve devam etmek için Yeniden Dene'yi tıklatın.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}Hedef klasöre gözat.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Geçerli Hedef Klasörü Değiştir</translation>
+  </string>
+  <string id="InstallWelcome.Copyright">
+    <base>WARNING: This program is protected by copyright law and international treaties.</base>
+    <translation>UYARI: Bu program, uluslararası yaptırımlar ve kopyalama hakki yasaları tarafından korunmuştur.</translation>
+  </string>
+  <string id="InstallWelcome.TextLine2">
+    <base>Setup will install [ProductName] on your computer. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="InstallWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="LicenseAgreement.DlgDesc">
+    <base>Please read the following license agreement carefully.</base>
+    <translation>{&amp;Tahoma8}Lütfen aşağıdaki lisans sözleşmesini dikkatle okuyun.</translation>
+  </string>
+  <string id="LicenseAgreement.DlgTitle">
+    <base>{&amp;MSSansBold8}License Agreement</base>
+    <translation>{&amp;MSSansBold8}Lisans Sözleşmesi</translation>
+  </string>
+  <string id="LicenseAgreement.DontAgree">
+    <base>I &amp;do not accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}Lisans &amp;sözleşmesi koşullarını kabul etmiyorum</translation>
+  </string>
+  <string id="LicenseAgreement.Agree">
+    <base>I &amp;accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}L&amp;isans sözleşmesi koşullarını kabul ediyorum</translation>
+  </string>
+  <string id="MaintenanceType.DlgDesc">
+    <base>Modify, repair, or remove the program.</base>
+    <translation>{&amp;Tahoma8}Programı değiştirin, onarın veya kaldırın.</translation>
+  </string>
+  <string id="MaintenanceType.DlgTitle">
+    <base>{&amp;MSSansBold8}Program Maintenance</base>
+    <translation>{&amp;MSSansBold8}Program Bakimi</translation>
+  </string>
+  <string id="MaintenanceType.Text1">
+    <base>Change which program features are installed. This option displays the Custom Selection dialog in which you can change the way features are installed.</base>
+    <translation>{&amp;Tahoma8}Yüklenecek program özelliklerini değiştir Bu seçenek, özelliklerin yüklenme biçimini değiştirebileceğiniz Özel Seçim iletişim kutusunu görüntüler.</translation>
+  </string>
+  <string id="MaintenanceType.Text2">
+    <base>Repair installation errors in the program. This option fixes missing or corrupt files, shortcuts, and registry entries.</base>
+    <translation>{&amp;Tahoma8}Programdaki hataları onar. Bu seçenek, eksik veya bozuk dosyaları, kısayolları ve kayıt girişlerini onarır.</translation>
+  </string>
+  <string id="MaintenanceType.Text3">
+    <base>Remove [ProductName] from your computer.</base>
+    <translation>{&amp;Tahoma8}[ProductName] ürününü bilgisayardan kaldır.</translation>
+  </string>
+  <string id="MaintenanceType.Modify">
+    <base>{&amp;MSSansBold8}&amp;Modify</base>
+    <translation>{&amp;MSSansBold8}&amp;Değiştir</translation>
+  </string>
+  <string id="MaintenanceType.Repair">
+    <base>{&amp;MSSansBold8}Re&amp;pair</base>
+    <translation>{&amp;MSSansBold8}&amp;Onar</translation>
+  </string>
+  <string id="MaintenanceType.Remove">
+    <base>{&amp;MSSansBold8}&amp;Remove</base>
+    <translation>{&amp;MSSansBold8}&amp;Kaldır</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine2">
+    <base>The Setup Wizard will allow you to modify, repair, or remove [ProductName]. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="OutOfSpace.DlgDesc">
+    <base>Disk space required for the installation exceeds available disk space.</base>
+    <translation>{&amp;Tahoma8}Yükleme için gerekli olan disk alanı, kullanılabilir durumdaki disk alanından daha büyük.</translation>
+  </string>
+  <string id="OutOfSpace.DlgTitle">
+    <base>{&amp;MSSansBold8}Out of Disk Space</base>
+    <translation>{&amp;MSSansBold8}Disk Alanı Yetersiz</translation>
+  </string>
+  <string id="OutOfSpace.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}Vurgulanmış durumdaki birimler, su anda seçili özellikler için yeterli kullanılabilir disk alanı içermiyor. Vurgulanmış durumdaki birimlerden dosya kaldırabilir, yerel sürücülere daha az sayıda özellik yüklemeyi seçebilir veya farklı hedef sürücüleri seçebilirsiniz.</translation>
+  </string>
+  <string id="OutOfSpace.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="PatchWelcome.TextLine2">
+    <base>The Setup Wizard will install the Patch for [ProductName] on your computer.  To continue, click Update.</base>
+    <translation>-</translation>
+  </string>
+  <string id="PatchWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Patch for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}[ProductName] Yazılım Eki'ne Hoş Geldiniz</translation>
+  </string>
+  <string id="ReadyToInstall.DlgDesc">
+    <base>The wizard is ready to begin installation.</base>
+    <translation>{&amp;Tahoma8}Sihirbaz, yüklemeyi başlatmaya hazır.</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle">
+    <base>{&amp;MSSansBold8}Ready to Modify the Program</base>
+    <translation>{&amp;MSSansBold8}Programa Değiştirme işlemi uygulamaya hazır</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText">
+    <base>Click Install to begin the installation.</base>
+    <translation>{&amp;Tahoma8}Yüklemeyi başlatmak için Yükle'yi tıklatın.</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle2">
+    <base>{&amp;MSSansBold8}Ready to Repair the Program</base>
+    <translation>{&amp;MSSansBold8}Programa Onarma işlemi uygulamaya hazır</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle3">
+    <base>{&amp;MSSansBold8}Ready to Install the Program</base>
+    <translation>{&amp;MSSansBold8}Programa Yükleme işlemi uygulamaya hazır</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText1">
+    <base>If you want to review or change any of your installation settings, click Back. Click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Herhangi bir yükleme ayarını incelemek veya değiştirmek istediğinizde, Geri'yi tıklatın. Sihirbazdan çıkmak için İptal'i tıklatın.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgDesc">
+    <base>You have chosen to remove the program from your system.</base>
+    <translation>{&amp;Tahoma8}Programı sisteminizden kaldırmayı seçtiniz.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgTitle">
+    <base>{&amp;MSSansBold8}Remove the Program</base>
+    <translation>{&amp;MSSansBold8}Programı Kaldır</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText">
+    <base>Click Remove to remove [ProductName] from your computer. After removal, this program will no longer be available for use.</base>
+    <translation>{&amp;Tahoma8}[ProductName] ürününü bilgisayarınızdan kaldırmak için Kaldır'ı tıklatın. Kaldırıldıktan sonra program artık kullanılamaz.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText1">
+    <base>If you want to review or change any settings, click Back.</base>
+    <translation>{&amp;Tahoma8}Herhangi bir ayarı incelemek veya değiştirmek istediğinizde, Geri'yi tıklatın.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText1">
+    <base>Your system has not been modified. To complete installation at another time, please run setup again.</base>
+    <translation>{&amp;Tahoma8}Sisteminiz değiştirilmedi. Yüklemeyi daha sonra tamamlamak istediğinizde, kurulum programını yeniden çalıştırın.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Sihirbazdan çıkmak için Son'u tıklatın.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}Bu yüklemeye daha sonra devam etmek üzere sisteminizde varolan yüklenmiş öğeleri koruyabilir ya da sisteminizi yükleme öncesindeki özgün durumuna geri yükleyebilirsiniz.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Sihirbazdan çıkmak için Geri Yükle'yi veya Sonra Devam Et'i tıklatın.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}[ProductName] tamamen yüklenmeden sihirbaz kesildi.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine2">
+    <base>The Setup Wizard has successfully installed [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckForUpdatesText">
+    <base>&amp;Yes, check for program updates (Recommended) after the setup completes.</base>
+    <translation>&amp;Evet, kurulum tamamlandıktan sonra program güncelleştirmelerini denetle (Önerilen).</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine3">
+    <base>The Setup Wizard has successfully uninstalled [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine1">
+    <base>Setup has finished installing [ProductName].</base>
+    <translation>Kur yüklemeyi tamamladı [ProductName].</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine2">
+    <base>Some program files might have been updated since you purchased your copy of [ProductName].</base>
+    <translation>[ProductName] kopyanızı satın almanızdan sonra bazı program dosyaları güncelleştirilmiş olabilir.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine3">
+    <base>Your Internet connection can be used to make sure that you have the latest updates.</base>
+    <translation>Internet bağlantınız yeni güncelleştirmeleri almanızı sağlamak için kullanılabilir.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchProgramText">
+    <base>Launch [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchReadmeText">
+    <base>Show the readme file</base>
+    <translation>Benioku dosyasını göster</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckBoxUpdates">
+    <base>CheckBox1</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupError.ErrorText">
+    <base>&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;hata metni&gt;&lt;hata metni&gt;&lt; hata metni &gt;&lt; hata metni &gt;&lt; hata metni &gt;&lt; hata metni &gt;&lt; hata metni &gt;&lt; hata metni &gt;&lt; hata metni &gt;&lt; hata metni &gt;&lt; hata metni &gt;</translation>
+  </string>
+  <string id="SetupInitialization.TextLine2">
+    <base>[ProductName] Setup is preparing the Setup Wizard which will guide you through the program setup process.  Please wait.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupInitialization.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText1">
+    <base>Your system has not been modified. To install this program at a later time, please run the installation again.</base>
+    <translation>{&amp;Tahoma8}Sisteminiz değiştirilmedi. Bu programı daha sonra yüklemek için yükleme programını yeniden çalıştırın.</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Sihirbazdan çıkmak için Son'u tıklatın.</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}Bu yüklemeye daha sonra devam etmek üzere sisteminizde varolan yüklenmiş öğeleri koruyabilir ya da sisteminizi yükleme öncesindeki özgün durumuna geri yükleyebilirsiniz.</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Sihirbazdan çıkmak için Geri Yükle'yi veya Sonra Devam Et'i tıklatın.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}[ProductName] tamamen yüklenmeden sihirbaz kesildi.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc">
+    <base>The program features you selected are being installed.</base>
+    <translation>{&amp;Tahoma8}Seçtiğiniz program özellikleri yükleniyor.</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle">
+    <base>{&amp;MSSansBold8}Installing [ProductName]</base>
+    <translation>{&amp;MSSansBold8}[ProductName] yükleniyor</translation>
+  </string>
+  <string id="SetupProgress.DlgText">
+    <base>Please wait while the Setup Wizard installs [ProductName]. This may take several minutes.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle2">
+    <base>{&amp;MSSansBold8}Uninstalling [ProductName]</base>
+    <translation>{&amp;MSSansBold8}[ProductName] yüklemesi kaldırılıyor</translation>
+  </string>
+  <string id="SetupProgress.DlgText2">
+    <base>Please wait while the Setup Wizard uninstalls [ProductName]. This may take several minutes.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc2">
+    <base>The program features you selected are being uninstalled.</base>
+    <translation>{&amp;Tahoma8}Seçtiğiniz program özellikleri yüklemesi kaldırılıyor.</translation>
+  </string>
+  <string id="SetupProgress.TextTime">
+    <base>)Hidden for now)Estimated time remaining:</base>
+    <translation>{&amp;Tahoma8}(Şimdilik gizli)Tahmini kalan süre:</translation>
+  </string>
+  <string id="SetupProgress.LbStatus">
+    <base>Status:</base>
+    <translation>{&amp;Tahoma8}Durum:</translation>
+  </string>
+  <string id="SetupProgress.LbSec">
+    <base>(Hidden for now)Sec.</base>
+    <translation>{&amp;Tahoma8}(Şimdilik gizli)Sn.</translation>
+  </string>
+  <string id="SetupProgress.ShowTime">
+    <base>(Hidden for now)</base>
+    <translation>{&amp;Tahoma8}(Şimdilik gizli)</translation>
+  </string>
+  <string id="SetupProgress.ActionProgress95">
+    <base>Progress done</base>
+    <translation>Tamamlanan</translation>
+  </string>
+  <string id="SetupResume.PreselectedText">
+    <base>The Setup Wizard will complete the installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupResume.ResumeText">
+    <base>The Setup Wizard will complete the suspended installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupResume.TextLine1">
+    <base>{&amp;TahomaBold10}Resuming the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupType.DlgDesc">
+    <base>Choose the setup type that best suits your needs.</base>
+    <translation>{&amp;Tahoma8}Gereksinimlerinize en uygun kurulum türünü seçin.</translation>
+  </string>
+  <string id="SetupType.DlgTitle">
+    <base>{&amp;MSSansBold8}Setup Type</base>
+    <translation>{&amp;MSSansBold8}Kurulum Türü</translation>
+  </string>
+  <string id="SetupType.DlgText">
+    <base>Please select a setup type.</base>
+    <translation>{&amp;Tahoma8}Bir kurulum türü seçin.</translation>
+  </string>
+  <string id="SetupType.CompText">
+    <base>All program features will be installed. (Requires the most disk space.)</base>
+    <translation>{&amp;Tahoma8}Tüm program özellikleri yüklenecek. (En fazla disk alanını gerektirir.)</translation>
+  </string>
+  <string id="SetupType.CustText">
+    <base>Choose which program features you want installed and where they will be installed. Recommended for advanced users.</base>
+    <translation>{&amp;Tahoma8}Yüklenmesini istediğiniz program özelliklerini ve bunların yüklenecekleri konumu seçin. Üst düzey kullanıcılara önerilir.</translation>
+  </string>
+  <string id="SetupType.Complete">
+    <base>{&amp;MSSansBold8}&amp;Complete</base>
+    <translation>{&amp;MSSansBold8}&amp;Tam</translation>
+  </string>
+  <string id="SetupType.Custom">
+    <base>{&amp;MSSansBold8}Cu&amp;stom</base>
+    <translation>{&amp;MSSansBold8}Ö&amp;zel</translation>
+  </string>
+  <string id="Error.0">
+    <base>{{Fatal error: }}</base>
+    <translation>{{Önemli hata: }}</translation>
+  </string>
+  <string id="Error.1">
+    <base>Error [1].</base>
+    <translation>{{Hata [1]. }}</translation>
+  </string>
+  <string id="Error.2">
+    <base>Warning [1].</base>
+    <translation>Uyarı [1]. </translation>
+  </string>
+  <string id="Error.4">
+    <base>Info [1].</base>
+    <translation>Bilgi [1]. </translation>
+  </string>
+  <string id="Error.5">
+    <base>Internal Error [1]. [2]{, [3]}{, [4]}</base>
+    <translation>İç Hata [1]. [2]{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.7">
+    <base>{{Disk full: }}</base>
+    <translation>{{Disk dolu: }}</translation>
+  </string>
+  <string id="Error.8">
+    <base>Action [Time]: [1]. [2]</base>
+    <translation>Eylem [Time]: [1]. [2]</translation>
+  </string>
+  <string id="Error.9">
+    <base>[ProductName]</base>
+    <translation>[ProductName]</translation>
+  </string>
+  <string id="Error.10">
+    <base>{[2]}{, [3]}{, [4]}</base>
+    <translation>{[2]}{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.11">
+    <base>Message type: [1], Argument: [2]</base>
+    <translation>İleti türü: [1], Değişken: [2]</translation>
+  </string>
+  <string id="Error.12">
+    <base>=== Logging started: [Date]  [Time] ===</base>
+    <translation>=== Günlük başladı: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.13">
+    <base>=== Logging stopped: [Date]  [Time] ===</base>
+    <translation>=== Günlük durdu: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.14">
+    <base>Action start [Time]: [1].</base>
+    <translation>Eylem başladı [Time]: [1].</translation>
+  </string>
+  <string id="Error.15">
+    <base>Action ended [Time]: [1]. Return value [2].</base>
+    <translation>Eylem sonlandı [Time]: [1]. Dönen değer [2].</translation>
+  </string>
+  <string id="Error.16">
+    <base>Time remaining: {[1] minutes }{[2] seconds}</base>
+    <translation>Kalan süre: {[1] dakika }{[2] saniye}</translation>
+  </string>
+  <string id="Error.17">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>Bellek yetersiz. Yeniden denemeden önce diğer uygulamaları kapatın.</translation>
+  </string>
+  <string id="Error.18">
+    <base>Installer is no longer responding.</base>
+    <translation>Yükleyici artık yanıt vermiyor.</translation>
+  </string>
+  <string id="Error.19">
+    <base>Installer terminated prematurely.</base>
+    <translation>Yükleyici erken durduruldu.</translation>
+  </string>
+  <string id="Error.20">
+    <base>Please wait while Windows configures [ProductName]</base>
+    <translation>Lütfen Windows [ProductName] ürününü yapılandırırken bekleyin.</translation>
+  </string>
+  <string id="Error.21">
+    <base>Gathering required information...</base>
+    <translation>Gerekli bilgiler toplanıyor...</translation>
+  </string>
+  <string id="Error.22">
+    <base>Removing older versions of this application</base>
+    <translation>Bu uygulamanın eski sürümleri kaldırılıyor...</translation>
+  </string>
+  <string id="Error.23">
+    <base>Preparing to remove older versions of this application</base>
+    <translation>Bu uygulamanın eski sürümleri kaldırılmaya hazırlanıyor...</translation>
+  </string>
+  <string id="Error.32">
+    <base>{[ProductName] }Setup completed successfully.</base>
+    <translation>{[ProductName] }Kur başarıyla tamamlandı.</translation>
+  </string>
+  <string id="Error.33">
+    <base>{[ProductName] }Setup failed.</base>
+    <translation>{[ProductName] }Kur basarisiz oldu.</translation>
+  </string>
+  <string id="Error.1101">
+    <base>Error reading from file: [2]. {{ System error [3].}}  Verify that the file exists and that you can access it.</base>
+    <translation>Dosyadan okuma hatası: [2]. {{ Sistem hatası [3].}}  Dosyanın bulunduğundan ve ona erişebildiğinizden emin olun.</translation>
+  </string>
+  <string id="Error.1301">
+    <base>Cannot create the file [3].  A directory with this name already exists.  Cancel the installation and try installing to a different location.</base>
+    <translation>'[2]' dosyası oluşturulamıyor. Bu ada sahip bir dizin zaten var. Yüklemeyi iptal edin ve farklı bir konuma yüklemeyi deneyin.</translation>
+  </string>
+  <string id="Error.1302">
+    <base>Please insert the disk: [2]</base>
+    <translation>Lütfen [2] disketini takın.</translation>
+  </string>
+  <string id="Error.1303">
+    <base>The installer has insufficient privileges to access this directory: [2].  The installation cannot continue.  Log on as an administrator or contact your system administrator.</base>
+    <translation>Yükleyicinin [2] dizinine erişmek için yeterli ayrıcalığı yok.  Yükleme işlemi devam edemez. Yönetici olarak oturum açın veya sistem yöneticinize başvurun.</translation>
+  </string>
+  <string id="Error.1304">
+    <base>Error writing to file [2].  Verify that you have access to that directory.</base>
+    <translation>[2] dosyasına yazma hatası.  Bu dizine erişiminizin olduğundan emin olun.</translation>
+  </string>
+  <string id="Error.1305">
+    <base>Error reading from file [2].  Verify that the file exists and that you can access it.</base>
+    <translation>[2] dosyasından okuma hatası {{ Sistem hatası [3]}}.  Dosyanın bulunduğundan ve ona erişebildiğinizden emin olun.</translation>
+  </string>
+  <string id="Error.1306">
+    <base>Another application has exclusive access to the file [2].  Please shut down all other applications, then click Retry.</base>
+    <translation>Diğer bir uygulamanın '[2]' dosyasına özel kullanım erişimi var.  Lütfen diğer tüm uygulamaları kapatın ve sonra Yeniden Dene'yi tıklatın.</translation>
+  </string>
+  <string id="Error.1307">
+    <base>There is not enough disk space to install the file [2].  Free some disk space and click Retry, or click Cancel to exit.</base>
+    <translation>[2] dosyasını yüklemek için yeterli disk alanı yok.  Diski biraz boşaltın ve Yeniden Dene'yi tıklatın ya da çıkmak için İptal'i tıklatın.</translation>
+  </string>
+  <string id="Error.1308">
+    <base>Source file not found: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>[2] kaynak dosyası bulunamadı.  Dosyanın bulunduğundan ve ona erişebildiğinizden emin olun.</translation>
+  </string>
+  <string id="Error.1309">
+    <base>Error reading from file: [3]. {{ System error [2].}}  Verify that the file exists and that you can access it.</base>
+    <translation>[3] dosyasından okuma hatası. {{ Sistem hatası [2].}}  Dosyanın bulunduğundan ve ona erişebildiğinizden emin olun.</translation>
+  </string>
+  <string id="Error.1310">
+    <base>Error writing to file: [3]. {{ System error [2].}}  Verify that you have access to that directory.</base>
+    <translation>[3] dosyasına yazma hatası. {{ Sistem hatası [2].}}  Bu dizine erişiminiz olduğunu denetleyin.</translation>
+  </string>
+  <string id="Error.1311">
+    <base>Source file not found{{(cabinet)}}: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>[2] kaynak dosyası bulunamadı{{(kabin)}}.  Dosyanın bulunduğundan ve ona erişebildiğinizden emin olun.</translation>
+  </string>
+  <string id="Error.1312">
+    <base>Cannot create the directory [2].  A file with this name already exists.  Please rename or remove the file and click Retry, or click Cancel to exit.</base>
+    <translation>'[2]' dizini oluşturulamıyor. Bu ada sahip bir dosya zaten var. Lütfen dosyayı yeniden adlandırın veya silin ve Yeniden Dene'yi tıklatın ya da çıkmak için İptal'i tıklatın.</translation>
+  </string>
+  <string id="Error.1313">
+    <base>The volume [2] is currently unavailable.  Please select another.</base>
+    <translation>[2] sürücüsü su anda kullanılamıyor. Lütfen farklı bir tane seçin.</translation>
+  </string>
+  <string id="Error.1314">
+    <base>The specified path [2] is unavailable.</base>
+    <translation>Belirtilen '[2]' yolu kullanılamaz.</translation>
+  </string>
+  <string id="Error.1315">
+    <base>Unable to write to the specified folder [2].</base>
+    <translation>Belirtilen '[2]' klasörüne yazılamıyor.</translation>
+  </string>
+  <string id="Error.1316">
+    <base>A network error occurred while attempting to read from the file [2]</base>
+    <translation>[2] dosyasından okunmaya çalışılırken bir ağ hatası oluştu.</translation>
+  </string>
+  <string id="Error.1317">
+    <base>An error occurred while attempting to create the directory [2]</base>
+    <translation>[2] dizini oluşturulmaya çalışılırken bir hata oluştu.</translation>
+  </string>
+  <string id="Error.1318">
+    <base>A network error occurred while attempting to create the directory [2]</base>
+    <translation>[2] dizini oluşturulmaya çalışılırken bir ağ hatası oluştu.</translation>
+  </string>
+  <string id="Error.1319">
+    <base>A network error occurred while attempting to open the source file cabinet [2].</base>
+    <translation>[2] kaynak dosya kabini açılmaya çalışılırken bir ağ hatası oluştu.</translation>
+  </string>
+  <string id="Error.1320">
+    <base>The specified path is too long [2].</base>
+    <translation>Belirtilen [2] yolu çok uzun.</translation>
+  </string>
+  <string id="Error.1321">
+    <base>The Installer has insufficient privileges to modify the file [2].</base>
+    <translation>Yükleyicinin [2] dosyasını değiştirmek için yeterli ayrıcalığı yok.</translation>
+  </string>
+  <string id="Error.1322">
+    <base>A portion of the path [2] exceeds the length allowed by the system.</base>
+    <translation>'[2]' klasör yolunun bir kısmı geçersiz. Bu bölüm bos veya sistem tarafından izin verilen uzunluğu aşıyor.</translation>
+  </string>
+  <string id="Error.1323">
+    <base>The path [2] contains words that are not valid in folders.</base>
+    <translation>'[2]' klasör yolu, klasör yolları için geçerli olmayan sözcükler içeriyor.</translation>
+  </string>
+  <string id="Error.1324">
+    <base>The path [2] contains an invalid character.</base>
+    <translation>'[2]' klasör yolu geçersiz bir karakter içeriyor.</translation>
+  </string>
+  <string id="Error.1325">
+    <base>[2] is not a valid short file name.</base>
+    <translation>'[2]' geçerli bir kısa dosya adı değil.</translation>
+  </string>
+  <string id="Error.1326">
+    <base>Error getting file security: [3] GetLastError: [2]</base>
+    <translation>Dosya güvenliğini alma hatası: [3] SonAlınanHata: [2]</translation>
+  </string>
+  <string id="Error.1327">
+    <base>Invalid Drive: [2]</base>
+    <translation>Geçersiz Sürücü: [2]</translation>
+  </string>
+  <string id="Error.1328">
+    <base>Error applying patch to file [2].  It has probably been updated by other means, and can no longer be modified by this patch.  For more information contact your patch vendor.  {{System Error: [3]}}</base>
+    <translation>Ek uygulamayı [2] dosyasına uygulama hatası.  Büyük olasılıkla bu dosya başka şekillerde güncelleştirilmiş ve bu ek uygulamayla değiştirilebilecek konumda değil.  Daha fazla bilgi için bu ek uygulamayı aldığınız yerle bağlantı kurun.  {{Sistem Hatası: [3]}}</translation>
+  </string>
+  <string id="Error.1401">
+    <base>Could not create key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>[2] anahtarı oluşturulamadı. {{ Sistem hatası [3].}}  Bu anahtara yeterli erişiminizin olduğunu denetleyin veya destek sorumlunuza başvurun. </translation>
+  </string>
+  <string id="Error.1402">
+    <base>Could not open key: [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>[2] anahtarı açılamadı. {{ Sistem hatası [3].}}  Bu anahtara yeterli erişiminizin olduğunu denetleyin veya destek sorumlunuza başvurun. </translation>
+  </string>
+  <string id="Error.1403">
+    <base>Could not delete value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>[3] anahtarından [2] değeri silinemedi. {{ Sistem hatası [4].}}  Bu anahtara yeterli erişiminizin olduğunu denetleyin veya destek sorumlunuza başvurun. </translation>
+  </string>
+  <string id="Error.1404">
+    <base>Could not delete key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>[2] anahtarı silinemedi. {{ Sistem hatası [3].}}  Bu anahtara yeterli erişiminizin olduğunu denetleyin veya destek sorumlunuza başvurun. </translation>
+  </string>
+  <string id="Error.1405">
+    <base>Could not read value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>[3] anahtarından [2] değeri okunamadı. {{ Sistem hatası [4].}}  Bu anahtara yeterli erişiminizin olduğunu denetleyin veya destek sorumlunuza başvurun. </translation>
+  </string>
+  <string id="Error.1406">
+    <base>Could not write value [2] to key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>[3] anahtarına [2] değeri yazılamadı. {{ Sistem hatası [4].}}  Bu anahtara yeterli erişiminizin olduğunu denetleyin veya destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1407">
+    <base>Could not get value names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>[2] anahtarının değer adları alınamadı. {{ Sistem hatası [3].}}  Bu anahtara yeterli erişiminizin olduğunu denetleyin veya destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1408">
+    <base>Could not get sub key names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>[2] anahtarının alt anahtar adları alınamadı. {{ Sistem hatası [3].}}  Bu anahtara yeterli erişiminizin olduğunu denetleyin veya destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1409">
+    <base>Could not read security information for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>[2] anahtarının güvenlik bilgileri okunamadı. {{ Sistem hatası [3].}}  Bu anahtara yeterli erişiminizin olduğunu denetleyin veya destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1410">
+    <base>Could not increase the available registry space. [2] KB of free registry space is required for the installation of this application.</base>
+    <translation>Kullanılabilir kayıt defteri alanı artırılamıyor. Bu uygulamanın yüklenmesi için [2] KB bos kayıt defteri alanı gerekiyor.</translation>
+  </string>
+  <string id="Error.1500">
+    <base>Another installation is in progress. You must complete that installation before continuing this one.</base>
+    <translation>Diğer bir yükleme işlemi sürüyor. Yenisine devam etmeden önce bu yükleme işlemini tamamlamalısınız.</translation>
+  </string>
+  <string id="Error.1501">
+    <base>Error accessing secured data. Please make sure the Windows Installer is configured properly and try the installation again.</base>
+    <translation>Güvenli veriye erişim hatası. Lütfen Windows Installer'ın doğru şekilde yapılandırıldığından emin olun ve yeniden yüklemeyi deneyin.</translation>
+  </string>
+  <string id="Error.1502">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.  Your current installation will now continue.</base>
+    <translation>'[2]' kullanıcısı '[3]' ürününü yüklemeyi daha önce başlattı. Bu kullanıcının, bu ürünü kullanmadan önce yükleme işlemini yeniden çalıştırması gerekecek. Geçerli yükleme işleminize simdi devam edilecek.</translation>
+  </string>
+  <string id="Error.1503">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.</base>
+    <translation>'[2]' kullanıcısı '[3]' ürününü yüklemeyi daha önce başlattı. Bu kullanıcının, bu ürünü kullanmadan önce yükleme işlemini yeniden çalıştırması gerekecek.</translation>
+  </string>
+  <string id="Error.1601">
+    <base>Out of disk space -- Volume: '[2]'; required space: [3] KB; available space: [4] KB.  Free some disk space and retry.</base>
+    <translation>Disk alanı yetersiz -- Disk: '[2]'; gereken alan: [3] KB; kullanılabilir alan: [4] KB.  Disk alanını biraz boşaltın ve yeniden deneyin.</translation>
+  </string>
+  <string id="Error.1602">
+    <base>Are you sure you want to cancel?</base>
+    <translation>İptal etmek istediğinizden emin misiniz?</translation>
+  </string>
+  <string id="Error.1603">
+    <base>The file [2][3] is being held in use{ by the following process: Name: [4], ID: [5], Window Title: [6]}.  Close that application and retry.</base>
+    <translation>[2][3] dosyası kullanımda{ aşağıdaki işlem kullanıyor: Adı: [4], Kimliği: [5], Pencere Başlığı: '[6]'}. Bu uygulamayı kapatın ve yeniden deneyin.</translation>
+  </string>
+  <string id="Error.1604">
+    <base>The product [2] is already installed, preventing the installation of this product.  The two products are incompatible.</base>
+    <translation>'[2]' ürünü zaten yüklü ve bu ürünün yüklenmesini engelliyor. İki ürün uyumsuz.</translation>
+  </string>
+  <string id="Error.1605">
+    <base>Out of disk space -- Volume: [2]; required space: [3] KB; available space: [4] KB.  If rollback is disabled, enough space is available. Click Cancel to quit, Retry to check available disk space again, or Ignore to continue without rollback.</base>
+    <translation>Disk alanı yetersiz -- Disk: '[2]'; gereken alan: [3] KB; kullanılabilir alan: [4] KB. Yeniden yükleme etkin değilse, yeterli alan vardır. Çıkmak için 'İptal'i, kullanılabilir disk alanını yeniden denetlemek için 'Yeniden Dene'yi tıklatın ya da yeniden yüklemeden devam etmek için 'Yoksay'ı tıklatın.</translation>
+  </string>
+  <string id="Error.1606">
+    <base>Could not access network location [2].</base>
+    <translation>[2] ağ konumuna erişilemedi.</translation>
+  </string>
+  <string id="Error.1607">
+    <base>The following applications should be closed before continuing the installation:</base>
+    <translation>Yükleme işlemine devam etmeden önce aşağıdaki uygulamalar kapatılmalıdır:</translation>
+  </string>
+  <string id="Error.1608">
+    <base>Could not find any previously installed compliant products on the machine for installing this product.</base>
+    <translation>Bu ürünü yüklemek için bu bilgisayara daha önce yüklenmiş uyumlu ürünler bulunamadı.</translation>
+  </string>
+  <string id="Error.1701">
+    <base>The key [2] is not valid.  Verify that you entered the correct key.</base>
+    <translation>[2] anahtarı geçerli değil. Doğru anahtarı girdiğinizi denetleyin.</translation>
+  </string>
+  <string id="Error.1702">
+    <base>The installer must restart your system before configuration of [2] can continue.  Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>[2] yapılandırmasının devam etmesi için önce yükleyicinin sisteminizi yeniden başlatması gerekiyor. Simdi yeniden başlatmak için Evet'i tıklatın veya yeniden başlatmayı daha sonra el ile yapmayı düşünüyorsanız, Hayır'ı tıklatın.</translation>
+  </string>
+  <string id="Error.1703">
+    <base>You must restart your system for the configuration changes made to [2] to take effect. Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>[2] için yapılandırma değişikliklerinin etkinleşmesi için sisteminizi yeniden başlatmalısınız. Simdi yeniden başlatmak için Evet'i tıklatın veya yeniden başlatmayı daha sonra el ile yapmayı düşünüyorsanız Hayır'ı tıklatın.</translation>
+  </string>
+  <string id="Error.1704">
+    <base>An installation for [2] is currently suspended.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>[2] yüklemesi su anda askıya alınmış. Devam etmek için bu yüklemenin yaptığı değişiklikleri geri almalısınız. Bu değişiklikleri geri almak istiyor musunuz?</translation>
+  </string>
+  <string id="Error.1705">
+    <base>A previous installation for this product is in progress.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>Bu ürünün önceki bir yükleme işlemi sürüyor. Devam etmek için bu yüklemenin yaptığı değişiklikleri geri almalısınız. Bu değişiklikleri geri almak istiyor musunuz?</translation>
+  </string>
+  <string id="Error.1706">
+    <base>No valid source could be found for product [2].  The Windows Installer cannot continue.</base>
+    <translation>[2] ürünü için geçerli bir yükleme paketi bulunamadı. '[3]' yükleme paketinin geçerli bir kopyasını kullanarak yüklemeyi yeniden deneyin.</translation>
+  </string>
+  <string id="Error.1707">
+    <base>Installation operation completed successfully.</base>
+    <translation>Yükleme işlemi başarıyla tamamlandı.</translation>
+  </string>
+  <string id="Error.1708">
+    <base>Installation operation failed.</base>
+    <translation>Yükleme işlemi basarisiz oldu.</translation>
+  </string>
+  <string id="Error.1709">
+    <base>Product: [2] -- [3]</base>
+    <translation>Ürün: [2] -- [3]</translation>
+  </string>
+  <string id="Error.1710">
+    <base>You may either restore your computer to its previous state or continue the installation later. Would you like to restore?</base>
+    <translation>Bilgisayarınızı bir önceki durumuna döndürebilir ya da yükleme işlemine daha sonra devam edebilirsiniz. Önceki duruma dönmek istiyor musunuz?</translation>
+  </string>
+  <string id="Error.1711">
+    <base>An error occurred while writing installation information to disk.  Check to make sure enough disk space is available, and click Retry, or Cancel to end the installation.</base>
+    <translation>Yükleme bilgileri diske yazılırken bir hata oluştu. Yeterli disk alanı olup olmadığını denetleyin ve Yeniden Dene'yi tıklatın veya yükleme işlemine son vermek için İptal'i tıklatın.</translation>
+  </string>
+  <string id="Error.1712">
+    <base>One or more of the files required to restore your computer to its previous state could not be found.  Restoration will not be possible.</base>
+    <translation>Bilgisayarınızı önceki durumuna döndürmek için gereken bir veya daha çok dosya bulunamadı. Geri yükleme yapılamaz.</translation>
+  </string>
+  <string id="Error.1713">
+    <base>[2] cannot install one of its required products. Contact your technical support group.  {{System Error: [3].}}</base>
+    <translation>[2] gerekli uygulamalarından birini yükleyemiyor. Teknik destek grubuyla bağlantı kurun.  {{Sistem Hatası: [3].}}</translation>
+  </string>
+  <string id="Error.1714">
+    <base>The older version of [2] cannot be removed.  Contact your technical support group.  {{System Error [3].}}</base>
+    <translation>Eski [2] sürümleri kaldırılamıyor.  Teknik destek grubuyla bağlantı kurun.  {{Sistem Hatası [3].}}</translation>
+  </string>
+  <string id="Error.1801">
+    <base>The path [2] is not valid.  Please specify a valid path.</base>
+    <translation>[2] yolu geçersiz. Lütfen geçerli bir yol belirtin.</translation>
+  </string>
+  <string id="Error.1802">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>Bellek yetersiz. Yeniden denemeden önce diğer uygulamaları kapatın.</translation>
+  </string>
+  <string id="Error.1803">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to go back to the previously selected volume.</base>
+    <translation>[2] sürücüsünde disket yok. Lütfen bir disket takın ve Yeniden Dene'yi tıklatın veya daha önce seçilen sürücüye geri dönmek için İptal'i tıklatın.</translation>
+  </string>
+  <string id="Error.1804">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to return to the browse dialog and select a different volume.</base>
+    <translation>[2] sürücüsünde disket yok. Lütfen bir disket takın ve Yeniden Dene'yi tıklatın veya gözatma iletişim kutusuna dönmek ve farklı bir sürücü seçmek için İptal'i tıklatın.</translation>
+  </string>
+  <string id="Error.1805">
+    <base>The folder [2] does not exist.  Please enter a path to an existing folder.</base>
+    <translation>[2] klasörü yok. Lütfen varolan bir klasörün yolunu girin.</translation>
+  </string>
+  <string id="Error.1806">
+    <base>You have insufficient privileges to read this folder.</base>
+    <translation>Bu klasörü okumak için yeterli ayrıcalığınız yok.</translation>
+  </string>
+  <string id="Error.1807">
+    <base>A valid destination folder for the installation could not be determined.</base>
+    <translation>Yükleme işlemi için geçerli bir hedef klasörü belirlenemedi.</translation>
+  </string>
+  <string id="Error.1901">
+    <base>Error attempting to read from the source installation database: [2].</base>
+    <translation>[2] kaynak yükleme veritabanından okuma hatası.</translation>
+  </string>
+  <string id="Error.1902">
+    <base>Scheduling reboot operation: Renaming file [2] to [3]. Must reboot to complete operation.</base>
+    <translation>Yeniden başlatma işlemi zamanlanıyor: [2] dosyasının adı, [3] olarak değiştiriliyor. İşlemi tamamlamak için bilgisayarı yeniden başlatmanız gerekiyor.</translation>
+  </string>
+  <string id="Error.1903">
+    <base>Scheduling reboot operation: Deleting file [2]. Must reboot to complete operation.</base>
+    <translation>Yeniden başlatma işlemi zamanlanıyor: [2] dosyası siliniyor. İşlemi tamamlamak için bilgisayarı yeniden başlatmanız gerekiyor.</translation>
+  </string>
+  <string id="Error.1904">
+    <base>Module [2] failed to register.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>[2] modülü kaydedilemedi. HRESULT [3]. Destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1905">
+    <base>Module [2] failed to unregister.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>[2] modülünün kaydı silinemedi. HRESULT [3]. Destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1906">
+    <base>Failed to cache package [2]. Error: [3]. Contact your support personnel.</base>
+    <translation>[2] paketi önbelleğe alınamadı. Hata: [3]. Destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1907">
+    <base>Could not register font [2].  Verify that you have sufficient permissions to install fonts, and that the system supports this font.</base>
+    <translation>[2] yazı tipi kaydedilemedi. Yazı tiplerini yüklemek için yeterli izninizin olduğunu ve sistemin bu yazı tipini desteklediğini denetleyin.</translation>
+  </string>
+  <string id="Error.1908">
+    <base>Could not unregister font [2]. Verify that you have sufficient permissions to remove fonts.</base>
+    <translation>[2] yazı tipinin kaydı silinemedi. Yazı tiplerini kaldırmak için yeterli izninizin olduğunu denetleyin.</translation>
+  </string>
+  <string id="Error.1909">
+    <base>Could not create shortcut [2]. Verify that the destination folder exists and that you can access it.</base>
+    <translation>[2] Kısayolu oluşturulamadı. Hedef klasörünün varolduğunu ve ona erişebildiğinizi denetleyin.</translation>
+  </string>
+  <string id="Error.1910">
+    <base>Could not remove shortcut [2]. Verify that the shortcut file exists and that you can access it.</base>
+    <translation>[2] Kısayolu kaldırılamadı. Kısayol dosyasının varolduğunu ve ona erişebildiğinizi denetleyin.</translation>
+  </string>
+  <string id="Error.1911">
+    <base>Could not register type library for file [2].  Contact your support personnel.</base>
+    <translation>[2] dosyası için tür kitaplığı kaydettirilemedi. Destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1912">
+    <base>Could not unregister type library for file [2].  Contact your support personnel.</base>
+    <translation>[2] dosyası için tür kitaplığı kaydı silinemedi. Destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1913">
+    <base>Could not update the INI file [2][3].  Verify that the file exists and that you can access it.</base>
+    <translation>[2][3] ini dosyası güncelleştirilemedi.  Dosyanın bulunduğundan ve ona erişebildiğinizden emin olun.</translation>
+  </string>
+  <string id="Error.1914">
+    <base>Could not schedule file [2] to replace file [3] on reboot.  Verify that you have write permissions to file [3].</base>
+    <translation>Yeniden başlatma sırasında, [2] dosyasını [3] dosyası ile değişme zamanlanamadı. [3] dosyasına yazma izninizin olduğunu denetleyin.</translation>
+  </string>
+  <string id="Error.1915">
+    <base>Error removing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>ODBC sürücü yöneticisini kaldırma hatası, ODBC hatası [2]: [3]. Destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1916">
+    <base>Error installing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>ODBC sürücü yöneticisini yükleme hatası, ODBC hatası [2]: [3]. Destek sorumlunuza başvurun.</translation>
+  </string>
+  <string id="Error.1917">
+    <base>Error removing ODBC driver [4], ODBC error [2]: [3]. Verify that you have sufficient privileges to remove ODBC drivers.</base>
+    <translation>ODBC sürücüsünü kaldırma hatası: [4], ODBC hatası [2]: [3]. ODBC sürücülerini kaldırmak için yeterli ayrıcalığınızın olduğunuzu denetleyin.</translation>
+  </string>
+  <string id="Error.1918">
+    <base>Error installing ODBC driver [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>ODBC sürücüsünü yükleme hatası: [4], ODBC hatası [2]: [3]. [4] dosyasının varolduğunu ve ona erişebildiğinizi denetleyin.</translation>
+  </string>
+  <string id="Error.1919">
+    <base>Error configuring ODBC data source [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>[4] ODBC veri kaynağını yapılandırma hatası, ODBC hatası [2]: [3]. [4] dosyasının varolduğunu ve ona erişebildiğinizi denetleyin.</translation>
+  </string>
+  <string id="Error.1920">
+    <base>Service [2] ([3]) failed to start.  Verify that you have sufficient privileges to start system services.</base>
+    <translation>'[2]' ([3]) hizmeti başlatılırken hata oluştu. Sistem hizmetlerini başlatmak için yeterli ayrıcalığınızın olduğunu denetleyin.</translation>
+  </string>
+  <string id="Error.1921">
+    <base>Service [2] ([3]) could not be stopped.  Verify that you have sufficient privileges to stop system services.</base>
+    <translation>'[2]' ([3]) hizmeti durdurulamadı. Sistem hizmetlerini durdurmak için yeterli ayrıcalığınızın olduğunu denetleyin.</translation>
+  </string>
+  <string id="Error.1922">
+    <base>Service [2] ([3]) could not be deleted.  Verify that you have sufficient privileges to remove system services.</base>
+    <translation>'[2]' ([3]) hizmeti silinemedi. Sistem hizmetlerini kaldırmak için yeterli ayrıcalığınızın olduğunu denetleyin.</translation>
+  </string>
+  <string id="Error.1923">
+    <base>Service [2] ([3]) could not be installed.  Verify that you have sufficient privileges to install system services.</base>
+    <translation>'[2]' ([3]) hizmeti yüklenemedi. Sistem hizmetlerini yüklemek için yeterli ayrıcalığınızın olduğunu denetleyin.</translation>
+  </string>
+  <string id="Error.1924">
+    <base>Could not update environment variable [2].  Verify that you have sufficient privileges to modify environment variables.</base>
+    <translation>'[2]' ortam değişkeni güncelleştirilemedi. Ortam değişkenlerini değiştirmek için yeterli ayrıcalığınızın olduğunu denetleyin.</translation>
+  </string>
+  <string id="Error.1925">
+    <base>You do not have sufficient privileges to complete this installation for all users of the machine.  Log on as an administrator and then retry this installation.</base>
+    <translation>Bilgisayarın tüm kullanıcıları için yüklemeyi tamamlayacak yeterli ayrıcalığınız yok. Administrator olarak oturum açın ve sonra bu yükleme işlemini yeniden deneyin.</translation>
+  </string>
+  <string id="Error.1926">
+    <base>Could not set file security for file [3]. Error: [2].  Verify that you have sufficient privileges to modify the security permissions for this file.</base>
+    <translation>'[3]' dosyasının dosya güvenliği belirlenemedi. Hata: [2]. Bu dosyanın güvenlik izinlerini değiştirmek için yeterli ayrıcalığınızın olduğunu denetleyin.</translation>
+  </string>
+  <string id="Error.1927">
+    <base>Component Services (COM+ 1.0) are not installed on this computer.  This installation requires Component Services in order to complete successfully.  Component Services are available on Windows 2000.</base>
+    <translation>Component Services (COM+ 1.0) bu bilgisayarda yüklü değil.  Bu yüklemenin basarili olabilmesi için Component Services yüklü olmalıdır.  Component Services, Windows 2000 üzerinde bulunabilir.</translation>
+  </string>
+  <string id="Error.1928">
+    <base>Error registering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>COM+ Uygulaması kaydettirme hatası.  Daha fazla bilgi için destek sorumlularına başvurun.</translation>
+  </string>
+  <string id="Error.1929">
+    <base>Error unregistering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>COM+ Uygulaması kaydını kaldırma hatası.  Daha fazla bilgi için destek sorumlularına başvurun.</translation>
+  </string>
+  <string id="Error.1930">
+    <base>The description for service '[2]' ([3]) could not be changed.</base>
+    <translation>'[2]' ([3]) hizmetinin tanımı değiştirilemedi.</translation>
+  </string>
+  <string id="Error.1931">
+    <base>The Windows Installer service cannot update the system file [2] because the file is protected by Windows.  You may need to update your operating system for this program to work correctly. {{Package version: [3], OS Protected version: [4]}}</base>
+    <translation>[2] sistem dosyası Windows tarafından korunduğu için Windows Installer hizmeti bu dosyayı güncelleştiremiyor.  Bu programın doğru çalışabilmesi için işletim sisteminizi güncelleştirmeniz gerekebilir. {{Paket sürümü: [3], OS korumasındaki sürüm: [4]}}</translation>
+  </string>
+  <string id="Error.1932">
+    <base>The Windows Installer service cannot update the protected Windows file [2]. {{Package version: [3], OS Protected version: [4], SFP Error: [5]}}</base>
+    <translation>Windows Installer hizmeti korumalı [2] Windows dosyasını güncelleştiremiyor.  {{Paket sürümü: [3], OS korumasındaki sürüm: [4], SFP Hatası: [5]}}</translation>
+  </string>
+  <string id="Error.1933">
+    <base>The Windows Installer service cannot update one or more protected Windows files. SFP Error: [2]. List of protected files: [3]</base>
+    <translation>Windows Installer hizmeti, bir veya birkaç korumalı Windows dosyasını güncelleştiremiyor. SFP Hatası: [2]. Korumalı dosya listesi: [3]</translation>
+  </string>
+  <string id="Error.1934">
+    <base>User installations are disabled via policy on the machine.</base>
+    <translation>Kullanıcı yüklemeleri makinedeki ilke tarafından devre dışı bırakılmış.</translation>
+  </string>
+  <string id="UIText.NewFolder">
+    <base>Fldr|New Folder</base>
+    <translation>Fldr|Yeni Klasör</translation>
+  </string>
+  <string id="UIText.bytes">
+    <base>bytes</base>
+    <translation>bytes</translation>
+  </string>
+  <string id="UIText.GB">
+    <base>GB</base>
+    <translation>GB</translation>
+  </string>
+  <string id="UIText.KB">
+    <base>KB</base>
+    <translation>KB</translation>
+  </string>
+  <string id="UIText.MB">
+    <base>MB</base>
+    <translation>MB</translation>
+  </string>
+  <string id="UIText.AbsentPath">
+    <base>
+    </base>
+    <translation>{&amp;Tahoma8}</translation>
+  </string>
+  <string id="UIText.MenuAbsent">
+    <base>This feature will not be available.</base>
+    <translation>Bu özellik mevcut olmayacaktır.</translation>
+  </string>
+  <string id="UIText.MenuAdvertise">
+    <base>This feature will be installed when required.</base>
+    <translation>Bu özellik gerektiğinde yüklenecek.</translation>
+  </string>
+  <string id="UIText.MenuAllCD">
+    <base>This feature, and all subfeatures, will be installed to run from the CD.</base>
+    <translation>Bu özellik ve tüm alt özellikleri CD'den çalıştırılacak şekilde yüklenecek.</translation>
+  </string>
+  <string id="UIText.MenuAllLocal">
+    <base>This feature, and all subfeatures, will be installed on local hard drive.</base>
+    <translation>Bu özellik ve tüm alt özellikleri yerel sabit diske yüklenecek.</translation>
+  </string>
+  <string id="UIText.MenuAllNetwork">
+    <base>This feature, and all subfeatures, will be installed to run from the network.</base>
+    <translation>Bu özellik ve tüm alt özellikleri ağdan çalıştırılacak şekilde yüklenecek.</translation>
+  </string>
+  <string id="UIText.MenuCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation>Bu özellik, CD'den çalıştırılacak şekilde yüklenecek.</translation>
+  </string>
+  <string id="UIText.MenuLocal">
+    <base>This feature will be installed on local hard drive.</base>
+    <translation>Bu özellik, yerel sabit diske yüklenecek.</translation>
+  </string>
+  <string id="UIText.MenuNetwork">
+    <base>This feature will be installed to run from network.</base>
+    <translation>Bu özellik, ağdan çalıştırılacak şekilde yüklenecek.</translation>
+  </string>
+  <string id="UIText.SelAbsentAbsent">
+    <base>GB</base>
+    <translation>GB</translation>
+  </string>
+  <string id="UIText.SelAbsentAdvertise">
+    <base>This feature will be set to be installed when required.</base>
+    <translation>Bu özellik gerektiğinde yüklenebilecek şekilde ayarlanacak.</translation>
+  </string>
+  <string id="UIText.SelAbsentCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation>Bu özellik, CD'den çalıştırılacak şekilde yüklenecek.</translation>
+  </string>
+  <string id="UIText.SelAbsentLocal">
+    <base>This feature will be installed on the local hard drive.</base>
+    <translation>Bu özellik, yerel sabit diske yüklenecek.</translation>
+  </string>
+  <string id="UIText.SelAbsentNetwork">
+    <base>This feature will be installed to run from the network.</base>
+    <translation>Bu özellik, ağdan çalıştırılacak şekilde yüklenecek.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAbsent">
+    <base>This feature will become unavailable.</base>
+    <translation>Bu özellik kullanılamayacak.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAdvertise">
+    <base>Will be installed when required.</base>
+    <translation>Gerektiğinde yüklenecek.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseCD">
+    <base>This feature will be available to run from CD.</base>
+    <translation>Bu özelliği CD'den çalıştırabilirsiniz.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseLocal">
+    <base>This feature will be installed on your local hard drive.</base>
+    <translation>Bu özellik, yerel sabit diskinize yüklenecek.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseNetwork">
+    <base>This feature will be available to run from the network.</base>
+    <translation>Bu özelliği ağdan çalıştırabilirsiniz.</translation>
+  </string>
+  <string id="UIText.SelCDAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from CD.</base>
+    <translation>Bu özelliğin yüklemesi tamamen kaldırılacak ve özelliği CD'den çalıştıramayacaksınız.</translation>
+  </string>
+  <string id="UIText.SelCDAdvertise">
+    <base>This feature was run from the CD but will be set to be installed when required.</base>
+    <translation>Bu özellik CD'den çalıştırıldı, ancak gerektiğinde yüklenebilecek şekilde ayarlanacak.</translation>
+  </string>
+  <string id="UIText.SelCDCD">
+    <base>This feature will continue to be run from the CD</base>
+    <translation>Bu özellik CD'den çalıştırılmaya devam edecek.</translation>
+  </string>
+  <string id="UIText.SelCDLocal">
+    <base>This feature was run from the CD but will be installed on the local hard drive.</base>
+    <translation>Bu özellik CD'den çalıştırıldı, ancak yerel sabit diskinize yüklenecek.</translation>
+  </string>
+  <string id="UIText.SelChildCostNeg">
+    <base>This feature frees up [1] on your hard drive.</base>
+    <translation>Bu özelliğin sabit diskinizde boşalttığı alan:[1].</translation>
+  </string>
+  <string id="UIText.SelChildCostPos">
+    <base>This feature requires [1] on your hard drive.</base>
+    <translation>Bu özellik için sabit diskte gereken alan:[1].</translation>
+  </string>
+  <string id="UIText.SelCostPending">
+    <base>Compiling cost for this feature...</base>
+    <translation>Bu özelliğin derleme maliyeti...</translation>
+  </string>
+  <string id="UIText.SelLocalAbsent">
+    <base>This feature will be completely removed.</base>
+    <translation>Bu özellik tamamen kaldırılacak.</translation>
+  </string>
+  <string id="UIText.SelLocalAdvertise">
+    <base>This feature will be removed from your local hard drive but will be set to be installed when required.</base>
+    <translation>Bu özellik yerel sabit diskinizden kaldırılacak, ancak gerektiğinde yüklenebilecek şekilde ayarlanacak.</translation>
+  </string>
+  <string id="UIText.SelLocalCD">
+    <base>This feature will be removed from your local hard drive but will still be available to run from CD.</base>
+    <translation>Bu özellik yerel sabit diskinizden kaldırılacak, ancak yine de CD'den çalıştırılabilecek.</translation>
+  </string>
+  <string id="UIText.SelLocalLocal">
+    <base>This feature will remain on your local hard drive.</base>
+    <translation>Bu özellik, yerel sabit diskinizde kalacak.</translation>
+  </string>
+  <string id="UIText.SelLocalNetwork">
+    <base>This feature will be removed from your local hard drive, but will be still available to run from the network.</base>
+    <translation>Bu özellik yerel sabit diskinizden kaldırılacak, ancak yine de ağdan çalıştırılabilecek.</translation>
+  </string>
+  <string id="UIText.SelNetworkAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from the network.</base>
+    <translation>Bu özellik yüklemesi tamamen kaldırılacak ve özelliği ağdan çalıştıramayacaksınız.</translation>
+  </string>
+  <string id="UIText.SelNetworkAdvertise">
+    <base>This feature was run from the network but will be installed when required.</base>
+    <translation>Bu özellik ağdan çalıştırıldı, ancak gerektiğinde yüklenebilecek şekilde ayarlanacak.</translation>
+  </string>
+  <string id="UIText.SelNetworkLocal">
+    <base>This feature was run from the network but will be installed on the local hard drive.</base>
+    <translation>Bu özellik ağdan çalıştırıldı, ancak yerel sabit diskinize yüklenecek.</translation>
+  </string>
+  <string id="UIText.SelNetworkNetwork">
+    <base>This feature will continue to be run from the network</base>
+    <translation>Bu özellik ağdan çalıştırılmaya devam edecek.</translation>
+  </string>
+  <string id="UIText.SelParentCostNegNeg">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation>Bu özelliğin sabit diskinizde boşalttığı alan:[1]. [2] /[3] alt özellik seçili durumda. Alt özelliklerin sabit diskinizde boşalttığı alan:[4].</translation>
+  </string>
+  <string id="UIText.SelParentCostNegPos">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation>Bu özelliğin sabit diskinizde boşalttığı alan:[1]. [2] /[3] alt özellik seçili durumda. Alt özellikler için sabit diskte gereken alan:[4].</translation>
+  </string>
+  <string id="UIText.SelParentCostPosNeg">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation>Bu özellik için sabit diskte gereken alan:[1]. [2] /[3] alt özellik seçili durumda. Alt özelliklerin sabit diskinizde boşalttığı alan:[4].</translation>
+  </string>
+  <string id="UIText.SelParentCostPosPos">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation>Bu özellik için sabit diskte gereken alan:[1]. [2] /[3] alt özellik seçili durumda. Alt özellikler için sabit diskte gereken alan:[4].</translation>
+  </string>
+  <string id="UIText.TimeRemaining">
+    <base>Time remaining: {[1] min }[2] sec</base>
+    <translation>Kalan süre: {[1] dk }[2] sn</translation>
+  </string>
+  <string id="UIText.VolumeCostAvailable">
+    <base>Available</base>
+    <translation>Kullanılabilir</translation>
+  </string>
+  <string id="UIText.VolumeCostDifference">
+    <base>Differences</base>
+    <translation>Farklar</translation>
+  </string>
+  <string id="UIText.VolumeCostRequired">
+    <base>Required</base>
+    <translation>Gereken</translation>
+  </string>
+  <string id="UIText.VolumeCostSize">
+    <base>Disk Size</base>
+    <translation>Disk Boyutu</translation>
+  </string>
+  <string id="UIText.VolumeCostVolume">
+    <base>Volume</base>
+    <translation>Birim</translation>
+  </string>
+</localization>

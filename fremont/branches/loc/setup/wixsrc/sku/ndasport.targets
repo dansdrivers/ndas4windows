@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" InitialTargets="CheckPrecondition;CreateRuntimeProperties" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!-- MSI Properties -->
+	<PropertyGroup>
+		<!-- ProductCode must be resolved at runtime -->
+		<ProductCode />
+		<!-- ProductVersion must be specified from the caller -->
+		<ProductVersion />
+		<!-- Default Setup Language is en-US -->
+		<SetupLanguage Condition="''=='$(SetupLanguage)'">en-US</SetupLanguage>
+		<ProductDisplayVersion Condition="'$(ProductDisplayVersion)'==''">$(ProductVersion)</ProductDisplayVersion>
+		<ProductDisplayVersion Condition="'$(ProductRevision)'!=''">$(ProductDisplayVersion)-r$(ProductRevision)</ProductDisplayVersion>
+	</PropertyGroup>
+
+	<!-- Build Base Directory -->
+	<PropertyGroup>
+		<LocalBuildBaseDir Condition="''=='$(LocalBuildBaseDir)'">.\</LocalBuildBaseDir>
+		<LocalBuildBaseDir Condition="!HasTrailingSlash('$(LocalBuildBaseDir)')">$(LocalBuildBaseDir)\</LocalBuildBaseDir>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!-- default SKU is NDASPORT (others: NDASSCSI) -->
+		<SKU Condition="'$(SKU)'==''">NDASPORT</SKU>
+
+		<WixSrcBaseDir>..\..\</WixSrcBaseDir>
+		<WixProjectRoot>$(WixSrcBaseDir)..\</WixProjectRoot>
+		<WixToolPath>$(WixProjectRoot)tools\wix-2.0.4820.0</WixToolPath>
+
+		<OutputName Condition="'$(OutputName)'==''">ndas</OutputName>
+		<OutputType>package</OutputType>
+		<ToolPath>$(WixToolPath)</ToolPath>
+
+		<!-- Normalize platform strings to: i386, amd64, ia64 -->
+		<Platform Condition=" '$(Platform)' == '' ">i386</Platform>
+		<Platform Condition=" '$(Platform)' == 'x86' ">i386</Platform>
+		<Platform Condition=" '$(Platform)' == 'x64' ">amd64</Platform>
+
+		<!-- configuration -->
+		<Configuration Condition=" '$(Configuration)' == '' ">fre</Configuration>
+		<ConfigurationSuffix Condition=" '$(Configuration)'=='chk' ">d</ConfigurationSuffix>
+
+		<OutputPath Condition=" '$(OutputPath)' == '' ">$(LocalBuildBaseDir)obj$(ConfigurationSuffix)\bin\$(Platform)\</OutputPath>
+		<IntermediateOutputPath Condition=" '$(IntermediateOutputPath)' == '' ">$(LocalBuildBaseDir)obj$(ConfigurationSuffix)\$(Platform)\</IntermediateOutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(DontUsePlatformSuffix)'==''">
+
+		<OutputName-ProductVersionTag>-$(ProductVersion)</OutputName-ProductVersionTag>
+		<OutputName-ProductRevisionTag Condition="''!='$(ProductRevision)'">-r$(ProductRevision)</OutputName-ProductRevisionTag>
+		<OutputName-ArchTag Condition="'$(Platform)'=='i386'">-x86</OutputName-ArchTag>
+		<OutputName-ArchTag Condition="'$(Platform)'=='amd64'">-x64</OutputName-ArchTag>
+		<OutputName-ConfigTag Condition="'$(Configuration)'=='chk'">-chk</OutputName-ConfigTag>
+		<OutputName-LanguageTag Condition="'$(SetupLanguage)'!=''">-$(SetupLanguage)</OutputName-LanguageTag>
+		<!-- Language neutral setup does not have a language tag -->
+		<OutputName-LanguageTag Condition="'$(SetupLanguage)'=='0'"></OutputName-LanguageTag>
+
+		<OutputName>$(OutputName)$(OutputName-ProductVersionTag)</OutputName>
+		<OutputName>$(OutputName)$(OutputName-ProductRevisionTag)</OutputName>
+		<OutputName>$(OutputName)$(OutputName-ArchTag)</OutputName>
+		<OutputName>$(OutputName)$(OutputName-LanguageTag)</OutputName>
+		<OutputName>$(OutputName)$(OutputName-ConfigTag)</OutputName>
+
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<BinPubConfig Condition=" '$(BinPubConfig)' == '' ">$(Configuration)</BinPubConfig>
+		<SetupFileSource Condition="'$(SetupFileSource)'==''">$(WixProjectRoot)..\publish\$(Configuration)\$(Platform)\</SetupFileSource>
+		<CustomActionDllPath Condition="'$(CustomActionDllPath)'==''">$(SetupFileSource)setup</CustomActionDllPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DefineConstants Condition="'$(Platform)'=='amd64'">Win64Build=1</DefineConstants>
+		<DefineConstants>$(DefineConstants);NdasMsiVersion=$(ProductVersion)</DefineConstants>
+		<DefineConstants>$(DefineConstants);NdasMsiDisplayVersion=$(ProductDisplayVersion)$(ProductRevisionTag)</DefineConstants>
+		<DefineConstants>$(DefineConstants);ExternalMergeModulePath=$(WixSrcBaseDir)..\supplements\msm</DefineConstants>
+		<DefineConstants>$(DefineConstants);BinPubConfig=$(BinPubConfig)</DefineConstants>
+		<DefineConstants Condition="'$(SKU)'=='NDASSCSI'">$(DefineConstants);SKU.NDASSCSI;SKU.LFSFILT;SKU.NDASFAT</DefineConstants>
+		<DefineConstants Condition="'$(SKU)'=='NDASPORT'">$(DefineConstants);SKU.NDASPORT;SKU.LFSFILT;SKU.NDASFAT</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupDataDir.CustomActionDll=$(CustomActionDllPath)</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupDataDir.Ibd=$(WixSrcBaseDir)ibd</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupDataDir.Icon=$(WixSrcBaseDir)ibd</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupDataDir.EULA=$(WixSrcBaseDir)eula</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupFileSource=$(SetupFileSource)</DefineConstants>
+		<DefineConstants Condition="'$(Configuration)'=='chk'">$(DefineConstants);ProductNameTag= (Debug)</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--<Compile Include="*.wxs" />-->
+		<Compile Include="$(WixSrcBaseDir)ndasmsi.wxs" />
+		<Compile Include="$(WixSrcBaseDir)xdi.wxs" />
+		<Compile Include="$(WixSrcBaseDir)directories.wxs" />
+		<Compile Include="$(WixSrcBaseDir)binary.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)ndasapcm.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasapcm_ps.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasbind.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndascmd.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndascomm.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasiomg.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasmgmt.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasmsg.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasnif.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasop.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndassvc.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasuser.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasvol.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)lpx.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)ndasport.wxs" Condition="'$(SKU)'=='NDASPORT'"/>
+		<Compile Include="$(WixSrcBaseDir)ndasdlu.wxs" Condition="'$(SKU)'=='NDASPORT'"/>
+
+		<Compile Include="$(WixSrcBaseDir)ndasbus.wxs" Condition="'$(SKU)'=='NDASSCSI'"/>
+		<Compile Include="$(WixSrcBaseDir)ndasscsi.wxs" Condition="'$(SKU)'=='NDASSCSI'"/>
+
+		<Compile Include="$(WixSrcBaseDir)lfsfilt.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasfs.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)ndasfat.wxs" />
+		<!--<Compile Include="$(WixSrcBaseDir)ndasntfs.wxs" />-->
+
+		<Compile Include="$(WixSrcBaseDir)ndasmisc.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)xixfs.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)ui\*.wxs" />
+		<LocalizationFile Include="$(WixSrcBaseDir)*.wxl" />
+		<LocalizationFile Include="$(WixSrcBaseDir)ui\*.wxl" />
+		<IncludeSearchPath Include="$(WixSrcBaseDir)." />
+	</ItemGroup>
+
+	<Import Project="..\..\tools\msbuild\wix2.targets" />
+
+	<PropertyGroup>
+		<MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+	</PropertyGroup>
+
+	<Import Project="..\..\tools\msbuild\MSBuild.Community.Tasks.Targets" />
+
+	<Target Name="CheckPrecondition">
+		<!-- ProductVersion must be specified by the caller -->
+		<Error Text="ProductVersion must be specified. (e.g. /p:ProductVersion=3.30.1601)"
+			   Condition="''=='$(ProductVersion)'" />
+	</Target>
+
+	<Target Name="CreateRuntimeProperties" DependsOnTargets="GetMsiProductCode">
+		<!-- ProductCode is fetched from the GetMsiProductCode task -->
+		<!-- Append ProductCode to DefineConstants -->
+		<CreateProperty Value="$(DefineConstants);NdasMsiProductCode=$(ProductCode)">
+			<Output TaskParameter="ValueSetByTask" PropertyName="DefineConstants" />
+		</CreateProperty>
+	</Target>
+
+	<!-- Get the product code from the MSI Product Code xml file -->
+
+	<PropertyGroup>
+		<ProductCodeXmlFile>$(WixProjectRoot)ndaswix.xml</ProductCodeXmlFile>
+		<XPath>/setup/product-codes/product-code[@version = '$(ProductVersion)' and @platform = '$(Platform)']</XPath>
+	</PropertyGroup>
+
+	<Target Name="GetMsiProductCode" Condition="''=='$(ProductCode)'">
+		<XmlQuery XmlFileName="$(ProductCodeXmlFile)" XPath="$(XPath)">
+			<Output TaskParameter="Values" ItemName="_ProductCodeNode" />
+		</XmlQuery>
+		<CreateProperty Value="%(_ProductCodeNode._value)">
+			<Output TaskParameter="ValueSetByTask" PropertyName="ProductCode" />
+		</CreateProperty>
+		<Error Text="ProductCode cannot be found for $(ProductVersion) - $(Platform) from $(ProductCodeXmlFile)"
+			   Condition="''=='$(ProductCode)'" />
+	</Target>
+
+</Project>

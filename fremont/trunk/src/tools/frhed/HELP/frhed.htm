@@ -1,0 +1,1539 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Final//EN"><html><head>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<script language="JavaScript" src="externlink.js"></script>
+<script language="JavaScript">document.createStyleSheet(externlink("before.css"));</script>
+<link rel="stylesheet" type="text/css" href="frhed.css">
+<script language="JavaScript">document.createStyleSheet(externlink("after.css"));</script>
+<title>The Free Hex Editor Help File</title>
+</head><body><h1><img src="frhed.png" style="border: 0px;">The Free Hex Editor Help File</h1>
+
+<img src="logo.bmp" align="right" usemap="#map" width="256" height="256">
+<map name="map" id="map">
+<area shape="rect" coords="110,177,161,198" href="mailto:raihan@kibria.de">
+<area shape="rect" coords="83,40,142,100"   href="http://www.kibria.de/frhed.html">
+</map>
+
+<p style="vertical-align: middle;"><img src="frhed-big.png" style="border: 0px;">This help file contains information for the <u>Fr</u>ee <u>H</u>ex <u>Ed</u>itor v1.1.0</p>
+
+<hr>
+
+<p>You can get more information on the following subjects:</p>
+
+<ul>
+<li>Introduction to frhed: Information about frhed's <a href="#features">features</a>,
+the <a href="#disclaimer">disclaimer</a>, <a href="#license">license</a>
+and how to <a href="#contact">contact the author</a>.
+Also see <a href="#contrib">acknowledgements</a> to contributors.</li>
+
+<li><a href="#installation">Installation and deinstallation</a>: 
+How to get frhed running and how to remove frhed from your computer.</li>
+
+<li><a href="#binary-files">Binary file primer</a>:
+Information about binary files for beginners.</li>
+
+<li><a href="#file-operations">File operations</a>:
+How to open and save files.</li>
+
+<li><a href="#main-window">The main window</a>:
+Explains the various features of the main window.</li>
+
+<li><a href="#moving-in-the-file">Moving in the file</a>:
+How to move the caret in the file.</li>
+
+<li><a href="#editing-the-file">Editing the file</a>:
+Changing the contents of the file.</li>
+
+<li><a href="#other-edit-functions">Other functions from the Edit menu</a>:
+Functions that help in editing binary files</li>
+
+<li><a href="#disk-menu">The Disk menu</a>:
+Explains how you can use frhed to read data from directly your harddisk</li>
+
+<li><a href="#options-menu">The Options menu</a>:
+Explains all functions found in the Options menu</li>
+
+<li><a href="#bookmark-menu">The Bookmarks menu</a>:
+Explains how to navigate a file using bookmarks</li>
+
+<li><a href="#registry-menu">The Registry Menu</a>:
+Instructions on using the registry menu.</li>
+
+<li><a href="#special-syntax">Using the special syntax</a>:
+Description of the special syntax and the data sizes in the program.</li>
+
+<li><a href="#character-sets">Character tables</a>:
+Tables of the ANSI and OEM character sets.</li>
+
+<li><a href="#faq">Frequently asked questions</a>:
+Some questions other people have asked.</li>
+
+<li><a href="#custom-styles">Custom stylesheets</a>:
+If you dislike the colour scheme or fonts in this help file, it is possible to modify them.</li>
+</ul>
+
+<hr>
+<p><font size="-1">Free Hex Editor is Copyright &copy; <a href="mailto:raihan@kibria.de">Raihan Kibria</a> 2002.
+Additional features by <a href="mailto:pabs3@zip.to">Pabs</a>,
+<a href="mailto:not@p-nand-q.com">Gerson Kurz</a>, Mike Funduc and nas. All Rights Reserved.</font></p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#features">Features</a></h2>
+<ul>
+<li>Native 32 bit Windows application: long filenames supported, editable file size limited only by available system memory.</li>
+<li>Small program size, loads fast.</li>
+<li>Cut, copy &amp; paste binary values. Syntax for describing byte, word, longword, float and double binary values in text form to use with find and paste functions.</li>
+<li>Directly enter hex values or text in main window (overwrite or insert).</li>
+<li>Compare files.</li>
+<li>Search for any combination of text and binary values.</li>
+<li>Bit manipulation.</li>
+<li>Import/Export as hexdump to/from file or clipboard.</li>
+<li>Automatically adjust bytes displayed per hexdump line to window width, or set bytes per line manually.</li>
+<li>Choose font size, character set (ANSI or OEM), colors of text and background.</li>
+<li>Intel or Motorola binary format.</li>
+<li>Can be used as "Send to"-Target and in the context menu for all files and for files with non-registered extensions.</li>
+<li>Set bookmarks to easily access offsets in the file.</li>
+<li>Load files partially.</li>
+<li>Load files by dragging them into the window.</li>
+<li>Apply binary templates for structured information.</li>
+<li>Easily remove links to frhed, remove frhed's registry entries and upgrade from frhed versions 1.0.154 and upward (1.0.153 and below used ini files instead) from within the program itself.</li>
+<li>Switch between sets of instance options.</li>
+<li>Automatically create backups when saving.</li>
+<li>OLE drag-drop</li>
+<li>Source code is included. (Written with Microsoft Visual C++. Does not use MFC, only Win32 API calls and C library calls, uses C++ classes).</li>
+<li>No registration fee required!</li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#disclaimer">Disclaimer</a></h2>
+
+<p>frhed is supplied on an as-is basis. The author offers no warranty of its fitness
+for any purpose whatsoever, and accepts no liability whatsoever for any loss or damage
+incurred by its use. frhed is not a supported product. The author accepts no commitment
+or liability to address any problems that may be encountered in using it; however, frhed
+is continually being developed and improved, so he is always interested to hear about
+any bugs or deficiencies.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#license">License</a></h2>
+<p>The main parts of frhed are licensed by the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a>. 
+These parts include FRHED.EXE, the RAWIO32.DLL and the RAWIO16.DLL.</p>
+
+<p>The FRHEDX.DLL is <b>not</b> licensed by the GPL; instead, the cryptographic algorithms remain in copyright by their respective
+owners.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#contrib">Acknowledgements</a></h2>
+
+<p>Thanks to:</p>
+
+<ul>
+<li>Dario Bagnoli - bug reports and beta testing</li>
+<li>Tom Foth - suggestions</li>
+<li>Bo Wannerberg - Win2000 opening bugfix</li>
+<li><a href="mailto:pabs3@zip.to">Pabs</a> - <dfn>Edit/Fill selection with</dfn> command and other features</li>
+<li><a href="mailto:not@p-nand-q.com">Gerson Kurz</a> - Harddisk access stuff and other features</li>
+<li>Mike Funduc - selection command line parameters and a toolbar</li>
+<li>nas - improved the window creation</li>
+<li>The Starman reviewed frhed, provides tutorials on using frhed in a practical context and reported bugs in the import hexdump command &amp; other features.</li>
+<li>Harry reviewed frhed.</li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#contact">frhed on the Web</a></h2>
+
+<p>If you have comments or suggestions please send eMail to
+<a href="mailto:raihan@kibria.de">raihan@kibria.de</a></p>
+
+<p>Please check for the newest updates of frhed (including the newest beta version) on this webpage
+<a href="http://www.kibria.de/frhed.html">http://www.kibria.de/frhed.html</a></p>
+
+<p>Some links:</p>
+
+<ul>
+<li><a href="http://sf.net/projects/frhed/">frhed's SourceForge project page</a>. (Not yet up &amp; running)</li>
+<li><a href="http://bonedaddy.net/pabs3/prog.html#frhed">Pabs' frhed patch</a>.</li>
+<li><a href="http://www.p-nand-q.com/download.htm">Gerson Kurz's frhed patch</a>.</li>
+<li><a href="http://www.funduc.com/srfrhed.htm">Funduc Software's frhed mod</a>.</li>
+<li><a href="http://www.geocities.com/thestarman3/tool/frhed/frhed.htm">The Starman's frhed review</a>.</li>
+<li><a href="http://members.tripod.com/HarryMNielsen/">Harry's Windows Hex Editor Review</a>.</li>
+<li><a href="http://bonedaddy.net/pabs3/frhedhistory.html">frhed's branch history</a>.</li>
+<li><a href="http://www.ffitz.com/ff/free/signs/sfrhed.htm">Something completely unrelated to frhed</a>.</li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#installation">Installation</a></h1>
+<p>Starting with version 1.1, frhed uses the self extracting <a href="http://www.nullsoft.com/free/nsis/">Nullsoft "SuperPIMP" Install System</a>,
+which is a setup program familiar to anyone who has ever run Winamp.</p>
+
+<p>frhed supports normal Windows uninstall behaviour as found in the Control Panel.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#binary-files">Binary Files</a></h1>
+<ul>
+<li><a href="#what-are-binary-files">What are binary files?</a></li>
+<li><a href="#what-are-bits-n-bytes">What are bits and bytes?</a></li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#what-are-binary-files">What are binary files?</a></h2>
+<p>All the files on your computer, programs as well as documents, are really large "lists" of
+numbers. Imagine a numbered list like this one:</p>
+
+<p>0) 24<br>
+1) 33<br>
+2) 9<br>
+3) 0<br>
+4) 115</p>
+
+<p>The numbering starts at zero. At each list index there is a number, for example the number
+9 is at index "2". The index is usually called "offset". frhed displays the current offset in
+the lower left corner of it's window. Large files contain many numbers, small files not so
+many. The numbers in the list can have a value between 0 and 255, for a special reason:
+Each number is a "byte".</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#what-are-bits-n-bytes">What are bits and bytes?</a></h2>
+<p>"Bit" is an abbreviation for "BInary digiT". It can have a value of either 0 or 1. One bit
+alone is not very useful, because already the number 2 can not be described with it. So you
+take many bits to describe large numbers. This is how it works:<br>
+The normal decimal system you know, with digits from 0 to 9, describes numbers larger than
+9 by arranging several digits in such a way that each position in the number means something different.</p>
+
+<p>For example the number "245" means really "2 times 100 + 4 times 10 + 5 times 1". The further left a
+digit's position in the number, the higher a value it contributes to the number. Every time you go one
+step left in the number, you multiply the digit there with 1, 10, 100, 1000 and so on and add that value
+to what you already have. The values you have to multiply the digit <b>with</b> can be obtained if you start
+out with 1 on the far right, then multiply with 10 every time you go left. So you get to multiply with
+1, then with 1&times;10=10, then with 10&times;10=100, then 10&times;100=1000 and so on. This is our "base 10" number system.</p>
+
+<p>Now the <b>binary system</b> is a "base 2"-system. A binary number might looks like this: 1011</p>
+
+<p>This is not "one thousand and eleven", as it would be in the decimal system. In the decimal system
+we multiplied the digits at the various positions with a 1, 10, 10&times;10=100, 10&times;100=1000 and so on,
+but this time, in the binary system (also known as "dual system"), we multiply with 1, 2, 2&times;2=4,
+2&times;4=8, 2&times;8=16 and so on, starting at the right and doing with a "2" what we did with a "10"
+before. So the value of the binary number above is "1 times 1 + 1 times 2 + 0 times 4 + 1 times 8",
+giving us the number "11" in our decimal system.</p>
+
+<p>Computers use bits to calculate everything, because they can be modeled as "current on" or
+"current off" easily. With a packet of 4 bits (called a "nibble") you can describe the numbers
+from 0 to 15. A packet of 8 bits is called a "byte", and <b>these</b> are what the file contains.
+Each byte can describe a number from 0 to 255.
+So, a file is a list (or "array") of "bytes", with each byte at a certain index or "offset".
+These bytes are what frhed displays in the middle of the screen, but in yet another different
+number system: the "hexadecimal" system, which is a system with the base 16. So there are 16
+digits, the normal ones from 0 to 9, and additionally the letters "a" through "f" with following
+values:</p>
+
+<p>a = 10<br>
+b = 11<br>
+c = 12<br>
+d = 13<br>
+e = 14<br>
+f = 15</p>
+
+<p>So the "hex" (short for "hexadecimal") number "f14a" means: "10 times 1 + 4 times 16 + 1 time
+16&times;16(=256) + 15 times 16&times;256(=4096)", giving a value of 61770 in decimal. The point of using
+hex numbers is that values of up to 255 (maximum value of a byte) can be described by employing
+up to 2 hexadecimal digits, which gives a neat and ordered output on hex editors such as frhed.
+On the right side of the frhed window there are "normal" letters, punctuation symbols and so on.
+This is because each byte can be seen as an index to a symbol in a "character set". This means
+that the computer stores for example the letter "a" as a number with the value 97 ("61" in hex
+notation), the comma "," as a number 44 and so on. So if you write a text on the computer and
+save it to disk, then the file will contain a number of bytes, each byte signifying a letter,
+other symbol, or a special code number for "End of line" or "Tabulator" and such. But there are
+several character sets in use (for example Windows uses either the ANSI or the OEM character set):
+In one character set the number 97 might mean the letter "a", but in another it could be used for
+the apostrophe.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#file-operations">File operations</a></h1>
+<p>The following File Operations are supported:</p>
+
+<ul>
+<li><a href="#file-new">Creating new files</a></li>
+<li><a href="#file-open">Opening files</a></li>
+<li><a href="#file-open-partially">Opening files partially</a></li>
+<li><a href="#saving-files">Saving files</a></li>
+<li><a href="#save-selection-as">Saving selections</a></li>
+<li><a href="#revert-file">Reverting to the saved file</a></li>
+<li><a href="#delete-file">Deleting the current file</a></li>
+<li><a href="#export-as-hexdump">Exporting the file as a hexdump text</a></li>
+<li><a href="#import-hexdump">Importing a hexdump file</a></li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#file-new">Creating new files</a></h2>
+<p>If frhed is started without parameters or with a nonexistant filename as parameter,
+then it starts with a new, empty file that is untitled. If a file is already loaded, then
+choose <dfn>File/New</dfn> from the menu. If a file is already loaded and it has been changed, then
+you will be prompted if you want to save the changes.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#file-open">Opening files</a></h2>
+<p>If frhed is started with command line parameters, then the whole string following the
+program name is considered to be the name of the file to open.</p>
+
+<p><b>Examples</b>:</p>
+
+<p>
+<code>frhed filename.dat</code> opens the file called "filename.dat"<br>
+<code>frhed a file-name.dat</code> opens the file called "a file-name.dat"
+</p>
+
+<p><b>Note</b>: If you put a link to frhed.exe into the "SendTo"-Folder in your Windows main
+directory then you can open any file from the Explorer with frhed by choosing frhed
+from the "Send To"-item in the file's context menu.</p>
+
+<p>You can also choose <dfn>File/Open</dfn> from the menu. If a file is already loaded and it has
+been changed, then you will be prompted if you want to lose the changes, save the changes
+or cancel the request.</p>
+
+<p>A file can also be dragged (for instance from the Windows Explorer window) into frhed's
+window to open it. If several files were dragged, then you must choose which one to open.</p>
+
+<p>You may also select a file from the MRU list to open.</p>
+
+<p>If the file access permissions don't allow writing or open-read-only mode is on then
+read-only mode will be engaged.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#file-open-partially">Opening files partially</a></h2>
+<p>If you want to edit a very large file and it's not necessary to load all of it into memory,
+choose the <dfn>File/Open partially</dfn> command. First you will have to choose the file you want to open in a
+File-Open-dialog. Then you must enter the offset from which the file will be loaded
+and how many bytes to load, or you can check the "Open partially from end of file"-radiobutton
+if you want to load data from the end of the file. Also you may have frhed display the offsets
+relative to the start of the file instead of relative to the start of the loaded block. Note,
+however, that so far the rest of the program uses offsets relative to start of the loaded block.
+</p>
+
+<p>frhed will now be in partially-opened-mode, which means that whenever you choose the <dfn>File/Save</dfn> command,
+the data will be written back to the position they were loaded from. This mode is indicated by
+a letter "P" in the window title after the file name.</p>
+
+<p>If the file has been changed, then you will be prompted if you want to lose the changes,
+save the changes or cancel the request.</p>
+
+<p>You can also resize the block of data you loaded and the corresponding section of the file
+will also be resized when you save the file.</p>
+
+<p>If the file access permissions don't allow writing or open-read-only mode is on then read-only
+mode will be engaged.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#saving-files">Saving files</a></h2>
+<p>To save the current file choose <dfn>File/Save</dfn> from the menu.
+If the file has never been saved before, then <dfn>File/Save as</dfn>
+will be automatically invoked.</p>
+
+<p><dfn>File/Save as</dfn> saves the file with a different name.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#save-selection-as">Saving selections</a></h2>
+<p>To save the current selection choose <dfn>File/Save selection as</dfn> from the menu.
+If the is no selection then all of the file will be saved.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#revert-file">Reverting to the saved file</a></h2>
+<p>When you have made changes to a file, want to change it back and cannot remember the exact
+bytes in the file then the <dfn>File/Revert</dfn> command will do it for you. If the file has never been saved
+then this command will revert to an untitled empty file.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#export-as-hexdump">Exporting the file as a hexdump text</a></h2>
+
+<p>The <dfn>File/Export as hexdump</dfn> command is used if you need the hexdump of the file in
+plain text form, for example if
+you need to insert it in a word processor document. You can either put the hexdump into the
+clipboard or into a file, which you will have to choose. The start line of the hexdump has to
+be specified (in hexadecimal notation without prefix), which you can find on the left side of
+the window, for example 23c or 134. You must also specify the end line. The values in the
+dialog will be initialized so that the whole file will be dumped, if there is nothing
+selected, or they will be such that the current selection will be dumped.</p>
+
+<p>Also you have the option of just outputting the hex bytes on a single line
+- just uncheck the "Export like frhed display" check box.</p>
+
+<p>Also you have the option of outputting an RTF hexdump of the lines. The RTF is output
+by frhed as follows:</p>
+
+<ul>
+<li>The file that was hexdumped in the document properties as the Title.</li>
+<li>A Times New Roman 20pt paragraph containing the file name of the file that was hexdumped.</li>
+<li>Each line of hexdump, with the selection or current byte highlighted as per the display colours.</li>
+<li>Bookmarks are both highlighted and put into the document. The bookmark name is that same as
+what you gave frhed, unless you didn't give a name, in which case the name will be the offset of the
+bookmark in decimal. The document bookmarks will be in the same place as the caret.</li>
+<li>The separators are put in a single group together and are simple lines as per the display settings.</li>
+<li>Limitations: the RTF output is not perfect in these ways:<br>
+For the chars Microsoft Word will convert some into underscores (generally the control characters up to 0x20).
+This is only apparent in OEM mode since in ANSI mode frhed translates these chars into periods (.).<br>
+Microsoft Word will alter the bookmark names by replacing non-alphanumerics
+with underscores, place "BM" in front of bookmarks that begin with a number and hide bookmarks
+beginning with underscores (can still view them with "Hidden bookmarks" checked).<br>
+If your display is running at anything less than 24 bit colour you may not get the colours you expect for the
+caret. This is because at lower bit levels the InvertRect function (which frhed uses to invert the caret in the window)
+works differently than just inverting the bits of colours as it does at 24-bit &amp; as frhed does in
+generating the inverted colour for RTF export. If someone finds out how InvertRect works at lower bit
+levels please let me (Pabs) know.<br>
+The bookmarks border takes up space (at least on Word2000) which means that subsequent characters on the same line
+will be displaced to the right 2 pixels. This is noticable when there is a selection covering two adjacent lines,
+one with &amp; one without a bookmark. There is little that can be done about this except try a different word processor.<br>
+The separators will not always be sized or positioned exactly. There is not much that can be done about this since
+it is hard to know the exact size in twips the word processor will display the text at. An alternative to this might
+be to use tables, which might not work and might also solve the bookmark problem.<br>
+At some fonts &amp; sizes (esp. OEM &amp; ANSI 9, ANSI 10) frhed cannot determine the correct font name the
+system chose &amp; this will cause Word to use the wrong font, often this will be Times New Roman. This may or may not
+be true depending on whether or not the font mapper for your system uses one font for all sizes and the fonts you have installed.
+Unfortunately Word ignores the other font hints that can be determined; character set, variable/monospaced and font family.</li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#delete-file">Deleting the current file</a></h2>
+
+<p><u><font color="red" size="+3"><b>USE WITH CAUTION</b></font></u></p>
+
+<p>The <dfn>File/Delete File</dfn> command deletes the file currently opened in the editor and closes it.
+This requires a double confirmation because it could be disastrous.</p>
+
+<p>When ever you edit files using any hex editor you should <strong>always</strong>
+have a backup anyway.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#import-hexdump">Importing a hexdump file</a></h2>
+
+<p>The <dfn>File/Import from hexdump</dfn> command imports hexdump data from the clipboard or from a file.</p>
+
+<p> The data you choose to import can be in one of two formats. One is a text 
+version of the display &amp; the other is all the hex digits on one line.</p>
+
+
+<p>The frhed will try to determine the type by looking for characters that are
+not whitespace or hexdigits and you will be asked to verify the frhed's findings.</p>
+
+<p>If you decide it is in the frhed display format then you will be asked if you
+want the display settings found in the file to replace current ones.  If so,
+frhed can determine the offset length, the number of bytes per line, if the
+offset length should be automatically adjusted and possibly if the data is
+ANSI/OEM from its contents.  If any of these cannot be determined their
+settings will remain the same.</p>
+
+<p>frhed will also notify you if the character and hex data do not agree with each
+other or the offsets are invalid and you may choose to ignore any more of these notices.</p>
+
+<p>If illegal characters are found in the hexdata section or the data ends unexpectedly
+the operation will not be able to continue and you will have the option of keeping
+the data that has already been found or cancelling the operation.</p>
+
+<p>Also if the first offset found is not zero you can insert that amount of null bytes
+at the start of the file and if you choose not to and you chose to alter relevant
+display settings then frhed will display offsets relative to the first offset found.</p>
+
+<p>If you decide it is not in the frhed display format then frhed will go through the
+file filtering out whitespace and adding each hex digit found as a nibble (If odd
+no's of hex digits are present then '0' will be the last nibble).
+If other characters are found frhed will complain and give you the option of ignoring
+the any other illegal characters that are found.</p>
+
+<p>If the file access permissions don't allow writing or open-read-only mode is on then
+read-only mode will be engaged.</p>
+
+<p>If the current file has been changed, then you will be prompted if you want to lose
+the changes, save the changes or cancel the request.</p>
+
+<p><b>BUGS</b>:</p>
+
+<ul>
+<li>If the file was output using an offset length that is smaller than is required
+the parser will determine that the character data does not match the hex data.
+If the output data is edited to the same as with an offset length of 2 the same
+thing happens.  This occurs because of a bug in <a href="#export-as-hexdump">File/Export as Hexdump</a>, causing it to
+remove characters from the end of each line that has larger offset lengths than that
+of the first line.  This bug was fixed in v1.0.156.Pabs.  If you know the file was
+output using a small offset length and are sure that you have not edited it press
+Yes to ignore any further mismatches, no to ignore that one or cancel to cancel the
+Import operation.  Ignoring the mismatches will have no effect.</li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#main-window">The main window</a></h1>
+<p>The window's title shows the name of the currently loaded file in square brackets,
+with an asterisk on it's right side if the file has been changed. If a file is loaded,
+you will find something like this in the window's client area:</p>
+
+<pre>
+000000  23 42 34 53 56 45 76 45  #B4SVEvE
+000008  64 56 0a bc 0a 35 c0 08  dV...5..
+000010  06 be 09 07 bb 07 00 00  ........
+000018  00 00 00 00 00 00 07 __  .......&nbsp;
+</pre>
+
+<p>On the far left are the offsets of the first byte in the line in hexadecimal notation.
+You can choose the offset length or make it automatically adjusted to the length of the
+largest offset with the <a href="#options-settings">Options/View Settings</a> command or right-click the offsets to
+increment their lengths or left-click them to decrement their lengths (when auto-adjust is off).
+Then come the actual byte values, with vertical separating lines after every fourth byte in the line.
+You can choose the number of bytes to display per line with <a href="#options-settings">Options/View Settings</a>,
+and also, if it should be automatically adjusted to the window width. To the far right
+are the character representations of these values, with dotted lines on the left and
+right of this section. You can choose the character set for these representations as
+well as the font size with the <a href="#options-character-set">Options/Character set</a> command. As you can see, the
+first byte of the second line of the sample hexdump has the hexadecimal value 64
+and the corresponding character is a lower case "d". The position after the last
+byte of the file is marked with a double underscore "__" in the byte section.</p>
+
+<p>Blinking in the window somewhere is a rectangular caret, if the window is enabled.
+If it is in the byte section, then it stands on either of the two nibbles (half-bytes).
+If it is in the character section, then it stands on one character corresponding with
+one byte. In either case the corresponding other representation is shown inverted in 
+the other section.</p>
+
+<p>On the bottom of the window is the status bar, which displays additional information.
+In the first section of the status bar you can find the current offset of the byte
+which the caret is marking in hexadecimal and decimal notation. After that come the
+bits of the current byte. Also in this section, on the right side, is something like this:</p>
+
+<pre>Unsigned: B:35,W:16931,L:1395933731</pre>
+
+<p>These are the values of the byte (B:), the word (W:) and the longword (L:) value starting
+at this offset in decimal notation. These are computed depending on the setting for signed or
+unsigned values (Choose with the <a href="#options-settings">Options/View Settings</a> command) and on the binary mode setting,
+either Little-endian (Intel format) or Big-endian (Motorola format).
+Choose with the <a href="#options-binary-mode">Options/Binary mode</a> command.</p>
+
+<p>In the second section of the status bar are indicators for:</p>
+
+<ul>
+<li>character set: "ANSI" or "OEM".</li>
+<li>entering mode: "OVR" for overwriting or "INS" for inserting on keyboard input. If
+frhed is in read-only mode, then there will be a "READ" here.</li>
+<li>binary mode: "L" for Little-endian or "B" for Big-endian.</li>
+</ul>
+
+<p>In the third section the file size in bytes is displayed.</p>
+
+<p>The status bar can also be used to toggle various parameters
+and act as a shortcut to certain commands.</p>
+
+<p>The status bar takes into account the same factors when considering
+if the selected command should be carried out as the menus do when
+disabling commands. If there are 2 alternatives in one place and
+one is disabled then the other one will be used.</p>
+
+<p>A single left click in the third section is a shortcut to <a href="#edit-append">Edit/Append</a>
+(right is <a href="#edit-file-properties">Edit/File properties</a>) - Note that this may change in the future.</p>
+
+<p>Clicking in the middle section will toggle the parameter clicked on
+- ANSI &harr; OEM, READ &rarr; INS &rarr; OVR &rarr; READ&hellip; (right-click
+ goes back other way) , L &harr; B.</p>
+
+<p>Left or right clicking in the first section can result in many different
+things depending on where you click and state of the file opened.</p>
+
+<p>When part of the file is selected you may deselect (cursor goes to the
+first nibble of the first byte of the selection or last of last for a
+right click) by clicking in the space on the right or the word "Selected:"
+or alter the selection using <a href="#edit-select-block">Edit/Select block</a> by clicking in the offsets region.</p>
+
+<p>If the file is empty clicking the first part will bring up <a href="#edit-append">Edit/Append</a>.</p>
+
+<p>If the file is not empty and the cursor is on the end byte then <dfn>Edit/Goto</dfn>
+will be activated on a left click or the cursor goes to the previous byte
+on a right click.</p>
+
+<p>Otherwise (when not on the end byte, selected or empty) the click behaviour
+is complex and summarised in the colour-coded table below. The right action is
+omitted where it is the same as the left one.</p>
+
+<table>
+<tr><td>Text</td>
+<td><u><font color="red">Offset 0=0x0</font></u></td>
+<td><u><font color="#99cc00">&nbsp;&nbsp;Bits=</font></u></td>
+<td><u><font color="#3366ff">00100011</font></u></td>
+<td><u><font color="fuchsia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></u></td>
+<td><u><font color="gray">Unsigned:</font></u></td>
+<td><u><font color="#003366">B:35,W:8227,L:1766662179</font></u></td></tr>
+
+<tr><td>Area</td>
+<td><font color="red">Offset</font></td>
+<td><font color="#99cc00">Bits</font></td>
+<td><font color="#3366ff">Actual bits</font></td>
+<td><font color="fuchsia">Space</font></td>
+<td><font color="gray">Un/signed</font></td>
+<td><font color="#003366">B, W &amp; L values</font></td></tr>
+
+<tr><td>Left</td>
+<td><font color="red">Goto</font></td>
+<td><font color="#99cc00">Bit manip dlg</font></td>
+<td><font color="#3366ff">Direct bit manip</font></td>
+<td><font color="fuchsia">Select block</font></td>
+<td><font color="gray">Toggle un/signed</font></td>
+<td><font color="#003366">Enter decimal value with the size set to the one clicked in</font></td></tr>
+
+<tr><td>Right</td>
+<td><font color="red">View settings</font></td>
+<td></td>
+<td></td>
+<td><font color="fuchsia">Goto</font></td>
+<td></td>
+<td></td></tr>
+</table>
+
+<p>If you have suggestions as to what else the status bar could/should (not) do just
+drop me (<a href="mailto:pabs3@zip.to">Pabs</a>) a line.</p>
+
+<p>The window also has a vertical and a horizontal scrollbar, which can be used to
+scroll the view. They don't change the caret position.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#moving-in-the-file">Moving in the file</a></h1>
+
+<p>You can move the caret with the arrow keys. Press TAB to toggle the editing mode between byte and
+character editing. When there is a selection TAB brings the selection into the middle of the display.</p>
+
+<p>You can also jump to any position by choosing the <dfn>Edit/Go To</dfn> command and entering
+an offset, like "125", which will set the caret position to offset 125 decimal. For relative jumps
+in the file, for example if you want to go to an offset 150 bytes after the current one, you have
+to start with "+" as the first character and follow this with either a decimal number or a hex
+number starting with "x". So to jump 150 bytes forward you have to enter "+150" or "+x96" in hex
+notation. For backward relative jumps start with "-" (minus) as the first character.</p>
+
+<p>To jump to the start of the line press Home or End for the end of the line.
+To jump directly to the end of the file press Ctrl+End, for the beginning Ctrl+Home.</p>
+
+<p>frhed can find text and binary values in a file. Choose <dfn>Edit/Find</dfn> to do this.
+In the dialog you can choose if the case of the text parts of the find string are to be
+ignored and the find direction. To encode binary values, frhed uses a special syntax. Example:</p>
+
+<pre>Here is the findstring&lt;bd:0&gt;FloatValue&lt;fl:-14.56&gt;</pre>
+
+<p>This will cause frhed to search for a string "Here is the findstring." followed by a
+zero-byte, then the text "FloatValue" and a 4-byte float with the value -14.56.</p>
+
+<p>Note that coded binary values will also be transformed by the "match case" option of the Find
+command, so if you search for a byte with the hex value of 0x41 (this is the upper-case letter "A")
+with the match-case option disabled, then frhed will also find bytes with the hex value 0x61
+(the lower-case letter "a"). Therefore you should always search for discrete binary values with
+case-matching enabled or you might not get correct results.
+Please see <a href="#special-syntax">Using the special syntax</a> for further information.</p>
+
+<p>The <dfn>Edit/Find next</dfn> and <dfn>Edit/Find previous</dfn> commands find the next or previous
+occurance of the findstring last entered in the Find-dialog, with the match-case option enabled
+or disabled as chosen in it. If there was no previous findstring the both Find next &amp; Find previous
+commands will bring up the <dfn>Edit/Find</dfn> dialog.</p>
+
+<p>By positioning the mouse cursor on a byte or a character and pressing the left mouse
+button you can also set the caret position.</p>
+
+<p>You can also move in the file by choosing one of the bookmarks in the "Bookmarks"
+menu section. The caret will be set to that offset immediately.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#editing-the-file">Editing the file</a></h1>
+
+<p>There are several ways to edit the data in the file. But you will only be able
+be to change the file in any way if the read-only mode is disabled. To enable or
+disable the read-only mode choose the <dfn>Edit/Read-only mode</dfn> command. If the
+read-only mode is enabled, there will be "READ" written in the status bar
+and the menu item will be checked.</p>
+
+<ul>
+<li><a href="#using-the-mouse">Using the mouse</a></li>
+<li><a href="#using-the-keyboard">Using the keyboard</a></li>
+<li><a href="#edit-cut">The <dfn>Edit/Cut</dfn> command</a></li>
+<li><a href="#edit-copy">The <dfn>Edit/Copy</dfn> command</a></li>
+<li><a href="#edit-paste">The <dfn>Edit/Paste</dfn> command</a></li>
+<li><a href="#edit-paste-dialog">The <dfn>Edit/Paste with dialogue</dfn> command</a></li>
+<li><a href="#edit-append">The <dfn>Edit/Append</dfn> command</a></li>
+<li><a href="#edit-delete">The <dfn>Edit/Delete</dfn> command</a></li>
+<li><a href="#edit-select-block">The <dfn>Edit/Select block</dfn> command</a></li>
+<li><a href="#edit-enter-decimal">The <dfn>Edit/Enter decimal value</dfn> command</a></li>
+<li><a href="#edit-manipulate-bits">The <dfn>Edit/Manipulate bits</dfn> command</a></li>
+<li><a href="#edit-fill-selection">The <dfn>Edit/Fill selection</dfn> with command</a></li>
+<li><a href="#insert-file">The <dfn>File/Insert file</dfn> command</a></li>
+<li><a href="#edit-reverse-bytes">The <dfn>Edit/Reverse bytes</dfn> command</a></li>
+<li><a href="#edit-move-or-copy">The <dfn>Edit/Move/Copy bytes</dfn> command</a></li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#using-the-mouse">Using the mouse</a></h2>
+
+<p>frhed implements OLE drag-drop to allow you to move data in a file,
+between frhed instances and even between frhed and other applications.
+It follows similar standards to most OLE apps, but when dropping and
+there is more than one format you must choose which format(s) to insert
+and you need to specify which format(s) to transfer before you can drag
+data to other apps. To specify the formats to use and how to use them
+for OLE Drag-drop choose <a href="#options-ole-dragndrop">Options/OLE Drag-drop</a>. Currently frhed can output
+"BinaryData" (used for transfers between frhed instances), both types
+of hexdump as CF_TEXT, the special syntax as CF_TEXT and Rich Text
+Format for pasting properly formatted &amp; coloured hexdumps into
+wordprocessors</p>
+
+<p>When moving or copying data around in the file you don't have to choose which
+format as frhed just does what you wanted.</p>
+
+<p>When you drag data over frhed a flashing cursor shows where the data will
+be inserted.</p>
+
+<p>Below is a summary of the keys that can be used to control the drag
+operation and their effects.</p>
+
+<table>
+<tr><td>Button</td><td>Effect</td></tr>
+<tr><td>ESC</td><td>Cancel dragging operation</td></tr>
+<tr><td>Left mouse</td><td>Move data</td></tr>
+<tr><td>Right/middle mouse</td><td>Choose either Move or Copy from a menu/dialog on the drop</td></tr>
+<tr><td>Ctrl</td><td>Copy data</td></tr>
+<tr><td>Shift</td><td>Overwrite data (can be combined with both Move and Copy)</td></tr>
+</table>
+
+<p>Note that the Overwrite mode of the file is ignored when dropping.
+To overwrite existing data with that being dropped use the shift key.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#using-the-keyboard">Using the keyboard</a></h2>
+
+<p>For overwriting data the overwriting entering mode must be enabled, that means,
+the status bar must show "OVR" somewhere. Toggle the entering mode with the Insert-key
+on the keyboard or choosing <dfn>Edit/Toggle entering mode</dfn>. You can overwrite the data in the
+bytes section by moving the cursor to the appropriate position and pressing any of the
+hexadecimal digits 0-9 and a-f on the keyboard. The nibble the caret is marking currently
+will be set to that value and the caret will then go on to the next nibble. If the caret
+is in the bytes section, pressing any alphanumeric key will set the current byte (that
+wich the caret is marking) to that value, and the caret will go on to the next byte.</p>
+
+<p>For inserting data the status bar must show "INS" somewhere. Entering data now will
+insert a byte at the current position.</p>
+
+<p>If there is a selection then you can replace it with a single character.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-cut">The <dfn>Edit/Cut</dfn> command</a></h2>
+<p>This command is used to remove bytes from the file. These bytes can either be
+copied to the clipboard (as text with special syntax for non-character bytes)
+or just deleted. In the dialog you can choose the start offset where the
+cutting begins (the byte at that offset is the first to be cut), how many
+bytes to cut (specify either the offset of the last byte to cut or the number
+of bytes including the first byte to be cut, and check the appropriate radio
+button). If the data should be cut to the clipboard, check the checkbox on the
+bottom of the dialog box.</p>
+
+<p>If the command is chosen without a selection, then the values in the dialog
+will be set so that the byte at the current offset will be cut.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-copy">The <dfn>Edit/Copy</dfn> command</a></h2>
+<p>This command is used to copy bytes from the file to the clipboard. It is similar
+to the <a href="#edit-cut">Edit/Cut</a> command, only the data will only be copied, not removed.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-paste">The <dfn>Edit/Paste</dfn> command</a></h2>
+<p>This either inserts or overwrites data from the clipboard starting at the current
+offset. Choose a radio button for the writing mode wished for. You can also choose
+how many times the current data is written and how many bytes to skip between each
+write of the data.</p>
+
+<p>If "Paste coded binary values as text" is unchecked, all data in the clipboard is
+considered to contain special syntax, so &lt;ld:150&gt; will not be written as the text "&lt;ld:150&gt;"
+but as a longword value of 150. Check the checkbox if you want to paste as text. The binary mode
+(Little or Big-endian) and character set (ANSI or OEM) is used as set in the options.</p>
+
+<p>You can also choose which clipboard data you want to paste.</p>
+
+<p>If one of the text formats (CF_DSPTEXT, CF_OEMTEXT, CF_TEXT and CF_UNICODETEXT)
+is chosen trailing null characters are not pasted. Also pasting CF_UNICODETEXT doesn't
+work unless "Paste coded binary values as text" is checked.  This is because the
+translation routine only works with single byte text.  Don't count on it but I (Pabs) may
+implement a Unicode version in the future.</p>
+
+<p>If any other format is used the full binary data is pasted.  As a consequence of the
+way Windows works, however, there may be some null/garbage bytes at the end of the pasted
+data.  This is because Windows allocates clipboard data in blocks (not sure what size) and
+when a program creates clipboard data in a buffer that does not fit exactly in to a number
+of blocks the remaining bytes are left zeroed out or filled with garbage.  This is fine
+(besides being wasteful) but Windows does not provide a way to look up the requested size
+of the data but only the allocated size.</p>
+
+<p>The list will be automatically updated when the contents of the clipboard change.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-paste-dialog">The <dfn>Edit/Paste with dialogue</dfn> command</a></h2>
+<p>This either inserts or overwrites data starting at the current offset. Choose a radio
+button for the writing mode wished for. The big edit-box is initialised with the current
+text content of the clipboard. Since Edit-boxes can not hold very large amounts of data
+(ca. 64K), please use Edit or Paste to paste such large blocks of memory.You can also choose
+how many times the current data is written and how many bytes to skip between each
+write of the data.</p>
+
+<p>If "Paste coded binary values as text" is unchecked, all data in the edit-box is
+considered to contain special syntax, so <code>&lt;ld:150&gt;</code> will not be written as the text
+"&lt;ld:150&gt;" but as a longword value of 150. Check the checkbox if you want to paste
+as text. The binary mode (Little or Big-endian) and character set (ANSI or OEM)
+is used as set in the options.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-append">The <dfn>Edit/Append</dfn> command</a></h2>
+<p>This command appends a number of zero-bytes to the file.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-delete">The <dfn>Edit/Delete</dfn> command</a></h2>
+<p>This command calls the same dialog as the <a href="#edit-cut">Edit/Cut</a> command, only with the "cut to clipboard"
+checkbox already disabled.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-select-block">The <dfn>Edit/Select</dfn> block command</a></h2>
+
+<p>With this you can explicitely choose what block of data is to be selected, by specifying
+the start and end offsets of the block.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-enter-decimal">The <dfn>Edit/Enter decimal value</dfn> command</a></h2>
+<p>With this you can overwrite data with an integer value of either byte, word or longword size.
+The start offset is initialized with the current offset, in hexadecimal notation. Note that if
+you change the start offset, use hexadecimal notation and prefix with "x". You can also choose
+the number of times to overwrite or insert and the size of the value. The values are initialised
+with the current offset, the value of the current offset, byte size and 1 time.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-manipulate-bits">The <dfn>Edit/Manipulate bits</dfn> command</a></h2>
+<P>If you need to manipulate individual bits in a byte, then go to this byte with the caret and
+choose the command. Check the appropriate checkboxes for the bits and select OK. The boxes are
+initialised with the current value.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-fill-selection">The <dfn>Edit/Fill selection with</dfn> command</a></h2>
+<p>First select some of the bytes in a file then open the Fill selection with dialog from the
+edit menu or using Ctrl + Shift + F. If there is no selection it is assumed that the whole file
+needs to be filled.</p>
+
+<p>Decide if you want to enter the bytes in yourself - this is usefull for small numbers
+of bytes and if so select Input from the combo box and enter the bytes below it.</p>
+
+<p>Otherwise you may want to fill the selection with a file by selecting File from the
+combo box and browsing to a file (It <i>MUST</i> exist - this is why only browsing is allowed).
+Note that if the selection is larger than the file or the hex string you entered the
+selection will be filled with multiple copies of your string/file and if it is smaller
+only a part of the string will be entered into the selection.
+Note also that an odd number of hex digits will result in the first nibble of the last
+byte being the last hex digit entered (This doesn't apply to files as partial bytes
+cannot be present in files).</p>
+
+<pre>e.g. "ffa" &rarr; "ff af fa &hellip;" &rarr; "ÿ¯ú &hellip;"</pre>
+
+<p>Then select the type of assignment operator you want to use:</p>
+
+<p>= - regular assign<br>
+|= - perform a bitwise or with the current byte and then assign.<br>
+&amp;= - perform a bitwise and with the current byte and then assign.<br>
+^= - perform a bitwise xor with the current byte and then assign.</p>
+
+<p>Below are some examples:</p>
+
+<table style="text-align: center;">
+  <tr>
+    <td rowspan="2">Input/File Bit</td>
+    <td rowspan="2">Open File Bit</td>
+    <td colspan="4">Result bit</td>
+  </tr>
+  <tr>
+    <td>=</td>
+    <td>|=</td>
+    <td>&amp;=</td>
+    <td>^=</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#insert-file">The <dfn>File/Insert file</dfn> command</a></h2>
+<p>This inserts the requested file between the current byte and previous one,
+replacing the selection if there is any.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-reverse-bytes">The <dfn>Edit/Reverse bytes</dfn> command</a></h2>
+<p>This will reverse the order of some bytes around in the file.</p>
+
+<p>You will need to specify the two ends of the block whose bytes will be reversed.</p>
+
+<p>You can prefix an 'x' to specify hex notation.</p>
+
+<p>The selection and caret will be moved intelligently.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-move-or-copy">The <dfn>Edit/Move/Copy bytes</dfn> command</a></h2>
+<p>This will move or copy some bytes around in the file.</p>
+
+<p>You will need to specify one end of the block to be moved
+or copied and either its length (negative* if the specified
+end is to be the end with the larger offset, positive if is
+to be the start of the block) or its other end.</p>
+
+<p>You will also need to specify either where to position the
+first (or the last) byte of the block or how many bytes
+forward or backward* to move or copy the block.</p>
+
+<p>You can prefix an 'x' to specify hex notation.</p>
+
+<p>It is possible to copy the block to a position inside of itself.</p>
+
+<p>The selection and caret will be moved intelligently.</p>
+
+<p>* Start with a minus (-) before the 'x' if any.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#other-edit-functions">Misc. Edit functions</a></h1>
+<p>The following other commands are supported in the Edit menu:</p>
+
+<ul>
+<li><a href="#edit-compare">The <dfn>Edit/Compare from current offset</dfn> command</a></li>
+<li><a href="#edit-get-float">The <dfn>Edit/Get floating point value</dfn> command</a></li>
+<li><a href="#edit-file-properties">The <dfn>Edit/File properties</dfn> command</a></li>
+<li><a href="#edit-apply-template">The <dfn>Edit/Apply template</dfn> command</a></li>
+<li><a href="#edit-in-texteditor">The <dfn>Edit/Open in text editor</dfn> command</a></li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-compare">The <dfn>Edit/Compare from current offset</dfn> command</a></h2>
+<p>If you need to compare two files then load one into frhed and choose this
+command. You will first be prompted to choose the file to compare with.
+Choose a file and then the OK button. Comparison will occur from the current caret offset.</p>
+
+<p>If the chosen file matches the data in the loaded file from the current offset, you will
+be prompted so. Otherwise you will get a list of areas of difference to choose from. Areas
+of difference are ranges of bytes which are different in the files. For example:</p>
+
+<pre>
+File 1: 00 01 02 03 04 (loaded file)
+File 2: 00 ff ff 03 04
+</pre>
+
+<p>In this case you will  get one area of difference 2 bytes in size from offset 1 to 2.
+These offsets are measured relative to the current caret position. When you choose an area
+of difference then it will be selected and displayed in the main window.</p>
+
+<p>You can also copy the list of differences to the clipboard.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-get-float">The <dfn>Edit/Get floating point value</dfn> command</a></h2>
+<p>This will show you the floating point values starting at the current caret position.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-file-properties">The <dfn>Edit/File properties</dfn> command</a></h2>
+<p>Choose this to get the filename, path and size of the current file, and also the total number of lines of the hexdump.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-apply-template">The <dfn>Edit/Apply template</dfn> command</a></h2>
+<p>Use this command to apply a binary template on the file.
+A binary template consists of a text file with the extension
+"tpl" that contains a number of variable type+name combinations,
+such as this:</p>
+
+<pre>
+BYTE filetype
+WORD version
+DWORD filelength
+</pre>
+
+<p>This sample template file named "sample.tpl" is included in the frhed directory. When the command
+is chosen from the menu you will be prompted to choose the template file you want to apply. frhed will
+then load that file and use the code in it to give you a structured "interpretation" of the data in the
+currently loaded file, starting at the current byte. The result will be displayed in the edit-box of a
+dialog, from where you can copy the result to the clipboard if necessary. The result looks like this:</p>
+
+<pre>
+File: C:\Data\test.dat
+Template file: C:\frhed\sample.tpl
+Applied at offset: 15
+
+BYTE filetype = 66 (signed) = 66 (unsigned) = 0x42 = 'B'
+WORD version = 30285 (signed) = 30285 (unsigned) = 0x764d
+DWORD filelength = 8 (signed) = 8 (unsigned) = 0x8
+
+-&gt; Length of template = 7 bytes.
+</pre>
+
+<p>Following variable types are recognized: (recognition is case-sensitive, so "byte" is not recognized as type "BYTE")</p>
+
+<ul>
+<li>a byte-size value: "BYTE", "char"</li>
+<li>a word-size value: "WORD", "short"</li>
+<li>a longword-size value: "DWORD", "int", "long", "LONG"</li>
+<li>a float value: "float"</li>
+<li>a double value: "double"</li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#edit-in-texteditor">The <dfn>Edit/Open in text editor</dfn> command</a></h2>
+<p>This function attempts to call an external text editing program with the current file as argument.
+You have the option of saving the file first. The default editor is the Windows Notepad. You can
+choose the editor in the <a href="#options-settings">Options/View Settings</a> dialog.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#disk-menu">The Disk menu</a></h1>
+<ul>
+<li><a href="#disk-open-drive">The <dfn>Disk/Open Drive</dfn> command</a></li>
+<li><a href="#disk-close-drive">The <dfn>Disk/Close Drive</dfn> command</a></li>
+<li><a href="#disk-goto-first">The <dfn>Disk/Goto First Sector</dfn> command</a></li>
+<li><a href="#disk-goto-next">The <dfn>Disk/Goto Next Sector</dfn> command</a></li>
+<li><a href="#disk-goto-prev">The <dfn>Disk/Goto Previous Sector</dfn> command</a></li>
+<li><a href="#disk-goto-last">The <dfn>Disk/Goto Last Sector</dfn> command</a></li>
+<li><a href="#disk-goto-sector">The <dfn>Disk/Goto Sector #</dfn> command</a></li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#disk-open-drive">The <dfn>Disk/Open Drive</dfn> command</a></h2>
+<p>Use this command to open a physical harddrive or logical partition.</p>
+
+<p><b>Restrictions</b>:</p>
+
+<ul>
+<li>Only Harddisks are supported. CD-ROMs and Floppys are not supported (yet).</li>
+<li>Access is read-only. Write-access is planned for a future version of frhed.</li>
+<li><b>Windows NT</b>: You must have administrative privileges to access the physical harddisk data.</li>
+<li><b>Windows 95</b>: You must have extended interrupt 13 enabled. 
+<a href="http://uranus.it.swin.edu.au/~jn/linux/ex2fs95.htm">Read more about this here (external link)</a>.</li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#disk-close-drive">The <dfn>Disk/Close Drive</dfn> command</a></h2>
+<p>Use this command to close the previously opened drive again.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#disk-goto-first">The <dfn>Disk/Goto First Sector</dfn> command</a></h2>
+<p>Use this command to navigate to the first sector of the harddisk.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#disk-goto-next">The <dfn>Disk/Goto Next Sector</dfn> command</a></h2>
+<p>Use this command to navigate to the next sector of the harddisk.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#disk-goto-prev">The <dfn>Disk/Goto Previous Sector</dfn> command</a></h2>
+<p>Use this command to navigate to the previous sector of the harddisk.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#disk-goto-last">The <dfn>Disk/Goto Last Sector</dfn> command</a></h2>
+<p>Use this command to navigate to the last sector of the harddisk.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#disk-goto-sector">The <dfn>Disk/Goto Sector #</dfn> command</a></h2>
+<p>This command will show a dialog where you can specify a sector number to navigate to.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#options-menu">The Options menu</a></h1>
+<ul>
+<li><a href="#options-settings">The <dfn>Options/View settings</dfn> command</a></li>
+<li><a href="#options-color-text">The <dfn>Options/Color settings/Text color</dfn> command</a></li>
+<li><a href="#options-color-background">The <dfn>Options/Color settings/Background color</dfn> command</a></li>
+<li><a href="#options-color-separator">The <dfn>Options/Color settings/Separator color</dfn> command</a></li>
+<li><a href="#options-color-reset">The <dfn>Options/Color settings/Reset colors to standard</dfn> command</a></li>
+<li><a href="#options-color-adopt">The <dfn>Options/Color settings/Adopt OS colour scheme</dfn> command</a></li>
+<li><a href="#options-character-set">The <dfn>Options/Character set</dfn> command</a></li>
+<li><a href="#options-binary-mode">The <dfn>Options/Binary mode</dfn> command</a></li>
+<li><a href="#options-ole-dragndrop">The <dfn>Options/OLE Drag-drop</dfn> command</a></li>
+<li><a href="#options-make-backups">The <dfn>Options/Make backups</dfn> command</a></li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-settings">The <dfn>Options/View settings</dfn> command</a></h2>
+<p>Here you can choose:</p>
+
+<ul>
+<li>the number of bytes to display per line of hexdump (only applies if
+"Automatically adjust number of bytes per line" is disabled)</li>
+<li>If the "Automatically adjust number of bytes per line"-checkbox is checked, then the number of
+bytes displayed per hexdump line is adjusted in such a way that the whole window width is used at
+all times.</li>
+<li>the number of digits for the offset length (only applies if "Adjust offset length" is disabled)</li>
+<li>if the offset length should be automatically adjusted to that of the
+maximum offset (enabled) or right-padded with spaces (disabled)</li>
+<li>how to display the values at the caret position, either as signed or as unsigned integer values</li>
+<li>if read-only mode should be automatically set after opening files.</li>
+<li>the name of the text editor that will be called by the <a href="#edit-in-texteditor">Edit/Open in text editor</a> command.</li>
+<li>the name of the Internet browser that will be called in the About dialog.</li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-color-text">The <dfn>Options/Color settings/Text color</dfn> command</a></h2>
+<p>Choose what color the text in the main window should have.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-color-background">The <dfn>Options/Color settings/Background color</dfn> command</a></h2>
+<p>Choose what color the background in the main window should have.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-color-separator">The <dfn>Options/Color settings/Separator color</dfn> command</a></h2>
+<p>Choose what color the separators in the main window should have.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-character-set">The <dfn>Options/Character set</dfn> command</a></h2>
+<p>Here you can choose the character set for displaying and writing characters, either ANSI (the Windows
+character set) or OEM (the DOS character set). The font size in points can also be chosen.</p>
+
+<p>See <a href="#character-sets">Character tables</a> for examples at the default 10 pt font sise.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-color-reset">The <dfn>Options/Color settings/Reset colors to standard</dfn> command</a></h2>
+<p>Reset colors to their default values:</p>
+<table style="text-align: center;">
+<tr><td colspan="2" style="background-color: yellow; color: black;">Selection - Black Text, Yellow Background</td></tr>
+<tr><td colspan="2" style="background-color: white; color: black;">Window - Black Text, White Background</td></tr>
+<tr><td style="background-color: red;">Bookmark - Red</td><td style="background-color: #c0c0c0;">Separator - Grey (192)</td></tr>
+</table>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-binary-mode">The <dfn>Options/Binary mode</dfn> command</a></h2>
+
+<p>What kind of byte order to use: Either Little-endian, as used in Intel-computers or Big-endian,
+used for example in computers with a Motorola processor. The difference between these modes is thus:
+Consider a longword, which is 4 bytes (named A to D) long.</p>
+
+<pre>Longword in processor register = ABCD.</pre>
+
+<p>The least significant bit, which has the value 1, is found in byte "D". In a processor
+register the longword is ordered in this way. If this value is written to a position in memory,
+then by Intel convention the longword is written in this way, with the growing offsets to the right:</p>
+
+<pre>Longword in memory = DCBA.</pre>
+
+<p>That is, the bytes making up the longword are written in reverse order as they are found in a processor register.</p>
+
+<p>This means that a file written by a Big-endian machine will contain wrong longword and word values
+if read by a Little-endian machine without conversion.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-color-adopt">The <dfn>Options/Color settings/Adopt OS colour scheme</dfn> command</a></h2>
+<p>Adopt the colour scheme of the operating system if it offers one.
+The separator colour and the bookmark colour are not changed since Win32
+doesn't offer these.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-ole-dragndrop">The <dfn>Options/OLE Drag-drop</dfn> command</a></h2>
+
+<table>
+<tr><th colspan="2">General</th></tr>
+<tr><td>Option</td><td>Effect</td></tr>
+<tr><td>Enable drop input</td><td>This allows you to drop data onto frhed from other programs or other frhed instances.</td></tr>
+<tr><td>Enable drag output</td><td>This allows you to drag data from frhed to other programs or other frhed instances.</td></tr>
+<tr><td>Enable scroll-delaying for drag-drop</td><td>During a drag-drop operation if you move the mouse near the outside of the window frhed can either begin scrolling immediately or delay for an interval and then start scrolling. The delay is determined by Windows and if it doesn't seem to delay scrolling at all you should turn this off.</td></tr>
+<tr><td>Enable scroll-delaying for selecting</td><td>As for drag-drop, but applies to when frhed is selecting.</td></tr>
+<tr><td>Always give the opportunity to change between move and copy after a drop.</td><td>Normally you Move data with the left mouse button and Copy by combining with Ctrl. If you use the right or middle mouse button a menu will popup on a drop to give you the opportunity to pick move or copy. This option allows you to always have this menu popup even when you use the left mouse button.</td></tr>
+<tr><th colspan="2">Input</th></tr>
+<tr><td>CF_HDROP opens the files dropped.</td><td>When you drop files from explorer normally frhed will bring up a list of formats to drop. With this enabled frhed will instead open the file dropped or ask you which file you want to open for multiple files. Overrides the next two.</td></tr>
+<tr><td>Drop "BinaryData" if present</td><td>"BinaryData" is used to transfer data between frhed instances. Check this if you want to automatically drop this when it is present. Overrides CF_TEXT.</td></tr>
+<tr><td>Drop CF_TEXT if present</td><td>CF_TEXT is the standard format used for transferring text. Check this if you want to automatically drop this when it is present.</td></tr>
+<tr><th colspan="2">Output</th></tr>
+<tr><td>Drag "BinaryData"</td><td>"BinaryData" is used to transfer data between frhed instances. Check this if you want to be able to do this.</td></tr>
+<tr><td>Drag CF_TEXT as:</td><td>CF_TEXT is the standard format used for transferring text. Check this if you want to </td></tr>
+<tr><td>Hexdump/Special syntax (&lt;bh:ff&gt;...)</td><td>Choose Hexdump to output either of
+the formats output by <a href="#export-as-hexdump">File/Export as Hexdump</a>.
+Choose Special syntax to output the bytes as frhed's <a href="#special-syntax">special syntax format</a>.</td></tr>
+<tr><td>display (else digits)</td><td>Check for a hexdump like the display, uncheck for the bytes as hex on a single line.</td></tr>
+<tr><td>Drag "Rich Text Format" (as hexdump)</td><td>This allows you to drag a full colour hexdump, with bookmarks, separators and selection to wordprocessors such as <a href="http://www.openoffice.org">OpenOffice</a>, <a href="http://www.abisource.com">AbiWord</a> and <a href="http://www.microsoft.com">MS Word</a>.</td></tr>
+</table>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#options-make-backups">The <dfn>Options/Make backups</dfn> option</a></h2>
+<p>When saving first the old file is renamed by appending ".bak" to the name, deleting any previous backup,
+and then the file is saved as per usual.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#bookmark-menu">The Bookmarks menu</a></h1>
+<ul>
+<li><a href="#bookmark-add">The <dfn>Bookmarks/Add bookmark</dfn> command</a></li>
+<li><a href="#bookmark-remove">The <dfn>Bookmarks/Remove bookmark</dfn> command</a></li>
+<li><a href="#bookmark-clear-all">The <dfn>Bookmarks/Clear all bookmarks</dfn> command</a></li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#bookmark-add">The <dfn>Bookmarks/Add bookmark</dfn> command</a></h2>
+<p>Choose this to add a bookmark to the bookmark list. The offset of the bookmark will be set to the
+current position initially. You can also add a description for the bookmark that will also appear in the menu.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#bookmark-remove">The <dfn>Bookmarks/Remove bookmark</dfn> command</a></h2>
+<p>Choose this to remove a bookmark from the bookmark list. You will be presented with a list of the
+bookmarks and have to choose the one to remove.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#bookmark-clear-all">The <dfn>Bookmarks/Clear all bookmarks</dfn> command</a></h2>
+<p>Deletes all bookmarks.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#misc-menu">The Misc menu</a></h1>
+<ul>
+<li><a href="#misc-exports">The <dfn>Misc/Goto DLL Exports</dfn> command</a></li>
+<li><a href="#misc-imports">The <dfn>Misc/Goto DLL Imports</dfn> command</a></li>
+<li><a href="#misc-crypt">The <dfn>Misc/Encode Decode</dfn> command</a></li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#misc-exports">The <dfn>Misc/Goto DLL Exports</dfn> command</a></h2>
+<p>When you have opened a DLL, you can use this function to navigate to the list of DLL exports. 
+The list will be highlighted, if possible.</p>
+
+<p><b>Note:</b> It is likely that only part of the DLL exports will be highlighted, due to the way the PE file format is specified.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#misc-imports">The <dfn>Misc/Goto DLL Imports</dfn> command</a></h2>
+<p>When you have opened a DLL, you can use this function to navigate to the list of DLL imports. 
+The list will be highlighted, if possible.</p>
+
+<p><b>Note:</b> It is likely that only part of the DLL imports will be highlighted, due to the way the PE file format is specified.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#misc-crypt">The <dfn>Misc/Encode Decode</dfn> command</a></h2>
+<p>This command will open a dialog, where you can encode/decode data using a cryptographic algorithm.
+The cryptographic algorithms are implemented in the FRHEDX.DLL. You can write your own extension DLL 
+to implement alternate algorithms; please check the frhed sourcecode for more details.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#special-syntax">Using the special syntax</a></h1>
+<p>Byte, word, longword and floating point data can be encoded as follows:</p>
+
+<pre>&lt;<var>{Size}</var><var>{Numeral system}</var>:<var>{Value}</var>&gt;</pre>
+
+<p><b>Size</b>:</p>
+<p><code>b</code> for byte-size (8 bit) value.<br>
+<code>w</code> for word-size (16 bit) value.<br>
+<code>l</code> for longword-size (32 bit) value.</p>
+
+<p><b>Numeral System</b>:</p>
+<p><code>d</code> for decimal system.<br>
+<code>h</code> for hexadecimal system.</p>
+
+<p><b>For floating point values set Size and Numeral system to</b>:</p>
+<p><code>fl</code> is for float values.<br>
+<code>do</code> is for double values.</p>
+
+<p><b>Value</b>:</p>
+<p>Enter the value of the datum after the colon.</p>
+
+<p><b>Examples</b>:</p>
+<p><code>&lt;bd:-15&gt;</code> means byte-size datum with decimal value -15.<br>
+<code>&lt;wh:23f0&gt;</code> means word-size datum with hexadecimal value 23f0.<br>
+<code>&lt;ld:1234567890&gt;</code> means longword-size datum with decimal value 1234567890.<br>
+<code>&lt;fl:2.5&gt;</code> means float-size datum with value 2.5.<br>
+<code>&lt;do:1.8e7&gt;</code> means double-size datum with value 1.8&times;10^7.</p>
+
+<p>Note: If you want to find or paste a valid special syntax string like <code>&lt;bd:0&gt;</code> as
+text, then prefix a \ to &lt;. This will turn &lt; into a normal character. Copying a &lt; in the file will insert the \ automatically.</p>
+
+<p>Backslashes ("\") in the file are copied and encoded as double backslashes ("\\").</p>
+
+<p><b>Data ranges and sizes</b>:</p>
+
+<p><b><i>Integers</i></b>:</p>
+
+<p><b>Byte</b>:</p>
+<p>signed from -128 to 127<br>
+unsigned from 0 to 255</p>
+
+<p><b>Word (2 bytes)</b>:</p>
+<p>signed from -32,768 to 32,767<br>
+unsigned from 0 to 65,535</p>
+
+<p><b>Longword (4 bytes)</b>:</p>
+<p>signed from -2,147,483,648 to 2,147,483,647<br>
+unsigned from 0 to 4,294,967,295</p>
+
+<p><b><i>Floating point types</i></b>:</p>
+
+<p><b>Float (4 bytes)</b>:</p>
+<p>range 3.4E +/- 38 (7 digits)</p>
+
+<p><b>Double (8 bytes)</b>:</p>
+<p>range 1.7E +/- 308 (15 digits)</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#character-sets">Character Tables</a></h1>
+<p><b>The ANSI character set</b>:</p>
+<img src="ansimap.bmp">
+<p><b>The OEM character set</b>:</p>
+<img src="oemmap.bmp">
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#registry-menu">The Registry Menu</a></h1>
+<p>The registry menu contains items related to methods of launching frhed,
+the registry data, relations with previous versions of frhed and different
+instances of frhed.</p>
+
+<p>Of course if you are a power user you will probably prefer to do all of the below yourself.</p>
+
+<p>I (Pabs) am thinking of merging all/most of this into an &quot;frhed manager&quot; - email me if you think it is a good idea.</p>
+
+<ul>
+<li><a href="#in-all-context">In all context menu</a></li>
+<li><a href="#in-unknown-context">In unknown context menu</a></li>
+<li><a href="#default-in-unknown">Is default in unknown context</a></li>
+<li><a href="#save-ini">Save ini when required</a></li>
+<li><a href="#change-inst">Change instance</a></li>
+<li><a href="#remove-frhed">Remove frhed</a></li>
+<li><a href="#upgrade">Upgrade</a></li>
+<li><a href="#shortcuts">Shortcuts to frhed</a></li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#in-all-context">In all context menu</a></h2>
+<p>When checked this item indicates that in the context menu of all files
+there appears an item named &quot;Open in frhed&quot; which will launch
+frhed with the file opened.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#in-unknown-context">In unknown context menu</a></h2>
+<p>The same is true of this item except that the item appears only in the
+context menu of files that have an extension that has not yet been registered
+with Windows.  NOTE that if both are checked both will appear on the menu
+of unregistered files and that these files generally have an
+&quot;Open with&hellip;&quot; command.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#default-in-unknown">Is default in unknown context</a></h2>
+<p>When this item is checked the &quot;Open in frhed&quot; command for
+unregistered files becomes the default action when double clicking or
+pressing enter on these files in explorer.  This may not work properly
+but it should.  The reason a similar option was not provided for the all
+context is that then you would not be able to open your files with the
+proper applications.  It is not recommended but if you wish you may do
+this yourself - just set the default value in the key &quot;HKEY_CLASSES_ROOT\*\shell&quot;
+to &quot;Open in frhed&quot;.  This is disabled if the above option is
+not checked.  Unchecking the above option unchecks and disables this one.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#save-ini">Save ini when required</a></h2>
+<p>When this item is unchecked frhed will not save data to the registry
+when it normally does.  It does this on exit and at other times -
+see the source where the function save_ini_data is called.  This option
+was added so that the <dfn>Registry/Remove frhed</dfn> item could work properly.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#change-inst">Change instance</a></h2>
+<p>Allows the user to switch from one set of instance options to another
+and to specify the instance number to save to on exit and at other times.
+Note that if 2 or more instances of frhed are open at once the options you
+save on exit may be overwritten.  If you enter a non-existent instance
+number that instance will be written to the registry with current values
+and current values will stay the same.  This option is always enabled so
+that you may reload instance options at any time.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#remove-frhed">Remove frhed</a></h2>
+<p>Removes, in this order, registered links to frhed, both context menu
+entries, registry entries for the current version and registry entries
+for old versions.  This option requires an initial confirmation and
+confirmations for each removal operation that is required.  If the user
+removes those of the links, context menu entries and or registry entries
+for the current version that are present they are given instructions on
+how to totally remove frhed from their computer and asked to email the
+author. This option is disabled if none of the above are present. Previous
+versions of frhed are ignored.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#upgrade">Upgrade</a></h2>
+<p>This brings up a dialog box that can be used to upgrade frhed.</p>
+
+<p>To help you decide which version to upgrade from you can browse the
+versions &amp; instances, using the data list, MRU list, link list and the
+'fake' frhed display window to find the instance you are looking for
+and show you various properties of the selected instance.</p>
+
+<p>This dialog allows the following:</p>
+
+<ul>
+<li>Copying instances from a version to the current version.</li>
+<li>Reading the data from a selected instance into memory.</li>
+<li>For reading and copying, links from the selected version are
+copied over and rewritten to the disk, updating them in the process.</li>
+<li>Deleting selected instances from selected versions.</li>
+</ul>
+
+<p>If you work only with the registry, however, you have much more
+control over your options and by exporting the HKCU\Software\frhed key
+to a &quot;.reg&quot; file, deleting the key, editing the file and
+importing it back into the registry you can combine options from several
+previous versions.  It is recommended that you use the upgrade dialog or
+the shortcut manager (next section) to (automatically) update links after
+you have manually edited the registry.</p>
+
+<p>Note that versions of frhed before v1.0.154 used ini files and therefore
+you cannot upgrade from them without manually entering their data into the
+registry or converting the ini files to reg files.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h2><a name="#shortcuts">Shortcuts to frhed</a></h2>
+<p>This is a link manager specific to frhed.  All links to frhed created
+by this have the filename &quot;frhed.lnk&quot;. You can add new links
+by specifying paths to put them in, move existing links to new paths, delete
+links one at a time, reload the list of links from the registry, find links
+to current &amp; old versions in the file system and create links in any of four predefined places:</p>
+
+<ol>
+<li>The Desktop</li>
+<li>Start menu</li>
+<li>Programs menu</li>
+<li>Send To menu</li>
+</ol>
+
+<p>The paths of these are read from the registry and should always point to the correct path.
+The paths of the links (without names) are stored in the registry under HKCU\Software\frhed\<var>&lt;current version&gt;</var>\links.
+All values in this key that contain strings are loaded into the list of links after being verified and or updated.</p>
+
+<p>Note that:</p>
+
+<ul>
+<li>The link manager tries to keep the registry &amp; file system up to date as much as possible and if you delete a link from explorer &amp; load the link manager the all items in the registry will be recreated.</li>
+<li>Duplicates are not allowed and if you delete one of the values from the registry then frhed will not be able to delete the corresponding link from the file system.</li>
+<li>You cannot create links on read-only devices as the browsing mechanism detects volumes where files cannot be created.  These include places that do not have a path in the file system, like places such as Control Panel etc., places on read-only media and places on volumes that are full.</li>
+<li>Renaming a link will allow you to delete it from the registry but not the file system.</li>
+<li>If there are links to removable media you may see DVD/CD/floppy activity when frhed is searching for links.</li>
+<li>Note that to have links to more than one version of frhed (that has the shortcut manager) you will have to create one link, rename it by appending a version no and then create the other link and rename it in the same way.  This will ensure that if you accidentally add a link to frhed to a folder then links to any old versions will not be overwritten. These links will not be safe from the find n' fix function - to make them safe rename the exe by appending a version number and create a link to the exe that is not named frhed.lnk (to prevent it being overwritten).</li>
+<li>Update &amp; find n' fix both search recursively from a user specified directory for links to frhed - update looks for links to the filename of the running version of frhed while find n' fix looks for links to any frhed.exe that is in the search tree.  Duplicate links in the same directory will be removed and all links found will be renamed to frhed.lnk.</li>
+</ul>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#faq">Frequently Asked Questions</a></h1>
+<hr>
+<p>Q: How do I search for hex values?</p>
+<p>A: You have to describe the values using a special syntax (as described in
+"Using the special syntax" in the help file). For example the byte value 0xf7
+has to be written as (you must write the angled brackets too!)
+
+<pre>&lt;bh:f7&gt;</pre>
+
+where the b means byte-sized value (otherwise use a "w" for word-size or "l" for longword-size)
+and the h means hexadecimal notation (otherwise use "d" for decimal notation).
+This notation can be combined with text after it or before it, or several encoded values after
+another etc.</p>
+<hr>
+<p>Q: frhed opens all files from Explorer supenly. How do I remove this behavior?</p>
+<p>A: Uncheck the following: <dfn>Registry/In all context menu</dfn>, <dfn>Registry/Is default in unknown context</dfn>
+&amp; <dfn>Registry/In unknown context menu</dfn>. Or edit the registry - Delete HKCR\*\shell\Open in frhed\,
+HKCR\Unknown\shell\Open in frhed\ &amp; the "(Default)" values under their parent keys.</p>
+<hr>
+<p>Q: What do the B:??, W:??, L:?? in the status bar mean?</p>
+<p>A: These show you the byte (B), word (W) and longword (L) value beginning at the current cursor
+position, interpreted as either signed or unsigned, which is indicated in front of the "B:".</p>
+<hr>
+<p>Q: I know that two files I am comparing with the <dfn>Edit/Compare from current offset</dfn> command
+are equal, why does frhed show me lots of differences?</p>
+<p>A: As the command's name indicates, the file you choose from the following dialogue is compared
+to the currently loaded file beginning from the CURRENT CURSOR POSITION. So if you want to know
+if the two files match completely beginning to end, you must put the blinking cursor in the
+very first position of the file, that is, at index zero. Just press Ctrl+Pos1 on the keyboard to
+go there directly.</p>
+<hr>
+<p>Q: My Wheel Mouse does not work correctly with frhed. Are wheel mice supported?</p>
+<p>A: I also use a Logitech wheel mouse, which works fine with frhed. It is possible that the standard
+drivers installed by Windows for wheel mice do things slightly differently than the "real" Logitech
+drivers. I suggest you install the original drivers supplied by your mouse manufacturer. If
+you have any success with this, please tell me about it, I don't know if this really works.</p>
+
+<!------------------------------------------------------------------------------------------------->
+<h1><a name="#custom-styles">Custom stylesheets</a></h1>
+<p>This help file uses CSS or "Cascading Style Sheets" to change the display characteristics
+of text, lists, images, tables and pretty much everything else. NOTE: Stylesheets may only
+work with IE4 and above.</p>
+
+<p>All topics in this help file (even this one) reference three CSS files in the following order:</p>
+
+<ul>
+<li><code>before.css</code> is located in the same directory as this help file (frhed.chm).<br>
+Use this stylesheet if you want to override browser defaults, but keep frhed's default styles.</li>
+<li><code>frhed.css</code> is located inside this help file and contains the default styles for this help file.</li>
+<li><code>after.css</code> is located in the same directory as this help file.<br>
+Use this stylesheet if you want to override both the browser defaults and frhed's defaults.</li>
+</ul>
+<p>NOTE: <code>before.css</code> and <code>after.css</code> are accessed using JavaScript, so you must
+turn it on before you can use these style sheets. The alternative to using JavaScript would have been
+to put them in the root directory of the disk where this help file is located and accessed them using
+static links to <code>file:///before.css</code> and <code>file:///after.css</code>. The JavaScript
+method, however, is much more flexible and prevents the need for write access to the root directory,
+which would probably not be granted on locked down machines, such as in university computer labs and
+work machines. If you prefer to use static links you can do so by installing the help file source, replacing all the
+JavaScript stuff with static links, regenerating the individual topics from the big-flat-file using pydocgen.py
+and recompiling using HTML Help Workshop from <a href="http://www.microsoft.com">Microsoft</a>.<br>
+e.g. This:</p>
+
+<pre>&lt;script language="JavaScript"&gt;document.createStyleSheet(externlink("after.css"));&lt;/script&gt;</pre>
+<p>is converted to:</p>
+<pre>&lt;link rel="stylesheet" type="text/css" href="file:///<var>&lt;your static path&gt;</var>/after.css"&gt;</pre>
+<p>Alternatively someone may already have done this - check on <a href="#contact">these websites</a>.</p>
+
+<p>It is beyond the scope of this help file to discuss the intricacies of stylesheet syntax and usage,
+but see below for a few tips. There are a number of references on the Web and here are two to get you
+started:</p>
+
+<ul>
+<li><a href="http://www.w3.org/TR/REC-CSS2/">WWW Consortium's CSS2 Specification</a>
+- The official specification.</li>
+<li><a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnie40/html/css-ie4.asp">Microsoft's
+"Cascading Style Sheets in Internet Explorer 4.0"</a> - what is supported by HTMLHelp</li>
+</ul>
+
+<p><code><a href="frhed.css">frhed.css</a></code> is available to study and use in <code>before.css</code>
+and <code>after.css</code>.<br>
+Click one of the following buttons to open your CSS files in in their associated program.</p>
+
+<form><input type="button" name="Button" value="before.css" OnClick="externlink('before.css',true);">
+<input type="button" name="Button" value="after.css" OnClick="externlink('after.css',true);"></form>
+
+<p><b>Tips</b>:</p>
+
+<ul>
+<li>You can import other stylesheets using <code>@import "mystylesheet.css";</code>. The semicolon(;) is important and the import must be before the definition of any styles.</li>
+<li>You set styles using the following syntax:<br>
+Note the semicolon after each value.<br>
+There is more to the syntax than what is listed here - please visit the above two references.
+
+<pre>[<var>&lt;some-tag&gt;</var>][.<var>&lt;some-class&gt;</var>][:<var>&lt;some-pseudo-class&gt;</var>] {
+	(<var>&lt;some-attribute&gt;</var>: <var>&lt;some-value&gt;</var>;)...
+}...</pre>
+
+<table>
+<tr><td>Variable</td><td>Explanation</td></tr>
+<tr><td><var>&lt;some-tag&gt;</var></td><td>The name of a HTML tag e.g. body, a, ul.</td></tr>
+<tr><td><var>&lt;some-class&gt;</var></td><td>The value of the "class" attribute in a tag in the document eg. <code>.SomeClass { color: red; }</code> (or <code>p.SomeClass</code>) in CSS then <code>&lt;p class="SomeClass"&gt;Some text&lt;/p&gt;</code> in HTML.</td></tr>
+<tr><td><var>&lt;some-pseudo-class&gt;</var></td><td>The name of a supported pseudo-class like <code>hover</code>, <code>active</code>, <code>link</code> or <code>visited</code>. Two useful pseudo classes that are in the official CSS spec, but are not supported by IE, include <code>before</code> and <code>after</code>, which can insert strings before and after what ever their style is applied to.</td></tr>
+<tr><td><var>&lt;some-attribute&gt;</var></td><td>A style attribute like <code>color</code> or <code>text-decoration</code>.</td></tr>
+<tr><td><var>&lt;some-value&gt;</var></td><td>The value of an attribute like <code>#00ff00</code>(a bright green colour) or <code>150%</code>(a relative size).</td></tr>
+</table>
+</li>
+<li>Comments are C-style (<code>/*Some comments*/</code>), not C++-style (<code>//Some comments</code>) and they cannot be nested.</li>
+<li>To temporarily disable one of the two external style sheets just rename it or comment out its contents.</li>
+<li>For changes to a stylesheet to come into effect you need to change pages or refresh the current page (press F5).</li>
+<li>It can be hard to revert styles to what they were before a sheet was applied - you need to find out a reasonable default &amp; apply that.</li>
+</ul>
+
+</body></html>

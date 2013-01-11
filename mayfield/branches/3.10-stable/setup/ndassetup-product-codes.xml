@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<product-codes>
+    <product-code version="3.10.1214">{16BC2F9F-5D32-484b-9D33-752FFA6DFB57}</product-code>
+    <product-code version="3.10.1215">{292FA0CA-1025-42c8-939A-8E5B6800C9DA}</product-code>
+    <product-code version="3.10.1216">{2EDD3692-FA4E-41A0-B482-6208A4125D1E}</product-code>
+    <!-- since 3.10.1217, we are using sequential product code for incremental builds -->
+    <product-code version="3.10.1217">{D9A342F8-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1218">{D9A342F9-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1219">{D9A342FA-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1220">{D9A342FB-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1221">{D9A342FC-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1222">{D9A342FD-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1223">{D9A342FE-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1224">{D9A342FF-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1225">{D9A34300-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1226">{D9A34301-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1227">{D9A34302-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1228">{D9A34303-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1229">{D9A34304-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1230">{D9A34305-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1231">{D9A34306-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1232">{D9A34307-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1233">{D9A34308-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1234">{D9A34309-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1235">{D9A3430A-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1236">{D9A3430B-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1237">{D9A3430C-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1238">{D9A3430D-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1239">{D9A3430E-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1240">{D9A3430F-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <!-- 9999.9999.9999.9999 is a base product code for testing purpose only -->
+    <product-code version="9999.9999.9999.9999">{E7942563-7627-4837-BBB5-E20826C722D5}</product-code>
+</product-codes>

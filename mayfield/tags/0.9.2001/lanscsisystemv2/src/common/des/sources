@@ -1,0 +1,19 @@
+TARGETNAME=des
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+#BROWSER_INFO=1
+#BROWSERFILE=$(TARGETNAME).bsc -n
+
+# to publish headers
+NTTARGETFILE1=$(NDAS_INC_PATH)\des.h
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\des.lib=$(NDAS_LIB_PATH)\des.lib}
+
+C_DEFINES= 
+INCLUDES=
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+SOURCES=des.c key.c

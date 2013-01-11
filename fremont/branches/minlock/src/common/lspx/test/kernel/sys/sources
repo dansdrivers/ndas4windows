@@ -1,0 +1,22 @@
+TARGETNAME=lspkrnl
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+MSC_WARNING_LEVEL=-W3 -Wp64
+
+TARGETLIBS= \
+	$(DDK_LIB_PATH)\wdmsec.lib\
+	$(DDK_LIB_PATH)\csq.lib	\
+	$(DDK_LIB_PATH)\ntstrsafe.lib \
+	$(NDAS_LIB_PATH)\liblspx.lib \
+	$(NDAS_DRIVER_LIB_PATH)\libxtdi.lib
+
+INCLUDES=..\..\..\..\inc;$(NDAS_INC_PATH);$(NDAS_INC_PATH)\..\drivers\inc\kernel;..\..
+
+SOURCES=\
+	lspkrnl.c \
+	lsptransfer.c \
+	lspcsq.c \
+	lspkrnl.rc
+
+

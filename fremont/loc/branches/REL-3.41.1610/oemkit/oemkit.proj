@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+		 DefaultTargets="Archive">
+
+	<!-- use /p:oem=oemname to specify the oem name -->
+
+	<PropertyGroup>
+		<OEM Condition="'$(OEM)'==''">generic</OEM>
+		<OEMKitDir>.\$(oem)\</OEMKitDir>
+	</PropertyGroup>
+
+	<!-- items included in oemkit -->
+	<ItemGroup>
+
+		<BaseFile Include="..\base\**\*.*"
+					Exclude="..\base\**\.svn\**\*.*;..\base\*.*" />
+		<ToolsFile Include="..\tools\**\*.*"
+					Exclude="..\tools\**\.svn\**\*.*;..\tools\src\**\*.*" />
+		<OemRootFile Include="..\oem\*.*" Exclude="..\oem\excluded.items"/>
+		<OemDataFile Include="..\oem\$(oem)\*.*" />
+		<OemResDataFile Include="..\oem\$(oem)\resdata\*.*" />
+
+		<BuildFile Include="..\oem\build.cmd" />
+		<DocFile Include="readme.htm" />
+
+	</ItemGroup>
+
+	<!-- copy -->
+	<Target Name="Build">
+		<Copy SourceFiles="@(BaseFile)"
+				DestinationFiles="@(BaseFile->'$(oemkitdir)base\%(recursivedir)%(filename)%(extension)')"
+				SkipUnchangedFiles="true" />
+		<Copy SourceFiles="@(ToolsFile)"
+				DestinationFiles="@(ToolsFile->'$(oemkitdir)tools\%(recursivedir)%(filename)%(extension)')"
+				SkipUnchangedFiles="true" />
+		<Copy SourceFiles="@(OemRootFile)"
+				DestinationFolder="$(oemkitdir)"
+				SkipUnchangedFiles="true" />
+		<Copy SourceFiles="@(OemDataFile)"
+				DestinationFolder="$(oemkitdir)\$(oem)"
+				SkipUnchangedFiles="true" />
+		<Copy SourceFiles="@(OemResDataFile)"
+				DestinationFolder="$(oemkitdir)\$(oem)\resdata\"
+				SkipUnchangedFiles="true" />
+		<Copy SourceFiles="..\locproject.dir"
+				DestinationFolder="$(oemkitdir)"
+				SkipUnchangedFiles="true" />
+		<!-- build.cmd into <oemkitdir>\<oemname> directory (duplicate) -->
+		<Copy SourceFiles="@(BuildFile)"
+				DestinationFolder="$(oemkitdir)\$(oem)\"
+				SkipUnchangedFiles="true" />
+		<!-- copy readme.htm in this directory into <oemkitdir> -->
+		<Copy SourceFiles="@(DocFile)"
+				DestinationFolder="$(oemkitdir)"
+				SkipUnchangedFiles="true" />
+	</Target>
+
+	<Target Name="Clean">
+		<RemoveDir Directories="$(oemkitdir)" />
+	</Target>
+
+	<UsingTask TaskName="XIMETA.Zip" AssemblyFile="..\tools\XIMETA.Tasks.dll" />
+	<UsingTask TaskName="XIMETA.FileVersionInfo" AssemblyFile="..\tools\XIMETA.Tasks.dll" />
+	<UsingTask TaskName="XIMETA.GetDateTimeString" AssemblyFile="..\tools\XIMETA.Tasks.dll" />
+
+	<Target Name="Archive" DependsOnTargets="Build">
+		<CreateItem Include="$(oemkitdir)\**\*.*"
+					Exclude="$(oemkitdir)\**\branded\**\*.*;$(oemkitdir)\**\obj\**\*.*">
+			<Output TaskParameter="Include" ItemName="ZipSourceFiles" />
+		</CreateItem>
+
+		<XIMETA.FileVersionInfo TargetFileName="$(oemkitdir)\base\bin\i386\ndassvc.exe">
+			<Output TaskParameter="ProductMajorPart" PropertyName="PVMajor" />
+			<Output TaskParameter="ProductMinorPart" PropertyName="PVMinor" />
+			<Output TaskParameter="ProductBuildPart" PropertyName="PVBuild" />
+		</XIMETA.FileVersionInfo>
+
+		<CreateProperty Value="$(PVMajor).$(PVMinor).$(PVBuild)">
+			<Output TaskParameter="Value" PropertyName="ProductVersion" />
+		</CreateProperty>
+
+		<XIMETA.GetDateTimeString Format="yyyyMMdd">
+			<Output TaskParameter="Value" PropertyName="Today" />
+		</XIMETA.GetDateTimeString>
+
+		<XIMETA.Zip Sources="@(ZipSourceFiles)"
+					ZipFile="ndas_$(ProductVersion)_$(oem)_lbk_$(today).zip"
+					BaseDirectory="$(oem)" />
+	</Target>
+
+</Project>

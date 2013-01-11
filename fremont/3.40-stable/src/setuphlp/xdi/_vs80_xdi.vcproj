@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="xdi"
+	ProjectGUID="{F1B1DE6D-1D50-4156-BAE0-8FAA592CC27E}"
+	RootNamespace="setup"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="exe\objchk_w2k_x86\i386"
+			IntermediateDirectory="exe\objchk_w2k_x86\i386"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 chk . -egwMiIBZI"
+				ReBuildCommandLine="..\..\..\bin\xbuild -WIN2K chk . -cegwMiIBZI"
+				CleanCommandLine="..\..\..\bin\xbuild i386 chk . -c0iI"
+				Output="exe\objchk_w2k_x86\i386\setup.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="exe\objchk_wnet_amd64\amd64"
+			IntermediateDirectory="exe\objchk_wnet_amd64\amd64"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 chk . -egwMiIBZ"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 chk . -cegwMiIBZ"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="exe\objchk_wnet_amd64\amd64\setup.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="exe\objfre_w2k_x86\i386"
+			IntermediateDirectory="exe\objfre_w2k_x86\i386"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 fre . -egwMiIBZ"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 fre . -cegwMiIBZ"
+				CleanCommandLine="..\..\..\bin\xbuild i386 fre . -c0i"
+				Output="exe\objfre_w2k_x86\i386\setup.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="exe\objfre_wnet_amd64\amd64"
+			IntermediateDirectory="exe\objfre_wnet_amd64\amd64"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 fre . -egwMiIBZ"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 fre . -cegwMiIBZ"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="exe\objfre_wnet_amd64\amd64\setup.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
+			<File
+				RelativePath=".\xdi.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\cmd\xdicmd.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\xdidrvfiles.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\xdiinf.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\xdisetupapi.cpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
+			<File
+				RelativePath=".\precomp.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\xdi.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
+			>
+		</Filter>
+		<File
+			RelativePath=".\cmd\makefile"
+			>
+		</File>
+		<File
+			RelativePath=".\slib\makefile"
+			>
+		</File>
+		<File
+			RelativePath=".\slib\sources"
+			>
+		</File>
+		<File
+			RelativePath=".\cmd\sources"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

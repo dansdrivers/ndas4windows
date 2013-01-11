@@ -1,0 +1,17 @@
+TARGETNAME=liblsp
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=liblsp
+
+INCLUDES=$(NDAS_INC_PATH);$(NDAS_INC_PATH)\lsp;$(PSDK_INC_PATH)
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Ox /Ob0
+!ELSE
+!ENDIF
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME).lib}
+
+SOURCES=lsp_hash.c lsp.c lsp_util.c

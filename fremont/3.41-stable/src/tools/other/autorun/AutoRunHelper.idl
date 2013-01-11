@@ -1,0 +1,37 @@
+import "oaidl.idl";
+
+[uuid(774A5BCB-9186-4543-BEEC-4DEE0BA8F400), object, dual]
+interface IAutoRun : IDispatch
+{
+	[id(1)] HRESULT Close();
+	[id(2)] HRESULT MessageBox([in] BSTR message, [in] BSTR caption, [in] int type, [out, retval] int* result);
+	[id(3)] HRESULT Run([in] BSTR verb, [in] BSTR program, [in, defaultvalue("")] VARIANT param, [out, retval] int* ret);
+	[id(4)] HRESULT ShellExec([in] BSTR verb, [in] BSTR program, [in, defaultvalue("")] VARIANT param, [out, retval] int* ret);
+
+	[id(5)] HRESULT ReadINF([in] BSTR section, [in] BSTR key, [in, defaultvalue("")] VARIANT defaultValue, [out, retval] BSTR* value);
+
+	[id(6),propget] HRESULT AutoRunPath([out, retval] BSTR* path);
+
+	[id(10),propget] HRESULT DefaultLangID([out, retval] int* plcid);
+
+	[id(12),propget] HRESULT Title([out, retval] BSTR* title);
+	[id(12),propput] HRESULT Title([in] BSTR title);
+	[id(13),propget] HRESULT OSVersion([out, retval] int* version);
+	[id(14),propget] HRESULT OSPlatform([out, retval] int* platform);
+	[id(15),propget] HRESULT ProcessorArchitecture([out, retval] int* arch);
+
+	[id(16)] HRESULT GetLanguageName([in] int LocaleId, [out, retval] BSTR* Name);
+	[id(17)] HRESULT GetEnglishLanguageName([in] int LocaleId, [out, retval] BSTR* Name);
+	[id(18)] HRESULT GetNativeLanguageName([in] int LocaleId, [out, retval] BSTR* Name);
+};
+
+[uuid(FED1FB9C-75A3-45B2-8A97-C019DF9AA603), version(65535.65535)]
+library AutoRunLibrary
+{
+	importlib("stdole32.tlb");
+	[uuid(CE764672-71B0-4BF8-ABDB-3D4D6481C8FF)]
+	coclass CCoAutoRun
+	{
+		[default] interface IAutoRun; 
+	};
+};

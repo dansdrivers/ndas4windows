@@ -1,0 +1,65 @@
+TARGETNAME=uxixfs
+TARGETPATH=obj
+TARGETTYPE=DYNLINK
+
+!IF $(FREEBUILD)
+LIBPSEG=\fre\*
+!ELSE
+LIBPSEG=\chk\*
+!ENDIF
+
+TARGETLIBS=$(DDK_LIB_PATH)\kernel32.lib \
+		   $(DDK_LIB_PATH)\ntdll.lib \
+           $(DDK_LIB_PATH)\user32.lib \
+		   $(DDK_LIB_PATH)\rpcrt4.lib \
+		   $(NDAS_PUBLIC_LIB_PATH)\ndasvol.lib \
+		   $(NDAS_PUBLIC_LIB_PATH)\ndasuser.lib \
+		   ..\lib$(LIBPSEG)\ulib.lib    \
+           ..\lib$(LIBPSEG)\ifsutil.lib
+
+BUILD_CONSUMES=ndasvol ndasuser
+BUILD_PRODUCES=uxixfs
+
+USE_MSVCRT=1
+
+!IF "$(_BUILDARCH)" == "AMD64" || "$(_BUILDARCH)" == "64"
+!ELSE
+DLLENTRY=InitializeUxixfs
+!ENDIF
+
+PRECOMPILED_INCLUDE= pch.cxx
+MSC_WARNING_LEVEL=/W3 /WX
+
+SOURCES=uxixfs.cxx		\
+		entry.cxx		\
+		xixfs.cxx		\
+		xixfs_sa.cxx	\
+		xixfs_vol.cxx
+        
+INCLUDES=.;  \
+         ..\inc\ulib;     \
+         ..\inc\ifsutil;  \
+         $(XM_WXP_INC_PATH)\public\sdk\inc;	\
+         $(XM_WXP_INC_PATH)\public\ddk\inc;	\
+         $(DDK_INC_PATH);\
+         $(NDAS_PUBLIC_INC_PATH)
+
+C_DEFINES=-DUNICODE=1
+
+!if $(FREEBUILD)
+C_DEFINES=$(C_DEFINES) /DDBG=0
+!else
+C_DEFINES=$(C_DEFINES) /DDBG=1
+!IFNDEF NOMEMLEAK
+C_DEFINES=$(C_DEFINES) /DMEMLEAK
+!ENDIF
+!IFDEF STACK_TRACE
+C_DEFINES=$(C_DEFINES) /DSTACK_TRACE
+!ENDIF
+!ENDIF
+
+UMTYPE=console
+DLLDEF=uxixfs.def
+
+W32_SB=1
+SOURCES_USED=sources

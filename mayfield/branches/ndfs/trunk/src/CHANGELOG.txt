@@ -1,0 +1,144 @@
+- FIX: (ndasbind) All bind commands are enabled initially even if there are no entries.
+- FIX: (ndasbind) Portion of the selected text is dim
+- FIX #93: (ndasmgmt) Task Bar icon shows an error if the NDAS service is started later than NDAS management.
+- FIX #94: (ndassvc) In some cases, NDAS devices are not automatically mounted again after reboot.
+
+3.11.1327
+
+- FIX #68: Returning from 'Save As' dialog may take too long  (patria) (r6301)
+
+3.11.1325
+
+
+3.11.1324 R6199 Jan 10, 2005 64-bit
+- FIX: Primary agent sometimes failed to reflect Network address change.
+- FIX: Microsoft compiler did not do AMD64 optimization right. (gykim)
+      Currently, only LSP library seems to be affected by this issue.
+- FIX: NDAS bus support 32bit requests from 32bit application. (hootch)
+- FIX: LfsFilter driver did not generate 32bit file ID. (hootch)
+      32bit file ID limit is occured by WriteSharing protocol itself.
+- FIX: Timer value in LPX requests was overrided unknown driver. (sjcho)
+- ADD: 64 bit installation package is added. (patria)
+- ADD: modified build process for 64 bit Windows (patria)
+
+
+3.11.1323 R6134 Dec 27, 2005
+- FIX: LFS was not recognized as primary if all partitions are FAT32.
+- CHG: lfsfilter gets shutdown notification itself, not depending on NDAS service.
+
+3.11.1322 R6124 Dec 22, 2005
+- ADD: check lfs filter's running status before auto-plugin.
+       It is because lfs filter does not enumerate volumes which gets mounted before lfs filter gets started.
+- FIX: did not synchronize Enabled NetDisk creation. (hootch)
+       Secondary-mount volumes were not mounted on some fast-booting systems.
+- ADD: LFS_FILTER_READY ioctl for other drivers to check to see if lfs filter is running. (hootch)
+- FIX: Clear reserved field in LPX header. (sjcho)
+- ADD: supports 16 byte SCSI command for Single, Aggregation in NDASSCSI. (hootch)
+
+3.11.1321 R6106 Dec 20, 2005
+- FIX: HIX Discover reply with no entry was not ignored. (patria)
+- FIX: CREATE IRP did wait forever for secondary thread disconnected from the primary. (hootch)
+
+3.11.1320 R6082 Dec 16, 2005
+
+- FIX: Aggregation and RAID0/1/4 did not processes upgrade of access right properly (gykim)
+- FIX: LurnExecuteSyncRead did not read in read-only status (gykim)
+- FIX: bind wizard did not show correct size of the bind at select disk page (gykim)
+- FIX: ndasbind enabled 'replace device' and 'replace unit device' for non fault tolerant bind anymore (gykim)
+- FIX: secondary lost connections to NDAS devices after exit from power-saving mode. (hootch)
+
+3.11.1319 R6043 Dec 09, 2005
+
+- FIX: wrong max request blocks was delivered to LURNs. (hootch)
+- FIX: Did not apply 2.0 chip padding bug when retransmit. (sjcho)
+- FIX: lpx primary device might not be initialized to NULL. (sjcho)
+- FIX: prevention of dead volume-lock. (hootch)
+       VMwareService.exe and explorer.exe cause dead volume-lock when LfsFilt try to become a primary.
+- FIX: LPX Irp completion may not called while reading. (sjcho)
+- FIX: NULL pointer reference when the NDAS volume is converted to basic disk from dynamic disk. (hootch)
+- FIX: LfsFilt did invalidate FastIoAcquireFileForModWrite() (ktkim)
+- CHG: disabled NTFS encryption feature when write-sharing. (hootch)
+- CHG: updated ddkbuild.bat with the 6.5 version. (hootch)
+- FIX: did not free Ioctl CCB when error in NDASSCSI. (hootch)
+- ADD: Ndasbind Migrates Mirror, RAID1 -> RAID1R, RAID4 -> RAID4R (gykim)
+- FIX: RAID supports share-write mode (gykim)
+- FIX: Bus-reset and IO error might occur because time out for reconnection and login was too long. (hootch)
+- FIX: Windows explorer did not refresh volume names. (hootch)
+- FIX: ndasscsi.sys did try to become secondary from primary after hibernation. (hootch)
+
+3.11.1318 R5956 Nov 22, 2005
+
+- CHG: RAID1, RAID4, RAID1_R2, RAID4_R2 do not support Shared-Write mode. (gykim) (patria)
+- FIX: If the volume is locked in the shared-write mode, shared-write is disabled while the lock is active. (hootch) (patria)
+- ADD: New types are added to distinguish between 3.10 and 3.11 RAID
+
+  NDAS_UNITDEVICE_DISK_TYPE_RAID1_R2
+  NDAS_UNITDEVICE_DISK_TYPE_RAID4_R2
+
+  NDAS_LOGICALDEVICE_TYPE_DISK_RAID1_R2
+  NDAS_LOGICALDEVICE_TYPE_DISK_RAID4_R2
+
+  NDAS_LOGICALDEVICE_ERROR_REQUIRE_UPGRADE
+
+  NDAS_LOGICALDEVICE_STATUS_NOT_MOUNTABLE (resurrected)
+
+- ADD: Added Null Unit Device and Null Unit Disk Device to prevent stalls in NDASSVC (patria)
+- CHG: Removed ENABLE_RECYCLEBIN_PATCH routines  (hootch)
+- FIX: NDASBUS may not mount at boot time due to the late start of the network adapters (hootch)
+- ADD: NDASVOL is not implemented fully (patria)
+- CHG: boost is separated as an external header set (patria)
+- BUG: NDASUSER Event Subscription routine may leak the memory (patria)
+- BUG: NIF export failed on MSXSL 2.0 (Windows 2000 without MSXML 3.0 or later) (patria)
+
+3.11.1317 R5843 Nov 10, 2005
+
+- CHG: Lots of fixes in NDAS service 
+- CHG: Lots of enhancements in ndasmgmt
+- CHG: Unit device number is using 1-based index to the user. (Not internally)
+- CHG: Lots of icons are added or changed
+- ADD: NDAS Registration Import/Export Feature
+- BUG: Slow IO speed with certain NICs and network configuration - fixed by improving packet loss check method. (sjcho)
+- ADD: Added MTU configuration to LPX (sjcho)
+- ADD: Flow control between write sharing nodes. (hootch)
+- BUG: Write sharing driver did not allow chkdsk and format when a secondary becomes a primary node. (hootch)
+- BUG: Write sharing driver did allow chkdsk and format at a secondary node. (hootch)
+- BUG: Write sharing driver caused memory corruption when receiving broadcasting messages. (hootch)
+- BUG: NDASBUS did require read/write access to NDAS device when reading DIB. (hootch)
+- BUG: NDASBUS did not keep NDASSCSI's status correctly. (hootch)
+- BUG: NDASBUS did call ZwXXX functions at APC_LEVEL(hootch)
+- BUG: NDASBUS might not plug in NDAS devices on some systems with Windwows Server 2003 at the boot time. (hootch)
+- BUG: NDASSCSI did not recognize each hard drives correctly in two hard drive NDAS device. (hootch)
+- BUG: NDASSCSI did not complete SRBs sometimes. (hootch)
+- BUG: NDASSCSI did sometimes cause crash when stopping due to driver installation or power saving mode. (hootch)
+
+3.11.1315 R5641 - Oct 13, 2005
+
+- ADD: NDASSCSI monitors and delays LPX binding device's power state
+       not to perform operation after NICs are down. (hootch)
+- CHG: Does the acutal Stop/Restart NDASSCSI adapter by worker thread. (hootch)
+- CHG: Does not send NOOP to the NDAS device after NDASSCSI recives STOP SCSI command. (hootch)
+- CHG: Changes read block-size dynamically if packet drop occurs in lpx layer. 
+       This reduces problems caused by small network buffer.
+	   (sjcho)
+- CHG: Set LPX maximum packet size to 1500. This fixes a jumbo frame issue.
+- BUG: Network property change made some problems: Crash, LFS primary broadcast stopping - fixed.
+- ADD: Added retransmission time set/get and encryption option to 'vendorctl'
+- BUG: Privileged Connection requires 
+  	   NDASCOMM_CNF_DISABLE_LOCK_CLEANUP_ON_CONNECT flag.
+  	   'vendorctl' is fixed.
+
+3.11.1314 R5581 - Oct 5, 2005
+
+- BUG: NDASOP returns "invalid parameter" error.
+       Fixed parameters calling NDASCOMM functions 
+       in NDASOP.DLL (patria)
+- BUG: ndascmd returns error between mount/mountex (patria)
+- CHG: Changed ndascmd internal function names (patria)
+- BUG: Logical device status remains UNMOUNT_PENDING 
+       even after EjectEx failed. (patria)
+- CHG: ndasbind dialog size changed. (patria)
+- CHG: ndasbind TreeListView styles are changed to prevent
+       incorrect rendering. (patria)
+- CHG: ndasbind resources are fixed. (patria)
+
+3.11.1313 R5574

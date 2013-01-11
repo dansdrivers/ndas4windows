@@ -1,0 +1,46 @@
+TARGETNAME=lsbusctl
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+BUILD_PRODUCES=lsbusctl_dll
+
+INCLUDES=..\;$(NDAS_INC_PATH);$(NDAS_INC_PATH)\ndas;$(PSDK_INC_PATH)
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+#DLLDEF=$(O)\ndmsica.def
+DLLDEF=
+UMTYPE=windows
+#
+# Without DLLENTRY, you won't get DllMain run
+#
+DLLENTRY=_DllMainCRTStartup
+
+C_DEFINES=/DUNICODE /D_UNICODE /DLSBUSCTL_DLL_EXPORTS
+RC_OPTIONS=/i $(NDAS_SDK_INC_PATH)
+USER_C_FLAGS=/Wp64
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+MSC_WARNING_LEVEL=-W3 -WX
+#MSC_OPTIMIZATION=/Oitb2
+#MSC_OPTIMIZATION=/Od /Oi
+
+BUILD_CONSUMES=xdbgprn
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib \
+	$(NDAS_LIB_PATH)\xdbgprn.lib
+
+SOURCES= \
+	dllentry.c \
+	..\lsbusctl.c 
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME)_dyn.lib}

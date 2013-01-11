@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<setup>
+	<product-codes>
+		<!-- 9999.9999.9999.9999 is a base product code for testing purpose only -->
+		<product-code version="99.99.99.99">E7942563-7627-4837-BBB5-E20826C722D5</product-code>
+		<product-code version="9999.9999.9999.9999">E7942563-7627-4837-BBB5-E20826C722D5</product-code>
+		<product-code version="3.10.1214">16BC2F9F-5D32-484b-9D33-752FFA6DFB57</product-code>
+		<product-code version="3.10.1215">292FA0CA-1025-42c8-939A-8E5B6800C9DA</product-code>
+		<product-code version="3.10.1216">2EDD3692-FA4E-41A0-B482-6208A4125D1E</product-code>
+		<!-- since 3.10.1217, we are using sequential product code for incremental builds -->
+		<product-code version="3.10.1217">D9A342F8-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1218">D9A342F9-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1219">D9A342FA-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1220">D9A342FB-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1221">D9A342FC-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1222">D9A342FD-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1223">D9A342FE-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1224">D9A342FF-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1225">D9A34300-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1226">D9A34301-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1227">D9A34302-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1228">D9A34303-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1229">D9A34304-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1230">D9A34305-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1231">D9A34306-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1232">D9A34307-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1233">D9A34308-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1234">D9A34309-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1235">D9A3430A-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1236">D9A3430B-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1237">D9A3430C-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1238">D9A3430D-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1239">D9A3430E-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<product-code version="3.10.1240">D9A3430F-A7E3-4FDE-ADDA-B7DFD264080A</product-code>
+		<!-- 3.11.1300 -->
+		<product-code version="3.11.1300">A12A36D0-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1301">A12A36D1-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1302">A12A36D2-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1303">A12A36D3-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1304">A12A36D4-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1305">A12A36D5-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1306">A12A36D6-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1307">A12A36D7-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1308">A12A36D8-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1309">A12A36D9-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1310">A12A36DA-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1311">A12A36DB-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1312">A12A36DC-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1313">A12A36DD-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1314">A12A36DE-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1315">A12A36DF-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1316">A12A36E0-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1317">A12A36E1-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1318">A12A36E2-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1319">A12A36E3-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1320">A12A36E4-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1321">A12A36E5-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1322">A12A36E6-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1323">A12A36E7-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1324">A12A36E8-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1325">A12A36E9-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1326">A12A36EA-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1327">A12A36EB-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1328">A12A36EC-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1329">A12A36ED-ACB7-11D9-8E75-000D614181EB</product-code>
+		<product-code version="3.11.1330">A12A36EE-ACB7-11D9-8E75-000D614181EB</product-code>
+		<!-- 3.12.1351 (do not use these versions)-->
+		<product-code version="3.12.1351">62FC170D-77B5-44F0-8725-245CA5B80D27</product-code>
+		<product-code version="3.12.1352">EB33EAC6-363B-41D3-8595-AABBAA5E8420</product-code>
+		<product-code version="3.12.1353">C354A29F-1553-4297-A89A-34854FEE3BDA</product-code>
+		<product-code version="3.12.1354">868F8AD1-3C64-4D7B-A3EC-98CB31EABF9C</product-code>
+		<product-code version="3.12.1355">FDDBA6AB-8C83-47B0-A91B-F8E194707E1A</product-code>
+		<product-code version="3.12.1356">CC5879A2-E8F7-4219-9BBE-83FB8B2215B7</product-code>
+		<product-code version="3.12.1357">73105015-F88E-4362-8CDE-51AAA04F5E2A</product-code>
+		<product-code version="3.12.1358">0300EC93-8F5B-4E5C-8B27-4E9E0EE20411</product-code>
+		<product-code version="3.12.1359">66ED6A7A-A857-4996-ADE7-4E2CB8D5956C</product-code>
+		<product-code version="3.12.1360">309AF28D-5AF2-4945-ADDB-87EB2B507F56</product-code>
+		<product-code version="3.12.1361">253D6B8A-DA8D-40B3-BE4F-2F4F6067A345</product-code>
+		<product-code version="3.12.1362">A4D00271-7ABA-4E51-AD03-1537682AEB6E</product-code>
+		<product-code version="3.12.1363">BF64D044-CF8D-4EFE-88BD-757BA2C662D6</product-code>
+		<product-code version="3.12.1364">4C25B0E0-AB2D-4AC8-909F-7B7B385CD205</product-code>
+		<product-code version="3.12.1365">B26D9108-EB05-4D11-9E72-46947607FE9B</product-code>
+		<product-code version="3.12.1366">9C30B38B-E52A-4254-81B2-684750A6B3A0</product-code>
+		<product-code version="3.12.1367">7C40C9DF-22DC-4181-A085-AE0EBEE3017A</product-code>
+		<product-code version="3.12.1368">DC004088-D416-40B1-B474-887DCA206CBC</product-code>
+		<product-code version="3.12.1369">D2AF6C9A-607A-401B-9399-F8CAC16EAF18</product-code>
+		<product-code version="3.12.1370">9BF3B6A4-3A03-4CF3-9419-CD08DEF9058E</product-code>
+
+		<!-- 3.20.1501 -->
+		<product-code version="3.20.1501" platform="i386">47323336-EF3D-46FB-8AEF-6506F6311641</product-code>
+		<product-code version="3.20.1502" platform="i386">036EA4B0-8771-43F6-88A6-1F9CECD5994A</product-code>
+		<product-code version="3.20.1503" platform="i386">CD389911-5A43-49B3-8D23-8ADEB8FA3A2B</product-code>
+		<product-code version="3.20.1504" platform="i386">3A74EB50-6776-466A-A8CC-3E53A97F99DF</product-code>
+		<product-code version="3.20.1505" platform="i386">6F13F538-9AE5-405F-8A13-788321A0C240</product-code>
+		<product-code version="3.20.1506" platform="i386">361CB1DA-10A1-448C-A75E-E91FB07D900E</product-code>
+		<product-code version="3.20.1507" platform="i386">4DD26D4E-CDA7-4A80-A5E2-FBB2F95FFC80</product-code>
+		<product-code version="3.20.1508" platform="i386">BE8295A1-8261-4C44-BB9E-C7B06B2D2E62</product-code>
+		<product-code version="3.20.1509" platform="i386">1618D14C-C260-4C8D-BAE8-E8F1AE747FD8</product-code>
+		<product-code version="3.20.1510" platform="i386">15C3C69C-2449-473C-982E-69683D271D67</product-code>
+		<product-code version="3.20.1511" platform="i386">2CDA7EAB-B5E7-483B-ADFA-C6B6589844B6</product-code>
+		<product-code version="3.20.1512" platform="i386">6D57FEAD-05C9-44EB-91E9-3DDDDF00F414</product-code>
+		<product-code version="3.20.1513" platform="i386">92EDB083-C931-4081-A333-55861E88E997</product-code>
+		<product-code version="3.20.1514" platform="i386">E874862F-707D-49D7-9778-3637006E72B6</product-code>
+		<product-code version="3.20.1515" platform="i386">AD662E8C-9640-44C6-AA3D-1D0F393C9D60</product-code>
+		<product-code version="3.20.1516" platform="i386">96609785-C863-4307-8B59-C2E506B923C0</product-code>
+		<product-code version="3.20.1517" platform="i386">5197322B-3451-461E-931B-FCF25A9FD831</product-code>
+		<product-code version="3.20.1518" platform="i386">240E105E-C407-4C7A-BFA2-23F216DE76EC</product-code>
+		<product-code version="3.20.1519" platform="i386">705E4E46-FF4A-4E1B-80D6-BC2C454E8A53</product-code>
+		<product-code version="3.20.1520" platform="i386">EC1F8FB9-8608-4640-854B-47B29D24463A</product-code>
+		<product-code version="3.20.1521" platform="i386">2FA770B5-E51E-447E-8426-9074D358E044</product-code>
+		<product-code version="3.20.1522" platform="i386">4A302B0F-A4FA-4FCB-BB3E-EC39A841BAB4</product-code>
+		<product-code version="3.20.1523" platform="i386">07C16B8B-AE11-4515-888F-0BD2E0A9F2AD</product-code>
+		<product-code version="3.20.1524" platform="i386">3899229F-6A7A-43FE-BF34-424D6851559D</product-code>
+		<product-code version="3.20.1525" platform="i386">FCA394ED-0C5A-4E57-AE59-3DD5E45F1913</product-code>
+		<product-code version="3.20.1526" platform="i386">2E5EAB97-3926-4FA6-B12D-C8D4FA95F5C1</product-code>
+		<product-code version="3.20.1527" platform="i386">2D9B67FF-855F-49F2-B174-9A4E78088747</product-code>
+		<product-code version="3.20.1528" platform="i386">738B6229-A2BF-49BB-92C6-5328F49DAACD</product-code>
+		<product-code version="3.20.1529" platform="i386">C485D7E3-70E4-4411-B4BC-BF8E47A78013</product-code>
+		<product-code version="3.20.1530" platform="i386">241885FE-68E7-4184-BE12-22756FCA3F76</product-code>
+		<product-code version="3.20.1531" platform="i386">650E7ED4-08BA-4401-982E-F24147CCD3F5</product-code>
+
+		<!-- amd64 requires new product code -->
+		<product-code version="3.20.1501" platform="amd64">BEC740EA-2700-4723-A564-8E466215DBB3</product-code>
+		<product-code version="3.20.1502" platform="amd64">582E62F5-AF45-426A-9DBE-776E6FE8D046</product-code>
+		<product-code version="3.20.1503" platform="amd64">E8796B5C-6C3F-458B-9C1E-12B87C9029FC</product-code>
+		<product-code version="3.20.1504" platform="amd64">37F640DD-EC27-4554-AB9C-366343DB4421</product-code>
+		<product-code version="3.20.1505" platform="amd64">88AE05AD-BCA0-435B-8CB8-40FAD99BFF7E</product-code>
+		<product-code version="3.20.1506" platform="amd64">462A6D48-8B2D-4F9D-AECF-EE2E9E7D1F70</product-code>
+		<product-code version="3.20.1507" platform="amd64">DD0DC525-91B2-48AD-8194-2618B8B238CC</product-code>
+		<product-code version="3.20.1508" platform="amd64">5838FD8C-7FD2-4A9C-AECE-421EA3BEEC3E</product-code>
+		<product-code version="3.20.1509" platform="amd64">51C71D31-ACCD-423A-910A-0C39F8773C96</product-code>
+		<product-code version="3.20.1510" platform="amd64">C7454A68-00A6-4427-863D-C0B15F55E959</product-code>
+		<product-code version="3.20.1511" platform="amd64">ACF4423D-8304-445C-80D7-676220C8D852</product-code>
+		<product-code version="3.20.1512" platform="amd64">37E48ABB-A82F-4FB9-AAF7-92E8F6346EC1</product-code>
+		<product-code version="3.20.1513" platform="amd64">00FA56D4-7FF8-4267-8EC0-EDCF0480B9EB</product-code>
+		<product-code version="3.20.1514" platform="amd64">F7176D21-C2AD-4DD7-8C53-83AA78282D74</product-code>
+		<product-code version="3.20.1515" platform="amd64">49CE101D-CD66-4D8F-B553-957C74E6B094</product-code>
+		<product-code version="3.20.1516" platform="amd64">369DB2CA-6241-41E3-8724-17FD32354372</product-code>
+		<product-code version="3.20.1517" platform="amd64">5441F71C-9004-4939-B1B6-6CB5FD4CC32D</product-code>
+		<product-code version="3.20.1518" platform="amd64">5E8026E9-4CD1-4D14-8388-7504126624D2</product-code>
+		<product-code version="3.20.1519" platform="amd64">495E025A-0D35-421C-8D7F-26F8044B62DF</product-code>
+		<product-code version="3.20.1520" platform="amd64">A16B5C98-4E16-4DE7-8FF5-481A97708A9C</product-code>
+		<product-code version="3.20.1521" platform="amd64">A36E571B-A3A8-41CF-AA14-962DA065B945</product-code>
+		<product-code version="3.20.1522" platform="amd64">6F593268-78EC-49FF-B120-320A84032CDC</product-code>
+		<product-code version="3.20.1523" platform="amd64">E8018B1E-3A25-44F2-9723-BF8A130CD578</product-code>
+		<product-code version="3.20.1524" platform="amd64">AD6AECB4-89ED-4E8A-8596-2FE781984B71</product-code>
+		<product-code version="3.20.1525" platform="amd64">A8B12B7B-94A3-4312-A657-C6CC41F6C2E5</product-code>
+		<product-code version="3.20.1526" platform="amd64">79B3F731-3822-41C4-A560-6D5C644B3C51</product-code>
+		<product-code version="3.20.1527" platform="amd64">C71B87B1-5BC8-44DD-B474-ED23F5DED14C</product-code>
+		<product-code version="3.20.1528" platform="amd64">747BF13E-37E8-4563-93BB-0176110CE979</product-code>
+		<product-code version="3.20.1529" platform="amd64">48682E7E-A9EB-4AE6-922D-CEB05E3A5A9B</product-code>
+		<product-code version="3.20.1530" platform="amd64">C4CE676B-BE1E-433D-A8FD-7E8F08E4F7B1</product-code>
+		<product-code version="3.20.1531" platform="amd64">CE1EBEBA-D52F-4578-AB9B-5101E5C439C6</product-code>
+
+		<!-- 3.30 product codes -->
+		<product-code version="3.30.1601" platform="i386">19F951F5-B7DA-4B08-BE7A-DF675EE6DD35</product-code>
+		<product-code version="3.30.1601" platform="amd64">7D604567-45D9-47CD-AE37-DDFFE158E436</product-code>
+		<product-code version="3.30.1602" platform="i386">CE84C180-E0A7-4B64-A661-4C397E11F03E</product-code>
+		<product-code version="3.30.1602" platform="amd64">CA987B93-8ACB-419E-8BD1-2F1D941CCBEF</product-code>
+		<product-code version="3.30.1603" platform="i386">4B777E9B-B820-4FAC-A79B-ADF76A8CAA7E</product-code>
+		<product-code version="3.30.1603" platform="amd64">E413EF7C-221A-459C-9D72-C8E8901ECF77</product-code>
+		<product-code version="3.30.1604" platform="i386">057D01C8-9761-4533-9D2D-2C100E171DAD</product-code>
+		<product-code version="3.30.1604" platform="amd64">A284D222-5100-4E7F-878B-73D88F7A57EA</product-code>
+		<product-code version="3.30.1605" platform="i386">E9690881-3A5E-44F4-888C-EACAA4EAC3CA</product-code>
+		<product-code version="3.30.1605" platform="amd64">9E1F5F2F-D781-4760-9A70-398430269A84</product-code>
+		<product-code version="3.30.1606" platform="i386">69C9BC52-D131-4E4A-891E-BC6F55D79921</product-code>
+		<product-code version="3.30.1606" platform="amd64">412A097C-540F-42B0-BD41-08A073562C77</product-code>
+		<product-code version="3.30.1607" platform="i386">E8EE8B7F-557B-4EEE-948D-6D98D8F0BD47</product-code>
+		<product-code version="3.30.1607" platform="amd64">CDDD7A68-2F0E-4A6C-957D-CE797195349D</product-code>
+		<product-code version="3.30.1608" platform="i386">D783D799-1D57-4BDA-A4EC-42C41FE29D67</product-code>
+		<product-code version="3.30.1608" platform="amd64">5FA7BA23-D25D-4F63-A6D8-CBD79AADC889</product-code>
+		<product-code version="3.30.1609" platform="i386">D4673415-F77F-45EF-A99D-426437ABAE1C</product-code>
+		<product-code version="3.30.1609" platform="amd64">8E4E983C-D1CF-44D8-B2D6-7028F546FC00</product-code>
+		<product-code version="3.30.1610" platform="i386">FD1A58EE-B244-4D98-806D-4A8C9D19051D</product-code>
+		<product-code version="3.30.1610" platform="amd64">C59D0F5B-D4C8-49F4-A773-C44C7CEB06B6</product-code>
+		<product-code version="3.30.1611" platform="i386">45B9CD08-B06A-44C8-A5B3-A3DFE4C0287D</product-code>
+		<product-code version="3.30.1611" platform="amd64">F09374F8-F49A-42BD-903F-F22B7FE45CDF</product-code>
+		<product-code version="3.30.1612" platform="i386">6B5FA1EA-A857-4970-90C5-04B2C76DCC2B</product-code>
+		<product-code version="3.30.1612" platform="amd64">F4204D3A-C48D-4B17-877D-8C19B356A9BD</product-code>
+		<product-code version="3.30.1613" platform="i386">19945D86-7AB6-4B80-8AF0-2DEDB7B50B20</product-code>
+		<product-code version="3.30.1613" platform="amd64">5C0BF71C-C614-4F28-A42F-F6C9087A5F3A</product-code>
+		<product-code version="3.30.1614" platform="i386">2A449700-078A-445C-AE2B-FF0CEEF2CFEC</product-code>
+		<product-code version="3.30.1614" platform="amd64">16FF4967-999B-4F25-B2C8-93D0C4B8CD0A</product-code>
+		<product-code version="3.30.1615" platform="i386">F3E81967-57F7-4F04-BF17-B8F937C3519F</product-code>
+		<product-code version="3.30.1615" platform="amd64">0E1CDE5E-ACEE-42EF-B1A2-22DEAF83054A</product-code>
+		<product-code version="3.30.1616" platform="i386">ED638795-4ACC-4A6D-9B14-CA01E8D4FD96</product-code>
+		<product-code version="3.30.1616" platform="amd64">C7EA3210-1E14-446E-8252-BC6F4154D769</product-code>
+		<product-code version="3.30.1617" platform="i386">C96E2BFB-A085-44F2-87EE-EE158BA172D1</product-code>
+		<product-code version="3.30.1617" platform="amd64">C4E8FEF4-5523-4648-A6EB-E819FFA9950D</product-code>
+		<product-code version="3.30.1618" platform="i386">43FD06DF-3E0A-43C5-AED5-77AFD9E91AD7</product-code>
+		<product-code version="3.30.1618" platform="amd64">46E64762-EE64-43A2-85C5-92554D370D4C</product-code>
+		<product-code version="3.30.1619" platform="i386">2D0A0495-A164-46D9-A521-096C31137EC2</product-code>
+		<product-code version="3.30.1619" platform="amd64">B4ED5E55-36D2-4DED-8A93-64C74CB749B1</product-code>
+		<product-code version="3.30.1620" platform="i386">924A2B74-749C-4DEF-821B-4C14784D379B</product-code>
+		<product-code version="3.30.1620" platform="amd64">73026560-26FA-46CD-9AA6-659842259E34</product-code>
+		<product-code version="3.30.1621" platform="i386">FFD4ADB5-4A0C-455B-B103-B5B8D084D749</product-code>
+		<product-code version="3.30.1621" platform="amd64">C7C53D68-CE95-45CF-B644-0AB4E2D7B5AA</product-code>
+		<product-code version="3.30.1622" platform="i386">ACC4A65D-0484-454D-A48C-9C1567B5B1E6</product-code>
+		<product-code version="3.30.1622" platform="amd64">8CE0127C-1E47-4754-9EF3-501EF3B88F00</product-code>
+		<product-code version="3.30.1623" platform="i386">3DB2C359-BDB1-4CD7-A8E5-3F445FDDE2B2</product-code>
+		<product-code version="3.30.1623" platform="amd64">B59E905E-9514-49D1-8BDF-99AEA04137AB</product-code>
+		<product-code version="3.30.1624" platform="i386">4AC06349-BF0A-445A-BA9A-809D4A0628D7</product-code>
+		<product-code version="3.30.1624" platform="amd64">23974D7A-311D-4265-9909-249FECB27ADB</product-code>
+		<product-code version="3.30.1625" platform="i386">14371B99-FE93-4779-BC51-F5D3E39126DB</product-code>
+		<product-code version="3.30.1625" platform="amd64">E631F4DB-A777-49DB-A299-908886A18D69</product-code>
+		<product-code version="3.30.1626" platform="i386">7D5E7B94-41B4-4104-A1F4-0FF661110266</product-code>
+		<product-code version="3.30.1626" platform="amd64">93AF6711-5E25-4785-8404-30D9876CC77F</product-code>
+		<product-code version="3.30.1627" platform="i386">9FE0ADBD-AB6F-4235-9731-1CC864F7C136</product-code>
+		<product-code version="3.30.1627" platform="amd64">37C2916E-56BC-46C7-9B27-B8D870EA7B66</product-code>
+		<product-code version="3.30.1628" platform="i386">47C9F5C4-7B1F-4DAF-A84B-B33582DB1E01</product-code>
+		<product-code version="3.30.1628" platform="amd64">C3E81AD8-EFC2-47A1-B32D-D77E7D65CAD3</product-code>
+		<product-code version="3.30.1629" platform="i386">9B37A14A-03A6-497C-B63F-2B110D1A2B26</product-code>
+		<product-code version="3.30.1629" platform="amd64">0A61D5CD-1BDE-492A-80E0-B2076D0525EE</product-code>
+		<product-code version="3.30.1630" platform="i386">67B00CB6-DDDC-4CB1-A9D0-34F0B1A8B672</product-code>
+		<product-code version="3.30.1630" platform="amd64">901B4C11-14C0-4CFA-99BB-2B1E76D73623</product-code>
+
+
+		<!-- deprecated -->
+		<product-code version="3.20.2001">9908F294-0D8E-49BA-B706-62BB184331DA</product-code>
+		<product-code version="3.20.2002">3C7F97CF-8A42-4DE4-98C0-14F0799B8628</product-code>
+		<product-code version="3.20.2003">C1F03EAF-F2B7-4660-8089-800E65E7244E</product-code>
+		<product-code version="3.20.2004">4938F052-6EAE-40DA-8759-A72801D1A94F</product-code>
+		<product-code version="3.20.2005">45297C6B-0AC3-41C7-8543-CEF815978062</product-code>
+		<product-code version="3.20.2006">3A75D399-F046-4526-982E-5AFFEC50063D</product-code>
+		<product-code version="3.20.2007">0534BB41-7DF1-49CA-BC47-7815BAB4A64D</product-code>
+		<product-code version="3.20.2008">894DB5A8-A708-411E-9783-5EE4C6297A8D</product-code>
+		<product-code version="3.20.2009">205B0996-2EC6-4EFE-9216-5A2490FA6F96</product-code>
+		<product-code version="3.20.2010">8604650D-AEA9-4F49-BBA1-68593FA5DA26</product-code>
+		<product-code version="3.20.2011">6C907992-4EE4-4693-8D77-2B8B33FE43EB</product-code>
+		<product-code version="3.20.2012">7CB99FA6-94A1-49E7-81D3-D7055CB159BE</product-code>
+		<product-code version="3.20.2013">9468235F-4707-4E5A-92C0-CEBB6A5CDD56</product-code>
+		<product-code version="3.20.2014">7C00E6F1-6965-4495-8DEA-DFC92E9C3664</product-code>
+		<product-code version="3.20.2015">FB43AE56-B12B-4F31-BAFE-65FF94F1BB20</product-code>
+		<product-code version="3.20.2016">E41C7ABE-71A3-4538-9E1C-166FC1CBF64D</product-code>
+		<product-code version="3.20.2017">D24EF59F-20DB-4889-80F8-5B9DE3C081FE</product-code>
+		<product-code version="3.20.2018">7F547469-6D6E-479E-A01F-92D70D83779A</product-code>
+		<product-code version="3.20.2019">B3E80B30-75CB-402C-967C-9782A9D8E0D0</product-code>
+		<product-code version="3.20.2020">B5075A64-AC21-456C-94DF-8F90AE2A7028</product-code>
+	</product-codes>
+</setup>

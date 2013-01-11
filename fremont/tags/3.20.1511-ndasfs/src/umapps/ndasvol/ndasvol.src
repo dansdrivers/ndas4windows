@@ -1,0 +1,9 @@
+LIBRARY ndasvol
+EXPORTS
+	NdasGetNdasLocationForVolume
+	NdasEnumNdasLocationsForVolume
+	NdasRequestDeviceEjectW
+	NdasIsNdasPathW
+	NdasIsNdasPathA
+	NdasIsNdasVolume
+	SetTrace=NdasVolSetTrace PRIVATE

@@ -1,0 +1,33 @@
+LANSCSI_BUS=LanscsiBus
+
+NETDISK_BINPLACE_TYPE=sys
+
+TARGETNAME=lanscsibus
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+#TARGETPATH=..\..\sys\$(BUILD_ALT_DIR)
+
+!if 0
+C_DEFINES = -D__LANSCSI_BUS__
+!endif
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+NTTARGETFILE0=mofcomp
+
+INCLUDES=..\inc;..\inc\kernel
+RCOPTIONS=/i ..\inc;\inc\kernel
+
+# include drivers.mak right before SOURCES
+!INCLUDE "..\inc\drivers.mak"
+
+SOURCES=	busenum.rc \
+	busenum.c \
+	pnp.c \
+	power.c \
+	buspdo.c \
+	wmi.c \
+	LanscsiBus.c

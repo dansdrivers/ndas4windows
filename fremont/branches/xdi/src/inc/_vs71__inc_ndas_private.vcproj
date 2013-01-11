@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="7.10" Name="_inc_ndas_private" ProjectGUID="{DD7B441A-805F-4BEF-8651-772B4AC69E53}" RootNamespace="_inc_ndas_private" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug (x64)|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release (x64)|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+  <File RelativePath=".\autores.h" /><File RelativePath=".\basetsdex.h" /><File RelativePath=".\binparams.h" /><File RelativePath=".\des.h" /><File RelativePath=".\dirs" /><File RelativePath=".\hash.h" /><File RelativePath=".\hdreg.h" /><File RelativePath=".\lanscsi.h" /><File RelativePath=".\lanscsiop.h" /><File RelativePath=".\lfsfiltctl.h" /><File RelativePath=".\lfsfilterpublic.h" /><File RelativePath=".\lpxcs.h" /><File RelativePath=".\lpxtrans.h" /><File RelativePath=".\lsbusctl.h" /><File RelativePath=".\lsbusioctl.h" /><File RelativePath=".\lsminiportioctl.h" /><File RelativePath=".\lsprotoidespec.h" /><File RelativePath=".\lsprotospec.h" /><File RelativePath=".\lurdesc.h" /><File RelativePath=".\ndas.ver" /><File RelativePath=".\ndascommon.ver" /><File RelativePath=".\ndasverp.h" /><File RelativePath=".\prodver.h" /><File RelativePath=".\rijndael-api-fst.h" /><File RelativePath=".\rofiltctl.h" /><File RelativePath=".\rofilterioctl.h" /><File RelativePath=".\scrc32.h" /><File RelativePath=".\socketlpx.h" /><File RelativePath=".\xdbgprn.h" /><File RelativePath=".\xdebug.h" /><File RelativePath=".\_project.xml" /><Filter Name=".lsp" Filter="" UniqueIdentifier="{4C52BA01-11FB-4871-BCBF-DA8F2DDC5219}"><File RelativePath=".\lsp\dirs" /><File RelativePath=".\lsp\lsp.h" /><File RelativePath=".\lsp\lsp_spec.h" /><File RelativePath=".\lsp\lsp_type.h" /><File RelativePath=".\lsp\lsp_util.h" /></Filter><Filter Name=".ndas" Filter="" UniqueIdentifier="{58FB8EB5-DF5A-44FD-A938-12D445BDAC05}"><File RelativePath=".\ndas\dirs" /><File RelativePath=".\ndas\ndasautoregscope.h" /><File RelativePath=".\ndas\ndascmd.h" /><File RelativePath=".\ndas\ndascmddbg.h" /><File RelativePath=".\ndas\ndascntenc.h" /><File RelativePath=".\ndas\ndasctype.h" /><File RelativePath=".\ndas\ndasdib.h" /><File RelativePath=".\ndas\ndaserror.h" /><File RelativePath=".\ndas\ndaseventex.h" /><File RelativePath=".\ndas\ndasevent_str.h" /><File RelativePath=".\ndas\ndashix.h" /><File RelativePath=".\ndas\ndashixnotify.h" /><File RelativePath=".\ndas\ndasid.h" /><File RelativePath=".\ndas\ndasidenc.h" /><File RelativePath=".\ndas\ndassyscfg.h" /><File RelativePath=".\ndas\ndastypeex.h" /><File RelativePath=".\ndas\ndastype_str.h" /><File RelativePath=".\ndas\ndupdate.h" /></Filter><Filter Name=".xs" Filter="" UniqueIdentifier="{EB7B2E87-A3A2-4CDC-8A41-B29CC036D81F}"><File RelativePath=".\xs\xautores.h" /><File RelativePath=".\xs\xcrypt_encrypt.h" /><File RelativePath=".\xs\xcrypt_hash.h" /><File RelativePath=".\xs\xmuisel.h" /><File RelativePath=".\xs\xregcfg.h" /><File RelativePath=".\xs\xstrhelp.h" /></Filter></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

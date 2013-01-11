@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mc>
+  <messageId type="DWORD" />
+  <facilities>
+    <facility name="NDAS" value="0x00F" />
+    <facility name="NDASUSER" value="0x001" />
+    <facility name="NDASCOMM" value="0x002" />
+    <facility name="NDASOP" value="0x003" />
+    <facility name="NDASPATCH" value="0x004" />
+    <facility name="NDASVOL" value="0x005" />
+    <facility name="NDASSVC" value="0x010" />
+    <facility name="NDASDM" value="0x110" />
+    <facility name="CONFIGRET" value="0x1F0" />
+    <facility name="EVT_NDASSVC" value="0xF00" />
+  </facilities>
+  <severities>
+    <severity name="Success" value="0x0" code="STATUS_SEVERITY_SUCCESS" />
+    <severity name="Informational" value="0x1" code="STATUS_SEVERITY_INFORMATIONAL" />
+    <severity name="Warning" value="0x2" code="STATUS_SEVERITY_WARNING" />
+    <severity name="Error" value="0x3" code="STATUS_SEVERITY_ERROR" />
+  </severities>
+  <languages>
+    <language name="NEU" value="0" output="ndasmsg_neu" />
+    <language name="ENU" value="0x409" output="ndasmsg_enu" />
+    <language name="CHS" value="0x804" output="ndasmsg_chs" />
+    <language name="DEU" value="0x407" output="ndasmsg_deu" />
+    <language name="ESN" value="0xC0A" output="ndasmsg_esn" />
+    <language name="FRA" value="0x40C" output="ndasmsg_fra" />
+    <language name="ITA" value="0x410" output="ndasmsg_ita" />
+    <language name="JPN" value="0x411" output="ndasmsg_jpn" />
+    <language name="KOR" value="0x412" output="ndasmsg_kor" />
+    <language name="PTG" value="0x816" output="ndasmsg_ptg" />
+
+    <language name="DAN" value="0x406" output="ndasmsg_dan" />
+    <language name="NLD" value="0x413" output="ndasmsg_nld" />
+    <language name="NOR" value="0x414" output="ndasmsg_nor" />
+    <language name="SVE" value="0x41D" output="ndasmsg_sve" />
+  </languages>
+  <messages>
+    <!-- NDASSVC -->
+    <message id="0x001" severity="Error" facility="NDAS" symbolicName="NDAS_ERROR_INVALID_ID_FORMAT">
+      <text lang="ENU">NDAS device ID or Key is invalid.</text>
+    </message>
+		<message id="0x002" severity="Error" facility="NDAS" symbolicName="NDAS_ERROR_INVALID_BACL_ON_DISK">
+			<text lang="ENU">BACL data on the disk is invalid.</text>
+		</message>
+		<message id="0x003" severity="Error" facility="NDAS" symbolicName="NDAS_ERROR_NEWER_DIB_VERSION">
+			<text lang="ENU">DIB version on the disk is higher than the supported one.</text>
+		</message>
+		<message id="0x021" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_DEVICE_ENTRY_NOT_FOUND">
+      <text lang="ENU">NDAS Device Entry Not Found.</text>
+    </message>
+    <message id="0x022" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_UNITDEVICE_ENTRY_NOT_FOUND">
+      <text lang="ENU">NDAS Unit Device Entry Not Found.</text>
+    </message>
+    <message id="0x023" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_LOGICALDEVICE_ENTRY_NOT_FOUND">
+      <text lang="ENU">NDAS Logical Device Entry Not Found.</text>
+    </message>
+    <message id="0x24" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_CANNOT_DISABLE_MOUNTED_DEVICE">
+      <text lang="ENU">Disabling the NDAS device containing any of the mounted unit device is not allowed.</text>
+    </message>
+    <message id="0x031" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_CANNOT_UNREGISTER_ENABLED_DEVICE">
+      <text lang="ENU">Unregistering an enabled NDAS device is not permitted.</text>
+    </message>
+    <message id="0x032" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_INVALID_SLOT_NUMBER">
+      <text lang="ENU">Invalid NDAS slot number.</text>
+    </message>
+    <message id="0x033" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_SLOT_ALREADY_OCCUPIED">
+      <text lang="ENU">Requested slot is used by another device.</text>
+    </message>
+    <message id="0x034" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_DUPLICATE_DEVICE_ENTRY">
+      <text lang="ENU">The requested NDAS device already exists.</text>
+    </message>
+    <message id="0x035" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_DEVICE_ENTRY_SLOT_FULL">
+      <text lang="ENU">No more NDAS device slot is available.</text>
+    </message>
+    <message id="0x041" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_INITIALIZED">
+      <text lang="ENU">NDAS Logical device is not initialized.</text>
+    </message>
+    <message id="0x042" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MEMBER_MISSING">
+      <text lang="ENU">Some NDAS logical device members are missing in the entry.</text>
+    </message>
+    <message id="0x043" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_MOUNTED">
+      <text lang="ENU">NDAS Logical device is not mounted.</text>
+    </message>
+    <message id="0x044" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_CONFLICT_LOGICALDEVICE_ENTRY">
+      <text lang="ENU">NDAS Logical device entry is conflicts with existing entries.</text>
+    </message>
+    <message id="0x045" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_DUPLICATE_LOGICALDEVICE_ENTRY">
+      <text lang="ENU">The requested NDAS logical device already exists.</text>
+    </message>
+    <message id="0x046" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_LOGICALDEVICE_SLOT_FULL">
+      <text lang="ENU">No more NDAS logical device slot is available.</text>
+    </message>
+    <message id="0x047" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_UNSUPPORTED_LOGICALDEVICE_TYPE">
+      <text lang="ENU">Unsupported NDAS logical device type.</text>
+    </message>
+    <message id="0x048" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_LOGICALDEVICE_INVALID_BIND_INFORMATION">
+      <text lang="ENU">The bind information in NDAS device is invalid.</text>
+    </message>
+    <message id="0x049" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MODIFIED_BIND_INFORMATION">
+      <text lang="ENU">The bind information in NDAS device is changed.</text>
+    </message>
+    <message id="0x050" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+      <text lang="ENU">Granted access for the NDAS logical device is insufficient to complete the operation.</text>
+    </message>
+    <message id="0x051" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+      <text lang="ENU">Requested access to the NDAS logical device is failed.</text>
+    </message>
+    <message id="0x052" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_UNMOUNTED">
+      <text lang="ENU">NDAS logical device is not in a mountable status.</text>
+    </message>
+    <message id="0x053" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_UNITDEVICE_NOT_MOUNTED">
+      <text lang="ENU">NDAS Unit device is not mounted.</text>
+    </message>
+    <message id="0x061" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_HOST_INFO_NOT_FOUND">
+      <text lang="ENU">NDAS Host Information cannot be found.</text>
+    </message>
+    <message id="0x062" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_DEVICE_COMMUNICATION_FAILURE">
+      <text lang="ENU">Communication to the NDAS Device has failed.</text>
+    </message>
+    <message id="0x063" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_MULTIPLE_WRITE_ACCESS_NOT_ALLOWED">
+      <text lang="ENU">Multiple Write Access is not allowed for the specified NDAS unit device.</text>
+    </message>
+    <message id="0x064" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_INCOMPATIBLE_HOSTS_FOR_MULTIPLE_WRITE_ACCESS">
+      <text lang="ENU">Incompatible NDAS hosts for multiple write-access are found for the specified NDAS unit device.</text>
+    </message>
+    <message id="0x065" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NO_MORE_DVD_WRITE_ACCESS_INSTANCE_ALLOWED">
+      <text lang="ENU">No more than constrained instances of DVD Drives as Read/Write mode is allowed.</text>
+    </message>
+    <message id="0x066" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NDAS_LOGICALDEVICE_CORRUPTED_BIND_INFORMATION">
+      <text lang="ENU">The NDAS device is corrupted and need to be recovered before mounting.</text>
+    </message>
+    <message id="0x067" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_UNKNOWN_VENDOR_ID">
+      <text lang="ENU">The NDAS device ID cannot be used with the current version of the software. Upgrade the software to the most recent version or use the vendor-provided software.</text>
+    </message>
+		<message id="0x068" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_OPERATION_NOT_ALLOWED_WHILE_CONNECTING">
+			<text lang="ENU">The requested operation is not allowed while the system is connecting to the NDAS device.</text>
+		</message>
+		<message id="0x0E0" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+      <text lang="ENU">Command version is unsupported.</text>
+    </message>
+    <message id="0x0E1" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <message id="0x0C0" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+      <text lang="ENU">Unsupported Read-only filter version.</text>
+    </message>
+		<message id="0x0D0" severity="Error" facility="NDASSVC" symbolicName="NDASSVC_ERROR_INVALID_SERVICE_PARAMETER">
+			<text lang="ENU">Invalid service parameter.</text>
+		</message>
+		<!-- NDASUSER -->
+    <message id="0x01" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+      <text lang="ENU">Communication to the NDAS service failed.</text>
+    </message>
+    <message id="0x02" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+      <text lang="ENU">NDAS Device ID or Key is invalid.</text>
+    </message>
+    <message id="0x03" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+      <text lang="ENU">NDAS Device ID is invalid.</text>
+    </message>
+    <message id="0x04" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+      <text lang="ENU">NDAS Device Key is invalid.</text>
+    </message>
+    <message id="0xFF" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_PARAMETER">
+      <text lang="ENU">Invalid parameter.</text>
+    </message>
+    <message id="0x50" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+      <text lang="ENU">NDAS Logical device access denied.</text>
+    </message>
+    <message id="0x101" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+      <text lang="ENU">NDAS Service does not support the requested operation.</text>
+    </message>
+    <message id="0x102" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+      <text lang="ENU">Operation is invalid to the NDAS service.</text>
+    </message>
+    <message id="0x103" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+      <text lang="ENU">NDAS Service is terminating.</text>
+    </message>
+    <message id="0x104" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+      <text lang="ENU">Unsupported NDAS service version.</text>
+    </message>
+    <message id="0x200" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+      <text lang="ENU">Unsupport NDAS service event version.</text>
+    </message>
+    <message id="0x201" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+      <text lang="ENU">No more NDAS event callback is available.</text>
+    </message>
+    <message id="0x202" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+      <text lang="ENU">Invalid NDAS event callback handle.</text>
+    </message>
+    <message id="0x0E1" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <!-- NDASCOMM API -->
+    <message id="0x0000" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_INTERNAL">
+      <text lang="ENU">Internal error.</text>
+    </message>
+    <message id="0x0001" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <message id="0x0002" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_INVALID_PARAMETER">
+      <text lang="ENU">Invalid parameter.</text>
+    </message>
+    <message id="0x0003" severity="Warning" facility="NDASCOMM" symbolicName="NDASCOMM_WARNING_CONNECTION_FAIL">
+      <text lang="ENU">Connection failed to the NDAS device.</text>
+    </message>
+    <message id="0x0004" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_LOGIN_COMMUNICATION">
+      <text lang="ENU">Communication error during login process.</text>
+    </message>
+    <message id="0x0005" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RI_NOT_EXIST">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_RI_NOT_EXIST.</text>
+    </message>
+    <message id="0x0006" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RI_BAD_COMMAND">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.</text>
+    </message>
+    <message id="0x0007" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.</text>
+    </message>
+    <message id="0x0008" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</text>
+    </message>
+    <message id="0x0009" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_T_NOT_EXIST">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_T_NOT_EXIST.</text>
+    </message>
+    <message id="0x000A" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_T_BAD_COMMAND">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.</text>
+    </message>
+    <message id="0x000B" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_T_COMMAND_FAILED">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.</text>
+    </message>
+    <message id="0x000C" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_T_BROKEN_DATA">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.</text>
+    </message>
+    <message id="0x000D" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RI_AUTH_FAILED">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_RI_AUTH_FAILED.</text>
+    </message>
+    <message id="0x000E" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+      <text lang="ENU">Unknown error for login process.</text>
+    </message>
+    <message id="0x000F" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RW_USER_EXIST">
+      <text lang="ENU">The NDAS device is being used by another process(es) or host(s) with read-write access privilege.</text>
+    </message>
+    <message id="0x0010" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+      <text lang="ENU">Not enough memory to complete job.</text>
+    </message>
+    <message id="0x0011" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_PROTOCOL">
+      <text lang="ENU">Lanscsi protocol error.</text>
+    </message>
+    <message id="0xFFFF" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_INVALID_OPERATION">
+      <text lang="ENU">Invalid operation.</text>
+    </message>
+    <!-- NDASOP API -->
+    <message id="0x0001" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <message id="0x0002" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_DEVICE_FAIL">
+      <text lang="ENU">Accessing to the device is failed.</text>
+    </message>
+    <message id="0x0003" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NOT_SINGLE_DISK">
+      <text lang="ENU">The NDAS device must be a single disk to operate this job.</text>
+    </message>
+    <message id="0x0004" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+      <text lang="ENU">The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.</text>
+    </message>
+    <message id="0x0005" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NOT_BOUND_DISK">
+      <text lang="ENU">The NDAS device must be a bound disk to operate this job.</text>
+    </message>
+    <message id="0x0006" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_INVALID_PARAMETER">
+      <text lang="ENU">Invalid parameter.</text>
+    </message>
+    <message id="0x0007" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+      <text lang="ENU">Not enough memory to complete job.</text>
+    </message>
+    <message id="0x0008" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_INVALID_DISK_COUNT">
+      <text lang="ENU">Incorrect disk count to bind disks.</text>
+    </message>
+    <message id="0x0009" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_ALREADY_USED">
+      <text lang="ENU">The NDAS device is being used by another process(es) or host(s).</text>
+    </message>
+    <message id="0x000A" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+      <text lang="ENU">The NDAS device has invalid bind information to migrate.</text>
+    </message>
+    <message id="0x000B" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_BIND_SIZE_LIMIT">
+      <text lang="ENU">The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.</text>
+    </message>
+    <message id="0x000C" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+      <text lang="ENU">There is too many missing member to replace(repair) in bound disks.</text>
+    </message>
+    <message id="0x000D" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NO_MISSING_MEMBER">
+      <text lang="ENU">There is no missing NDAS device to replace(repair) in bound disks.</text>
+    </message>
+    <message id="0x000E" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_CRITICAL_REPAIR">
+      <text lang="ENU">There was a critical error while replacing(repairing) bound disks.</text>
+    </message>
+    <message id="0x000F" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_REPLACE_TOO_SMALL">
+      <text lang="ENU">Size of a replacement disk is too small.</text>
+    </message>
+    <message id="0x0010" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_BIND_UNSUPPORTED">
+      <text lang="ENU">This type of RAID does not support the requested command.</text>
+    </message>
+    <message id="0x0011" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NOT_ENOUGH_CAPACITY">
+      <text lang="ENU">The device does not have enough capacity to operate request command.</text>
+    </message>
+    <message id="0x0012" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_INVALID_RAID">
+      <text lang="ENU">The RAID is not valid anymore.</text>
+    </message>
+    <!-- NDASVOL -->
+    <message facility="NDASVOL" severity="Error" id="0x1" symbolicName="NDASVOL_ERROR_NON_NDAS_VOLUME">
+      <text lang="ENU">The specified volume is not related with the NDAS devices.</text>
+    </message>
+    <!-- NDASPATCH LIB -->
+    <message id="0x0B1" severity="Error" facility="NDASPATCH" symbolicName="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <!-- NDASDM - Drive Match Library -->
+    <message id="0x100" severity="Error" facility="NDASDM" symbolicName="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+      <text lang="ENU">Non-SCSI type device is found.</text>
+    </message>
+    <message id="0x102" severity="Error" facility="NDASDM" symbolicName="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+      <text lang="ENU">SRB IO CONTROL Error</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x101" symbolicName="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+      <text lang="ENU">The NDAS disk is encrypted and the corresponding NDAS system key is not registered in the system.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x102" symbolicName="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+      <text lang="ENU">NDAS system key does not match with the NDAS disk key.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x103" symbolicName="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+      <text lang="ENU">Invalid CEB CRC.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x104" symbolicName="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+      <text lang="ENU">Unsupported CEB Revision.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x105" symbolicName="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+      <text lang="ENU">CEB Key Length is invalid.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x106" symbolicName="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+      <text lang="ENU">Failed to read CEB.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x107" symbolicName="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+      <text lang="ENU">CE key generation failed.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Informational" id="0x108" symbolicName="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+      <text lang="ENU">A new NDAS Device is found from the network and is being registered.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Informational" id="0x109" symbolicName="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+      <text lang="ENU">Unsupported hardware version (%2) detected from the NDAS Device (%1).</text>
+    </message>
+    <!--
+    #define CR_SUCCESS                  (0x00000000)
+    #define CR_DEFAULT                  (0x00000001)
+    #define CR_OUT_OF_MEMORY            (0x00000002)
+    #define CR_INVALID_POINTER          (0x00000003)
+    #define CR_INVALID_FLAG             (0x00000004)
+    #define CR_INVALID_DEVNODE          (0x00000005)
+    #define CR_INVALID_DEVINST          CR_INVALID_DEVNODE
+    #define CR_INVALID_RES_DES          (0x00000006)
+    #define CR_INVALID_LOG_CONF         (0x00000007)
+    #define CR_INVALID_ARBITRATOR       (0x00000008)
+    #define CR_INVALID_NODELIST         (0x00000009)
+    #define CR_DEVNODE_HAS_REQS         (0x0000000A)
+    #define CR_DEVINST_HAS_REQS         CR_DEVNODE_HAS_REQS
+    #define CR_INVALID_RESOURCEID       (0x0000000B)
+    #define CR_DLVXD_NOT_FOUND          (0x0000000C)   // WIN 95 ONLY
+    #define CR_NO_SUCH_DEVNODE          (0x0000000D)
+    #define CR_NO_SUCH_DEVINST          CR_NO_SUCH_DEVNODE
+    #define CR_NO_MORE_LOG_CONF         (0x0000000E)
+    #define CR_NO_MORE_RES_DES          (0x0000000F)    
+    -->
+    <message facility="CONFIGRET" severity="Error" id="0x01" symbolicName="NDAS_CR_DEFAULT">
+      <text lang="ENU">CR_DEFAULT</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x02" symbolicName="NDAS_CR_OUT_OF_MEMORY">
+      <text lang="ENU">CR_OUT_OF_MEMORY</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x03" symbolicName="NDAS_CR_INVALID_POINTER">
+      <text lang="ENU">CR_INVALID_POINTER</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x04" symbolicName="NDAS_CR_INVALID_FLAG">
+      <text lang="ENU">CR_INVALID_FLAG</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x05" symbolicName="NDAS_CR_INVALID_DEVINST">
+      <text lang="ENU">CR_INVALID_DEVINST</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x06" symbolicName="NDAS_CR_INVALID_RES_DES">
+      <text lang="ENU">CR_INVALID_RES_DES</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x07" symbolicName="NDAS_CR_INVALID_LOG_CONF">
+      <text lang="ENU">CR_INVALID_LOG_CONF</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x08" symbolicName="NDAS_CR_INVALID_ARBITRATOR">
+      <text lang="ENU">CR_INVALID_ARBITRATOR</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x09" symbolicName="NDAS_CR_INVALID_NODELIST">
+      <text lang="ENU">CR_INVALID_NODELIST</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x0A" symbolicName="NDAS_CR_DEVINST_HAS_REQS">
+      <text lang="ENU">CR_DEVINST_HAS_REQS</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x0B" symbolicName="NDAS_CR_INVALID_RESOURCEID">
+      <text lang="ENU">CR_INVALID_RESOURCEID</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x0C" symbolicName="NDAS_CR_DLVXD_NOT_FOUND">
+      <text lang="ENU">CR_DLVXD_NOT_FOUND</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x0D" symbolicName="NDAS_CR_NO_SUCH_DEVINST">
+      <text lang="ENU">CR_NO_SUCH_DEVINST</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x0E" symbolicName="NDAS_CR_NO_MORE_LOG_CONF">
+      <text lang="ENU">CR_NO_MORE_LOG_CONF</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x0F" symbolicName="NDAS_CR_NO_MORE_RES_DES">
+      <text lang="ENU">CR_NO_MORE_RES_DES</text>
+    </message>
+    <!---
+    #define CR_ALREADY_SUCH_DEVNODE     (0x00000010)
+    #define CR_ALREADY_SUCH_DEVINST     CR_ALREADY_SUCH_DEVNODE
+    #define CR_INVALID_RANGE_LIST       (0x00000011)
+    #define CR_INVALID_RANGE            (0x00000012)
+    #define CR_FAILURE                  (0x00000013)
+    #define CR_NO_SUCH_LOGICAL_DEV      (0x00000014)
+    #define CR_CREATE_BLOCKED           (0x00000015)
+    #define CR_NOT_SYSTEM_VM            (0x00000016)   // WIN 95 ONLY
+    #define CR_REMOVE_VETOED            (0x00000017)
+    #define CR_APM_VETOED               (0x00000018)
+    #define CR_INVALID_LOAD_TYPE        (0x00000019)
+    #define CR_BUFFER_SMALL             (0x0000001A)
+    #define CR_NO_ARBITRATOR            (0x0000001B)
+    #define CR_NO_REGISTRY_HANDLE       (0x0000001C)
+    #define CR_REGISTRY_ERROR           (0x0000001D)
+    #define CR_INVALID_DEVICE_ID        (0x0000001E)
+    #define CR_INVALID_DATA             (0x0000001F)
+    -->
+    <message facility="CONFIGRET" severity="Error" id="0x10" symbolicName="NDAS_CR_ALREADY_SUCH_DEVINST">
+      <text lang="ENU">CR_ALREADY_SUCH_DEVINST</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x11" symbolicName="NDAS_CR_INVALID_RANGE_LIST">
+      <text lang="ENU">CR_INVALID_RANGE_LIST</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x12" symbolicName="NDAS_CR_INVALID_RANGE">
+      <text lang="ENU">CR_INVALID_RANGE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x13" symbolicName="NDAS_CR_FAILURE">
+      <text lang="ENU">CR_FAILURE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x14" symbolicName="NDAS_CR_NO_SUCH_LOGICAL_DEV">
+      <text lang="ENU">CR_NO_SUCH_LOGICAL_DEV</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x15" symbolicName="NDAS_CR_CREATE_BLOCKED">
+      <text lang="ENU">CR_CREATE_BLOCKED</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x16" symbolicName="NDAS_CR_NOT_SYSTEM_VM">
+      <text lang="ENU">CR_NOT_SYSTEM_VM</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x17" symbolicName="NDAS_CR_REMOVE_VETOED">
+      <text lang="ENU">CR_REMOVE_VETOED</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x18" symbolicName="NDAS_CR_APM_VETOED">
+      <text lang="ENU">CR_APM_VETOED</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x19" symbolicName="NDAS_CR_INVALID_LOAD_TYPE">
+      <text lang="ENU">CR_INVALID_LOAD_TYPE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x1A" symbolicName="NDAS_CR_BUFFER_SMALL">
+      <text lang="ENU">CR_BUFFER_SMALL</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x1B" symbolicName="NDAS_CR_NO_ARBITRATOR">
+      <text lang="ENU">CR_NO_ARBITRATOR</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x1C" symbolicName="NDAS_CR_NO_REGISTRY_HANDLE">
+      <text lang="ENU">CR_NO_REGISTRY_HANDLE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x1D" symbolicName="NDAS_CR_REGISTRY_ERROR">
+      <text lang="ENU">CR_REGISTRY_ERROR</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x1E" symbolicName="NDAS_CR_INVALID_DEVICE_ID">
+      <text lang="ENU">CR_INVALID_DEVICE_ID</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x1F" symbolicName="NDAS_CR_INVALID_DATA">
+      <text lang="ENU">CR_INVALID_DATA</text>
+    </message>
+    <!-- 20 -->
+    <!--
+    #define CR_INVALID_API              (0x00000020)
+    #define CR_DEVLOADER_NOT_READY      (0x00000021)
+    #define CR_NEED_RESTART             (0x00000022)
+    #define CR_NO_MORE_HW_PROFILES      (0x00000023)
+    #define CR_DEVICE_NOT_THERE         (0x00000024)
+    #define CR_NO_SUCH_VALUE            (0x00000025)
+    #define CR_WRONG_TYPE               (0x00000026)
+    #define CR_INVALID_PRIORITY         (0x00000027)
+    #define CR_NOT_DISABLEABLE          (0x00000028)
+    #define CR_FREE_RESOURCES           (0x00000029)
+    #define CR_QUERY_VETOED             (0x0000002A)
+    #define CR_CANT_SHARE_IRQ           (0x0000002B)
+    #define CR_NO_DEPENDENT             (0x0000002C)
+    #define CR_SAME_RESOURCES           (0x0000002D)
+    #define CR_NO_SUCH_REGISTRY_KEY     (0x0000002E)
+    #define CR_INVALID_MACHINENAME      (0x0000002F)   // NT ONLY
+    -->
+    <message facility="CONFIGRET" severity="Error" id="0x20" symbolicName="NDAS_CR_INVALID_API">
+      <text lang="ENU">CR_INVALID_API</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x21" symbolicName="NDAS_CR_DEVLOADER_NOT_READY">
+      <text lang="ENU">CR_DEVLOADER_NOT_READY</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x22" symbolicName="NDAS_CR_NEED_RESTART">
+      <text lang="ENU">CR_NEED_RESTART</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x23" symbolicName="NDAS_CR_NO_MORE_HW_PROFILES">
+      <text lang="ENU">CR_NO_MORE_HW_PROFILES</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x24" symbolicName="NDAS_CR_DEVICE_NOT_THERE">
+      <text lang="ENU">CR_DEVICE_NOT_THERE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x25" symbolicName="NDAS_CR_NO_SUCH_VALUE">
+      <text lang="ENU">CR_NO_SUCH_VALUE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x26" symbolicName="NDAS_CR_WRONG_TYPE">
+      <text lang="ENU">CR_WRONG_TYPE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x27" symbolicName="NDAS_CR_INVALID_PRIORITY">
+      <text lang="ENU">CR_INVALID_PRIORITY</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x28" symbolicName="NDAS_CR_NOT_DISABLEABLE">
+      <text lang="ENU">CR_NOT_DISABLEABLE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x29" symbolicName="NDAS_CR_FREE_RESOURCES">
+      <text lang="ENU">CR_FREE_RESOURCES</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x2A" symbolicName="NDAS_CR_QUERY_VETOED">
+      <text lang="ENU">CR_QUERY_VETOED</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x2B" symbolicName="NDAS_CR_CANT_SHARE_IRQ">
+      <text lang="ENU">CR_CANT_SHARE_IRQ</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x2C" symbolicName="NDAS_CR_NO_DEPENDENT">
+      <text lang="ENU">CR_NO_DEPENDENT</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x2D" symbolicName="NDAS_CR_SAME_RESOURCES">
+      <text lang="ENU">CR_SAME_RESOURCES</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x2E" symbolicName="NDAS_CR_NO_SUCH_REGISTRY_KEY">
+      <text lang="ENU">CR_NO_SUCH_REGISTRY_KEY</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x2F" symbolicName="NDAS_CR_INVALID_MACHINENAME">
+      <text lang="ENU">CR_INVALID_MACHINENAME</text>
+    </message>
+    <!-- 30 -->
+    <!--
+    #define CR_REMOTE_COMM_FAILURE      (0x00000030)   // NT ONLY
+    #define CR_MACHINE_UNAVAILABLE      (0x00000031)   // NT ONLY
+    #define CR_NO_CM_SERVICES           (0x00000032)   // NT ONLY
+    #define CR_ACCESS_DENIED            (0x00000033)   // NT ONLY
+    #define CR_CALL_NOT_IMPLEMENTED     (0x00000034)
+    #define CR_INVALID_PROPERTY         (0x00000035)
+    #define CR_DEVICE_INTERFACE_ACTIVE  (0x00000036)
+    #define CR_NO_SUCH_DEVICE_INTERFACE (0x00000037)
+    #define CR_INVALID_REFERENCE_STRING (0x00000038)
+    #define CR_INVALID_CONFLICT_LIST    (0x00000039)
+    #define CR_INVALID_INDEX            (0x0000003A)
+    #define CR_INVALID_STRUCTURE_SIZE   (0x0000003B)
+    -->
+    <message facility="CONFIGRET" severity="Error" id="0x30" symbolicName="NDAS_CR_REMOTE_COMM_FAILURE">
+      <text lang="ENU">CR_REMOTE_COMM_FAILURE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x31" symbolicName="NDAS_CR_MACHINE_UNAVAILABLE">
+      <text lang="ENU">CR_MACHINE_UNAVAILABLE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x32" symbolicName="NDAS_CR_NO_CM_SERVICES">
+      <text lang="ENU">CR_NO_CM_SERVICES</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x33" symbolicName="NDAS_CR_ACCESS_DENIED">
+      <text lang="ENU">CR_ACCESS_DENIED</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x34" symbolicName="NDAS_CR_CALL_NOT_IMPLEMENTED">
+      <text lang="ENU">CR_CALL_NOT_IMPLEMENTED</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x35" symbolicName="NDAS_CR_INVALID_PROPERTY">
+      <text lang="ENU">CR_INVALID_PROPERTY</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x36" symbolicName="NDAS_CR_DEVICE_INTERFACE_ACTIVE">
+      <text lang="ENU">CR_DEVICE_INTERFACE_ACTIVE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x37" symbolicName="NDAS_CR_NO_SUCH_DEVICE_INTERFACE">
+      <text lang="ENU">CR_NO_SUCH_DEVICE_INTERFACE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x38" symbolicName="NDAS_CR_INVALID_REFERENCE_STRING">
+      <text lang="ENU">CR_INVALID_REFERENCE_STRING</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x39" symbolicName="NDAS_CR_INVALID_CONFLICT_LIST">
+      <text lang="ENU">CR_INVALID_CONFLICT_LIST</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x3A" symbolicName="NDAS_CR_INVALID_INDEX">
+      <text lang="ENU">CR_INVALID_INDEX</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x3B" symbolicName="NDAS_CR_INVALID_STRUCTURE_SIZE">
+      <text lang="ENU">CR_INVALID_STRUCTURE_SIZE</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x3C" symbolicName="NDAS_CR_CODE_3C">
+      <text lang="ENU">CR_CODE_3C</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x3D" symbolicName="NDAS_CR_CODE_3D">
+      <text lang="ENU">CR_CODE_3D</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x3E" symbolicName="NDAS_CR_CODE_3E">
+      <text lang="ENU">CR_CODE_3E</text>
+    </message>
+    <message facility="CONFIGRET" severity="Error" id="0x3F" symbolicName="NDAS_CR_CODE_3F">
+      <text lang="ENU">CR_CODE_3F</text>
+    </message>
+<!--
+
+You can specify the following escape sequences for formatting message
+text for use by the event viewer or your application. The percent sign
+character (%) begins all escape sequences. Any other character following
+a percent sign is displayed without the percent sign.
+
+%n[!format_specifier!]
+Describes an insert. Each insert is an entry in the Arguments array in
+the FormatMessage function. The value of n can be a number between 1 and 99.
+The format specifier is optional. If no value is specified, the default
+is !s!. For more information, see wsprintf. The format specifier can use *
+for either the precision or the width. When specified, they consume inserts
+numbered n+1 and n+2.
+
+%0
+Terminates a message text line without a trailing newline character.
+This can be used to build a long line or terminate a prompt message
+without a trailing newline character.
+%.
+Generates a single period. This can be used to display a period at the
+beginning of a line, which would otherwise terminate the message text.
+%!
+Generates a single exclamation point. This can be used to specify an
+exclamation point immediately after an insert.
+%%
+Generates a single percent sign.
+%\
+Generates a hard line break when it occurs at the end of a line. This
+can be used with FormatMessage to ensure that the message fits a certain width.
+%b
+Generates a space character. This can be used to ensure an appropriate
+number of trailing spaces on a line.
+%r
+Generates a hard carriage return without a trailing newline character.
+
+-->
+  </messages>
+  <preamble><![CDATA[;/////////////////////////////////////////////////////////////////////////
+;//
+;// Copyright (C) 2004-2005 XIMETA, Inc.
+;// All rights reserved.
+;//
+;// Module Name:
+;//
+;//    ndasmsg.h
+;//
+;// Abstract:
+;//
+;//    NDAS Error Messages and Event Log Messages
+;//
+;//Notes:
+;//
+;//	   DO NOT EDIT THIS FILE BY HAND!
+;//
+;//    This file is GENERATED from the 'ndasmsg.xml'.
+;//
+;//////////////////////////////////////////////////////////////////////////
+;
+;
+;#ifndef __NDASMSG_H_
+;#define __NDASMSG_H_
+;
+]]></preamble>
+<postscript>
+
+;#endif /* __NDASMSG_H_ */
+
+</postscript>
+</mc>

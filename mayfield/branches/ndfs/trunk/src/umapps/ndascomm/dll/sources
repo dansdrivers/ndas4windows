@@ -1,0 +1,38 @@
+!INCLUDE ..\sources.inc
+
+TARGETNAME=ndascomm
+TARGETPATH=obj
+TARGETTYPE=DYNLINK
+
+C_DEFINES=$(C_DEFINES) /DNDASCOMM_EXPORTS
+
+UMTYPE=windows
+DLLENTRY=_DllMainCRTStartup
+DLLDEF=$(O)\ndascomm.def
+RC_OPTIONS=/i $(NDAS_SDK_INC_PATH)
+
+BUILD_PRODUCES=ndascomm
+
+BUILD_CONSUMES=liblsp
+BUILD_CONSUMES=libdes
+BUILD_CONSUMES=libndasidenc
+BUILD_CONSUMES=libndasid
+
+TARGETLIBS= \
+	$(NDAS_LIB_PATH)\liblsp.lib \
+	$(NDAS_LIB_PATH)\libdes.lib \
+	$(NDAS_LIB_PATH)\libndasidenc.lib \
+	$(NDAS_LIB_PATH)\libndasid.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_PUBLIC_LIB_PATH)\$(TARGETNAME).lib}
+
+SOURCES_USED=..\sources.inc
+SOURCES=$(SOURCES) \
+	..\dllentry.cpp \
+	..\ndascomm.rc

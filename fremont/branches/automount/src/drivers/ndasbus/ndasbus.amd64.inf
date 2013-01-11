@@ -1,0 +1,79 @@
+;-------------------------------------------------------------------------
+; ndasbus.inf
+;
+; Installation file (.inf) for the NDAS Bus Device Driver
+;
+; Copyright (C) 2002-2004 XIMETA, Inc.
+;-------------------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = System
+ClassGUID   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider    = %PROVIDER%
+CatalogFile = ndasbus.cat
+DriverVer   = 01/01/2003, 1.0.0.0
+DriverPackageType=PlugAndPlay
+DriverPackageDisplayName=%DIFX_PACKAGE_NAME%
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[Manufacturer]
+%MANUFACTURER% = Generic, NTamd64
+
+[Generic.NTamd64]
+%NDASBUS.DeviceDesc% = NDASBUS.DDI,Root\NDASBus
+
+[NDASBUS.DDI.NT]
+CopyFiles=NDASBUS.Files.Drivers
+
+[NDASBUS.DDI.NT.Services]
+AddService=ndasbus,0x00000002,NDASBUS.Services.Install,NDASBUS.EventLog.Install
+
+[NDASBUS.Files.Drivers]
+ndasbus.sys
+
+[NDASBUS.Services.Install]
+DisplayName    = %NDASBUS.ServiceDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0x1                  ; SERVICE_ERROR_NORMAL
+LoadOrderGroup = System Bus Extender
+ServiceBinary  = %12%\ndasbus.sys
+;Dependencies   =
+
+[NDASBUS.EventLog.Install]
+AddReg = NDASBUS.EventLog.Install.AddReg
+
+[NDASBUS.EventLog.Install.AddReg]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\NdasIoMg.dll"
+HKR,,TypesSupported,0x00010001,7
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+ndasbus.sys = 1,,
+
+[Strings]
+;
+; Non-Localizable Strings
+;
+
+REG_SZ         = 0x00000000
+REG_MULTI_SZ   = 0x00010000
+REG_EXPAND_SZ  = 0x00020000
+REG_BINARY     = 0x00000001
+REG_DWORD      = 0x00010001
+SERVICEROOT    = "System\CurrentControlSet\Services"
+
+;
+; Localizable Strings
+;
+PROVIDER            = "XIMETA"
+MANUFACTURER        = "XIMETA"
+NDASBUS.DeviceDesc  = "NDAS Bus"
+NDASBUS.ServiceDesc = "NDAS Bus Driver"
+DiskId1             = "NDAS Device Driver (x64) Installation Disk"
+DIFX_PACKAGE_NAME="NDAS Device Driver (NDAS Bus)"

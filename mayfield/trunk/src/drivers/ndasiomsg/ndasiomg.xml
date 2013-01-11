@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mc>
+  <messageId type="NTSTATUS" />
+  <facilities>
+    <facility name="IOMSG_NDASSCSI" value="0xE01" />
+    <facility name="IOMSG_NDASBUS" value="0xE02" />
+  </facilities>
+  <severities>
+    <severity name="Success" value="0x0" code="STATUS_SEVERITY_SUCCESS" />
+    <severity name="Informational" value="0x1" code="STATUS_SEVERITY_INFORMATIONAL" />
+    <severity name="Warning" value="0x2" code="STATUS_SEVERITY_WARNING" />
+    <severity name="Error" value="0x3" code="STATUS_SEVERITY_ERROR" />
+  </severities>
+  <languages>
+    <language name="NEU" value="0" output="ndasiomg_neu" />
+    <language name="ENU" value="0x409" output="ndasiomg_enu" />
+    <language name="CHS" value="0x804" output="ndasiomg_chs" />
+    <language name="DEU" value="0x407" output="ndasiomg_deu" />
+    <language name="ESN" value="0xC0A" output="ndasiomg_esn" />
+    <language name="FRA" value="0x40C" output="ndasiomg_fra" />
+    <language name="ITA" value="0x410" output="ndasiomg_ita" />
+    <language name="JPN" value="0x411" output="ndasiomg_jpn" />
+    <language name="KOR" value="0x412" output="ndasiomg_kor" />
+    <language name="PTG" value="0x816" output="ndasiomg_ptg" />
+  </languages>
+  <messages>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x101" symbolicName="NDASSCSI_IO_MEMBER_FAULT">
+      <text lang="ENU">One member of %1 device(%2) entered fault state.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x102" symbolicName="NDASSCSI_IO_MEMBER_FAULT_RECOVERED">
+      <text lang="ENU">Faulty device member of %1 device(%2) got recovered.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x103" symbolicName="NDASSCSI_IO_RECONNECT_START">
+      <text lang="ENU">%1 device(%2) started to reconnect. The device may not response until reconnecting is finished.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x104" symbolicName="NDASSCSI_IO_RECONNECTED">
+      <text lang="ENU">%1 device(%2) was reconnected successfully.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x105" symbolicName="NDASSCSI_IO_RECOVERY_START">
+      <text lang="ENU">%1 device(%2) started to recover broken devices. The device may not response quickly.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x106" symbolicName="NDASSCSI_IO_RECOVERED">
+      <text lang="ENU">%1 device(%2) was recovered successfully.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x107" symbolicName="NDASSCSI_IO_UPGRADE_SUCC">
+      <text lang="ENU">%1 device(%2) was given primary access right.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x108" symbolicName="NDASSCSI_IO_UPGRADE_FAIL">
+      <text lang="ENU">%1 device(%2) could not acquire primary access right.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Error" id="0x109" symbolicName="NDASSCSI_IO_COMPIRP_FAIL">
+      <text lang="ENU">%1 device(%2) could not complete an IO request in the fast completion method.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Error" id="0x10a" symbolicName="NDASSCSI_IO_INVALID_TARGETTYPE">
+      <text lang="ENU">%1 device(%2) could not recognize the target type.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Error" id="0x10b" symbolicName="NDASSCSI_IO_MEMALLOC_FAIL">
+      <text lang="ENU">%1 device(%2) could not allocate memory.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Error" id="0x10c" symbolicName="NDASSCSI_IO_INVAILD_TARGETDATA">
+      <text lang="ENU">%1 device(%2) received invalid target information.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x10e" symbolicName="NDASSCSI_IO_FINDADAPTER_START">
+      <text lang="ENU">%1 device(%2) started to find an SCSI adapter.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Error" id="0x10f" symbolicName="NDASSCSI_IO_ADAPTERENUM_FAIL">
+      <text lang="ENU">%1 device(%2) could not retrieve information on an SCSI adapter.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x110" symbolicName="NDASSCSI_IO_FIRSTINSTALL">
+      <text lang="ENU">%1 device(%2) entered raw device mode.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x111" symbolicName="NDASSCSI_IO_RECV_LURDESC">
+      <text lang="ENU">%1 device(%2) retrieved LUR descriptor.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x112" symbolicName="NDASSCSI_IO_RECV_ADDTARGETDATA">
+      <text lang="ENU">%1 device(%2) retrieved AddTargetData descriptor.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Error" id="0x113" symbolicName="NDASSCSI_IO_INITLUR_FAIL">
+      <text lang="ENU">%1 device(%2) could not initialize a logical unit.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x114" symbolicName="NDASSCSI_IO_FINDADAPTER_SUCC">
+      <text lang="ENU">%1 device(%2) found a SCSI adapter successfuly.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x115" symbolicName="NDASSCSI_IO_BUSRESET_OCCUR">
+      <text lang="ENU">%1 device(%2) reset the SCSI bus.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x116" symbolicName="NDASSCSI_IO_STOP_REQUESTED">
+      <text lang="ENU">%1 device(%2) was requested to stop now.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x119" symbolicName="NDASSCSI_IO_INQUIRY_WHILE_STOPPING">
+      <text lang="ENU">%1 device(%2) received inquiry request while stopping the device.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x11a" symbolicName="NDASSCSI_IO_LUR_NOT_FOUND">
+      <text lang="ENU">%1 device(%2) could not return logical unit information.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x11e" symbolicName="NDASSCSI_IO_NO_SHIPPED_SRB">
+      <text lang="ENU">%1 device(%2) received a fast competion request, but it did not contain a SCSI request.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Informational" id="0x11f" symbolicName="NDASSCSI_IO_SRB_DISCARDED">
+      <text lang="ENU">%1 device(%2) discarded an old SCSI request.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x120" symbolicName="NDASSCSI_IO_ABORT_SRB">
+      <text lang="ENU">%1 device(%2) was requested to abort a SCSI request.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Error" id="0x121" symbolicName="NDASSCSI_IO_CCBALLOC_FAIL">
+      <text lang="ENU">%1 device(%2) could not allocate an internal request block.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x122" symbolicName="NDASSCSI_IO_STOPIOCTL_WHILESTOPPING">
+      <text lang="ENU">%1 device(%2) received Stop Ioctl while stopping.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x123" symbolicName="NDASSCSI_IO_STOPIOCTL_NO_LUR">
+      <text lang="ENU">%1 device(%2) has no logical unit to stop.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Error" id="0x124" symbolicName="NDASSCSI_IO_STOPIOCTL_LUR_ERROR">
+      <text lang="ENU">%1 device(%2) failed stop ioctl. could not send stop request to a logical unit.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x125" symbolicName="NDASSCSI_IO_UPGRADEIOCTL_FAIL">
+      <text lang="ENU">%1 device(%2) failed primary ioctl.</text>
+    </message>
+    <message facility="IOMSG_NDASSCSI" severity="Warning" id="0x126" symbolicName="NDASSCSI_IO_STOPIOCTL_INVALIDLUR">
+      <text lang="ENU">%1 device(%2) received Stop Ioctl with invalid LUR</text>
+    </message>
+    <message facility="IOMSG_NDASBUS" severity="Warning" id="0x101" symbolicName="NDASBUS_IO_PDO_NOT_FOUND">
+      <text lang="ENU">%1 could not find the specified device(%2).</text>
+    </message>
+    <message facility="IOMSG_NDASBUS" severity="Warning" id="0x102" symbolicName="NDASBUS_IO_REGISTER_TARGET_FAIL">
+      <text lang="ENU">%1 could not register a target data of device(%2).</text>
+    </message>
+    <message facility="IOMSG_NDASBUS" severity="Warning" id="0x103" symbolicName="NDASBUS_IO_UNREGISTER_TARGET_FAIL">
+      <text lang="ENU">%1 could not unregister a target data of device(%2).</text>
+    </message>
+    <message facility="IOMSG_NDASBUS" severity="Informational" id="0x104" symbolicName="NDASBUS_IO_TRY_TO_ADDTARGET">
+      <text lang="ENU">%1 tried to add a target to device(%2).</text>
+    </message>
+    <!--
+
+You can specify the following escape sequences for formatting message
+text for use by the event viewer or your application. The percent sign
+character (%) begins all escape sequences. Any other character following
+a percent sign is displayed without the percent sign.
+
+%n[!format_specifier!]
+Describes an insert. Each insert is an entry in the Arguments array in
+the FormatMessage function. The value of n can be a number between 1 and 99.
+The format specifier is optional. If no value is specified, the default
+is !s!. For more information, see wsprintf. The format specifier can use *
+for either the precision or the width. When specified, they consume inserts
+numbered n+1 and n+2.
+
+%0
+Terminates a message text line without a trailing newline character.
+This can be used to build a long line or terminate a prompt message
+without a trailing newline character.
+%.
+Generates a single period. This can be used to display a period at the
+beginning of a line, which would otherwise terminate the message text.
+%!
+Generates a single exclamation point. This can be used to specify an
+exclamation point immediately after an insert.
+%%
+Generates a single percent sign.
+%\
+Generates a hard line break when it occurs at the end of a line. This
+can be used with FormatMessage to ensure that the message fits a certain width.
+%b
+Generates a space character. This can be used to ensure an appropriate
+number of trailing spaces on a line.
+%r
+Generates a hard carriage return without a trailing newline character.
+
+-->
+  </messages>
+  <preamble><![CDATA[;/////////////////////////////////////////////////////////////////////////
+;//
+;// Copyright (C) 2004-2005 XIMETA, Inc.
+;// All rights reserved.
+;//
+;// Module Name:
+;//
+;//    ndasiomsg.h
+;//
+;// Abstract:
+;//
+;//    NDAS Error Messages and Event Log Messages
+;//
+;//Notes:
+;//
+;//	   DO NOT EDIT THIS FILE BY HAND!
+;//
+;//    This file is GENERATED from the 'ndasiomg.xml'.
+;//
+;//////////////////////////////////////////////////////////////////////////
+;
+;
+;#ifndef __NDASIOMSG_H_
+;#define __NDASIOMSG_H_
+;
+]]>
+  </preamble>
+  <postscript>
+
+    ;#endif /* __NDASIOMSG_H_ */
+
+  </postscript>
+</mc>

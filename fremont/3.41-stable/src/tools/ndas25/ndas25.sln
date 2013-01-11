@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndascli", "ndascli\ndascli.vcproj", "{D6AF3377-F8DD-4D72-8B6F-155007E0D4CB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndasemu", "ndasemu\ndasemu.vcproj", "{3BEE5046-5713-4753-B3CC-4272C450C222}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6AF3377-F8DD-4D72-8B6F-155007E0D4CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D6AF3377-F8DD-4D72-8B6F-155007E0D4CB}.Debug|Win32.Build.0 = Debug|Win32
+		{D6AF3377-F8DD-4D72-8B6F-155007E0D4CB}.Debug|x64.ActiveCfg = Debug|x64
+		{D6AF3377-F8DD-4D72-8B6F-155007E0D4CB}.Debug|x64.Build.0 = Debug|x64
+		{D6AF3377-F8DD-4D72-8B6F-155007E0D4CB}.Release|Win32.ActiveCfg = Release|Win32
+		{D6AF3377-F8DD-4D72-8B6F-155007E0D4CB}.Release|Win32.Build.0 = Release|Win32
+		{D6AF3377-F8DD-4D72-8B6F-155007E0D4CB}.Release|x64.ActiveCfg = Release|x64
+		{D6AF3377-F8DD-4D72-8B6F-155007E0D4CB}.Release|x64.Build.0 = Release|x64
+		{3BEE5046-5713-4753-B3CC-4272C450C222}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3BEE5046-5713-4753-B3CC-4272C450C222}.Debug|Win32.Build.0 = Debug|Win32
+		{3BEE5046-5713-4753-B3CC-4272C450C222}.Debug|x64.ActiveCfg = Debug|Win32
+		{3BEE5046-5713-4753-B3CC-4272C450C222}.Release|Win32.ActiveCfg = Release|Win32
+		{3BEE5046-5713-4753-B3CC-4272C450C222}.Release|Win32.Build.0 = Release|Win32
+		{3BEE5046-5713-4753-B3CC-4272C450C222}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

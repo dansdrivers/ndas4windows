@@ -1,0 +1,16 @@
+LIBRARY	ndascomm
+
+EXPORTS
+  NdasCommGetAPIVersion
+  NdasCommInitialize
+  NdasCommConnect
+  NdasCommDisconnect
+  NdasCommGetDeviceInfo
+  NdasCommGetUnitDeviceInfo
+  NdasCommGetUnitDeviceDynInfo
+  NdasCommBlockDeviceRead
+  NdasCommBlockDeviceWrite
+  NdasCommBlockDeviceWriteSafeBuffer
+  NdasCommBlockDeviceVerify
+  NdasCommBlockDeviceSetFeature
+  NdasCommGetDeviceId

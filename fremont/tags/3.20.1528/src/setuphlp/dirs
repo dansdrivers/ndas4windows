@@ -1,0 +1,2 @@
+DIRS= ndasdi ndasmsi ndasmsiu ndupdate setup
+OPTIONAL_DIRS=.

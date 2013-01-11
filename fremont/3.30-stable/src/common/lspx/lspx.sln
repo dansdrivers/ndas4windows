@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lspx", "lspx.vcproj", "{0352E38A-B1F7-49BA-BC9E-4B0C585007DF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lspkrnl_exe", "test\kernel\exe\lspkrnl_exe.vcproj", "{F0B0D543-D3C6-41A2-A9BB-A53D863F84E7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lspkrnl_sys", "test\kernel\sys\lspkrnl_sys.vcproj", "{F74F575B-D96A-47BE-9954-565EE7569441}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0352E38A-B1F7-49BA-BC9E-4B0C585007DF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0352E38A-B1F7-49BA-BC9E-4B0C585007DF}.Debug|Win32.Build.0 = Debug|Win32
+		{0352E38A-B1F7-49BA-BC9E-4B0C585007DF}.Release|Win32.ActiveCfg = Release|Win32
+		{0352E38A-B1F7-49BA-BC9E-4B0C585007DF}.Release|Win32.Build.0 = Release|Win32
+		{F0B0D543-D3C6-41A2-A9BB-A53D863F84E7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F0B0D543-D3C6-41A2-A9BB-A53D863F84E7}.Debug|Win32.Build.0 = Debug|Win32
+		{F0B0D543-D3C6-41A2-A9BB-A53D863F84E7}.Release|Win32.ActiveCfg = Release|Win32
+		{F0B0D543-D3C6-41A2-A9BB-A53D863F84E7}.Release|Win32.Build.0 = Release|Win32
+		{F74F575B-D96A-47BE-9954-565EE7569441}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F74F575B-D96A-47BE-9954-565EE7569441}.Debug|Win32.Build.0 = Debug|Win32
+		{F74F575B-D96A-47BE-9954-565EE7569441}.Release|Win32.ActiveCfg = Release|Win32
+		{F74F575B-D96A-47BE-9954-565EE7569441}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

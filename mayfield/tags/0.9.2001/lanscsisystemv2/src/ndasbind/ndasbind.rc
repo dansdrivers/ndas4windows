@@ -1,0 +1,544 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\ndasbind.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Tool"
+    BEGIN
+        MENUITEM "&Bind",                       IDM_AGGR_BIND
+        MENUITEM "&Unbind",                     IDM_AGGR_UNBIND
+        MENUITEM "&Add Mirror",                 IDM_AGGR_ADDMIRROR
+        MENUITEM "&Syncronize",                 IDM_AGGR_SYNCHRONIZE
+        MENUITEM "&Reestablish mirror",         IDM_AGGR_REMIRROR
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Refresh Status",             IDM_REFRESH_STATUS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "About",                       IDM_HELP_ABOUT
+    END
+END
+
+IDR_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&Refresh Status",             IDM_REFRESH_STATUS
+    END
+END
+
+IDR_MIRROR_MENU MENU 
+BEGIN
+    POPUP "Mirror"
+    BEGIN
+        MENUITEM "&Add Mirror",                 IDM_AGGR_ADDMIRROR
+        MENUITEM "&Syncronize",                 IDM_AGGR_SYNCHRONIZE
+        MENUITEM "&Reestablish mirror",         IDM_AGGR_REMIRROR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ndasbind.ico"
+IDI_MAINDLG_AGGRBIND    ICON                    "res\\aggr_toolbar_bind.ico"
+IDI_MAINDLG_AGGRUNBIND  ICON                    "res\\aggr_toolbar_unbind.ico"
+IDI_MAINDLG_MIRRBIND    ICON                    "res\\aggr_toolbar_mirror.ico"
+IDI_MAINDLG_STATUS      ICON                    "res\\aggr_toolbar_status.ico"
+IDI_NDAGGR_BROKEN       ICON                    "res\\aggr_tv_aggr_bad.ico"
+IDI_NDAGGR_OK           ICON                    "res\\aggr_tv_aggr_normal.ico"
+IDI_ND_SLAVE            ICON                    "res\\aggr_tv_mirror_slave.ico"
+IDI_ND_BADKEY           ICON                    "res\\aggr_tv_netdisk_badkey.ico"
+IDI_ND_DISABLED         ICON                    "res\\aggr_tv_netdisk_disabled.ico"
+IDI_ND_INUSE            ICON                    "res\\aggr_tv_netdisk_inuse.ico"
+IDI_ND_NOEXIST          ICON                    "res\\aggr_tv_netdisk_noexist.ico"
+IDI_ND_RO               ICON                    "res\\aggr_tv_netdisk_readonly.ico"
+IDI_ND_RW               ICON                    "res\\aggr_tv_netdisk_readwrite.ico"
+IDI_NDMIRR_OK           ICON                    "res\\aggr_tv_mirror_normal.ico"
+IDI_NDMIRR_BROKEN       ICON                    "res\\aggr_tv_mirror_broken.ico"
+IDI_COMPANY_SYMBOL      ICON                    "res\\companylogo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 243, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_COMPANY_SYMBOL,IDI_COMPANY,17,13,21,20
+    CTEXT           "Aggregation & Mirroring Version",IDC_TEXT_FILEVER,38,26,
+                    193,8,SS_NOPREFIX
+    CTEXT           "Copyright (C) 2003-2004 XIMETA, Inc.",
+                    IDC_TEXT_COPYWRITE,38,55,193,8,SS_NOPREFIX
+    CTEXT           "http://www.ximeta.com",IDC_ABOUTBOX_HYPERLINK,38,40,193,
+                    8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,97,69,48,14,WS_GROUP
+    CTEXT           "NetDisk",IDC_TEXT_PRODUCTVER,38,11,192,8,SS_NOPREFIX
+END
+
+IDD_BIND DIALOGEX 0, 0, 314, 234
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Bind(Aggregation&Mirroring)"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,7,7,300,90
+    PUSHBUTTON      "",IDC_BTN_TO_PRIMARY,62,100,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_BTN_FROM_PRIMARY,86,100,16,14
+    PUSHBUTTON      "",IDC_BTN_TO_MIRROR,212,100,16,14
+    PUSHBUTTON      "",IDC_BTN_FROM_MIRROR,236,100,16,14
+    CONTROL         "",IDC_LIST_PRIMARY,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,7,118,150,74
+    CONTROL         "",IDC_LIST_MIRROR,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,157,118,150,74
+    CONTROL         "Use Mirroring",IDC_CHK_MIRROR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,196,66,10
+    DEFPUSHBUTTON   "OK",IDOK,101,207,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,163,206,50,14
+END
+
+IDD_UNBIND DIALOGEX 0, 0, 191, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Unbind"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDOK,40,145,50,14
+    PUSHBUTTON      "No",IDCANCEL,99,145,50,14
+    CONTROL         "",IDC_LIST_UNBIND,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    33,177,104,WS_EX_STATICEDGE
+    LTEXT           "Data in the following disks will be deleted\nAre you sure you want to unbind them?",
+                    IDC_STATIC,13,11,152,20
+END
+
+IDD_SYNC DIALOGEX 0, 0, 230, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Synchronize"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Source Disk:",IDC_STATIC,15,17,40,8
+    LTEXT           "Name",IDC_TEXT_SOURCE,84,17,54,8
+    LTEXT           "Destination Disk:",IDC_STATIC,15,30,54,8
+    LTEXT           "Name",IDC_TEXT_DEST,84,30,54,8
+    GROUPBOX        "",IDC_STATIC,10,7,211,37
+    LTEXT           "Please press the start button to continue.",
+                    IDC_TEXT_PHASE,15,52,183,8
+    LTEXT           "Time Remaining:",IDC_STATIC,15,61,53,8
+    RTEXT           "MB/s",IDC_STATIC,190,61,19,8
+    PUSHBUTTON      "Start",IDOK,145,90,34,14
+    PUSHBUTTON      "Cancel",IDCANCEL,184,90,34,14
+    GROUPBOX        "",IDC_STATIC,10,41,211,47
+    LTEXT           "00:00:00",IDC_TEXT_LEFTTIME,68,61,30,8
+    CONTROL         "",IDC_PROGBAR,"msctls_progress32",WS_BORDER,15,71,199,
+                    13
+    RTEXT           "0.0",IDC_TEXT_RATE,153,61,40,8
+END
+
+IDD_REMIRROR DIALOGEX 0, 0, 230, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Reestablish Mirror"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Source Disk:",IDC_STATIC,15,17,40,8
+    LTEXT           "Name",IDC_TEXT_SOURCE,84,17,54,8
+    LTEXT           "Mirror Disk:",IDC_STATIC,15,30,37,8
+    LTEXT           "Name",IDC_TEXT_DEST,84,30,54,8
+    GROUPBOX        "",IDC_STATIC,10,7,211,37
+    LTEXT           "Please press the start button to continue.",
+                    IDC_TEXT_PHASE,15,52,183,8
+    RTEXT           "MB/s",IDC_STATIC,190,61,19,8
+    PUSHBUTTON      "Start",IDOK,145,90,34,14
+    PUSHBUTTON      "Cancel",IDCANCEL,184,90,34,14
+    GROUPBOX        "",IDC_STATIC,10,41,211,47
+    CONTROL         "",IDC_PROGBAR,"msctls_progress32",WS_BORDER,15,71,199,
+                    13
+    RTEXT           "0.0",IDC_TEXT_RATE,153,61,40,8
+    LTEXT           "Time Remaining:",IDC_STATIC,15,61,53,8
+    LTEXT           "00:00:00",IDC_TEXT_LEFTTIME,68,61,30,8
+END
+
+IDD_REMIR DIALOGEX 0, 0, 191, 161
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Reestablish Mirror"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,137,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,99,137,50,14
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    23,177,104,WS_EX_STATICEDGE
+    LTEXT           "Please select a disk to use as a mirror disk",
+                    IDC_STATIC,12,11,152,10
+END
+
+IDD_BIND_PAGE1 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Aggregation only",IDC_BIND_TYPE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,38,46,71,10
+    CONTROL         "RAID1",IDC_BIND_TYPE2,"Button",BS_AUTORADIOBUTTON,38,58,
+                    37,10
+    CONTROL         "RAID5",IDC_BIND_TYPE3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,38,69,37,10
+    LTEXT           "Number of disks :",IDC_STATIC,103,115,59,8
+    EDITTEXT        IDC_EDIT_DISKCOUNT,163,112,52,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER,WS_EX_RIGHT
+    LTEXT           "Please select type of bind and number of disks to bind",
+                    IDC_STATIC,17,14,173,8
+    GROUPBOX        "Type of binding",IDC_STATIC,13,33,212,54
+    GROUPBOX        "Number of disks to bind",IDC_STATIC,15,92,212,54
+END
+
+IDD_BIND_PAGE2 DIALOGEX 0, 0, 322, 238
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,7,114,132,117
+    CONTROL         "",IDC_DISKLIST,"Static",SS_BLACKRECT,30,7,254,84
+    LTEXT           "Please select disks to bind.",IDC_STATIC,8,102,92,10
+    PUSHBUTTON      "",IDC_BTN_ADD,144,160,16,14
+    PUSHBUTTON      "",IDC_BTN_REMOVE,144,179,16,14
+    CONTROL         "",IDC_LIST_BIND,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,163,114,132,117
+    PUSHBUTTON      "",IDC_BTN_UP,299,160,16,14
+    PUSHBUTTON      "",IDC_BTN_DOWN,299,179,16,14
+END
+
+IDD_ADDMIRROR_SYNC DIALOGEX 0, 0, 230, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Reestablish Mirror"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Source Disk:",IDC_STATIC,15,17,40,8
+    LTEXT           "Name",IDC_TEXT_SOURCE,84,17,54,8
+    LTEXT           "Mirror Disk:",IDC_STATIC,15,30,37,8
+    LTEXT           "Name",IDC_TEXT_DEST,84,30,54,8
+    GROUPBOX        "",IDC_STATIC,10,7,211,37
+    LTEXT           "Please press the start button to continue.",
+                    IDC_TEXT_PHASE,15,52,183,8
+    RTEXT           "MB/s",IDC_STATIC,190,61,19,8
+    PUSHBUTTON      "Start",IDOK,145,90,34,14
+    PUSHBUTTON      "Cancel",IDCANCEL,184,90,34,14
+    GROUPBOX        "",IDC_STATIC,10,41,211,47
+    CONTROL         "",IDC_PROGBAR,"msctls_progress32",WS_BORDER,15,71,199,
+                    13
+    RTEXT           "0.0",IDC_TEXT_RATE,153,61,40,8
+    LTEXT           "Time Remaining:",IDC_STATIC,15,61,53,8
+    LTEXT           "00:00:00",IDC_TEXT_LEFTTIME,68,61,30,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_BIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_UNBIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_SYNC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_REMIRROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_REMIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_BIND_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_BIND_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_ADDMIRROR_SYNC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "ndasbind Module"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "ndasbind"
+            VALUE "LegalCopyright", "Copyright 2004"
+            VALUE "OriginalFilename", "ndasbind.exe"
+            VALUE "ProductName", "ndasbind Module"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  32, 32
+BEGIN
+    BUTTON      IDM_AGGR_BIND
+    BUTTON      IDM_AGGR_UNBIND
+    BUTTON      IDM_AGGR_MIRROR
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\ndasbind.bmp"
+IDB_MAINFRAME           BITMAP                  "res\\bitmap1.bmp"
+IDB_MIRROR              BITMAP                  "res\\mirror_img.bmp"
+IDB_DRAG                BITMAP                  "res\\drag.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ndasbind"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_EXIT                "Quit the application\nExit"
+    IDM_AGGR_BIND           "Bind disks\nBind"
+    IDM_AGGR_UNBIND         "Unbind aggregated/mirrored disks into single disks\nUnbind"
+    IDM_AGGR_SYNCHRONIZE    "Synchronize data between mirror disks\nSynchronize"
+    IDM_AGGR_REMIRROR       "Rebind a mirrored disk to a new disk\nReestablish mirror"
+    IDM_AGGR_MIRROR         "Mirror"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    ATL_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    ATL_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+    ATL_IDS_SCTASKLIST      "Activate Task List"
+    ATL_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_AGGR_ADDMIRROR      "Add a mirror disk to a single disk\nAdd Mirror"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\ndasbind.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

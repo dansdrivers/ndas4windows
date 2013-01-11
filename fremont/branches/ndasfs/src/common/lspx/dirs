@@ -1,0 +1,2 @@
+DIRS=slib
+OPTIONAL_DIRS=udbg test

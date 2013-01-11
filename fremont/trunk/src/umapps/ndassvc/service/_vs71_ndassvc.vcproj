@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ndassvc"
+	ProjectGUID="{ACFD8558-505F-4A22-9AA8-1DEB0A7ADD5E}"
+	RootNamespace="ndassvc"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="objchk_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild i386 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild i386 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild i386 chk . -c0i"
+				Output="objchk_w2k_x86\i386\ndassvc.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="objfre_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild i386 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild i386 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild i386 fre . -c0i"
+				Output="objfre_w2k_x86\i386\ndassvc.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug (x64)|Win32"
+			OutputDirectory="objchk_wnet_amd64\amd64"
+			IntermediateDirectory="objchk_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="objchk_wnet_amd64\amd64\ndassvc.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release (x64)|Win32"
+			OutputDirectory="objfre_wnet_amd64\amd64"
+			IntermediateDirectory="objfre_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="objfre_wnet_amd64\amd64\ndassvc.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\drivematch.cpp" />
+			<File
+				RelativePath=".\eventlog.cpp" />
+			<File
+				RelativePath=".\lpxcomm.cpp" />
+			<File
+				RelativePath=".\ndasautoreg.cpp" />
+			<File
+				RelativePath=".\ndascfg.cpp" />
+			<File
+				RelativePath=".\ndascmdproc.cpp" />
+			<File
+				RelativePath=".\ndascmdserver.cpp" />
+			<File
+				RelativePath=".\ndasdev.cpp" />
+			<File
+				RelativePath=".\ndasdevcomm.cpp" />
+			<File
+				RelativePath=".\ndasdevhb.cpp" />
+			<File
+				RelativePath=".\ndasdevreg.cpp" />
+			<File
+				RelativePath=".\ndaseventmon.cpp" />
+			<File
+				RelativePath=".\ndaseventpub.cpp" />
+			<File
+				RelativePath=".\ndashixcli.cpp" />
+			<File
+				RelativePath=".\ndashixsrv.cpp" />
+			<File
+				RelativePath=".\ndashixutil.cpp" />
+			<File
+				RelativePath=".\ndashostinfocache.cpp" />
+			<File
+				RelativePath=".\ndasinstman.cpp" />
+			<File
+				RelativePath=".\ndasix.cpp" />
+			<File
+				RelativePath=".\ndaslogdev.cpp" />
+			<File
+				RelativePath=".\ndaslogdevman.cpp" />
+			<File
+				RelativePath=".\ndaslogdevmon.cpp" />
+			<File
+				RelativePath=".\ndasmain.cpp" />
+			<File
+				RelativePath=".\ndasobjs.cpp" />
+			<File
+				RelativePath=".\ndaspnp.cpp" />
+			<File
+				RelativePath=".\ndassvc.cpp" />
+			<File
+				RelativePath=".\ndasunitdev.cpp" />
+			<File
+				RelativePath=".\ndasunitdevcomm.cpp" />
+			<File
+				RelativePath=".\ndasunitdevfactory.cpp" />
+			<File
+				RelativePath=".\stdafx.cpp" />
+			<File
+				RelativePath=".\sysutil.cpp" />
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\drivematch.h" />
+			<File
+				RelativePath=".\eventlog.h" />
+			<File
+				RelativePath=".\infoxchanger.h" />
+			<File
+				RelativePath=".\lpxcomm.h" />
+			<File
+				RelativePath=".\lshelper.h" />
+			<File
+				RelativePath=".\ndasautoreg.h" />
+			<File
+				RelativePath=".\ndascfg.h" />
+			<File
+				RelativePath=".\ndascmdproc.h" />
+			<File
+				RelativePath=".\ndascmdserver.h" />
+			<File
+				RelativePath=".\ndasdev.h" />
+			<File
+				RelativePath=".\ndasdevcomm.h" />
+			<File
+				RelativePath=".\ndasdevhb.h" />
+			<File
+				RelativePath=".\ndasdevid.h" />
+			<File
+				RelativePath=".\ndasdevreg.h" />
+			<File
+				RelativePath=".\ndaseventmon.h" />
+			<File
+				RelativePath=".\ndaseventpub.h" />
+			<File
+				RelativePath=".\ndashixcli.h" />
+			<File
+				RelativePath=".\ndashixsrv.h" />
+			<File
+				RelativePath=".\ndashixutil.h" />
+			<File
+				RelativePath=".\ndashostinfocache.h" />
+			<File
+				RelativePath=".\ndasinstman.h" />
+			<File
+				RelativePath=".\ndasix.h" />
+			<File
+				RelativePath=".\ndaslogdev.h" />
+			<File
+				RelativePath=".\ndaslogdevman.h" />
+			<File
+				RelativePath=".\ndaslogdevmon.h" />
+			<File
+				RelativePath=".\ndasobjcoll.h" />
+			<File
+				RelativePath=".\ndasobjs.h" />
+			<File
+				RelativePath=".\ndaspnp.h" />
+			<File
+				RelativePath=".\ndassvc.h" />
+			<File
+				RelativePath=".\ndasunitdev.h" />
+			<File
+				RelativePath=".\ndasunitdevfactory.h" />
+			<File
+				RelativePath=".\ndsalogdevmon.h" />
+			<File
+				RelativePath=".\objstr.h" />
+			<File
+				RelativePath=".\resource.h" />
+			<File
+				RelativePath=".\stdafx.h" />
+			<File
+				RelativePath=".\sysutil.h" />
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\ndassvc.rc" />
+		</Filter>
+		<File
+			RelativePath=".\makefile" />
+		<File
+			RelativePath=".\makefile.inc" />
+		<File
+			RelativePath=".\ndasevent.txt" />
+		<File
+			RelativePath=".\ndassvc.ctl" />
+		<File
+			RelativePath=".\ndassvc.mof" />
+		<File
+			RelativePath=".\ndassvc.ver" />
+		<File
+			RelativePath=".\regparam.txt" />
+		<File
+			RelativePath=".\sources" />
+		<File
+			RelativePath=".\structure.txt" />
+		<Filter
+			Name=".inc"
+			Filter=""
+			UniqueIdentifier="{E90358A2-D2CF-44B9-B36D-251B337894E9}">
+			<File
+				RelativePath=".\inc\devioctl.h" />
+			<File
+				RelativePath=".\inc\ntddscsi.h" />
+			<File
+				RelativePath=".\inc\ntddstor.h" />
+			<File
+				RelativePath=".\inc\ntddstor2.h" />
+			<File
+				RelativePath=".\inc\ntddvol.h" />
+			<File
+				RelativePath=".\inc\srb_hootch.h" />
+		</Filter>
+		<Filter
+			Name=".ndascfgmgr"
+			Filter=""
+			UniqueIdentifier="{9D844E35-57CB-4ED2-BFFA-52306515C40F}">
+			<File
+				RelativePath=".\ndascfgmgr\cpd.cpp" />
+			<File
+				RelativePath=".\ndascfgmgr\r.cpp" />
+			<File
+				RelativePath=".\ndascfgmgr\test.cpp" />
+		</Filter>
+		<Filter
+			Name=".ndasevent"
+			Filter=""
+			UniqueIdentifier="{ED9257B8-CE5A-4075-B0A9-4F88D99B5159}">
+			<File
+				RelativePath=".\ndasevent\main.cpp" />
+			<File
+				RelativePath=".\ndasevent\makefile" />
+			<File
+				RelativePath=".\ndasevent\sources" />
+		</Filter>
+		<Filter
+			Name=".ndashbr"
+			Filter=""
+			UniqueIdentifier="{E63C0C78-C39F-48F7-ADA7-9F513FC58A90}">
+			<File
+				RelativePath=".\ndashbr\main.cpp" />
+			<File
+				RelativePath=".\ndashbr\makefile" />
+			<File
+				RelativePath=".\ndashbr\sources" />
+		</Filter>
+		<Filter
+			Name=".nhixcli"
+			Filter=""
+			UniqueIdentifier="{68DA331D-D306-4EE8-9A88-A74F65920205}">
+			<File
+				RelativePath=".\nhixcli\main.cpp" />
+			<File
+				RelativePath=".\nhixcli\makefile" />
+			<File
+				RelativePath=".\nhixcli\sources" />
+		</Filter>
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

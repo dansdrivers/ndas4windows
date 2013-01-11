@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildProjectFullPath)</MSBuildAllProjects>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ProjectBaseDir Condition="''=='$(ProjectBaseDir)'">..\..\</ProjectBaseDir>
+	</PropertyGroup>
+
+	<!-- 
+
+	Searching for $(ProgamFiles)\Debugging...\sdk\srcsrv\svnindex.cmd
+	Examples in the order of precedence:
+
+	C:\Program Files\Debugging Tools for Windows 64-bit\sdk\srcsrv\svnindex.cmd
+	C:\Program Files\Debugging Tools for Windows\sdk\srcsrv\svnindex.cmd
+	C:\Program Files (x86)\Debugging Tools for Windows\sdk\srcsrv\svnindex.cmd
+
+	-->
+
+	<PropertyGroup>
+		<WindbgDir32>$(ProgramFiles)\Debugging Tools for Windows\</WindbgDir32>
+		<WindbgDir64>$(ProgramFiles)\Debugging Tools for Windows 64-bit\</WindbgDir64>
+		<WindbgDirWow32>$(ProgramFiles%28x86%29)\Debugging Tools for Windows\</WindbgDirWow32>
+		<WindbgDir Condition="''=='$(WindbgDir)' And Exists('$(WindbgDir64)')">$(WindbgDir64)</WindbgDir>
+		<WindbgDir Condition="''=='$(WindbgDir)' And Exists('$(WindbgDir32)')">$(WindbgDir32)</WindbgDir>
+		<WindbgDir Condition="''=='$(WindbgDir)' And Exists('$(WindbgDirWow32)')">$(WindbgDirWow32)</WindbgDir>
+		<SvnIndexCmd>$(WindbgDir)sdk\srcsrv\svnindex.cmd</SvnIndexCmd>
+	</PropertyGroup>
+
+	<!-- target symbol directories and source root directory -->
+	<ItemGroup>
+		<SymbolDirectories Include="$(ProjectBaseDir)publish\fre\i386\symbols" />
+		<SymbolDirectories Include="$(ProjectBaseDir)publish\fre\amd64\symbols" />
+		<SymbolDirectories Include="$(ProjectBaseDir)publish\chk\i386\symbols" />
+		<SymbolDirectories Include="$(ProjectBaseDir)publish\chk\amd64\symbols" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<SourceRoot>$(ProjectBaseDir)src</SourceRoot>
+	</PropertyGroup>
+
+	<Target Name="IndexSources" DependsOnTargets="_CheckForSvnIndex">
+		<Exec Command="&quot;$(SvnIndexCmd)&quot; /Source=$(SourceRoot) /Symbols=%(SymbolDirectories.Identity) /debug" />
+	</Target>
+
+	<Target Name="_CheckForSvnIndex">
+		<Error Condition="!Exists('$(SvnIndexCmd)')"
+			   Text="'svnindex.cmd' is not available." />
+	</Target>
+
+</Project>

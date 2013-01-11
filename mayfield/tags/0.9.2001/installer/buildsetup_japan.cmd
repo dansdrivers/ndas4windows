@@ -1,0 +1,1 @@
+@call %0\..\buildsetup.cmd japan %*

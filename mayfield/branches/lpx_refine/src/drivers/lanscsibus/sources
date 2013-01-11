@@ -1,0 +1,52 @@
+TARGETNAME=ndasbus
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+
+LANSCSI_BUS=LanscsiBus
+
+!if 0
+C_DEFINES = -D__LANSCSI_BUS__
+!endif
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+
+NTTARGETFILE0=mofcomp
+
+#
+# Set INI File Version
+#
+INFFILENAME=$(TARGETNAME)
+
+!IF "$(_BUILDARCH)" == "AMD64"
+INFSRCNAME=$(INFFILENAME).amd64
+!ELSE
+INFSRCNAME=$(INFFILENAME)
+!ENDIF
+
+POST_BUILD_CMD=$(NDAS_TOOLS)\setinfver $(O)\$(TARGETNAME).sys $(INFSRCNAME).inf $(O)\$(INFFILENAME).inf
+BINPLACE_FLAGS=$(O)\$(INFFILENAME).inf
+
+
+INCLUDES=$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+BUILD_CONSUMES=hash lpxtdi lanscsiklib scrc32
+
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\ntstrsafe.lib \
+	$(DDK_LIB_PATH)\tdi.lib \
+	$(NDAS_LIB_PATH)\scrc32.lib \
+	$(NDAS_LIB_PATH)\hash.lib \
+	$(NDAS_DRIVER_LIB_PATH)\lpxtdi.lib \
+	$(NDAS_DRIVER_LIB_PATH)\lanscsik.lib
+
+SOURCES= busenum.rc \
+	busenum.c \
+	pnp.c \
+	power.c \
+	buspdo.c \
+	wmi.c \
+	ndasbus.c \
+	register.c \
+	utils.c

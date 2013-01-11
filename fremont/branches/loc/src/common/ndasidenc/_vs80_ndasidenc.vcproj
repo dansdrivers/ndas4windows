@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ndasidenc"
+	ProjectGUID="{362E60EC-BB0F-4D53-95C0-584C7DE081F4}"
+	RootNamespace="ndasidenc"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+		<Platform
+			Name="x64" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="objchk_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 chk . -c0i"
+				Output="objchk_w2k_x86\i386\ndasidenc.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="objfre_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 fre . -c0i"
+				Output="objfre_w2k_x86\i386\ndasidenc.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="objchk_wnet_amd64\amd64"
+			IntermediateDirectory="objchk_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="objchk_wnet_amd64\amd64\ndasidenc.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="objfre_wnet_amd64\amd64"
+			IntermediateDirectory="objfre_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="objfre_wnet_amd64\amd64\ndasidenc.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\crc.c" />
+			<File
+				RelativePath=".\ndasidenc.c" />
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\crc.h" />
+			<File
+				RelativePath=".\ndasidenc.h" />
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"></Filter>
+		<File
+			RelativePath=".\makefile" />
+		<File
+			RelativePath=".\makefile.inc" />
+		<File
+			RelativePath=".\sources" />
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

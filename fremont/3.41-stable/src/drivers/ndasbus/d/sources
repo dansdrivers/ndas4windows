@@ -1,0 +1,56 @@
+TARGETNAME=ndasbus
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+
+NTTARGETFILE0=mofcomp
+
+MSC_WARNING_LEVEL=$(MSC_WARNING_LEVEL) /WX /W3
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Od /Oi
+!ENDIF
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE
+# Windows Vista support
+C_DEFINES=$(C_DEFINES) -D__VISTA_SUPPORT__
+
+INCLUDES=..;$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+PRECOMPILED_INCLUDE=..\ndasbusproc.h
+
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\tdi.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(NDAS_LIB_PATH)\libhash.lib \
+	$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib \
+	$(NDAS_DRIVER_LIB_PATH)\libndask.lib \
+	$(DDK_LIB_PATH)\ntstrsafe.lib	\
+    $(NDAS_LIB_PATH)\libaes.lib \
+
+SOURCES=\
+	..\busenum.rc \
+	..\busenum.c \
+	..\pnp.c \
+	..\power.c \
+	..\buspdo.c \
+	..\wmi.c \
+	..\ndasbus.c \
+	..\register.c \
+	..\utils.c
+
+#
+# INF File Generation
+#
+!INCLUDE $(NDAS_TOOLS)\create_inf.inc
+
+PRECOMPILED_INCLUDE=..\ndasbusproc.h
+
+AMD64_WARNING_LEVEL=/W3 /Wp64 -wd4296 /WX
+# -Wp64 will not work with ntddk.h for w2k,wxp headers
+386_WARNING_LEVEL=/W3 /WX
+
+!IF "$(_BUILDARCH)" == "AMD64" && $(FREEBUILD)
+!ELSE
+MSC_OPTIMIZATION=
+!ENDIF

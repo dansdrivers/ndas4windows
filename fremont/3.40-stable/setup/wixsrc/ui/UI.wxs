@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment Id="UI">
+
+		<!-- UI properties -->
+		<Property Id="ErrorDialog">SetupError</Property>
+		<!--
+		<Property Id="DefaultUIFont">Arial8</Property>
+		-->
+		<Property Id="DefaultUIFont">Arial8</Property>
+		<Property Id="ActionData">0</Property>
+
+		<FragmentRef Id="TextStyles" />
+		<FragmentRef Id="UIText" />
+		<FragmentRef Id="ActionText" />
+		<FragmentRef Id="Error" />
+		<FragmentRef Id="Dialogs" />
+
+		<CustomAction Id="SetDefaultUIFont" Property="DefaultUIFont" Value="SegoeUI8" />
+
+		<AdminUISequence>
+			<Custom Action="SetDefaultUIFont" Before="SetupInitialization"><![CDATA[VersionNT >= 600]]></Custom>
+			<Show Dialog="SetupInitialization" Before="CostInitialize" />
+			<Show Dialog="SetupCompleteError" OnExit="error" />
+			<Show Dialog="SetupProgress" After="AdminWelcome" />
+			<Show Dialog="SetupInterrupted" OnExit="cancel" />
+			<Show Dialog="SetupCompleteSuccess" OnExit="success" />
+			<Show Dialog="AdminWelcome" After="CostFinalize" />
+		</AdminUISequence>
+
+		<InstallUISequence>
+			<Show Dialog="SetupCompleteError" OnExit="error" />
+			<Show Dialog="SetupInterrupted" OnExit="cancel" />
+			<Show Dialog="SetupCompleteSuccess" OnExit="success" />
+			<Custom Action="SetDefaultUIFont" Before="SetupInitialization"></Custom>
+			<Show Dialog="SetupInitialization" Before="LaunchConditions" />
+			<LaunchConditions><![CDATA[Not Installed]]></LaunchConditions>
+			<ResolveSource Before="CostFinalize"><![CDATA[Not Installed And Not PATCH]]></ResolveSource>
+			<Custom Action="CA_STOP_DOWNGRADE" After="FindRelatedProducts">NDAS_DOWNGRADE</Custom>
+			<Show Dialog="PatchWelcome" After="MigrateFeatureStates"><![CDATA[PATCH And Not IS_MAJOR_UPGRADE]]></Show>
+			<Show Dialog="InstallWelcome" After="PatchWelcome"><![CDATA[Not Installed And (Not PATCH Or IS_MAJOR_UPGRADE)]]></Show>
+			<!-- <Show Dialog="SplashBitmap" After="InstallWelcome"><![CDATA[Not Installed And (Not PATCH Or IS_MAJOR_UPGRADE) And FALSE]]></Show> -->
+			<!-- <Show Dialog="SetupResume" After="SplashBitmap"><![CDATA[Installed And (RESUME Or Preselected) And Not PATCH]]></Show> -->
+			<Show Dialog="SetupResume" After="InstallWelcome"><![CDATA[Installed And (RESUME Or Preselected) And Not PATCH]]></Show>
+			<Show Dialog="MaintenanceWelcome" After="SetupResume"><![CDATA[Installed And Not RESUME And Not Preselected And Not PATCH]]></Show>
+			<Show Dialog="SetupProgress" After="MaintenanceWelcome" />
+		</InstallUISequence>
+	</Fragment>
+</Wix>

@@ -1,0 +1,158 @@
+Tested Operating System
+  * Windows 2000
+  * Windows XP
+  * Windows 2003 Server
+  * MAC OS-X
+  * X-Platform :
+  * Embedded :
+
+  1. Common (For each bind type)
+    1. Application
+      1. ndasbind
+        1. Usage
+          a. Launch with ndas service stopped
+          a. Command : Bind/Unbind/Tools/Refresh/Reset to single/Recover Bind
+          a. Launch with missing disk(s)
+          a. Disk Properties of bound disk
+          a. Disk Properties of single disk
+      1. ndasmgmt
+        1. Usage
+          a. Properties of bound disk
+          a. Properties of single disk
+    1. Basic function 
+      1. Bind 
+        1. Bind in single host connection 
+          a. Bind minimum disks 
+          a. Bind more than minimum disks (upto maximum disks) 
+          a. Bind without write permission 
+          a. Bind disks including a disk with corrupted DIB 
+          a. Bind disks including a disk with corrupted DIB 
+        1. Bind in multiple host connection 
+          a. Bind minimum disks 
+          a. Bind more than minimum disks (upto maximum disks) 
+          a. Bind without write permission 
+          a. Bind disks including a disk with corrupted DIB 
+          a. Bind disks including a disk with corrupted DIB 
+      1. Unbind 
+          a. Unbind in single host connection 
+          a. Unbind in multiple host connection 
+          a. Unbind with missing disk(s)
+          a. Rebind each unbound disk
+          a. Use each unbound disk as single disk
+      1. Mount 
+          a. Mount with missing disk(s)
+          a. Mount R/W without write permission(s)
+          a. Mount with R/W when other host using with R/W (2.X)
+          a. Mount on an older version host
+          a. Mount with multi NIC(ex. device 0 to NIC 0, device 1 to NIC 1)
+          a. Mount after replacing device with other HDD 
+      1. Unmount 
+          a. Unmount when safe
+          a. Unmount when busy
+          a. Unmount when reconnecting
+          a. Unmount at primary host
+          a. Unmount at secondary host
+    1. In use
+      1. Disk tool
+        1. diskpart.exe
+          a. Clean disk
+        1. diskmgmt.msc (Disk Management)
+          a. Check disk capacity
+          a. Initialize disk
+          a. Quick Format
+          a. Normal Format
+      1. Performance
+        1. Check performance(Sandra Benchmark)
+          a. Performance with single host
+          a. Performance with 2 hosts
+        1. Check performance(Large file R/W)
+          a. Performance with single host
+          a. Performance with 2 hosts
+        1. Check net performance(Sandra Benchmark)
+          a. Performance with GIGA NIC + GIGA Switch + NDAS 1.1
+          a. Performance with GIGA NIC + GIGA Switch + NDAS 2.0
+          a. Performance with 100M NIC + 100M Switch + NDAS 1.1 
+          a. Performance with multi NIC
+  1. Aggregation 
+  1. Mirroring 
+    1. Advanced function
+      1. Upgrade to RAID 1
+        1. Upgrade in single host connection
+          a. Upgrade & Mount
+          a. Upgrade without write permission
+          a. Upgrade mounted disk
+        1. Upgrade in multi host connection
+          a. Upgrade & Mount
+          a. Upgrade without write permission
+          a. Upgrade mounted disk on other hosts
+  1. RAID 0 
+  1. RAID 1 
+    1. Application
+      1. ndasbind
+        1. Usage
+          a. Recover a corrupted disk
+          a. Cancel recovering
+          a. Resume recovering
+    1. Basic function
+      1. Mount 
+          a. Mount a not fully recovered disk
+          a. Mount a corrupted disk
+      1. Unmount 
+          a. Unmount when recovering
+          a. Unmount after recovered
+    1. Advanced function
+      1. Safe Unbind
+          a. Unbind RAID 1 and mount unbound single disks
+          a. Compare both unbound single disks
+      1. Copy and mirror
+          a. Bind using Copy and mirror
+          a. Use smaller sized disk as second disk
+      1. Fault tolerance
+        1. ndasbind
+          a. Recover corrupted disk
+          a. Stop & Restart while recovering
+          a. Cancel recover and mount disk
+          a. File & File system check after recovery complete
+        1. service
+          a. Mount with corrupted disk
+        1. driver
+          a. Disconnect a disk while using bound disks
+          a. Reconnect a disk before reconnection fail
+          a. Do not reconnect a disk until emergency mode starts
+          a. Reconnect a disk after emergency mode starts
+          a. Start emergency mode when reconnection failed
+          a. Disconnect any disk in recovery mode
+          a. Disconnect any disks more than 1 in normal mode
+          a. File & File system check after recovery complete
+  1. RAID 4 
+    1. Application
+      1. ndasbind
+        1. Usage
+          a. Recover a corrupted disk
+          a. Cancel recovering
+          a. Resume recovering
+    1. Basic function
+      1. Mount 
+          a. Mount a not fully recovered disk
+          a. Mount a corrupted disk
+      1. Unmount 
+          a. Unmount when recovering
+          a. Unmount after recovered
+    1. Advanced function
+      1. Fault tolerance
+        1. ndasbind
+          a. Recover corrupted disk
+          a. Stop & Restart while recovering
+          a. Cancel recover and mount disk
+          a. File & File system check after recovery complete
+        1. service
+          a. Mount with corrupted disk
+        1. driver
+          a. Disconnect a disk while using bound disks
+          a. Reconnect a disk before reconnection fail
+          a. Do not reconnect a disk until emergency mode starts
+          a. Reconnect a disk after emergency mode starts
+          a. Start emergency mode when reconnection failed
+          a. Disconnect any disk in recovery mode
+          a. Disconnect any disks more than 1 in normal mode
+          a. File & File system check after recovery complete

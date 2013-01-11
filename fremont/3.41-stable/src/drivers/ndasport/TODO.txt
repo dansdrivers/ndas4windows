@@ -1,0 +1,34 @@
+TODO: LspIo -> LRB (LSP Request Block)
+TODO: NOOP for IDE
+TODO: Disconnect Handling
+TODO: Flow Control
+TODO: Support for SRB_FUNCTION_LOCK_QUEUE and SRB_FUNCTION_UNLOCK_QUEUE
+TODO: WMI Event
+TODO: Use IoRegisterLastChanceShutdownNotification to last-minute flushing
+	(SRB_FUCTION_SHUTDOWN isn't enough?)
+TODO: LFSFilter Interaction
+TODO: Block Encryption Support
+TODO: ATAPI (DVD/CD-ROM) support
+
+// 2.0
+TDI_ADDRESS_LPX deviceAddress1 = {0x1027, 0x00, 0x0d, 0x0b, 0x5d, 0x80, 0x03};
+// 1.1
+TDI_ADDRESS_LPX deviceAddress2 = {0x1027, 0x00, 0x0b, 0xd0, 0x01, 0x6b, 0x76};
+// 1.1
+TDI_ADDRESS_LPX deviceAddress3 = {0x1027, 0x00, 0x0b, 0xd0, 0x01, 0x6b, 0xb2};
+// 1.0
+TDI_ADDRESS_LPX deviceAddress4 = {0x1027, 0x00, 0x0b, 0xd0, 0x00, 0x9b, 0x7d};
+// 2.0
+TDI_ADDRESS_LPX deviceAddress5 = {0x1027, 0x00, 0x0B, 0xD0, 0xFE, 0x02, 0x79};
+
+TODO: Support for IDE SMART [DONE]
+ Requires IOCTL_SCSIMINIPORT_SMART, etc.
+
+
+BUGS:
+
+* lpx is stopped when logical units are present.
+  BAD_POOL_HEADER crash calling LspIoFreeSession from NdasAtaDeviceCleanupLogicalUnit
+
+* 
+

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="7.10" Name="lfsfilt" ProjectGUID="{2EEDF72B-5B9F-4653-A216-0DFEA304479F}" RootNamespace="lfsfilt" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="objchk_wxp_x86\i386" IntermediateDirectory="objchk_wxp_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNETXP chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNETXP chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNETXP chk . -c0i" Output="objchk_wxp_x86\i386\lfsfilt.sys" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="objfre_wxp_x86\i386" IntermediateDirectory="objfre_wxp_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNETXP fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNETXP fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNETXP fre . -c0i" Output="objfre_wxp_x86\i386\lfsfilt.sys" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug (x64)|Win32" OutputDirectory="objchk_wnet_amd64\amd64" IntermediateDirectory="objchk_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -c0i" Output="objchk_wnet_amd64\amd64\lfsfilt.sys" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release (x64)|Win32" OutputDirectory="objfre_wnet_amd64\amd64" IntermediateDirectory="objfre_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -c0i" Output="objfre_wnet_amd64\amd64\lfsfilt.sys" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+    <Filter Name="Source Files" Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml" UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+    <File RelativePath=".\fastiodispatch.c" /><File RelativePath=".\filespy.c" /><File RelativePath=".\fspyctx.c" /><File RelativePath=".\fspyhash.c" /><File RelativePath=".\fspylib.c" /><File RelativePath=".\lfs.c" /><File RelativePath=".\lfsdbg.c" /><File RelativePath=".\lfsdgsvrcli.c" /><File RelativePath=".\lfslib.c" /><File RelativePath=".\lfsproto.c" /><File RelativePath=".\lfstable.c" /><File RelativePath=".\md5.c" /><File RelativePath=".\memorymap.c" /><File RelativePath=".\mountmanager.c" /><File RelativePath=".\netdiskmanager.c" /><File RelativePath=".\primary.c" /><File RelativePath=".\primarysession.c" /><File RelativePath=".\readonly.c" /><File RelativePath=".\secondary.c" /><File RelativePath=".\secondaryredirectirp.c" /><File RelativePath=".\secondarythread.c" /></Filter>
+    <Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl;xsd" UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+    <File RelativePath=".\checkup.h" /><File RelativePath=".\fastiodispatch.h" /><File RelativePath=".\filespy.h" /><File RelativePath=".\fspydef.h" /><File RelativePath=".\fspykern.h" /><File RelativePath=".\lfs.h" /><File RelativePath=".\lfsdbg.h" /><File RelativePath=".\lfsdgsvrcli.h" /><File RelativePath=".\lfsmessage.h" /><File RelativePath=".\lfsmessageheader.h" /><File RelativePath=".\lfsproc.h" /><File RelativePath=".\lfsproto.h" /><File RelativePath=".\lfssystemproc.h" /><File RelativePath=".\lfstable.h" /><File RelativePath=".\md5.h" /><File RelativePath=".\mountmanager.h" /><File RelativePath=".\ndfsprotocolheader.h" /><File RelativePath=".\ndftprotocolheader.h" /><File RelativePath=".\netdiskmanager.h" /><File RelativePath=".\primary.h" /><File RelativePath=".\resource.h" /><File RelativePath=".\secondary.h" /><File RelativePath=".\table.h" /><File RelativePath=".\win2kheader.h" /></Filter>
+    <Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx" UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+    <File RelativePath=".\filespy.rc" /></Filter>
+  <File RelativePath=".\lfsfilt.ver" /><File RelativePath=".\makefile" /><File RelativePath=".\sources" /><Filter Name=".inc" Filter="" UniqueIdentifier="{178F792E-AD9F-46C6-ACC3-9EDE7848E397}"><File RelativePath=".\inc\lfs.h" /><File RelativePath=".\inc\ntfs.h" /></Filter><Filter Name=".install" Filter="" UniqueIdentifier="{FE79227B-C1AD-4E68-9190-359DF061EA60}"><File RelativePath=".\install\chkosver.exe" /><File RelativePath=".\install\lfsfilt.cat" /><File RelativePath=".\install\lfsfilt.inf" /><File RelativePath=".\install\lfsflt2k.inf" /><File RelativePath=".\install\lfsinstall.cmd" /><File RelativePath=".\install\lfsuninstall.cmd" /></Filter></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

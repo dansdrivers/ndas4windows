@@ -1,0 +1,215 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Do_Test - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP38C.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/Do_Test.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\company\Ximeta_programs\Perf_Test\Do_Test\Do_Test.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP38C.tmp" 
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP38D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/Do_Test.pdb" /machine:I386 /out:"Release/Do_Test.exe" 
+.\Release\Do_Test.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP38D.tmp"
+<h3>Output Window</h3>
+Compiling...
+Do_Test.cpp
+C:\PROGRAM FILES\MICROSOFT SDK\INCLUDE\winnt.h(768) : warning C4163: '_rotl64' : not available as an intrinsic function
+C:\PROGRAM FILES\MICROSOFT SDK\INCLUDE\winnt.h(770) : warning C4163: '_rotr64' : not available as an intrinsic function
+Linking...
+
+
+
+<h3>Results</h3>
+Do_Test.exe - 0 error(s), 2 warning(s)
+<h3>
+--------------------Configuration: Do_Test - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP38F.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Do_Test.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\company\Ximeta_programs\Perf_Test\Do_Test\Do_Test.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP38F.tmp" 
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP390.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Do_Test.pdb" /debug /machine:I386 /out:"Debug/Do_Test.exe" /pdbtype:sept 
+.\Debug\Do_Test.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP390.tmp"
+<h3>Output Window</h3>
+Compiling...
+Do_Test.cpp
+c:\program files\microsoft sdk\include\winnt.h(768) : warning C4163: '_rotl64' : not available as an intrinsic function
+c:\program files\microsoft sdk\include\winnt.h(770) : warning C4163: '_rotr64' : not available as an intrinsic function
+Linking...
+
+
+
+<h3>Results</h3>
+Do_Test.exe - 0 error(s), 2 warning(s)
+<h3>
+--------------------Configuration: Gen_Test_Pattern - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP392.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/Gen_Test_Pattern.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\company\Ximeta_programs\Perf_Test\Gen_Test_Pattern\Gen_Test_Pattern.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP392.tmp" 
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP393.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/Gen_Test_Pattern.pdb" /machine:I386 /out:"Release/Gen_Test_Pattern.exe" 
+.\Release\Gen_Test_Pattern.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP393.tmp"
+<h3>Output Window</h3>
+Compiling...
+Gen_Test_Pattern.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Gen_Test_Pattern.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Gen_Test_Pattern - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP395.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Gen_Test_Pattern.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\company\Ximeta_programs\Perf_Test\Gen_Test_Pattern\Gen_Test_Pattern.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP395.tmp" 
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP396.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Gen_Test_Pattern.pdb" /debug /machine:I386 /out:"Debug/Gen_Test_Pattern.exe" /pdbtype:sept 
+.\Debug\Gen_Test_Pattern.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP396.tmp"
+<h3>Output Window</h3>
+Compiling...
+Gen_Test_Pattern.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Gen_Test_Pattern.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Gen_file - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP398.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/Gen_file.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\company\Ximeta_programs\Perf_Test\Gen_file\Gen_file.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP398.tmp" 
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP399.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/Gen_file.pdb" /machine:I386 /out:"Release/Gen_file.exe" 
+.\Release\Gen_file.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP399.tmp"
+<h3>Output Window</h3>
+Compiling...
+Gen_file.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Gen_file.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Gen_file - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP39B.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Gen_file.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\company\Ximeta_programs\Perf_Test\Gen_file\Gen_file.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP39B.tmp" 
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP39C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Gen_file.pdb" /debug /machine:I386 /out:"Debug/Gen_file.exe" /pdbtype:sept 
+.\Debug\Gen_file.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP39C.tmp"
+<h3>Output Window</h3>
+Compiling...
+Gen_file.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Gen_file.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: StartTest - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP39E.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/StartTest.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\company\Ximeta_programs\Perf_Test\StartTest\StartTest.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP39E.tmp" 
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP39F.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/StartTest.pdb" /machine:I386 /out:"Release/StartTest.exe" 
+.\Release\StartTest.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP39F.tmp"
+<h3>Output Window</h3>
+Compiling...
+StartTest.cpp
+C:\PROGRAM FILES\MICROSOFT SDK\INCLUDE\winnt.h(768) : warning C4163: '_rotl64' : not available as an intrinsic function
+C:\PROGRAM FILES\MICROSOFT SDK\INCLUDE\winnt.h(770) : warning C4163: '_rotr64' : not available as an intrinsic function
+Linking...
+
+
+
+<h3>Results</h3>
+StartTest.exe - 0 error(s), 2 warning(s)
+<h3>
+--------------------Configuration: StartTest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP3A1.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/StartTest.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\company\Ximeta_programs\Perf_Test\StartTest\StartTest.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP3A1.tmp" 
+Creating temporary file "C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP3A2.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/StartTest.pdb" /debug /machine:I386 /out:"Debug/StartTest.exe" /pdbtype:sept 
+.\Debug\StartTest.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ilgulove\LOCALS~1\Temp\RSP3A2.tmp"
+<h3>Output Window</h3>
+Compiling...
+StartTest.cpp
+c:\program files\microsoft sdk\include\winnt.h(768) : warning C4163: '_rotl64' : not available as an intrinsic function
+c:\program files\microsoft sdk\include\winnt.h(770) : warning C4163: '_rotr64' : not available as an intrinsic function
+Linking...
+
+
+
+<h3>Results</h3>
+StartTest.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="" version="" lang="ptg" oem="base" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="NDAS_ERROR_INVALID_ID_FORMAT">
+    <base><![CDATA[NDAS device ID or Key is invalid.]]></base>
+    <translation><![CDATA[ID ou chave do dispositivo NDAS não válida.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Device Entry Not Found.]]></base>
+    <translation><![CDATA[Entrada de dispositivo NDAS não encontrada.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNITDEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Unit Device Entry Not Found.]]></base>
+    <translation><![CDATA[Entrada de dispositivo da unidade NDAS não encontrada.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Logical Device Entry Not Found.]]></base>
+    <translation><![CDATA[Entrada de dispositivo lógico NDAS não encontrada.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_DISABLE_MOUNTED_DEVICE">
+    <base><![CDATA[Disabling the NDAS device containing any of the mounted unit device is not allowed.]]></base>
+    <translation><![CDATA[Não está permitido desactivar o dispositivo NDAS que contém qualquer um dos dispositivos de unidade montado.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_UNREGISTER_ENABLED_DEVICE">
+    <base><![CDATA[Unregistering an enabled NDAS device is not permitted.]]></base>
+    <translation><![CDATA[Não está permitido desregistar um dispositivo NDAS.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SLOT_NUMBER">
+    <base><![CDATA[Invalid NDAS slot number.]]></base>
+    <translation><![CDATA[Número de ranhura NDAS não válido.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_SLOT_ALREADY_OCCUPIED">
+    <base><![CDATA[Requested slot is used by another device.]]></base>
+    <translation><![CDATA[Ranhura requerida está a ser utilizada por outro dispositivo.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_DEVICE_ENTRY">
+    <base><![CDATA[The requested NDAS device already exists.]]></base>
+    <translation><![CDATA[O dispositivo NDAS requerido já existe.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_SLOT_FULL">
+    <base><![CDATA[No more NDAS device slot is available.]]></base>
+    <translation><![CDATA[Nenhuma ranhura de dispositivo NDAS disponível.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_INITIALIZED">
+    <base><![CDATA[NDAS Logical device is not initialized.]]></base>
+    <translation><![CDATA[O dispositivo lógico NDAS não foi inicializado.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MEMBER_MISSING">
+    <base><![CDATA[Some NDAS logical device members are missing in the entry.]]></base>
+    <translation><![CDATA[Alguns membros de dispositivos lógicos NDAS estão ausentes na entrada.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_MOUNTED">
+    <base><![CDATA[NDAS Logical device is not mounted.]]></base>
+    <translation><![CDATA[O dispositivo lógico NDAS não está montado.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_CONFLICT_LOGICALDEVICE_ENTRY">
+    <base><![CDATA[NDAS Logical device entry is conflicts with existing entries.]]></base>
+    <translation><![CDATA[A entrada de dispositivo lógico NDAS em conflito com entradas existentes.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_LOGICALDEVICE_ENTRY">
+    <base><![CDATA[The requested NDAS logical device already exists.]]></base>
+    <translation><![CDATA[O dispositivo lógico NDAS requerido já existe.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_SLOT_FULL">
+    <base><![CDATA[No more NDAS logical device slot is available.]]></base>
+    <translation><![CDATA[Nenhum dispositivo lógico NDAS disponível.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNSUPPORTED_LOGICALDEVICE_TYPE">
+    <base><![CDATA[Unsupported NDAS logical device type.]]></base>
+    <translation><![CDATA[Tipo de dispositivo lógico NDAS não suportado.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_INVALID_BIND_INFORMATION">
+    <base><![CDATA[The bind information in NDAS device is invalid.]]></base>
+    <translation><![CDATA[A informação de ligação no dispositivo NDAS não é válida.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MODIFIED_BIND_INFORMATION">
+    <base><![CDATA[The bind information in NDAS device is changed.]]></base>
+    <translation><![CDATA[A informação de ligação no dispositivo NDAS foi alterada.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base><![CDATA[Granted access for the NDAS logical device is insufficient to complete the operation.]]></base>
+    <translation><![CDATA[O acesso garantido para o dispositivo lógico NDAS é insuficiente para concluir a operação.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+    <base><![CDATA[Requested access to the NDAS logical device is failed.]]></base>
+    <translation><![CDATA[Falhou o acesso requerido ao dispositivo lógico NDAS.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_UNMOUNTED">
+    <base><![CDATA[NDAS logical device is not in a mountable status.]]></base>
+    <translation><![CDATA[O dispositivo lógico NDAS não está em um estado montável.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_UNITDEVICE_NOT_MOUNTED">
+    <base><![CDATA[NDAS Unit device is not mounted.]]></base>
+    <translation><![CDATA[O dispositivo de unidade NDAS não está montado.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_HOST_INFO_NOT_FOUND">
+    <base><![CDATA[NDAS Host Information cannot be found.]]></base>
+    <translation><![CDATA[Impossível encontrar a informação de host NDAS.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_DEVICE_COMMUNICATION_FAILURE">
+    <base><![CDATA[Communication to the NDAS Device has failed.]]></base>
+    <translation><![CDATA[Falhou a comunicação ao dispositivo NDAS.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_MULTIPLE_WRITE_ACCESS_NOT_ALLOWED">
+    <base><![CDATA[Multiple Write Access is not allowed for the specified NDAS unit device.]]></base>
+    <translation><![CDATA[Não está permitido o acesso de escrita múltiplo para o dispositivo de unidade NDAS especificado.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_INCOMPATIBLE_HOSTS_FOR_MULTIPLE_WRITE_ACCESS">
+    <base><![CDATA[Incompatible NDAS hosts for multiple write-access are found for the specified NDAS unit device.]]></base>
+    <translation><![CDATA[Foram encontrados computadores hospedeiros NDAS com acesso de escritura múltiplo para o dispositivo de unidade NDAS especificado.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NO_MORE_DVD_WRITE_ACCESS_INSTANCE_ALLOWED">
+    <base><![CDATA[No more than constrained instances of DVD Drives as Read/Write mode is allowed.]]></base>
+    <translation><![CDATA[Não está permitido mais que instâncias forçadas de unidades de DVD como modo de leitura/escrita.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_CORRUPTED_BIND_INFORMATION">
+    <base><![CDATA[The NDAS device is corrupted and need to be recovered before mounting.]]></base>
+    <translation><![CDATA[O dispositivo NDAS está defeituoso e necessita ser recuperado antes da montagem.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNKNOWN_VENDOR_ID">
+    <base><![CDATA[The NDAS device ID cannot be used with the current version of the software. Upgrade the software to the most recent version or use the vendor-provided software.]]></base>
+    <translation><![CDATA[A ID do dispositivo NDAS não pode utilizada com a versão actual de software. Actualizar o software para a versão mais actual ou utilizar o software fornecido pelo distribuidor.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+    <base><![CDATA[Command version is unsupported.]]></base>
+    <translation><![CDATA[Versão de comando não suportada.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[Recurso requerido não suportado.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+    <base><![CDATA[Unsupported Read-only filter version.]]></base>
+    <translation><![CDATA[Versão de filtro de apenas leitura não suportado.]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SERVICE_PARAMETER">
+    <base><![CDATA[Invalid service parameter.]]></base>
+    <translation><![CDATA[Parâmetro de serviço não válido.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+    <base><![CDATA[Communication to the NDAS service failed.]]></base>
+    <translation><![CDATA[Falhou a comunicação ao serviço NDAS.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+    <base><![CDATA[NDAS Device ID or Key is invalid.]]></base>
+    <translation><![CDATA[ID ou chave do dispositivo NDAS não válida.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+    <base><![CDATA[NDAS Device ID is invalid.]]></base>
+    <translation><![CDATA[ID do dispositivo NDAS não válida.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+    <base><![CDATA[NDAS Device Key is invalid.]]></base>
+    <translation><![CDATA[Chave do dispositivo NDAS não válida.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation><![CDATA[Parâmetro não válido.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base><![CDATA[NDAS Logical device access denied.]]></base>
+    <translation><![CDATA[Denegado o acesso ao dispositivo lógico NDAS.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+    <base><![CDATA[NDAS Service does not support the requested operation.]]></base>
+    <translation><![CDATA[Serviço NDAS não suporta a operação requerida.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+    <base><![CDATA[Operation is invalid to the NDAS service.]]></base>
+    <translation><![CDATA[Operação não válida para o serviço NDAS.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+    <base><![CDATA[NDAS Service is terminating.]]></base>
+    <translation><![CDATA[O serviço NDAS está a concluir.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+    <base><![CDATA[Unsupported NDAS service version.]]></base>
+    <translation><![CDATA[Versão de serviço NDAS não suportado.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+    <base><![CDATA[Unsupport NDAS service event version.]]></base>
+    <translation><![CDATA[Versão de evento de serviço NDAS não suportado.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+    <base><![CDATA[No more NDAS event callback is available.]]></base>
+    <translation><![CDATA[Nenhuma resposta de evento NDAS disponível.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+    <base><![CDATA[Invalid NDAS event callback handle.]]></base>
+    <translation><![CDATA[Tentativa de resposta do evento NDAS não válido.]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[Recurso requerido não suportado.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INTERNAL">
+    <base><![CDATA[Internal error.]]></base>
+    <translation><![CDATA[Erro interno.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[Recurso requerido não suportado.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation><![CDATA[Parâmetro não válido.]]></translation>
+  </string>
+  <string id="NDASCOMM_WARNING_CONNECTION_FAIL">
+    <base><![CDATA[Connection failed to the NDAS device.]]></base>
+    <translation><![CDATA[Ligação ao dispositivo NDAS falhou.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_COMMUNICATION">
+    <base><![CDATA[Communication error during login process.]]></base>
+    <translation><![CDATA[Erro de comunicação durante o processo de registo.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_NOT_EXIST.]]></base>
+    <translation><![CDATA[Erro interno: NDASCOMM_ERROR_RI_NOT_EXIST.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.]]></base>
+    <translation><![CDATA[Erro interno: NDASCOMM_ERROR_RI_BAD_COMMAND.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.]]></base>
+    <translation><![CDATA[Erro interno: NDASCOMM_ERROR_RI_COMMAND_FAILED.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.]]></base>
+    <translation><![CDATA[Erro interno: NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_NOT_EXIST.]]></base>
+    <translation><![CDATA[Erro interno: NDASCOMM_ERROR_T_NOT_EXIST.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.]]></base>
+    <translation><![CDATA[Erro interno: NDASCOMM_ERROR_T_BAD_COMMAND.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.]]></base>
+    <translation><![CDATA[Erro interno: NDASCOMM_ERROR_T_COMMAND_FAILED.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BROKEN_DATA">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.]]></base>
+    <translation><![CDATA[Erro interno: NDASCOMM_ERROR_T_BROKEN_DATA.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_AUTH_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_AUTH_FAILED.]]></base>
+    <translation><![CDATA[Erro interno: NDASCOMM_ERROR_RI_AUTH_FAILED.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+    <base><![CDATA[Unknown error for login process.]]></base>
+    <translation><![CDATA[Erro desconhecido durante o processo de registo.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RW_USER_EXIST">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s) with read-write access privilege.]]></base>
+    <translation><![CDATA[O dispositivo NDAS está a ser utilizado por outro(s) processo(s) ou hospedeiro(s) com privilégio de acesso de leitura-escrita.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation><![CDATA[Memória insuficiente para concluir a tarefa.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_PROTOCOL">
+    <base><![CDATA[Lanscsi protocol error.]]></base>
+    <translation><![CDATA[Erro de protocolo Lanscsi.]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_OPERATION">
+    <base><![CDATA[Invalid operation.]]></base>
+    <translation><![CDATA[Operação não válida.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[Recurso requerido não suportado.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_FAIL">
+    <base><![CDATA[Accessing to the device is failed.]]></base>
+    <translation><![CDATA[Acesso ao dispositivo falhou.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_SINGLE_DISK">
+    <base><![CDATA[The NDAS device must be a single disk to operate this job.]]></base>
+    <translation><![CDATA[Para operar esta tarefa o dispositivo NDAS tem de ser um disco único.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+    <base><![CDATA[The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.]]></base>
+    <translation><![CDATA[O dispositivo NDAS não é suportado. Se o dispositivo é um dispositivo HDD, converta-o a um disco único antes de realizar esta tarefa.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_BOUND_DISK">
+    <base><![CDATA[The NDAS device must be a bound disk to operate this job.]]></base>
+    <translation><![CDATA[Para operar esta tarefa o dispositivo NDAS tem de ser um disco ligado.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation><![CDATA[Parâmetro não válido.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation><![CDATA[Memória insuficiente para concluir a tarefa.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_DISK_COUNT">
+    <base><![CDATA[Incorrect disk count to bind disks.]]></base>
+    <translation><![CDATA[Contagem de disco incorrecta para ligar discos.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_ALREADY_USED">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s).]]></base>
+    <translation><![CDATA[O dispositivo NDAS está a ser utilizado por outro(s) processo(s) ou hospedeiro(s).]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+    <base><![CDATA[The NDAS device has invalid bind information to migrate.]]></base>
+    <translation><![CDATA[O dispositivo NDAS invalidou a migração da informação de ligação.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_SIZE_LIMIT">
+    <base><![CDATA[The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.]]></base>
+    <translation><![CDATA[O tamanho total dos discos ligados não pode exceder 2TB. Esta limitação foi imposta por Windows OS.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+    <base><![CDATA[There is too many missing member to replace(repair) in bound disks.]]></base>
+    <translation><![CDATA[Existem muitos membros ausentes a serem substituídos (reparados) nos discos ligados.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NO_MISSING_MEMBER">
+    <base><![CDATA[There is no missing NDAS device to replace(repair) in bound disks.]]></base>
+    <translation><![CDATA[Nenhum dispositivo NDAS ausente para substituir (reparar) nos discos ligados.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_CRITICAL_REPAIR">
+    <base><![CDATA[There was a critical error while replacing(repairing) bound disks.]]></base>
+    <translation><![CDATA[Ocorreu um erro crítico durante a substituição (reparação) de discos ligados.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_REPLACE_TOO_SMALL">
+    <base><![CDATA[Size of a replacement disk is too small.]]></base>
+    <translation><![CDATA[O tamanho de um disco de substituição é muito pequeno.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_UNSUPPORTED">
+    <base><![CDATA[This type of RAID does not support the requested command.]]></base>
+    <translation><![CDATA[Este tipo de RAID não suporta o comando requerido.]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_CAPACITY">
+    <base><![CDATA[The device does not have enough capacity to operate request command.]]></base>
+    <translation><![CDATA[O dispositivo não tem capacidade suficiente para operar o comando requerido.]]></translation>
+  </string>
+  <string id="NDASVOL_ERROR_NON_NDAS_VOLUME">
+    <base><![CDATA[The specified volume is not related with the NDAS devices.]]></base>
+    <translation><![CDATA[O volume especificado não está relacionado com os dispositivos NDAS.]]></translation>
+  </string>
+  <string id="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[Recurso requerido não suportado.]]></translation>
+  </string>
+  <string id="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+    <base><![CDATA[Non-SCSI type device is found.]]></base>
+    <translation><![CDATA[Dispositivo do tipo não SCSI encontrado.]]></translation>
+  </string>
+  <string id="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+    <base><![CDATA[SRB IO CONTROL Error]]></base>
+    <translation><![CDATA[Erro de SRB IO CONTROL]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+    <base><![CDATA[The NDAS disk is encrypted and the corresponding NDAS system key is not registered in the system.]]></base>
+    <translation><![CDATA[O disco NDAS está encriptado e a chave de sistema NDAS correspondente não está registada no sistema.]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+    <base><![CDATA[NDAS system key does not match with the NDAS disk key.]]></base>
+    <translation><![CDATA[A chave do sistema NDAS não coincide com a chave de disco NDAS.]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+    <base><![CDATA[Invalid CEB CRC.]]></base>
+    <translation>Ungültige CEB CRC.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+    <base><![CDATA[Unsupported CEB Revision.]]></base>
+    <translation><![CDATA[Revisão de CEB não suportada.]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+    <base><![CDATA[CEB Key Length is invalid.]]></base>
+    <translation><![CDATA[Tamanho do código CEB não válido.]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+    <base><![CDATA[Failed to read CEB.]]></base>
+    <translation><![CDATA[Erro ao ler CEB.]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+    <base><![CDATA[CE key generation failed.]]></base>
+    <translation><![CDATA[Falha ao gerar a chave CE.]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+    <base><![CDATA[A new NDAS Device is found from the network and is being registered.]]></base>
+    <translation><![CDATA[Um novo dispositivo NDAS foi encontrado na rede e está a ser registado.]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+    <base><![CDATA[Unsupported hardware version (%2) detected from the NDAS Device (%1).]]></base>
+    <translation><![CDATA[Versão hardware não suportada (%2) detectada no dispositivo NDAS (%1).]]></translation>
+  </string>
+</localization>

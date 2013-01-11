@@ -1,0 +1,1494 @@
+Ôªø<?xml version="1.0" encoding="utf-8"?>
+<localization component="" version="" lang="ptg" oem="base" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/13/09">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation><![CDATA[NDASUSER.DLL instalado n√£o compat√≠vel.\r\nVerifique a instala√ß√£o do software.]]></translation>
+  </string>
+  <string id="/STR/13/10">
+    <base><![CDATA[Incompatible NDASCOMM.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation><![CDATA[NDASCOMM.DLL instalado n√£o compat√≠vel.\r\nVerifique a instala√ß√£o do software.]]></translation>
+  </string>
+  <string id="/STR/18/14">
+    <base><![CDATA[%1!3d!.%2!02d! GB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/19/02">
+    <base><![CDATA[A disk cannot be mirrored by the smaller disk in size.]]></base>
+    <translation><![CDATA[Um disco n√£o pode ser reflectido pelo disco menor em tamanho.]]></translation>
+  </string>
+  <string id="/STR/20/05">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation><![CDATA[Gest√£o de liga√ß√£o NDAS]]></translation>
+  </string>
+  <string id="/STR/20/07">
+    <base><![CDATA[Component]]></base>
+    <translation><![CDATA[Componente]]></translation>
+  </string>
+  <string id="/STR/20/08">
+    <base><![CDATA[Version]]></base>
+    <translation><![CDATA[Vers√£o]]></translation>
+  </string>
+  <string id="/STR/20/11">
+    <base><![CDATA[Name]]></base>
+    <translation><![CDATA[Nome]]></translation>
+  </string>
+  <string id="/STR/20/12">
+    <base><![CDATA[NDAS ID]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/20/13">
+    <base><![CDATA[Capacity]]></base>
+    <translation><![CDATA[Capacidade]]></translation>
+  </string>
+  <string id="/STR/20/14">
+    <base><![CDATA[Number]]></base>
+    <translation><![CDATA[N√∫mero]]></translation>
+  </string>
+  <string id="/STR/21/06">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation><![CDATA[Gest√£o de liga√ß√£o NDAS]]></translation>
+  </string>
+  <string id="/STR/22/02">
+    <base><![CDATA[NDAS Bind Error]]></base>
+    <translation><![CDATA[Erro de liga√ß√£o NDAS]]></translation>
+  </string>
+  <string id="/STR/22/03">
+    <base><![CDATA[Failed to convert the selected disk to a basic disk.]]></base>
+    <translation><![CDATA[Erro ao converter o disco seleccionado em um disco b√°sico.]]></translation>
+  </string>
+  <string id="/STR/22/09">
+    <base><![CDATA[Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!]]></base>
+    <translation><![CDATA[Recurso: NDAS 0x%1!04X!\r\nC√≥digo de erro: %2!u! (0x%2!04X!)\r\n%3!s!]]></translation>
+  </string>
+  <string id="/STR/22/10">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation><![CDATA[C√≥digo de erro: %1!u! (0x%1!04X!)\r\n%2!s!]]></translation>
+  </string>
+  <string id="/STR/22/11">
+    <base><![CDATA[All of the data will be lost once the disks are bound. Are you sure you want to bind the disks?]]></base>
+    <translation><![CDATA[Todos esses dados ser√£o perdidos quando os discos estiverem ligados. Est√° seguro que deseja ligar os discos?]]></translation>
+  </string>
+  <string id="/STR/22/12">
+    <base><![CDATA[Some version of Windows cannot access a disk larger than 2 TBytes and the size of bound disks is larger than the limit. Do you want to continue?]]></base>
+    <translation><![CDATA[Algumas vers√µes do Windows n√£o permite aceder a um disco maior de 2 TBytes e o tamanho dos discos ligados ultrapassa este limite. Deseja continuar?]]></translation>
+  </string>
+  <string id="/STR/23/00">
+    <base><![CDATA[%1!s! does not have Write access privilege. The NDAS device's Write Key is required to be registered to gain Write access.]]></base>
+    <translation><![CDATA[%1!s! n√£o disp√µe de privil√©gio de acesso a Write. √â necess√°rio dispor do dispositivo NDAS Write Key para registar-se e obter acesso a Write.]]></translation>
+  </string>
+  <string id="/STR/23/05">
+    <base><![CDATA[All of the data will be lost once the disks are unbound. Are you sure you want to unbind the disks?]]></base>
+    <translation><![CDATA[Todos esses dados ser√£o perdidos quando os discos forem desligados. Est√° seguro que deseja desligar os discos?]]></translation>
+  </string>
+  <string id="/STR/23/06">
+    <base><![CDATA[Selected disks are successfully unbound. You must first mount and then format each of the unbound disks before using them.]]></base>
+    <translation><![CDATA[Os discos seleccionados foram desligados correctamente. Antes de utilizar os discos, primeiro ter√° de montar e depois formatar cada um dos discos desligados.]]></translation>
+  </string>
+  <string id="/STR/23/08">
+    <base><![CDATA[A problem occurred while operating on the NDAS device '%1!s!'.]]></base>
+    <translation><![CDATA[Ocorreu um problema enquanto estava a operar o dispositivo NDAS '%1!s!'.]]></translation>
+  </string>
+  <string id="/STR/23/09">
+    <base><![CDATA[A problem occurred while operating on the NDAS devices.]]></base>
+    <translation><![CDATA[Ocorreu um problema enquanto estava a operar os dispositivos NDAS.]]></translation>
+  </string>
+  <string id="/STR/24/00">
+    <base><![CDATA[Bind type]]></base>
+    <translation><![CDATA[Tipo de enlace]]></translation>
+  </string>
+  <string id="/STR/24/01">
+    <base><![CDATA[Striped Disk (RAID-0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/02">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation><![CDATA[Disco espelhado (RAID-1) (desaprovado)]]></translation>
+  </string>
+  <string id="/STR/24/03">
+    <base><![CDATA[RAID-2 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/04">
+    <base><![CDATA[RAID-3 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/05">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation><![CDATA[Disco RAID-4 (desaprovado)]]></translation>
+  </string>
+  <string id="/STR/24/06">
+    <base><![CDATA[RAID-5 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/07">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation><![CDATA[Disco agregado]]></translation>
+  </string>
+  <string id="/STR/24/08">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation><![CDATA[Unidade Compact Flash]]></translation>
+  </string>
+  <string id="/STR/24/09">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation><![CDATA[Unidade de DVD]]></translation>
+  </string>
+  <string id="/STR/24/10">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/11">
+    <base><![CDATA[MO Drive]]></base>
+    <translation><![CDATA[Unidade MO]]></translation>
+  </string>
+  <string id="/STR/24/12">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation><![CDATA[Disco b√°sico]]></translation>
+  </string>
+  <string id="/STR/24/13">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation><![CDATA[Tipo desconhecido (0x%1!08X!)]]></translation>
+  </string>
+  <string id="/STR/24/14">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation><![CDATA[Unidade de DVD virtual]]></translation>
+  </string>
+  <string id="/STR/25/02">
+    <base><![CDATA[Device not found]]></base>
+    <translation><![CDATA[Dispositivo n√£o encontrado]]></translation>
+  </string>
+  <string id="/STR/25/03">
+    <base><![CDATA[Status]]></base>
+    <translation><![CDATA[Estado]]></translation>
+  </string>
+  <string id="/STR/25/04">
+    <base><![CDATA[RAID status]]></base>
+    <translation><![CDATA[Estado RAID]]></translation>
+  </string>
+  <string id="/STR/25/05">
+    <base><![CDATA[Comment]]></base>
+    <translation><![CDATA[Coment√°rio]]></translation>
+  </string>
+  <string id="/STR/25/07">
+    <base><![CDATA[Yes]]></base>
+    <
+						else CMD_view_settings();
+					}
+					else if( !bReadOnly && !bSelected ){
+						//In bits section
+
+						//Find the end of " Bits="
+						for( ; i < len && st[i]!='='; i++);
+
+						//Are we in the actual bits or " Bits="
+						if( cn <= i ){
+							//In " Bits="
+							CMD_manipulate_bits();
+						}
+						else{
+							//In actual bits
+
+							//This bit uses the old method because it is more accurate
+
+							//Init for the below loops
+							st = &text[i+1];
+							char tmp = st[0];
+							st[0] = '\0';
+							len = strlen(text);
+							GetTextExtentPoint32(dc,text,len,&s);
+							r = rt.left+s.cx;
+							st[0] = tmp;
+
+							//Flip the equivalent of a "bit"
+							tmp = 1;
+							for(i = 0; i < 8; i++){
+								GetTextExtentPoint32(dc,st,i+1,&s);
+								if(p.x <= r+s.cx+1){//Better with <=
+									if ( st[i] == '0' ) st[i] = '1';
+									else if( st[i] == '1' ) st[i] = '0';
+									tmp = 0;
+									break;
+								}
+							}
+							if(tmp){
+								i = 7;
+								if ( st[i] == '0' ) st[i] = '1';
+								else if( st[i] == '1' ) st[i] = '0';
+							}
+
+							//Assemble all the "bits"
+							DataArray[iCurByte] = 0x00;
+							for( i = 0; i < 8; i++){
+								if( st[i] == '1' ) DataArray[iCurByte] |= 0x01;
+								if( i < 7 ) DataArray[iCurByte] <<= 1;
+							}
+
+							//Redraw the data & status bar etc
+							bFilestatusChanged = m_iFileChanged = TRUE;
+							repaint(BYTELINE);
+
+						}//In actual bits
+					}//In bits section
+				}//In the left aligned stuff
+			}//Not in the right aligned stuff
+			break;
+		}//In the first rect
+
+
+		case 1:{
+			//The user clicked in the 2nd part
+			char area = 0;//Part - ANSI/OEM, READ/INS/OVR or L/B
+
+			//Start of the string is at r - centered
+			r = (rt.left+rt.right-s.cx)/2;
+
+			//Find the one we clicked in using text functions
+			if(p.x > r){
+				//Find which character the user clicked in.
+				r = p.x - r;
+				GetTextExtentExPoint(dc, text, len, r, &cn, NULL, &s);
+				//Find the part that the user clicked in.
+				for(i = 0; i < len; i++){
+					//If pos is in this character stop
+					if ( cn == i ) break;
+					//Increment the part
+					if( text[i] == '/' ) area++;
+				}
+			}
+
+			//Do what the user asked for
+			switch(area){
+				case 0:{//ANSI <--> OEM
+					if(iCharacterSet==ANSI_FIXED_FONT)iCharacterSet=OEM_FIXED_FONT;
+					else if(iCharacterSet==OEM_FIXED_FONT)iCharacterSet=ANSI_FIXED_FONT;
+					save_ini_data ();
+					//Repaint - this affects text drawing
+					kill_focus ();
+					set_focus ();
+					break;
+				}
+				case 1:{//READ/INS/OVR
+					if ( left ){//READ -> INS -> OVR -> READ...
+						if(bReadOnly){ bReadOnly = 0; iInsertMode= 1;}
+						else if(iInsertMode) iInsertMode = 0;
+						else bReadOnly = 1;
+					}
+					else{//READ <- INS <- OVR <- READ...
+						if(bReadOnly){ bReadOnly = 0; iInsertMode= 0;}
+						else if(iInsertMode) bReadOnly = 1;
+						else iInsertMode = 1;
+					}
+					break;
+				}
+				case 2:{// L <--> B
+					//This is not a typo - these preprocessor directives are required to make optimum code
+					#if ((!LITTLEENDIAN_MODE) == BIGENDIAN_MODE) && (LITTLEENDIAN_MODE == (!BIGENDIAN_MODE))
+						//If this does not work replace with the below
+						iBinaryMode = !iBinaryMode;
+					#else
+						if(iBinaryMode==LITTLEENDIAN_MODE)iBinaryMode=BIGENDIAN_MODE;
+						else if(iBinaryMode==BIGENDIAN_MODE)iBinaryMode=LITTLEENDIAN_MODE;
+					#endif
+					break;
+				}
+			}//switch ANSI/READ/L
+
+			//Fix up the status text
+			//Since set_focus does this too don't call unless have too
+			if( area != 0 ) set_wnd_title();
+
+			break;
+		}//2nd rect
+
+
+		case 2:{
+			//The user clicked in the third part - file size part - what should we do here?
+			//Pabs thinking append, file properties (call shell/frhed) or something else?
+			if ( left && !bReadOnly && !bSelected ) CMD_edit_append();
+			else CMD_properties();
+			/*or use OleCreatePropertyFrame to show the property sheet for that file
+			or use the undocumented function below
+			SHObjectProperties uÌÅË   |ÔP|ÔP|ÔP    Ë          
+Û               ˝ƒë                                     âÂ@                           ‰∏l‰îx‰îx|ÔP‰îx                                                                                                        ÌÅËñ  |ÔP|ÔP|ÔP    Ë          
+Û               ˛ƒë                                     äÂ@                           ‰∏l‰∏l‰∏l|ÔP‰∏l                                                                                                        ÌÅËo  |ÔP|ÔP|ÔP    Ë          
+Û               ˇƒë                                     ãÂ@                           Ë$I"Ë$I"‰∏l|ÔP‰∏l                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         åÂ@                           ‰¡£‰¡£Ë$I"|ÔPË$I"                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         çÂ@                           ‰¡£‰¡£Ë$I"|ÔPË$I"                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         éÂ@                           ‰¡£‰¡£ËH=#|ÔPËH=#                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         èÂ@                           ‰¡£‰¡£Ël1$|ÔPËl1$                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         êÂ@                           ‰¡£‰¡£Ëê%%|ÔPËê%%                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         ëÂ@                           ‰¡£‰¡£Ëê%%|ÔPËê%%                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         íÂ@                           ‰¡£‰¡£Ëê%%|ÔPËê%%                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         ìÂ@                           ‰¡£‰¡£Ëê%%|ÔPËê%%                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         îÂ@                           ‰¡£‰¡£Ëê%%|ÔPËê%%                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         ïÂ@                           ‰¡£‰¡£Ëê%%|ÔPËê%%                                                                                                        ÌÅË    |ÔP≥ÄÔP≥ÄÔP≥ÄÔPË            
+Û                                                         ñÂ@                           ‰¡£‰¡£Ëê%%|ÔPËê%%                                                                                                        ÌÅË d |ÔP|ÔP|ÔP    Ë ∏         
+Û               ≈ë                                     óÂ@                           Ïå“+ÏDÍ)Ï ˆ(|ÔPÏ ˆ(                                                                                                        ÌÅË‡  |ÔP|ÔP|ÔP    Ë          
+Û               $≈ë                                     òÂ@                           Ïå“+Ïå“+Ïå“+|ÔPÏå“+                                                                                                        ©iÓ”  ±iÓ”  ∏iÓ”  øiÓ”  «iÓ”  ŒiÓ”  ’iÓ”  ‹iÓ”  „iÓ”  ÍiÓ”  ÒiÓ”  ¯iÓ”  ˇiÓ”  jÓ”  jÓ”  jÓ”  jÓ”  &jÓ”  0jÓ”  :jÓ”  DjÓ”  KjÓ”  RjÓ”  [jÓ”  4_Ó”  (_Ó”  bjÓ”  ijÓ”  pjÓ”  xjÓ”  jÓ”  ÜjÓ”  çjÓ”  îjÓ”  õjÓ”  ¢jÓ”  ©jÓ”  Ò^Ó”  È^Ó”  ËvÓ”  ∆ÑÓ”  ∞jÓ”  πjÓ”   jÓ”  €jÓ”  ‰jÓ”  ÔjÓ”   kÓ”  kÓ”  #kÓ”  /kÓ”  >kÓ”  GkÓ”  RkÓ”  \kÓ”  ikÓ”  rkÓ”  zkÓ”  ÜkÓ”  îkÓ”  ¢kÓ”  ∞kÓ”  ªkÓ”  átÓ”   kÓ”  ÷kÓ”  ÂkÓ”  ÙkÓ”  lÓ”  lÓ”  àfÓ”  lÓ”  %lÓ”  4lÓ”  AlÓ”  KlÓ”  RlÓ”  YlÓ”  `lÓ”  glÓ”  nlÓ”  wlÓ”  ÑlÓ”  élÓ”  òlÓ”  °lÓ”  ∞lÓ”  ælÓ”  ÃlÓ”  ŸlÓ”  ÁlÓ”  ˆlÓ”  ˛lÓ”  mÓ”  mÓ”  mÓ”  $mÓ”  .mÓ”  :mÓ”  CmÓ”  NmÓ”  VmÓ”  `mÓ”  imÓ”  rmÓ”  {mÓ”  ÑmÓ”  êmÓ”  ômÓ”  ¢mÓ”  ´mÓ”  ∑mÓ”  ƒmÓ”  ŒmÓ”  ◊mÓ”  ÂmÓ”  ÒmÓ”  ˝mÓ”  	nÓ”  nÓ”  nÓ”  )nÓ”  2nÓ”  ;nÓ”  GnÓ”  TnÓ”  ^nÓ”  jnÓ”  rnÓ”  znÓ”  ÖnÓ”  énÓ”  ónÓ”  °nÓ”  ´nÓ”  µnÓ”  ønÓ”  «nÓ”  —nÓ”  ﬁnÓ”  ËnÓ”  ÚnÓ”  ˇnÓ”  oÓ”  oÓ”  "oÓ”  /oÓ”  :oÓ”  EoÓ”  OoÓ”  \oÓ”  foÓ”  toÓ”  |oÓ”  ÑoÓ”  åoÓ”  îoÓ”  úoÓ”  §oÓ”  ¨oÓ”  ¥oÓ”  ºoÓ”  ƒoÓ”  ÃoÓ”  ‘oÓ”  ‹oÓ”  ‰oÓ”  ÏoÓ”  ÙoÓ”  ¸oÓ”  pÓ”  pÓ”  pÓ”  pÓ”  $pÓ”  ,pÓ”  4pÓ”  <pÓ”  DpÓ”  LpÓ”  TpÓ”  \pÓ”  dpÓ”  lpÓ”  tpÓ”  |pÓ”  ÑpÓ”  åpÓ”  îpÓ”  úpÓ”  §pÓ”  ¨pÓ”  ¥pÓ”  ºpÓ”  ƒpÓ”  ÃpÓ”  ‘pÓ”  ‹pÓ”  ‰pÓ”  ÏpÓ”  ÙpÓ”  ¸pÓ”  qÓ”  qÓ”  qÓ”  qÓ”  $qÓ”  2qÓ”  BqÓ”  SqÓ”  `qÓ”  jqÓ”  xqÓ”  ÖqÓ”  ìqÓ”  üqÓ”  ¶qÓ”  ±qÓ”  ﬁqÓ”  ºqÓ”  ¬qÓ”  ÕqÓ”  ŸqÓ”  „qÓ”  ÈqÓ”  ÔqÓ”  ıqÓ”  ˚qÓ”  rÓ”  rÓ”  rÓ”  rÓ”  rÓ”  rÓ”  )rÓ”  5rÓ”  FrÓ”  VrÓ”  erÓ”  trÓ”  ÉrÓ”  ïrÓ”  ßrÓ”  ∑rÓ”  «rÓ”  ”rÓ”  ÈrÓ”  ˝rÓ”  sÓ”  $sÓ”  5sÓ”  OsÓ”  dsÓ”  vsÓ”  ãsÓ”  ¢sÓ”  ¥sÓ”  …sÓ”  €sÓ”  ÓsÓ”  ˛sÓ”  tÓ”  #tÓ”  9tÓ”  JtÓ”  _tÓ”  jtÓ”  utÓ”  ÅtÓ”  ìtÓ”  útÓ”  ™tÓ”  ∫tÓ”   tÓ”  €tÓ”  ÈtÓ”  ˘tÓ”  uÓ”  "uÓ”  7uÓ”  MuÓ”  \uÓ”  puÓ”  ÄuÓ”  ìuÓ”  ¢uÓ”  ¥uÓ”  …uÓ”  ‡uÓ”  ÔuÓ”  ˚uÓ”  
+vÓ”  vÓ”  vÓ”  -vÓ”  7vÓ”  HvÓ”  YvÓ”  cvÓ”  ovÓ”  }vÓ”  ävÓ”  óvÓ”  §vÓ”  ±vÓ”  øvÓ”  ÕvÓ”  ﬁvÓ”  vÓ”  
+wÓ”  wÓ”  .wÓ”  CwÓ”  RwÓ”  bwÓ”  rwÓ”  àwÓ”  ùwÓ”  ±wÓ”  ƒwÓ”  ‘wÓ”  ‰wÓ”  ıwÓ”  xÓ”  !xÓ”  3xÓ”  GxÓ”  YxÓ”  pxÓ”  ÅxÓ”  êxÓ”  ûxÓ”  ¨xÓ”  øxÓ”  ”xÓ”  ÎxÓ”  ˘xÓ”  yÓ”  yÓ”   yÓ”  -yÓ”  6yÓ”  ?yÓ”  HyÓ”  QyÓ”  [yÓ”  eyÓ”  nyÓ”  zyÓ”  àyÓ”                  r{Ó”  îyÓ”  ÏuÓ”  òyÓ”  0zÓ”  siÓ”  ïyÓ”  ÚhÓ”  £~Ó”  úyÓ”  øÑÓ”  KzÓ”  ˛fÓ”  ¢yÓ”  ùzÓ”  ®yÓ”  ÆyÓ”  ØzÓ”  9gÓ”  √zÓ”  ¥yÓ”  @zÓ”  FzÓ”  ∫yÓ”  5ÛÓ”  æyÓ”  ƒyÓ”   yÓ”  œyÓ”  ’yÓ”  ⁄yÓ”  ﬁyÓ”  „yÓ”  ÈyÓ”  ÓyÓ”  fÑÓ”  ÚyÓ”  ˜yÓ”  ˚yÓ”  zÓ”  ΩÑÓ”  zÓ”  QzÓ”  zÓ”  zÓ”  zÓ”  ˜^Ó”  zÓ”  zÓ”  #zÓ”  'zÓ”  bÛÓ”  ízÓ”  òzÓ”  eÛÓ”  +zÓ”  /zÓ”  4zÓ”  9zÓ”  ?zÓ”  EzÓ”  JzÓ”  PzÓ”  VzÓ”  ZzÓ”  ^zÓ”  bzÓ”  fzÓ”  kzÓ”  ozÓ”  szÓ”  wzÓ”  {zÓ”  zÓ”  ÉzÓ”  ázÓ”  ãzÓ”  ëzÓ”  ózÓ”  úzÓ”  ¢zÓ”  ¶zÓ”  ™zÓ”  ÆzÓ”  ¥zÓ”  πzÓ”  ΩzÓ”  ¬zÓ”  »zÓ”  ÕzÓ”  “zÓ”  ÷zÓ”  ⁄zÓ”  ﬂzÓ”  „zÓ”  ÁzÓ”  ÎzÓ”  ÔzÓ”  ÛzÓ”  ˜zÓ”  ˚zÓ”  ˇzÓ”  {Ó”  âÓ”  {Ó”  µjÓ”  çiÓ”  Ã~Ó”  ‡jÓ”  {Ó”  jÓ”  —~Ó”  ÷~Ó”  {Ó”  €~Ó”  {Ó”  {Ó”   {Ó”  ${Ó”  ({Ó”  ,{Ó”  ÉÓ”  0{Ó”  4{Ó”  8{Ó”  ÙÓ”  ÉÓ”  ∫~Ó”  j{Ó”  nmÓ”  ∫zÓ”  -ÜÓ”  BÜÓ”  <{Ó”  ˙ÄÓ”  A{Ó”  ÙÓ”  ÙÓ”  E{Ó”  K{Ó”  O{Ó”  S{Ó”  W{Ó”  [{Ó”  _{Ó”  d{Ó”  h{Ó”  m{Ó”  q{Ó”  v{Ó”  |{Ó”  Ç{Ó”  á{Ó”  å{Ó”  ë{Ó”  ó{Ó”  ù{Ó”  ¢{Ó”  ß{Ó”  ¨{Ó”  #include <ntddk.h>
+#include <scsi.h>
+#include "winscsiext.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include "KDebug.h"
+
+#ifdef __MODULE__
+#undef __MODULE__
+#endif // __MODULE__
+#define __MODULE__ "KDebug"
+
+#define DEBUG_BUFFER_LENGTH 256
+
+ULONG	KDebugLevel = 1;
+ULONG	KDebugMask = DBG_DEFAULT_MASK;
+//ULONG	KDebugMask = 0x88888888; // show error only
+UCHAR	MiniBuffer[DEBUG_BUFFER_LENGTH + 1];
+PUCHAR	MiniBufferSentinal = NULL;
+UCHAR	MiniBufferWithLocation[DEBUG_BUFFER_LENGTH + 1];
+PUCHAR	MiniBufferWithLocationSentinal = NULL;
+
+VOID
+_LSKDebugPrint(
+   IN PCCHAR	DebugMessage,
+   ...
+){
+    va_list ap;
+
+    va_start(ap, DebugMessage);
+
+	_vsnprintf(MiniBuffer, DEBUG_BUFFER_LENGTH, DebugMessage, ap);
+	ASSERTMSG("_KDebugPrint overwrote sentinal byte",
+		((MiniBufferSentinal == NULL) || (*MiniBufferSentinal == 0xff)));
+
+	if(MiniBufferSentinal) {
+		*MiniBufferSentinal = 0xff;
+	}
+
+	DbgPrint(MiniBuffer);
+
+    va_end(ap);
+}
+
+PCHAR
+_LSKDebugPrintVa(
+		IN PCCHAR	DebugMessage,
+		...
+){
+	va_list ap;
+
+	va_start(ap, DebugMessage);
+
+	_vsnprintf(MiniBuffer, DEBUG_BUFFER_LENGTH, DebugMessage, ap);
+	ASSERTMSG("_KDebugPrint overwrote sentinal byte",
+		((MiniBufferSentinal == NULL) || (*MiniBufferSentinal == 0xff)));
+
+	if(MiniBufferSentinal) {
+		*MiniBufferSentinal = 0xff;
+	}
+
+	va_end(ap);
+
+	return (PCHAR)MiniBuffer;
+}
+
+VOID
+_LSKDebugPrintWithLocation(
+   IN PCCHAR	DebugMessage,
+   PCCHAR		ModuleName,
+   UINT32		LineNumber,
+   PCCHAR		FunctionName
+   )
+{
+	_snprintf(MiniBufferWithLocation, DEBUG_BUFFER_LENGTH, 
+		"[%s:%04d] %s : %s", ModuleName, LineNumber, FunctionName, DebugMessage);
+
+	ASSERTMSG("_KDebugPrintWithLocation overwrote sentinal byte",
+		((MiniBufferWithLocationSentinal == NULL) || (*MiniBufferWithLocationSentinal == 0xff)));
+
+	if(MiniBufferWithLocationSentinal) {
+		*MiniBufferWithLocationSentinal = 0xff;
+	}
+
+	DbgPrint(MiniBufferWithLocation);
+}
+
+PCHAR
+CdbOperationString(
+	UCHAR	Code
+	)
+{
+	switch(Code) {
+	case SCSIOP_READ_CAPACITY:
+		return "SCSIOP_READ_CAPACITY";
+	case SCSIOP_READ_CAPACITY16:
+		return "SCSIOP_READ_CAPACITY16";
+	case SCSIOP_READ:
+		return "SCSIOP_READ";
+	case SCSIOP_READ16:
+		return "SCSIOP_READ16";
+	case SCSIOP_INQUIRY:
+		return "SCSIOP_INQUIRY";
+	case SCSIOP_RELEASE_UNIT:
+		return "SCSIOP_RELEASE_UNIT(6)";
+	case 0x57:
+		return "RELEASE_UNIT(10)";
+	case SCSIOP_TEST_UNIT_READY:
+		return "SCSIOP_TEST_UNIT_READY";
+	case SCSIOP_MODE_SENSE:
+		return "SCSIOP_MODE_SENSE";
+	case SCSIOP_WRITE:
+		return "SCSIOP_WRITE";
+	case SCSIOP_WRITE16:
+		return "SCSIOP_WRITE16";
+	case SCSIOP_VERIFY:
+		return "SCSIOP_VERIFY";
+	case SCSIOP_VERIFY16:
+		return "SCSIOP_VERIFY16";
+	case SCSIOP_MEDIUM_REMOVAL:
+		return "SCSIOP_MEDIUM_REMOVAL";
+	case SCSIOP_REZERO_UNIT:
+		return "SCSIOP_REZERO_UNIT or SCSIOP_REWIND";
+	case SCSIOP_REQUEST_BLOCK_ADDR:
+		return "SCSIOP_REQUEST_BLOCK_ADDR";
+	case SCSIOP_REQUEST_SENSE:
+		return "SCSIOP_REQUEST_SENSE";
+	case SCSIOP_FORMAT_UNIT:
+		return "SCSIOP_FORMAT_UNIT";
+	case SCSIOP_READ_BLOCK_LIMITS:
+		return "SCSIOP_READ_BLOCK_LIMITS";
+	case SCSIOP_REASSIGN_BLOCKS:
+		return "SCSIOP_REASSIGN_BLOCKS or SCSIOP_INIT_ELEMENT_STATUS";
+	case SCSIOP_READ6:
+		return "SCSIOP_READ6 or SCSIOP_RECEIVE";
+	case SCSIOP_WRITE6:
+		return "SCSIOP_WRITE6 or SCSIOP_PRINT or SCSIOP_SEND";
+	case SCSIOP_SEEK6:
+		return "SCSIOP_SEEK6 or SCSIOP_TRACK_SELECT or SCSIOP_SLEW_PRINT";
+	case SCSIOP_SEEK_BLOCK:
+		return "SCSIOP_SEEK_BLOCK";
+	case SCSIOP_PARTITION:
+		return "SCSIOP_PARTITION";
+	case SCSIOP_READ_REVERSE:
+        return "SCSIOP_READ_REVERSE";
+	case SCSIOP_WRITE_FILEMARKS:
+		return "SCSIOP_WRITE_FILEMARKS or SCSIOP_FLUSH_BUFFER";
+	case SCSIOP_SPACE:
+		return "SCSIOP_SPACE";
+	case SCSIOP_VERIFY6:
+		return "SCSIOP_VERIFY6";
+	case SCSIOP_RECOVER_BUF_DATA:
+		return "SCSIOP_RECOVER_BUF_DATA";
+	case SCSIOP_MODE_SELECT:
+		return "SCSIOP_MODE_SELECT";
+	case SCSIOP_RESERVE_UNIT:
+        return "SCSIOP_RESERVE_UNIT(6)";
+	case 0x56:
+		return "RESERVE_UNIT(10)";
+	case SCSIOP_COPY:
+		re			KDPrint(1, ("Recursive DrDeleteAllSubKeys() failed. NTSTATUS:%08lx\n", status));
+			ZwClose(childKey);
+			continue;
+		}
+
+		//
+		//	Delete NDAS device instance.
+		//
+		status = ZwDeleteKey(childKey);
+#if DBG
+		if(!NT_SUCCESS(status)) {
+			KDPrint(1, ("ZwDeleteKey() failed. NTSTATUS:%08lx\n", status));
+		}
+#endif
+		ZwClose(childKey);
+
+		//
+		//	One key was deleted, decrement key index.
+		//
+
+		idxKey--;
+
+	}
+
+	ExFreePool(keyInfo);
+	return STATUS_SUCCESS;
+}
+
+
+//
+//	Delete a key including a parent key.
+//
+
+NTSTATUS
+DrDeleteAllKeys(
+		HANDLE			ParentKey
+){
+	NTSTATUS	status;
+
+	status = DrDeleteAllSubKeys(ParentKey);
+	if(!NT_SUCCESS(status)) {
+		return status;
+	}
+	status = ZwDeleteKey(ParentKey);
+
+	return status;
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+//	Driver installation check.
+//
+
+NTSTATUS
+DrDriverServiceExist(
+	PWSTR  DriverServiceName
+){
+	NTSTATUS	status;
+
+	status = RtlCheckRegistryKey(RTL_REGISTRY_SERVICES,
+									DriverServiceName);
+
+	return status;
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       	Buffer,
+		ULONG	BufferLength
+) {
+	NTSTATUS						status;
+	UNICODE_STRING					valueName;
+
+	RtlInitUnicodeString(&valueName, KeyName);
+	status = ZwSetValueKey(
+						RegKey,
+						&valueName,
+						0,
+						KeyType,
+						Buffer,
+						BufferLength
+					);
+
+	return status;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+//	Instantly read/write a key
+//
+
+NTSTATUS
+DrReadKeyValueInstantly(
+		PUNICODE_STRING RegistryPath,
+		PWCHAR	ValueKeyName,
+		ULONG	ValueKeyType,
+		PVOID	Buffer,
+		ULONG	BufferLength,
+		PULONG	BufferLengthNeeded
+){
+	NTSTATUS	status;
+	HANDLE		registryKey;
+	OBJECT_ATTRIBUTES	objectAttributes;
+
+	InitializeObjectAttributes( &objectAttributes,
+								RegistryPath,
+								OBJ_KERNEL_HANDLE,
+								NULL,
+								NULL
+							);
+	status = ZwCreateKey(
+						&registryKey,
+						KEY_READ,
+						&objectAttributes,
+						0,
+						NULL,
+						REG_OPTION_NON_VOLATILE,
+						NULL
+					);
+	if(!NT_SUCCESS(status)) {
+		return status;
+	}
+
+	status = DrReadKeyValue(registryKey, ValueKeyName, ValueKeyType, Buffer, BufferLength, BufferLengthNeeded);
+	ZwClose(registryKey);
+
+	return status;
+
+}
+
+NTSTATUS
+DrReadDevKeyValueInstantly(
+		PDEVICE_OBJECT	PhyDeviceObject,
+		PWCHAR	ValueKeyName,
+		ULONG	ValueKeyType,
+		PVOID	Buffer,
+		ULONG	BufferLength,
+		PULONG	BufferLengthNeeded
+){
+	NTSTATUS	status;
+	HANDLE		registryKey;
+
+	status = DrOpenDeviceRegistry(PhyDeviceObject, &registryKey, KEY_READ);
+	if(!NT_SUCCESS(status)) {
+		return status;
+	}
+
+	status = DrReadKeyValue(registryKey, ValueKeyName, ValueKeyType, Buffer, BufferLength, BufferLengthNeeded);
+	ZwClose(registryKey);
+
+	return status;
+
+}
+		
+//
+//	Open a device parameter registry.
+//
+NTSTATUS
+DrOpenDeviceRegistry(
+		PDEVICE_OBJECT	DeviceObject,
+		HANDLE			*DeviceParamReg,
+		ACCESS_MASK		AccessMask
+	){
+    HANDLE				regKey;
+    NTSTATUS			status;
+
+    //
+    // Create or open the key.
+    //
+    status = IoOpenDeviceRegistryKey(
+								DeviceObject,
+								PLUGPLAY_REGKEY_DEVICE,
+								AccessMask,
+								&regKey);
+    if(!NT_SUCCESS(status)) {
+		KDPrint(1, ("IoOpenDeviceRegistryKey() failed. NTSTATUS:%08lx\n", status));
+        regKey = NULL;
+    }
+
+	*DeviceParamReg = regKey;
+
+    return status;
+}
+
+
+//
+//	Delete all subkey under a parent key.
+//
+
+NTSTATUS
+DrDeleteAllSubKeys(
+		HANDLE				ParentKey
+	) {
+
+	NTSTATUS					status;
+	PKEY_BASIC_INFORMATION		keyInfo;
+	ULONG						outLength;
+	ULONG						idxKey;
+	OBJECT_ATTRIBUTES			objectAttributes;
+	UNICODE_STRING				objectName;
+	HANDLE						childKey;
+
+	keyInfo = (PKEY_BASIC_INFORMATION)ExAllocatePoolWithTag(PagedPool, 512, DEVREG_POOTAG_KEYINFO);
+	if(!keyInfo) {
+		KDPrint(1, ("ExAllocatePoolWithTag(KEY_BASIC_INFORMATION) failed.\n"));
+		return STATUS_INSUFFICIENT_RESOURCES;
+	}
+
+	status = STATUS_SUCCESS;
+	for(idxKey = 0 ; idxKey < DEVREG_MAX_REGISTRY_KEY; idxKey ++) {
+		status = ZwEnumerateKey(
+						ParentKey,
+						idxKey,
+						KeyBasicInformation,
+						keyInfo,
+						512,
+						&outLength
+						);
+
+		if(status == STATUS_NO_MORE_ENTRIES) {
+			KDPrint(1, ("No more entries.\n"));
+			status = STATUS_SUCCESS;
+			break;
+		}
+		if(status != STATUS_SUCCESS) {
+			ASSERT(status != STATUS_BUFFER_OVERFLOW && status != STATUS_BUFFER_TOO_SMALL);
+			KDPrint(1, ("ZwEnumerateKey() failed. NTSTATUS:%08lx\n", status));
+			ExFreePool(keyInfo);
+			return STATUS_SUCCESS;
+		}
+
+
+		//
+		//	Open a sub key
+		//
+		objectName.Length = objectName.MaximumLength = (USHORT)keyInfo->NameLength;
+		objectName.Buffer = keyInfo->Name;
+		InitializeObjectAttributes(		&objectAttributes,
+										&objectName,
+										OBJ_KERNEL_HANDLE,
+										ParentKey,
+										NULL
+								);
+		status = ZwOpenKey(&childKey, KEY_ALL_ACCESS, &objectAttributes);
+		if(!NT_SUCCESS(status)) {
+			KDPrint(1, ("ZwOpenKey() failed. NTSTATUS:%08lx\n", status));
+			continue;
+		}
+
+		//
+		//	Delete all subkeys
+		//
+		status = DrDeleteAllSubKeys(childKey);
+		if(!NT_SUCCESS(status)) {
+c->CntEcrKey[29] = 0xc0;
+	LurDesc->CntEcrKey[30] = 0xdd;
+	LurDesc->CntEcrKey[31] = 0x5a;
+
+#endif
+
+	RtlZeroMemory(lurndesc_table, sizeof(LURNDESC_ENTRY) * LUR_MAX_LURNS_PER_LUR);
+	tmpLur = NULL;
+
+	//
+	//	create LURELATION
+	//
+	tmpLurLength =	sizeof(LURELATION) +
+					sizeof(PLURELATION_NODE) * (LurDesc->LurnDescCount - 1);
+	tmpLur = (PLURELATION)ExAllocatePoolWithTag(NonPagedPool, tmpLurLength, LUR_POOL_TAG);
+	if(!tmpLur) {
+		KDPrintM(DBG_LURN_ERROR, ("ExAllocatePoolWithTag() failed.\n"));
+		return STATUS_INSUFFICIENT_RESOURCES;
+	}
+	tmpLur->Type				= LSSTRUC_TYPE_LUR;
+	tmpLur->Length				= sizeof(LURELATION);
+	tmpLur->MaxBlocksPerRequest = LurDesc->MaxBlocksPerRequest;
+	tmpLur->DeviceMode			= LurDesc->DeviceMode;
+	tmpLur->EndingBlockAddr		= LurDesc->EndingBlockAddr;
+	tmpLur->LowestHwVer			= -1;
+	tmpLur->LurFlags			= 0;
+	tmpLur->SupportedNdasFeatures = 0;
+	tmpLur->EnabledNdasFeatures = 0;
+	if(EnableSecondary) {
+		tmpLur->EnabledNdasFeatures |= NDASFEATURE_SECONDARY;
+	}
+
+	tmpLur->DevType				= LurDesc->DevType;
+	tmpLur->DevSubtype			= LurDesc->DevSubtype;
+	tmpLur->NodeCount			= LurDesc->LurnDescCount;
+	RtlCopyMemory(tmpLur->LurId, LurDesc->LurId, LURID_LENGTH);
+
+	tmpLur->AdapterFdo			= AdapterFdo;
+	tmpLur->LurnEventCallback	= LurnEventCallback;
+
+	LsuInitializeBlockAcl(&tmpLur->SystemBacl);
+	LsuInitializeBlockAcl(&tmpLur->UserBacl);
+
+	//
+	//	Block access control list
+	//
+
+	if(LurDesc->BACLOffset) {
+		PNDAS_BLOCK_ACL	srcBACL;
+
+		srcBACL = (PNDAS_BLOCK_ACL)((PUCHAR)LurDesc + LurDesc->BACLOffset);
+		ASSERT(srcBACL->Length == LurDesc->BACLLength);
+
+		status = LsuConvertNdasBaclToLsuBacl(&tmpLur->SystemBacl, srcBACL);
+		if(!NT_SUCCESS(status)) {
+			ExFreePoolWithTag(tmpLur, LUR_POOL_TAG);
+			return status;
+		}
+	}
+
+#ifdef __ENABLE_BACL_TEST__
+	{
+		PLSU_BLOCK_ACE	blockAce;
+
+		blockAce = LsuCreateBlockAce(LSUBACE_ACCESS_READ, 0x3f, 0x3f);
+		if(blockAce) {
+			LsuInsertAce(&tmpLur->SystemBacl, blockAce);
+		}
+	}
+#endif
+
+	//
+	//	Content encryption
+	//
+	tmpLur->CntEcrMethod		= LurDesc->CntEcrMethod;
+	tmpLur->CntEcrKeyLength		= LurDesc->CntEcrKeyLength;
+	if(LurDesc->CntEcrKeyLength) {
+		RtlCopyMemory(tmpLur->CntEcrKey, LurDesc->CntEcrKey, tmpLur->CntEcrKeyLength);
+#if DBG
+		{
+			ULONG	keyIdx;
+			KDPrintM(DBG_LURN_INFO, ("Encryption key method:%02x, key length:%d * 4bytes, ",
+												LurDesc->CntEcrMethod,
+												(int)LurDesc->CntEcrKeyLength)
+												);
+			for(keyIdx = 0; keyIdx<tmpLur->CntEcrKeyLength; keyIdx++) {
+				KDPrintM(DBG_LURN_INFO, ("%02x ", (int)tmpLur->CntEcrKey[keyIdx]));
+				if((keyIdx%4) == 0)
+					KDPrintM(DBG_LURN_INFO, (" "));
+			}
+			KDPrintM(DBG_LURN_INFO, ("\n"));
+		}
+#endif
+
+	}
+
+	//
+	//	Allocate LURNs to LURN descriptor Table and sanity check.
+	//
+	RtlZeroMemory(lurndesc_table, sizeof(LURNDESC_ENTRY)*LUR_MAX_LURNS_PER_LUR);
+	cur_lurndesc = LurDesc->LurnDesc;
+	for(idx_lurn = 0; idx_lurn < (LONG)LurDesc->LurnDescCount; idx_lurn++) {
+
+		KDPrintM(DBG_LURN_INFO, ("Idx:%d LurnDesc:%p NextOffset:%d\n", idx_lurn, cur_lurndesc, cur_lurndesc->NextOffset)) ;
+		lurndesc_table[idx_lurn].LurnDesc = cur_lurndesc;
+
+		if(cur_lurndesc->NextOffset == 0 && (LONG)idx_lurn + 1 < (LONG)LurDesc->LurnDescCount) {
+			KDPrintM(DBG_LURN_ERROR, ("Invaild NextOffset.\n"));
+			status = STATUS_INVALID_PARAMETER;
+			goto error_out;
+		}
+		if(cur_lurndesc->LurnType < 0 || cur_lurndesc->LurnType >= LurnInterfaceCnt) {
+			KDPrintM(DBG_LURN_ERROR, ("Invaild LurnType:%x.\n", cur_lurndesc->LurnType));
+			status = STATUS_INVALID_PARAMETER;
+			goto error_out;
+		}
+
+		status = LurnAllocate(&lurndesc_table[idx_lurn].Lurn, lurndesc_table[idx_lurn].LurnDesc->LurnChildrenCnt);
+		if(!NT_SUCCESS(status)) {
+			KDPrintM(DBG_LURN_ERROR, ("LurnAllocate() failed.\n"));
+			goto error_out;
+		}
+
+		//
+		//	Also initialize LURN index in the LUR.
+		//
+		lurndesc_table[idx_lurn].Lurn->LurnStatus = LURN_STATUS_INIT;
+		tmpLur->Nodes[idx_lurn] = lurndesc_table[idx_lurn].Lurn;
+
+		cur_lurndesc = (PLURELATION_NODE_DESC)((PBYTE)LurDesc + cur_lurnDASFEATURE_RO_FAKE_WRITE);
+			}
+			break;
+
+		case DEVMODE_SHARED_READWRITE:
+			_LUR_SET_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_RO_FAKE_WRITE);
+	        // User request can override features following.
+	        _LUR_SET_OPTIONAL_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_SIMULTANEOUS_WRITE);
+			break;
+
+		case DEVMODE_EXCLUSIVE_READWRITE:
+			// Nothing to do
+			break;
+
+		default: ;
+			ASSERT(FALSE);
+			return STATUS_UNSUCCESSFUL;
+	}
+
+	return STATUS_SUCCESS;
+}
+
+//
+// Enable NDAS feature according to user request (LUR options)
+//
+
+static
+NTSTATUS
+LurEnableNdasFeaturesByUserRequest(
+	OUT PNDAS_FEATURES		EnabledFeatures,
+	IN NDAS_FEATURES		SupportedFeatures,
+	IN ULONG				LurOptions
+) {
+
+	//
+	//	Shared out-of-band write mode
+	//
+
+	if(	(LurOptions & LUROPTION_OFF_OOB_WRITE) &&
+		(LurOptions & LUROPTION_ON_OOB_WRITE) ) {
+			return STATUS_UNSUCCESSFUL;
+	}
+
+	if(LurOptions & LUROPTION_OFF_OOB_WRITE) {
+		_LUR_RESET_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_OOB_WRITE);
+	} else if(LurOptions & LUROPTION_ON_OOB_WRITE) {
+		_LUR_SET_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_OOB_WRITE);
+	}
+
+	//
+	//	Simultaneous write
+	//
+
+	if(	(LurOptions & LUROPTION_ON_SIMULTANEOUS_WRITE) &&
+		(LurOptions & LUROPTION_OFF_SIMULTANEOUS_WRITE) ) {
+			return STATUS_UNSUCCESSFUL;
+	}
+
+	if(LurOptions & LUROPTION_ON_SIMULTANEOUS_WRITE) {
+		_LUR_SET_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_SIMULTANEOUS_WRITE);
+	} else if(LurOptions & LUROPTION_OFF_SIMULTANEOUS_WRITE) {
+		_LUR_RESET_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_SIMULTANEOUS_WRITE);
+	}
+
+	//
+	//	Write check
+	//
+
+	if(	(LurOptions & LUROPTION_OFF_NDAS_2_0_WRITE_CHECK) &&
+		(LurOptions & LUROPTION_ON_NDAS_2_0_WRITE_CHECK) ) {
+			return STATUS_UNSUCCESSFUL;
+	}
+	if(LurOptions & LUROPTION_OFF_NDAS_2_0_WRITE_CHECK) {
+		_LUR_RESET_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_WRITE_CHECK);
+	} else if(LurOptions & LUROPTION_ON_NDAS_2_0_WRITE_CHECK) {
+		_LUR_SET_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_WRITE_CHECK);
+	}
+
+
+	return STATUS_SUCCESS;
+}
+
+
+//
+// Create an LUR with LUR descriptor.
+//
+
+NTSTATUS
+LurCreate(
+	IN PLURELATION_DESC		LurDesc,
+	OUT PLURELATION			*Lur,
+	IN BOOLEAN				EnableSecondary,
+	IN BOOLEAN				EnableW2kReadOnlyPacth,
+	IN PVOID				AdapterFdo,
+	IN LURN_EVENT_CALLBACK	LurnEventCallback
+){
+	LONG					idx_lurn;
+	LONG					idx_child;
+	PLURELATION_NODE_DESC	cur_lurndesc;
+	PLURELATION_NODE		cur_lurn;
+	LURNDESC_ENTRY			lurndesc_table[LUR_MAX_LURNS_PER_LUR];
+	NTSTATUS				status;
+	ULONG					child;
+	PLURELATION				tmpLur;
+	ULONG					tmpLurLength;
+
+	ASSERT(KeGetCurrentIrql() == PASSIVE_LEVEL);
+	ASSERT(LurDesc->LurnDescCount > 0);
+	ASSERT(LurDesc->LurnDescCount <= LUR_MAX_LURNS_PER_LUR);
+
+	if(LurDesc->LurnDescCount <= 0) {
+		KDPrintM(DBG_LURN_ERROR, ("No child node.\n"));
+		return STATUS_INVALID_PARAMETER;
+	}
+
+#ifdef __ENABLE_CONTENTENCRYPT_AES_TEST__
+
+	LurDesc->CntEcrMethod = NDAS_CONTENTENCRYPT_METHOD_AES;
+	LurDesc->CntEcrKeyLength = 32;
+	LurDesc->CntEcrKey[0] = 0x1a;
+	LurDesc->CntEcrKey[1] = 0xc3;
+	LurDesc->CntEcrKey[2] = 0x4d;
+	LurDesc->CntEcrKey[3] = 0x59;
+	LurDesc->CntEcrKey[4] = 0x1a;
+	LurDesc->CntEcrKey[5] = 0xc1;
+	LurDesc->CntEcrKey[6] = 0xad;
+	LurDesc->CntEcrKey[7] = 0x5d;
+	LurDesc->CntEcrKey[8] = 0xca;
+	LurDesc->CntEcrKey[9] = 0xcd;
+	LurDesc->CntEcrKey[10] = 0x8d;
+	LurDesc->CntEcrKey[11] = 0x50;
+	LurDesc->CntEcrKey[12] = 0x12;
+	LurDesc->CntEcrKey[13] = 0xc1;
+	LurDesc->CntEcrKey[14] = 0xfd;
+	LurDesc->CntEcrKey[15] = 0x5e;
+	LurDesc->CntEcrKey[16] = 0x1a;
+	LurDesc->CntEcrKey[17] = 0x33;
+	LurDesc->CntEcrKey[18] = 0x43;
+	LurDesc->CntEcrKey[19] = 0x59;
+	LurDesc->CntEcrKey[20] = 0x3a;
+	LurDesc->CntEcrKey[21] = 0xc3;
+	LurDesc->CntEcrKey[22] = 0x43;
+	LurDesc->CntEcrKey[23] = 0x59;
+	LurDesc->CntEcrKey[24] = 0x2a;
+	LurDesc->CntEcrKey[25] = 0xc2;
+	LurDesc->CntEcrKey[26] = 0x2d;
+	LurDesc->CntEcrKey[27] = 0x5c;
+	LurDesc->CntEcrKey[28] = 0x9a;
+	LurDes#include <ntddk.h>
+#include "ver.h"
+#include "LSKlib.h"
+#include "KDebug.h"
+#include "basetsdex.h"
+#include "cipher.h"
+#include "LSProto.h"
+#include "LSTransport.h"
+#include "LSCcb.h"
+#include "LSLurn.h"
+#include "LSLurnIDE.h"
+#include "LSLurnAssoc.h"
+
+#ifdef __MODULE__
+#undef __MODULE__
+#endif // __MODULE__
+#define __MODULE__ "LSLurn"
+
+//////////////////////////////////////////////////////////////////////////
+//
+//	Supported NDAS features based on the hardware version
+//
+
+NDAS_FEATURES	LurNdasFeatures[] = {
+	// hw version 1.0
+	NDASFEATURE_SECONDARY | NDASFEATURE_RO_FAKE_WRITE,
+
+	// hw version 1.1
+	NDASFEATURE_SECONDARY |	NDASFEATURE_OOB_WRITE | NDASFEATURE_RO_FAKE_WRITE |
+	NDASFEATURE_SIMULTANEOUS_WRITE | NDASFEATURE_GP_LOCK,
+
+	// hw version 2.0
+	NDASFEATURE_SECONDARY |	NDASFEATURE_OOB_WRITE | NDASFEATURE_RO_FAKE_WRITE | 
+	NDASFEATURE_SIMULTANEOUS_WRITE | NDASFEATURE_WRITE_CHECK | NDASFEATURE_GP_LOCK,
+
+	// hw version 2.5
+	NDASFEATURE_SECONDARY |	NDASFEATURE_OOB_WRITE | NDASFEATURE_RO_FAKE_WRITE |
+	NDASFEATURE_SIMULTANEOUS_WRITE | NDASFEATURE_ADV_GP_LOCK
+};
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+//	LU Relation
+//
+typedef struct _LURNDESC_TABLE {
+	PLURELATION_NODE_DESC	LurnDesc;
+	PLURELATION_NODE		Lurn;
+} LURNDESC_ENTRY, *PLURNDESC_ENTRY;
+
+
+//
+//	Send Stop Ccb to the LURN.
+//
+NTSTATUS
+SendStopCcbToLurn(
+		PLURELATION_NODE	Lurn
+	) {
+	PCCB		ccb;
+	NTSTATUS	ntStatus;
+
+	KDPrintM(DBG_LURN_TRACE,("entered.\n"));
+	ASSERT(KeGetCurrentIrql() == PASSIVE_LEVEL);
+
+	ntStatus = LSCcbAllocate(&ccb);
+	if(!NT_SUCCESS(ntStatus)) {
+		return STATUS_INSUFFICIENT_RESOURCES;
+	}
+
+	LSCCB_INITIALIZE(ccb, 0);
+	ccb->OperationCode				= CCB_OPCODE_STOP;
+	ccb->HwDeviceExtension			= NULL;
+	LSCcbSetFlag(ccb, CCB_FLAG_SYNCHRONOUS|CCB_FLAG_ALLOCATED|CCB_FLAG_LOWER_LURN);
+	LSCcbSetCompletionRoutine(ccb, NULL, NULL);
+
+	//
+	//	Send a CCB to the LURN.
+	//
+	ntStatus = LurnRequest(
+					Lurn,
+					ccb
+				);
+	if(!NT_SUCCESS(ntStatus)) {
+        LSCcbFree(ccb);
+	}
+
+	return ntStatus;
+}
+
+
+//
+// Retrieve NDAS feature according to NDAS chip version.
+//
+
+static
+VOID
+LurDetectSupportedNdasFeatures(
+	PNDAS_FEATURES	NdasFeatures,
+	UINT32			LowestHwVersion
+){
+
+	*NdasFeatures |= LurNdasFeatures[LowestHwVersion];
+
+	//
+	//	NDAS device must support secondary feature.
+	//
+
+	ASSERT(*NdasFeatures & NDASFEATURE_SECONDARY);
+}
+
+//
+// set/reset NDAS feature macros
+//
+
+#define _LUR_SET_FEATURE(SUPPORTED_FEAT, ENABLED_FEAT, NDAS_FEATURE) { \
+	if((SUPPORTED_FEAT)&(NDAS_FEATURE)) {	\
+		(ENABLED_FEAT) |= (NDAS_FEATURE);	\
+	} else { \
+		return STATUS_UNSUCCESSFUL;	\
+	} \
+}
+
+#define _LUR_SET_OPTIONAL_FEATURE(SUPPORTED_FEAT, ENABLED_FEAT, NDAS_FEATURE) { \
+	if((SUPPORTED_FEAT)&(NDAS_FEATURE)) {	\
+		(ENABLED_FEAT) |= (NDAS_FEATURE);	\
+	} else { \
+		KDPrintM(DBG_LURN_ERROR, ((#NDAS_FEATURE " not supported.\n")));	\
+	} \
+}
+
+#define _LUR_RESET_FEATURE(SUPPORTED_FEAT, ENABLED_FEAT, NDAS_FEATURE) { \
+	if((SUPPORTED_FEAT)&(NDAS_FEATURE)) {	\
+		(ENABLED_FEAT) &= ~(NDAS_FEATURE);	\
+	} else { \
+		return STATUS_UNSUCCESSFUL;	\
+	} \
+}
+
+//
+// Enable NDAS features according to device access mode.
+//
+
+static
+NTSTATUS
+LurEnableNdasFeauresByDeviceMode(
+	OUT PNDAS_FEATURES		EnabledFeatures,
+	IN NDAS_FEATURES		SupportedFeatures,
+	IN BOOLEAN				W2kReadOnlyPatch,
+	IN NDAS_DEV_ACCESSMODE	DevMode
+){
+	//
+	//	Default features
+	//
+	//	NDAS chip 1.0 does not support SIMULTANEOUS_WRITE, ADV_GP_LOCK, and GP_LOCK.
+	//	NDAS chip 1.1 and 2.0 does not support ADV_GP_LOCK.
+	//
+
+	_LUR_SET_OPTIONAL_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_GP_LOCK);
+	_LUR_SET_OPTIONAL_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_ADV_GP_LOCK);
+	// User request can override features following.
+	_LUR_SET_OPTIONAL_FEATURE(SupportedFeatures, *EnabledFeatures, NDASFEATURE_WRITE_CHECK);
+
+	switch(DevMode) {
+		case DEVMODE_SHARED_READONLY:
+			if(W2kReadOnlyPatch) {
+				_LUR_SET_FEATURE(SupportedFeatures, *EnabledFeatures, N@echo off
+
+setlocal enableextensions
+
+if /I "%XBUILD_DEBUG%" NEQ "" (
+echo args: %*
+echo args: [0:%0] [1:%1] [2:%2] [3:%3] [4:%4] [5:%5] [6:%6] [7:%7] [8:%8] [9:%9]
+)
+
+:preargs
+
+if /I "%1" EQU "--noalt" (
+	set NO_BUILD_ALT_DIR=1
+	shift
+	goto preargs
+)
+
+if /I "%1" EQU "--nomac" (
+	set NO_DDK_MACROS=1
+	shift
+	goto preargs
+)
+
+if /I "%1" EQU "--prefast" (
+	set USE_PREFAST=1	
+	shift
+	goto preargs
+)
+
+if /I "%1" EQU "--?" goto usage
+if /I "%1" EQU "--h" goto usage
+
+if /I "%1" EQU "--cmd" (
+	set CUSTOM_CMD=1
+	shift
+)
+
+::
+:: Target Environment
+::
+set DEFAULT_PLATFORM_USED=
+set BASEDIR=
+
+if /I "%1" EQU "-WNET2K" (
+	if not defined WNETBASE echo error: WNETBASE not defined && exit /b 1
+	set BASEDIR=%WNETBASE%
+	set BLDPLATFORM=W2K
+	shift
+) else if /I "%1" EQU "-WNET" (
+	if not defined WNETBASE echo error: WNETBASE not defined && exit /b 1
+	set BASEDIR=%WNETBASE%
+	set BLDPLATFORM=WNET
+	shift
+) else if /I "%1" EQU "-WNETXP" (
+	if not defined WNETBASE echo error: WNETBASE not defined && exit /b 1
+	set BASEDIR=%WNETBASE%
+	set BLDPLATFORM=WXP
+	shift
+) else if /I "%1" EQU "-WLH2K" (
+	if not defined WLHBASE echo error: WLHBASE not defined && exit /b 1
+	set BASEDIR=%WLHBASE%
+	set BLDPLATFORM=W2K
+	shift
+) else if /I "%1" EQU "-WLHNET" (
+	if not defined WLHBASE echo error: WLHBASE not defined && exit /b 1
+	set BASEDIR=%WLHBASE%
+	set BLDPLATFORM=WNET
+	shift
+) else if /I "%1" EQU "-WLHXP" (
+	if not defined WLHBASE echo error: WLHBASE not defined && exit /b 1
+	set BASEDIR=%WLHBASE%
+	set BLDPLATFORM=WXP
+	shift
+) else if /I "%1" EQU "-WLH" (
+	if not defined WLHBASE echo error: WLHBASE not defined && exit /b 1
+	set BASEDIR=%WLHBASE%
+	set BLDPLATFORM=WLH
+	shift
+) else if /I "%1" EQU "-WIN2K" (
+	set BLDPLATFORM=W2K
+	shift
+) else if /I "%1" EQU "-WINXP" (
+	set BLDPLATFORM=WXP
+	shift
+) else if /I "%1" EQU "-WS03" (
+	set BLDPLATFORM=WNET
+	shift
+) else if /I "%1" EQU "-VISTA" (
+	set BLDPLATFORM=WLH
+	shift
+) else (
+	set DEFAULT_PLATFORM_USED=1
+)
+
+if not defined WLHBASE (
+	if exist %SYSTEMDRIVE%\WINDDK\6000 set WLHBASE=%SYSTEMDRIVE%\WINDDK\6000
+)
+
+if not defined WNETBASE (
+	if exist %SYSTEMDRIVE%\WINDDK\3790.1830 set WNETBASE=%SYSTEMDRIVE%\WINDDK\3790.1830
+)
+
+if not defined BASEDIR if defined WLHBASE set BASEDIR=%WLHBASE%
+if not defined BASEDIR if defined WNETBASE set BASEDIR=%WNETBASE%
+if not defined BLDPLATFORM set BLDPLATFORM=W2K
+
+if not defined BASEDIR (
+	echo error: WLHBASE nor WNETBASE is defined.
+	exit /b 1
+)
+
+if not exist "%BASEDIR%" (
+	echo error: DDK Base Directory %BASEDIR% does not exists.
+	exit /b 1
+)
+
+::
+:: Target Architecture
+::
+
+set BLDARCH=
+
+if /I "%1" EQU "IA64" (
+	set BLDARCH=64
+	shift
+) else if /I "%1" EQU "AMD64" (
+	set BLDARCH=AMD64
+	if defined DEFAULT_PLATFORM_USED set BLDPLATFORM=WNET
+	shift
+) else if /I "%1" EQU "X64" (
+	set BLDARCH=AMD64
+	if defined DEFAULT_PLATFORM_USED set BLDPLATFORM=WNET
+	shift
+) else if /I "%1" EQU "I386" (
+	set BLDARCH=X86
+	shift
+) else if /I "%1" EQU "X86" (
+	set BLDARCH=X86
+	shift
+) else if /I "%1" EQU "intel" (
+	set BLDARCH=intel
+	shift
+)
+
+if not defined BLDARCH set BLDARCH=X86
+
+::
+:: Build Configuration
+::
+
+set BLDCONFIG=
+
+if /I "%1" EQU "chk" (
+	set BLDCONFIG=chk
+	shift
+) else if /I "%1" EQU "fre" (
+	set BLDCONFIG=fre
+	shift
+) else if /I "%1" EQU "both" (
+	set BLDCONFIG=both
+	shift
+)
+
+if not defined BLDCONFIG set BLDCONFIG=chk
+
+::
+:: Target Directory
+::
+set BLDDIR=.
+set BLDDIR2=%1
+
+if defined BLDDIR2 (
+	if "%BLDDIR2%" NEQ "*" (
+	  if /I "%BLDDIR2:~0,1%" NEQ "-" (
+		 if exist "%BLDDIR2%" (
+			set BLDDIR=%BLDDIR2%
+			shift
+		 )
+	  )
+	)
+)
+
+if not exist %BASEDIR%\bin\setenv.bat (
+	echo error: %BASEDIR%\bin\setenv.bat does not exist.
+	exit /b 1
+)
+
+if exist "%~dp0ctitle.exe" (
+	for /f "usebackq delims=-" %%a in (`"%~dp0ctitle.exe"`) do set _SAVED_TITLE=%%a
+)
+
+call :build_by_arch %1 %2 %3 %4 %5 %6 %7 %8 %9
+
+if defined _SAVED_TITLE title %_SAVED_TITLE%
+
+if errorlevel 1 goto err_on_build
+endlocal
+exit /b
+
+:err_on_build
+endlocal
+echo error: build failed (%ERRORLEVEL%)
+exit /b %ERRORLEVEL%
+
+:build_by_arch
+if /I "%XBUILD_DEBUG%" NEQ "" echo build_by_arch: %BLDPLATFORM%
+if /I "%BLDARCH%" equ "intel" (
+
+	set BLDARCH=X86
+	call :build_by_config %*
+	if errorlevel 1 exit /b %ERRORLEVEL%
+
+	set BLDARCH=AMD64
+	set BLDPLATFORM_ORG=%BLDPLATFORM%
+	if /i "%BLDPLATFORM%" equ "W2K" set BLDPLATFORM=WNET
+	if /i "%BLDPLATFORM%" equ "WXP" set BLDPLATFORM=WNET
+	call :build_by_config %*
+	set BLDPLATFORM=%BLDPLATFORM_ORG%
+	if errorlevel 1 exit /b %ERRORLEVEL%
+
+) else (
+
+	call :build_by_config %*
+	if errorlevel 1 exit /b %ERRORLEVEL%
+
+)
+exit /b
+
+:build_by_config
+if /I "%XBUILD_DEBUG%" NEQ "" echo build_by_config: %BLDCONFIG%
+if /i "%BLDCONFIG%" equ "both" (
+
+	set BLDCONFIG=chk
+	call :build %*
+	if errorlevel 1 exit /b %ERRORLEVEL%
+
+	set BLDCONFIG=fre
+	call :build %*
+	if errorlevel 1 exit /b %ERRORLEVEL%
+
+	set BLDCONFIG=both
+
+) else (
+
+	call :build %*
+
+)
+exit /b
+
+:build
+if /I "%XBUILD_DEBUG%" NEQ "" echo build: %BLDPLATFORM% %BLDCONFIG%
+setlocal
+pushd .
+pushd .
+
+echo XBUILD: BASEDIR=%BASEDIR%,ARCH=%BLDARCH%,CONFIG=%BLDCONFIG%,PLATFORM=%BLDPLATFORM%,BLDDIR=%BLDDIR%
+if /I "%BLDARCH%" == "X86" set BLDARCH=
+call %BASEDIR%\bin\setenv.bat %BASEDIR% %BLDARCH% %BLDCONFIG% %BLDPLATFORM%
+popd
+
+set BUILD_DEFAULT=-gi
+if defined NUMBER_OF_PROCESSOR (
+	if "%NUMBER_OF_PROCESSORS%" NEQ "1" (
+		set BUILD_DEFAULT=%BUILD_DEFAULT% -MI
+	)
+)
+
+set BLDOPT=%*
+if "%BLDOPT%" EQU "" (
+	set BLDOPT=-egPwi
+) 
+if "%BLDOPT%" EQU "*" (
+	set BLDOPT=-egPwi
+)
+cd /d %BLDDIR%
+rem call :set_base_dir
+echo XBUILD: PROJECT_BASEDIR=%BASEDIR%
+echo XBUILD: BLDCMD=build %BLDOPT%
+if /I "%XBUILD_DEBUG%" NEQ "" (
+	set
+)
+if "%NO_BUILD_ALT_DIR%" == "1" (
+	if /I "%BLDCONFIG%" EQU "fre" set BUILD_ALT_DIR=
+	if /I "%BLDCONFIG%" EQU "chk" set BUILD_ALT_DIR=d
+	rem if /I "%BLDCONFIG%" EQU "chk" set CHECKED_ALT_DIR=1
+	rem set BUILD_ALT_DIR=
+)
+
+if defined USE_PREFAST (
+	prefast /log=_defects.xml build %BLDOPT%
+	prefast /log=_defects.xml list
+) else if defined CUSTOM_CMD (
+	rem DO NOT DELETE THIS REMARK (fill-out for a possibly empty line)
+	%*
+) else (
+	build %BLDOPT%
+)
+
+popd
+endlocal
+goto :EOF
+
+
+:usage
+echo xbuild [platform] [arch] [config] [directory] [build options]
+echo.
+echo platform: ^(general^)       -win2k,  -winxp,  -ws03,   -vista
+echo           ^(DDK 3790.1830^) -wnet2k, -wnetxp, -wnet
+echo           ^(DDK 6000^)      -wlh2k,  -wlhxp,  -wlhnet, -wlh
+echo arch: i386, ia64, amd64 or intel (i386+amd64)
+echo conf

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ndashear"
+	ProjectGUID="{9648E9EA-318A-4443-96F1-8750379B6371}"
+	RootNamespace=""
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\..\bin\ddkbuild.bat -WNET2K chk . -e"
+				ReBuildCommandLine="..\..\..\..\..\bin\ddkbuild.bat -WNET2K chk . -ceZ"
+				CleanCommandLine="..\..\..\..\..\bin\ddkbuild.bat -WNET2K chk . -c0"
+				Output="exe\objchk_w2k_x86\i386\ndashear.exe"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\..\bin\ddkbuild.bat -WNET2K fre . -e"
+				ReBuildCommandLine="..\..\..\..\..\bin\ddkbuild.bat -WNET2K fre . -ceZ"
+				CleanCommandLine="..\..\..\..\..\bin\ddkbuild.bat -WNET2K fre . -c0"
+				Output="objfre_w2k_x86\i386\ndashbt.exe"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\dllmain.cpp">
+			</File>
+			<File
+				RelativePath=".\main.cpp">
+			</File>
+			<File
+				RelativePath=".\ndashear.cpp">
+			</File>
+			<File
+				RelativePath=".\ndasheartbeat.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath="..\..\inc\ndas\ndashear.h">
+			</File>
+			<File
+				RelativePath=".\ndashear.src">
+			</File>
+			<File
+				RelativePath=".\ndasheartbeat.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+		</Filter>
+		<Filter
+			Name="Build Files"
+			Filter="">
+			<File
+				RelativePath=".\dirs">
+			</File>
+			<File
+				RelativePath=".\sources.inc">
+			</File>
+			<Filter
+				Name="slib"
+				Filter="">
+				<File
+					RelativePath=".\slib\makefile">
+				</File>
+				<File
+					RelativePath=".\slib\sources">
+				</File>
+			</Filter>
+			<Filter
+				Name="dll"
+				Filter="">
+				<File
+					RelativePath=".\dll\makefile">
+				</File>
+				<File
+					RelativePath=".\dll\sources">
+				</File>
+			</Filter>
+			<Filter
+				Name="exe"
+				Filter="">
+				<File
+					RelativePath=".\exe\makefile">
+				</File>
+				<File
+					RelativePath=".\exe\sources">
+				</File>
+			</Filter>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

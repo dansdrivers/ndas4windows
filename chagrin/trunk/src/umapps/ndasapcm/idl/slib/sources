@@ -1,0 +1,19 @@
+TARGETNAME=libndasapcm_i
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+PASS0_HEADERDIR=$(O)
+PASS0_SOURCEDIR=..\pstub\$(O)
+MIDL_TLBDIR=..\..\inc
+MIDL_UUIDDIR=$(O)
+
+IDLFILES=..\autoplayconfig.idl
+IIDFILES=$(O)\autoplayconfig_i.c
+
+SOURCES=\
+	$(IDLFILES) \
+	$(IIDFILES)
+
+PASS0_PUBLISH=\
+	{$(O)\autoplayconfig.h=..\..\inc\autoplayconfig.h}
+

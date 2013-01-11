@@ -1,0 +1,1939 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="ActionText.CostInitialize">
+    <base>Computing space requirements</base>
+    <translation>Beräknar hur mycket utrymme som krävs</translation>
+  </string>
+  <string id="ActionText.AppSearch">
+    <base>Searching for installed applications</base>
+    <translation>Söker efter installerade program</translation>
+  </string>
+  <string id="ActionText.AppSearch.Template">
+    <base>Property: [1], Signature: [2]</base>
+    <translation>Egenskap: [1], Signatur: [2]</translation>
+  </string>
+  <string id="ActionText.BindImage">
+    <base>Binding executables</base>
+    <translation>Binder körbara</translation>
+  </string>
+  <string id="ActionText.BindImage.Template">
+    <base>File: [1]</base>
+    <translation>Fil: [1]</translation>
+  </string>
+  <string id="ActionText.CCPSearch">
+    <base>Unregistering modules</base>
+    <translation>Avregistrerar moduler</translation>
+  </string>
+  <string id="ActionText.CostFinalize">
+    <base>Computing space requirements</base>
+    <translation>Beräknar hur mycket utrymme som krävs</translation>
+  </string>
+  <string id="ActionText.FileCost">
+    <base>Computing space requirements</base>
+    <translation>Beräknar hur mycket utrymme som krävs</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage">
+    <base>Copying files to the network</base>
+    <translation>Kopierar installationsfiler för nätverk</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage.Template">
+    <base>File: [1], Directory: [9], Size: [6]</base>
+    <translation>Fil: [1], Katalog: [9], Storlek: [6]</translation>
+  </string>
+  <string id="ActionText.InstallFiles">
+    <base>Copying new files</base>
+    <translation>Kopierar nya filer</translation>
+  </string>
+  <string id="ActionText.InstallFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>Fil: [1], Katalog: [9], Storlek: [6]</translation>
+  </string>
+  <string id="ActionText.InstallValidate">
+    <base>Validating install</base>
+    <translation>Bekräftar installation</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts">
+    <base>Creating shortcuts</base>
+    <translation>Skapar genvägar</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>Genvägen: [1]</translation>
+  </string>
+  <string id="ActionText.PublishComponents">
+    <base>Publishing qualified components</base>
+    <translation>Publicerar kvalificerade komponenter</translation>
+  </string>
+  <string id="ActionText.PublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>Komponent-ID: [1], Bestämning: [2]</translation>
+  </string>
+  <string id="ActionText.PublishFeatures">
+    <base>Publishing product features</base>
+    <translation>Publicerar produktfunktioner</translation>
+  </string>
+  <string id="ActionText.PublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>Funktion: [1]</translation>
+  </string>
+  <string id="ActionText.PublishProduct">
+    <base>Publishing product information</base>
+    <translation>Publicerar produktinformation</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo">
+    <base>Registering class servers</base>
+    <translation>Registrerar klasservrar</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Class Id: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo">
+    <base>Registering extension servers</base>
+    <translation>Registrerar tilläggsservrar</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>Filtillägg: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo">
+    <base>Registering MIME info</base>
+    <translation>Registrerar MIME-information</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>MIME-innehållstyp: [1],Filtillägg: [2]</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo">
+    <base>Registering program identifiers</base>
+    <translation>Avregistrerar programidentifierare</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>ProgId: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries">
+    <base>Registering type libraries</base>
+    <translation>Registrerar typbibliotek</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>BiblID: [1]</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace">
+    <base>Allocating registry space</base>
+    <translation>Allokerar registerutrymme</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace.Template">
+    <base>Free space: [1]</base>
+    <translation>Ledigt utrymme: [1]</translation>
+  </string>
+  <string id="ActionText.CreateFolders">
+    <base>Creating folders</base>
+    <translation>Skapar mappar</translation>
+  </string>
+  <string id="ActionText.CreateFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>Mapp: [1]</translation>
+  </string>
+  <string id="ActionText.DeleteServices">
+    <base>Deleting services</base>
+    <translation>Tar bort tjänster</translation>
+  </string>
+  <string id="ActionText.DeleteServices.Template">
+    <base>Service: [1]</base>
+    <translation>Tjänsten: [1]</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles">
+    <base>Creating duplicate files</base>
+    <translation>Skapar dubblettfiler</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>Fil: [1], Katalog: [9], Storlek: [6]</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts">
+    <base>Searching for related applications</base>
+    <translation>Söker efter relaterade tillämpningar</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts.Template">
+    <base>Found application: [1]</base>
+    <translation>Hittade tillämpning: [1]</translation>
+  </string>
+  <string id="ActionText.InstallODBC">
+    <base>Installing ODBC components</base>
+    <translation>Installerar ODBC-komponenter</translation>
+  </string>
+  <string id="ActionText.InstallServices">
+    <base>Installing new services</base>
+    <translation>Installerar nya tjänster</translation>
+  </string>
+  <string id="ActionText.InstallServices.Template">
+    <base>Service: [2]</base>
+    <translation>Tjänst: [2]</translation>
+  </string>
+  <string id="ActionText.LaunchConditions">
+    <base>Evaluating launch conditions</base>
+    <translation>Utvärderar startvillkor</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates">
+    <base>Migrating feature states from related applications</base>
+    <translation>Flyttar funktionsstatus från relaterade tillämpningar</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates.Template">
+    <base>Application: [1]</base>
+    <translation>Tillämpning: [1]</translation>
+  </string>
+  <string id="ActionText.MoveFiles">
+    <base>Moving files</base>
+    <translation>Flyttar filer</translation>
+  </string>
+  <string id="ActionText.MoveFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>Fil: [1], Katalog: [9], Storlek: [6]</translation>
+  </string>
+  <string id="ActionText.PatchFiles">
+    <base>Patching files</base>
+    <translation>Korrigerar filer</translation>
+  </string>
+  <string id="ActionText.PatchFiles.Template">
+    <base>File: [1],  Directory: [2],  Size: [3]</base>
+    <translation>Fil: [1], Katalog: [2], Storlek: [3]</translation>
+  </string>
+  <string id="ActionText.ProcessComponents">
+    <base>Updating component registration</base>
+    <translation>Uppdaterar komponentregistrering</translation>
+  </string>
+  <string id="ActionText.RMCCPSearch">
+    <base>Searching for qualifying products</base>
+    <translation>Söker efter kvalificeringsprodukter</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus">
+    <base>Registering COM+ Applications and Components</base>
+    <translation>Registrerar COM+-tillämpningar och -komponenter</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2], Users: [3], RSN: [4]}}</base>
+    <translation>Tillämpnings-ID: [1]{{, Tillämpningstyp: [2], Användare: [3], RSN: [4]}}</translation>
+  </string>
+  <string id="ActionText.RegisterFonts">
+    <base>Registering fonts</base>
+    <translation>Registrerar teckensnitt</translation>
+  </string>
+  <string id="ActionText.RegisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>Teckensnitt: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterProduct">
+    <base>Registering product</base>
+    <translation>Registrerar produkt</translation>
+  </string>
+  <string id="ActionText.RegisterProduct.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RegisterUser">
+    <base>Registering user</base>
+    <translation>Registrerar användare</translation>
+  </string>
+  <string id="ActionText.RegisterUser.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles">
+    <base>Removing duplicated files</base>
+    <translation>Tar bort dubblerade filer</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>Fil: [1], Katalog: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>Uppdaterar systemsträngar</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>Namn: [1], Värde: [2], Åtgärd [3]</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts">
+    <base>Removing applications</base>
+    <translation>Tar bort tillämpningar</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts.Template">
+    <base>Application: [1], Command line: [2]</base>
+    <translation>Tillämpning: [1], Kommandorad: [2]</translation>
+  </string>
+  <string id="ActionText.RemoveFiles">
+    <base>Removing files</base>
+    <translation>Tar bort filer</translation>
+  </string>
+  <string id="ActionText.RemoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>Fil: [1], Katalog: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveFolders">
+    <base>Removing folders</base>
+    <translation>Tar bort mappar</translation>
+  </string>
+  <string id="ActionText.RemoveFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>Mapp: [1]</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues">
+    <base>Removing INI file entries</base>
+    <translation>Tar bort INI-filposter</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>Fil: [1], Sektion: [2], Nyckel: [3], Värde: [4]</translation>
+  </string>
+  <string id="ActionText.RemoveODBC">
+    <base>Removing ODBC components</base>
+    <translation>Tar bort ODBC-komponenter</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues">
+    <base>Removing system registry values</base>
+    <translation>Tar bort systemregistervärden</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues.Template">
+    <base>Key: [1], Name: [2]</base>
+    <translation>Nyckel: [1], Namn: [2]</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts">
+    <base>Removing shortcuts</base>
+    <translation>Tar bort genvägar</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>Genvägen: [1]</translation>
+  </string>
+  <string id="ActionText.SelfRegModules">
+    <base>Registering modules</base>
+    <translation>Registrerar moduler</translation>
+  </string>
+  <string id="ActionText.SelfRegModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>Fil: [1], Mapp: [2]</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules">
+    <base>Unregistering modules</base>
+    <translation>Avregistrerar moduler</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>Fil: [1], Mapp: [2]</translation>
+  </string>
+  <string id="ActionText.SetODBCFolders">
+    <base>Initializing ODBC directories</base>
+    <translation>Initierar ODBC-kataloger</translation>
+  </string>
+  <string id="ActionText.StartServices">
+    <base>Starting services</base>
+    <translation>Startar tjänster</translation>
+  </string>
+  <string id="ActionText.StartServices.Template">
+    <base>Service: [1]</base>
+    <translation>Tjänsten: [1]</translation>
+  </string>
+  <string id="ActionText.StopServices">
+    <base>Stopping services</base>
+    <translation>Stoppar tjänster</translation>
+  </string>
+  <string id="ActionText.StopServices.Template">
+    <base>Service: [1]</base>
+    <translation>Tjänsten: [1]</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents">
+    <base>Unpublishing Qualified Components</base>
+    <translation>Avpublicerar kvalificeringskomponenter</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>Komponent-ID: [1], Bestämning: [2]</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures">
+    <base>Unpublishing product features</base>
+    <translation>Avpublicerar produktfunktioner</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>Funktion: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo">
+    <base>Unregister class servers</base>
+    <translation>Avregistrera klasservrar</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Class Id: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus">
+    <base>Unregistering COM+ Applications and Components</base>
+    <translation>Avregistrerar COM+-tillämpningar och -komponenter</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2]}}</base>
+    <translation>Tillämpnings-ID: [1]{{, Tillämpningstyp: [2]}}</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo">
+    <base>Unregistering extension servers</base>
+    <translation>Avregistrerar tilläggsservrar</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>Filtillägg: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts">
+    <base>Unregistering fonts</base>
+    <translation>Avregistrerar teckensnitt</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>Teckensnitt: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo">
+    <base>Unregistering MIME info</base>
+    <translation>Avregistrerar MIME-information</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>MIME-innehållstyp: [1],Filtillägg: [2]</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo">
+    <base>Unregistering program identifiers</base>
+    <translation>Avregistrerar programidentifierare</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>ProgId: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries">
+    <base>Unregistering type libraries</base>
+    <translation>Avregistrerar typbibliotek</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>BiblID: [1]</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>Uppdaterar systemsträngar</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>Namn: [1], Värde: [2], Åtgärd [3]</translation>
+  </string>
+  <string id="ActionText.WriteIniValues">
+    <base>Writing INI file values</base>
+    <translation>Skriver INI-filvärden</translation>
+  </string>
+  <string id="ActionText.WriteIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>Fil: [1], Sektion: [2], Nyckel: [3], Värde: [4]</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues">
+    <base>Writing system registry values</base>
+    <translation>Skriver systermregistervärden</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues.Template">
+    <base>Key: [1], Name: [2], Value: [3]</base>
+    <translation>Nyckel: [1], Namn: [2], Värde: [3]</translation>
+  </string>
+  <string id="ActionText.Advertise">
+    <base>Advertising application</base>
+    <translation>Annonserar program</translation>
+  </string>
+  <string id="ActionText.GenerateScript">
+    <base>Generating script operations for action:</base>
+    <translation>Genererar skriptoperationer för åtgärden:</translation>
+  </string>
+  <string id="ActionText.GenerateScript.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile">
+    <base>Installing system catalog</base>
+    <translation>Installerar systemkatalog</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile.Template">
+    <base>File: [1],  Dependencies: [2]</base>
+    <translation>Fil: [1],  Beroenden: [2]</translation>
+  </string>
+  <string id="ActionText.Rollback">
+    <base>Rolling back action:</base>
+    <translation>Åtgärden Rollback:</translation>
+  </string>
+  <string id="ActionText.Rollback.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup">
+    <base>Removing backup files</base>
+    <translation>Tar bort säkerhetskopieringar</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup.Template">
+    <base>File: [1]</base>
+    <translation>Fil: [1]</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles">
+    <base>Removing moved files</base>
+    <translation>Tar bort flyttade filer</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>Fil: [1], Katalog: [9]</translation>
+  </string>
+  <string id="ActionText.UnpublishProduct">
+    <base>Unpublishing product information</base>
+    <translation>Avpublicerar produktinformation</translation>
+  </string>
+  <string id="ActionText.caCreateVRoots">
+    <base>Creating IIS Virtual Roots...</base>
+    <translation>Skapar IIS Virtual Roots...</translation>
+  </string>
+  <string id="ActionText.caRemoveVRoots">
+    <base>Removing IIS Virtual Roots...</base>
+    <translation>Tar bort IIS Virtual Roots...</translation>
+  </string>
+  <string id="Text.Title">
+    <base>[ProductName] Setup</base>
+    <translation>[ProductName] Setup</translation>
+  </string>
+  <string id="Text.ErrorTitle">
+    <base>[ProductName] Installer Information</base>
+    <translation>Installationsinformation för [ProductName]</translation>
+  </string>
+  <string id="Text.PatchTitle">
+    <base>[ProductName] Patch Setup</base>
+    <translation>[ProductName] Installation programfix</translation>
+  </string>
+  <string id="Text.OK">
+    <base>OK</base>
+    <translation>{&amp;Tahoma8}OK</translation>
+  </string>
+  <string id="Text.Cancel">
+    <base>Cancel</base>
+    <translation>Ångra</translation>
+  </string>
+  <string id="Text.Next">
+    <base>&amp;Next &gt;</base>
+    <translation>&amp;Nästa &gt;</translation>
+  </string>
+  <string id="Text.Back">
+    <base>&lt; &amp;Back</base>
+    <translation>&lt; &amp;Bakåt</translation>
+  </string>
+  <string id="Text.Y">
+    <base>&amp;Yes</base>
+    <translation>{&amp;Tahoma8}&amp;Ja</translation>
+  </string>
+  <string id="Text.N">
+    <base>&amp;No</base>
+    <translation>{&amp;Tahoma8}&amp;Nej</translation>
+  </string>
+  <string id="Text.A">
+    <base>&amp;Abort</base>
+    <translation>{&amp;Tahoma8}&amp;Avsluta</translation>
+  </string>
+  <string id="Text.C">
+    <base>&amp;Cancel</base>
+    <translation>{&amp;Tahoma8}A&amp;vbryt</translation>
+  </string>
+  <string id="Text.I">
+    <base>&amp;Ignore</base>
+    <translation>{&amp;Tahoma8}&amp;Ignorera</translation>
+  </string>
+  <string id="Text.O">
+    <base>&amp;OK</base>
+    <translation>{&amp;Tahoma8}&amp;OK</translation>
+  </string>
+  <string id="Text.R">
+    <base>&amp;Retry</base>
+    <translation>{&amp;Tahoma8}&amp;Försök igen</translation>
+  </string>
+  <string id="Text.Install">
+    <base>&amp;Install</base>
+    <translation>{&amp;Tahoma8}&amp;Installera</translation>
+  </string>
+  <string id="Text.Exit">
+    <base>&amp;Exit</base>
+    <translation>{&amp;Tahoma8}&amp;Avsluta</translation>
+  </string>
+  <string id="Text.Remove">
+    <base>&amp;Remove</base>
+    <translation>{&amp;Tahoma8}&amp;Ta bort</translation>
+  </string>
+  <string id="Text.Change">
+    <base>&amp;Change...</base>
+    <translation>&amp;Ändra...</translation>
+  </string>
+  <string id="Text.Finish">
+    <base>&amp;Finish</base>
+    <translation>{&amp;Tahoma8}&amp;Slutför</translation>
+  </string>
+  <string id="Text.FolderName">
+    <base>&amp;Folder name:</base>
+    <translation>{&amp;Tahoma8}&amp;Mapp:</translation>
+  </string>
+  <string id="Text.Help">
+    <base>&amp;Help</base>
+    <translation>{&amp;Tahoma8}&amp;Hjälp</translation>
+  </string>
+  <string id="Text.LookIn">
+    <base>&amp;Look in:</base>
+    <translation>{&amp;Tahoma8}&amp;Leta i:</translation>
+  </string>
+  <string id="Text.NetworkLocation">
+    <base>&amp;Network location:</base>
+    <translation>{&amp;Tahoma8}&amp;Nätverkskatalog:</translation>
+  </string>
+  <string id="Text.Space">
+    <base>&amp;Space</base>
+    <translation>{&amp;Tahoma8}&amp;Utrymme</translation>
+  </string>
+  <string id="Text.Update">
+    <base>&amp;Update &gt;</base>
+    <translation>&amp;Uppdatera &gt;</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}Bläddra till målmappen.</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Byt målmapp</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgDesc">
+    <base>Specify a network location for the server image of the product.</base>
+    <translation>{&amp;Tahoma8}Ange en nätverkskatalog för serverspeglingen.</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgTitle">
+    <base>{&amp;MSSansBold8}Network Location</base>
+    <translation>{&amp;MSSansBold8}Nätverkskatalog</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgText">
+    <base>Enter the network location or click Change to browse to a location.  Click Install to create a server image of [ProductName] at the specified network location or click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Ange nätverkskatalogen eller klicka på Byt för att bläddra till en katalog.  Klicka på Installera för att skapa en serverspegling för [ProductName] i den angivna nätverkskatalogen eller klicka på Avbryt för att avsluta guiden.</translation>
+  </string>
+  <string id="AdminWelcome.TextLine2">
+    <base>The Setup Wizard will create a server image of [ProductName] at a specified network location. To continue, click Next.</base>
+    <translation>Installationsguiden kommer att skapa en serverbild på [ProductName] på en specifik nätverksplats. För att fortsätta klicka på Nästa.</translation>
+  </string>
+  <string id="AdminWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}Välkommen till installationsguiden för [ProductName]</translation>
+  </string>
+  <string id="CancelSetup.Text">
+    <base>Are you sure you want to cancel [ProductName] installation?</base>
+    <translation>{&amp;Tahoma8}Är du säker på att du vill avbryta installationen av [ProductName]?</translation>
+  </string>
+  <string id="CustomSetup.DlgDesc">
+    <base>Select the program features you want installed.</base>
+    <translation>{&amp;Tahoma8}Markera de programfunktioner du vill installera.</translation>
+  </string>
+  <string id="CustomSetup.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup</base>
+    <translation>{&amp;MSSansBold8}Anpassad installation</translation>
+  </string>
+  <string id="CustomSetup.DlgText">
+    <base>Click on an icon in the list below to change how a feature is installed.</base>
+    <translation>{&amp;Tahoma8}Klicka på en ikon i listan nedan för att ändra hur en funktion ska installeras.</translation>
+  </string>
+  <string id="CustomSetup.ItemDescription">
+    <base>Multiline description of the currently selected item</base>
+    <translation>{&amp;Tahoma8}Flerradig beskrivning av det markerade objektet</translation>
+  </string>
+  <string id="CustomSetup.Size">
+    <base>Feature size</base>
+    <translation>{&amp;Tahoma8}Storlek</translation>
+  </string>
+  <string id="CustomSetup.InstallLabel">
+    <base>Install to:</base>
+    <translation>{&amp;Tahoma8}Installera i:</translation>
+  </string>
+  <string id="CustomSetup.Location">
+    <base>&lt;selected feature path&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;vald funktionssökväg&gt;</translation>
+  </string>
+  <string id="CustomSetup.FeatureGroup">
+    <base>Feature Description</base>
+    <translation>{&amp;Tahoma8}Beskrivning</translation>
+  </string>
+  <string id="CustomSetupTips.DlgDesc">
+    <base>Custom Setup allows you to selectively install program features.</base>
+    <translation>{&amp;Tahoma8}Med Anpassad installation kan du välja vilka programfunktioner du vill installera.</translation>
+  </string>
+  <string id="CustomSetupTips.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup Tips</base>
+    <translation>{&amp;MSSansBold8}Tips för Anpassad installation</translation>
+  </string>
+  <string id="CustomSetupTips.DontInstallText">
+    <base>Will not be installed.</base>
+    <translation>{&amp;Tahoma8}Kommer inte att installeras.</translation>
+  </string>
+  <string id="CustomSetupTips.FirstInstallText">
+    <base>Will be installed on first use. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}Installeras vid första användningen. (Endast tillgängligt om funktionen stöder detta alternativ.)</translation>
+  </string>
+  <string id="CustomSetupTips.InstallStateText">
+    <base>This install state means the feature...</base>
+    <translation>{&amp;Tahoma8}Denna installationsstatus betyder att funktionen...</translation>
+  </string>
+  <string id="CustomSetupTips.InstallText">
+    <base>Will be completely installed to the local hard drive.</base>
+    <translation>{&amp;Tahoma8}Kommer att installeras fullständigt på hårddisken.</translation>
+  </string>
+  <string id="CustomSetupTips.MenuText">
+    <base>The icon next to the feature name indicates the install state of the feature. Click the icon to drop down the install state menu for each feature.</base>
+    <translation>{&amp;Tahoma8}Ikonen bredvid funktionsnamnet indikerar funktionens installationstatus. Klicka på ikonen för att visa varje funktions meny för installationsstatus.</translation>
+  </string>
+  <string id="CustomSetupTips.NetworkInstallText">
+    <base>Will be installed to run from the network. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}Installeras för att köras från nätverket. (Endast tillgängligt om funktionen stöder detta alternativ.)</translation>
+  </string>
+  <string id="CustomSetupTips.PartialText">
+    <base>Will have some subfeatures installed to the local hard drive. (Available only if the feature has subfeatures.)</base>
+    <translation>{&amp;Tahoma8}Kommer att ha några underfunktioner installerade på hårddisken. (Endast tillgänglig om funktionen har underfunktioner.)</translation>
+  </string>
+  <string id="DestinationFolder.DlgDesc">
+    <base>Click Next to install to this folder, or click Change to install to a different folder.</base>
+    <translation>{&amp;Tahoma8}Klicka på Nästa för att installera i den här mappen eller klicka Byt för att installera i en annan mapp.</translation>
+  </string>
+  <string id="DestinationFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Målmapp</translation>
+  </string>
+  <string id="DestinationFolder.LocLabel">
+    <base>Install [ProductName] to:</base>
+    <translation>{&amp;Tahoma8}Installera [ProductName] i:</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgDesc">
+    <base>The disk space required for the installation of the selected features.</base>
+    <translation>{&amp;Tahoma8}Det diskutrymme som krävs för att installera de valda funktionerna.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgTitle">
+    <base>{&amp;MSSansBold8}Disk Space Requirements</base>
+    <translation>{&amp;MSSansBold8}Diskutrymme som krävs</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}De markerade enheterna har inte tillräckligt med diskutrymme för de markerade funktionerna. Du kan ta bort filer från de markerade enheterna, välja att installera färre funktioner på lokala enheter eller välja andra målenheter.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="FilesInUse.DlgDesc">
+    <base>Some files that need to be updated are currently in use.</base>
+    <translation>{&amp;Tahoma8}Några filer som behöver uppdateras används för närvarande.</translation>
+  </string>
+  <string id="FilesInUse.DlgTitle">
+    <base>{&amp;MSSansBold8}Files in Use</base>
+    <translation>{&amp;MSSansBold8}Filer som används</translation>
+  </string>
+  <string id="FilesInUse.DlgText">
+    <base>The following applications are using files that need to be updated by this setup. Close these applications and click Retry to continue.</base>
+    <translation>{&amp;Tahoma8}Följande program använder filer som behöver uppdateras vid installationen. Stäng programmen och klicka på Försök igen för att fortsätta.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}Bläddra till målmappen.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Byt målmapp</translation>
+  </string>
+  <string id="InstallWelcome.Copyright">
+    <base>WARNING: This program is protected by copyright law and international treaties.</base>
+    <translation>Varning! Programmet är skyddat av svensk och internationell upphovsrättslagstiftning samt av internationella konventioner.</translation>
+  </string>
+  <string id="InstallWelcome.TextLine2">
+    <base>Setup will install [ProductName] on your computer. To continue, click Next.</base>
+    <translation>Installationen kommer att installera [ProductName] på din dator. För att fortsätta klicka på Nästa.</translation>
+  </string>
+  <string id="InstallWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}Välkommen till installationsguiden för [ProductName]</translation>
+  </string>
+  <string id="LicenseAgreement.DlgDesc">
+    <base>Please read the following license agreement carefully.</base>
+    <translation>{&amp;Tahoma8}Läs noggrant igenom följande licensavtal.</translation>
+  </string>
+  <string id="LicenseAgreement.DlgTitle">
+    <base>{&amp;MSSansBold8}License Agreement</base>
+    <translation>{&amp;MSSansBold8}Licensavtal</translation>
+  </string>
+  <string id="LicenseAgreement.DontAgree">
+    <base>I &amp;do not accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}Jag accepterar &amp;inte villkoren i licensavtalet</translation>
+  </string>
+  <string id="LicenseAgreement.Agree">
+    <base>I &amp;accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}Jag a&amp;ccepterar villkoren i licensavtalet.</translation>
+  </string>
+  <string id="MaintenanceType.DlgDesc">
+    <base>Modify, repair, or remove the program.</base>
+    <translation>{&amp;Tahoma8}Ändra, reparera eller ta bort programmet.</translation>
+  </string>
+  <string id="MaintenanceType.DlgTitle">
+    <base>{&amp;MSSansBold8}Program Maintenance</base>
+    <translation>{&amp;MSSansBold8}Programunderhåll</translation>
+  </string>
+  <string id="MaintenanceType.Text1">
+    <base>Change which program features are installed. This option displays the Custom Selection dialog in which you can change the way features are installed.</base>
+    <translation>{&amp;Tahoma8}Ändra vilka programfunktioner som ska installeras. Med det här alternativet visas dialogrutan för anpassad installation där du kan välja hur funktionerna ska installeras.</translation>
+  </string>
+  <string id="MaintenanceType.Text2">
+    <base>Repair installation errors in the program. This option fixes missing or corrupt files, shortcuts, and registry entries.</base>
+    <translation>{&amp;Tahoma8}Reparera fel i programmet. Med det här alternativet återställer du saknade eller skadade filer, genvägar och registerposter.</translation>
+  </string>
+  <string id="MaintenanceType.Text3">
+    <base>Remove [ProductName] from your computer.</base>
+    <translation>{&amp;Tahoma8}Ta bort [ProductName] från datorn.</translation>
+  </string>
+  <string id="MaintenanceType.Modify">
+    <base>{&amp;MSSansBold8}&amp;Modify</base>
+    <translation>{&amp;MSSansBold8}Än&amp;dra</translation>
+  </string>
+  <string id="MaintenanceType.Repair">
+    <base>{&amp;MSSansBold8}Re&amp;pair</base>
+    <translation>{&amp;MSSansBold8}Re&amp;parera</translation>
+  </string>
+  <string id="MaintenanceType.Remove">
+    <base>{&amp;MSSansBold8}&amp;Remove</base>
+    <translation>{&amp;MSSansBold8}&amp;Ta bort</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine2">
+    <base>The Setup Wizard will allow you to modify, repair, or remove [ProductName]. To continue, click Next.</base>
+    <translation>Installationsguiden kommer att låta dig modifiera, reparera eller ta bort [ProductName]. För att fortsätta klicka på Nästa.</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}Välkommen till installationsguiden för [ProductName]</translation>
+  </string>
+  <string id="OutOfSpace.DlgDesc">
+    <base>Disk space required for the installation exceeds available disk space.</base>
+    <translation>{&amp;Tahoma8}Installationen kräver mer hårddiskutrymme än vad som finns.</translation>
+  </string>
+  <string id="OutOfSpace.DlgTitle">
+    <base>{&amp;MSSansBold8}Out of Disk Space</base>
+    <translation>{&amp;MSSansBold8}Slut på diskutrymme</translation>
+  </string>
+  <string id="OutOfSpace.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}De markerade enheterna har inte tillräckligt med diskutrymme för de markerade funktionerna. Du kan ta bort filer från de markerade enheterna, välja att installera färre funktioner på lokala enheter eller välja andra målenheter.</translation>
+  </string>
+  <string id="OutOfSpace.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="PatchWelcome.TextLine2">
+    <base>The Setup Wizard will install the Patch for [ProductName] on your computer.  To continue, click Update.</base>
+    <translation>Installationsguiden kommer att installera en programfix för [ProductName] på din dator. För att fortsätta klicka på Uppdatera.</translation>
+  </string>
+  <string id="PatchWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Patch for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}Välkommen till korrigeringsfilen för [ProductName]</translation>
+  </string>
+  <string id="ReadyToInstall.DlgDesc">
+    <base>The wizard is ready to begin installation.</base>
+    <translation>{&amp;Tahoma8}Programmet kan nu installeras.</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle">
+    <base>{&amp;MSSansBold8}Ready to Modify the Program</base>
+    <translation>{&amp;MSSansBold8}Klar att ändra programmet</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText">
+    <base>Click Install to begin the installation.</base>
+    <translation>{&amp;Tahoma8}Klicka på Installera för att börja installationen.</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle2">
+    <base>{&amp;MSSansBold8}Ready to Repair the Program</base>
+    <translation>{&amp;MSSansBold8}Klar att reparera programmet</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle3">
+    <base>{&amp;MSSansBold8}Ready to Install the Program</base>
+    <translation>{&amp;MSSansBold8}Klar att installera programmet</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText1">
+    <base>If you want to review or change any of your installation settings, click Back. Click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Klicka på Bakåt om du vill granska eller ändra någon inställning. Klicka på Avbryt för att avsluta installationen.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgDesc">
+    <base>You have chosen to remove the program from your system.</base>
+    <translation>{&amp;Tahoma8}Du har valt att ta bort programmet från systemet.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgTitle">
+    <base>{&amp;MSSansBold8}Remove the Program</base>
+    <translation>{&amp;MSSansBold8}Ta bort programmet</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText">
+    <base>Click Remove to remove [ProductName] from your computer. After removal, this program will no longer be available for use.</base>
+    <translation>{&amp;Tahoma8}Klicka på Ta bort för att ta bort [ProductName] från datorn. Programmet kan inte längre användas när det tagits bort.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText1">
+    <base>If you want to review or change any settings, click Back.</base>
+    <translation>{&amp;Tahoma8}Klicka på Bakåt om du vill granska eller ändra några inställningar.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText1">
+    <base>Your system has not been modified. To complete installation at another time, please run setup again.</base>
+    <translation>{&amp;Tahoma8}Systemet har inte ändrats. Du kan köra installationsprogrammet igen vid ett senare tillfälle för att slutföra installationen.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Klicka på Slutför för att avsluta guiden.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}Du kan antingen behålla redan installerade element i systemet för att fortsätta installationen vid ett senare tillfälle eller återställa systemet till dess ursprungliga status.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Klicka på Återställ eller Fortsätt senare för att avsluta guiden.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}Guiden avbröts innan [ProductName] hade installerats fullständigt.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;TahomaBold10}Installationsguiden fullföljd.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine2">
+    <base>The Setup Wizard has successfully installed [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>Installationsguiden har framgångsrikt installerat [ProductName] Klicka på Avsluta för att avsluta guiden.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckForUpdatesText">
+    <base>&amp;Yes, check for program updates (Recommended) after the setup completes.</base>
+    <translation>&amp;Ja, sök efter programuppdateringar (rekommenderas) när installationen är slutförd.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine3">
+    <base>The Setup Wizard has successfully uninstalled [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>Installationsguiden har framgångsrikt avinstallerat [ProductName] Klicka på Avsluta för att avsluta guiden.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine1">
+    <base>Setup has finished installing [ProductName].</base>
+    <translation>Installationsprogrammet har slutfört installationen av [ProductName].</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine2">
+    <base>Some program files might have been updated since you purchased your copy of [ProductName].</base>
+    <translation>En del programfiler kan ha uppdaterats sedan du köpte ditt exemplar av [ProductName].</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine3">
+    <base>Your Internet connection can be used to make sure that you have the latest updates.</base>
+    <translation>Du kan använda din Internetuppkoppling för att kontrollera om du har de senaste uppdateringarna.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;TahomaBold10}Installationsguiden fullföljd.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchProgramText">
+    <base>Launch [ProductName]</base>
+    <translation>Starta [ProductName]</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchReadmeText">
+    <base>Show the readme file</base>
+    <translation>Öppna filen Viktigt</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckBoxUpdates">
+    <base>CheckBox1</base>
+    <translation>CheckBox1</translation>
+  </string>
+  <string id="SetupError.ErrorText">
+    <base>&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;&lt;felmeddelande här&gt;</translation>
+  </string>
+  <string id="SetupInitialization.TextLine2">
+    <base>[ProductName] Setup is preparing the Setup Wizard which will guide you through the program setup process.  Please wait.</base>
+    <translation>[ProductName] Installationen förbereder installationsguiden som kommer att leda dig genom installationsprocessen av programmet. Vänta.</translation>
+  </string>
+  <string id="SetupInitialization.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>Installationsguiden har framgångsrikt avinstallerat [ProductName] Klicka på Avsluta för att avsluta guiden.</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText1">
+    <base>Your system has not been modified. To install this program at a later time, please run the installation again.</base>
+    <translation>{&amp;Tahoma8}Systemet har inte ändrats. Om du vill installera programmet vid ett senare tillfälle kör du installationen igen.</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Klicka på Slutför för att avsluta guiden.</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}Du kan antingen behålla redan installerade element i systemet för att fortsätta installationen vid ett senare tillfälle eller återställa systemet till dess ursprungliga status.</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Klicka på Återställ eller Fortsätt senare för att avsluta installationen.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}Guiden avbröts innan [ProductName] hade installerats fullständigt.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;TahomaBold10}Installationsguiden fullföljd.</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc">
+    <base>The program features you selected are being installed.</base>
+    <translation>{&amp;Tahoma8}Programfunktionerna som du har valt installeras.</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle">
+    <base>{&amp;MSSansBold8}Installing [ProductName]</base>
+    <translation>{&amp;MSSansBold8}Installerar [ProductName]</translation>
+  </string>
+  <string id="SetupProgress.DlgText">
+    <base>Please wait while the Setup Wizard installs [ProductName]. This may take several minutes.</base>
+    <translation>Vänta medan installationsguiden installerar [ProductName]. Detta kan ta flera minuter.</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle2">
+    <base>{&amp;MSSansBold8}Uninstalling [ProductName]</base>
+    <translation>{&amp;MSSansBold8}Avinstallerar [ProductName]</translation>
+  </string>
+  <string id="SetupProgress.DlgText2">
+    <base>Please wait while the Setup Wizard uninstalls [ProductName]. This may take several minutes.</base>
+    <translation>Vänta medan installationsguiden avinstallerar [ProductName]. Detta kan ta flera minuter.</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc2">
+    <base>The program features you selected are being uninstalled.</base>
+    <translation>{&amp;Tahoma8}Programfunktionerna du har markerat avinstalleras nu.</translation>
+  </string>
+  <string id="SetupProgress.TextTime">
+    <base>)Hidden for now)Estimated time remaining:</base>
+    <translation>{&amp;Tahoma8})Hidden for now)Uppskattad återstående tid:</translation>
+  </string>
+  <string id="SetupProgress.LbStatus">
+    <base>Status:</base>
+    <translation>{&amp;Tahoma8}Status:</translation>
+  </string>
+  <string id="SetupProgress.LbSec">
+    <base>(Hidden for now)Sec.</base>
+    <translation>{&amp;Tahoma8}(Tillfälligt dold)Sek.</translation>
+  </string>
+  <string id="SetupProgress.ShowTime">
+    <base>(Hidden for now)</base>
+    <translation>{&amp;Tahoma8}(Tillfälligt dold)</translation>
+  </string>
+  <string id="SetupProgress.ActionProgress95">
+    <base>Progress done</base>
+    <translation>Förloppet är klart</translation>
+  </string>
+  <string id="SetupResume.PreselectedText">
+    <base>The Setup Wizard will complete the installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>Inställningsguiden kommer att fullfölja installationen av [ProductName] på din dator. För att fortsätta klicka på Nästa.</translation>
+  </string>
+  <string id="SetupResume.ResumeText">
+    <base>The Setup Wizard will complete the suspended installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>Inställningsguiden kommer att fullfölja den avbrutna installationen av [ProductName] på din dator. För att fortsätta klicka på Nästa.</translation>
+  </string>
+  <string id="SetupResume.TextLine1">
+    <base>{&amp;TahomaBold10}Resuming the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}Återställer installationsguiden för [ProductName]</translation>
+  </string>
+  <string id="SetupType.DlgDesc">
+    <base>Choose the setup type that best suits your needs.</base>
+    <translation>{&amp;Tahoma8}Välj den typ av installation som bäst motsvarar dina behov.</translation>
+  </string>
+  <string id="SetupType.DlgTitle">
+    <base>{&amp;MSSansBold8}Setup Type</base>
+    <translation>{&amp;MSSansBold8}Installationstyp</translation>
+  </string>
+  <string id="SetupType.DlgText">
+    <base>Please select a setup type.</base>
+    <translation>{&amp;Tahoma8}Välj installationstyp.</translation>
+  </string>
+  <string id="SetupType.CompText">
+    <base>All program features will be installed. (Requires the most disk space.)</base>
+    <translation>{&amp;Tahoma8}Samtliga programfunktioner installeras  (Kräver mest diskutrymme).</translation>
+  </string>
+  <string id="SetupType.CustText">
+    <base>Choose which program features you want installed and where they will be installed. Recommended for advanced users.</base>
+    <translation>{&amp;Tahoma8}Välj vilka programfunktioner du vill installera och var de ska installeras. Rekommenderas för avancerade användare.</translation>
+  </string>
+  <string id="SetupType.Complete">
+    <base>{&amp;MSSansBold8}&amp;Complete</base>
+    <translation>{&amp;MSSansBold8}&amp;Fullständig</translation>
+  </string>
+  <string id="SetupType.Custom">
+    <base>{&amp;MSSansBold8}Cu&amp;stom</base>
+    <translation>{&amp;MSSansBold8}An&amp;passad</translation>
+  </string>
+  <string id="Error.0">
+    <base>{{Fatal error: }}</base>
+    <translation>{{Allvarligt fel: }}</translation>
+  </string>
+  <string id="Error.1">
+    <base>Error [1].</base>
+    <translation>{{Fel [1]. }}</translation>
+  </string>
+  <string id="Error.2">
+    <base>Warning [1].</base>
+    <translation>Varning [1]. </translation>
+  </string>
+  <string id="Error.4">
+    <base>Info [1].</base>
+    <translation>Information [1]. </translation>
+  </string>
+  <string id="Error.5">
+    <base>Internal Error [1]. [2]{, [3]}{, [4]}</base>
+    <translation>Internt fel [1]. [2]{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.7">
+    <base>{{Disk full: }}</base>
+    <translation>{{Disken är full: }}</translation>
+  </string>
+  <string id="Error.8">
+    <base>Action [Time]: [1]. [2]</base>
+    <translation>Åtgärd [Time]: [1]. [2]</translation>
+  </string>
+  <string id="Error.9">
+    <base>[ProductName]</base>
+    <translation>[ProductName]</translation>
+  </string>
+  <string id="Error.10">
+    <base>{[2]}{, [3]}{, [4]}</base>
+    <translation>{[2]}{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.11">
+    <base>Message type: [1], Argument: [2]</base>
+    <translation>Meddelandetyp: [1], Argument: [2]</translation>
+  </string>
+  <string id="Error.12">
+    <base>=== Logging started: [Date]  [Time] ===</base>
+    <translation>=== Inloggning påbörjades: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.13">
+    <base>=== Logging stopped: [Date]  [Time] ===</base>
+    <translation>=== Inloggning påbörjades: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.14">
+    <base>Action start [Time]: [1].</base>
+    <translation>Åtgärden startade [Time]: [1].</translation>
+  </string>
+  <string id="Error.15">
+    <base>Action ended [Time]: [1]. Return value [2].</base>
+    <translation>Åtgärden avslutades [Time]: [1]. Returvärdet [2].</translation>
+  </string>
+  <string id="Error.16">
+    <base>Time remaining: {[1] minutes }{[2] seconds}</base>
+    <translation>Återstående tid: {[1] minuter }{[2] sekunder}</translation>
+  </string>
+  <string id="Error.17">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>Minnet är slut. Stäng andra program innan du försöker igen.</translation>
+  </string>
+  <string id="Error.18">
+    <base>Installer is no longer responding.</base>
+    <translation>Installer svarar inte.</translation>
+  </string>
+  <string id="Error.19">
+    <base>Installer terminated prematurely.</base>
+    <translation>Windows Installer avslutades för tidigt.</translation>
+  </string>
+  <string id="Error.20">
+    <base>Please wait while Windows configures [ProductName]</base>
+    <translation>Vänta medan Windows konfigurerar [ProductName]</translation>
+  </string>
+  <string id="Error.21">
+    <base>Gathering required information...</base>
+    <translation>Samlar den information som krävs...</translation>
+  </string>
+  <string id="Error.22">
+    <base>Removing older versions of this application</base>
+    <translation>Tar bort tidigare versioner av den här tillämpningen...</translation>
+  </string>
+  <string id="Error.23">
+    <base>Preparing to remove older versions of this application</base>
+    <translation>Förbereder borttagning av tidigare versioner av den här tillämpningen...</translation>
+  </string>
+  <string id="Error.32">
+    <base>{[ProductName] }Setup completed successfully.</base>
+    <translation>Installationen av {[ProductName] } har slutförts.</translation>
+  </string>
+  <string id="Error.33">
+    <base>{[ProductName] }Setup failed.</base>
+    <translation>Installationen av {[ProductName] } misslyckades.</translation>
+  </string>
+  <string id="Error.1101">
+    <base>Error reading from file: [2]. {{ System error [3].}}  Verify that the file exists and that you can access it.</base>
+    <translation>Det uppstod ett fel vid läsning från filen: [2]. {{ Systemfel [3].}} Bekräfta att filen finns och att du kan komma åt den.</translation>
+  </string>
+  <string id="Error.1301">
+    <base>Cannot create the file [3].  A directory with this name already exists.  Cancel the installation and try installing to a different location.</base>
+    <translation>Det går inte att skapa filen [2]. En katalog med det namnet finns redan. Avbryt installationen och försök installera påTitle">
+    <base>[ProductName] Patch Setup</base>
+    <translation>[ProductName] Patch Setup</translation>
+  </string>
+  <string id="Text.OK">
+    <base>OK</base>
+    <translation>{&amp;Tahoma8}确定</translation>
+  </string>
+  <string id="Text.Cancel">
+    <base>Cancel</base>
+    <translation>取消</translation>
+  </string>
+  <string id="Text.Next">
+    <base>&amp;Next &gt;</base>
+    <translation>下一步(&amp;N) &gt;</translation>
+  </string>
+  <string id="Text.Back">
+    <base>&lt; &amp;Back</base>
+    <translation>&lt; 上一步(&amp;B)</translation>
+  </string>
+  <string id="Text.Y">
+    <base>&amp;Yes</base>
+    <translation>{&amp;Tahoma8}是(&amp;Y)</translation>
+  </string>
+  <string id="Text.N">
+    <base>&amp;No</base>
+    <translation>{&amp;Tahoma8}否(&amp;N)</translation>
+  </string>
+  <string id="Text.A">
+    <base>&amp;Abort</base>
+    <translation>{&amp;Tahoma8}放弃(&amp;A)</translation>
+  </string>
+  <string id="Text.C">
+    <base>&amp;Cancel</base>
+    <translation>{&amp;Tahoma8}取消(&amp;C)</translation>
+  </string>
+  <string id="Text.I">
+    <base>&amp;Ignore</base>
+    <translation>{&amp;Tahoma8}忽略(&amp;I)</translation>
+  </string>
+  <string id="Text.O">
+    <base>&amp;OK</base>
+    <translation>{&amp;Tahoma8}确定(&amp;O)</translation>
+  </string>
+  <string id="Text.R">
+    <base>&amp;Retry</base>
+    <translation>{&amp;Tahoma8}重试(&amp;R)</translation>
+  </string>
+  <string id="Text.Install">
+    <base>&amp;Install</base>
+    <translation>{&amp;Tahoma8}安装(&amp;I)</translation>
+  </string>
+  <string id="Text.Exit">
+    <base>&amp;Exit</base>
+    <translation>{&amp;Tahoma8}退出(&amp;E)</translation>
+  </string>
+  <string id="Text.Remove">
+    <base>&amp;Remove</base>
+    <translation>{&amp;Tahoma8}删除(&amp;R)</translation>
+  </string>
+  <string id="Text.Change">
+    <base>&amp;Change...</base>
+    <translation>{&amp;Tahoma8}更改(&amp;C)...</translation>
+  </string>
+  <string id="Text.Finish">
+    <base>&amp;Finish</base>
+    <translation>{&amp;Tahoma8}完成(&amp;F)</translation>
+  </string>
+  <string id="Text.FolderName">
+    <base>&amp;Folder name:</base>
+    <translation>{&amp;Tahoma8}文件夹名称(&amp;F)：</translation>
+  </string>
+  <string id="Text.Help">
+    <base>&amp;Help</base>
+    <translation>{&amp;Tahoma8}帮助(&amp;H)</translation>
+  </string>
+  <string id="Text.LookIn">
+    <base>&amp;Look in:</base>
+    <translation>{&amp;Tahoma8}搜索范围(&amp;L)：</translation>
+  </string>
+  <string id="Text.NetworkLocation">
+    <base>&amp;Network location:</base>
+    <translation>{&amp;Tahoma8}网络位置(&amp;N)：</translation>
+  </string>
+  <string id="Text.Space">
+    <base>&amp;Space</base>
+    <translation>{&amp;Tahoma8}空间(&amp;S)</translation>
+  </string>
+  <string id="Text.Update">
+    <base>&amp;Update &gt;</base>
+    <translation>更新(&amp;U) &gt;</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}浏览目的地文件夹。</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}更改当前目的地文件夹</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgDesc">
+    <base>Specify a network location for the server image of the product.</base>
+    <translation>{&amp;Tahoma8}为产品的服务器映象指定网络位置。</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgTitle">
+    <base>{&amp;MSSansBold8}Network Location</base>
+    <translation>{&amp;MSSansBold8}网络位置</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgText">
+    <base>Enter the network location or click Change to browse to a location.  Click Install to create a server image of [ProductName] at the specified network location or click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}输入网络位置或单击“更改”以浏览网络位置。  单击“安装”在指定的网络位置创建 [ProductName] 的服务器映象，或单击“取消”退出向导。</translation>
+  </string>
+  <string id="AdminWelcome.TextLine2">
+    <base>The Setup Wizard will create a server image of [ProductName] at a specified network location. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard 将在指定的网络位置创建 [ProductName] 的服务器映象。 要继续，请单击“下一步”。</translation>
+  </string>
+  <string id="AdminWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;VerdanaBold14}欢迎使用 [ProductName] Setup Wizard</translation>
+  </string>
+  <string id="CancelSetup.Text">
+    <base>Are you sure you want to cancel [ProductName] installation?</base>
+    <translation>{&amp;Tahoma8}要取消 [ProductName] 安装吗？</translation>
+  </string>
+  <string id="CustomSetup.DlgDesc">
+    <base>Select the program features you want installed.</base>
+    <translation>{&amp;Tahoma8}选择要安装的程序功能。</translation>
+  </string>
+  <string id="CustomSetup.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup</base>
+    <translation>{&amp;MSSansBold8}自定义安装</translation>
+  </string>
+  <string id="CustomSetup.DlgText">
+    <base>Click on an icon in the list below to change how a feature is installed.</base>
+    <translation>{&amp;Tahoma8}单击下面列表内的图标以更改功能的安装方式。</translation>
+  </string>
+  <string id="CustomSetup.ItemDescription">
+    <base>Multiline description of the currently selected item</base>
+    <translation>{&amp;Tahoma8}当前选定项目的多行说明</translation>
+  </string>
+  <string id="CustomSetup.Size">
+    <base>Feature size</base>
+    <translation>{&amp;Tahoma8}功能大小</translation>
+  </string>
+  <string id="CustomSetup.InstallLabel">
+    <base>Install to:</base>
+    <translation>{&amp;Tahoma8}安装到：</translation>
+  </string>
+  <string id="CustomSetup.Location">
+    <base>&lt;selected feature path&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;selected feature path&gt;</translation>
+  </string>
+  <string id="CustomSetup.FeatureGroup">
+    <base>Feature Description</base>
+    <translation>{&amp;Tahoma8}功能说明</translation>
+  </string>
+  <string id="CustomSetupTips.DlgDesc">
+    <base>Custom Setup allows you to selectively install program features.</base>
+    <translation>{&amp;Tahoma8}“自定义安装”允许有选择地安装程序功能。</translation>
+  </string>
+  <string id="CustomSetupTips.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup Tips</base>
+    <translation>{&amp;MSSansBold8}自定义安装提示</translation>
+  </string>
+  <string id="CustomSetupTips.DontInstallText">
+    <base>Will not be installed.</base>
+    <translation>{&amp;Tahoma8}将不安装。</translation>
+  </string>
+  <string id="CustomSetupTips.FirstInstallText">
+    <base>Will be installed on first use. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}将在第一次使用时安装。 （只有在该功能支持此选项时有效）。</translation>
+  </string>
+  <string id="CustomSetupTips.InstallStateText">
+    <base>This install state means the feature...</base>
+    <translation>{&amp;Tahoma8}此安装状态意味着该功能...</translation>
+  </string>
+  <string id="CustomSetupTips.InstallText">
+    <base>Will be completely installed to the local hard drive.</base>
+    <translation>{&amp;Tahoma8}将全部安装到本地硬盘驱动器上。</translation>
+  </string>
+  <string id="CustomSetupTips.MenuText">
+    <base>The icon next to the feature name indicates the install state of the feature. Click the icon to drop down the install state menu for each feature.</base>
+    <translation>{&amp;Tahoma8}紧邻该功能名称的图标显示该功能的安装状态。 单击该图标可下拉每个功能的安装状态菜单。</translation>
+  </string>
+  <string id="CustomSetupTips.NetworkInstallText">
+    <base>Will be installed to run from the network. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}将安装从网络中运行。 （只有在该功能支持此选项时有效）。</translation>
+  </string>
+  <string id="CustomSetupTips.PartialText">
+    <base>Will have some subfeatures installed to the local hard drive. (Available only if the feature has subfeatures.)</base>
+    <translation>{&amp;Tahoma8}将把一些子功能安装到本地硬盘驱动器上。 （只有在该功能带有子功能时有效）。</translation>
+  </string>
+  <string id="DestinationFolder.DlgDesc">
+    <base>Click Next to install to this folder, or click Change to install to a different folder.</base>
+    <translation>{&amp;Tahoma8}单击“下一步”安装到此文件夹，或单击“更改”安装到不同的文件夹。</translation>
+  </string>
+  <string id="DestinationFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Destination Folder</base>
+    <translation>{&amp;MSSansBold8}目的地文件夹</translation>
+  </string>
+  <string id="DestinationFolder.LocLabel">
+    <base>Install [ProductName] to:</base>
+    <translation>{&amp;Tahoma8}将 [ProductName] 安装到：</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgDesc">
+    <base>The disk space required for the installation of the selected features.</base>
+    <translation>{&amp;Tahoma8}安装选定功能所需的磁盘空间。</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgTitle">
+    <base>{&amp;MSSansBold8}Disk Space Requirements</base>
+    <translation>{&amp;MSSansBold8}磁盘空间需求</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}突出显示的卷没有足够的磁盘空间可供当前选定的功能使用。 可以从突出显示的卷中删除文件，或选择安装较少的功能到本地驱动器，还可选择不同的目的地驱动器。</translation>
+  </string>
+  <string id="DiskSpaceRequirements.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="FilesInUse.DlgDesc">
+    <base>Some files that need to be updated are currently in use.</base>
+    <translation>{&amp;Tahoma8}某些需要更新的文件当前正在使用。</translation>
+  </string>
+  <string id="FilesInUse.DlgTitle">
+    <base>{&amp;MSSansBold8}Files in Use</base>
+    <translation>{&amp;MSSansBold8}正在使用的文件</translation>
+  </string>
+  <string id="FilesInUse.DlgText">
+    <base>The following applications are using files that need to be updated by this setup. Close these applications and click Retry to continue.</base>
+    <translation>{&amp;Tahoma8}下列应用程序正在使用此安装程序需要更新的文件。 关闭这些应用程序并单击“重试”继续。</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}浏览目的地文件夹。</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}更改当前目的地文件夹</translation>
+  </string>
+  <string id="InstallWelcome.Copyright">
+    <base>WARNING: This program is protected by copyright law and international treaties.</base>
+    <translation>警告：本程序受版权法和国际条约的保护。</translation>
+  </string>
+  <string id="InstallWelcome.TextLine2">
+    <base>Setup will install [ProductName] on your computer. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}设定程序将会把 [ProductName] 安装在您的计算机。请点击‘下一步’继续安装。</translation>
+  </string>
+  <string id="InstallWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;VerdanaBold14}欢迎使用 [ProductName] Setup Wizard</translation>
+  </string>
+  <string id="LicenseAgreement.DlgDesc">
+    <base>Please read the following license agreement carefully.</base>
+    <translation>{&amp;Tahoma8}请仔细阅读下面的许可证协议。</translation>
+  </string>
+  <string id="LicenseAgreement.DlgTitle">
+    <base>{&amp;MSSansBold8}License Agreement</base>
+    <translation>{&amp;MSSansBold8}许可证协议</translation>
+  </string>
+  <string id="LicenseAgreement.DontAgree">
+    <base>I &amp;do not accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}我不接受该许可证协议中的条款(&amp;D)</translation>
+  </string>
+  <string id="LicenseAgreement.Agree">
+    <base>I &amp;accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}我接受该许可证协议中的条款(&amp;A)</translation>
+  </string>
+  <string id="MaintenanceType.DlgDesc">
+    <base>Modify, repair, or remove the program.</base>
+    <translation>{&amp;Tahoma8}修改、修复或删除程序。</translation>
+  </string>
+  <string id="MaintenanceType.DlgTitle">
+    <base>{&amp;MSSansBold8}Program Maintenance</base>
+    <translation>{&amp;MSSansBold8}程序维护</translation>
+  </string>
+  <string id="MaintenanceType.Text1">
+    <base>Change which program features are installed. This option displays the Custom Selection dialog in which you can change the way features are installed.</base>
+    <translation>{&amp;Tahoma8}更改要安装的程序功能。 此选项可显示“自定义选择”对话框，在其中您可以更改安装功能的方式。</translation>
+  </string>
+  <string id="MaintenanceType.Text2">
+    <base>Repair installation errors in the program. This option fixes missing or corrupt files, shortcuts, and registry entries.</base>
+    <translation>{&amp;Tahoma8}修复程序中的错误。 通过此选项您可修复缺少或损坏的文件、快捷方式和注册表项。</translation>
+  </string>
+  <string id="MaintenanceType.Text3">
+    <base>Remove [ProductName] from your computer.</base>
+    <translation>{&amp;Tahoma8}从计算机中删除 [ProductName]。</translation>
+  </string>
+  <string id="MaintenanceType.Modify">
+    <base>{&amp;MSSansBold8}&amp;Modify</base>
+    <translation>{&amp;TahomaBold10}修改(&amp;M)</translation>
+  </string>
+  <string id="MaintenanceType.Repair">
+    <base>{&amp;MSSansBold8}Re&amp;pair</base>
+    <translation>{&amp;TahomaBold10}修复(&amp;P)</translation>
+  </string>
+  <string id="MaintenanceType.Remove">
+    <base>{&amp;MSSansBold8}&amp;Remove</base>
+    <translation>{&amp;TahomaBold10}删除(&amp;R)</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine2">
+    <base>The Setup Wizard will allow you to modify, repair, or remove [ProductName]. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard 允许修改、修复或删除 [ProductName] 。 要继续，请单击“下一步”。</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}欢迎使用 [ProductName] Setup Wizard</translation>
+  </string>
+  <string id="OutOfSpace.DlgDesc">
+    <base>Disk space required for the installation exceeds available disk space.</base>
+    <translation>{&amp;Tahoma8}安装所需的磁盘空间超出了可用的磁盘空间。</translation>
+  </string>
+  <string id="OutOfSpace.DlgTitle">
+    <base>{&amp;MSSansBold8}Out of Disk Space</base>
+    <translation>{&amp;MSSansBold8}磁盘空间不足</translation>
+  </string>
+  <string id="OutOfSpace.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}突出显示的卷没有足够的磁盘空间可供当前选定的功能使用。 可以从突出显示的卷中删除文件，或选择安装较少的功能到本地驱动器，还可选择不同的目的地驱动器。</translation>
+  </string>
+  <string id="OutOfSpace.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="PatchWelcome.TextLine2">
+    <base>The Setup Wizard will install the Patch for [ProductName] on your computer.  To continue, click Update.</base>
+    <translation>Setup Wizard 将在您的计算机中安装 [ProductName] 的修补程序。  要继续，请单击“更新”。</translation>
+  </string>
+  <string id="PatchWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Patch for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}欢迎使用 [ProductName] 的修补程序</translation>
+  </string>
+  <string id="ReadyToInstall.DlgDesc">
+    <base>The wizard is ready to begin installation.</base>
+    <translation>{&amp;Tahoma8}向导准备开始安装。</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle">
+    <base>{&amp;MSSansBold8}Ready to Modify the Program</base>
+    <translation>{&amp;MSSansBold8}已做好修改程序的准备</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText">
+    <base>Click Install to begin the installation.</base>
+    <translation>{&amp;Tahoma8}单击“安装”开始安装。</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle2">
+    <base>{&amp;MSSansBold8}Ready to Repair the Program</base>
+    <translation>{&amp;MSSansBold8}已做好修复程序的准备</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle3">
+    <base>{&amp;MSSansBold8}Ready to Install the Program</base>
+    <translation>{&amp;MSSansBold8}已做好安装程序的准备</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText1">
+    <base>If you want to review or change any of your installation settings, click Back. Click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}要查看或更改任何安装设置，请单击“上一步”。 单击“取消”退出向导。</translation>
+  </string>
+  <string id="ReadyToRemove.DlgDesc">
+    <base>You have chosen to remove the program from your system.</base>
+    <translation>{&amp;Tahoma8}您已经选择从系统中删除此程序。</translation>
+  </string>
+  <string id="ReadyToRemove.DlgTitle">
+    <base>{&amp;MSSansBold8}Remove the Program</base>
+    <translation>{&amp;MSSansBold8}删除程序</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText">
+    <base>Click Remove to remove [ProductName] from your computer. After removal, this program will no longer be available for use.</base>
+    <translation>{&amp;Tahoma8}单击“删除”从计算机中删除 [ProductName] 。 删除后此程序将不能再使用。</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText1">
+    <base>If you want to review or change any settings, click Back.</base>
+    <translation>{&amp;Tahoma8}要查看或更改任何设置，请单击“上一步”。</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText1">
+    <base>Your system has not been modified. To complete installation at another time, please run setup again.</base>
+    <translation>{&amp;Tahoma8}系统未被修改。 要再次完成安装过程，请重新运行安装程序。</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}单击“完成”退出向导。</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}可以保留系统中现存的已安装内容，以后再继续此安装过程，也可以将系统恢复到安装前的原始状态。</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}单击“恢复”或“以后继续”退出该向导。</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}在 [ProductName] 完整安装之前向导已中断。</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;TahomaBold10} Setup Wizard 完成</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine2">
+    <base>The Setup Wizard has successfully installed [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard 成功地安装了 [ProductName] 。 单击“完成”退出向导。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckForUpdatesText">
+    <base>&amp;Yes, check for program updates (Recommended) after the setup completes.</base>
+    <translation>是(&amp;Y)，安装完成后检查程序更新（建议）。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine3">
+    <base>The Setup Wizard has successfully uninstalled [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard成功地卸载了 [ProductName] 。 单击“完成”退出向导。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine1">
+    <base>Setup has finished installing [ProductName].</base>
+    <translation>安装程序已完成对 [ProductName] 的安装。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine2">
+    <base>Some program files might have been updated since you purchased your copy of [ProductName].</base>
+    <translation>在您购买 [ProductName] 后，有些程序文件可能已经更新。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine3">
+    <base>Your Internet connection can be used to make sure that you have the latest updates.</base>
+    <translation>只要与因特网相连就可以确保得到最新的更新。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;TahomaBold10} Setup Wizard完成</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchProgramText">
+    <base>Launch [ProductName]</base>
+    <translation>Launch [ProductName]</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchReadmeText">
+    <base>Show the readme file</base>
+    <translation>显示自述文件</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckBoxUpdates">
+    <base>CheckBox1</base>
+    <translation>CheckBox1</translation>
+  </string>
+  <string id="SetupError.ErrorText">
+    <base>&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</translation>
+  </string>
+  <string id="SetupInitialization.TextLine2">
+    <base>[ProductName] Setup is preparing the Setup Wizard which will guide you through the program setup process.  Please wait.</base>
+    <translation>{&amp;Tahoma8}安装程序正在准备 Setup Wizard，Setup Wizard 将引导您完成程序安装过程，请稍候。</translation>
+  </string>
+  <string id="SetupInitialization.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;VerdanaBold14}欢迎使用 [ProductName] Setup Wizard</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText1">
+    <base>Your system has not been modified. To install this program at a later time, please run the installation again.</base>
+    <translation>{&amp;Tahoma8}系统未被修改。 以后要再完成安装过程，请重新运行安装程序。</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}单击“完成”退出向导。</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}可以保留系统中现存的已安装内容，以后再继续此安装过程，也可以将系统恢复到安装前的原始状态。</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}单击“恢复”或“以后继续”退出向导。</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}在 [ProductName] 完整安装之前向导已中断。</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;TahomaBold10} Setup Wizard 完成</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc">
+    <base>The program features you selected are being installed.</base>
+    <translation>{&amp;Tahoma8}正在安装您选择的程序功能。</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle">
+    <base>{&amp;MSSansBold8}Installing [ProductName]</base>
+    <translation>{&amp;MSSansBold8}正在安装 [ProductName]</translation>
+  </string>
+  <string id="SetupProgress.DlgText">
+    <base>Please wait while the Setup Wizard installs [ProductName]. This may take several minutes.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard 正在安装 [ProductName] ，请稍候。 这需要几分钟的时间。</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle2">
+    <base>{&amp;MSSansBold8}Uninstalling [ProductName]</base>
+    <translation>{&amp;MSSansBold8}正在卸载 [ProductName]</translation>
+  </string>
+  <string id="SetupProgress.DlgText2">
+    <base>Please wait while the Setup Wizard uninstalls [ProductName]. This may take several minutes.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard 正在卸载 [ProductName] ，请稍候。 这需要几分钟的时间。</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc2">
+    <base>The program features you selected are being uninstalled.</base>
+    <translation>{&amp;Tahoma8}正在卸载您选择的程序功能。</translation>
+  </string>
+  <string id="SetupProgress.TextTime">
+    <base>)Hidden for now)Estimated time remaining:</base>
+    <translation>{&amp;Tahoma8}（现在隐藏）估计剩余时间：</translation>
+  </string>
+  <string id="SetupProgress.LbStatus">
+    <base>Status:</base>
+    <translation>{&amp;Tahoma8}状态：</translation>
+  </string>
+  <string id="SetupProgress.LbSec">
+    <base>(Hidden for now)Sec.</base>
+    <translation>{&amp;Tahoma8}（现在隐藏）秒</translation>
+  </string>
+  <string id="SetupProgress.ShowTime">
+    <base>(Hidden for now)</base>
+    <translation>{&amp;Tahoma8}（现在隐藏）</translation>
+  </string>
+  <string id="SetupProgress.ActionProgress95">
+    <base>Progress done</base>
+    <translation>已完成进度</translation>
+  </string>
+  <string id="SetupResume.PreselectedText">
+    <base>The Setup Wizard will complete the installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard 将在计算机上完成 [ProductName] 的安装过程。 要继续，请单击“下一步”。</translation>
+  </string>
+  <string id="SetupResume.ResumeText">
+    <base>The Setup Wizard will complete the suspended installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard 将完成计算机上挂起的 [ProductName] 安装过程。 要继续，请单击“下一步”。</translation>
+  </string>
+  <string id="SetupResume.TextLine1">
+    <base>{&amp;TahomaBold10}Resuming the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}继续执行 [ProductName] Setup Wizard</translation>
+  </string>
+  <string id="SetupType.DlgDesc">
+    <base>Choose the setup type that best suits your needs.</base>
+    <translation>{&amp;Tahoma8}选择最适合自己需要的安装类型。</translation>
+  </string>
+  <string id="SetupType.DlgTitle">
+    <base>{&amp;MSSansBold8}Setup Type</base>
+    <translation>{&amp;MSSansBold8}安装类型</translation>
+  </string>
+  <string id="SetupType.DlgText">
+    <base>Please select a setup type.</base>
+    <translation>{&amp;Tahoma8}请选择一个安装类型。</translation>
+  </string>
+  <string id="SetupType.CompText">
+    <base>All program features will be installed. (Requires the most disk space.)</base>
+    <translation>{&amp;Tahoma8}将安装所有的程序功能。 （需要的磁盘空间最大）。</translation>
+  </string>
+  <string id="SetupType.CustText">
+    <base>Choose which program features you want installed and where they will be installed. Recommended for advanced users.</base>
+    <translation>{&amp;Tahoma8}选择要安装的程序功能和将要安装的位置。 建议高级用户使用。</translation>
+  </string>
+  <string id="SetupType.Complete">
+    <base>{&amp;MSSansBold8}&amp;Complete</base>
+    <translation>{&amp;MSSansBold8}完整安装(&amp;O)</translation>
+  </string>
+  <string id="SetupType.Custom">
+    <base>{&amp;MSSansBold8}Cu&amp;stom</base>
+    <translation>{&amp;MSSansBold8}自定义(&amp;S)</translation>
+  </string>
+  <string id="Error.0">
+    <base>{{Fatal error: }}</base>
+    <translation>{{致命错误: }}</translation>
+  </string>
+  <string id="Error.1">
+    <base>Error [1].</base>
+    <translation>{{错误 [1]。}}</translation>
+  </string>
+  <string id="Error.2">
+    <base>Warning [1].</base>
+    <translation>警告 [1]。</translation>
+  </string>
+  <string id="Error.4">
+    <base>Info [1].</base>
+    <translation>信息 [1]。</translation>
+  </string>
+  <string id="Error.5">
+    <base>Internal Error [1]. [2]{, [3]}{, [4]}</base>
+    <translation>内部错误 [1]. [2]{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.7">
+    <base>{{Disk full: }}</base>
+    <translation>{{磁盘已满: }}</translation>
+  </string>
+  <string id="Error.8">
+    <base>Action [Time]: [1]. [2]</base>
+    <translation>操作 [Time]: [1]. [2]</translation>
+  </string>
+  <string id="Error.9">
+    <base>[ProductName]</base>
+    <translation>[ProductName]</translation>
+  </string>
+  <string id="Error.10">
+    <base>{[2]}{, [3]}{, [4]}</base>
+    <translation>{[2]}{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.11">
+    <base>Message type: [1], Argument: [2]</base>
+    <translation>消息类型: [1]， 参数: [2]</translation>
+  </string>
+  <string id="Error.12">
+    <base>=== Logging started: [Date]  [Time] ===</base>
+    <translation>=== 记录开始: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.13">
+    <base>=== Logging stopped: [Date]  [Time] ===</base>
+    <translation>=== 记录停止: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.14">
+    <base>Action start [Time]: [1].</base>
+    <translation>操作开始 [Time]: [1]。</translation>
+  </string>
+  <string id="Error.15">
+    <base>Action ended [Time]: [1]. Return value [2].</base>
+    <translation>操作结束 [Time]: [1]。返回值 [2]。</translation>
+  </string>
+  <string id="Error.16">
+    <base>Time remaining: {[1] minutes }{[2] seconds}</base>
+    <translation>剩余时间: {[1] 分 }{[2] 秒}</translation>
+  </string>
+  <string id="Error.17">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>内存不足。请先关闭其他应用程序，然后再重试。</translation>
+  </string>
+  <string id="Error.18">
+    <base>Installer is no longer responding.</base>
+    <translation>安装程序已不再反应。</translation>
+  </string>
+  <string id="Error.19">
+    <base>Installer terminated prematurely.</base>
+    <translation>安装程序过早停止。</translation>
+  </string>
+  <string id="Error.20">
+    <base>Please wait while Windows configures [ProductName]</base>
+    <translation>Windows 正在配置 [ProductName]，请稍等。</translation>
+  </string>
+  <string id="Error.21">
+    <base>Gathering required information...</base>
+    <translation>正在收集所需信息...</translation>
+  </string>
+  <string id="Error.22">
+    <base>Removing older versions of this application</base>
+    <translation>正在删除此应用程序旧的版本...</translation>
+  </string>
+  <string id="Error.23">
+    <base>Preparing to remove older versions of this application</base>
+    <translation>正在准备删除此应用程序旧的版本...</translation>
+  </string>
+  <string id="Error.32">
+    <base>{[ProductName] }Setup completed successfully.</base>
+    <translation>{[ProductName] }的安装已成功完成。</translation>
+  </string>
+  <string id="Error.33">
+    <base>{[ProductName] }Setup failed.</base>
+    <translation>{[ProductName] }安装失败。</translation>
+  </string>
+  <string id="Error.1101">
+    <base>Error reading from file: [2]. {{ System error [3].}}  Verify that the file exists and that you can access it.</base>
+    <translation>读取文件 [2] 时出错。{{ 系统错误 [3]。}}  请确认该文件的确存在并且您可以对其进行访问。</translation>
+  </string>
+  <string id="Error.1301">
+    <base>Cannot create the file [3].  A directory with this name already exists.  Cancel the installation and try installing to a different location.</base>
+    <translation>无法创建文件 [2]。同名目录已存在。请取消此次安装，然后安装到其他位置。</translation>
+  </string>
+  <string id="Error.1302">
+    <base>Please insert the disk: [2]</base>
+    <translation>请插入磁盘: [2]</translation>
+  </string>
+  <string id="Error.1303">
+    <base>The installer has insufficient privileges to access this directory: [2].  The installation cannot continue.  Log on as an administrator or contact your system administrator.</base>
+    <translation>安装程序没有访问目录 [2] 的权限，安装无法继续进行。请以管理员身份登录，或与您的系统管理员联系。</translation>
+  </string>
+  <string id="Error.1304">
+    <base>Error writing to file [2].  Verify that you have access to that directory.</base>
+    <translation>写至文件 [2] 时出错。请确认您有访问该目录的权限。</translation>
+  </string>
+  <string id="Error.1305">
+    <base>Error reading from file [2].  Verify that the file exists and that you can access it.</base>
+    <translation>读取文件 [2] 时出错。{{ 系统错误 [3]。}}请确认文件存在，并且您能够访问该文件。</translation>
+  </string>
+  <string id="Error.1306">
+    <base>Another application has exclusive access to the file [2].  Please shut down all other applications, then click Retry.</base>
+    <translation>另一应用程序已经以独占模式访问了文件 [2]。请关闭所有其他的应用程序，然后再单击“重试”按钮。</translation>
+  </string>
+  <string id="Error.1307">
+    <base>There is not enough disk space to install the file [2].  Free some disk space and click Retry, or click Cancel to exit.</base>
+    <translation>没有足够的磁盘空间来安装文件 [2]。请释放一些磁盘空间后单击“重试”，或者单击“取消”退出。</translation>
+  </string>
+  <string id="Error.1308">
+    <base>Source file not found: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>没有找到源文件 [2]。请确认文件存在，并且您能够访问该文件。</translation>
+  </string>
+  <string id="Error.1309">
+    <base>Error reading from file: [3]. {{ System error [2].}}  Verify that the file exists and that you can access it.</base>
+    <translation>读取文件 [3] 时出错。{{ 系统错误 [2]。}} 请确认文件存在，并且您能够访问该文件。</translation>
+  </string>
+  <string id="Error.1310">
+    <base>Error writing to file: [3]. {{ System error [2].}}  Verify that you have access to that directory.</base>
+    <translation>写至文件 [3] 时出错。{{ 系统错误 [2]。}} 请确认您有权访问该目录。</translation>
+  </string>
+  <string id="Error.1311">
+    <base>Source file not found{{(cabinet)}}: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>没有找到源文件{{(包)}}: [2]。请确认文件存在，并且您能够访问该文件。</translation>
+  </string>
+  <string id="Error.1312">
+    <base>Cannot create the directory [2].  A file with this name already exists.  Please rename or remove the file and click Retry, or click Cancel to exit.</base>
+    <translation>无法创建目录 [2]。同名文件已经存在。请重命名或删除文件，然后单击“重试”按钮，或者单击“取消”按钮退出。</translation>
+  </string>
+  <string id="Error.1313">
+    <base>The volume [2] is currently unavailable.  Please select another.</base>
+    <translation>目前无法使用卷 [2]，请另选其他卷。</translation>
+  </string>
+  <string id="Error.1314">
+    <base>The specified path [2] is unavailable.</base>
+    <translation>无法使用指定的路径 [2]。</translation>
+  </string>
+  <string id="Error.1315">
+    <base>Unable to write to the specified folder [2].</base>
+    <translation>无法写入指定的文件夹 [2]。</translation>
+  </string>
+  <string id="Error.1316">
+    <base>A network error occurred while attempting to read from the file [2]</base>
+    <translation>试图读取文件 [2] 时发生网络错误。 </translation>
+  </string>
+  <string id="Error.1317">
+    <base>An error occurred while attempting to create the directory [2]</base>
+    <translation>试图创建目录 [2] 时发生错误。</translation>
+  </string>
+  <string id="Error.1318">
+    <base>A network error occurred while attempting to create the directory [2]</base>
+    <translation>试图创建目录 [2] 时发生网络错误。</translation>
+  </string>
+  <string id="Error.1319">
+    <base>A network error occurred while attempting to open the source file cabinet [2].</base>
+    <translation>试图打开源文件包 [2] 时发生网络错误。</translation>
+  </string>
+  <string id="Error.1320">
+    <base>The specified path is too long [2].</base>
+    <translation>指定的路径过长: [2]</translation>
+  </string>
+  <string id="Error.1321">
+    <base>The Installer has insufficient privileges to modify the file [2].</base>
+    <translation>安装程序没有修改文件 [2] 的权限。</translation>
+  </string>
+  <string id="Error.1322">
+    <base>A portion of the path [2] exceeds the length allowed by the system.</base>
+    <translation>文件夹路径 [2] 的一部分无效。或者为空，或者超出了系统允许的长度。</translation>
+  </string>
+  <string id="Error.1323">
+    <base>The path [2] contains words that are not valid in folders.</base>
+    <translation>文件夹路径 [2] 中含有无效单词。</translation>
+  </string>
+  <string id="Error.1324">
+    <base>The path [2] contains an invalid character.</base>
+    <translation>文件夹路径 [2] 中含有无效的字符。</translation>
+  </string>
+  <string id="Error.1325">
+    <base>[2] is not a valid short file name.</base>
+    <translation>[2] 不是一个有效的短文件名。</translation>
+  </string>
+  <string id="Error.1326">
+    <base>Error getting file security: [3] GetLastError: [2]</base>
+    <translation>获取文件 [3] 安全权限时发生错误 GetLastError: [2]</translation>
+  </string>
+  <string id="Error.1327">
+    <base>Invalid Drive: [2]</base>
+    <translation>无效驱动器: [2]</translation>
+  </string>
+  <string id="Error.1328">
+    <base>Error applying patch to file [2].  It has probably been updated by other means, and can no longer be modified by this patch.  For more information contact your patch vendor.  {{System Error: [3]}}</base>
+    <translation>对文件 [2] 应用修补程序时出错。该文件可能被更新过，所以本修补程序不能修改它。详细信息，请与您的修补程序供应商联系。 {{系统错误: [3]}}</translation>
+  </string>
+  <string id="Error.1401">
+    <base>Could not create key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>无法创建键: [2]。{{ 系统错误 [3]。}} 请验证您对该键拥有足够的访问权限，或者与您的技术支持人员联系。</translation>
+  </string>
+  <string id="Error.1402">
+    <base>Could not open key: [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>无法打开键: [2]。{{ 系统错误 [3]。}}  请验证您对该键拥有足够的访问权限，或者�

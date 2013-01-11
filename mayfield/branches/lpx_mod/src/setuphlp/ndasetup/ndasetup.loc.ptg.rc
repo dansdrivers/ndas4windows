@@ -1,0 +1,80 @@
+#ifndef APSTUDIO_INVOKED
+
+#include <windows.h>
+#include "resource.h"
+#pragma code_page(1252)
+
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE
+
+IDR_INSTALL_BUTTON_MENU MENU 
+BEGIN
+    POPUP "{Menu}"
+    BEGIN
+        MENUITEM "&Iniciar (Inglês)",	ID_INSTALL_ENU
+        MENUITEM "&Iniciar (Chinês PRC)", ID_INSTALL_CHS
+        MENUITEM "&Iniciar (Alemão)",		ID_INSTALL_DEU
+        MENUITEM "&Iniciar (Espanhol)",	ID_INSTALL_ESN
+        MENUITEM "&Iniciar (Francês)",		ID_INSTALL_FRA
+        MENUITEM "&Iniciar (Italiano)",	ID_INSTALL_ITA
+        MENUITEM "&Iniciar (Japonês)",	ID_INSTALL_JPN
+        MENUITEM "&Iniciar (Coreano)",		ID_INSTALL_KOR
+        MENUITEM "&Iniciar (Portuguese)",	ID_INSTALL_PTG
+    END
+END
+
+IDD_INIT_SETUP DIALOGEX 0, 0, 284, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Programa de arranque da instalação do software do NDAS"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Iniciar",IDOK,144,119,81,14
+    PUSHBUTTON      "Sa&ir",IDCANCEL,229,119,50,14
+    CONTROL         "Verifique se existe uma actualização do software",IDC_CHECK_UPDATE,"Botão",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,121,128,10
+    CONTROL         "",IDC_STATIC,"Estático",SS_ETCHEDHORZ,0,111,283,1
+    ICON            IDI_INSTALLER,IDC_STATIC,9,10,20,20
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,45,90,232,
+                    14
+    LTEXT           "Bem-vindo ao instalador do software NDAS",IDC_BANNER_TEXT,
+                    45,15,217,46
+    LTEXT           "{Action Text Placeholder}",IDC_ACTION_TEXT,46,72,230,10
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ndasetup"
+    IDS_INITIALIZE          "A instalação está a iniciar..."
+    IDS_CANCEL              "Canc&elar"
+    IDS_EXIT                "Sa&ir"
+    IDS_INSTALL             "&Iniciar"
+    IDS_ERR_LOADMSI         "O carregamento do API do instalador do Windows falhou."
+    IDS_ERR_FORMAT          "Erro 0x%1!08X!\r\n%2!s!"
+    IDS_SETUP               "Instalação do software NDAS"
+    IDS_UPDATE_AVAILABLE_FMT	"Está disponível uma nova versão do software %1!s!.\r\nDeseja transferi-la agora?"
+    IDS_UPDATE_URL          "http://updates.ximeta.com/update/"
+    IDS_ERR_CHECK_UPDATE    "A ligação ao servidor de actualização falhou."
+    IDS_BSC_BEGINDOWNLOADING "A transferir os dados do servidor..."
+    IDS_BSC_CONNECTING      "A ligar ao servidor..."
+    IDS_BSC_ENDDOWNLOADDATA "Transferência terminada."
+    IDS_ERR_DOWNLOAD_UPDATE "A transferência da actualização do servidor falhou."
+    IDS_ERR_RUN_UPDATE      "A execução de uma instalação actualizada falhou."
+    IDS_ACTION_CHECK_UPDATE "A verificar um software actualizado a partir do servidor..."
+    IDS_ERR_OUTOFMEM        "Sem memória"
+    IDS_MSI_DATABASE        "ndas.msi"
+    IDS_EXE_FILES           "Ficheiros executáveis"
+    IDS_ACTION_UPGRADE_MSI  "A actualização o instalador do Windows..."
+    IDS_ACTION_START_MSI    "A iniciar o instalador do Windows..."
+    IDS_NOUPDATE_FMT        "A instalação não conseguiu encontrar o ficheiro '%1!s!'."
+    IDS_INVALID_PATH_FMT    "O caminho '%1' é inválido."
+    IDS_INCORRECT_UPDATE_FMT "O pacote de actualização fornecido '%1' é inválido."
+    IDS_FAILED_TO_UPGRADE_MSI	"A instalação não conseguiu actualizar o instalador do Windows."
+    IDS_ACTION_CHECK_MSI	"A verificar o instalador do Windows..."
+    IDS_ERR_CACHING_TO_SYSTEM_FMT	"A cópia para a memória intermédia do ficheiro MSI para '%1' falhou.\r\nCertifique-se que tem autorização para copiar ficheiros para esse directório."
+    IDS_ACTION_CACHE_MSI    "A copiar para a memória intermédia do ficheiro MSI..."
+    IDS_ERR_CACHE_MSI_FAILED	"A cópia para a memória intermédia do ficheiro MSI falhou."
+	IDS_ERR_REQUIRES_WINDOWS2000	"Este pacote de instalação pode ser instalado no Windows 2000 ou versão superior.\r\nExecute outro pacote de instalação para o seu sistema operativo."
+	IDS_ERR_REQUIRES_ADMIN_PRIV 	"Este pacote de instalação necessita de privilégios administrativos no seu sistema\r\nInicie a sessão com uma conta administrativa e execute novamente."
+END
+
+
+#endif    // APSTUDIO_INVOKED

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+<?ifdef Win64Build?>
+<?define ProductName="$(loc.ProductName)$(var.ProductNameSuffix)$(loc.ProductName64Suffix)"?>
+<?else?>
+<?define ProductName="$(loc.ProductName)$(var.ProductNameSuffix)"?>
+<?endif?>
+  <Product Id="$(var.TargetProductCode)"
+		   UpgradeCode="$(var.TargetUpgradeCode)"
+		   Name="$(var.ProductName)"
+		   Version="$(var.TargetVersion)" 
+		   Manufacturer="$(loc.Manufacturer)" 
+		   Language="$(var.TargetLanguage)"
+		   Codepage="$(var.TargetCodepage)">
+
+	<Package Id="????????-????-????-????-????????????" 
+			 Compressed="$(var.CompressedPackage)"
+			 Keywords="$(loc.SIS_KEYWORDS)" 
+			 Description="$(loc.PackageDescription)$(var.ProductNameSuffix)"
+			 Comments="$(loc.SIS_COMMENTS)" 
+			 Manufacturer="$(loc.SIS_MANUFACTURER)" 
+			 InstallerVersion="200" 
+			 Platforms="$(var.SISPlatforms)"
+			 Languages="$(var.TargetLanguage)" 
+			 SummaryCodepage="$(var.SISCodepage)" 
+             ShortNames="$(var.ShortNames)"/>
+
+    <!-- Prevent installation on x64 systems. x64 flag will be enabled later -->
+	<?ifndef Win64Build?>
+    <Condition Message="$(loc.COND_X64_IS_NOT_SUPPORTED)">Not VersionNT64</Condition>
+	<?endif?>
+    <Condition Message="$(loc.COND_REQUIRE_WIN2000)">VersionNT &gt;= 500</Condition>
+	<Condition Message="$(loc.COND_NOT_PRIVILEGED)">Privileged</Condition>
+	<!-- prevent the use of Language Neutral version of the package -->
+	<Condition 
+	   Message="This is a Windows Installer Database for multiple languages and should be used with a language transform. Please run 'setup.exe' or apply the language transform.">
+	  ProductLanguage &lt;&gt; 0
+	</Condition>
+
+	<Upgrade Id="E86E86BB-051E-4F19-B111-0E5D15E7CDE4">
+	  <UpgradeVersion Maximum="$(var.TargetVersion)" Property="NDAS_UPGRADE" 
+					  MigrateFeatures="yes" IncludeMinimum="yes" />
+	  <UpgradeVersion Minimum="$(var.TargetVersion)" Property="NDAS_DOWNGRADE"
+					  MigrateFeatures="yes" OnlyDetect="yes" />
+	  <Property Id="NDAS_UPGRADE" Secure="yes" />
+	  <Property Id="NDAS_DOWNGRADE" Secure="yes" />
+	</Upgrade>
+
+	<Media Id="1" DiskPrompt="1" EmbedCab="yes" Cabinet="Data1.cab" VolumeLabel="DISK1" />
+
+	<FragmentRef Id="UI" />
+    <FragmentRef Id="Error" />
+    <FragmentRef Id="ErrorEx" />
+
+    <!-- Windows Installer Built-in Properties -->
+	<Property Id="ALLUSERS">1</Property>
+	<Property Id="DiskPrompt">1</Property>
+	<Property Id="ProductID">none</Property>
+	<Property Id="NOCOMPANYNAME">1</Property>
+	<Property Id="NOUSERNAME">1</Property>
+	<Property Id="INSTALLLEVEL">100</Property>
+
+    <!-- APR Properties -->
+	<Property Id="ARPURLUPDATEINFO">$(loc.ARPURLUPDATEINFO)</Property>
+	<Property Id="ARPHELPLINK">$(loc.ARPHELPLINK)</Property>
+	<!-- <Property Id="ARPNOMODIFY"><![CDATA[1]]></Property> -->
+	<!-- <Property Id="ARPNOREPAIR"><![CDATA[1]]></Property> -->
+	<Property Id="ARPURLINFOABOUT">$(loc.ARPURLINFOABOUT)</Property>
+	<Property Id="ARPPRODUCTICON">$(var.iconid.setup)</Property>
+	<Property Id="ARPCONTACT">$(loc.ARPCONTACT)</Property>
+	<Property Id="ARPCOMMENTS">$(loc.ARPCOMMENTS)</Property>
+
+    <!-- Custom Properties -->
+	<Property Id="RebootYesNo">Yes</Property>
+	<Property Id="DialogCaption">$(loc.DialogCaption)</Property>
+    <?ifndef NdasSetupVersion?>
+    <?define NdasSetupVersion="R2010"?>
+    <?endif?>
+	<?ifdef NdasSetupVersionTag?>
+	<Property Id="NdasSetupVersion"><![CDATA[$(var.NdasSetupVersion)$(var.NdasSetupVersionTag)]]></Property>
+	<?else?>
+	<Property Id="NdasSetupVersion"><![CDATA[$(var.NdasSetupVersion)]]></Property>
+	<?endif?>
+	<Property Id="ApplicationUsers"><![CDATA[AllUsers]]></Property>
+	<Property Id="AxShowNoticeOnReadyToInstall"><![CDATA[1]]></Property>
+	<Property Id="AgreeToLicense">No</Property>
+	<Property Id="Display_IsBitmapDlg"><![CDATA[1]]></Property>
+	<Property Id="InstallChoice">AR</Property>
+	<Property Id="SetupType">Typical</Property>
+	<!-- <Property Id="PIDTemplate"><![CDATA[12345<###-%%%%%%%>@@@@@]]></Property> -->
+	<Property Id="ProgressType0"><![CDATA[install]]></Property>
+	<Property Id="ProgressType1"><![CDATA[Installing]]></Property>
+	<Property Id="ProgressType2"><![CDATA[installed]]></Property>
+	<Property Id="ProgressType3"><![CDATA[installs]]></Property>
+	<Property Id="DisplayNameMinimal"><![CDATA[Minimal]]></Property>
+	<Property Id="DisplayNameTypical"><![CDATA[Typical]]></Property>
+	<Property Id="DisplayNameCustom"><![CDATA[Custom]]></Property>
+
+	<Property Id="ReinstallModeText"><![CDATA[aums]]></Property>
+
+	<Property Id="_IsSetupTypeMin"><![CDATA[Typical]]></Property>
+	<Property Id="_IsMaintenance"><![CDATA[Change]]></Property>
+
+	<Property Id="NDAS_SAFE_UPGRADE" Secure="yes" />
+
+	<?ifdef NdasSetupFlags_NOLFSFILT?>
+	<Property Id="NDASMSM_NO_LFSFILT" Value="1" />
+	<?endif?>
+	<?ifdef NdasSetupFlags_ARFLAGS?>
+	<Property Id="NDASMSM_AR_SCOPENAME" Value="$(var.NdasSetupFlags_ARFLAGS)" />
+	<?endif?>
+	<?ifdef NdasSetupFlags_ECKEYFILE?>
+	<Property Id="NDASMSM_EC_KEYFILE" Value="$(var.NdasSetupFlags_ECKEYFILE)" />
+	<?endif?>
+	<?ifdef NdasSetupReleaseTag?>
+	<Property Id="ProductReleaseTag" Value="$(var.NdasSetupReleaseTag)" />
+	<?endif?>
+
+	<!-- Star-Force Check Routine -->
+	<FragmentRef Id="StarForceCheck" />
+
+	<FragmentRef Id="Components" />
+	<FragmentRef Id="Features" />
+	<FragmentRef Id="directories" />
+	<FragmentRef Id="icons" />
+	<FragmentRef Id="binaries" />
+
+	<FeatureRef Id="MainFeature" />
+
+	<AdvertiseExecuteSequence>
+	  <!-- Nothing special in Advertise Execute Sequence -->
+	</AdvertiseExecuteSequence>
+
+    <AdminExecuteSequence>
+	  <!-- Nothing special in Admin Execute Sequence -->
+	</AdminExecuteSequence>
+
+	<InstallUISequence>
+	<?ifdef ExternalEula?>
+	  <Custom Action="CA_READ_AND_SET_EULA" Before="InstallWelcome">Not Installed And (Not PATCH Or IS_MAJOR_UPGRADE)</Custom>
+	<?endif?>
+	</InstallUISequence>
+
+	<InstallExecuteSequence>
+	  <LaunchConditions After="AppSearch"><![CDATA[Not Installed]]></LaunchConditions>
+	  <RemoveExistingProducts After="InstallValidate" />
+	  <Custom Action="CA_STOP_DOWNGRADE" After="FindRelatedProducts">NDAS_DOWNGRADE</Custom>
+      <Custom Action="CA_STOP_NDASMGMT" Before="InstallValidate">$ndasmgmt.exe=2</Custom>
+      <Custom Action="CA_SET_ARPINSTALLLOCATION" After="CostFinalize" />
+      <AllocateRegistrySpace />
+	</InstallExecuteSequence>
+
+	<!-- Merge Modules -->
+	<DirectoryRef Id="INSTALLDIR">
+	  <Merge Id="NdasSysComp" DiskId="1" Language="0" src="$(var.NdasMergeModulePath)\$(var.NdasScMsm)">
+		<ConfigurationData Name="DIR_RETARGET_NDAS" Value="NdasAppFolder" />
+		<ConfigurationData Name="DIR_RETARGET_NDAS_DRIVERS" Value="NdasDriverFolder" />
+		<ConfigurationData Name="DIR_RENAME_NDAS_DRIVERS" Value="." />
+	  </Merge>
+	</DirectoryRef>
+    <DirectoryRef Id="TARGETDIR">
+	  <?ifdef Win64Build?>
+	  <!-- Win64 does not require MSVCP60 and MSVCRT merge modules -->
+	  <?else?>
+	  <Merge Id="MSVCP60" DiskId="1" Language="1033" src="$(var.MergeModulePath)\MSVCP60.MSM" />
+	  <Merge Id="MSVCRT" DiskId="1" Language="1033" src="$(var.MergeModulePath)\MSVCRT.MSM" />
+	  <?endif?>
+      <Merge Id="NdasSysCompUI" DiskId="1" Language="$(var.TargetLanguage)" src="$(var.NdasMergeModulePath)\$(var.NdasScuiMsm)" />
+    </DirectoryRef>
+
+    <!-- Merge Module References empty tables -->
+    <!-- EnsureTable entries are required to prevent ICE03 -->
+    <EnsureTable Id="Extension"/>
+    <EnsureTable Id="Class"/>
+    <EnsureTable Id="MIME"/>
+
+    <!-- Custom Actions -->
+    <CustomAction Id="CA_STOP_DOWNGRADE" Error="25900" />
+    <CustomAction Id="CA_SET_ARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />
+    <CustomAction Id="CA_STOP_NDASMGMT" Return="check" BinaryKey="NDASMSIU.DLL" DllEntry="NdasMsiStopNdasmgmt" />
+
+    <!-- Binary Table -->
+    <Binary Id="NDASMSIU.DLL" src="$(var.cadir)\NDASMSIU.DLL" />
+
+    <!-- EULA Custom Action -->
+    <?ifdef ExternalEula?>
+    <Property Id="EulaFileName">$(var.EULAFile)</Property>
+    <Property Id="EulaFallbackFileName">eula_en-US.rtf</Property>
+    <Property Id="EulaFallbackFileName2">eula.rtf</Property>
+    <!-- ReplaceEula uses properties: EulaFileName, EulaFallbackFileName, EulaFallbackFileName2
+         to read the EULA from files. Paths are relative to [SourceDir] -->
+    <CustomAction Id="CA_READ_AND_SET_EULA" Return="ignore" BinaryKey="EULACA.DLL" DllEntry="ReplaceEula" />
+    <Binary Id="EULACA.DLL" src="$(var.cadir)\EULACA.DLL" />
+    <?endif?>
+
+
+  </Product>
+</Wix>

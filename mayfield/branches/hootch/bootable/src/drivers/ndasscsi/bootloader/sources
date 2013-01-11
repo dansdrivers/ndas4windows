@@ -1,0 +1,35 @@
+!INCLUDE ..\minisrcs.inc
+
+TARGETNAME=ntbootdd
+TARGETTYPE=MINIPORT
+TARGETPATH=obj
+
+
+BUILD_PRODUCES=ntbootdd
+BUILD_CONSUMES=libntkrnl libndasbootloader libndaskbootloader liblpxtdi libscrc32 libhash libaes
+
+#MULTIBOOT=multiboot
+
+C_DEFINES = -D__NDASBOOT__ $(C_DEFINES)
+C_DEFINES = -D__ENABLE_LOADER__ $(C_DEFINES)
+!IFDEF MULTIBOOT
+C_DEFINES = -D__DIVIDED_MULTI_BOOT__ $(C_DEFINES)
+!ENDIF
+
+C_DEFINES = -D__REDUCED_REQUEST_SIZE_TO_NDAS_DEVICE_PATCH__ $(C_DEFINES)
+
+SOURCES_USED=..\minisrcs.inc
+SOURCES=$(SOURCES)
+
+TARGETLIBS=$(TARGETLIBS) \
+    $(DDK_LIB_PATH)\scsiport.lib \
+    $(DDK_LIB_PATH)\scsiwmi.lib \
+	$(DDK_LIB_PATH)\ntstrsafe.lib \
+	$(NDAS_LIB_PATH)\libhash.lib \
+    $(NDAS_LIB_PATH)\libaes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+
+TARGETLIBS=$(TARGETLIBS) \
+    $(NDAS_DRIVER_LIB_PATH)\libntkrnl.lib \
+	$(NDAS_DRIVER_LIB_PATH)\libndasbootloader.lib \
+    $(NDAS_DRIVER_LIB_PATH)\libndaskbootloader.lib

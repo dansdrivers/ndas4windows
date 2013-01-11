@@ -1,0 +1,49 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+typedef enum _AUTORUN_DRIVE_TYPE {
+	AutorunUnknownTypes = 0x1,
+	AutorunRemovableDrive = 0x4,
+	AutorunFixedDrive = 0x8,
+	AutorunNetworkDrive = 0x10,
+	AutorunCdromDrive = 0x20,
+	AutorunRamDrive = 0x40,
+	AutorunUnknownTypes2 = 0x80,
+	AutorunAllTypes = 0xFF
+} AUTORUN_DRIVE_TYPE;
+
+[
+	object, 
+	uuid(F36D0A58-3D84-4bc1-9A18-28CAAD5A7707)
+]
+interface IAutoPlayConfig : IUnknown
+{
+	HRESULT SetNoDriveTypeAutoRun(
+		[in] ULONG_PTR RootKey,
+		[in] DWORD Mask,
+		[in] DWORD Value);
+
+	HRESULT GetNoDriveTypeAutoRun(
+		[in] ULONG_PTR RootKey,
+		[out, retval] DWORD* Value);
+
+}
+
+[
+	uuid(199A5D6E-B2EF-4FCD-935E-BC66D2CA813B), 
+	version(1.0), 
+	helpstring("AutoPlayConfig Type Library"),
+] 
+library AutoPlayConfigLib
+{
+	importlib("stdole32.tlb");
+
+	[
+		uuid(8EFCA4CA-B6CD-43b7-904E-2D486B99E356),
+		helpstring("AutoPlayConfig Component Class")
+	] 
+	coclass CAutoPlayConfig
+	{
+		[default] interface IAutoPlayConfig;
+	}; //end coclass def
+}

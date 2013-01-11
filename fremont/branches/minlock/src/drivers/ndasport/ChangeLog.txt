@@ -1,0 +1,34 @@
+August 3, 2006 patria
+
+(CHG) Changed libxtdi.lib to libxtdi_wpp.lib
+(CHG) Changed RtlStringCbXXX to RtlStringCchXXX
+(CHG) Removed most of global data into DriverExtension
+
+June 29, 2006 patria
+
+(CHG) WPP trace stuffs are moved to trace.h
+(ADD) INF template and cdf support
+(ADD) Comments on IOCTL
+(ADD) IDE SMART Support
+
+Applications:
+
+* S.M.A.R.T. Monitoring Tools (GPL) 
+  http://sourceforge.net/projects/smartmontools
+
+* S.M.A.R.T. Explorer (Freeware)
+  http://adenix.net/downloads.php#SmartExplorer
+  
+* HDDHealth (Freeware)
+  http://www.panterasoft.com
+  -> Some disks are not detected. It's not our fault, though.
+  
+* HDD Thermometer (Freeware)
+  http://www.rsdsoft.com/hdd-thermometer/
+
+* ActiveSMART (Shareware)
+  http://www.ariolic.com/activesmart/
+  
+* What else?
+
+(ADD) ChangeLog (only for ndasport)

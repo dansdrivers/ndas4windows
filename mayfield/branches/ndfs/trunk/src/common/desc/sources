@@ -1,0 +1,15 @@
+TARGETNAME=libdesc
+TARGETTYPE=DRIVER_LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=libdesc
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+# to publish headers
+#NTTARGETFILE1=$(NDAS_INC_PATH)\desc.h $(NDAS_INC_PATH)\rsaeuro.h
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_DRIVER_LIB_PATH)\$(TARGETNAME).lib}
+
+SOURCES= desc.c r_stdlib.c

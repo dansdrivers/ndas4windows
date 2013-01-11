@@ -1,0 +1,15 @@
+DIRS=\
+	ndaschangevid		\
+	ndasseteep			\
+	
+OPTIONAL_DIRS =			\
+	ndarcmd				\
+	ndasddus			\
+	ndasenc				\
+#	frhed				\
+	ndasidt				\
+	ndasoemcode			\
+	ndas4routersetup	\
+	ndasstc				\
+
+

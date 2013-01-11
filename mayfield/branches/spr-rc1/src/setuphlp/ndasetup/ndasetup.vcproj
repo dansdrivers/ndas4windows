@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ndasetup"
+	ProjectGUID="{E89F410F-D0C8-4E2E-8311-9C755C6427D9}"
+	RootNamespace=""
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K chk . -e"
+				ReBuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K chk . -ceZ"
+				CleanCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K chk . -c0"
+				Output="objchk_w2k_x86\i386\ndasetup.exe"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K fre . -e"
+				ReBuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K fre . -ceZ"
+				CleanCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K fre . -c0"
+				Output="objfre_w2k_x86\i386\ndasetup.exe"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\downloadbsc.cpp">
+			</File>
+			<File
+				RelativePath=".\msiproc.cpp">
+			</File>
+			<File
+				RelativePath=".\ndasetup.cpp">
+			</File>
+			<File
+				RelativePath=".\setupdlg.cpp">
+			</File>
+			<File
+				RelativePath=".\setuptask.cpp">
+			</File>
+			<File
+				RelativePath=".\stdafx.cpp">
+			</File>
+			<File
+				RelativePath=".\winutil.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\downloadbsc.h">
+			</File>
+			<File
+				RelativePath=".\menubtn.h">
+			</File>
+			<File
+				RelativePath=".\msiproc.h">
+			</File>
+			<File
+				RelativePath=".\ndasetup.h">
+			</File>
+			<File
+				RelativePath=".\resource.h">
+			</File>
+			<File
+				RelativePath=".\setupdlg.h">
+			</File>
+			<File
+				RelativePath=".\setuptask.h">
+			</File>
+			<File
+				RelativePath=".\setupui.h">
+			</File>
+			<File
+				RelativePath=".\stdafx.h">
+			</File>
+			<File
+				RelativePath=".\winutil.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\ndasetup.rc">
+			</File>
+			<File
+				RelativePath=".\setup.ico">
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\makefile">
+		</File>
+		<File
+			RelativePath=".\sources">
+		</File>
+		<File
+			RelativePath=".\xmatl.mk">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

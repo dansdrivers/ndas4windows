@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 14 February 2006), see www.w3.org" />
+
+  <title>NDAS Software OEM Localization and Branding Kit</title>
+  <style type="text/css">
+/*<![CDATA[*/
+ body { font-family: Segoe UI, Verdana, Arial; }
+ td { padding: 5px; }
+ h1 { font-size: 150%; border-bottom: 1px solid navy; padding: 8px; }
+ h2 { font-size: 120%; }
+ h3 { font-size: 110%; }
+ div.warning { font-size: 80%; margin: 20px; padding: 5px; border: 1px solid gray;
+background-color: #ffffe1; color: #ee5544; }	
+div.warning ul { margin-top: 0px; }
+hr { border: 2px; }
+  /*]]>*/
+  </style>
+</head>
+
+<body>
+  <h1>NDAS Software OEM Localization and Branding Kit</h1>
+
+  <p>Revision 1.1 July 2006 Chesong Lee &lt;<a href=
+  "mailto:cslee@ximeta.com">cslee@ximeta.com</a>&gt;</p>
+
+  <h2>Overview</h2>
+
+  <p>NDAS Software OEM Localization and Branding Kit (LBK) provides OEM
+  partners to localize and/or to change messages or text in the NDAS
+  software.</p>
+
+  <h2>Prerequisites</h2>
+
+  <p>LBK requires Microsoft .NET Framework 2.0 to build the customized
+  binary files for testing purpose. If your system does not have
+  Microsoft .NET Framework Runtime files, you can download the package
+  from the Microsoft Web Site:</p>
+
+  <ul>
+    <li><a href=
+    "http://www.microsoft.com/downloads/details.aspx?FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5&amp;displaylang=en">
+    http://www.microsoft.com/downloads/details.aspx?FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5&amp;displaylang=en</a></li>
+  </ul>
+
+  <h2>Directories and Files</h2>
+
+  <div class="warning">
+  If the path of the project directory contains
+  spaces, build.cmd will not work. Make sure to place files into the
+  directory without spaces in its path.
+
+  <ul>
+    <li>Won't work: <code>c:\documents and settings\user\my
+    documents\ndas_3.11.1327_oem_lbk</code></li>
+
+    <li>Okay: <code>C:\ndas_3.11.1327_oem_lbk</code></li>
+  </ul>
+  </div>
+
+  <p>Root directory of the kit has directories:</p>
+
+  <table>
+    <tr>
+      <td><code>base</code></td>
+
+      <td>Base Files including binary files, icons, bitmaps, images,
+      translation base xml files.</td>
+    </tr>
+
+    <tr>
+      <td><code><i>[oem-name]</i></code></td>
+
+      <td>Customized data and output files</td>
+    </tr>
+
+    <tr>
+      <td><code>tools</code></td>
+
+      <td>Executable files to build customized binary files</td>
+    </tr>
+  </table>
+
+  <p><code>[oem-name]</code> directory has the following files:</p>
+
+  <table>
+    <tr>
+      <td><code>loc.proj</code></td>
+
+      <td>MSBuild Project file. Used for creating customized binary
+      files</td>
+    </tr>
+
+    <tr>
+      <td><code>loc_<i>enu</i>_ndasbind.xml</code></td>
+
+      <td>NDAS Bind Management Translation File (English)</td>
+    </tr>
+
+    <tr>
+      <td><code>loc_<i>enu</i>_ndasmgmt.xml</code></td>
+
+      <td>NDAS Device Management Translation File (English)</td>
+    </tr>
+
+    <tr>
+      <td><code>loc_<i>enu</i>_ndasmsg.xml</code></td>
+
+      <td>NDAS Device Management Translation File (English)</td>
+    </tr>
+  </table>
+
+  <p><code>[oem-name]\resdata</code> is the directory for customized
+  icon files and bitmap files. You may see branded headers or icon
+  files in this directory. All of the customizable base files are
+  located in <code>base\resdata</code>. Take a look at files in
+  <code>base\resdata</code>. If you see some files that you need for
+  customization, copy them into <code>[oem-name]\resdata</code> and
+  modify them.</p>
+
+  <h2>Steps</h2>
+
+  <ol>
+    <li>
+      <h3>Text and Message Changes</h3>
+
+      <p>Open a translation file (e.g.
+      <code><i>[oem-name]</i>\loc_enu_ndasmgmt.xml</code>) with
+      Localization Editor (<code>tools\locedit.exe</code>), edit
+      strings and save it.</p>
+    </li>
+
+    <li>
+      <h3>Binary resource modification</h3>
+
+      <p>Replace the existing icons with customized icons in
+      <code>[oem-name]\resdata</code> directory.</p>
+    </li>
+
+    <li>
+      <h3>Build the binaries</h3>
+
+      <p>Run <code>[oem-name]\build.cmd</code> to build the customized
+      binary files. It is recommended to run this command from cmd.exe
+      to see warnings or errors which you may encounter. After the
+      successful build, you will see files in
+      <code>[oem-name]\branded\i386</code>, which are changed from the
+      base binary files, applying translations and modified
+      resources.</p>
+    </li>
+
+    <li>
+      <h3>See the result</h3>
+
+      <p>You may run <code>ndasmgmt.exe</code> or
+      <code>ndasbind.exe</code> from the output directory, if you have
+      the same version of NDAS Software installed in your system.
+      Otherwise, install the NDAS Software in another system and copy
+      these output files into the system. If you see more changes are
+      required, you may modify further and re-run the
+      <code>build.cmd</code>.</p>
+    </li>
+
+    <li>
+      <h3>Submit changes</h3>
+
+      <p>After editing and reviewing your changes, send us the final
+      output of translations and resource data files, which are
+      <code>[oem-name]\*.xml</code> and
+      <code>[oem-name]\resdata\*.*</code>. And we will build your
+      software and send the final setup package.</p>
+    </li>
+  </ol>
+  
+  <hr/>
+
+  <p>Copyright (C) 2005-2006 XIMETA, Inc. All rights reserved</p>
+</body>
+</html>

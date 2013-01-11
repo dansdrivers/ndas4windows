@@ -1,0 +1,181 @@
+
+NetDisk Build Procedure
+
+Revision:
+
+2004-08-24 patria
+	   
+	   Now the whole project is made from build.exe (in DDK).
+	   And the prerequisites are changed.
+	   
+2004-05-14 patria
+
+	   As of 3.03.1020.0, 
+	   InstallShield is upgraded to the version 9.0 SP1.
+	   Some pre-requisites are changed.
+
+2004-03-08 hootch
+
+	   WINHDR.zip is added to the prerequisite components.
+
+2003	   patria
+
+	   Initial documents
+
+=====================================================================
+PREREQUISITE
+=====================================================================
+
+You need the following component to build the product.
+
+ * Microsoft Platform SDK 2003 February or later
+  
+  - Core SDK
+
+  - Windows Installer SDK    * required for NDINST.DLL
+  - Internet Development SDK (Version 6.0) * required for HTMLDialog.cpp
+  - You should set "C:\Program Files\Microsoft SDK\include"
+
+ * Microsoft Windows Server 2003 DDK (3790 or later)
+
+ * InstallShield 9 Stand-alone builder and components
+
+     * InstallShield Stand-alone Build SP1
+
+        - InstallShield DevStudio 9 Standalone Build.msi
+	  (from \\liah\public\devel\InstallShield )
+
+     * InstallShield Eastern and Western Language Pack Redistributable 
+       for Stand-alone Build
+
+        - ISSA9SP1_LANGPACK_REDIST.zip 
+	  ( from \\liah\public\devel\InstallShield )
+
+        - Unzip this file to 
+	  "C:\Program Files\InstallShield\StandaloneBuild9SP1\Redist" 
+    
+     * Supporting MSI Merge Modules
+
+        - MFC60MergeModules.zip 
+	  ( from \\liah\public\devel\InstallShield )
+        - Unzip this file to 
+	  "C:\Program Files\Common Files\Merge Modules" 
+          if there are no files in this directory. 
+	  You may have to create this directory yourself.
+    
+     -- If you are to work with InstallShield Project, you need the following components:
+
+     * InstallShield DevStuio 9.0 with Service Pack 1
+     
+     * InstallShield 9.0 Eastern Language Pack 
+       (Required only for builds including Korean and Japanese languages)
+     
+     * InstallShield 9.0 Western Language Pack
+       (Required only for International Build)
+
+ * You should download winhdr.zip (currently \\liah\public\devel\windhr.zip) and extract to c:\winhdr
+   winhdr.zip contains source files of w2k, wxp to build software
+
+Preconfiguration:
+
+ * Environmental Variables
+
+   - you should set the following variable 
+
+      WNETBASE : C:\WINDDK\3790 
+
+   - you can set the following varibles
+      if the paths are other than the default values
+  
+	PSDK_INC_PATH
+	PSDK_LIB_PATH
+
+---------------------------------------------------------------------
+AT BUILD MACHINE ONLY
+---------------------------------------------------------------------
+
+ PRODUCTVER.TXT contains the version of the software.
+ This version file can be used to synchronize with file following files
+ using "setver.cmd":
+
+ - \lanscsisystemv2\src\inc\prodver.h
+ - \installer\NetDiskSetup.ism
+ - \oem\<vendor>\installer\NetDiskSetup.ism
+
+ * From InstallShield 9.0, we no longer maintain separate isv and ism file.
+   We only use XML-format ISM file.
+   
+---------------------------------------------------------------------
+
+=====================================================================
+RETAIL BUILD
+=====================================================================
+
+1. Compile the source
+  
+  From cmd.exe, run the buildsrc.cmd for entire source tree
+
+  	run \buildsrc.cmd retail
+
+2. InstallShield Setup
+
+  2.1. Synchronize the files from the source tree
+
+	run \installer\sync2src.cmd
+
+
+2.3. Build individual releases
+
+  2.3.1 US Release
+
+	run \installer\buildsetup_us.cmd
+
+  2.3.2 International Release (European)
+
+	run \installer\buildsetup_intl.cmd
+
+  2.3.3 Japan Release
+
+	run \installer\buildsetup_japan.cmd
+
+
+
+3. Example
+
+ c:\workspace> buildsrc retail
+ ...(working)...
+ ...(working)... it takes about 3 minutes
+ ...(working)...
+
+ c:\workspace> cd installer
+
+ c:\workspace\installer> sync2src.cmd
+ ...(working)...
+
+ c:\workspace\installer> buildsetup_us.cmd
+ ...(working)...
+
+ Now you get the distribution files at "c:\workspace\dist\US\*"
+
+=====================================================================
+- OEM BUILD
+=====================================================================
+
+1. Compile the main source
+  
+  From cmd.exe, run the buildsrc.cmd for entire source tree.
+  This should be done from the the root \ (not at an \oem\<vendor> directory)
+
+  	run \buildsrc.cmd <vendor>
+
+2. InstallShield Setup
+
+  3.1. Synchronize the files from the source tree
+
+	cd \oem\<vendor>\installer
+	run sync2src.cmd
+
+  3.2. Build individual releases
+
+	run buildsetup.cmd
+	

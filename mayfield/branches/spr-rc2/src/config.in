@@ -1,0 +1,41 @@
+#
+# To define your own variables, copy this file to config.inc
+# and edit the following values:
+#
+# Settings can be set by machine if you define
+# Environment variables.
+#
+# Only the path with no spaces will be accepted.
+# Use shrtpath.exe in bin to make a short path 
+# for setting such path.
+#
+# ----------------------------------------------------------
+# Platform SDK Path
+# ----------------------------------------------------------
+# Typically it is "C:\Program Files\Microsoft SDK".
+# But it should be translated into short path.
+# ----------------------------------------------------------
+#PSDK_INC_PATH=c:\progra~1\mifd68~1\include
+#PSDK_LIB_PATH=c:\progra~1\mifd68~1\lib
+
+# ----------------------------------------------------------
+# Browser Info Creation Flags
+# ----------------------------------------------------------
+#BROWSER_INFO=1
+#BROWSERFILE=$(TARGETNAME).bsc -n
+
+# ----------------------------------------------------------
+# Vendor path
+# ----------------------------------------------------------
+#XM_VENDOR_PATH=d:\development\vendor
+
+# ----------------------------------------------------------
+# Verbose Build Message
+# ----------------------------------------------------------
+#XM_BUILD_VERBOSE=1
+
+# ----------------------------------------------------------
+# Windows OS Private Headers
+# ----------------------------------------------------------
+#XM_NTOS_INC_PATH=c:\winhdr
+

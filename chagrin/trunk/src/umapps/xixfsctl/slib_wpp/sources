@@ -1,0 +1,8 @@
+TARGETNAME=libxixfsctl_wpp
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+BUILD_PRODUCES=libxixfsctl_wpp
+
+ENABLE_WPP=1
+!include ..\sources.inc

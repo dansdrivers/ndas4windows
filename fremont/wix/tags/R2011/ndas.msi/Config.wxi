@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Include>
+
+<?include icon.wxi?>
+<?include ../CommonConfig.wxi?>
+
+<?ifndef TargetProductCode?>
+<?define TargetProductCode="$(var.NdasMsiProductCode)"?>
+<?endif?>
+
+<?ifndef TargetUpgradeCode?>
+<?define TargetUpgradeCode="$(var.NdasMsiUpgradeCode)"?>
+<?endif?>
+
+<?ifndef TargetLanguageName?>
+<?define TargetLanguageName="English"?>
+<?endif?>
+
+<?ifndef TargetLanguage?>
+<?define TargetLanguage="1033"?>
+<?endif?>
+
+<?ifndef TargetCodepage?>
+<?define TargetCodepage="1252"?>
+<?endif?>
+
+<?ifndef SISPlatforms?>
+<?ifdef Win64Build?>
+<?define SISPlatforms="x64"?>
+<?else?>
+<?define SISPlatforms="Intel"?>
+<?endif?>
+<?endif?>
+
+<?ifndef TargetVersion?>
+<?define TargetVersion="$(var.NdasMsiVersion)"?>
+<?endif?>
+
+<?ifndef TargetDisplayVersion?>
+<?define TargetDisplayVersion="$(var.NdasMsiDisplayVersion)"?>
+<?endif?>
+
+<?ifndef ProductNameSuffix?>
+<?ifdef NdasMsiProductNameTag?>
+<?define ProductNameSuffix=" $(var.TargetDisplayVersion) $(var.NdasMsiProductNameTag)"?>
+<?else?>
+<?define ProductNameSuffix=" $(var.TargetDisplayVersion)"?>
+<?endif?>
+<?endif?>
+
+<?ifndef SISCodepage?>
+<?define SISCodepage="$(var.TargetCodepage)"?>
+<?endif?>
+
+<?ifndef SISLanguages?>
+<?define SISLanguages="0"?>
+<?endif?>
+
+<!-- <?ifndef SISPlatforms?> -->
+<!-- <?define SISPlatforms="Intel"?> -->
+<!-- <?endif?> -->
+
+<?ifndef SourceDir?>
+<?ifdef Win64Build?>
+<?define SourceDir="..\SourceDir\amd64\"?>
+<?else?>
+<?define SourceDir="..\SourceDir\i386\"?>
+<?endif?>
+<?endif?>
+
+<?ifndef cadir?>
+<?ifdef Win64Build?>
+<?define cadir="..\supplements\ca\amd64\"?>
+<?else?>
+<?define cadir="..\supplements\ca\"?>
+<?endif?>
+<?endif?>
+
+<?ifndef CompressedPackage?>
+<?define CompressedPackage="yes"?>
+<?endif?>
+
+<?ifndef ShortNames?>
+<?define ShortNames="no"?>
+<?endif?>
+
+<?ifdef NdasSetupFlags_SysCompOnly?>
+<?define NdasSetupFlags_ExcludeNdasBind?>
+<?define NdasSetupFlags_ExcludeNdasMgmt?>
+<?define NdasSetupFlags_ExcludeNdasCmd?>
+<?define NdasSetupFlags_NoShortcut?>
+<?endif?>
+
+<?ifndef binarydir?>
+<?define binarydir=".\ibd"?>
+<?endif?>
+<?ifndef icondir?>
+<?define icondir=".\ibd"?>
+<?endif?>
+<?ifndef euladir?>
+<?define euladir=".\eula"?>
+<?endif?>
+
+<?ifndef EULAFile ?>
+<?if $(var.SetupLanguage)=0?>
+<?define EULAFile="eula_en-US.rtf"?>
+<?else?>
+<?define EULAFile="eula_$(var.SetupLanguage).rtf"?>
+<?endif?>
+<?endif?>
+  
+</Include>

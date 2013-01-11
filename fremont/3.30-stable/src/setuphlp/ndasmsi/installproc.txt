@@ -1,0 +1,56 @@
+
+Installation Procedure for Device Drivers
+
+============
+Installation
+============
+
+- Find Existing Product Installation
+
+  - If lanscsiminiport active instances are found,
+	- Stop installation and ask the user to disable all drives first.
+	- Halt!
+
+  - If ndasscsi active instances are found,
+    - Stop installation and ask the user to unmount all drives first.
+    - Halt!
+        
+  - If found, perform uninstallation at best!
+
+  - If lanscsihelper is found, 
+	(if pending deletion will continue setup after reboot)
+	- stop lanscsihelper
+	- delete lanscsihelper service
+		
+  - If lanscsiminiport is found,
+	- remove lanscsiminiport device
+	- remove lanscsiminiport service
+	- delete c:\windows\system32\drivers\lanscsiminiport.sys
+	  
+  - If lanscsibus is found,
+	- remove lanscsibus device
+	- remove lanscsibus service
+	- delete c:\windows\system32\drivers\lanscsibus.sys
+
+  - ndasscsi.sys
+  - ndasbus.sys
+  	
+  - If lfsfilt is found
+	- remove lfsfilt service
+	- remove LEGACY_LFSFILT
+	- delete c:\windows\system32\drivers\lfsfilt.sys
+	
+  - If rofilt is found
+	- remove rofilt service
+	- remove LEGACY_ROFILT
+	- delete c:\windows\system32\drivers\rofilt.sys
+	
+  - If lpx found,
+	- remove LPX protocol
+	- remove LPX service
+	- remove LEGACY_LPX
+	- delete c:\windows\system32\drivers\lpx.sys
+	
+  - If reboot required before setup,
+	ask the user to reboot the system to continue.
+	

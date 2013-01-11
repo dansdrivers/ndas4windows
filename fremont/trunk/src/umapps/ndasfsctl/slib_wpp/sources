@@ -1,0 +1,8 @@
+TARGETNAME=libndasfsctl_wpp
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+BUILD_PRODUCES=libndasfsctl_wpp
+
+ENABLE_WPP=1
+!include ..\sources.inc

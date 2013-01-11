@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="lanscsibus"
+	ProjectGUID="{32223A2A-2AE2-47DF-85FD-93DED25FF5E0}"
+	RootNamespace=""
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K chk . -e"
+				ReBuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K chk . -ceZ"
+				CleanCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K chk . -c0"
+				Output="objchk_w2k_x86\i386\LanscsiBus.exe"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K fre . -e"
+				ReBuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K fre . -ceZ"
+				CleanCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K fre . -c0"
+				Output="objfre_w2k_x86\i386\LanscsiBus.exe"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\busenum.c">
+			</File>
+			<File
+				RelativePath=".\buspdo.c">
+			</File>
+			<File
+				RelativePath=".\ndasbus.c">
+			</File>
+			<File
+				RelativePath=".\pnp.c">
+			</File>
+			<File
+				RelativePath=".\power.c">
+			</File>
+			<File
+				RelativePath=".\register.c">
+			</File>
+			<File
+				RelativePath=".\utils.c">
+			</File>
+			<File
+				RelativePath=".\wmi.c">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\busenum.h">
+			</File>
+			<File
+				RelativePath=".\driver.h">
+			</File>
+			<File
+				RelativePath=".\ndasbus.h">
+			</File>
+			<File
+				RelativePath=".\ndasbuspriv.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\busenum.rc">
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\busenum.mof">
+		</File>
+		<File
+			RelativePath=".\makefile">
+		</File>
+		<File
+			RelativePath=".\makefile.inc">
+		</File>
+		<File
+			RelativePath=".\ndasbus.cat">
+		</File>
+		<File
+			RelativePath=".\ndasbus.inf">
+		</File>
+		<File
+			RelativePath=".\sources">
+		</File>
+		<File
+			RelativePath=".\sources.inc">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

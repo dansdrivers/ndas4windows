@@ -1,0 +1,47 @@
+LIBRARY NDMSICA
+
+EXPORTS
+	NDMsiCheckPnpDeviceInstance
+	NDMsiInstallNetComponent
+	NDMsiInstallPnpDevice
+	NDMsiInstallLegacyDriver
+	NDMsiInstallLegacyDriverWithReboot
+	NDMsiPreRemoveNetComponent
+	NDMsiPreRemoveDevice
+	NDMsiPreRemoveDriverService
+	NDMsiRemoveNetComponent
+	NDMsiRemoveDevice
+	NDMsiRemoveDriverService
+	NDMsiQuestion
+	NDMsiSchedulePreboot
+	NDMsiCopyOEMInf
+	NDMsiSetARFlags
+	NDMsiSetECFlags
+	NDMsiRefreshShellIconCache
+	; Not Used
+	NDMsiFindNetComponent
+	NDMsiFindPnpDevice
+	NDMsiFindService
+	NDMsiDeleteOEMInf
+	NDMsiSetMigration
+	NDMsiRemoveDriverSource
+	NDMsiAddDriverSource
+	NDMsiStartServiceOnNoDeferredReboot
+	NDMsiUpdateScheduledReboot
+	NDMsiCleanupSourceDirectory
+	NDMsiSetPrebootScheduled
+	NDMsiCheckMarkedForDeletion
+	NDMsiChangeServiceConfig
+    NcaIncrementProgressBar10
+    NcaIncrementProgressBar
+    NcaMsiClearUpgradeSafeRemoveContext
+    NcaMsiDisableCancelButton
+    NcaMsiEnableCancelButton
+    NcaMsiForceReboot
+    NcaMsiGetUpgradeSafeRemoveProperty
+    NcaMsiInstallExecute
+    NcaMsiSetUpgradeSafeRemoveContext
+    NcaMsiUpdateOrInstallPnpDevice
+    NcaMsiUpdateOrPreinstallPnpDevice
+    NcaResetProgressBar
+    xMsiInstallInf

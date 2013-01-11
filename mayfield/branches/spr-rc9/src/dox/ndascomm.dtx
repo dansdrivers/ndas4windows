@@ -1,0 +1,370 @@
+
+@@Overview
+<B>Purpose</B>
+
+NDAS Communication API (NDASCOMM) enables programmers to
+interact with a NDAS device directly With NDASCOMM,
+programmers can operate not only basic operations such as
+reading or writing, but also advanced operations including
+most parts of the ATA commands such as identifying or setting
+features.
+
+<B>Developer Audience</B>
+
+NDAS API's are designed for use by C/C++ programmers,
+Familiarity with networking, NDAS devices and ATA commands
+(to use make use of advanced features of NDASCOMM) is
+required.
+
+<B>Run-time Requirements</B>
+
+NDAS API requires Windows 2000, Windows XP or Windows Server
+2003 and a system with LPX protocol and Windows Socket 2.
+
+@@!!SYMREF
+
+@@About NDASComm
+<B>NDAS Communication API</B>
+
+NDAS Communication API(NDASComm) provides functions to
+communicate with NDAS Device(s) with LPX protocol over
+Ethernet.
+
+
+
+NDASComm does not only provide basic functions that
+application can send ATA command to the NDAS Device but also
+utility functions to read, write, verify or identify the NDAS
+Unit Device.
+
+
+
+<COLOR Red>This library is provided to support manufacturing
+processes and for diagnostic purpose. Do not redistribute
+this library.</COLOR>
+
+@@NDASComm Architecture
+<TITLE NDAS API Architecture>
+
+Figure 1 describes the architecture of NDAS API.
+
+
+
+<IMAGE ndas_architecture> Figure 1. Architecture of NDAS API.
+
+
+
+NDAS Communication Library translates API calls into NDAS
+device commands and sends them to a NDAS device with LPX
+protocol over Ethernet.
+
+NDAS Heartbeat Listener Library listens a designated
+heartbeat packet from NDAS devices in the network and calls
+the user-supplied callback function with a NDAS device
+information.
+
+@@LPX Protocol
+
+\Short for Lean Packet eXchange Protocol.
+It is defined by XIMETA, Inc. and 
+used to communicate with NDAS device over the Ethernet.
+It is a light-weight and efficient protocol to provide
+high performance data transfer between a NDAS host and a NDAS device.
+
+@@NDAS Device
+
+NDAS (Network Direct Attached Storage) is XIMETA's patented
+technology which enables all digital storage devices (HDD,
+ODD, Memory, Tape Drives) connect into standard Ethernet
+network and all the users or systems in the network directly
+control, use and share those devices.
+
+@@NDAS Device Version
+Up to now, three versions of the NDAS devices are released.
+
+<B>NDAS device 1.0</B>
+
+The NDAS device 1.0 provides following ATA commands:
+
+    * READ(0x20)
+    * WRITE(0x30)
+    * VERIFY(0x40)
+    * IDENTIFY(0xFC)
+    * SET FEATURE(0xEF)
+
+Internally, NDAS device 1.0 does not support direct ATA
+commands, but it translates pre-defined command set into
+actual ATA comands. It is not recommanded to use
+NdasCommIdeCommand function with NDAS device 1.0.
+
+Characteristics of NDAS device 1.0 are as follows:
+
+    * supports ethernet connection up to 100 Mbps.
+    * supports Multiword DMA level 0, 1 and 2.
+    * supports ATA devices.
+    * does not support ATAPI devices.
+
+<B>NDAS Device Ver 1.1</B>
+
+NDAS Device 1.1 supports virtually all ATA commands including
+packet commands (but NDASCOMM dose not supports packet
+command at this time). The NDAS Device 1.1 receives an ATA
+command and send it directly to the NDAS unit device.
+
+Characteristics of NDAS device 1.1 are as follows:
+
+    * supports ethernet connection up to 100 Mbps.
+    * supports Multiword DMA level 0, 1 and 2.
+    * supports ATA devices.
+    * supports ATAPI devices.
+
+
+
+<B>NDAS Device Ver 2.0</B>
+
+NDAS Device 2.0 has a same ATA command set as NDAS device
+1.1.
+
+See the table for differences.
+
+Characteristics of NDAS device 2.0 are as follows:
+
+    * supports ethernet connection up to 1 Gbps.
+    * supports Multiword DMA level 0, 1 and 2.
+    * supports Ultra DMA level 0 to 6.
+    * supports ATA devices.
+    * supports ATAPI devices.
+
+
+
+<B>Differences by the version of the NDAS Device.</B>
+<TABLE>
+\             1.0                  1.1             2.0
+------------  -------------------  --------------  -------------------
+Max Speed     100 MBps             100 MBps        1 GBps
+Unit Device   ATA Device           ATA/ATAPI       ATA/ATAPI Device
+                                    Deivce          
+DMA level     Multiword DMA 0, 1   Multiword DMA   Multiword DMA 0, 1
+               and 2                0, 1 and 2      and 2<P>
+                                                    Ultra DMA 0 to 6
+Command       READ, WRITE,         All ATA         All ATA Commands
+               VERIFY, IDENTIFY,    Commands        
+               SET FEATURE                          
+</TABLE>
+
+@@Lanscsi Protocol
+Lanscsi is a protocol designed to send/recieve
+commands/replies from/to the NDAS Device.
+
+@@Using NDASComm
+The following is a step-by-step guide to getting started with
+NDASCOMM library. It is designed to provide an understanding
+\of basic NDASComm functions and data structures, and how
+they work together.
+
+
+
+<B>Creating a Basic NDASCOMM Application</B>
+
+
+
+To create a basic NDASCOMM application
+
+      1. Create a new empty project.
+      2. Set the build environment to include paths for the
+         headers and libraries.
+      3. Set link options to link against ndascomm.lib.
+      4. Include "ndascomm.h" to use NDASCOMM API.
+      5. Ensure to place ndascomm.dll in an NDASCOMM
+         application's search path.
+
+
+<CODE>
+
+ \#include \<ndascomm.h\>
+
+ int main()
+ {
+   printf("Starting NDAS application\\n");
+   return 0;
+ }
+
+</CODE>
+
+
+<B>Initializing NDASComm</B>
+
+
+
+All NDASComm applications should initialize NDASCOMM library
+first before calling other API functions to ensure that
+NDASComm is supported on the system.
+
+To Initialize NDASComm library
+
+    * Call NdasCommInitialize and check errors
+
+
+<CODE>
+
+ BOOL bResult = NdasCommInitialize();
+ if (!bResult)
+ {
+   printf("Error %d at NdasCommInitialize()\\n", GetLastError());
+   return FALSE;
+ }
+
+</CODE>
+
+
+The NdasCommInitialize function is called to initiate use of
+ndascomm.lib
+
+
+<CODE>
+
+ DWORD dwVersion = NdasCommGetAPIVersion();
+ WORD wMajorVersion = LOWORD(dwVersion);
+ WORD wMinororVersion = HIWORD(dwVersion);
+
+</CODE>
+
+
+The NdasCommGetAPIVersion function is called to retrieve the
+\version of ndascomm.lib
+
+
+
+<B>Creating connection to an NDAS Device</B>
+
+
+
+After initialization, a NDASCOMM_CONNECTION_INFO struct must
+be initialized.
+
+
+<CODE>
+
+ NDASCOMM_CONNECTION_INFO m_ci;
+ ZeroMemory(&m_ci, sizeof(NDASCOMM_CONNECTION_INFO));
+
+ /* address using ansi code ID string */
+ m_ci.address_type = NDASCOMM_CONNECTION_INFO_TYPE_ID_A;
+
+ /* operates active jobs */
+ m_ci.login_type = NDASCOMM_LOGIN_TYPE_NORMAL;
+
+ /* use first unit device */
+ m_ci.UnitNo = 0;
+
+ /* login with write privilage */
+ m_ci.bWriteAccess = TRUE;
+
+ /* use default normal user password */
+ m_ci.ui64OEMCode = NULL;
+
+ /* connect with LPX protcol */
+ m_ci.protocol = IPPROTO_LPXTCP;
+
+ /* set 20 chars of ansi code ID */
+ CopyMemory(m_ci.sDeviceStringId, "ABCDE12345EFGHI67890", 20);
+
+ /* set 5 chars of ansi write key */
+ CopyMemory(m_ci.sDeviceStringKey, "12345", 5);
+
+</CODE>
+
+
+After NDASCOMM_CONNECTION_INFO struct initialized, Connect to
+the NDAS Device using NdasCommConnect.
+
+
+<CODE>
+
+ HNDAS hNDASDevice = NdasCommConnect(&ConnectionInfo);
+
+ if(!hNDASDevice)
+ {
+   printf("Error %d at NdasCommConnect()\\n", GetLastError());
+   return FALSE;
+ }
+
+</CODE>
+
+
+<B>Retrieving informations from an NDAS Device and/or Unit
+Device</B>
+
+
+
+See examples of NdasCommGetDeviceID(),
+NdasCommGetDeviceInfo(), NdasCommGetUnitDeviceInfo()
+
+
+
+<B>Operates basic commands</B>
+
+
+
+See examples of NdasCommBlockDeviceRead(),
+NdasCommBlockDeviceWrite(), NdasCommBlockDeviceVerify(),
+NdasCommSetFeatures(), NdasCommBlockDeviceWriteSafeBuffer()
+
+
+
+<B>Operates advanced commands</B>
+
+
+
+See examples of NdasCommIdeCommand(), NdasCommVendorCommand()
+
+
+
+<B>Disconnecting connection from an NDAS Device</B>
+
+
+
+The NdasCommDisconnect function is called after the use of
+the NDAS Device.
+
+
+<CODE>
+
+ bResult = NdasCommDisconnect(hNDASDevice);
+ if(!bResult)
+ {
+   printf("Error %d at NdasCommDisconnect()\\n", GetLastError());
+   return FALSE;
+ }
+
+</CODE>
+
+@@NDAS Unit Device
+
+
+NDAS unit device (or unit device) is an ATA/ATAPI device
+which is attached to a NDAS device so that a host can access
+to the device via NDAS device.
+
+
+
+The number of maximum unit devices that a NDAS device
+supports can be obtained by NdasCommGetDeviceInfo.
+
+@@NDASComm API
+<TITLE NDAS Communication API>
+
+This is the default topic text for new topics added with the
+Doc-O-Matic editor. You can freely modify the text and
+structure of new text by changing the template topics:
+
+    * Open the Doc-O-Matic project "template.dox" located in
+      your Doc-O-Matic/support directory.
+    * The project contains a list of topics that you can
+      freely modify.
+    * You can even add your own topics and delete existing
+      \ones.
+    * Whatever is in the file "template.dtx" will be used as
+      templates that you can choose from.
+
+

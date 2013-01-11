@@ -1,0 +1,26 @@
+TARGETNAME=efs
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+MSC_WARNING_LEVEL=$(MSC_WARNING_LEVEL) /WX /W3
+
+INCLUDES=$(DRIVERS_INC_PATH);$(DS_INC_PATH);$(DS_INC_PATH)\crypto;$(IFSKIT_INC_PATH)
+
+SOURCES=efs.c   \
+        efs.rc  \
+        create.c \
+        control.c \
+        efsrtl.c \
+        efsrtlsp.c \
+        encrypt.c
+
+DRIVERTYPE=FS
+
+INCLUDES=$(INCLUDES);..
+INCLUDES=$(INCLUDES);..\inc\wxp
+
+AMD64_WARNING_LEVEL=/W3 /Wp64 -wd4296 /WX
+# -Wp64 will not work with ntddk.h for w2k,wxp headers
+386_WARNING_LEVEL=/W3 /WX
+
+MSC_OPTIMIZATION=

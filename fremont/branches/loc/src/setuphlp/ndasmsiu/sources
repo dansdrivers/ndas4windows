@@ -1,0 +1,38 @@
+TARGETNAME=ndasmsiu
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+BUILD_PRODUCES=ndasmsiu
+
+DLLDEF=$(O)\ndasmsiu.def
+UMTYPE=console
+DLLENTRY=_DllMainCRTStartup
+
+C_DEFINES=/DUNICODE /D_UNICODE
+INCLUDES=..\inc;$(NDAS_INC_PATH);$(PSDK_INC_PATH)
+RC_OPTIONS=/i $(NDAS_INC_PATH)
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Ox
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+PRECOMPILED_INCLUDE=precomp.hpp
+
+VC7_SYMBOLS=1
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\msi.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib
+
+SOURCES= \
+	dllmain.cpp \
+    ndasmsiu.cpp \
+    instmsg.cpp \
+	ndasmsiu.rc

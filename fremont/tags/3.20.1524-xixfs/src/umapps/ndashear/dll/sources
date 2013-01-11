@@ -1,0 +1,18 @@
+TARGETNAME=ndashear
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+BUILD_PRODUCES=ndashear
+
+DLLENTRY=_DllMainCRTStartup
+
+DLLDEF=$(O)\$(TARGETNAME).def
+BUILD_NDASHEAR_DLL=1
+
+SOURCES_USED=..\sources.inc
+!INCLUDE ..\sources.inc
+SOURCES=$(SOURCES) \
+	..\dllmain.cpp
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME).lib}

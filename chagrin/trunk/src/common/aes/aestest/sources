@@ -1,0 +1,16 @@
+TARGETNAME=aes
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES = -DINTERMEDIATE_VALUE_KAT $(C_DEFINES)
+LINKER_FLAGS=/SUBSYSTEM:CONSOLE
+UMTYPE=console
+BUILD_PRODUCES=aesexe
+
+TARGETLIBS=	$(PSDK_LIB_PATH)\kernel32.lib \
+			$(PSDK_LIB_PATH)\user32.lib \
+			$(DDK_LIB_PATH)\libc.lib
+
+SOURCES=..\rijndael-alg-fst.c \
+		..\rijndael-api-fst.c \
+		..\rijndael-test-fst.c

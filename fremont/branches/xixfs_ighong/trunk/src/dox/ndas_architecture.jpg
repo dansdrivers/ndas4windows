@@ -1,0 +1,516 @@
+#ifndef _XTDI_H_
+#define _XTDI_H_
+#include <tdikrnl.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct _XTDI_OVERLAPPED XTDI_OVERLAPPED, *PXTDI_OVERLAPPED;
+
+typedef struct _XTDI_EVENT_HANDLER {
+	USHORT EventId;
+	PVOID  EventHandler;
+} XTDI_EVENT_HANDLER, *PXTDI_EVENT_HANDLER;
+
+typedef 
+VOID 
+(*PXTDI_IO_COMPLETION_ROUTINE)(
+	__in PIRP Irp,
+	__in PXTDI_OVERLAPPED Overlapped);
+
+typedef struct _XTDI_OVERLAPPED {
+	PXTDI_IO_COMPLETION_ROUTINE CompletionRoutine;
+	PKEVENT Event;
+	IO_STATUS_BLOCK IoStatus;
+	PVOID UserContext;
+	ULONG_PTR Internal;
+	PVOID InternalBuffer;
+} XTDI_OVERLAPPED, *PXTDI_OVERLAPPED;
+
+//
+// IRQL = PASSIVE_LEVEL and with APCs enabled
+//
+NTSTATUS
+xTdiCreateAddressObject(
+	__in PCWSTR DeviceName,
+	__in PFILE_FULL_EA_INFORMATION EaInformation,
+	__in ULONG EaInformationLength,
+	__out HANDLE *AddressHandle,
+	__out PFILE_OBJECT *AddressFileObject,
+	__out PDEVICE_OBJECT *AddressDeviceObject);
+
+//
+// IRQL = PASSIVE_LEVEL
+//
+NTSTATUS
+xTdiCloseAddressObject(
+	__in HANDLE AddressHandle,
+	__in PFILE_OBJECT AddressFileObject);
+
+//
+// IRQL = PASSIVE_LEVEL and with APCs enabled
+//
+NTSTATUS
+xTdiCreateConnectionObject(
+	__in PCWSTR DeviceName,
+	__in CONNECTION_CONTEXT ConnectionContext,
+	__out HANDLE *ConnectionHandle,
+	__out PFILE_OBJECT *ConnectionFileObject,
+	__out PDEVICE_OBJECT *ConnectionDeviceObject);
+
+//
+// IRQL = PASSIVE_LEVEL
+//
+NTSTATUS
+xTdiCloseConnectionObject(
+	__in HANDLE ConnectionHandle,
+	__in PFILE_OBJECT ConnectionFileObject);
+
+//
+// IRQL <= DISPATCH_LEVEL
+//
+NTSTATUS
+xTdiAssociateAddressEx(
+	__in PIRP Irp,
+	__in HANDLE AddressHandle,
+	__in PDEVICE_OBJECT ConnectionDeviceObject,
+	__in PFILE_OBJECT ConnectionFileObject,
+	__in PXTDI_OVERLAPPED Overlapped);
+
+//
+// IRQL <= APC_LEVEL and in a nonarbitrary thread context.
+//
+NTSTATUS
+xTdiAssociateAddress(
+	__in HANDLE AddressHandle,
+	__in PDEVICE_OBJECT ConnectionDeviceObject,
+	__in PFILE_OBJECT ConnectionFileObject);
+
+//
+// IRQL <= DISPATCH_LEVEL
+//
+NTSTATUS
+xTdiDisassociateAddressEx(
+	__in PIRP Irp,
+	__in PDEVICE_OBJECT ConnectionDeviceObject,
+	__in PFILE_OBJECT ConnectionFileObject,
+	__in PXTDI_OVERLAPPED Overlapped);
+
+//
+// IRQL <= APC_LEVEL and in a nonarbitrary thread context.
+//
+NTSTATUS
+xTdiDisassociateAddress(
+	__in PDEVICE_OBJECT ConnectionDeviceObject,
+	__in PFILE_OBJECT ConnectionFileObject);
+
+//
+// IRQL <= DISPATCH_LEVEL
+//
+NTSTATUS
+xTdiConnectEx(
+	__in PIRP Irp,
+	__in PDEVICE_OBJECT ConnectionDeviceObject,
+	__in PFILE_OBJECT ConnectionFileObject,
+	__in_bcount(RemoteAddressLength) PTRANSPORT_ADDRESS RemoteAddress,
+	__in LONG RemoteAddressLength,
+	__in_opt PLARGE_INTEGER ConnectionTimeout,
+	__in PXTDI_OVERLAPPED Overlapped);
+
+//
+// IRQL <= APC_LEVEL and in a nonarbitrary thread context.
+//
+NTSTATUS
+xTdiConnect(
+	__in PDEVICE_OBJECT TdiConnDeviceObject,
+	__in PFILE_OBJECT TdiConnFileObject,
+	__in PTRANSPORT_ADDRESS RemoteAddress,
+	__in LONG RemoteAddressLength,
+	__in_opt PLARGE_INTEGER  ConnectionTimeout);
+
+//
+// IRQL <= DISPATCH_LEVEL
+//
+NTSTATUS
+xTdiDisconnectEx(
+	__in PIRP Irp,
+	__in PDEVICE_OBJECT ConnectionDeviceObject,
+	__in PFILE_OBJECT ConnectionFileObject,
+	__in ULONG DisconnectFlags,
+	__in_opt PLARGE_INTEGER  DisconnectTimeout,
+	__in_opt PTDI_CONNECTION_INFORMATION RequestConnectionInfo,
+	__out_opt PTDI_CONNECTION_INFORMATION ReturnConnectionInfo,
+	__in PXTDI_OVERLAPPED Overlapped);
+
+//
+// IRQL <= APC_LEVEL and in a nonarbitrary thread context.
+//
+NTSTATUS
+xTdiDisconnect(
+	__in PDEVICE_OBJECT TdiConnDeviceObject,
+	__in PFILE_OBJECT TdiConnFileObject,
+	__in ULONG DisconnectFlags,
+	__in_opt PLARGE_INTEGER DisconnectTimeout,
+	__in_opt PTDI_CONNECTION_INFORMATION RequestConnectionInfo,
+	__out_opt PTDI_CONNECTION_INFORMATION ReturnConnectionInfo);
+
+//
+// IRQL <= DISPATCH_LEVEL
+//
+NTSTATUS
+xTdiQueryInformationEx(
+	__in PIRP Irp,
+	__in PDEVICE_OBJECT TdiDeviceObject,
+	__in PFILE_OBJECT TdiFileObject,
+	__in ULONG QueryType,
+	__out_bcount(BufferLength) PVOID Buffer,
+	__in ULONG     PDEVICE_OBJECT      deviceObject, checkDevice;
+    PHOOK_EXTENSION     hookExt;
+    CHAR                *fullPathName, name[PROCNAMELEN];
+    LARGE_INTEGER       timeStampStart, timeStampComplete, timeResult;
+    LARGE_INTEGER       dateTime;
+
+    //
+    // We've got to locate our own device object
+    //
+    checkDevice = FileObject->DeviceObject->Vpb->DeviceObject;
+    while( checkDevice ) {
+
+        if( checkDevice->DriverObject == FilemonDriver ) {
+    
+            deviceObject = IoGetRelatedDeviceObject( FileObject );
+            hookExt = deviceObject->DeviceExtension;
+            
+            if( FASTIOPRESENT( hookExt, ReleaseFileForNtCreateSection )) {
+
+                GETPATHNAME(FALSE);
+                TIMESTAMPSTART();
+
+                hookExt->FileSystem->DriverObject->FastIoDispatch->ReleaseFileForNtCreateSection( FileObject );
+
+                if( FilterDef.logreads && hookExt->Hooked) {
+
+                    TIMESTAMPSTOP();
+                    LogRecord( TRUE, NULL, &dateTime, &timeResult, 
+                               "%s\tFASTIO_RELEASE_FILE\t%s\t\tOK", FilemonGetProcess( name ),
+                               fullPathName );
+                }
+                FREEPATHNAME();
+            }
+            return;
+        }
+        checkDevice = checkDevice->AttachedDevice;
+    }
+}
+
+
+//----------------------------------------------------------------------
+//
+// FilemonFastIoDetachDevice
+//
+// We get this call when a device that we have hooked is being deleted.
+// This happens when, for example, a floppy is formatted. We have
+// to detach from it and delete our device. We should notify the GUI
+// that the hook state has changed, but its not worth the trouble.
+//
+//----------------------------------------------------------------------
+VOID 
+FilemonFastIoDetachDevice( 
+    PDEVICE_OBJECT SourceDevice, 
+    PDEVICE_OBJECT TargetDevice 
+    ) 
+{
+    PHOOK_EXTENSION     hookExt;
+    ULONG               i;
+    CHAR                name[PROCNAMELEN], drive[PROCNAMELEN];
+    LARGE_INTEGER       timeStampStart, timeStampComplete, timeResult;
+    LARGE_INTEGER       dateTime;
+
+    //
+    // See if a device (like a floppy) is being removed out from under us. If so,
+    // we have to detach from it before it disappears  
+    //
+    for( i = 0; i < 26; i++ ) {
+
+        if( SourceDevice == DriveHookDevices[i] ) {
+
+            //
+            // We've hooked it, so we must detach
+            //
+            hookExt = SourceDevice->DeviceExtension;
+
+            DbgPrint(("Filemon: Detaching from drive: %c\n", 
+                      hookExt->LogicalDrive ));
+
+            TIMESTAMPSTART();
+
+            sprintf( drive, "%c:", hookExt->LogicalDrive );
+            if( hookExt->Hooked ) {
+
+                TIMESTAMPSTOP();
+                LogRecord( TRUE, NULL, &dateTime, &timeResult, 
+                           "%s\tFASTIO_DETACH_DEVICE\t%s\t\tOK", 
+                           FilemonGetProcess( name ), drive );
+            }
+            IoDetachDevice( TargetDevice );
+            IoDeleteDevice( SourceDevice );
+
+            DriveHookDevices[i] = NULL;
+            return;
+        }
+    }
+
+    //
+    // It wasn't for us, so pass it on.
+    //
+    hookExt = SourceDevice->DeviceExtension;
+    if( FASTIOPRESENT( hookExt, FastIoDetachDevice )) {
+
+        hookExt->FileSystem->DriverObject->FastIoDispatch->FastIoDetachDevice( 
+            SourceDevice, TargetDevice );
+    }
+}
+
+
+//----------------------------------------------------------------------
+//     D I S P A T C H   A N D   H O O K   E N T R Y   P O I N T S
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+// 
+// FilemonHookDoneWork
+//
+// Worker routine that simply calls update Log. Since we want
+// to avoid using spin locks in order to improve SMP performance
+// we need to do everything at passive. When our completion routine
+// is called at dispatch, we queue the uíèÊ#  ú„ïPú„ïPú„ïP    è          
+ó               À¶È                                     ‘÷@                           T„©¿T„©¿PÔ7´ú„ïPPÔ7´                                                                                                        íèA  ú„ïPú„ïPú„ïP    è          
+ó               Ã¶È                                     ’÷@                           X¨ÀX¨ÀT„©¿ú„ïPT„©¿                                                                                                        íèzz  ú„ïPú„ïPú„ïP    è @         
+ó               È¶È                                     “÷@                           XÌ‘ÁXÌ‘ÁX¨Àú„ïPX¨À                                                                                                        íèú  ú„ïPú„ïPú„ïP    è          
+ó               îºÈ                                     ”÷@                           XÌ‘ÁXÌ‘ÁXÌ‘Áú„ïPXÌ‘Á                                                                                                        íèŒ  ú„ïPú„ïPú„ïP    è          
+ó               G·È                                     •÷@                           XÌ‘ÁXÌ‘ÁXÌ‘Áú„ïPXÌ‘Á                                                                                                        íèØ  ú„ïPú„ïPú„ïP    è          
+ó               N·È                                     –÷@                           XÌ‘ÁXÌ‘ÁXÌ‘Áú„ïPXÌ‘Á                                                                                                        íèÀ  ú„ïPú„ïPú„ïP    è          
+ó               òºÈ                                     —÷@                           Xð…ÂXÌ‘ÁXÌ‘Áú„ïPXÌ‘Á                                                                                                        íèõ  S{ïPS{ïPS{ïP    è          
+ó               ]±È                                     	5@                           ¬Éå¬Éå¬iÕäS{ïP¬iÕä                                                                                                        íè^  S{ïPS{ïPS{ïP    è          
+ó               `±È                                     
+5@                           ¬Éå¬Éå¬ÉåS{ïP¬Éå                                                                                                        íèŒ  S{ïPS{ïPS{ïP    è          
+ó               a±È                                     5@                           ¬Éå¬Éå¬ÉåS{ïP¬Éå                                                                                                        íè\  ú„ïPú„ïPú„ïP    è          
+ó               »È                                     ˜÷@                           Xð…ÂXð…ÂXð…Âú„ïPXð…Â                                                                                                        íèÕ  ú„ïPú„ïPú„ïP    è          
+ó               i·È                                     ™÷@                           Xð…ÂXð…ÂXð…Âú„ïPXð…Â                                                                                                        íè  ú„ïPú„ïPú„ïP    è          
+ó               0»È                                     š÷@                           Xð…ÂXð…ÂXð…Âú„ïPXð…Â                                                                                                        íèx	  ú„ïPú„ïPú„ïP    è          
+ó               u·È                                     ›÷@                           XzÃXzÃXð…Âú„ïPXð…Â                                                                                                        íè´  ú„ïPú„ïPú„ïP    è          
+ó               v·È                                     œ÷@                           XzÃXzÃXzÃú„ïPXzÃ                                                                                                        íè¯  ú„ïPú„ïPú„ïP    è          
+ó               ’»È                                     ÷@                           XzÃXzÃXzÃú„ïPXzÃ                                                                                                        requestCount[ndfsWinxpReplyHeader->IrpMajorFunction] %1000 == 0) {
+
+							CHAR	irpMajorString[OPERATION_NAME_BUFFER_SIZE];
+							CHAR	irpMinorString[OPERATION_NAME_BUFFER_SIZE];
+
+							switch(ndfsWinxpReplyHeader->IrpMajorFunction) {
+
+							case IRP_MJ_CREATE:
+							case IRP_MJ_CLOSE:
+							case IRP_MJ_CLEANUP:
+							case IRP_MJ_SET_INFORMATION:
+							case IRP_MJ_QUERY_INFORMATION:
+							case IRP_MJ_DIRECTORY_CONTROL:
+			
+								if (requestCount[ndfsWinxpReplyHeader->IrpMajorFunction] %10000 != 0) 
+									break;
+								
+							case IRP_MJ_QUERY_VOLUME_INFORMATION:
+									
+								if (requestCount[ndfsWinxpReplyHeader->IrpMajorFunction] %1000 != 0) 
+									break;
+
+							default:
+	
+								GetIrpName( ndfsWinxpReplyHeader->IrpMajorFunction,
+											ndfsWinxpReplyHeader->IrpMinorFunction,
+											0,
+											irpMajorString,
+											irpMinorString );
+	
+								DebugTrace2( 0, Dbg, ("%s, requestCount = %d, executionTime = %I64d\n",
+													  irpMajorString, requestCount[ndfsWinxpReplyHeader->IrpMajorFunction],
+													  executionTime[ndfsWinxpReplyHeader->IrpMajorFunction].QuadPart/(HZ/1000)) );
+							}
+						}
+					}
+#endif
+				
+					if (status != STATUS_SUCCESS) {
+
+						ASSERT( status == STATUS_REMOTE_DISCONNECT );
+						break;
+					}
+
+				} while (0);
+				
+                if (status != STATUS_PENDING) {
+
+					if (status != STATUS_SUCCESS) {
+
+						ExAcquireFastMutex( &Secondary->FastMutex );		
+
+
+						if (status == STATUS_REMOTE_DISCONNECT) {
+
+							SetFlag( Secondary->Thread.Flags, SECONDARY_THREAD_FLAG_REMOTE_DISCONNECTED );
+						
+						} else {
+
+							SetFlag( Secondary->Thread.Flags, SECONDARY_THREAD_FLAG_ERROR );
+						}
+
+						ClearFlag( Secondary->Thread.Flags, SECONDARY_THREAD_FLAG_CONNECTED );
+						SetFlag( Secondary->Thread.Flags, SECONDARY_THREAD_FLAG_STOPED );
+
+						ExReleaseFastMutex( &Secondary->FastMutex );
+					}
+
+
+					Secondary->Thread.SessionSlot[slotIndex] = NULL;
+					Secondary->Thread.IdleSlotCount++;
+
+					secondaryRequest->ExecuteStatus = status;
+
+					if (secondaryRequest->Synchronous == TRUE)
+						KeSetEvent( &secondaryRequest->CompleteEvent, IO_DISK_INCREMENT, FALSE );
+					else
+						DereferenceSecondaryRequest( secondaryRequest );
+
+					if (status != STATUS_SUCCESS && status != STATUS_PENDING) {
+
+						secondaryThreadTerminate = TRUE;
+						break;
+					}	
+				}
+
+			} // while 
+		
+		} else if (eventStatus == 1) {
+
+			NTSTATUS			status;
+			PSECONDARY_REQUEST	secondaryRequest;
+
+
+			if (Secondary->Thread.TdiReceiveContext.Result != sizeof(NDFS_REQUEST_HEADER)) {
+			
+				_U16		slotIndex;
+
+				for (slotIndex=0; slotIndex < Secondary->Thread.SessionContext.SessionSlotCount; slotIndex++) {
+
+					if (Secondary->Thread.SessionSlot[slotIndex] != NULL) // choose arbitrary one
+						break;
+				}
+
+				ASSERT (slotIndex < Secondary->Thread.SessionContext.SessionSlotCount );
+
+				secondaryRequest = Secondary->Thread.SessionSlot[slotIndex];
+				Secondary->Thread.SessionSlot[slotIndex] = NULL;
+				
+				secondaryRequest->ExecuteStatus = STATUS_REMOTE_DISCONNECT;
+				ExAcquireFastMutex( &Secondary->FastMutex );
+				SetFlag( Secondary->Thread.Flags, SECONDARY_THREAD_FLAG_REMOTE_DISCONNECTED);
+				ExReleaseFastMutex( &Secondary->FastMutex );
+	
+				secondaryThreadTerminate = TRUE;
+				if (secondaryRequest->Synchronous == TRUE)
+					KeSetEvent(&secondaryRequest->CompleteEvent, IO_DISK_INCREMENT, FALSE);
+				else
+					DereferenceSecondaryRequest(secondaryRequest);
+
+				continue;
+			}
+
+			secondaryRequest = Secondary->Thread.SessionSlot[Secondary->Thread.NdfsReplyHeader.Mid];
+			Secondary->Thread.SessionSlot[Secondary->Thread.NdfsReplyHeader.Mid] = NULL;
+
+			RtlCopyMemory( secondaryRequest->NdfsMessage,
+						   &Secondary->Thread.NdfsReplyHeader,
+						   sizeof(NDFS_REPLY_HEADER) );
+			
+			status = ReceiveNdfsReplyMessage(Secondary, secondaryRequest, FALSE);
+
+			if (status == STATUS_SUCCESS) {
+
+				status = DispatchReply( Secondary,
+						Owns_Vcb_Mft_Root_File, NtfsResourceSharedVcb, NtfsOwns_Root_Mft_File},
+    {NtfsOwns_Vcb_Mft_Root_Journal, NtfsResourceSharedVcb, NtfsOwns_Root_Mft_Journal},
+    {NtfsOwns_Vcb_Mft_File_Quota, NtfsResourceSharedVcb, NtfsOwns_Mft_File_Quota},
+    {NtfsOwns_Vcb_Mft_File, NtfsResourceSharedVcb, NtfsOwns_Mft_File},
+    {NtfsOwns_Vcb_Mft_File_ObjectId, NtfsResourceSharedVcb, NtfsOwns_Mft_File_ObjectId},
+    {NtfsOwns_Vcb_Mft_File_Secure, NtfsResourceSharedVcb, NtfsOwns_Mft_File_Secure},
+    {NtfsOwns_Vcb_Mft_File_Reparse, NtfsResourceSharedVcb, NtfsOwns_Mft_File_Reparse},
+    {NtfsOwns_Vcb_Mft_File_Journal, NtfsResourceSharedVcb, NtfsOwns_Mft_File_Journal},
+    {NtfsOwns_Vcb_Mft_File_Journal, NtfsResourceSharedVcb, NtfsOwns_Mft_File_Journal},
+    {NtfsOwns_Vcb_Mft_File_ObjectId_Quota, NtfsResourceSharedVcb, NtfsOwns_Mft_File_ObjectId_Quota},
+    {NtfsOwns_Vcb_Mft_File_ObjectId_Journal, NtfsResourceSharedVcb, NtfsOwns_Mft_File_ObjectId_Journal},
+    {NtfsOwns_Vcb_Mft_File_ObjectId_Reparse, NtfsResourceSharedVcb, NtfsOwns_Mft_File_ObjectId_Reparse},
+    {NtfsOwns_Vcb_Mft_Volume_Bitmap, NtfsResourceSharedVcb, NtfsOwns_Mft_Volume_Bitmap},
+    {NtfsOwns_Vcb_Extend_Reparse, NtfsResourceSharedVcb, NtfsOwns_Extend_Reparse},
+    {NtfsOwns_Vcb_Extend_ObjectId, NtfsResourceSharedVcb, NtfsOwns_Extend_ObjectId},
+    {NtfsOwns_Vcb_Extend_Quota, NtfsResourceSharedVcb, NtfsOwns_Extend_Quota},
+    {NtfsOwns_Vcb_Extend_Journal, NtfsResourceSharedVcb, NtfsOwns_Extend_Journal},
+    {NtfsOwns_Vcb_BadClust, NtfsResourceSharedVcb, NtfsOwns_BadClust},
+    {NtfsOwns_Vcb_Bitmap, NtfsResourceSharedVcb, NtfsOwns_Bitmap},
+    {NtfsOwns_Vcb_Boot, NtfsResourceSharedVcb, NtfsOwns_Boot},
+    {NtfsOwns_Vcb_Quota, NtfsResourceSharedVcb, NtfsOwns_Quota},
+    {NtfsOwns_Vcb_Root_Mft2, NtfsResourceSharedVcb, NtfsOwns_Root_Mft2},
+    {NtfsOwns_Vcb_Mft2, NtfsResourceSharedVcb, NtfsOwns_Mft2},
+    {NtfsOwns_Vcb_Root_Upcase, NtfsResourceSharedVcb, NtfsOwns_Root_Upcase},
+    {NtfsOwns_Vcb_Root_LogFile, NtfsResourceSharedVcb, NtfsOwns_Root_LogFile},
+    {NtfsOwns_Vcb_Root_Secure, NtfsResourceSharedVcb, NtfsOwns_Root_Secure},
+    {NtfsOwns_Vcb_Root_BadClust, NtfsResourceSharedVcb, NtfsOwns_Root_BadClust},
+    {NtfsOwns_Vcb_Upcase, NtfsResourceSharedVcb, NtfsOwns_Upcase},
+    {NtfsOwns_Vcb_Secure, NtfsResourceSharedVcb, NtfsOwns_Secure},
+    {NtfsOwns_Vcb_Extend, NtfsResourceSharedVcb, NtfsOwns_Extend},
+    {NtfsOwns_Vcb_Journal, NtfsResourceSharedVcb, NtfsOwns_Journal},
+    {NtfsOwns_Vcb_LogFile, NtfsResourceSharedVcb, NtfsOwns_LogFile},
+    {NtfsOwns_Vcb_ObjectId, NtfsResourceSharedVcb, NtfsOwns_ObjectId},
+    
+    {NtfsOwns_ExVcb_File, NtfsResourceExVcb, NtfsOwns_File},
+    {NtfsOwns_ExVcb_Root_File, NtfsResourceExVcb, NtfsOwns_Root_File},
+    {NtfsOwns_ExVcb_Root_File_ObjectId_Extend, NtfsResourceExVcb, NtfsOwns_Root_File_ObjectId_Extend},
+    {NtfsOwns_ExVcb_Root_File_Quota, NtfsResourceExVcb, NtfsOwns_Root_File_Quota}, 
+    {NtfsOwns_ExVcb_Root_File_Quota_Mft, NtfsResourceExVcb, NtfsOwns_Root_Mft_File_Quota},
+    {NtfsOwns_ExVcb_Mft, NtfsResourceExVcb, NtfsOwns_Mft},
+    {NtfsOwns_ExVcb_Mft_Root, NtfsResourceExVcb, NtfsOwns_Root_Mft},
+    {NtfsOwns_ExVcb_Mft_Root_File, NtfsResourceExVcb, NtfsOwns_Root_Mft_File},
+    {NtfsOwns_ExVcb_Mft_File_Journal, NtfsResourceExVcb, NtfsOwns_Mft_File_Journal},
+    {NtfsOwns_ExVcb_Mft_Extend_Journal, NtfsResourceExVcb, NtfsOwns_Mft_Extend_Journal},
+    {NtfsOwns_ExVcb_Mft_Extend, NtfsResourceExVcb, NtfsOwns_Mft_Extend},
+    {NtfsOwns_ExVcb_Mft_Journal, NtfsResourceExVcb, NtfsOwns_Mft_Journal},
+    {NtfsOwns_ExVcb_Journal, NtfsResourceExVcb, NtfsOwns_Journal},
+    {NtfsOwns_ExVcb_Volume, NtfsResourceExVcb, NtfsOwns_Volume},
+    {NtfsOwns_ExVcb_Volume_ObjectId, NtfsResourceExVcb, NtfsOwns_Volume_ObjectId},
+
+    //
+    //  ReleaseAllFiles
+    // 
+    
+    {NtfsOwns_ExVcb_ObjectId_Extend, NtfsResourceExtendDir, NtfsOwns_ExVcb_ObjectId},
+    {NtfsOwns_ExVcb_ObjectId, NtfsResourceObjectIdTable, NtfsOwns_ExVcb},
+    
+    {NtfsOwns_ExVcb_Root_ObjectId_Secure, NtfsResourceRootDir, NtfC_DEFINES=/DUNICODE /D_UNICODE
+MSC_WARNING_LEVEL=-W3 -WX -Wp64
+
+INCLUDES=$(NDAS_INC_PATH);$(NDAS_PUBLIC_INC_PATH);$(PSDK_INC_PATH)
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+MSC_OPTIMIZATION=/Ox
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+SOURCES=\
+	..\ndascomm.cpp				\
+	..\ndascommlsp.cpp			\
+	..\ndascommtransport.cpp	\
+	..\ndascommhix.cpp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       USE_NDASCOMM_DLL=1
+SOURCES_USED=..\sources.inc
+!INCLUDE ..\sources.inc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

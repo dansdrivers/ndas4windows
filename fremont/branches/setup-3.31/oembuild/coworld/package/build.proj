@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <ItemGroup>
+        <TargetProjects Include="msi_*\build.proj" />
+        <TargetProjects Include="package\build.proj" />
+    </ItemGroup>
+
+    <Target Name="Build">
+        <MSBuild Projects="%(TargetProjects.Identity)" Targets="Build" />
+    </Target>
+
+    <Target Name="Rebuild">
+        <MSBuild Projects="%(TargetProjects.Identity)" Targets="Rebuild" />
+    </Target>
+
+    <Target Name="Clean">
+        <MSBuild Projects="%(TargetProjects.Identity)" Targets="Clean" />
+    </Target>
+
+</Project>

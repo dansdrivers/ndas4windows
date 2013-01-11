@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment Id="NDASMSM_CustomActions">
+
+		<!-- Custom Action DLL -->
+		
+		<Binary Id="NDASMSI.DLL" src="$(var.cadir)\NDASMSI.DLL" />
+
+		<!-- Custom Actions -->
+
+		<!-- NDAS_SAFE_UPGRADE Property Handling -->
+
+		<!--
+		<CustomAction
+			Id="NcSetDontRemoveDrivers"
+			Return="check"
+			Property="NDASMSM_NO_DRIVER_REMOVE"
+			Value="1"/>
+
+		<CustomAction
+			Id="NcSetDontRemoveInfs"
+			Return="check"
+			Property="NDASMSM_NO_OEMINF_REMOVE"
+			Value="1"/>
+		
+		<CustomAction
+			Id="NcSetDontPreRemoveDrivers"
+			Return="check"
+			Property="NDAS_DONT_PREREMOVE_DRIVERS"
+			Value="1"/>
+			-->
+		
+		<!-- _Install_XXX -->
+
+		<CustomAction Id="NcInstall_LFSFILT_SP" Return="check" 
+			Property="NcInstall_LFSFILT_XC"
+			Value="28804|[NdasDriverDir]lfsfilt.sys|lfsfilt|Lean File Sharing|Lean File Sharing Service for NDAS Devices|1|0|1|FS Filter Content Screener|;" />
+
+		<CustomAction Id="NcInstall_LFSFILT_SP_Win2K" Return="check" 
+			Property="NcInstall_LFSFILT_XC"
+			Value="28804|[NdasDriverDir]lfsfilt.sys|lfsfilt|Lean File Sharing|Lean File Sharing Service for NDAS Devices|1|0|1|System Bus Extender|;" />
+
+		<CustomAction Id="NcInstall_LFSFILT_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiInstallLegacyDriverWithReboot" />
+
+		<CustomAction Id="NcInstall_LPX_SP" Return="check" Property="NcInstall_LPX_XC" 
+			Value="28801|protocol|nkc_lpx|[NdasDriverDir]netlpx.inf|Software\NDAS\Install|LPXINF" />
+
+		<CustomAction Id="NcInstall_LPX_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiInstallNetComponent" />
+
+		<!--
+		<CustomAction 
+			Id="NcInstall_NDASBUS_SP" 
+			Return="check" 
+			Property="NcInstall_NDASBUS_XC"
+			Value="28802|Root\NDASBus|[NdasDriverDir]ndasbus.inf|Software\NDAS\Install|NDASBUSINF" />
+
+		<CustomAction 
+			Id="NcInstall_NDASBUS_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiInstallPnpDevice" />
+		-->
+
+		<CustomAction Id="NcInstall_NDASBUS_SP" Return="check" 
+			Property="NcInstall_NDASBUS_XC"
+			Value="28802|Root\NDASBus|[NdasDriverDir]ndasbus.inf|Software\NDAS\Install|NDASBUSINF" />
+
+		<CustomAction Id="NcInstall_NDASBUS_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NcaMsiUpdateOrInstallPnpDevice" />
+
+		<CustomAction Id="NcInstall_NDASSCSI_INF_SP" Return="check" 
+			Property="NcInstall_NDASSCSI_INF_XC"
+			Value="28803|ndas\scsiadapter_r01|[NdasDriverDir]ndasscsi.inf|Software\NDAS\Install|NDASSCSIINF" />
+
+		<CustomAction Id="NcInstall_NDASSCSI_INF_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NcaMsiUpdateOrPreinstallPnpDevice" />
+
+		<CustomAction Id="NcInstall_ROFILT_SP" Return="check" 
+			Property="NcInstall_ROFILT_XC"
+			Value="28805|[NdasDriverDir]rofilt.sys|rofilt|ROFilter|File system read-only filter for NDAS Devices|1|2|1||" />
+
+		<CustomAction Id="NcInstall_ROFILT_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiInstallLegacyDriver" />
+
+		<!-- _PreRemove_XXX -->
+
+		<CustomAction 
+			Id="NcPreRemove_LANSCSIBUS_SP" 
+			Return="check" 
+			Property="NcPreRemove_LANSCSIBUS_XC"
+			Value="28811|root\lanscsibus|lanscsibus|lanscsibus.sys" />
+
+		<CustomAction 
+			Id="NcPreRemove_LANSCSIBUS_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiPreRemoveDevice" />
+
+		<CustomAction 
+			Id="NcPreRemove_LANSCSIMP_SP" 
+			Return="check" 
+			Property="NcPreRemove_LANSCSIMP_XC"
+			Value="28812|lanscsibus\netdisk_v0|lanscsiminiport|lanscsiminiport.sys" />
+
+		<CustomAction 
+			Id="NcPreRemove_LANSCSIMP_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiPreRemoveDevice" />
+
+		<!--
+		<CustomAction 
+			Id="NcPreRemove_OEM_INF_SP"
+			Return="check" 
+			Property="NcPreRemove_OEM_INF_XC"
+			Value="28813|oem*.inf|nkc_lpx;root\lanscsibus;lanscsibus\netdisk_v0;root\ndasbus;ndas\scsiadapter_r01;" />
+
+		<CustomAction 
+			Id="NcPreRemove_OEM_INF_XC"
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<CustomAction 
+			Id="NcPreRemove_LFSFILT_SP" 
+			Return="check" 
+			Property="NcPreRemove_LFSFILT_XC"
+			Value="28809|lfsfilt|lfsfilt.sys" />
+
+		<CustomAction 
+			Id="NcPreRemove_LFSFILT_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiPreRemoveDriverService" />
+
+		<CustomAction 
+			Id="NcPreRemove_LPX_SP" 
+			Return="check" 
+			Property="NcPreRemove_LPX_XC" 
+			Value="28806|nkc_lpx|lpx|lpx.sys" />
+
+		<CustomAction 
+			Id="NcPreRemove_LPX_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiPreRemoveNetComponent" />
+
+		<CustomAction 
+			Id="NcPreRemove_NDASBUS_SP" 
+			Return="check" 
+			Property="NcPreRemove_NDASBUS_XC"
+			Value="28807|root\ndasbus|ndasbus|ndasbus.sys" />
+
+		<CustomAction 
+			Id="NcPreRemove_NDASBUS_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiPreRemoveDevice" />
+
+		<CustomAction 
+			Id="NcPreRemove_NDASSCSI_SP" 
+			Return="check" 
+			Property="NcPreRemove_NDASSCSI_XC"
+			Value="28808|ndas\scsiadapter_r01|ndasscsi|ndasscsi.sys" />
+
+		<CustomAction 
+			Id="NcPreRemove_NDASSCSI_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiPreRemoveDevice" />
+
+		<CustomAction 
+			Id="NcPreRemove_ROFILT_SP" 
+			Return="check" 
+			Property="NcPreRemove_ROFILT_XC"
+			Value="28810|rofilt|rofilt.sys" />
+
+		<CustomAction 
+			Id="NcPreRemove_ROFILT_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiPreRemoveDriverService" />
+
+		-->
+
+		<!-- _Remove_XXX -->
+
+		<CustomAction Id="NcRemove_LFSFILT_SP" Return="check" 
+			Property="NcRemove_LFSFILT_XC" 
+			Value="28809|lfsfilt|lfsfilt.sys" />
+
+		<CustomAction Id="NcRemove_LFSFILT_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiRemoveDriverService" />
+
+		<CustomAction Id="NcRemove_LPX_SP" Return="check" 
+			Property="NcRemove_LPX_XC" 
+			Value="28806|nkc_lpx|lpx|lpx.sys" />
+
+		<CustomAction 
+			Id="NcRemove_LPX_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiRemoveNetComponent" />
+
+		<CustomAction 
+			Id="NcRemove_NDASBUS_SP" 
+			Return="check" 
+			Property="NcRemove_NDASBUS_XC" 
+			Value="28807|root\ndasbus|ndasbus|ndasbus.sys" />
+
+		<CustomAction 
+			Id="NcRemove_NDASBUS_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiRemoveDevice" />
+
+		<CustomAction Id="NcRemove_NDASSCSI_SP" Return="check" 
+			Property="NcRemove_NDASSCSI_XC"
+			Value="28808|ndas\scsiadapter_r01|ndasscsi|ndasscsi.sys" />
+
+		<CustomAction Id="NcRemove_NDASSCSI_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiRemoveDevice" />
+
+		<!-- Remove All Legacy INF -->
+		<CustomAction 
+			Id="NcRemove_LegacyOemInf_SP" 
+			Return="check" 
+			Property="NcRemove_LegacyOemInf_XC"
+			Value="28813|oem*.inf|root\lanscsibus;lanscsibus\netdisk_v0;" />
+
+		<CustomAction 
+			Id="NcRemove_LegacyOemInf_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<!-- Remove All OEM INF: NDASSCSI.INF, NDASBUS.INF, LPX.INF -->
+		<CustomAction 
+			Id="NcRemove_AllOemInf_SP" 
+			Return="check" 
+			Property="NcRemove_AllOemInf_XC"
+			Value="28813|oem*.inf|nkc_lpx;root\ndasbus;ndas\scsiadapter_r01;" />
+
+		<CustomAction 
+			Id="NcRemove_AllOemInf_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<!-- Remove NDASSCSI.INF -->
+		<CustomAction 
+			Id="NcRemove_NDASSCSI_INF_SP" 
+			Return="check" 
+			Property="NcRemove_NDASSCSI_INF_XC"
+			Value="28813|oem*.inf|ndas\scsiadapter_r01;" />
+
+		<CustomAction 
+			Id="NcRemove_NDASSCSI_INF_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<!-- Remove NDASBUS.INF -->
+		<CustomAction 
+			Id="NcRemove_NDASBUS_INF_SP" 
+			Return="check" 
+			Property="NcRemove_NDASBUS_INF_XC"
+			Value="28813|oem*.inf|root\ndasbus;" />
+
+		<CustomAction 
+			Id="NcRemove_NDASBUS_INF_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<!-- Remove LPX.INF -->
+		<CustomAction 
+			Id="NcRemove_LPX_INF_SP" 
+			Return="check" 
+			Property="NcRemove_LPX_INF_XC"
+			Value="28813|oem*.inf|nkc_lpx;" />
+
+		<CustomAction 
+			Id="NcRemove_LPX_INF_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<!-- Remove ROFILT -->
+		<CustomAction 
+			Id="NcRemove_ROFILT_SP" 
+			Return="check" 
+			Property="NcRemove_ROFILT_XC" 
+			Value="28810|rofilt|rofilt.sys" />
+
+		<CustomAction 
+			Id="NcRemove_ROFILT_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiRemoveDriverService" />
+
+		<!-- _CheckPreboot_XXX -->
+
+		<CustomAction 
+			Id="NcCheckPreboot_LFSFILT_SP" 
+			Return="check" 
+			Property="NcCheckPreboot_LFSFILT_XC"
+			Value="lfsfilt" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_LFSFILT_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiCheckMarkedForDeletion" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_LPX_SP" 
+			Return="check" 
+			Property="NcCheckPreboot_LPX_XC"
+			Value="lpx" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_LPX_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiCheckMarkedForDeletion" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_NDASBUS_SP" 
+			Return="check" 
+			Property="NcCheckPreboot_NDASBUS_XC"
+			Value="ndasbus" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_NDASBUS_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiCheckMarkedForDeletion" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_NDASSCSI_SP" 
+			Return="check" 
+			Property="NcCheckPreboot_NDASSCSI_XC"
+			Value="ndasscsi" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_NDASSCSI_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiCheckMarkedForDeletion" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_NDASSVC_SP" 
+			Return="check" 
+			Property="NcCheckPreboot_NDASSVC_XC"
+			Value="ndassvc" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_NDASSVC_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiCheckMarkedForDeletion" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_ROFILT_SP" 
+			Return="check" 
+			Property="NcCheckPreboot_ROFILT_XC"
+			Value="rofilt" />
+
+		<CustomAction 
+			Id="NcCheckPreboot_ROFILT_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiCheckMarkedForDeletion" />
+
+		<!-- _Check_XXX_Instance -->
+
+		<CustomAction 
+			Id="NcCheck_LSMP_Instance_SP" 
+			Return="check" 
+			Execute="firstSequence"
+			Property="CustomActionData" 
+			Value="28815|lanscsibus\netdisk_v0" />
+
+		<CustomAction 
+			Id="NcCheck_LSMP_Instance_XC" 
+			Return="check" 
+			Execute="firstSequence"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiCheckPnpDeviceInstance" />
+
+		<CustomAction 
+			Id="NcCheck_NDASSCSI_Inst_SP" 
+			Return="check" 
+			Execute="firstSequence"
+			Property="CustomActionData" 
+			Value="28816|ndas\scsiadapter_r01" />
+
+		<CustomAction 
+			Id="NcCheck_NDASSCSI_Inst_XC" 
+			Return="check" 
+			Execute="firstSequence" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiCheckPnpDeviceInstance" />
+
+		<!-- _RBack_Remove_XXX -->
+
+		<CustomAction 
+			Id="NcRBRemove_LFSFILT_SP" 
+			Return="check" 
+			Property="NcRBRemove_LFSFILT_XC"
+			Value="28809|lfsfilt|lfsfilt.sys" />
+
+		<CustomAction 
+			Id="NcRBRemove_LFSFILT_XC" 
+			Return="ignore" 
+			Execute="rollback" 
+			BinaryKey="NDASMSI.DLL"
+			Impersonate="no"
+			DllEntry="NDMsiRemoveDriverService" />
+
+		<CustomAction 
+			Id="NcRBRemove_LPX_SP" 
+			Return="check" 
+			Property="NcRBRemove_LPX_XC"
+			Value="28806|nkc_lpx|lpx|lpx.sys" />
+
+		<CustomAction 
+			Id="NcRBRemove_LPX_XC" 
+			Return="ignore" 
+			Execute="rollback" 
+			BinaryKey="NDASMSI.DLL"
+			Impersonate="no"
+			DllEntry="NDMsiRemoveNetComponent" />
+
+		<CustomAction 
+			Id="NcRBRemove_NDASBUS_SP" 
+			Return="check" 
+			Property="NcRBRemove_NDASBUS_XC"
+			Value="28807|root\ndasbus|ndasbus|ndasbus.sys" />
+
+		<CustomAction 
+			Id="NcRBRemove_NDASBUS_XC" 
+			Return="ignore" 
+			Execute="rollback" 
+			BinaryKey="NDASMSI.DLL"
+			Impersonate="no"
+			DllEntry="NDMsiRemoveDevice" />
+
+		<CustomAction 
+			Id="NcRBRemove_AllOemInf_SP" 
+			Return="check" 
+			Property="NcRBRemove_AllOemInf_XC"
+			Value="28813|oem*.inf|nkc_lpx;root\ndasbus;ndas\scsiadapter_r01;" />
+
+		<CustomAction 
+			Id="NcRBRemove_AllOemInf_XC" 
+			Return="ignore" 
+			Execute="rollback" 
+			BinaryKey="NDASMSI.DLL"
+			Impersonate="no"
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<CustomAction 
+			Id="NcRBRemove_NDASSCSI_INF_SP" 
+			Return="check" 
+			Property="NcRBRemove_NDASSCSI_INF_XC"
+			Value="28813|oem*.inf|ndas\scsiadapter_r01;" />
+
+		<CustomAction 
+			Id="NcRBRemove_NDASSCSI_INF_XC" 
+			Return="ignore" 
+			Execute="rollback" 
+			BinaryKey="NDASMSI.DLL"
+			Impersonate="no"
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<CustomAction 
+			Id="NcRBRemove_NDASBUS_INF_SP" 
+			Return="check" 
+			Property="NcRBRemove_NDASBUS_INF_XC"
+			Value="28813|oem*.inf|root\ndasbus;" />
+
+		<CustomAction 
+			Id="NcRBRemove_NDASBUS_INF_XC" 
+			Return="ignore" 
+			Execute="rollback" 
+			BinaryKey="NDASMSI.DLL"
+			Impersonate="no"
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<CustomAction 
+			Id="NcRBRemove_LPX_INF_SP" 
+			Return="check" 
+			Property="NcRBRemove_LPX_INF_XC"
+			Value="28813|oem*.inf|nkc_lpx;" />
+
+		<CustomAction 
+			Id="NcRBRemove_LPX_INF_XC" 
+			Return="ignore" 
+			Execute="rollback" 
+			BinaryKey="NDASMSI.DLL"
+			Impersonate="no"
+			DllEntry="NDMsiDeleteOEMInf" />
+
+		<CustomAction 
+			Id="NcStartNDASSVCOnNoReboot_SP"
+			Return="check"
+			Property="NcStartNDASSVCOnNoReboot_XC"
+			Value="ndassvc" />
+
+		<CustomAction 
+			Id="NcStartNDASSVCOnNoReboot_XC"
+			Return="check"
+			Execute="deferred"
+			BinaryKey="NDASMSI.DLL"
+			Impersonate="no"
+			DllEntry="NDMsiStartServiceOnNoDeferredReboot" />
+
+		<CustomAction 
+			Id="NcRemove_LANSCSIBUS_SP" 
+			Return="check" 
+			Property="NcRemove_LANSCSIBUS_XC"
+			Value="28811|root\lanscsibus|lanscsibus|lanscsibus.sys" />
+
+		<CustomAction 
+			Id="NcRemove_LANSCSIBUS_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiRemoveDevice" />
+
+		<CustomAction 
+			Id="NcRemove_LANSCSIMINIPORT_SP" 
+			Return="check" 
+			Property="NcRemove_LANSCSIMINIPORT_XC"
+			Value="28812|lanscsibus\netdisk_v0|lanscsiminiport|lanscsiminiport.sys" />
+
+		<CustomAction 
+			Id="NcRemove_LANSCSIMINIPORT_XC" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiRemoveDevice" />
+
+		<!-- Boot Controllers -->
+
+		<!--<CustomAction 
+			Id="_SchedulePreboot" 
+			Return="check" 
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiSchedulePreboot" />-->
+
+		<CustomAction 
+			Id="NcSetPrebootScheduled" 
+			Return="check" 
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiSetPrebootScheduled" />
+
+		<CustomAction 
+			Id="NcUpdateScheduledReboot"
+			Return="ignore"
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiUpdateScheduledReboot" />
+
+		<!-- Utility -->
+
+		<CustomAction
+			Id="NcSetNdasSvcAutoStart_SP"
+			Return="check" 
+			Property="NcSetNdasSvcAutoStart_XC"
+			Value="ndassvc|0xffffffff|0x00000002|0xffffffff" />
+
+		<CustomAction
+			Id="NcSetNdasSvcAutoStart_XC"
+			Return="check"
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NDMsiChangeServiceConfig" />
+
+		<!-- Not for the merge module -->
+		<!--
+		<CustomAction
+			Id="NcStopDowngrade"
+			Return="check"
+			Error="Downgrading the software is not permitted. If you have to downgrade the software, uninstall the higher version software first." />
+		-->
+
+		<!-- Upgrade Handlers -->
+
+		<CustomAction
+			Id="NcSetUpgSafeRemoveProp"
+			Return="ignore"
+			Execute="immediate"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NcaMsiGetUpgradeSafeRemoveProperty" />
+
+		<CustomAction
+			Id="NcSetUpgSafeRemoveContext"
+			Return="ignore"
+			Execute="immediate"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NcaMsiSetUpgradeSafeRemoveContext" />
+
+		<CustomAction
+			Id="NcClearUpgSafeRemoveContext"
+			Return="ignore"
+			Execute="immediate"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NcaMsiClearUpgradeSafeRemoveContext" />
+
+		<!-- Advanced Configuration -->
+
+		<!-- 
+		Set Auto Registration Scope, set by NDAS_AR_SCOPENAME Property 
+		Scopes are pre-defined and currently only RedDotNet is valid
+		-->
+
+		<CustomAction 
+			Id="NcSetARFlags_SP"
+			Return="check"
+			Property="NcSetARFlags_XC"
+			Value="[NDASMSM_AR_SCOPENAME]" />
+
+		<CustomAction 
+			Id="NcSetARFlags_XC"
+			Return="ignore"
+			Execute="commit"
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiSetARFlags" />
+
+		<!-- 
+		Set Encryption System Key File, set by NDASMSM_EC_KEYFILE Property 
+		If the NDASMSM_EC_KEYFILE exists in the same directory in msi file,
+		system key in the file is imported to the system.
+		-->
+
+		<CustomAction 
+			Id="NcSetECFlags_SP"
+			Return="check"
+			Property="NcSetECFlags_XC"
+			Value="[SourceDir][NDASMSM_EC_KEYFILE]" />
+
+		<CustomAction 
+			Id="NcSetECFlags_XC"
+			Return="ignore"
+			Execute="commit"
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NDMsiSetECFlags" />
+
+		<CustomAction 
+			Id="NcEnableCancelButton"
+			Return="check"
+			Execute="deferred"
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NcaMsiEnableCancelButton" />
+
+		<CustomAction 
+			Id="NcDisableCancelButton"
+			Return="check"
+			Execute="deferred"
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NcaMsiDisableCancelButton" />
+
+		<CustomAction 
+			Id="NcDisableCancelForRemove" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no"
+			BinaryKey="NDASMSI.DLL" 
+			DllEntry="NcaMsiDisableCancelButton" />
+
+		<CustomAction
+			Id="NcInstallExecute"
+			Return="check"
+			Execute="immediate"
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NcaMsiInstallExecute" />
+		
+		<CustomAction
+			Id="NcForceReboot"
+			Return="check"
+			Execute="immediate"
+			BinaryKey="NDASMSI.DLL"
+			DllEntry="NcaMsiForceReboot" />
+
+
+		<Property Id="NdasMsmTotalTicks" Value="300" />
+		<Property Id="NdasMsmTotalTicks2" Value="80" />
+
+		<CustomAction Id="NcResetProgressBar_SP" Return="check" 
+					  Property="NcResetProgressBar_XC" Value="[NdasMsmTotalTicks]|0|0" />
+		<CustomAction Id="NcResetProgressBar_XC" Return="ignore" Execute="deferred"	
+					  BinaryKey="NDASMSI.DLL" DllEntry="NcaResetProgressBar" />
+
+		<CustomAction Id="NcIncProgBar2" Return="ignore" Execute="deferred"
+					  BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+
+		<CustomAction Id="NcResetProgressBar2_SP" Return="check" 
+					  Property="NcResetProgressBar2_XC" Value="[NdasMsmTotalTicks2]|0|0" />
+		<CustomAction Id="NcResetProgressBar2_XC" Return="ignore" Execute="deferred"	
+					  BinaryKey="NDASMSI.DLL" DllEntry="NcaResetProgressBar" />
+
+		<!--
+		<CustomAction Id="NcIncPgsBarStart" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarRemove1" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarRemove2" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarRemove3" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarRemove4" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarRemove5" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarRemoveINF" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarRemoveLS" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarChkPb" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarIns00" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarIns01" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarIns1" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarIns2" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarIns3" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarIns4" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarIns5" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarSCfg" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		<CustomAction Id="NcIncPgsBarFin" Return="ignore" Execute="deferred" BinaryKey="NDASMSI.DLL" DllEntry="NcaIncrementProgressBar10" />
+		-->
+
+		<!-- obsolete custom actions -->
+
+		<!--
+    <CustomAction Id="NDAS_SET_ALLUSERS" Return="check" Execute="firstSequence" Property="ALLUSERS" Value="1" />
+    <CustomAction Id="SetARPINSTALLLOCATION" Return="check" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />
+    <CustomAction Id="CheckForProductUpdates" Return="asyncNoWait" Directory="ISUpdateServiceFolder" ExeCommand="[ISUpdateServiceFolder]agent.exe &quot;/au[ProductCode] /EndOfInstall&quot;" />
+    <CustomAction Id="CheckForProductUpdatesOnReboot" Return="asyncNoWait" Directory="ISUpdateServiceFolder" ExeCommand="[ISUpdateServiceFolder]agent.exe &quot;/au[ProductCode] /EndOfInstall /Reboot&quot;" />
+    <CustomAction Id="IS_LAUNCH_MY_PROGRAM_PLEASE" Return="asyncNoWait" FileKey="ndasmgmt.exe" ExeCommand="" />
+    <CustomAction Id="NDAS_RemoveDriverSource" Return="ignore" Execute="deferred" Impersonate="no" BinaryKey="NDASMSI.DLL" DllEntry="NDMsiRemoveDriverSource" />
+    <CustomAction Id="NDAS_RemoveDriverSource_SP" Return="check" Property="NDAS_RemoveDriverSource" Value="[NdasDriverDir]" />
+    <CustomAction Id="NDAS_AddDriverSource" Return="ignore" Execute="deferred" Impersonate="no" BinaryKey="NDASMSI.DLL" DllEntry="NDMsiAddDriverSource" />
+    <CustomAction Id="NDAS_AddDriverSource_SP" Return="check" Property="NDAS_AddDriverSource" Value="[NdasDriverDir]" />
+    <CustomAction Id="NDAS_CleanupSourceDir" Return="ignore" BinaryKey="NDASMSI.DLL" DllEntry="NDMsiCleanupSourceDirectory" />
+    <CustomAction Id="SetAllUsersProfileNT" Return="check" Property="ALLUSERSPROFILE" Value="[%SystemRoot]\Profiles\All Users" />
+    <CustomAction Id="setAllUsersProfile2K" Return="check" Property="ALLUSERSPROFILE" Value="[%ALLUSERSPROFILE]" />
+    <CustomAction Id="setUserProfileNT" Return="check" Property="USERPROFILE" Value="[%USERPROFILE]" />
+    <CustomAction Id="ISSetAllUsers" Return="check" Execute="firstSequence" BinaryKey="SetAllUsers.dll" DllEntry="SetAllUsers" />
+		<CustomAction Id="NDAS_XRefreshShellIconCache" Return="check" Execute="commit" BinaryKey="NDASMSI.DLL" DllEntry="NDMsiRefreshShellIconCache" />
+    -->
+
+		<!-- === BEGIN NDASNTFS === -->
+		<?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+
+		<!-- Install -->
+		<CustomAction Id="NcInstall_NDASNTFS_SP" Return="check" 
+			Property="NcInstall_NDASNTFS_XC"
+			Value="28817|[NdasDriverDir]ndasntfs.sys|ndasntfs|NDAS NTFS|NDAS NTFS File System|2|1|1||;" />
+
+		<CustomAction Id="NcInstall_NDASNTFS_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiInstallLegacyDriver" />
+
+		<!-- Remove -->
+		<CustomAction Id="NcRemove_NDASNTFS_SP" Return="check" 
+			Property="NcRemove_NDASNTFS_XC" 
+			Value="28819|ndasntfs|ndasntfs.sys" />
+
+		<CustomAction Id="NcRemove_NDASNTFS_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiRemoveDriverService" />
+
+		<!-- Check Preboot -->
+		<CustomAction Id="NcCheckPreboot_NDASNTFS_SP" Return="check" 
+			Property="NcCheckPreboot_NDASNTFS_XC" Value="ndasntfs" />
+
+		<CustomAction Id="NcCheckPreboot_NDASNTFS_XC" Return="check" Execute="deferred" Impersonate="no"
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiCheckMarkedForDeletion" />
+
+		<!-- Rollback Remove -->
+		<CustomAction Id="NcRBRemove_NDASNTFS_SP" Return="check" 
+			Property="NcRBRemove_NDASNTFS_XC" Value="28819|ndasntfs|ndasntfs.sys" />
+
+		<CustomAction Id="NcRBRemove_NDASNTFS_XC" Return="ignore" Execute="rollback" Impersonate="no"
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiRemoveDriverService" />
+
+		<?endif?>
+		<!-- === END NDASNTFS === -->
+
+		<!-- === BEGIN NDASFAT === -->
+		<?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+		<!-- Install -->
+		<CustomAction Id="NcInstall_NDASFAT_SP" Return="check" 
+			Property="NcInstall_NDASFAT_XC"
+			Value="28818|[NdasDriverDir]ndasfat.sys|ndasfat|NDAS FAT|NDAS FAT File System|2|1|1||;" />
+
+		<CustomAction Id="NcInstall_NDASFAT_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiInstallLegacyDriver" />
+
+		<!-- Remove -->
+		<CustomAction Id="NcRemove_NDASFAT_SP" Return="check" 
+			Property="NcRemove_NDASFAT_XC" 
+			Value="28820|ndasfat|ndasfat.sys" />
+
+		<CustomAction Id="NcRemove_NDASFAT_XC" Return="check" Execute="deferred" Impersonate="no" 
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiRemoveDriverService" />
+
+		<!-- Check Preboot -->
+		<CustomAction Id="NcCheckPreboot_NDASFAT_SP" Return="check" 
+			Property="NcCheckPreboot_NDASFAT_XC" Value="ndasfat" />
+
+		<CustomAction Id="NcCheckPreboot_NDASFAT_XC" Return="check" Execute="deferred" Impersonate="no"
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiCheckMarkedForDeletion" />
+
+		<!-- Rollback Remove -->
+		<CustomAction Id="NcRBRemove_NDASFAT_SP" Return="check" 
+			Property="NcRBRemove_NDASFAT_XC" Value="28819|ndasfat|ndasfat.sys" />
+
+		<CustomAction Id="NcRBRemove_NDASFAT_XC" Return="ignore" Execute="rollback" Impersonate="no"
+			BinaryKey="NDASMSI.DLL" DllEntry="NDMsiRemoveDriverService" />
+		<?endif?>
+		<!-- === END NDASFAT === -->
+
+	</Fragment>
+</Wix>

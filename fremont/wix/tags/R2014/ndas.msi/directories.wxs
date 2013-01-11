@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment Id="directories">
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ALLUSERSPROFILE" SourceName="AllUsers" />
+			<!-- <Directory Id="AdminToolsFolder" SourceName="AdmTools" LongSource="AdminTools" /> -->
+			<Directory Id="AppDataFolder" SourceName="AppData" LongSource="ApplicationData" />
+			<Directory Id="CommonAppDataFolder" SourceName="CommApp" LongSource="CommonAppData" />
+			<Directory Id="CommonFiles64Folder" SourceName="Common64" />
+			<Directory Id="CommonFilesFolder" SourceName="Common" />
+			<Directory Id="DesktopFolder" SourceName="Desktop" />
+			<!-- <Directory Id="FavoritesFolder" SourceName="Favorite" LongSource="Favorites" /> -->
+			<!-- <Directory Id="FontsFolder" SourceName="Fonts" /> -->
+			<!-- 
+			<Directory Id="GlobalAssemblyCache" SourceName="GAC" LongSource="GlobalAssemblyCache" />
+			<Directory Id="LocalAppDataFolder" SourceName="LocalApp" LongSource="LocalAppData" />
+			-->
+			<!-- <Directory Id="PrimaryVolumePath" SourceName="PVP" LongSource="PrimaryVolumePath" /> -->
+			<Directory Id="ProgramFiles64Folder" SourceName="PFiles64" LongSource="ProgramFiles64"/>
+			<Directory Id="ProgramFilesFolder" SourceName="PFiles" LongSource="ProgramFiles"/>
+			<!-- Id="SendToFolder" SourceName="SendTo" /> -->
+			<Directory Id="StartMenuFolder" SourceName="StartMnu" LongSource="StartMenu" />
+			<Directory Id="StartupFolder" SourceName="StartUp" />
+			<!-- <Directory Id="System16Folder" SourceName="System" /> -->
+			<Directory Id="System64Folder" SourceName="System64" />
+			<Directory Id="SystemFolder" SourceName="System32" />
+			<Directory Id="TempFolder" SourceName="Temp" />
+			<!-- <Directory Id="TemplateFolder" SourceName="ShellNew" /> -->
+			<Directory Id="USERPROFILE" SourceName="UserProf" LongSource="UserProfile" />
+			<Directory Id="WindowsFolder" SourceName="Windows" />
+			<!-- <Directory Id="WindowsVolume" SourceName="WinRoot" /> -->
+			<Directory Id="ProgramMenuFolder" SourceName="Programs"/>
+		</Directory>
+
+		<?ifdef Win64Build?>
+		<?define ProgramFilesFolder="ProgramFiles64Folder"?>
+		<?else?>
+		<?define ProgramFilesFolder="ProgramFilesFolder"?>
+		<?endif?>
+
+		<DirectoryRef Id="$(var.ProgramFilesFolder)">
+		  <?ifdef UseCompanyFolder?>
+		  <Directory Id="NdasCompanyFolder" 
+					   Name="$(loc.ProgramFilesCompanyFolder83)"
+					   LongName="$(loc.ProgramFilesCompanyFolder)">
+		  <?endif?>
+			<Directory Id="NdasProductFolder" 
+					   Name="$(loc.ProgramFilesGroupFolder83)"
+					   LongName="$(loc.ProgramFilesGroupFolder)">
+			  <Directory Id="INSTALLDIR" />
+			</Directory>
+		  <?ifdef UseCompanyFolder?>
+		  </Directory>
+		  <?endif?>
+		</DirectoryRef>
+
+		<DirectoryRef Id="INSTALLDIR">
+			<Directory Id="NdasAppFolder" Name="System" />
+			<Directory Id="NdasDriverFolder" Name="Drivers" />
+		</DirectoryRef>
+
+		<DirectoryRef Id="ProgramMenuFolder">
+		  <!-- <Directory Id="NdasProgramMenuCompanyFolder" Name="XIMETA"> -->
+		  <?ifdef UseProgramMenuCompanyFolder?>
+		  <Directory Id="NdasProgramMenuCompanyFolder" Name="$(loc.ProgramMenuCompanyFolder83)" LongName="$(loc.ProgramMenuCompanyFolder)">
+			<?endif?>
+			<Directory Id="NdasProgramMenuFolder" 
+					   Name="$(loc.ProgramMenuGroupFolder83)" 
+					   LongName="$(loc.ProgramMenuGroupFolder)" />
+			<?ifdef UseProgramMenuCompanyFolder?>
+		  </Directory>
+		  <?endif?>
+		</DirectoryRef>
+		
+	</Fragment>
+</Wix>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="ErrorEx">
+    <UI>
+      <!-- Custom Errors -->
+      <Error Id="25900">$(loc.Error.25900)</Error>
+      <Error Id="27500">$(loc.Error.27500)</Error>
+      <Error Id="27501">$(loc.Error.27501)</Error>
+    </UI>
+  </Fragment>
+</Wix>

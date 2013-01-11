@@ -1,0 +1,60 @@
+;-------------------------------------------------------------------------
+; ndaspext.inf
+; 
+; Installation file (.inf) for NDAS Port Extender
+;
+; Copyright (c) 2002-2006, XIMETA, Inc.
+;-------------------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Provider    = %PROVIDER%
+DriverVer   = 08/28/2000,1.0.0.1
+CatalogFile = ndaspext.cat
+
+[DestinationDirs]
+DefaultDestDir          = 12 ; DIRID_DRIVERS
+NdasPortExt.DriverFiles = 12 ; DIRID_DRIVERS
+
+[DefaultInstall.NT$ARCH$]
+OptionDesc = %NdasPortExt.ServiceDesc%
+CopyFiles = NdasPortExt.DriverFiles
+
+[DefaultInstall.NT$ARCH$.Services]
+AddService=%NdasPortExt.ServiceName%,,NdasPortExt.Service
+
+[DefaultUninstall.NT$(ARCH)]
+DelFiles = NdasPortExt.DriverFiles
+
+[DefaultUninstall.NT.Services]
+DelService = ndaspext,0x200 ; Flags note to stop service first
+
+[NdasPortExt.Service]
+DisplayName      = %NdasPortExt.DisplayName%
+Description      = %NdasPortExt.ServiceDesc%
+ServiceBinary    = %12%\ndaspext.sys ; DIRID_DRIVERS\ndaspext.sys
+ServiceType      = 1 ;SERVICE_KERNEL_DRIVER
+StartType        = 3 ;SERVICE_DEMAND_START
+ErrorControl     = 1 ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = %NdasPortExt.LoadOrderGroup%
+
+[NdasPortExt.DriverFiles]
+ndaspext.sys
+
+[SourceDisksNames]
+1=%DiskId1%
+
+[SourceDisksFiles]
+ndaspext.sys=1
+
+[Strings]
+; Non-localizable Strings
+NdasPortExt.ServiceName    = "ndaspext"
+NdasPortExt.RegPath        = "SYSTEM\CurrentControlSet\Services\ndaspext"
+NdasPortExt.LoadOrderGroup = "System Bus Extender"
+
+; Localizable Strings
+Provider                = "XIMETA"
+NdasPortExt.DisplayName = "NDAS Port Extender Service"
+NdasPortExt.ServiceDesc = "NDAS Port Extender Service"
+DiskId1                 = "NDAS Device Driver Installation Disk"

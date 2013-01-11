@@ -1,0 +1,75 @@
+TARGETPATH=obj
+
+TARGETLIBS=\
+    ..\..\lfs\mp\$(O)\lfs.lib \
+    ..\..\efs\$(O)\efs.lib \
+    $(DS_LIB_PATH)\rsa32k.lib \
+    $(DDK_LIB_PATH)\ksecdd.lib
+
+!include ..\sources.inc
+
+#
+# Windows XP Rsa32k library for AMD64 has different section attributes of PAGER32R section
+# from WDK .rdata section.
+#
+!IFDEF USING_WDK
+!IF "$(_BUILDARCH)" == "AMD64"
+NO_MERGE_RSA32K_PAGER32R_SECTION_X64=1
+!ENDIF
+!ENDIF
+
+!if $(IA64)
+LINKER_FLAGS=$(LINKER_FLAGS) -MERGE:PAGER32D=.sdata -MERGE:PAGER32R=.rdata -MERGE:PAGER32C=.text
+!else
+!IFDEF NO_MERGE_RSA32K_PAGER32R_SECTION_X64
+LINKER_FLAGS=$(LINKER_FLAGS) -MERGE:PAGER32D=.data -MERGE:PAGER32C=.text
+!ELSE
+LINKER_FLAGS=$(LINKER_FLAGS) -MERGE:PAGER32D=.data -MERGE:PAGER32R=.rdata -MERGE:PAGER32C=.text
+!ENDIF
+
+!endif
+
+NO_SAFESEH=1
+
+!IF "$(_BUILDARCH)" == "AMD64"
+
+TARGETLIBS=\
+    ..\..\lfs\mp\$(O)\lfs.lib		\
+    ..\..\efs\$(O)\efs.lib			\
+    ..\..\lib\amd64\rsa32k.lib		\
+    $(DDK_LIB_PATH)\ksecdd.lib		\
+    $(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib
+
+!ELSE
+
+TARGETLIBS=\
+    ..\..\lfs\mp\$(O)\lfs.lib		\
+    ..\..\efs\$(O)\efs.lib			\
+    ..\..\lib\i386\rsa32k.lib		\
+    $(DDK_LIB_PATH)\ksecdd.lib		\
+    $(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib
+
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\ntstrsafe.lib
+
+!ENDIF
+
+
+SOURCES=$(SOURCES)								\
+		..\ndasntfs.c							\
+		..\PrimarySession.c						\
+		..\PrimarySessionThread.c				\
+		..\PrimarySessionDispatchRequest.c		\
+		..\PrimarySessionDispatchWinXpRequest.c	\
+		..\Secondary.c							\
+		..\SecondaryThread.c					\
+		..\SecondaryCleanUp.c					\
+		..\SecondaryFileInfo.c					\
+		..\SecondaryFlush.c						\
+		..\SecondaryFileIo.c					\
+		..\SecondaryFsctl.c						\
+		..\SecondaryRecovery.c					\
+		..\SecondaryRecoveryLib.c				\
+		..\SecondaryCreate.c					\
+		..\SecondaryWrite.c						\
+		..\SecondaryDirCtrl.c				

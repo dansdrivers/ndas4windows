@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+	<?include config.wxi?>
+
+	<?ifdef WixCustomTableLocBug?>
+	<?define ActionData.NDASROFS   = "NDAS ROFS File System" ?>
+	<?endif?>
+
+	<Fragment>
+
+		<?ifdef Include.NDASROFS?>
+
+		<InstallExecuteSequence>
+			<Custom Action="NdasRofsShutdown" Before="xDiMsiStopServices">(?ndasrofs=3) AND ($ndasrofs=2 OR $ndasrofs=4)</Custom>
+		</InstallExecuteSequence>
+
+		<CustomAction Id="NdasRofsShutdown" BinaryKey="ndasfsms.dll" DllEntry="NdasRofsMsiShutdown" Execute="deferred" Return="ignore" Impersonate="no" />
+
+		<UI>
+			<ProgressText Action="NdasRofsShutdown">$(loc.ActionText.NdasRofsShutdown)</ProgressText>
+		</UI>
+
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.SetupFileSource)">
+			<Component Id="ndasrofs" Guid="$(var.NDASROFS.GUID)" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasrofs.sys" Name="ndasrofs.sys" KeyPath="yes" Checksum="yes" />
+				<File Id="ndasrofs.inf" Name="ndasrofs.inf" Checksum="yes" />
+				<File Id="ndasrofs.cat" Name="ndasrofs.cat" Checksum="yes" />
+				<Registry Id="ndasrofs" Root="HKLM" Key="SOFTWARE\NDAS\Install\OEMINF" Type="string" Name="NDASROFS" />
+			</Component>
+		</DirectoryRef>
+
+		<CustomTable Id="xDriverInstall">
+			<Row>
+				<Data Column="Id">StopNDASROFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASROFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASROFS)</Data>
+				<?endif?>
+				<Data Column="Phase">3</Data>
+				<Data Column="Type">StopService</Data>
+				<Data Column="HardwareId">ndasrofs</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASROFS.Stop)</Data>
+				<Data Column="Condition">(?ndasrofs=3) AND ($ndasrofs=2 OR $ndasrofs=4)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">UninstallNDASROFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASROFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASROFS)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultUninstall</Data>
+				<Data Column="INF">[#ndasrofs.inf]</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASROFS.Uninstall)</Data>
+				<Data Column="Condition">(?ndasrofs=3) AND ($ndasrofs=2 OR $ndasrofs=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasrofs</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">InstallNDASROFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASROFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASROFS)</Data>
+				<?endif?>
+				<Data Column="Phase">2</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultInstall;DefaultUninstall</Data>
+				<Data Column="INF">[#ndasrofs.inf]</Data>
+				<Data Column="Flags">2</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASROFS.Install)</Data>
+				<Data Column="Condition">($ndasrofs=3)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasrofs</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">StartNDASROFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASROFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASROFS)</Data>
+				<?endif?>
+				<Data Column="Phase">4</Data>
+				<Data Column="Type">StartService</Data>
+				<Data Column="HardwareId">ndasrofs</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASROFS.Start)</Data>
+				<Data Column="Condition">($ndasrofs=3)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+		</CustomTable>
+
+		<?endif?>
+
+	</Fragment>
+</Wix>

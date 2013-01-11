@@ -1,0 +1,54 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=xdbgflags
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+INCLUDES=.\inc;$(NDAS_INC_PATH);$(NDAS_INC_PATH)\ndas;$(PSDK_INC_PATH)
+RCOPTIONS=/i $(NDAS_SDK_INC_PATH) 
+USECXX_FLAG=/Tp
+UMENTRY=wwinmain
+UMTYPE=windows
+USER_CFLAGS=/Wp64 /GS
+
+!if $(FREEBUILD)
+USE_MSVCRT=1
+!else
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!endif
+
+USE_WTL=1
+USE_STATIC_ATL=1
+ATL_MIN_CRT=1
+
+MSC_WARNING_LEVEL=-W3 -WX
+#MSC_OPTIMIZATION=/Oitb2
+#MSC_OPTIMIZATION=/Od /Oi
+
+PRECOMPILED_INCLUDE=stdafx.h
+PRECOMPILED_CXX=1
+
+TARGETLIBS=\
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+    $(PSDK_LIB_PATH)\gdi32.lib \
+    $(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+    $(PSDK_LIB_PATH)\shell32.lib \
+    $(PSDK_LIB_PATH)\comctl32.lib \
+    $(PSDK_LIB_PATH)\ole32.lib \
+    $(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\uuid.lib
+
+SOURCES= \
+	maindlg.cpp \
+	xdbgflags.cpp \
+	xdbgflags.rc

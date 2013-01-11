@@ -1,0 +1,38 @@
+TARGETNAME=NDLog
+TARGETPATH=..\..\lib\$(BUILD_ALT_DIR)
+#
+# LIBRARY
+#
+TARGETTYPE=LIBRARY
+#
+# PROGRAM (TEST)
+#
+#TARGETTYPE=PROGRAM
+#TARGETLIBS= \
+#	$(SDK_LIB_PATH)\kernel32.lib \
+#	$(SDK_LIB_PATH)\user32.lib 
+
+INCLUDES=..\inc
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+#
+# Consult build.hlp for the following.  Generally, these
+# should be left alone.
+#
+#C_DEFINES= $(C_DEFINES) -DMBCS -D_MBCS
+C_DEFINES= $(C_DEFINES) -DUNICODE -D_UNICODE
+MSC_WARNING_LEVEL=/W3 /WX
+RCOPTIONS=-N
+USE_STATIC_ATL=1
+USE_LIBCMT=1
+#USE_NATIVE_EH=1
+#USE_RTTI=1
+
+#UMTYPE=windows
+#UMENTRY=wmain
+
+
+SOURCES=\
+	NDLog.cpp

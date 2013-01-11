@@ -1,0 +1,54 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=ndasidt
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+INCLUDES=..;..\inc;$(NDAS_INC_PATH);$(PSDK_INC_PATH)
+
+RCOPTIONS=/i $(NDAS_SDK_INC_PATH)
+USECXX_FLAG=/Tp
+USER_C_FLAGS=/GS /Gs
+UMENTRY=wwinmain
+UMTYPE=windows
+
+USE_WTL=1
+USE_STATIC_ATL=1
+ATL_MIN_CRT=1
+
+MSC_WARNING_LEVEL=-W3 -WX -Wp64
+
+PRECOMPILED_INCLUDE=precomp.hpp
+
+USE_LIBC=1
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Os /Ox
+LINK_TIME_CODE_GENERATION=1
+!ELSE
+DEBUG_CRTS=1
+!ENDIF
+
+TARGETLIBS=\
+	$(NDAS_LIB_PATH)\libndasidenc.lib \
+	$(NDAS_LIB_PATH)\libdes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\comctl32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib
+
+SOURCES=\
+	ndasidt.cpp \
+	maindlg.cpp \
+	ndasidt.rc
+

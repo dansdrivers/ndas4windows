@@ -1,0 +1,1067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="" version="" lang="nld" oem="base" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/13/09">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>Incompatibele NDASUSER.DLL is geïnstalleerd.\r\nControleer de installatie van de software.</translation>
+  </string>
+  <string id="/STR/13/10">
+    <base><![CDATA[Incompatible NDASCOMM.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>Incompatibele NDASCOMM.DLL is geïnstalleerd.\r\nControleer de installatie van de software.</translation>
+  </string>
+  <string id="/STR/18/14">
+    <base><![CDATA[%1!3d!.%2!02d! GB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/19/02">
+    <base><![CDATA[A disk cannot be mirrored by the smaller disk in size.]]></base>
+    <translation>Een schijf kan niet gespiegeld worden door een kleinere schijf.</translation>
+  </string>
+  <string id="/STR/20/05">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation>NDAS-verbindingsmanagement</translation>
+  </string>
+  <string id="/STR/20/07">
+    <base><![CDATA[Component]]></base>
+    <translation>Component </translation>
+  </string>
+  <string id="/STR/20/08">
+    <base><![CDATA[Version]]></base>
+    <translation>Versie  </translation>
+  </string>
+  <string id="/STR/20/11">
+    <base><![CDATA[Name]]></base>
+    <translation>Naam</translation>
+  </string>
+  <string id="/STR/20/12">
+    <base><![CDATA[NDAS ID]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/20/13">
+    <base><![CDATA[Capacity]]></base>
+    <translation>Capaciteit</translation>
+  </string>
+  <string id="/STR/20/14">
+    <base><![CDATA[Number]]></base>
+    <translation>Nummer</translation>
+  </string>
+  <string id="/STR/21/06">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation>NDAS-verbindingsmanagement</translation>
+  </string>
+  <string id="/STR/22/02">
+    <base><![CDATA[NDAS Bind Error]]></base>
+    <translation>NDAS-verbindingsfout</translation>
+  </string>
+  <string id="/STR/22/03">
+    <base><![CDATA[Failed to convert the selected disk to a basic disk.]]></base>
+    <translation>Geselecteerde schijf naar basisschijf converteren is mislukt.</translation>
+  </string>
+  <string id="/STR/22/09">
+    <base><![CDATA[Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!]]></base>
+    <translation>Faciliteit: NDAS 0x%1!04X!\r\nFoutcode: %2!u! (0x%2!04X!)\r\n%3!s!</translation>
+  </string>
+  <string id="/STR/22/10">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation>Foutcode: %1!u! (0x%1!04X!)\r\n%2!s!</translation>
+  </string>
+  <string id="/STR/22/11">
+    <base><![CDATA[All of the data will be lost once the disks are bound. Are you sure you want to bind the disks?]]></base>
+    <translation>Alle gegevens zullen verloren gaan als de schijven verbonden zijn. Bent u zeker dat u de schijven wilt verbinden?</translation>
+  </string>
+  <string id="/STR/22/12">
+    <base><![CDATA[Some version of Windows cannot access a disk larger than 2 TBytes and the size of bound disks is larger than the limit. Do you want to continue?]]></base>
+    <translation>Sommige versies van Windows hebben geen toegang tot schijven van meer dan 2 TB en de verbonden schijven zijn groter dan de limiet. Wilt u verdergaan?</translation>
+  </string>
+  <string id="/STR/23/00">
+    <base><![CDATA[%1!s! does not have Write access privilege. The NDAS device's Write Key is required to be registered to gain Write access.]]></base>
+    <translation>%1!s! heeft geen schrijftoegangsrechten. De write key van het NDAS-apparaat moet geregistreerd zijn om schrijftoegang te verkrijgen.</translation>
+  </string>
+  <string id="/STR/23/05">
+    <base><![CDATA[All of the data will be lost once the disks are unbound. Are you sure you want to unbind the disks?]]></base>
+    <translation>Alle data zullen verloren gaan als de schijven losgemaakt zijn. Bent u zeker dat u de schijven wilt losmaken?</translation>
+  </string>
+  <string id="/STR/23/06">
+    <base><![CDATA[Selected disks are successfully unbound. You must first mount and then format each of the unbound disks before using them.]]></base>
+    <translation>De geselecteerde schijven zijn succesvol losgemaakt. U moet eerst iedere losgemaakte schijf monteren en dan formatteren alvorens ze te gebruiken.</translation>
+  </string>
+  <string id="/STR/23/08">
+    <base><![CDATA[A problem occurred while operating on the NDAS device '%1!s!'.]]></base>
+    <translation>Er is een probleem opgetreden tijdens het bedienen van het NDAS-apparaat '%1!s!'. </translation>
+  </string>
+  <string id="/STR/23/09">
+    <base><![CDATA[A problem occurred while operating on the NDAS devices.]]></base>
+    <translation>Er is een probleem opgetreden tijdens het bedienen van de NDAS-apparaten.</translation>
+  </string>
+  <string id="/STR/24/00">
+    <base><![CDATA[Bind type]]></base>
+    <translation>Verbindingstype </translation>
+  </string>
+  <string id="/STR/24/01">
+    <base><![CDATA[Striped Disk (RAID-0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/02">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation>Mirrored Disk (RAID-1) (Afgekeurd)</translation>
+  </string>
+  <string id="/STR/24/03">
+    <base><![CDATA[RAID-2 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/04">
+    <base><![CDATA[RAID-3 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/05">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation>RAID-4 Disk(Afgekeurd)</translation>
+  </string>
+  <string id="/STR/24/06">
+    <base><![CDATA[RAID-5 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/07">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation>Samengestelde schijf</translation>
+  </string>
+  <string id="/STR/24/08">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Compacte flash drive</translation>
+  </string>
+  <string id="/STR/24/09">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation>DVD-drive</translation>
+  </string>
+  <string id="/STR/24/10">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/11">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO-drive</translation>
+  </string>
+  <string id="/STR/24/12">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation>Basisschijf</translation>
+  </string>
+  <string id="/STR/24/13">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation>Onbekend type (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/24/14">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation>Virtuele dvd-drive</translation>
+  </string>
+  <string id="/STR/25/02">
+    <base><![CDATA[Device not found]]></base>
+    <translation>Apparaat niet gevonden</translation>
+  </string>
+  <string id="/STR/25/03">
+    <base><![CDATA[Status]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/25/04">
+    <base><![CDATA[RAID status]]></base>
+    <translation>RAID-status</translation>
+  </string>
+  <string id="/STR/25/05">
+    <base><![CDATA[Comment]]></base>
+    <translation>Commentaar</translation>
+  </string>
+  <string id="/STR/25/07">
+    <base><![CDATA[Yes]]></base>
+    <translation>Ja</translation>
+  </string>
+  <string id="/STR/25/08">
+    <base><![CDATA[No]]></base>
+    <translation>Neen</translation>
+  </string>
+  <string id="/STR/25/09">
+    <base><![CDATA[Missing Member]]></base>
+    <translation>Ontbrekend lid</translation>
+  </string>
+  <string id="/STR/25/10">
+    <base><![CDATA[Yes (Need Resynchronizing)]]></base>
+    <translation>Ja (hersynchroniseren nodig)</translation>
+  </string>
+  <string id="/STR/25/12">
+    <base><![CDATA[Offline]]></base>
+    <translation>Offline</translation>
+  </string>
+  <string id="/STR/25/13">
+    <base><![CDATA[In use]]></base>
+    <translation>In gebruik</translation>
+  </string>
+  <string id="/STR/25/14">
+    <base><![CDATA[No Write Key]]></base>
+    <translation>Geen write key</translation>
+  </string>
+  <string id="/STR/25/15">
+    <base><![CDATA[Ready]]></base>
+    <translation>Klaar</translation>
+  </string>
+  <string id="/STR/26/00">
+    <base><![CDATA[Migrates mirrored disks to recoverable disks\nMigrate]]></base>
+    <translation>Migreert gespiegelde schijven naar herstelbare schijven\nMigreren</translation>
+  </string>
+  <string id="/STR/26/01">
+    <base><![CDATA[Disabled]]></base>
+    <translation>Uitgeschakeld</translation>
+  </string>
+  <string id="/STR/26/02">
+    <base><![CDATA[Do you want to unbind the following disks?]]></base>
+    <translation>Wilt u de volgende schijven losmaken?</translation>
+  </string>
+  <string id="/STR/26/03">
+    <base><![CDATA[Selected disks are successfully unbound.]]></base>
+    <translation>Geselecteerde schijven zijn succesvol losgemaakt.</translation>
+  </string>
+  <string id="/STR/27/06">
+    <base><![CDATA[NDAS Bind Wizard]]></base>
+    <translation>NDAS-verbindingswizard</translation>
+  </string>
+  <string id="/STR/27/07">
+    <base><![CDATA[Select Bind Type]]></base>
+    <translation>Selecteer verbindingstype</translation>
+  </string>
+  <string id="/STR/27/08">
+    <base><![CDATA[You can select the bind type.]]></base>
+    <translation>U kunt het verbindingstype selecteren.</translation>
+  </string>
+  <string id="/STR/27/09">
+    <base><![CDATA[Select Disk]]></base>
+    <translation>Selecteer schijf</translation>
+  </string>
+  <string id="/STR/27/10">
+    <base><![CDATA[You can select the disks to be bound.]]></base>
+    <translation>U kunt de te verbinden schijven selecteren.</translation>
+  </string>
+  <string id="/STR/27/13">
+    <base><![CDATA[Verdana]]></base>
+    <translation>Verdana</translation>
+  </string>
+  <string id="/STR/27/14">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/28/01">
+    <base><![CDATA[You have successfully completed the Disk Bind Wizard. You must first mount and then format the bound disks before using them.]]></base>
+    <translation>U hebt de Schijfverbindingswizard succesvol doorlopen. U moet de verbonden schijven eerst monteren en dan formatteren alvorens ze te gebruiken.</translation>
+  </string>
+  <string id="/STR/28/02">
+    <base><![CDATA[You have failed to bind disks.]]></base>
+    <translation>Schijven verbinden mislukt.</translation>
+  </string>
+  <string id="/STR/28/03">
+    <base><![CDATA[Bind Type: %1!s!]]></base>
+    <translation>Verbindingstype: %1!s!</translation>
+  </string>
+  <string id="/STR/28/04">
+    <base><![CDATA[Disks selected:]]></base>
+    <translation>Geselecteerde schijven:</translation>
+  </string>
+  <string id="/STR/28/05">
+    <base><![CDATA[Disks size: %1!s!]]></base>
+    <translation>Schijfgrootte: %1!s!</translation>
+  </string>
+  <string id="/STR/28/06">
+    <base><![CDATA[Failed device: %1!s!]]></base>
+    <translation>Mislukt apparaat: %1!s!</translation>
+  </string>
+  <string id="/STR/28/07">
+    <base><![CDATA[An aggregated disk is made up of more than one disks. Create an aggregated disk if you need a disk that is too large for a basic disk.]]></base>
+    <translation>Een samengestelde schijf bestaat uit verschillende schijven. Maak een samengestelde schijf als u een schijf nodig hebt die te groot is voor een basisschijf.</translation>
+  </string>
+  <string id="/STR/28/08">
+    <base><![CDATA[A striped disk (RAID-0) stores data in stripes on two or more disks. A striped disk gives you faster access to your data than a basic or aggregated volume.]]></base>
+    <translation>Een gestreepte schijf (RAID-0) slaat gegevens op in strepen op twee of meer schijven. Een gestreepte schijf geeft u sneller toegang tot uw gegevens dan een basis- of samengesteld volume.</translation>
+  </string>
+  <string id="/STR/28/09">
+    <base><![CDATA[A mirrored disk (RAID-1) duplicates your data on two disks. Create a mirrored disk if you want to keep two separate copies of all your information to prevent data loss.]]></base>
+    <translation>Een gespiegelde schijf (RAID-1) kopieert uw gegevens op twee schijven. Maak een gespiegelde schijf als u twee afzonderlijke kopieën van al uw informatie wilt houden om gegevensverlies te voorkomen.</translation>
+  </string>
+  <string id="/STR/28/10">
+    <base><![CDATA[A RAID-4 disk stores data in stripes on three or more disks. It provides a way of recovering data if part of the data is lost.]]></base>
+    <translation>Een RAID-4 schijf slaat gegevens op in strepen op drie of meer schijven. Het biedt een mogelijkheid om gegevens te herstellen als een deel van de gegevens verloren zijn.</translation>
+  </string>
+  <string id="/STR/28/11">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation>Gespiegelde schijf (RAID-1) (Afgekeurd)</translation>
+  </string>
+  <string id="/STR/28/12">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation>RAID-4 schijf (Afgekeurd)</translation>
+  </string>
+  <string id="/STR/28/13">
+    <base><![CDATA[Mirrored Disk (RAID-1)]]></base>
+    <translation>Gespiegelde schijf (RAID-1)</translation>
+  </string>
+  <string id="/STR/28/14">
+    <base><![CDATA[RAID-4 Disk]]></base>
+    <translation>Gespiegelde schijf (RAID-1)</translation>
+  </string>
+  <string id="/STR/28/15">
+    <base><![CDATA[Not registered]]></base>
+    <translation>Niet geregistreerd</translation>
+  </string>
+  <string id="/STR/29/01">
+    <base><![CDATA[Failed to migrate.]]></base>
+    <translation>Migreren mislukt.</translation>
+  </string>
+  <string id="/STR/29/02">
+    <base><![CDATA[Requested operation cannot be processed while the NDAS device is offline or in use in other hosts.]]></base>
+    <translation>Gevraagde bewerking kan niet uitgevoerd worden terwijl het NDAS-apparaat offline is of in gebruik bij andere hosts.</translation>
+  </string>
+  <string id="/STR/68/06">
+    <base><![CDATA[Press the start button to continue.]]></base>
+    <translation>Klik op de startknop om verder te gaan.</translation>
+  </string>
+  <string id="/STR/68/07">
+    <base><![CDATA[Synchronizing devices...]]></base>
+    <translation>Apparaten synchroniseren…</translation>
+  </string>
+  <string id="/STR/68/08">
+    <base><![CDATA[Synchronization completed.]]></base>
+    <translation>Synchronisatie voltooid.</translation>
+  </string>
+  <string id="/STR/68/09">
+    <base><![CDATA[Failed to synchronize devices.]]></base>
+    <translation>Apparaten synchroniseren mislukt.</translation>
+  </string>
+  <string id="/STR/68/10">
+    <base><![CDATA[Add mirror disk]]></base>
+    <translation>Spiegelschijf toevoegen</translation>
+  </string>
+  <string id="/STR/68/13">
+    <base><![CDATA[Adds a spare disk to the fault tolerant RAID disk group.\nAdd Spare Disk]]></base>
+    <translation>Voegt een reserveschijf toe aan de fouttolerante RAID schijfgroep.\nReserveschijf toevoegen</translation>
+  </string>
+  <string id="/STR/68/14">
+    <base><![CDATA[Removes a spare disk from the fault tolerant RAID disk group.\nRemove Spare Disk]]></base>
+    <translation>Verwijdert een reserveschijf van de fouttolerante RAID schijfgroep.\nVerwijder reserveschijf</translation>
+  </string>
+  <string id="/STR/69/05">
+    <base><![CDATA[Select a spare disk]]></base>
+    <translation>Selecteer een reserveschijf</translation>
+  </string>
+  <string id="/STR/69/06">
+    <base><![CDATA[Select a disk to be used as a spare disk for the RAID]]></base>
+    <translation>Selecteer een schijf om te gebruiken als reserveschijf voor de RAID</translation>
+  </string>
+  <string id="/STR/69/08">
+    <base><![CDATA[The disk is too small to be used as a spare disk.]]></base>
+    <translation>De schijf is te klein om te gebruiken als reserveschijf.</translation>
+  </string>
+  <string id="/STR/69/09">
+    <base><![CDATA[Select a mirror disk]]></base>
+    <translation>Selecteer een spiegelschijf</translation>
+  </string>
+  <string id="/STR/69/10">
+    <base><![CDATA[Select a backup disk to make a mirror.]]></base>
+    <translation>Selecteer een reserveschijf om een spiegel te maken.</translation>
+  </string>
+  <string id="/STR/69/11">
+    <base><![CDATA[Unbind]]></base>
+    <translation>Losmaken</translation>
+  </string>
+  <string id="/STR/69/12">
+    <base><![CDATA[Data on the following disks will be deleted.\nAre you sure you want to unbind them?]]></base>
+    <translation>Gegevens op de volgende schijven zullen verwijderd worden.\nBent u zeker dat u ze wilt losmaken?</translation>
+  </string>
+  <string id="/STR/69/13">
+    <base><![CDATA[Replace the selected device in RAID with another one.]]></base>
+    <translation>Vervang het geselecteerde apparaat in RAID door een ander.</translation>
+  </string>
+  <string id="/STR/69/14">
+    <base><![CDATA[Use this device as RAID member.]]></base>
+    <translation>Gebruik dit apparaat als RAID-lid.</translation>
+  </string>
+  <string id="/STR/69/15">
+    <base><![CDATA[The requested operation has not succeeded.]]></base>
+    <translation>De gevraagde bewerking is niet gelukt.</translation>
+  </string>
+  <string id="/STR/70/00">
+    <base><![CDATA[Removing a spare disk]]></base>
+    <translation>Reserveschijf verwijderen</translation>
+  </string>
+  <string id="/STR/70/01">
+    <base><![CDATA[Are you sure you want to remove the selected spare disk?]]></base>
+    <translation>Bent u zeker dat u de geselecteerde reserveschijf wilt verwijderen?</translation>
+  </string>
+  <string id="/STR/70/02">
+    <base><![CDATA[Convert to the Basic Disk]]></base>
+    <translation>Converteer naar de basisschijf</translation>
+  </string>
+  <string id="/STR/70/03">
+    <base><![CDATA[All of the data will be lost once the disk is reset to a basic disk. Would you like to continue?]]></base>
+    <translation>Alle gegevens zullen verloren gaan als de schijf gereset is naar een basisschijf. Wilt u verdergaan?</translation>
+  </string>
+  <string id="/STR/70/14">
+    <base><![CDATA[Select a replace disk]]></base>
+    <translation>Selecteer een vervangschijf</translation>
+  </string>
+  <string id="/STR/70/15">
+    <base><![CDATA[Select a disk to be used as a replacement.]]></base>
+    <translation>Selecteer een schijf om te gebruiken als vervanging.</translation>
+  </string>
+  <string id="/STR/71/00">
+    <base><![CDATA[Replace a hard drive]]></base>
+    <translation>Vervang een harde schijfeenheid</translation>
+  </string>
+  <string id="/STR/71/01">
+    <base><![CDATA[Press OK if you want to replace a missing drive with new one.]]></base>
+    <translation>Klik op OK als u een ontbrekende schijfeenheid door een nieuwe wilt vervangen.</translation>
+  </string>
+  <string id="/STR/71/02">
+    <base><![CDATA[Migrate]]></base>
+    <translation>Migreren</translation>
+  </string>
+  <string id="/STR/71/03">
+    <base><![CDATA[Previous version of NDAS software may not be able to use these devices after migration.\nAre you sure you want to migrate them?]]></base>
+    <translation>Vorige versie van NDAS-software kan deze apparaten mogelijk niet gebruiken na migratie.\nBent u zeker dat u ze wilt migreren?</translation>
+  </string>
+  <string id="/STR/71/04">
+    <base><![CDATA[Reset bind information to remove unrecognized bind information.]]></base>
+    <translation>Reset verbindingsinformatie om onherkende verbindingsinformatie te verwijderen.</translation>
+  </string>
+  <string id="/STR/71/05">
+    <base><![CDATA[Clear defective flag from the disk.]]></base>
+    <translation>Verwijder kapotte vlag van de schijf.</translation>
+  </string>
+  <string id="/STR/71/06">
+    <base><![CDATA[Remove disk from RAID set. Disk type is not changed.]]></base>
+    <translation>Verwijder schijf van RAID-set. Schijftype is niet gewijzigd.</translation>
+  </string>
+  <string id="/STR/71/07">
+    <base><![CDATA[Remove disk from RAID set and convert it to basic disk.]]></base>
+    <translation>Verwijder schijf van RAID-set en converteer naar basisschijf.</translation>
+  </string>
+  <string id="/STR/71/08">
+    <base><![CDATA[Cannot replace the selected disk. \nReplacement will break RAID.]]></base>
+    <translation>Kan de geselecteerde schijf niet vervangen.\nVervanging zal RAID breken.</translation>
+  </string>
+  <string id="/STR/71/09">
+    <base><![CDATA[Not all member disks are accessible.\nChanging RAID configuration with missing member can make RAID fail.\nDo you want to continue?]]></base>
+    <translation>Niet alle schijfleden zijn toegankelijk.\nRAID-configuratie wijzigen met ontbrekend lid kan RAID doen mislukken.\nWilt u verdergaan?</translation>
+  </string>
+  <string id="/STR/71/10">
+    <base><![CDATA[The disk is too small to be used as this RAID member.]]></base>
+    <translation>De schijf is te klein om te gebruiken als dit RAID-lid.</translation>
+  </string>
+  <string id="/STR/71/11">
+    <base><![CDATA[The data of this disk will be lost and if this disk is a member of another RAID, it may be broken.Do you want to continue?]]></base>
+    <translation>De gegevens van deze schijf zullen verloren gaan en als deze schijf lid is van een andere RAID kan ze breken. Wilt u verdergaan?</translation>
+  </string>
+  <string id="/STR/71/12">
+    <base><![CDATA[RAID containing this disk may be broken after this operation. Do you want to continue?]]></base>
+    <translation>RAID die deze schijf bevat kan breken na deze bewerking. Wilt u verdergaan?</translation>
+  </string>
+  <string id="/STR/71/13">
+    <base><![CDATA[Cannot remove the selected disk.\nIt will break RAID.]]></base>
+    <translation>Kan de geselecteerde schijf niet vervangen.\nVervanging zal RAID breken.</translation>
+  </string>
+  <string id="/STR/71/14">
+    <base><![CDATA[Not all member disks are accessible.]]></base>
+    <translation>Niet alle schijfleden zijn toegankelijk.</translation>
+  </string>
+  <string id="/STR/71/15">
+    <base><![CDATA[Corrupted RAID information]]></base>
+    <translation>Verminkte RAID-informatie</translation>
+  </string>
+  <string id="/STR/72/00">
+    <base><![CDATA[Member of another RAID]]></base>
+    <translation>Lid van een andere RAID</translation>
+  </string>
+  <string id="/STR/72/02">
+    <base><![CDATA[Read failure]]></base>
+    <translation>Leesfout</translation>
+  </string>
+  <string id="/STR/72/03">
+    <base><![CDATA[Not a RAID member]]></base>
+    <translation>Geen RAID-lid</translation>
+  </string>
+  <string id="/STR/72/04">
+    <base><![CDATA[Bad disk]]></base>
+    <translation>Slechte schijf</translation>
+  </string>
+  <string id="/STR/72/05">
+    <base><![CDATA[Bad sector found]]></base>
+    <translation>Slechte sector gevonden</translation>
+  </string>
+  <string id="/STR/72/06">
+    <base><![CDATA[Unknown defect]]></base>
+    <translation>Onbekend defect</translation>
+  </string>
+  <string id="/STR/72/07">
+    <base><![CDATA[Out-of-sync]]></base>
+    <translation>Synchronisatiefout</translation>
+  </string>
+  <string id="/STR/72/08">
+    <base><![CDATA[Spare disk]]></base>
+    <translation>Reserveschijf</translation>
+  </string>
+  <string id="/STR/72/09">
+    <base><![CDATA[RAID information on this disk is corrupted. \nTry "%1!s!" menu.]]></base>
+    <translation>RAID-informatie op deze schijf is verminkt.\nProbeer "%1!s!" menu.</translation>
+  </string>
+  <string id="/STR/72/11">
+    <base><![CDATA[Cannot read. Replace disk or remove from RAID]]></base>
+    <translation>Kan niet lezen. Vervang schijf of verwijder van RAID</translation>
+  </string>
+  <string id="/STR/72/12">
+    <base><![CDATA[Reconfigure RAID members.]]></base>
+    <translation>Herconfigureer RAID-leden.</translation>
+  </string>
+  <string id="/STR/72/13">
+    <base><![CDATA[Replace bad disk with new one and run "%1!s!" menu\n or use "%2!s!" menu to ignore defect and retry]]></base>
+    <translation>Vervang slechte schijf door nieuwe en start "%1!s!" menu\n of gebruik "%2!s!" menu om defect te negeren en opnieuw te proberen </translation>
+  </string>
+  <string id="/STR/72/14">
+    <base><![CDATA[Data of this disk is out of sync with another RAID member's data.]]></base>
+    <translation>Gegevens van deze schijf zijn niet gesynchroniseerd met de gegevens van een ander RAID-lid.</translation>
+  </string>
+  <string id="/STR/72/15">
+    <base><![CDATA[This disk will be used as active RAID member when any of other member fails.]]></base>
+    <translation>Deze schijf zal gebruikt worden als actief RAID-lid als een ander lid ontbreekt.</translation>
+  </string>
+  <string id="/STR/73/00">
+    <base><![CDATA[This disk may be configured by higher version of NDAS software.\n Use "%1!s!" menu to convert to a single disk]]></base>
+    <translation>Deze schijf kan geconfigureerd worden door een hogere versie van NDAS-software.\n Gebruik "%1!s!" menu om te converteren naar één schijf</translation>
+  </string>
+  <string id="/STR/73/01">
+    <base><![CDATA[Migration required]]></base>
+    <translation>Migratie vereist</translation>
+  </string>
+  <string id="/STR/73/02">
+    <base><![CDATA[Unsupported RAID]]></base>
+    <translation>Niet-ondersteunde RAID</translation>
+  </string>
+  <string id="/STR/73/04">
+    <base><![CDATA[Irreconcilable state]]></base>
+    <translation>Onverenigbare toestand</translation>
+  </string>
+  <string id="/STR/73/05">
+    <base><![CDATA[Non-mountable\nRAID information is corrupted]]></base>
+    <translation>Niet monteerbaar\nRAID-informatie is verminkt</translation>
+  </string>
+  <string id="/STR/73/06">
+    <base><![CDATA[Missing member]]></base>
+    <translation>Ontbrekend lid</translation>
+  </string>
+  <string id="/STR/73/07">
+    <base><![CDATA[Migration required]]></base>
+    <translation>Migratie vereist</translation>
+  </string>
+  <string id="/STR/73/08">
+    <base><![CDATA[Defective disk]]></base>
+    <translation>Kapotte schijf</translation>
+  </string>
+  <string id="/STR/73/09">
+    <base><![CDATA[Non-mountable]]></base>
+    <translation>Niet monteerbaar </translation>
+  </string>
+  <string id="/STR/73/10">
+    <base><![CDATA[Degraded mode]]></base>
+    <translation>Gedegradeerde modus</translation>
+  </string>
+  <string id="/STR/73/11">
+    <base><![CDATA[Need resynchronizing\n%1!d!%% in sync]]></base>
+    <translation>Hersynchroniseren nodig\n%1!d!%%</translation>
+  </string>
+  <string id="/STR/73/12">
+    <base><![CDATA[Need resynchronizing]]></base>
+    <translation>Hersynchroniseren nodig </translation>
+  </string>
+  <string id="/STR/73/13">
+    <base><![CDATA[Healthy]]></base>
+    <translation>Gezond</translation>
+  </string>
+  <string id="/STR/73/14">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nIf any of the disk is missing, unbind RAID and create it again]]></base>
+    <translation>Verbind alle apparaten die lid zijn en gebruik "%1!s!" menu.\nAls er een schijf ontbreekt, maak RAID los en begin opnieuw</translation>
+  </string>
+  <string id="/STR/73/15">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nYou cannot migrate with missing member]]></base>
+    <translation>Verbind alle apparaten die lid zijn en gebruik "%1!s!" menu.\nU kunt niet migreren met ontbrekend lid</translation>
+  </string>
+  <string id="/STR/74/00">
+    <base><![CDATA[This RAID is created by higher version of software. Please update NDAS software]]></base>
+    <translation>Deze RAID is gemaakt met een hogere versie van de software. Gelieve de NDAS-software te updaten</translation>
+  </string>
+  <string id="/STR/74/01">
+    <base><![CDATA[Each member has been used in degraded mode separately.\nYou need to convert one member to basic disk or unbind RAID.]]></base>
+    <translation>Ieder lid werd afzonderlijk gebruikt in gedegradeerde modus.\nU moet een lid converteren naar basisschijf of RAID losmaken.</translation>
+  </string>
+  <string id="/STR/74/02">
+    <base><![CDATA[Reconfigure the corrupted member disk.]]></base>
+    <translation>Ieder lid werd afzonderlijk gebruikt in gedegradeerde modus.\nU moet een lid converteren naar basisschijf of RAID losmaken.</translation>
+  </string>
+  <string id="/STR/74/03">
+    <base><![CDATA[Non fault-tolerant RAID.\nAll members should be available to mount this RAID set.]]></base>
+    <translation>Niet-fouttolerante RAID.\nAlle leden moeten beschikbaar zijn om deze RAID-set te monteren.</translation>
+  </string>
+  <string id="/STR/74/04">
+    <base><![CDATA[The number of valid members is not enough to mount.]]></base>
+    <translation>Het aantal geldige leden volstaat niet om te monteren.</translation>
+  </string>
+  <string id="/STR/74/05">
+    <base><![CDATA[This RAID is created by older version of NDAS software.\nOnce migrated, this RAID cannot be used by older version of NDAS software]]></base>
+    <translation>Deze RAID is gemaakt met een oudere versie van de NDAS-software.\nEens gemigreerd kan deze RAID niet gebruikt worden door een oudere versie van de NDAS-software</translation>
+  </string>
+  <string id="/STR/74/06">
+    <base><![CDATA[Disk has defects. Replace the defective disk.]]></base>
+    <translation>Schijf heeft defecten. Vervang de kapotte schijf.</translation>
+  </string>
+  <string id="/STR/74/07">
+    <base><![CDATA[RAID will work without fault-tolerant feature due to missing member(s).]]></base>
+    <translation>RAID zal werken zonder fouttolerantiekenmerk door ontbrekend(e) lid(leden).</translation>
+  </string>
+  <string id="/STR/74/08">
+    <base><![CDATA[Resynchronizing will be started when RAID is mounted in Read/Write mode.]]></base>
+    <translation>Hersynchroniseren zal gestart worden als RAID gemonteerd is in lees/schrijfmodus.</translation>
+  </string>
+  <string id="/STR/74/09">
+    <base><![CDATA[Invalid member]]></base>
+    <translation>Ongeldig lid</translation>
+  </string>
+  <string id="/STR/74/11">
+    <base><![CDATA[RAID can be mounted only when all members are registered]]></base>
+    <translation>RAID kan enkel gemonteerd worden als alle leden geregistreerd zijn</translation>
+  </string>
+  <string id="/STR/74/12">
+    <base><![CDATA[RAID can be mounted only when all members are enabled]]></base>
+    <translation>RAID kan enkel gemonteerd worden als alle leden geactiveerd zijn</translation>
+  </string>
+  <string id="/STR/74/13">
+    <base><![CDATA[Not registered]]></base>
+    <translation>Niet geregistreerd</translation>
+  </string>
+  <string id="/STR/74/14">
+    <base><![CDATA[Spare used]]></base>
+    <translation>Reserve gebruikt</translation>
+  </string>
+  <string id="/STR/74/15">
+    <base><![CDATA[After spare disk is used, RAID needs reconfiguration.]]></base>
+    <translation>Nadat de reserveschijf gebruikt is, moet de RAID geherconfigureerd worden.</translation>
+  </string>
+  <string id="/STR/75/00">
+    <base><![CDATA[Inconsistent bind information]]></base>
+    <translation>Inconsistente verbindingsinformatie</translation>
+  </string>
+  <string id="/STR/75/01">
+    <base><![CDATA[Bind information on the disk is inconsistent or unrecognizable.\nUse "%1!s!" menu to use as a single disk.]]></base>
+    <translation>Verbindingsinformatie op de schijf is inconsistent of onherkenbaar.\nGebruik "%1!s!" menu om als enkelvoudige schijf te gebruiken.</translation>
+  </string>
+  <string id="/STR/75/02">
+    <base><![CDATA[Replaced by spare]]></base>
+    <translation>Vervangen door reserve</translation>
+  </string>
+  <string id="/STR/75/03">
+    <base><![CDATA[This disk's role is replaced by the spare disk. Reconfigure the RAID using \n"%1!s!" or "%2!s!" or "%3!s!" menu.]]></base>
+    <translation>De rol van deze schijf is vervangen door de reserveschijf. Herconfigureer de RAID met \n"%1!s!" of "%2!s!" of "%3!s!" menu.</translation>
+  </string>
+  <string id="/STR/75/04">
+    <base><![CDATA[Used in degraded mode]]></base>
+    <translation>De rol van deze schijf is vervangen door de reserveschijf. Herconfigureer de RAID met \n"%1!s!" of "%2!s!" of "%3!s!" menu.</translation>
+  </string>
+  <string id="/STR/75/05">
+    <base><![CDATA[This disk is used in degraded mode and may have different data.\nUse "%1!s!" menu to retain the data in this disk.]]></base>
+    <translation>Deze schijf wordt gebruikt in gedegradeerde modus en kan verschillende gegevens bevatten.\nGebruik "%1!s!" menu om de gegevens in deze schijf te houden.</translation>
+  </string>
+  <string id="/STR/75/06">
+    <base><![CDATA[This operation will reset all configuration information which may be used by a higher version of NDAS software. Do you want to continue?]]></base>
+    <translation>Deze bewerking zal alle configuratie-informatie die mogelijk gebruikt wordt door een hogere versie van de NDAS-software resetten. Wilt u verdergaan?</translation>
+  </string>
+  <string id="/STR/75/07">
+    <base><![CDATA[RAID is in broken status. Requested operation cannot be processed.]]></base>
+    <translation>RAID is in gebroken status. Gevraagde bewerking kan niet uitgevoerd worden.</translation>
+  </string>
+  <string id="/STR/75/08">
+    <base><![CDATA[Cannot clear defect mark because no valid copy of data exists.\nPlease unbind RAID and try to recover data from each disk\n]]></base>
+    <translation>Kan defect merkteken niet verwijderen omdat er geen geldige kopie van de gegevens bestaat.\nMaak RAID los en probeer gegevens van elke schijf terug te winnen\n</translation>
+  </string>
+  <string id="/STR/76/00">
+    <base><![CDATA[Defective]]></base>
+    <translation>Defect</translation>
+  </string>
+  <string id="/STR/2049/05">
+    <base><![CDATA[Quit application\nExit]]></base>
+    <translation>Toepassing verlaten\nExit</translation>
+  </string>
+  <string id="/STR/2049/06">
+    <base><![CDATA[Bind disks\nBind]]></base>
+    <translation>Schijven verbinden\nVerbinden</translation>
+  </string>
+  <string id="/STR/2049/08">
+    <base><![CDATA[Unbind aggregated/mirrored disks into basic disks\nUnbind]]></base>
+    <translation>Samengestelde/gespiegelde schijven losmaken in basisschijven\nLosmaken</translation>
+  </string>
+  <string id="/STR/2049/09">
+    <base><![CDATA[Convert the selected disk to a basic disk]]></base>
+    <translation>Converteer de geselecteerde schijf naar een basisschijf</translation>
+  </string>
+  <string id="/STR/2049/11">
+    <base><![CDATA[Resynchronize an outdated bound disk.\nResynchronize]]></base>
+    <translation>Hersynchroniseer een verouderde verbonden schijf.\nHersynchroniseer</translation>
+  </string>
+  <string id="/STR/2049/14">
+    <base><![CDATA[Displays program information, version number and copyright\nAbout NDAS Software]]></base>
+    <translation>Weergave programma-informatie, versienummer en copyright\nOver NDAS-software</translation>
+  </string>
+  <string id="/STR/2050/07">
+    <base><![CDATA[Adds a mirrored disk to a basic disk\nAdd Mirror]]></base>
+    <translation>Voegt een gespiegelde schijf toe aan een basisschijf\nSpiegel toevoegen</translation>
+  </string>
+  <string id="/STR/2050/08">
+    <base><![CDATA[Refresh the NDAS device list\nRefresh]]></base>
+    <translation>Vernieuw de NDAS-apparaatlijst\nVernieuwen</translation>
+  </string>
+  <string id="/DLG/100">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation>Over NDAS-software</translation>
+  </string>
+  <string id="/DLG/100/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/100/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation>NDAS-software</translation>
+  </string>
+  <string id="/DLG/100/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation>Versie %1!s!</translation>
+  </string>
+  <string id="/DLG/100/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&amp;</translation>
+  </string>
+  <string id="/DLG/100/04">
+    <base><![CDATA[Copyright © 2002-2007 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+    <translation>Copyright © 2002-2007 TARGA GmbH and XIMETA, Inc.\r\nAll rights reserved.</translation>
+  </string>
+  <string id="/DLG/100/05">
+    <base><![CDATA[Components]]></base>
+    <translation>Componenten</translation>
+  </string>
+  <string id="/DLG/242">
+    <base><![CDATA[Unbind]]></base>
+    <translation>Losmaken</translation>
+  </string>
+  <string id="/DLG/242/00">
+    <base><![CDATA[&Yes]]></base>
+    <translation>&amp;Ja</translation>
+  </string>
+  <string id="/DLG/242/01">
+    <base><![CDATA[&No]]></base>
+    <translation>&amp;Neen</translation>
+  </string>
+  <string id="/DLG/242/03">
+    <base><![CDATA[The following disks will be unbound.\nAre you sure you want to unbind them?]]></base>
+    <translation>De volgende schijven zullen losgemaakt worden.\nBent u zeker dat u ze wilt losmaken?</translation>
+  </string>
+  <string id="/DLG/249">
+    <base><![CDATA[Synchronize disks]]></base>
+    <translation>Synchroniseer schijven</translation>
+  </string>
+  <string id="/DLG/249/00">
+    <base><![CDATA[Bind Type:]]></base>
+    <translation>Verbindingstype:</translation>
+  </string>
+  <string id="/DLG/249/01">
+    <base><![CDATA[Type]]></base>
+    <translation>Type</translation>
+  </string>
+  <string id="/DLG/249/02">
+    <base><![CDATA[Target:]]></base>
+    <translation>Doel:</translation>
+  </string>
+  <string id="/DLG/249/03">
+    <base><![CDATA[Name]]></base>
+    <translation>Naam</translation>
+  </string>
+  <string id="/DLG/249/06">
+    <base><![CDATA[Time Remaining:]]></base>
+    <translation>Resterende tijd:</translation>
+  </string>
+  <string id="/DLG/249/07">
+    <base><![CDATA[MB/s]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/08">
+    <base><![CDATA[Start]]></base>
+    <translation>Start</translation>
+  </string>
+  <string id="/DLG/249/09">
+    <base><![CDATA[Close]]></base>
+    <translation>Sluiten</translation>
+  </string>
+  <string id="/DLG/249/10">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuleren</translation>
+  </string>
+  <string id="/DLG/249/12">
+    <base><![CDATA[00:00:00]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/14">
+    <base><![CDATA[0.0]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/340">
+    <base><![CDATA[NDAS Bind Management Error]]></base>
+    <translation>NDAS-verbindingsmanagementfout</translation>
+  </string>
+  <string id="/DLG/340/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406">
+    <base><![CDATA[Repair fault tolerant disks]]></base>
+    <translation>Herstel fouttolerantie schijven</translation>
+  </string>
+  <string id="/DLG/406/00">
+    <base><![CDATA[Select one of the NDAS Device listed below. It will be used as a replacement for the broken NDAS Device]]></base>
+    <translation>Selecteer één van de NDAS-apparaten die hieronder opgesomd worden. Het zal gebruikt worden ter vervanging van het defecte NDAS-apparaat</translation>
+  </string>
+  <string id="/DLG/406/01">
+    <base><![CDATA[&Devices:]]></base>
+    <translation>&amp;Apparaten:</translation>
+  </string>
+  <string id="/DLG/406/02">
+    <base><![CDATA[List1]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406/03">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuleren</translation>
+  </string>
+  <string id="/DLG/411">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Schijfverbindingswizard</translation>
+  </string>
+  <string id="/DLG/411/00">
+    <base><![CDATA[This wizard helps you create bound disks.]]></base>
+    <translation>De wizard helpt u verbonden schijven te maken.</translation>
+  </string>
+  <string id="/DLG/411/01">
+    <base><![CDATA[You can bind disks of NDAS Devices to build a new disk with faster speed, larger capacity and fault tolerance. Many bind types are given to fit your needs.]]></base>
+    <translation>U kunt schijven verbinden van NDAS-apparaten om een nieuwe schijf te maken met meer snelheid, meer capaciteit en grotere fouttolerantie. Er worden tal van verbindingstypes gegeven om aan uw noden te voldoen.</translation>
+  </string>
+  <string id="/DLG/411/02">
+    <base><![CDATA[Welcome to the Disk Bind Wizard]]></base>
+    <translation>Welkom in de schijfverbindingswizard</translation>
+  </string>
+  <string id="/DLG/411/03">
+    <base><![CDATA[To continue, click Next.]]></base>
+    <translation>Om verder te gaan, klikt u op Volgende.</translation>
+  </string>
+  <string id="/DLG/413">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Schijfverbindingswizard</translation>
+  </string>
+  <string id="/DLG/413/00">
+    <base><![CDATA[Select the bind type you want to create:]]></base>
+    <translation>Selecteer het verbindingstype dat u wilt maken:</translation>
+  </string>
+  <string id="/DLG/413/01">
+    <base><![CDATA[Aggregation]]></base>
+    <translation>Samenvoeging</translation>
+  </string>
+  <string id="/DLG/413/02">
+    <base><![CDATA[Stripe (RAID 0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/03">
+    <base><![CDATA[Mirror (RAID 1)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/04">
+    <base><![CDATA[RAID 4]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/05">
+    <base><![CDATA[Number of disks:]]></base>
+    <translation>Aantal schijven:</translation>
+  </string>
+  <string id="/DLG/413/07">
+    <base><![CDATA[Description]]></base>
+    <translation>Beschrijving</translation>
+  </string>
+  <string id="/DLG/415">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Schijfverbindingswizard</translation>
+  </string>
+  <string id="/DLG/415/00">
+    <base><![CDATA[Available:]]></base>
+    <translation>Beschikbaar:</translation>
+  </string>
+  <string id="/DLG/415/02">
+    <base><![CDATA[&Add >]]></base>
+    <translation>&amp;Toevoegen&gt;</translation>
+  </string>
+  <string id="/DLG/415/03">
+    <base><![CDATA[< &Remove]]></base>
+    <translation>&lt;&amp;Verwijderen</translation>
+  </string>
+  <string id="/DLG/415/04">
+    <base><![CDATA[< Re&move All]]></base>
+    <translation>&lt;Verwijder alle</translation>
+  </string>
+  <string id="/DLG/415/05">
+    <base><![CDATA[Selected:]]></base>
+    <translation>Geselecteerd</translation>
+  </string>
+  <string id="/DLG/415/07">
+    <base><![CDATA[Total number of disks required:]]></base>
+    <translation>Totaal aantal vereiste schijven:</translation>
+  </string>
+  <string id="/DLG/415/09">
+    <base><![CDATA[Total disk size in gigabytes (GB):]]></base>
+    <translation>Totale schijfgrootte in gigabytes (GB):</translation>
+  </string>
+  <string id="/DLG/415/11">
+    <base><![CDATA[Note: The data on the disks will be deleted once binding is completed.]]></base>
+    <translation>Opmerking: de gegevens op de schijf zullen verwijderd worden als het verbinden voltooid is.</translation>
+  </string>
+  <string id="/DLG/420">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Schijfverbindingswizard</translation>
+  </string>
+  <string id="/DLG/420/00">
+    <base><![CDATA[Completing the Disk Bind Wizard]]></base>
+    <translation>Schijfverbindingswizard vervolledigen</translation>
+  </string>
+  <string id="/DLG/420/02">
+    <base><![CDATA[The binding results are followings:]]></base>
+    <translation>De verbindingsresultaten zijn als volgt:</translation>
+  </string>
+  <string id="/DLG/420/04">
+    <base><![CDATA[To close this wizard, click Finish.]]></base>
+    <translation>Om de wizard te sluiten, klikt u op Voltooien.</translation>
+  </string>
+  <string id="/DLG/1091/01">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/1091/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuleren</translation>
+  </string>
+  <string id="/MNU/128/00">
+    <base><![CDATA[&File]]></base>
+    <translation>&amp;Bestand</translation>
+  </string>
+  <string id="/MNU/128/00/00">
+    <base><![CDATA[E&xit]]></base>
+    <translation>Exit</translation>
+  </string>
+  <string id="/MNU/128/01">
+    <base><![CDATA[&Tool]]></base>
+    <translation>&amp;Tool</translation>
+  </string>
+  <string id="/MNU/128/01/00">
+    <base><![CDATA[&Refresh]]></base>
+    <translation>&amp;Vernieuwen</translation>
+  </string>
+  <string id="/MNU/128/01/01">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation>&amp;Schijven verbinden</translation>
+  </string>
+  <string id="/MNU/128/01/02">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation>Spiegel toevoegen</translation>
+  </string>
+  <string id="/MNU/128/01/03">
+    <base><![CDATA[R&eset bind information]]></base>
+    <translation>Verbindingsinformatie resetten</translation>
+  </string>
+  <string id="/MNU/128/01/04">
+    <base><![CDATA[&Unbind]]></base>
+    <translation>&amp;Losmaken</translation>
+  </string>
+  <string id="/MNU/128/01/05">
+    <base><![CDATA[Mi&grate]]></base>
+    <translation>Migreren</translation>
+  </string>
+  <string id="/MNU/128/01/06">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation>Reserveschijf toevoegen</translation>
+  </string>
+  <string id="/MNU/128/01/07">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation>Apparaat vervangen</translation>
+  </string>
+  <string id="/MNU/128/01/08">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation>Gebruik als RAID-lid</translation>
+  </string>
+  <string id="/MNU/128/01/09">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation>&amp;Verwijder defect merkteken</translation>
+  </string>
+  <string id="/MNU/128/01/10">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation>Configureer RAID zonder deze schijf</translation>
+  </string>
+  <string id="/MNU/128/01/11">
+    <base><![CDATA[Convert to a basic &disk]]></base>
+    <translation>Converteer naar een basisschijf</translation>
+  </string>
+  <string id="/MNU/128/02">
+    <base><![CDATA[&Help]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/MNU/128/02/00">
+    <base><![CDATA[&About NDAS Software]]></base>
+    <translation>&amp;Over NDAS-software</translation>
+  </string>
+  <string id="/MNU/448/00/00">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation>&amp;Schijven verbinden</translation>
+  </string>
+  <string id="/MNU/448/00/01">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation>Spiegel toevoegen</translation>
+  </string>
+  <string id="/MNU/448/00/02">
+    <base><![CDATA[&Reset bind information]]></base>
+    <translation>&amp;Verbindingsinformatie resetten</translation>
+  </string>
+  <string id="/MNU/448/01/00">
+    <base><![CDATA[&Unbind]]></base>
+    <translation>&amp;Losmaken</translation>
+  </string>
+  <string id="/MNU/448/01/01">
+    <base><![CDATA[&Migrate]]></base>
+    <translation>&amp;Migreren</translation>
+  </string>
+  <string id="/MNU/448/01/02">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation>Reserveschijf toevoegen</translation>
+  </string>
+  <string id="/MNU/448/02/00">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation>Apparaat vervangen</translation>
+  </string>
+  <string id="/MNU/448/02/01">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation>Gebruik als RAID-lid</translation>
+  </string>
+  <string id="/MNU/448/02/02">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation>&amp;Verwijder defect merkteken</translation>
+  </string>
+  <string id="/MNU/448/02/03">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation>Configureer RAID zonder deze schijf</translation>
+  </string>
+  <string id="/MNU/448/02/04">
+    <base><![CDATA[Convert to a &basic disk]]></base>
+    <translation>Converteer naar een basisschijf</translation>
+  </string>
+</localization>

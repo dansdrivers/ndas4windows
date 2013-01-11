@@ -1,0 +1,6 @@
+nddevice.lib *
+ndfilter.lib *
+ndlog.lib *
+ndnetcomp.lib *
+ndinst.dll *
+autorun.exe *

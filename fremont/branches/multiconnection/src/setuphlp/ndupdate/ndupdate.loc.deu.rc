@@ -1,0 +1,28 @@
+#ifndef APSTUDIO_INVOKED
+
+#include <windows.h>
+#include "resource.h"
+#pragma code_page(1252)
+
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+STRINGTABLE DISCARDABLE 
+BEGIN
+	IDS_OK              "OK"
+    IDS_CANCEL          "Abbrechen"
+	IDS_YES				"&Ja"
+	IDS_NO				"&Nein"
+	IDS_CLOSE			"&Schließen"
+	IDS_UPDATER_TITLE	"NDAS Software Updater"
+	IDS_UPDATER_ERROR_UPDATE_CHECK "Eine Update Information kann nicht wiedergefunden werden.\r\nBitte überprüfen Sie die Internetverbindung.\r\n"
+	IDS_UPDATER_ERROR_DOWNLOAD	"Die Datei kann von dem Server nicht runtergeladen werden.\r\nBitte überprüfen Sie die Internetverbindung.\r\n"
+	IDS_UPDATER_ERROR_FMT	"%1!s!Fehler 0x%2!08X!"
+
+	IDS_STATUS_CHECK_UPDATE	"Suche nach Update..."
+	IDS_STATUS_CHECK_UPDATE_DONE	"Suche nach Update beendet."
+	IDS_STATUS_DOWNLOAD_UPDATE	"Das Update downloaden..."
+	IDS_STATUS_DOWNLOAD_UPDATE_DONE	"Download ist beendet."
+	IDS_NO_UPDATE	"Sie benutzen die neuste Version der Software."
+	IDS_NEW_UPDATE	"Neuere Version der Software ist verfügbar.\r\nMöchten Sie die Software downloaden und installieren?"
+END
+
+#endif    // APSTUDIO_INVOKED

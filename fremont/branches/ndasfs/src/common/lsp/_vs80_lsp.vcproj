@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="lsp"
+	ProjectGUID="{E908DDF7-8E7D-47E7-AA4B-2F06AE928349}"
+	RootNamespace="lsp"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+		<Platform
+			Name="x64" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="objchk_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 chk . -c0i"
+				Output="objchk_w2k_x86\i386\lsp.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="objfre_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 fre . -c0i"
+				Output="objfre_w2k_x86\i386\lsp.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="objchk_wnet_amd64\amd64"
+			IntermediateDirectory="objchk_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="objchk_wnet_amd64\amd64\lsp.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="objfre_wnet_amd64\amd64"
+			IntermediateDirectory="objfre_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="objfre_wnet_amd64\amd64\lsp.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\lsp.c" />
+			<File
+				RelativePath=".\lsp_hash.c" />
+			<File
+				RelativePath=".\lsp_util.c" />
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\lsp_binparm.h" />
+			<File
+				RelativePath=".\lsp_hash.h" />
+			<File
+				RelativePath=".\lsp_impl.h" />
+			<File
+				RelativePath=".\lsp_type_internal.h" />
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"></Filter>
+		<File
+			RelativePath=".\makefile" />
+		<File
+			RelativePath=".\sources" />
+		<Filter
+			Name=".test"
+			Filter=""
+			UniqueIdentifier="{F8A67B36-08AC-4D29-8604-E55CE34B0F27}">
+			<File
+				RelativePath=".\test\lsptest.c" />
+			<File
+				RelativePath=".\test\makefile" />
+			<File
+				RelativePath=".\test\sources" />
+		</Filter>
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

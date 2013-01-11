@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<Import Project="..\bin\msbuild\MSBuild.Community.Tasks.Targets"/>
+
+	<PropertyGroup>
+		<BaseDir Condition="'$(MSBuildBaseDir)'==''">..\</BaseDir>
+		<VersionIncludeFile>$(MSBuildBaseDir)_verinfo.inc</VersionIncludeFile>
+		<MasterVersionFile>$(MSBuildBaseDir)PRODUCTVER.TXT</MasterVersionFile>
+	</PropertyGroup>
+
+	<Target Name="GetVersionInfo" DependsOnTargets="ReadProductVersion;ReadSubversionRevision" />
+
+	<Target Name="CreateVersionIncludeFile" DependsOnTargets="GetVersionInfo">
+		<WriteLinesToFile File="$(VersionIncludeFile)" Lines="
+&lt;Project xmlns=&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;&gt;
+	&lt;PropertyGroup&gt;
+		&lt;ProductVersion&gt;$(ProductVersion)&lt;/ProductVersion&gt;
+		&lt;ProductRevision&gt;$(ProductRevision)&lt;/ProjectRevision&gt;
+	&lt;/PropertyGroup&gt;
+&lt;/Project&gt;" Overwrite="true" />
+	</Target>
+
+	<Target Name="ReadProductVersion" Condition="'$(ProductVersion)'==''">
+		<ReadLinesFromFile File="$(MasterVersionFile)">
+			<Output TaskParameter="Lines" PropertyName="ProductVersion" />
+		</ReadLinesFromFile>
+	</Target>
+
+	<!-- ProductRevision will not be set when svn.exe is not available -->
+	<Target Name="ReadSubversionRevision" Condition="'$(ProductRevision)'==''" ContinueOnError="true">
+		<SvnInfo LocalPath="$(BaseDir)">
+			<Output TaskParameter="LastChangedRevision" PropertyName="ProductRevision" />
+		</SvnInfo>
+	</Target>
+
+</Project>

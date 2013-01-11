@@ -1,0 +1,17 @@
+LIBRARY	ndasop
+
+EXPORTS
+  NdasOpGetAPIVersion
+  NdasOpBind
+  NdasOpRepair
+  NdasOpRecover
+  NdasOpReadDIB
+  NdasOpIsBitmapClean
+  NdasOpGetLastWrttenSectorInfo
+  NdasOpGetLastWrttenSectorsInfo
+  NdasOpSynchronize
+  NdasOpReadDIB
+  NdasOpRMDWrite
+  NdasOpRMDRead
+  NdasOpSpareAdd
+  NdasOpSpareRemove

@@ -1,0 +1,4 @@
+DIRS= inc common drivers umapps setuphlp
+
+OPTIONAL_DIRS= tools
+

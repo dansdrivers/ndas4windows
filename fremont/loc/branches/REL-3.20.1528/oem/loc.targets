@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+		 DefaultTargets="Build"
+		 InitialTargets="AdjustPath;ValidateProperties">
+
+  <!-- resolve project root directory -->
+  <PropertyGroup>
+    <ProjectRootTagFile>locproject.dir</ProjectRootTagFile>
+    <ProjectRootDir Condition="'$(ProjectRootDir)'=='' and exists('$(MSBuildProjectDirectory)\$(ProjectRootTagFile)')">$(MSBuildProjectDirectory)\.</ProjectRootDir>
+    <ProjectRootDir Condition="'$(ProjectRootDir)'=='' and exists('$(MSBuildProjectDirectory)\..\$(ProjectRootTagFile)')">$(MSBuildProjectDirectory)\..</ProjectRootDir>
+    <ProjectRootDir Condition="'$(ProjectRootDir)'=='' and exists('$(MSBuildProjectDirectory)\..\..\$(ProjectRootTagFile)')">$(MSBuildProjectDirectory)\..\..</ProjectRootDir>
+    <!-- we cannot use like this, as the exists() evaluates on loc.targets not loc.proj -->
+    <!--
+	<ProjectRootDir Condition="'$(ProjectRootDir)'=='' and exists('$(ProjectRootTagFile)')">.</ProjectRootDir>
+	<ProjectRootDir Condition="'$(ProjectRootDir)'=='' and exists('..\$(ProjectRootTagFile)')">..</ProjectRootDir>
+	<ProjectRootDir Condition="'$(ProjectRootDir)'=='' and exists('..\..\$(ProjectRootTagFile)')">..\..</ProjectRootDir>
+	-->
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BuildDebug>false</BuildDebug>
+    <Platform Condition="'$(Platform)'==''">x86</Platform>
+    <OutputArch>i386</OutputArch>
+    <OutputArch Condition="'$(Platform)'=='x64'">amd64</OutputArch>
+    <BaseDir>$(ProjectRootDir)\base</BaseDir>
+    <BaseDataDir>$(BaseDir)\bin\$(outputarch)</BaseDataDir>
+    <BaseMetaDataDir>$(BaseDir)\meta</BaseMetaDataDir>
+    <ToolPath Condition="'$(ToolPath)'=='' and exists('$(ProjectRootDir)\tools')">$(ProjectRootDir)\tools\</ToolPath>
+  </PropertyGroup>
+
+  <Target Name="ValidateProperties">
+    <Message Text="Resolved ProjectRootDir=$(ProjectRootDir)" Condition="$(BuildDebug)" />
+    <Error Condition="'$(Platform)' != 'x86' and '$(Platform)' != 'x64'"
+         Text="Platform='$(Platform)' is not valid. Valid values: x86, x64" />
+    <Error Condition="'$(OutputArch)' != 'i386' and '$(OutputArch)' != 'amd64'"
+         Text="OutputArch='$(OutputArch)' is not valid. Valid values: i386, amd64" />
+    <Error Condition="!exists('$(ProjectRootDir)\$(ProjectRootTagFile)')"
+         Text="Cannot determine ProjectRootDir. Make sure that $(ProjectRootTagFile) exists in upper directories." />
+  </Target>
+
+  <Target Name="AdjustPath">
+    <Message Text="ProjectRootDir=$(ProjectRootDir)" Condition="$(BuildDebug)" />
+    <CreateItem Include="$(ProjectRootDir)\">
+      <Output TaskParameter="Include" ItemName="_ProjectRootDirItem" />
+    </CreateItem>
+
+    <Message Text="_ProjectRootDirItem=@(_ProjectRootDirItem)" Condition="$(BuildDebug)" />
+
+    <CreateItem Include="%(_ProjectRootDirItem.FullPath)">
+      <Output TaskParameter="Include" ItemName="_ProjectRootDirItem2" />
+    </CreateItem>
+
+    <Message Text="_ProjectRootDirItem=@(_ProjectRootDirItem2)" Condition="$(BuildDebug)" />
+
+    <CreateProperty Value="%(_ProjectRootDirItem2.RelativeDir)">
+      <Output TaskParameter="Value" PropertyName="ProjectRootDir" />
+    </CreateProperty>
+
+    <Message Text="NewProjectRootDir=$(ProjectRootDir)" Condition="$(BuildDebug)" />
+
+    <Message Text="NewProjectRootDir=$(ProjectRootDir)" Condition="$(BuildDebug)" />
+
+    <CreateProperty Value="$(ProjectRootDir)tools\">
+      <Output TaskParameter="Value" PropertyName="ToolPath" />
+    </CreateProperty>
+
+  </Target>
+
+  <!-- custom MSBuild tasks -->
+  <PropertyGroup>
+    <XIMETATaskAssembly>$(ToolPath)XIMETA.Tasks.dll</XIMETATaskAssembly>
+  </PropertyGroup>
+
+  <UsingTask TaskName="XIMETA.Zip" AssemblyFile="$(XIMETATaskAssembly)" />
+  <UsingTask TaskName="XIMETA.Unzip" AssemblyFile="$(XIMETATaskAssembly)" />
+  <UsingTask TaskName="XIMETA.CreateTaskItemsFromXml" AssemblyFile="$(XIMETATaskAssembly)" />
+  <UsingTask TaskName="XIMETA.FileVersionInfo" AssemblyFile="$(XIMETATaskAssembly)" />
+  <UsingTask TaskName="XIMETA.GetDateTimeString" AssemblyFile="$(XIMETATaskAssembly)" />
+  <UsingTask TaskName="XIMETA.GetDirectoryName" AssemblyFile="$(XIMETATaskAssembly)" />
+  <UsingTask TaskName="XIMETA.ResXml.UpdateResource" AssemblyFile="$(XIMETATaskAssembly)" />
+  <UsingTask TaskName="XIMETA.ResXml.CreateResXml" AssemblyFile="$(XIMETATaskAssembly)" />
+  <UsingTask TaskName="XIMETA.Xml.XslTransform" AssemblyFile="$(XIMETATaskAssembly)" />
+
+  <Import Project="loc.items" />
+  <Import Project="loc.properties" Condition="exists('loc.properties')" />
+
+  <PropertyGroup>
+    <OemDataDir Condition="'$(OemDataDir)'==''">.</OemDataDir>
+    <LocFilePath Condition="'$(locfilepath)'==''">$(OemDataDir)</LocFilePath>
+    <resdatadir Condition="'$(resdatadir)'==''">$(OemDataDir)\resdata</resdatadir>
+    <resdatadir>$(OemDataDir)\resdata</resdatadir>
+    <IntermediateBaseDir>$(oemdatadir)\obj</IntermediateBaseDir>
+    <IntermediateDir>$(IntermediateBaseDir)\$(OutputArch)</IntermediateDir>
+    <OutputBaseDir>$(oemdatadir)\branded</OutputBaseDir>
+    <OutputDir>$(OutputBaseDir)\$(OutputArch)</OutputDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- <ResXml>$(ToolPath)resxml.exe</ResXml> -->
+    <ResLoc>$(ToolPath)resloc.exe</ResLoc>
+    <ResMan>$(ToolPath)resman.exe</ResMan>
+    <MsgLoc>$(ToolPath)msgloc.exe</MsgLoc>
+    <!-- <MsXsl>$(ToolPath)msxsl.exe</MsXsl> -->
+    <Mc>$(ToolPath)mc.exe</Mc>
+  </PropertyGroup>
+
+  <!-- we uses ProductVersion of ndassvc.exe as a product version -->
+  <PropertyGroup>
+    <ProductVersionKeyFile>$(OutputDir)\ndassvc.exe</ProductVersionKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BaseResDll>$(basedatadir)\$(module).enu.dll</BaseResDll>
+    <LocXml>$(locfilepath)\loc_$(langcode)_$(module).xml</LocXml>
+    <BaseResXml>$(intermediatedir)\$(module).base.resxml</BaseResXml>
+    <OutputResXml>$(intermediatedir)\$(module).$(langcode).resxml</OutputResXml>
+    <OutputResDll>$(outputdir)\$(module).$(langcode).dll</OutputResDll>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- langid mapping -->
+
+    <LangID Condition="'$(LangCode)'=='enu'">1033</LangID>
+    <LangID Condition="'$(LangCode)'=='chs'">2052</LangID>
+    <LangID Condition="'$(LangCode)'=='cht'">1028</LangID>
+    <LangID Condition="'$(LangCode)'=='deu'">1031</LangID>
+    <LangID Condition="'$(LangCode)'=='esn'">3082</LangID>
+    <LangID Condition="'$(LangCode)'=='fra'">1036</LangID>
+    <LangID Condition="'$(LangCode)'=='ita'">1040</LangID>
+    <LangID Condition="'$(LangCode)'=='jpn'">1041</LangID>
+    <LangID Condition="'$(LangCode)'=='kor'">1042</LangID>
+    <LangID Condition="'$(LangCode)'=='ptg'">2070</LangID>
+    <LangID Condition="'$(LangCode)'=='dan'">1030</LangID>
+    <LangID Condition="'$(LangCode)'=='nld'">1043</LangID>
+    <LangID Condition="'$(LangCode)'=='nor'">1044</LangID>
+    <LangID Condition="'$(LangCode)'=='sve'">1053</LangID>
+    <LangID Condition="'$(LangCode)'=='rus'">1049</LangID>
+    <LangID Condition="'$(LangCode)'=='plk'">1045</LangID>
+		
+		<LangID Condition="'$(LangCode)'=='bgr'">1026</LangID>
+		<LangID Condition="'$(LangCode)'=='cat'">1027</LangID>
+		<LangID Condition="'$(LangCode)'=='csy'">1029</LangID>
+		<LangID Condition="'$(LangCode)'=='ell'">1032</LangID>
+		<LangID Condition="'$(LangCode)'=='euq'">1069</LangID>
+		<LangID Condition="'$(LangCode)'=='fin'">1035</LangID>
+		<LangID Condition="'$(LangCode)'=='frc'">3084</LangID>
+		<LangID Condition="'$(LangCode)'=='hrv'">1050</LangID>
+		<LangID Condition="'$(LangCode)'=='hun'">1038</LangID>
+		<LangID Condition="'$(LangCode)'=='ind'">1057</LangID>
+		<LangID Condition="'$(LangCode)'=='rom'">1048</LangID>
+		<LangID Condition="'$(LangCode)'=='sky'">1051</LangID>
+		<LangID Condition="'$(LangCode)'=='slv'">1060</LangID>
+		<LangID Condition="'$(LangCode)'=='srb'">3098</LangID>
+		<LangID Condition="'$(LangCode)'=='tha'">1054</LangID>
+		<LangID Condition="'$(LangCode)'=='trk'">1055</LangID>
+
+		<LangCodePage Condition="'$(LangCode)'=='enu'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='chs'">936</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='cht'">950</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='deu'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='esn'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='fra'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='ita'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='jpn'">932</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='kor'">949</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='ptg'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='dan'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='nld'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='nor'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='sve'">1252</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='rus'">1251</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='plk'">1250</LangCodePage>
+
+    <LangCodePage Condition="'$(LangCode)'=='bgr'">1251</LangCodePage>
+    <LangCodePage Condition="'$(LangCode)'=='cat'">1252</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='csy'">1250</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='ell'">1253</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='euq'">1252</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='fin'">1252</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='frc'">1252</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='hrv'">1250</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='hun'">1250</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='ind'">1252</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='plk'">1250</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='rom'">1250</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='sky'">1250</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='slv'">1250</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='srb'">1251</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='tha'">874</LangCodePage>
+		<LangCodePage Condition="'$(LangCode)'=='trk'">1254</LangCodePage>
+
+	</PropertyGroup>
+
+  <Target Name="build" DependsOnTargets="CopyBaseFiles;_build_modules;msgupdate;resupdate" />
+  <Target Name="clean" DependsOnTargets="_clean_modules;msgclean" />
+  <Target Name="rebuild" DependsOnTargets="clean;build" />
+  <Target Name="distclean" DependsOnTargets="CleanupDirectories" />
+
+  <Target Name="CleanupDirectories">
+    <RemoveDir Directories="$(IntermediateBaseDir)" />
+    <RemoveDir Directories="$(OutputBaseDir)" />
+  </Target>
+
+  <Target Name="CopyBaseFiles">
+    <Copy SourceFiles="@(NeutralModules)" DestinationFolder="$(outputdir)"
+          SkipUnchangedFiles="true"/>
+  </Target>
+
+
+  <Target Name="_build_modules">
+    <MsBuild Projects="$(MSBuildProjectFullPath)"
+             Targets="_build_languages"
+             Properties="module=%(modules.identity);resmapfile=$(basemetadatadir)\%(modules.resmap)" />
+  </Target>
+
+  <Target Name="_build_languages">
+    <MsBuild Projects="$(MSBuildProjectFullPath)"
+             Targets="_build"
+             Properties="langcode=%(languages.identity)"
+			 Condition="exists('$(oemdatadir)\loc_%(languages.identity)_$(module).xml')" />
+  </Target>
+
+  <Target Name="_build" DependsOnTargets="dirs;baseresxml;resdll">
+  </Target>
+
+  <Target Name="_clean_modules">
+    <MSBuild Projects="$(MSBuildProjectFullPath)"
+             Targets="_clean_languages"
+             Properties="module=%(modules.identity)" />
+  </Target>
+
+  <Target Name="_clean_languages">
+    <MSBuild Projects="$(MSBuildProjectFullPath)"
+             Targets="_clean"
+             Properties="langcode=%(languages.identity)" />
+  </Target>
+
+  <ItemGroup>
+    <CleanupFile Include="$(outputdir)\*.*" />
+    <CleanupFile Include="$(intermediatedir)\*.*" />
+  </ItemGroup>
+
+  <Target Name="_clean">
+		<Delete Files="@(CleanupFile)" />
+    <Delete Files="$(outputresdll)" />
+    <Delete Files="$(outputresxml)" />
+    <Delete Files="$(baseresxml)" />
+    <Delete Files="@(appfile->'$(outputdir)\%(identity)')" />
+  </Target>
+
+  <Target Name="dirs">
+    <MakeDir Directories="$(OutputDir)" />
+    <MakeDir Directories="$(IntermediateDir)" />
+  </Target>
+
+  <Target Name="baseresxml" Inputs="$(baseresdll)" Outputs="$(baseresxml)">
+    <XIMETA.ResXml.CreateResXml
+       ToolPath="$(ToolPath)"
+       InputModuleFile="$(baseresdll)"
+       OutputResXmlFile="$(baseresxml)" />
+    <!-- <Exec Command="$(resxml) extract $(baseresdll) $(baseresxml)" /> -->
+  </Target>
+
+  <Target Name="resdll"
+          Inputs="$(LocXml);$(BaseResXml)"
+          Outputs="$(OutputResDll)"
+          DependsOnTargets="resmanitems"
+		  Condition="exists('$(locxml)')">
+
+    <Delete Files="$(OutputResDll)" Condition="Exists('$(OutputResDll)')" />
+    <Exec Command="$(resloc) /out:$(OutputResXml) $(baseresxml) $(locxml)" />
+    <Copy SourceFiles="$(baseresdll)" DestinationFiles="$(OutputResDll)" />
+    <!-- update string resources-->
+
+    <XIMETA.ResXml.UpdateResource
+       ToolPath="$(ToolPath)"
+       InputResXmlFile="$(OutputResXml)"
+       OutputModuleFile="$(OutputResDll)" />
+
+    <!-- <Exec Command="$(resxml) update $(OutputResDll) $(OutputResXml)" /> -->
+
+    <!-- update binary data -->
+    <Exec Command="$(resman) update $(OutputResDll) %(ResDataFile.Type) %(ResDataFile.Name) 0 $(resdatadir)\%(ResDataFile.Identity)"
+          Condition="Exists('$(resdatadir)\%(ResDataFile.Identity)') 
+            and '@(ResDataFile)' != ''" />
+
+    <!-- update translation -->
+    <Exec Command="$(resman) settrans /custom reslangid $(OutputResDll) 0 $(langid) $(langcodepage)" />
+    <Exec Command="$(resman) settrans $(OutputResDll) 0 $(langid) $(langcodepage)" />
+  </Target>
+
+  <!-- Binary Resources from resmap -->
+  <ItemGroup>
+    <ResMapXPath Include="/resmap/resource/@fileName">
+      <Type>../@type</Type>
+      <Name>../@name</Name>
+    </ResMapXPath>
+  </ItemGroup>
+
+  <ItemGroup>
+    <MsgXmlFile Include="$(basemetadir)\ndasmsg.xml" />
+  </ItemGroup>
+
+  <Target Name="resmanitems">
+    <!-- <Message Text="ResMapFile=$(ResMapFile)" /> -->
+    <XIMETA.CreateTaskItemsFromXml
+	   XmlFile="$(ResMapFile)"
+	   XPath="@(ResMapXPath)"
+	   Condition="'$(ResMapFile)' != ''">
+      <Output TaskParameter="CreatedItems" ItemName="ResDataFile" />
+    </XIMETA.CreateTaskItemsFromXml>
+    <!-- <Message Text="ResDataFile=%(ResDataFile.identity)" /> -->
+  </Target>
+
+  <Target Name="msgupdate" DependsOnTargets="dirs"
+		  Inputs="$(basedatadir)\%(msglocfile.resdll);%(msglocfile.base);@(msglocfile)"
+		  Outputs="$(outputdir)\%(msglocfile.resdll)" >
+    <Delete Files="$(outputdir)\%(msglocfile.resdll)" />
+    <Exec Command="$(msgloc) %(msglocfile.base) %(msglocfile.identity) /out:$(intermediatedir)\%(msglocfile.filename).msgxml"
+          Condition="exists('%(msglocfile.identity)')"/>
+
+    <XIMETA.Xml.XslTransform
+       OutputEncoding="unicode"
+       SourceFile="$(intermediatedir)\%(msglocfile.filename).msgxml"
+       Stylesheet="$(toolpath)\msgxml2mc.xsl"
+       OutputFile="$(intermediatedir)\%(msglocfile.filename).mc"
+       Condition="exists('%(msglocfile.identity)')" />
+
+    <!-- 
+    <Exec Command="$(msxsl) $(intermediatedir)\%(msglocfile.filename).msgxml $(toolpath)\msgxml2mc.xsl -o $(intermediatedir)\%(msglocfile.filename).mc" 
+          Condition="exists('%(msglocfile.identity)')"/>
+	-->
+
+    <Exec Command="$(mc) -suc -r $(intermediatedir) -h $(intermediatedir) $(intermediatedir)\%(msglocfile.filename).mc"
+          Condition="exists('%(msglocfile.identity)')"/>
+    <Copy SourceFiles="$(basedatadir)\%(msglocfile.resdll)" DestinationFolder="$(outputdir)"
+          Condition="'' != '%(msglocfile.resdll)'"/>
+    <Exec Command="$(resman) update $(outputdir)\%(msglocfile.resdll) messagetable #1 %(msglocfile.langid) $(intermediatedir)\%(msglocfile.filename).bin"
+          Condition="'' != '%(msglocfile.resdll)'"/>
+  </Target>
+
+  <Target Name="msgclean">
+    <Delete Files="$(intermediatedir)\%(msglocfile.filename).bin" />
+    <Delete Files="$(intermediatedir)\%(msglocfile.filename).mc" />
+    <Delete Files="$(intermediatedir)\%(msglocfile.filename).h" />
+    <Delete Files="$(intermediatedir)\%(msglocfile.filename).rc" />
+    <Delete Files="$(intermediatedir)\%(msglocfile.filename).msgxml" />
+    <Delete Files="$(outputdir)\%(msglocfile.resdll)" />
+  </Target>
+
+  <Target Name="resupdate"
+          Inputs="$(basemetadatadir)\%(appfile.resmap);$(basedatadir)\%(appfile.identity)"
+          Outputs="$(outputdir)\%(appfile.identity)">
+    <!-- <Message Text="ResMapFile=$(ResMapFile)" /> -->
+
+    <Message Text="Inputs=$(basemetadatadir)\%(appfile.resmap);$(basedatadir)\%(appfile.identity)" Condition="$(BuildDebug)"/>
+    <Message Text="Outputs=$(outputdir)\%(appfile.identity)" Condition="$(BuildDebug)"/>
+
+    <XIMETA.CreateTaskItemsFromXml
+	   XmlFile="$(basemetadatadir)\%(appfile.resmap)"
+	   XPath="@(ResMapXPath)"
+	   Condition="exists('$(basemetadatadir)\%(appfile.resmap)')">
+      <Output TaskParameter="CreatedItems" ItemName="AppFileResMapData" />
+    </XIMETA.CreateTaskItemsFromXml>
+
+    <CreateProperty Value="%(AppFileResMapData.Type) %(AppFileResMapData.Name) 0 $(resdatadir)\%(AppFileResMapData.identity)">
+      <Output TaskParameter="Value" PropertyName="__cmdline" />
+    </CreateProperty>
+
+    <CreateProperty Value="$(resdatadir)\%(AppFileResMapData.identity)">
+      <Output TaskParameter="Value" PropertyName="__file" />
+    </CreateProperty>
+
+    <Copy SourceFiles="$(basedatadir)\%(appfile.identity)" DestinationFolder="$(outputdir)"
+          SkipUnchangedFiles="true"/>
+
+    <!-- update binary data -->
+    <Exec Command="$(resman) update $(outputdir)\%(AppFile.identity) $(__cmdline)"
+          Condition="exists('$(__file)')"/>
+
+  </Target>
+
+  <!-- creates a zip file -->
+  <Target Name="archive" DependsOnTargets="SetOutputZipFileNameForArchive;zip" />
+
+  <Target Name="SetOutputZipFileNameForArchive"
+		  DependsOnTargets="SetOEM;SetProductVersion">
+
+    <XIMETA.GetDateTimeString Format="yyyyMMdd">
+      <Output TaskParameter="Value" PropertyName="Today" />
+    </XIMETA.GetDateTimeString>
+
+    <CreateProperty Value="ndas_$(ProductVersion)_$(oem)_bin_$(Today).zip">
+      <Output TaskParameter="Value" PropertyName="OutputZipFileName" />
+    </CreateProperty>
+
+  </Target>
+
+  <Target Name="SetOutputZipFileName" Condition="'$(OutputZipFileName)'==''"
+		  DependsOnTargets="SetOEM;SetProductVersion">
+
+    <CreateProperty Value="ndas_$(ProductVersion)_$(oem)_bin.zip">
+      <Output TaskParameter="Value" PropertyName="OutputZipFileName" />
+    </CreateProperty>
+
+  </Target>
+
+  <Target Name="SetOEM" Condition="'$(OEM)'==''">
+    <XIMETA.GetDirectoryName Path="$(MSBuildProjectDirectory)">
+      <Output TaskParameter="DirectoryName" PropertyName="OEM" />
+    </XIMETA.GetDirectoryName>
+  </Target>
+
+  <Target Name="zip"
+		  DependsOnTargets="build;SetOutputZipFileName">
+
+    <CreateItem Include="$(outputbasedir)\**">
+      <Output TaskParameter="Include" ItemName="BrandedDataFile" />
+    </CreateItem>
+
+    <Message Text="Output=$(OutputZipFileName)" />
+
+    <Delete Files="$(OutputZipFileName)" />
+
+    <XIMETA.Zip ZipFile="$(OutputZipFileName)"
+          BaseDirectory="$(outputbasedir)"
+          Sources="@(BrandedDataFile)" />
+  </Target>
+
+  <!-- sets ProductVersion property from ProductVersionKeyFile -->
+  <Target Name="SetProductVersion">
+    <XIMETA.FileVersionInfo TargetFileName="$(ProductVersionKeyFile)" >
+      <Output TaskParameter="ProductMajorPart" PropertyName="ProductVersionMajor" />
+      <Output TaskParameter="ProductMinorPart" PropertyName="ProductVersionMinor" />
+      <Output TaskParameter="ProductBuildPart" PropertyName="ProductVersionBuild" />
+    </XIMETA.FileVersionInfo>
+    <CreateProperty Value="$(ProductVersionMajor).$(ProductVersionMinor).$(ProductVersionBuild)">
+      <Output TaskParameter="Value" PropertyName="ProductVersion" />
+    </CreateProperty>
+  </Target>
+
+</Project>

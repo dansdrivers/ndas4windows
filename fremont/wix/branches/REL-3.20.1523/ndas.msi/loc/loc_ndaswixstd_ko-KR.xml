@@ -1,0 +1,1379 @@
+  <base>The Installer has insufficient privileges to modify the file [2].</base>
+    <translation>ì´ íŒŒì¼ì„ ìˆ˜ì •í•  ìˆ˜ ìˆëŠ” ê¶Œí•œì´ ì¶©ë¶„í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤: [2].</translation>
+  </string>
+  <string id="Error.1322">
+    <base>A portion of the path [2] exceeds the length allowed by the system.</base>
+    <translation>í´ë” ê²½ë¡œ '[2]'ì´(ê°€) ì˜ëª» ë˜ì—ˆìŠµë‹ˆë‹¤. ê²½ë¡œë¡œ ì§€ì •í•œ ë¬¸ìê°€ ì—†ê±°ë‚˜ ê²½ë¡œê°€ ë„ˆë¬´ ê¹ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1323">
+    <base>The path [2] contains words that are not valid in folders.</base>
+    <translation>í´ë” ê²½ë¡œ '[2]'ì— í´ë” ê²½ë¡œë¡œ ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ê¸€ìê°€ ë“¤ì–´ ìˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1324">
+    <base>The path [2] contains an invalid character.</base>
+    <translation>í´ë” ê²½ë¡œ '[2]'ì— ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ê¸€ìê°€ ë“¤ì–´ ìˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1325">
+    <base>[2] is not a valid short file name.</base>
+    <translation>'[2]'ì€(ëŠ”) íŒŒì¼ ì´ë¦„ìœ¼ë¡œ ìœ íš¨í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1326">
+    <base>Error getting file security: [3] GetLastError: [2]</base>
+    <translation>íŒŒì¼ ë³´ì•ˆ ì˜¤ë¥˜: [3] GetLastError: [2]</translation>
+  </string>
+  <string id="Error.1327">
+    <base>Invalid Drive: [2]</base>
+    <translation>ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ë“œë¼ì´ë¸Œ: [2]</translation>
+  </string>
+  <string id="Error.1328">
+    <base>Error applying patch to file [2].  It has probably been updated by other means, and can no longer be modified by this patch.  For more information contact your patch vendor.  {{System Error: [3]}}</base>
+    <translation>íŒŒì¼ [2]ì— íŒ¨ì¹˜ë¥¼ ì ìš©í•˜ëŠ” ì¤‘ì— ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤. ë‹¤ë¥¸ ë°©ë²•ìœ¼ë¡œ ì—…ë°ì´íŠ¸ë˜ì—ˆê¸° ë•Œë¬¸ì— ì´ íŒ¨ì¹˜ë¥¼ ì‚¬ìš©í•´ì„œ ìˆ˜ì •í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ìì„¸í•œ ì‚¬í•­ì€ íŒ¨ì¹˜ë¥¼ êµ¬ì…í•œ ëŒ€ë¦¬ì ì— ë¬¸ì˜í•˜ì‹­ì‹œì˜¤. {{ì‹œìŠ¤í…œ ì˜¤ë¥˜: [3]}}</translation>
+  </string>
+  <string id="Error.1401">
+    <base>Could not create key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>í‚¤ë¥¼ ë§Œë“¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤: [2]. {{ ì‹œìŠ¤í…œ ì˜¤ë¥˜ [3].}}  ê·¸ í‚¤ì— ëŒ€í•œ ì•¡ì„¸ìŠ¤ ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ê±°ë‚˜, ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1402">
+    <base>Could not open key: [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>í‚¤ë¥¼ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤: [2]. {{ ì‹œìŠ¤í…œ ì˜¤ë¥˜  [3].}}  ê·¸ í‚¤ì— ëŒ€í•œ ì•¡ì„¸ìŠ¤ ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ê±°ë‚˜, ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1403">
+    <base>Could not delete value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>í‚¤ [3]ì—ì„œ ê°’ [2]ì„(ë¥¼) ì‚­ì œí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. {{ ì‹œìŠ¤í…œ ì˜¤ë¥˜ [4].}}  ê·¸ í‚¤ì— ëŒ€í•œ ì•¡ì„¸ìŠ¤ ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ê±°ë‚˜, ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1404">
+    <base>Could not delete key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>í‚¤ [2]ì„(ë¥¼) ì‚­ì œí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. {{ ì‹œìŠ¤í…œ ì˜¤ë¥˜ [3].}} ê·¸ í‚¤ì— ëŒ€í•œ ì•¡ì„¸ìŠ¤ ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ê±°ë‚˜, ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1405">
+    <base>Could not read value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>í‚¤ [3]ì—ì„œ ê°’ [2]ì„(ë¥¼) ì½ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. {{ ì‹œìŠ¤í…œ ì˜¤ë¥˜ [4].}}  ê·¸ í‚¤ì— ëŒ€í•œ ì•¡ì„¸ìŠ¤ ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ê±°ë‚˜, ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1406">
+    <base>Could not write value [2] to key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>í‚¤ [3]ì— ê°’ [2]ì„(ë¥¼) ì“¸ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. {{ ì‹œìŠ¤í…œ ì˜¤ë¥˜ [4].}}  ê·¸ í‚¤ì— ëŒ€í•œ ì•¡ì„¸ìŠ¤ ê¶Œí•œì´ ì¶©ë¶„í•œì§€ í™•ì¸í•˜ê±°ë‚˜, ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1407">
+    <base>Could not get value names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>í‚¤ [2]ì˜ ê°’ ì´ë¦„ì„ êµ¬í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. {{ ì‹œìŠ¤í…œ ì˜¤ë¥˜ [3].}}  ê·¸ í‚¤ì— ëŒ€í•œ ì•¡ì„¸ìŠ¤ ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ê±°ë‚˜, ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1408">
+    <base>Could not get sub key names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>í‚¤ [2]ì˜ í•˜ìœ„ í‚¤ ì´ë¦„ì„ êµ¬í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. {{ ì‹œìŠ¤í…œ ì˜¤ë¥˜ [3].}}  ê·¸ í‚¤ì— ëŒ€í•œ ì•¡ì„¸ìŠ¤ ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ê±°ë‚˜, ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1409">
+    <base>Could not read security information for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>í‚¤ [2]ì˜ ë³´ì•ˆ ì •ë³´ë¥¼ ì½ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. {{ ì‹œìŠ¤í…œ ì˜¤ë¥˜ [3].}}  ê·¸ í‚¤ì— ëŒ€í•œ ì•¡ì„¸ìŠ¤ ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ê±°ë‚˜, ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1410">
+    <base>Could not increase the available registry space. [2] KB of free registry space is required for the installation of this application.</base>
+    <translation>ì‚¬ìš© ê°€ëŠ¥í•œ ë ˆì§€ìŠ¤íŠ¸ë¦¬ ê³µê°„ì„ ëŠ˜ë¦´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ì´ ì‘ìš© í”„ë¡œê·¸ë¨ì„ ì„¤ì¹˜í•˜ëŠ”ë° [2]KBì˜ ë ˆì§€ìŠ¤íŠ¸ë¦¬ ê³µê°„ì´ í•„ìš”í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1500">
+    <base>Another installation is in progress. You must complete that installation before continuing this one.</base>
+    <translation>ë‹¤ë¥¸ ì„¤ì¹˜ í”„ë¡œê·¸ë¨ì´ ì‹¤í–‰ ì¤‘ì…ë‹ˆë‹¤. ê·¸ í”„ë¡œê·¸ë¨ì˜ ì„¤ì¹˜ë¥¼ ëë‚¸ í›„, ì´ ì‘ì—…ì„ ê³„ì†í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1501">
+    <base>Error accessing secured data. Please make sure the Windows Installer is configured properly and try the installation again.</base>
+    <translation>ë³´ì•ˆ ë°ì´í„°ì— ì•¡ì„¸ìŠ¤í•˜ëŠ” ì¤‘ì— ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤. Windows Installerë¥¼ ì˜¬ë°”ë¥´ê²Œ êµ¬ì„±í–ˆëŠ”ì§€ í™•ì¸í•œ í›„ ë‹¤ì‹œ ì„¤ì¹˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1502">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.  Your current installation will now continue.</base>
+    <translation>ì‚¬ìš©ì '[2]'ì´(ê°€) ì œí’ˆ '[3]'ì˜ ì„¤ì¹˜ë¥¼ ì´ì „ì— ì´ˆê¸°í™”í•œ ì ì´ ìˆìŠµë‹ˆë‹¤. ê·¸ ì‚¬ìš©ìê°€ ì„¤ì¹˜ í”„ë¡œê·¸ë¨ì„ ë‹¤ì‹œ ì‹¤í–‰í•´ì•¼ ê·¸ ì œí’ˆì„ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. ì§€ê¸ˆ ì‹¤í–‰í•˜ëŠ” ì„¤ì¹˜ ì‘ì—…ì€ ê³„ì†ë©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1503">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.</base>
+    <translation>ì‚¬ìš©ì '[2]'ì´(ê°€) ì œí’ˆ '[3]'ì˜ ì„¤ì¹˜ë¥¼ ì´ì „ì— ì´ˆê¸°í™”í•œ ì ì´ ìˆìŠµë‹ˆë‹¤. ê·¸ ì‚¬ìš©ìê°€ ì„¤ì¹˜ í”„ë¡œê·¸ë¨ì„ ë‹¤ì‹œ ì‹¤í–‰í•´ì•¼ ê·¸ ì œí’ˆì„ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1601">
+    <base>Out of disk space -- Volume: '[2]'; required space: [3] KB; available space: [4] KB.  Free some disk space and retry.</base>
+    <translation>ë””ìŠ¤í¬ ê³µê°„ ë¶€ì¡± - ë³¼ë¥¨: '[2]'; í•„ìš”í•œ ê³µê°„: [3]KB; ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ê³µê°„: [4]KB. ë””ìŠ¤í¬ ê³µê°„ì„ ëŠ˜ë¦° í›„ ë‹¤ì‹œ ì‹œë„í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1602">
+    <base>Are you sure you want to cancel?</base>
+    <translation>ì·¨ì†Œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?</translation>
+  </string>
+  <string id="Error.1603">
+    <base>The file [2][3] is being held in use{ by the following process: Name: [4], ID: [5], Window Title: [6]}.  Close that application and retry.</base>
+    <translation>íŒŒì¼ [2][3]ì„(ë¥¼) ë‹¤ìŒ í”„ë¡œì„¸ìŠ¤ì—ì„œ ì‚¬ìš©í•˜ê³  ìˆìŠµë‹ˆë‹¤{ì´ë¦„: [4], Id: [5], ì°½ ì œëª©: '[6]'}.  ê·¸ ì‘ìš© í”„ë¡œê·¸ë¨ì„ ë‹«ì€ í›„ ë‹¤ì‹œ ì‹œë„í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1604">
+    <base>The product [2] is already installed, preventing the installation of this product.  The two products are incompatible.</base>
+    <translation>ì œí’ˆ '[2]'ì´(ê°€) ì´ë¯¸ ì„¤ì¹˜ë˜ì–´ ìˆì–´ì„œ ì´ ì œí’ˆì„ ì„¤ì¹˜í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ì´ ë‘ ì œí’ˆì€ í˜¸í™˜ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1605">
+    <base>Out of disk space -- Volume: [2]; required space: [3] KB; available space: [4] KB.  If rollback is disabled, enough space is available. Click Cancel to quit, Retry to check available disk space again, or Ignore to continue without rollback.</base>
+    <translation>ë””ìŠ¤í¬ ê³µê°„ ë¶€ì¡± - ë³¼ë¥¨: '[2]'; í•„ìš”í•œ ê³µê°„: [3]KB; ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ê³µê°„: [4]KB.  ë¡¤ë°± ê¸°ëŠ¥ì„ í•´ì œí•˜ë©´ ë””ìŠ¤í¬ ê³µê°„ì„ ì¶©ë¶„íˆ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. ëë‚´ì‹œë ¤ë©´ "ì·¨ì†Œ"ë¥¼ ëˆ„ë¥´ê³ , ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ë””ìŠ¤í¬ ê³µê°„ì„ í™•ì¸í•˜ë ¤ë©´ "ë‹¤ì‹œ ì‹œë„"ë¥¼ ëˆ„ë¥´ê³ , ë¡¤ë°±ì—†ì´ ê³„ì†í•˜ë ¤ë©´ "ë¬´ì‹œ"ë¥¼ ëˆ„ë¥´ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1606">
+    <base>Could not access network location [2].</base>
+    <translation>ë„¤íŠ¸ì›Œí¬ ìœ„ì¹˜ [2]ì— ì•¡ì„¸ìŠ¤í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1607">
+    <base>The following applications should be closed before continuing the installation:</base>
+    <translation>ë‹¤ìŒ ì‘ìš© í”„ë¡œê·¸ë¨ì„ ë‹«ì•„ì•¼ ì„¤ì¹˜ë¥¼ ê³„ì†í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤:</translation>
+  </string>
+  <string id="Error.1608">
+    <base>Could not find any previously installed compliant products on the machine for installing this product.</base>
+    <translation>ì´ ì œí’ˆì„ ì„¤ì¹˜í•˜ë ¤ëŠ” ì‹œìŠ¤í…œì— í•´ë‹¹ ì œí’ˆì„ ì´ì „ì— ì„¤ì¹˜í•œ ì ì´ ì—†ìŠµë‹ˆë‹¤. </translation>
+  </string>
+  <string id="Error.1701">
+    <base>The key [2] is not valid.  Verify that you entered the correct key.</base>
+    <translation>í‚¤ [2]ì´(ê°€) ìœ íš¨í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ì •í™•í•œ í‚¤ë¥¼ ì…ë ¥í–ˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1702">
+    <base>The installer must restart your system before configuration of [2] can continue.  Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>ì‹œìŠ¤í…œì„ ë‹¤ì‹œ ì‹œì‘í•œ í›„ì— [2]ì˜ êµ¬ì„±ì„ ì„¤ì •í•´ì•¼ í•©ë‹ˆë‹¤. ì§€ê¸ˆ ë‹¤ì‹œ ì‹œì‘í•˜ë ¤ë©´ "ì˜ˆ"ë¥¼ ëˆ„ë¥´ê³ , ë‚˜ì¤‘ì— ìˆ˜ë™ìœ¼ë¡œ ë‹¤ì‹œ ì‹œì‘í•˜ë ¤ë©´ "ì•„ë‹ˆì˜¤"ë¥¼ ëˆ„ë¥´ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1703">
+    <base>You must restart your system for the configuration changes made to [2] to take effect. Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>ë³€ê²½ëœ êµ¬ì„± ì„¤ì •ì„ [2]ì— ì ìš©í•˜ë ¤ë©´ ì‹œìŠ¤í…œì„ ë‹¤ì‹œ ì‹œì‘í•´ì•¼ í•©ë‹ˆë‹¤. ì§€ê¸ˆ ë‹¤ì‹œ ì‹œì‘í•˜ë ¤ë©´ "ì˜ˆ"ë¥¼ ëˆ„ë¥´ê³ , ë‚˜ì¤‘ì— ìˆ˜ë™ìœ¼ë¡œ ë‹¤ì‹œ ì‹œì‘í•˜ë ¤ë©´ "ì•„ë‹ˆì˜¤"ë¥¼ ëˆ„ë¥´ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1704">
+    <base>An installation for [2] is currently suspended.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>[2]ì˜ ì„¤ì¹˜ê°€ í˜„ì¬ ì¤‘ì§€ëœ ìƒíƒœì…ë‹ˆë‹¤. ê³„ì†í•˜ë ¤ë©´ ì„¤ì¹˜í•˜ë©´ì„œ ë³€ê²½ëœ ì‚¬í•­ì„ ì·¨ì†Œí•´ì•¼ í•©ë‹ˆë‹¤. ë³€ê²½ëœ ì‚¬í•­ë“¤ì„ ì·¨ì†Œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?</translation>
+  </string>
+  <string id="Error.1705">
+    <base>A previous installation for this product is in progress.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>ì´ ì œí’ˆì˜ ì„¤ì¹˜ ì‘ì—…ì´ ì‹¤í–‰ ì¤‘ì…ë‹ˆë‹¤. ê³„ì†í•˜ë ¤ë©´ ì „ì— ì„¤ì¹˜í•˜ë©´ì„œ ë³€ê²½ëœ ì‚¬í•­ì„ ë‹¤ì‹œ ë˜ëŒë ¤ì•¼ í•©ë‹ˆë‹¤. ë³€ê²½ëœ ì‚¬í•­ì„ ì·¨ì†Œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?</translation>
+  </string>
+  <string id="Error.1706">
+    <base>No valid source could be found for product [2].  The Windows Installer cannot continue.</base>
+    <translation>ì œí’ˆ [2]ì˜ ì„¤ì¹˜ íŒ¨í‚¤ì§€ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ì„¤ì¹˜ íŒ¨í‚¤ì§€ '[3]'ì˜ ì‚¬ë³¸ì„ ì‚¬ìš©í•´ì„œ ì„¤ì¹˜ë¥¼ ë‹¤ì‹œ ì‹œë„í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1707">
+    <base>Installation operation completed successfully.</base>
+    <translation>ì„¤ì¹˜ ì‘ì—…ì„ ì„±ê³µì ìœ¼ë¡œ ì™„ë£Œí–ˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1708">
+    <base>Installation operation failed.</base>
+    <translation>ì„¤ì¹˜ë¥¼ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1709">
+    <base>Product: [2] -- [3]</base>
+    <translation>ì œí’ˆ: [2] - [3]</translation>
+  </string>
+  <string id="Error.1710">
+    <base>You may either restore your computer to its previous state or continue the installation later. Would you like to restore?</base>
+    <translation>ì»´í“¨í„°ë¥¼ ì´ì „ ìƒíƒœë¡œ ë˜ëŒë¦¬ê±°ë‚˜, ë‚˜ì¤‘ì— ë‹¤ì‹œ ì„¤ì¹˜í•´ì•¼ í•©ë‹ˆë‹¤. ì´ì „ ìƒíƒœë¡œ ë˜ëŒë¦¬ì‹œê² ìŠµë‹ˆê¹Œ?</translation>
+  </string>
+  <string id="Error.1711">
+    <base>An error occurred while writing installation information to disk.  Check to make sure enough disk space is available, and click Retry, or Cancel to end the installation.</base>
+    <translation>ë””ìŠ¤í¬ì— ì„¤ì¹˜ ì •ë³´ë¥¼ ì“°ëŠ”ë° ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤. ë””ìŠ¤í¬ ê³µê°„ì´ ì¶©ë¶„í•œì§€ í™•ì¸í•˜ê³  "ë‹¤ì‹œ ì‹œë„"ë¥¼ ëˆ„ë¥´ê±°ë‚˜, ì„¤ì¹˜ë¥¼ ëë‚´ë ¤ë©´ "ì·¨ì†Œ"ë¥¼ ëˆ„ë¥´ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1712">
+    <base>One or more of the files required to restore your computer to its previous state could not be found.  Restoration will not be possible.</base>
+    <translation>ì‚¬ìš©ìì˜ ì»´í“¨í„°ë¥¼ ì´ì „ ìƒíƒœë¡œ ë˜ëŒë¦¬ëŠ”ë° í•„ìš”í•œ íŒŒì¼ ì¤‘ ì¼ë¶€ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë³µêµ¬í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1713">
+    <base>[2] cannot install one of its required products. Contact your technical support group.  {{System Error: [3].}}</base>
+    <translation>[2](ì´)ê°€ í•„ìš”í•œ ì œí’ˆ ì¤‘ í•˜ë‚˜ë¥¼ ì„¤ì¹˜í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤. {{ì‹œìŠ¤í…œ ì˜¤ë¥˜: [3].}}</translation>
+  </string>
+  <string id="Error.1714">
+    <base>The older version of [2] cannot be removed.  Contact your technical support group.  {{System Error [3].}}</base>
+    <translation>ì´ì „ ë²„ì „ì˜ [2]ì„(ë¥¼) ì œê±°í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤. {{ì‹œìŠ¤í…œ ì˜¤ë¥˜ [3].}}</translation>
+  </string>
+  <string id="Error.1801">
+    <base>The path [2] is not valid.  Please specify a valid path.</base>
+    <translation>ê²½ë¡œ [2]ì´(ê°€) ìœ íš¨í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ì •í™•í•œ ê²½ë¡œë¥¼ ì§€ì •í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1802">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>ë©”ëª¨ë¦¬ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤. ë‹¤ë¥¸ ì‘ìš© í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•œ í›„ ë‹¤ì‹œ ì‹œë„í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1803">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to go back to the previously selected volume.</base>
+    <translation>ë“œë¼ì´ë¸Œ [2]ì— ë””ìŠ¤í¬ê°€ ì—†ìŠµë‹ˆë‹¤. ë””ìŠ¤í¬ë¥¼ ë„£ì€ í›„ "ë‹¤ì‹œ ì‹œë„"ë¥¼ ëˆ„ë¥´ê±°ë‚˜, "ì·¨ì†Œ"ë¥¼ ëˆŒëŸ¬ì„œ ì´ì „ì— ì„ íƒí•œ ë³¼ë¥¨ìœ¼ë¡œ ë‹¤ì‹œ ëŒì•„ê°€ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1804">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to return to the browse dialog and select a different volume.</base>
+    <translation>ë“œë¼ì´ë¸Œ [2]ì— ë””ìŠ¤í¬ê°€ ì—†ìŠµë‹ˆë‹¤. ë””ìŠ¤í¬ë¥¼ ë„£ì€ í›„ "ë‹¤ì‹œ ì‹œë„"ë¥¼ ëˆ„ë¥´ê±°ë‚˜, "ì·¨ì†Œ"ë¥¼ ëˆŒëŸ¬ì„œ "ì°¾ì•„ë³´ê¸°" ëŒ€í™” ìƒìë¡œ ì´ë™í•œ í›„ ë‹¤ë¥¸ ë³¼ë¥¨ì„ ì„ íƒí•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1805">
+    <base>The folder [2] does not exist.  Please enter a path to an existing folder.</base>
+    <translation>í´ë” [2]ì´(ê°€) ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ê¸°ì¡´ì— ìˆë˜ í´ë”ì˜ ê²½ë¡œë¥¼ ì…ë ¥í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1806">
+    <base>You have insufficient privileges to read this folder.</base>
+    <translation>ì´ í´ë”ì— ëŒ€í•œ ì½ê¸° ê¶Œí•œì´ ì¶©ë¶„í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1807">
+    <base>A valid destination folder for the installation could not be determined.</base>
+    <translation>ì„¤ì¹˜í•  ëŒ€ìƒ í´ë”ë¥¼ ì§€ì •í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1901">
+    <base>Error attempting to read from the source installation database: [2].</base>
+    <translation>ë‹¤ìŒ ì›ë³¸ ì„¤ì¹˜ ë°ì´í„°ë² ì´ìŠ¤ë¥¼ ì½ëŠ” ì¤‘ì— ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤: [2].</translation>
+  </string>
+  <string id="Error.1902">
+    <base>Scheduling reboot operation: Renaming file [2] to [3]. Must reboot to complete operation.</base>
+    <translation>ë¦¬ë¶€íŒ… ì‘ì—…ì„ ì„¤ì •í•˜ê³  ìˆìŠµë‹ˆë‹¤: íŒŒì¼ [2]ì˜ ì´ë¦„ì„ [3](ìœ¼)ë¡œ ë°”ê¾¸ê³  ìˆìŠµë‹ˆë‹¤. ì‘ì—…ì„ ì™„ë£Œí•˜ë ¤ë©´ ë¦¬ë¶€íŒ…í•´ì•¼ í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1903">
+    <base>Scheduling reboot operation: Deleting file [2]. Must reboot to complete operation.</base>
+    <translation>ë¦¬ë¶€íŒ… ì‘ì—…ì„ ì„¤ì •í•˜ê³  ìˆìŠµë‹ˆë‹¤: íŒŒì¼ [2]ì„(ë¥¼) ì‚­ì œí•˜ê³  ìˆìŠµë‹ˆë‹¤. ì‘ì—…ì„ ì™„ë£Œí•˜ë ¤ë©´ ë¦¬ë¶€íŒ…í•´ì•¼ í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1904">
+    <base>Module [2] failed to register.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>ëª¨ë“ˆ [2]ì„(ë¥¼) ë“±ë¡í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. HRESULT [3]. ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1905">
+    <base>Module [2] failed to unregister.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>ëª¨ë“ˆ [2]ì˜ ë“±ë¡ì„ í•´ì œí•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. HRESULT [3]. ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1906">
+    <base>Failed to cache package [2]. Error: [3]. Contact your support personnel.</base>
+    <translation>íŒ¨í‚¤ì§€ [2]ì„(ë¥¼) ìºì‹œí•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. ì˜¤ë¥˜: [3]. ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1907">
+    <base>Could not register font [2].  Verify that you have sufficient permissions to install fonts, and that the system supports this font.</base>
+    <translation>[2] ê¸€ê¼´ì„ ë“±ë¡í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ê¸€ê¼´ì„ ì„¤ì¹˜í•  ìˆ˜ ìˆëŠ” ê¶Œí•œì´ ì¶©ë¶„í•œì§€, ê·¸ë¦¬ê³  ì´ ê¸€ê¼´ì„ ì‹œìŠ¤í…œì—ì„œ ì§€ì›í•˜ëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1908">
+    <base>Could not unregister font [2]. Verify that you have sufficient permissions to remove fonts.</base>
+    <translation>[2] ê¸€ê¼´ì˜ ë“±ë¡ì„ í•´ì œí•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ê¸€ê¼´ì„ ì œê±°í•  ìˆ˜ ìˆëŠ” ê¶Œí•œì´ ì¶©ë¶„íˆ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1909">
+    <base>Could not create shortcut [2]. Verify that the destination folder exists and that you can access it.</base>
+    <translation>ë°”ë¡œ ê°€ê¸° [2]ì„(ë¥¼) ë§Œë“¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ëŒ€ìƒ í´ë”ê°€ ì‹¤ì œë¡œ ìˆëŠ”ì§€, ê·¸ë¦¬ê³  ê·¸ í´ë”ì— ì•¡ì„¸ìŠ¤í•  ìˆ˜ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1910">
+    <base>Could not remove shortcut [2]. Verify that the shortcut file exists and that you can access it.</base>
+    <translation>ë°”ë¡œ ê°€ê¸° [2]ì„(ë¥¼) ì œê±°í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ë°”ë¡œ ê°€ê¸° íŒŒì¼ì´ ì‹¤ì œë¡œ ìˆëŠ”ì§€, ê·¸ë¦¬ê³  ê·¸ íŒŒì¼ì„ ì•¡ì„¸ìŠ¤í•  ìˆ˜ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1911">
+    <base>Could not register type library for file [2].  Contact your support personnel.</base>
+    <translation>íŒŒì¼ [2]ì˜ í˜•ì‹ ë¼ì´ë¸ŒëŸ¬ë¦¬ë¥¼ ë“±ë¡í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1912">
+    <base>Could not unregister type library for file [2].  Contact your support personnel.</base>
+    <translation>íŒŒì¼ [2]ì˜ í˜•ì‹ ë¼ì´ë¸ŒëŸ¬ë¦¬ë¥¼ ë“±ë¡í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1913">
+    <base>Could not update the INI file [2][3].  Verify that the file exists and that you can access it.</base>
+    <translation>ini íŒŒì¼ [2][3]ì„(ë¥¼) ì—…ë°ì´íŠ¸í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ê·¸ íŒŒì¼ì´ ì‹¤ì œë¡œ ìˆëŠ”ì§€, ê·¸ë¦¬ê³  íŒŒì¼ì— ì•¡ì„¸ìŠ¤í•  ìˆ˜ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1914">
+    <base>Could not schedule file [2] to replace file [3] on reboot.  Verify that you have write permissions to file [3].</base>
+    <translation>ë¦¬ë¶€íŒ…í•  ë•Œ íŒŒì¼ [2]ì„(ë¥¼) [3](ìœ¼)ë¡œ ë°”ê¾¸ë„ë¡ ì„¤ì •í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. íŒŒì¼ [3]ì— ì“°ê¸° ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1915">
+    <base>Error removing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>ODBC ë“œë¼ì´ë²„ ê´€ë¦¬ìë¥¼ ì œê±°í•˜ëŠ”ë° ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤. ODBC ì˜¤ë¥˜ [2]: [3]. ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1916">
+    <base>Error installing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>ODBC ë“œë¼ì´ë²„ ê´€ë¦¬ìë¥¼ ì„¤ì¹˜í•˜ëŠ” ì¤‘ì— ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤. ODBC ì˜¤ë¥˜ [2]: [3]. ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì™¸.</translation>
+  </string>
+  <string id="Error.1917">
+    <base>Error removing ODBC driver [4], ODBC error [2]: [3]. Verify that you have sufficient privileges to remove ODBC drivers.</base>
+    <translation>ODBC ë“œë¼ì´ë²„ ì œê±°í•˜ëŠ”ë° ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤:[4]. ODBC ì˜¤ë¥˜ [2]: [3]. ODBC ë“œë¼ì´ë²„ë¥¼ ì œê±°í•  ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1918">
+    <base>Error installing ODBC driver [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>ODBC ë“œë¼ì´ë²„ë¥¼ ì„¤ì¹˜í•˜ëŠ” ì¤‘ì— ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤: [4]. ODBC ì˜¤ë¥˜ [2]: [3]. [4] íŒŒì¼ì´ ì‹¤ì œë¡œ ìˆëŠ”ì§€, ê·¸ë¦¬ê³  ê·¸ íŒŒì¼ì„ ì•¡ì„¸ìŠ¤í•  ìˆ˜ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1919">
+    <base>Error configuring ODBC data source [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>ODBC ë°ì´í„° ì›ë³¸ì„ êµ¬ì„±í•˜ëŠ” ì¤‘ì— ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤: [4]. ODBC ì˜¤ë¥˜ [2]: [3]. [4] íŒŒì¼ì´ ì‹¤ì œë¡œ ìˆëŠ”ì§€, ê·¸ë¦¬ê³  ê·¸ íŒŒì¼ì— ì•¡ì„¸ìŠ¤í•  ìˆ˜ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1920">
+    <base>Service [2] ([3]) failed to start.  Verify that you have sufficient privileges to start system services.</base>
+    <translation>ì„œë¹„ìŠ¤ '[2]'([3])ì„(ë¥¼) ì‹œì‘í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. ì‹œìŠ¤í…œ ì„œë¹„ìŠ¤ë¥¼ ì‹œì‘í•  ìˆ˜ ìˆëŠ” ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1921">
+    <base>Service [2] ([3]) could not be stopped.  Verify that you have sufficient privileges to stop system services.</base>
+    <translation>ì   //
+    // Make sure there is a current request.
+    //
+
+    srb = SrbData->CurrentSrb;
+
+    if (srb == NULL || !(srb->SrbFlags & SRB_FLAGS_IS_ACTIVE)) {
+        return;
+    }
+
+    //
+    // Update SRB status.
+    //
+
+    srb->SrbStatus = SrbStatus;
+
+    //
+    // Indicate no bytes transferred.
+    //
+
+    srb->DataTransferLength = 0;
+
+    //
+    // Call notification routine.
+    //
+
+    ScsiPortNotification(RequestComplete,
+                DeviceExtension->HwDeviceExtension,
+                srb);
+
+}
+
+BOOLEAN
+SpAllocateSrbExtension(
+    IN PADAPTER_EXTENSION DeviceExtension,
+    IN PLOGICAL_UNIT_EXTENSION LogicalUnit,
+    IN PSCSI_REQUEST_BLOCK Srb
+    )
+/*++
+
+Routine Description:
+
+    The routine allocates an SRB data structure and/or an SRB extension for
+    the request.
+
+    It first determines if the request is can be executed at this time.
+    In particular, untagged requests cannot execute if there are any active
+    tagged queue requests.  If the request cannot be executed, the pending
+    flag is set in the logical unit FALSE is returned.  The request will be
+    retried after the last tagged queue request completes.
+
+    If one of the structures cannot be allocated, then the pending flag is
+    set in the device extension and FALSE is returned.  The request will be
+    retried the next time a request completes.
+
+Arguments:
+
+    DeviceExtension - Supplies a pointer to the devcie extension for this
+        adapter.
+
+    LogicalUnit - Supplies a pointer to the logical unit that this request is
+        is for.
+
+    Srb - Supplies a pointer to the SCSI request.
+
+Return Value:
+
+    TRUE if the SRB can be execute currently. If FALSE is returneed the reuqest
+    should not be started.
+
+--*/
+
+{
+    PSRB_DATA srbData = (PSRB_DATA) Srb->OriginalRequest;
+    PCCHAR srbExtension;
+    ULONG tagValue = 0;
+
+    ASSERT_SRB_DATA(srbData);
+
+    //
+    // Acquire the spinlock while the allocations are attempted.
+    //
+    KeAcquireSpinLockAtDpcLevel(&DeviceExtension->SpinLock);
+
+    //
+    // If the adapter supports mulitple requests, then determine if it can
+    // be executed.
+    //
+
+    if (Srb->Function == SRB_FUNCTION_ABORT_COMMAND) {
+
+        ASSERT(FALSE);
+        KeReleaseSpinLockFromDpcLevel(&DeviceExtension->SpinLock);
+
+        return FALSE;
+
+    } else if (TEST_FLAG(Srb->SrbFlags, SRB_FLAGS_QUEUE_ACTION_ENABLE) &&
+               !TEST_FLAG(Srb->SrbFlags, SRB_FLAGS_DISABLE_DISCONNECT)) {
+        //
+        // If the need request sense flag is set then tagged commands cannot
+        // be started and must be marked as pending.
+        //
+        if (TEST_FLAG(LogicalUnit->LuFlags, LU_NEED_REQUEST_SENSE)) {
+            DebugPrint((1, "SCSIPORT: SpAllocateSrbExtension: "
+                           "Marking tagged request as pending.\n"));
+
+            //
+            // This request cannot be executed now.  Mark it as pending
+            // in the logical unit structure and return.
+            // GetNextLogicalUnit will restart the commnad after all of the
+            // active commands have completed.
+            //
+
+            ASSERT(!(LogicalUnit->LuFlags & LU_PENDING_LU_REQUEST));
+
+            LogicalUnit->LuFlags |= LU_PENDING_LU_REQUEST;
+            LogicalUnit->PendingRequest = Srb->OriginalRequest;
+            LogicalUnit->PendingRequest->TickCount = DeviceExtension->TickCount;
+
+            //
+            // Indicate that the logical unit is still active so that the
+            // request will get processed when the request list is empty.
+            //
+
+            LogicalUnit->LuFlags |= LU_LOGICAL_UNIT_IS_ACTIVE;
+
+            //
+            // Release the spinlock and return.
+            //
+            KeReleaseSpinLockFromDpcLevel(&DeviceExtension->SpinLock);
+
+            return FALSE;
+        }
+
+        //
+        // There are no untagged command executing and this tagged command
+        // can be started
+        //
+        ASSERT(LogicalUnit->CurrentUntaggedRequest == NU8               ‡     ‡           ğ  ¸  x,    ¨,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  èó+     áÂÛ	  À,    0,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	   ô+    ÀáÂÛ	  ,    x,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  °×+    àáÂÛ	  P,    À,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ĞŞåÜ	   âÂÛ	  ˜,    ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  @²     âÂÛ	  à,    P,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  È     @âÂÛ	  (,    ˜,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  hç    `âÂÛ	  p,    à,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  Xô+    €âÂÛ	  ¸,    (,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  @ÛåÜ	   âÂÛ	   ,    p,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ¨Ü     ÀâÂÛ	  H,    ¸,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	   æÜ	  àâÂÛ	  ,     ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  À¬     ãÂÛ	  Ø,    H,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ğn+     ãÂÛ	   ,    ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ô+    @ãÂÛ	  h,    Ø,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  Èô+    `ãÂÛ	  °,     ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ğ6    €ãÂÛ	  ø,    h,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  €¤     ãÂÛ	  @,    °,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  Àm    ÀãÂÛ	  ˆ,    ø,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ¨<    àãÂÛ	  Ğ,    @,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  À6     äÂÛ	  ,    ˆ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  Ğ5     äÂÛ	  `,    Ğ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  Ø     @äÂÛ	  ¨,    ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  Ğ®    `äÂÛ	  ğ,    `,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  0€    €äÂÛ	  8,    ¨,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  À     äÂÛ	  €,    ğ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ğ    ÀäÂÛ	  È,    8,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	   õ+    àäÂÛ	  ,    €,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  8õ+     åÂÛ	  X,    È,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  põ+     åÂÛ	   ,    ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ĞÕ    @åÂÛ	  è,    X,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	   Ö    `åÂÛ	  0,     ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  0Ö    €åÂÛ	  x,    è,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  `Ö     åÂÛ	  À,    0,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  Ö    ÀåÂÛ	  ,    x,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ÀÖ    àåÂÛ	  P,    À,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ğÖ     æÂÛ	  ˜,    ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  `      æÂÛ	  à,    P,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ¨õ+    @æÂÛ	  (,    ˜,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	       `æÂÛ	  p,    à,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  @     €æÂÛ	  ¸,    (,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  àõ+     æÂÛ	   ,    p,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ö+    ÀæÂÛ	  H,    ¸,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  Pö+    àæÂÛ	  ,     ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ˆö+     çÂÛ	  Ø,    H,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  Àö+     çÂÛ	   ,    ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  øö+    @çÂÛ	  h,    Ø,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  ˆ     `çÂÛ	  °,     ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  è     €çÂÛ	  @,    h,    ıÿÿÿÿÿÿÿb …ËìVó„        jˆ     ÀİÅÛ	  ø,     çÂÛ	         àÛˆ            b …ËìVó„   enable_synchronized_configure       ˆ,    °,    ıÿÿÿÿÿÿÿb …ËìVó„        jˆ     ÀİÅÛ	  0÷+    ÀçÂÛ	  Ğ,    @,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	       àçÂÛ	  ,    ˆ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  h÷+     èÂÛ	  `,    Ğ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  à×+     èÂÛ	  ¨,    ,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	  0o+    @èÂÛ	  0 ,    `,    ıÿÿÿÿÿÿÿ                jˆ     ÀİÅÛ	   ÷+    `èÂÛ	                  spositivo NDAS non Ã¨ supportato. Se il dispositivo Ã¨ un HDD, converti il dispositivo in un disco singolo prima di svolgere questo job.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_BOUND_DISK">
+    <base><![CDATA[The NDAS device must be a bound disk to operate this job.]]></base>
+    <translation>Il dispositivo NDAS deve essere un bound disk per gestire questo job.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>Parametro non valido.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation>Memoria insufficiente per completare il job.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_DISK_COUNT">
+    <base><![CDATA[Incorrect disk count to bind disks.]]></base>
+    <translation>Conteggio disco non corretto per bound disk.</translation>
+  </string>
+  <string id="NDASOP_ERROR_ALREADY_USED">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s).]]></base>
+    <translation>Il dispositivo NDAS Ã¨ al momento utilizzato da un altro processo (i) o host.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+    <base><![CDATA[The NDAS device has invalid bind information to migrate.]]></base>
+    <translation>Il dispositivo NDAS non ha informazioni di collegamento per migrare.</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_SIZE_LIMIT">
+    <base><![CDATA[The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.]]></base>
+    <translation>La dimensione totale dei bound disk non puÃ² superare 2TB. Questa limitazione Ã¨ imposta da Windows OS.</translation>
+  </string>
+  <string id="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+    <base><![CDATA[There is too many missing member to replace(repair) in bound disks.]]></base>
+    <translation>Ci sono troppi membri mancanti per ricollocare(riparare) in bound disk.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NO_MISSING_MEMBER">
+    <base><![CDATA[There is no missing NDAS device to replace(repair) in bound disks.]]></base>
+    <translation>Non 'cÃ¨ nessun dispositivo mancante per ricollocare(riparare) in bound diski.</translation>
+  </string>
+  <string id="NDASOP_ERROR_CRITICAL_REPAIR">
+    <base><![CDATA[There was a critical error while replacing(repairing) bound disks.]]></base>
+    <translation>Si Ã¨ verificato un errore critico durante ricollocazione(riparazione) dei bound disk.</translation>
+  </string>
+  <string id="NDASOP_ERROR_REPLACE_TOO_SMALL">
+    <base><![CDATA[Size of a replacement disk is too small.]]></base>
+    <translation>La dimensione di un disco di ricambio Ã¨ troppo piccola.</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_UNSUPPORTED">
+    <base><![CDATA[This type of RAID does not support the requested command.]]></base>
+    <translation>Questo tipo di RAID non supporta il comando richiesto.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_CAPACITY">
+    <base><![CDATA[The device does not have enough capacity to operate request command.]]></base>
+    <translation>Il dispositivo non ha sufficiente capacitÃ  per svolgere il comando richiesto.</translation>
+  </string>
+  <string id="NDASVOL_ERROR_NON_NDAS_VOLUME">
+    <base><![CDATA[The specified volume is not related with the NDAS devices.]]></base>
+    <translation>Il volume specificato non ha attinenza con il dispositivo NDAS.</translation>
+  </string>
+  <string id="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>La proprietÃ  richiesta non Ã¨ supportata.</translation>
+  </string>
+  <string id="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+    <base><![CDATA[Non-SCSI type device is found.]]></base>
+    <translation>E' stato trovato un dispositivo del tipo non-SCSI.</translation>
+  </string>
+  <string id="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+    <base><![CDATA[SRB IO CONLL);
+
+    } else {
+        //
+        // This is an untagged command.  It is only allowed to execute, if
+        // logical unit queue is being by-passed or there are no other
+        // requests active.
+        //
+
+        if ((!IsListEmpty(&LogicalUnit->RequestList) ||
+            LogicalUnit->LuFlags & LU_NEED_REQUEST_SENSE) &&
+            !SpSrbIsBypassRequest(Srb, LogicalUnit->LuFlags)) {
+
+            //
+            // This request cannot be executed now.  Mark it as pending
+            // in the logical unit structure and return.
+            // GetNextLogicalUnit will restart the commnad after all of the
+            // active commands have completed.
+            //
+
+            ASSERT(!(LogicalUnit->LuFlags & LU_PENDING_LU_REQUEST));
+            LogicalUnit->LuFlags |= LU_PENDING_LU_REQUEST;
+            LogicalUnit->PendingRequest = Srb->OriginalRequest;
+            LogicalUnit->PendingRequest->TickCount = DeviceExtension->TickCount;
+
+            //
+            // Indicate that the logical unit is still active so that the
+            // request will get processed when the request list is empty.
+            //
+
+            LogicalUnit->LuFlags |= LU_LOGICAL_UNIT_IS_ACTIVE;
+
+            //
+            // Release the spinlock and return.
+            //
+            KeReleaseSpinLockFromDpcLevel(&DeviceExtension->SpinLock);
+
+            return FALSE;
+        }
+
+        //
+        // Set the QueueTag to SP_UNTAGGED
+        // Set use the SRB data in the logical unit extension.
+        //
+        Srb->QueueTag = SP_UNTAGGED;
+        srbData->TickCount = DeviceExtension->TickCount;
+        LogicalUnit->CurrentUntaggedRequest = srbData;
+    }
+
+    ASSERT(Srb->QueueTag != 0);
+
+    if (DeviceExtension->AllocateSrbExtension) {
+
+        //
+        // Allocate SRB extension from list if available.
+        //
+
+        srbExtension = DeviceExtension->SrbExtensionListHeader;
+
+        //
+        // If the Srb extension cannot be allocated, then special processing
+        // is required.
+        //
+
+        if (srbExtension == NULL) {
+
+            //
+            // Indicate there is a pending request.  The DPC completion routine
+            // will call this function again after it has freed at least one
+            // Srb extension.
+            //
+
+            DeviceExtension->Flags |= PD_PENDING_DEVICE_REQUEST;
+            KeReleaseSpinLockFromDpcLevel(&DeviceExtension->SpinLock);
+            return FALSE;
+        }
+
+        //
+        // Remove SRB extension from list.
+        //
+
+        DeviceExtension->SrbExtensionListHeader  = *((PVOID *) srbExtension);
+
+        KeReleaseSpinLockFromDpcLevel(&DeviceExtension->SpinLock);
+
+        Srb->SrbExtension = srbExtension;
+
+        //
+        // If the adapter supports auto request sense, the SenseInfoBuffer
+        // needs to point to the Srb extension.  This buffer is already mapped
+        // for the adapter. Note that this is not done for WMI requests.
+        //
+
+        if ((Srb->Function != SRB_FUNCTION_WMI) &&
+            (DeviceExtension->AutoRequestSense &&
+             Srb->SenseInfoBuffer != NULL)) {
+
+            //
+            // Save the request sense buffer.
+            //
+
+            srbData->RequestSenseSave = Srb->SenseInfoBuffer;
+
+            //
+            // Make sure the allocated buffer is large enough for the requested
+            // sense buffer.
+            //
+
+            if (Srb->SenseInfoBufferLength > sizeof(SENSE_DATA)) {
+
+                //
+                // Auto request sense cannot be done for this request sense the
+                // buffer is larger than standard.  Disable auto request sense.
+                //
+
+                Srb->SrbFlags |= SRB_FLAGS_DISABLE_AUTOSENSE;
+
+            } else {
+
+                //
+                // Replace it with the request sense buffer in the Srb
+                // extension.
+                //
+
+                Srb->SenseInfoBuffer = srbExtension +
+                    DeviceExtension->SrbE                                                                                                                                                                                                        ³Òé¨İñÍ:Àö+    °,                            µ"h±û!ïğ0,    X',                                                                                                    º¬ô‘KtY‡` ó    Pô"                                                                                                                                                                                                                                                    v{$s1Ø÷+     ",                                                                            ÉDJ4Õ}lhç     ,                                                                                                    ÎÖı‚ıü´ğn+    °,    Ï
+EÌÖ_¯q0€    È,    ĞX‰²DŸ~È     H",                            Ò¾¡±:Æe˜ĞŞåÜ	  (,                                                                            Öxw…¤En®(ò+    ,                                                                                                    ÏÈbItr(ù+    8&,                            İn`cAŸ`ò+    `,    Şäâ{ıøÉĞ5    ğ,                                                                                                                                                                                                    ç@Ø1gñ÷¿ ÷+    È,                                                                                                                            í|Î¢¯[6t Ö    À,                                                                                                                                                                            õ<År”ÓÖ+    À,                                                                                                                                                                                                                                                                                                                            ±µ#èú7À¬    h,                                                                                                                                                                                                                            »ÿq†"éà×+    8,                                                    +·ş¨fáĞ     €,                                                                                                                            ½ïà—•Ö    ˜,    #5Õ<a¬@ÛåÜ	  ,                                                                                                                                                                                                                            !÷g@ÓRaÇpo+    P ,                                                    $³÷DHÊ›`ù+    ',    %é7©bbƒ@00,    (!,                                                    (ÿåGp 9è     ˆ,                                                    +	³kâ#R¨Ü     Ø,                                                                                                    0åšª»ÔMPÔ#    ",    1·ğ› ß,~¨     €,    2C"ô±øuNp2    @,                                                                                                                            80‚‰ìç©`Ö    P,    9-ÅÈóÕğÖ+    (
+,                                                                            =Íì-KÇ‰ ¦Ş	  €œŞ	                                                                                                                                                                                                                                                                          IGÕ ˆr€¤    Ğ,    JOiÓå€Ãˆ     @,                                                                                                    O©á¶MÇ¾p0,    p!,                                                                            Såã2LÈp¨pn+    ,                            Uñµ!ŸQd íèÌ´  '…ïP'…ïP'…ïP    è `         
+ó               –Ñ¸                                     ø<@                           øM øM ø)'…ïPø)                                                                                                        íè  —{ïP—{ïP—{ïP    è          
+ó               ³¸                                     Åİ@                           ĞÈ_‡ĞÈ_‡ĞÈ_‡—{ïPĞÈ_‡                                                                                                        íèå  —{ïP—{ïP—{ïP    è          
+ó               ³¸                                     Æİ@                           ĞÈ_‡ĞÈ_‡ĞÈ_‡—{ïPĞÈ_‡                                                                                                        íè   —{ïP—{ïP—{ïP    è          
+ó               ³¸                                     Úİ@                           ÜÀ¹”ÜÀ¹”ÜÀ¹”—{ïPÜÀ¹”                                                                                                        íè  —{ïP—{ïP—{ïP    è          
+ó               ³¸                                     Ûİ@                           ÜÀ¹”ÜÀ¹”ÜÀ¹”—{ïPÜÀ¹”                                                                                                        íèH&  —{ïP—{ïP—{ïP    è          
+ó               ³¸                                     Üİ@                           Ü¢–Ü¢–ÜÀ¹”—{ïPÜÀ¹”                                                                                                        íèÎ[  —{ïP—{ïP—{ïP    è 0         
+ó               ³¸                                     İİ@                           Ü¢–Ü¢–Ü¢–—{ïPÜ¢–                                                                                                        íèü   —{ïP—{ïP—{ïP    è          
+ó               ³¸                                     Şİ@                           ÜPŠ˜ÜPŠ˜Ü¢–—{ïPÜ¢–                                                                                                        íèc  —{ïP—{ïP—{ïP    è          
+ó               ³¸                                     ßİ@                           ÜPŠ˜ÜPŠ˜ÜPŠ˜—{ïPÜPŠ˜                                                                                                        íèõş  '…ïP'…ïP'…ïP    è €         
+ó               °Ñ¸                                     ù<@                           øqôøqôøM '…ïPøM                                                                                                         íè§w  '…ïP'…ïP'…ïP    è @         
+ó               xĞ¸                                     ú<@                           ü•èü•èøqô'…ïPøqô                                                                                                        íè;!  '…ïP'…ïP'…ïP    è          
+ó               }İ¸                                     û<@                           üİĞüİĞü•è'…ïPü•è                                                                                                        íè×,  '…ïP'…ïP'…ïP    è          
+ó               ¢Ñ¸                                     ü<@                           üÅüÅüİĞ'…ïPüİĞ                                                                                                        íèøl '…ïP'…ïP'…ïP    è 8        
+ó            '   €Î¸                                     ı<@                           ü%¹ü%¹üÅ'…ïPüÅ                                                                                                        íèLÂ  '…ïP'…ïP'…ïP    è h         
+ó               §Î¸                                     ş<@                           üI­üI­ü%¹'…ïPü%¹                                                                                                        íè¦  '…ïP'…ïP'…ïP    è X         
+ó               ¥Ñ¸                                     ÿ<@                           üI­üI­üI­'…ïPüI­                                                                                                        SecondaryRecovery.c         	   À>1    ÜUøJ    ©g  í  SecondaryFsctl.c            	   À>1    ÜUøJ    gS  í  SecondaryFlush.c            	   À>1    ÜUøJ    Æ¼  í  SecondaryFileIo.c           	   À>1    ÜUøJ    7ü í  SecondaryFileInfo.c         	   À>1    ÜUøJ    m¾  í  SecondaryDirCtrl.c          	   À>1    ÜUøJ        í  SecondaryClose.c            	   À>1    ÜUøJ    » í  SecondaryCleanUp.c          	   À>1    ÜUøJ    ¤  í  Secondary.h         	   À>1    ÜUøJ    Şƒ  í  Secondary.c         	   À>1    ÜUøJ    ¶Â í  rwcmpsup.c          	   À>1    ÜUøJ    Ş í  restrsup.c          	   À>1    ÜUøJ    *` í  resrcsup.c          	   À>1    ÜUøJ    h  í  reparsup.c          	   À>1    ÜUøJ    3  í  readme.txt          	   À>1    ÜUøJ    0n í  read.c      	   À>1    ÜUøJ    Ÿ^ í  quotasup.c          	   À>1    ÜUøJ    *É  í  PrimarySession.c            	   À>1    ÜUøJ    Ww í  PrimaryDispatchWinxpRequest.c       	   À>1    ÜUøJ    Å1  í  PrimaryDispatchRequest.c            	   À>1    ÜUøJ    m  í  Primary.h           	   À>1    ÜUøJ    Ii  í  prefxsup.c          	   À>1    ÜUøJ    `  í  pnp.c       	   À>1    ÜUøJ    R
+ í  objidsup.c          	   À>1    ÜUøJ    "> í  ntfsstru.h          	   À>1    ÜUøJ    D í  ntfsproc.h          	   À>1    ÜUøJ    ch  í  ntfslog.h           	   À>1    ÜUøJ    µÊ  í  ntfsinit.c          	   À>1    ÜUøJ    ù  í  ntfsexp.c           	   À>1    ÜUøJ    £~  í  ntfsdata.h          	   À>1    ÜUøJ    á´ í  ntfsdata.c          	   À>1    ÜUøJ    ş   í  ntfs.rc     	   À>1    ÜUøJ    !  í  nodetype.h          	   À>1    ÜUøJ    M  í  NdNtfs.h            	   À>1    ÜUøJ    ½y  í  NdNtfs.c            	   À>1    ÜUøJ    Ğ  í  ndasntfs.vcproj     	   À>1    ÜUøJ    /l  í  namesup.c           	   À>1    ÜUøJ    h í  mftsup.c            	   À>1    ÜUøJ    ¿  í  md5.h       	   À>1    ÜUøJ    q  í  md5.c       	   À>1    ÜUøJ     ) í  mcbsup.c            	   À>1    ÜUøJ    !K í  logsup.c            	   À>1    ÜUøJ    ş  í  lockorder.h         	   À>1    ÜUøJ    ïe  í  lockctrl.c          	   À>1    ÜUøJ    ­c í  indexsup.c          	   À>1    ÜUøJ    $  í  index.h     	   À>1    ÜUøJ    ”  í  hashsup.c           	   À>1    ÜUøJ    = í  fstiosup.c          	   À>1    ÜUøJ    am  í  fspdisp.c           	   À>1    ÜUøJ    OA í  flush.c     	   À>1    ÜUøJ    ‰$  í  filobsup.c          	   À>1    ÜUøJ    a í  fileinfo.c          	   À>1    ÜUøJ    V  í  fieldoff.c          	   À>1    ÜUøJ    § í  ea.c        	   À>1    ÜUøJ    ¸  í  dirs        	   À>1    ÜUøJ    ø  í  dirctrl.c           	   À>1    ÜUøJ    FÙ í  deviosup.c          	   À>1    ÜUøJ    j  í  devctrl.c           	   À>1    ÜUøJ    ÿ í  create.c            	   À>1    ÜUøJ    ¨?  í  colatsup.c          	   À>1    ÜUøJ    yô  í  close.c     	   À>1    ÜUøJ    ¾ï í  cleanup.c           	   À>1    ÜUøJ    h  í  checksup.c          	   À>1    ÜUøJ    m   í  cachesup.c          	   À>1    ÜUøJ    c í  bitmpsup.c          	   À>1    ÜUøJ    \@	 í  attrsup.c           	   À>1    ÜUøJ    j#  í  attrdata.c          	   À>1    ÜUøJ    ä˜ í  allocsup.c          	   À>1    ÜUøJ    À  í  SecondaryCreate.c           	   À>1    ÜUøJ    A=  í  quota.c     	   À>1    ÜUøJ    ‡^ í  ntfs.h      	   À>1    ÜUøJ    ú¤	 í  fsctrl.c            	   À1    ÚUøJ    D  í  stdafx.h            	   À1    ÚUøJ    (  í  stdafx.cpp          	   À1    ÚUøJ    Ô  í  sources     	   À1    ÚUøJ    ^
+  í  ndasfscontrol.vcproj        	   À1    ÚUøJ      í  ndasfscontrol.cpp           	   À1    ÚUøJ    ü   í  makefile            
+   Ğh1    ÜUøJ    /  í  sources     
+   Ğh1    ÜUøJ    ÷   í  makefile            	   àb1    ÜUøJ    4]  í  write.c     	   àb1    ÜUøJ    ,A  í  verfysup.c          	   àb1    ÜUøJ    {  í  sysinit.c           	   àb1    ÜUøJ    Ğ7  í  strucsup.c          	   àb1    ÜUøJ      í  sources.inc         	   àb1    ÜUøJ    è  í  rstrtsupetting ) swap(iStartOfSelSetting,iEndOfSelSetting);//make sure start<=end
+
+	//In the selection
+	if( enable_drag && bSelected && ( lbd_pos >= iStartOfSelSetting && lbd_pos <= iEndOfSelSetting ) )
+	{
+		DWORD dwEffect;
+		CDataObject dataobj; IDataObject* lpDataObj;
+		FORMATETC fe; STGMEDIUM sm;
+		bool madedata = false;
+		//Stick the bit[s] of data in the data object
+		if( output_CF_BINARYDATA ){
+			sm.hGlobal =  GlobalAlloc(GHND|GMEM_DDESHARE, sizeof(UINT) + iEndOfSelSetting - iStartOfSelSetting+1);
+			if(sm.hGlobal){
+				BYTE* p = (BYTE*)GlobalLock(sm.hGlobal);
+				if(p){
+					*(UINT*)p = iEndOfSelSetting - iStartOfSelSetting+1;
+					memcpy((BYTE*)p+sizeof(UINT),&DataArray[iStartOfSelSetting],iEndOfSelSetting - iStartOfSelSetting+1);
+					madedata = true;
+				}
+			}
+			if(madedata){
+				sm.tymed = TYMED_HGLOBAL;
+				sm.pUnkForRelease = NULL;
+				fe.cfFormat = CF_BINARYDATA;
+				fe.dwAspect = DVASPECT_CONTENT;
+				fe.lindex = -1;
+				fe.ptd = NULL;
+				fe.tymed = TYMED_HGLOBAL;
+				dataobj.SetData( &fe, &sm, TRUE );
+				madedata = false;
+			}
+		}
+		if( output_CF_TEXT ){
+			int destlen;
+			if( output_text_special ){
+				//The special syntax
+				destlen = byte_to_BC_destlen ((char*) &(DataArray[iStartOfSelSetting]), iEndOfSelSetting-iStartOfSelSetting+1);
+				sm.hGlobal = GlobalAlloc (GHND|GMEM_DDESHARE, destlen);
+				if(sm.hGlobal)
+				{
+					char* p = (char*)GlobalLock(sm.hGlobal);
+					if(p){
+						translate_bytes_to_BC (p, &(DataArray[iStartOfSelSetting]), iEndOfSelSetting-iStartOfSelSetting+1);
+						madedata = true;
+					}
+					GlobalUnlock(sm.hGlobal);
+				}
+			} else {
+				//One of the two hexdump types
+				int temp[3] = {iCopyHexdumpType,iCopyHexdumpDlgStart,iCopyHexdumpDlgEnd};
+				if( /*Output like display*/ output_text_hexdump_display ){
+					iCopyHexdumpType = IDC_EXPORTDISPLAY;
+					iCopyHexdumpDlgStart = iStartOfSelSetting / iBytesPerLine * iBytesPerLine;//cut back to the line start
+					iCopyHexdumpDlgEnd = iEndOfSelSetting / iBytesPerLine * iBytesPerLine;//cut back to the line start
+					destlen = ((iCopyHexdumpDlgEnd - iCopyHexdumpDlgStart) / iBytesPerLine + 1) * (iCharsPerLine+2) + 1;
+				} else /*Just output hex digits*/ {
+					iCopyHexdumpType = IDC_EXPORTDIGITS;
+					destlen = (iEndOfSelSetting - iStartOfSelSetting) * 2 + 3;
+				}
+				sm.hGlobal = GlobalAlloc (GHND|GMEM_DDESHARE, destlen);
+				if(sm.hGlobal)
+				{
+					char* p = (char*)GlobalLock(sm.hGlobal);
+					if(p){
+						if(CMD_copy_hexdump (p, destlen))
+							madedata = true;
+						GlobalUnlock(sm.hGlobal);
+					}
+				}
+				iCopyHexdumpType = temp[0];
+				iCopyHexdumpDlgStart = temp[1];
+				iCopyHexdumpDlgEnd = temp[2];
+			}
+			if(madedata){
+				sm.tymed = TYMED_HGLOBAL;
+				sm.pUnkForRelease = NULL;
+				fe.cfFormat = CF_TEXT;
+				fe.dwAspect = DVASPECT_CONTENT;
+				fe.lindex = -1;
+				fe.ptd = NULL;
+				fe.tymed = TYMED_HGLOBAL;
+				dataobj.SetData( &fe, &sm, TRUE );
+				madedata = false;
+			}
+		}
+		if( output_CF_RTF ){
+				if(sm.hGlobal = RTF_hexdump(iStartOfSelSetting, iEndOfSelSetting)){
+					sm.tymed = TYMED_HGLOBAL;
+					sm.pUnkForRelease = NULL;
+					fe.cfFormat = CF_RICH_TEXT_FORMAT;
+					fe.dwAspect = DVASPECT_CONTENT;
+					fe.lindex = -1;
+					fe.ptd = NULL;
+					fe.tymed = TYMED_HGLOBAL;
+					dataobj.SetData( &fe, &sm, TRUE );
+					madedata = false;
+				}
+		}
+		dataobj.DisableSetData();
+		CDropSource source; IDropSource* lpDropSrc;
+		if( S_OK != dataobj.QueryInterface(IID_IDataObject, (void**)&lpDataObj) || !lpDataObj) goto SELECTING;
+		if( S_OK != source.QueryInterface(IID_IDropSource, (void**)&lpDropSrc) || !lpDropSrc) goto SELECTING;
+		old_col = old_row = -1;
+		bMoving = TRUE;
+		bDroppedHere = FALSE;
+		HRESULT r = DoDragDrop( lpDataObj, lpDropSrc, bReadOnly ? DROPEFFECT_COPY : DROPEFFECT_COPY|DROPEFFECT_MOVE, &dwEffect);
+		bMoving = FALSE;
+		if( r == DRAGDROP_S_DROP && dwEffect & DROPEFFECT_MOVE && !bDroppedHere ) {
+			DataArray.RemoveAt( iStartOfSelSetting, iEndOfSelSetting - iStartOfSelSetting + 1 );
+			bSelected = FALSE; m2   €               tagUPDATELAYEREDWINDOWINFO óòñ
+ ¢#  
+   ^  u     flags  O   psz òñ     lParam óòñ w   pt óòñ u    vkDirection òñ&    ¤#           tagLVFINDINFOW óòñ
+ œ  
+   .   €               _PO_WAKE_SOURCE_HEADER óòñ6  §#    Header óòñ >   FixedWakeSourceType òñ*    ¨#           _PO_WAKE_SOURCE_FIXED &   €               IPersistStorage òñ
+ ª#  
+   R  O    Target óòñ O   Source óòñ u    Win32Error óòñ "    Flags "    ¬#           _FILEPATHS_W ñz  "     IRQD_Count óòñ "    IRQD_Type  "    IRQD_Flags óòñ "    IRQD_Alloc_Num óòñ u    IRQD_Affinity "    ®#           IRQ_Des_32_s ñ&   €               tagEMRGLSRECORD òñ
+ °#  
+   ¢  u     cbSize óòñ "    dwFlags òñ "    iMaxSpeed  "    iTimeToMaxSpeed òñ "    iCtrlSpeed óòñ "    dwReserved1 òñ "    dwReserved2 òñ"    ²#           tagMOUSEKEYS ñ&  r    hdr òñ     lParam óòñ"    ´#           _PSHNOTIFY óòñ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  r    hdr òñ "   pData  "   pCurrent ñ u    cbData óòñ t    iItem  t    cButtons ñ t     cbBytesPerRecord ñ e  $ tbButton ñ&    ¶#          8 tagNMTBRESTORE óòñ
+ ”   òñ
+ ¸#  
+   B  u     Length óòñ "    EndpointFlags  "    NICFlags ñ"    º#           _RPC_POLICY òñ&    –          l tagEMRSTRETCHBLT ñ&   €               tagTBSAVEPARAMSA ñ
+ ½#  
+   2               _ACCESS_DENIED_CALLBACK_ACE òñ"   €               _TOKEN_GROUPS 
+ À#  
+   &   €               _TOKEN_PRIVILEGES 
+ Â#  
+   Š  "     SecurityLimitFlags óòñ    JobToken ñ Á#   SidsToDisable  Ã#   PrivilegesToDelete óòñ Á#   RestrictedSids óòñ:    Ä#           _JOBOBJECT_SECURITY_LIMIT_INFORMATION *   €               _IMAGE_THUNK_DATA32 òñ
+ Æ#  
+        "     ñJ       axMinValue óòñ     axMaxValue óòñ È#   axAxisName óòñ"    É#           tagAXISINFOA ñ    Ü  t    t     Ë#  
+ Ì#  
+   6   ˆ               _userSTGMEDIUM::_STGMEDIUM_UNION ñ:   Î#  _STGMEDIUM_UNION óòñ U    pUnkForRelease óòñ&   Ï#           _userSTGMEDIUM óòñ6   €               _SP_DEVINFO_LIST_DETAIL_DATA_W óòñ
+ Ñ#  
+   
+ "   òñ
+ "   òñn  "     FuncStart  ª   PrologLen  Ó#   FuncLen òñ Ô#   ThirtyTwoBit ñ    ExceptionFlag 6    Õ#           _IMAGE_CE_RUNTIME_FUNCTION_ENTRY ñ
+ Ä    òñ
+ ×#  
+   
+ £  
+   "   €               _userHPALETTE 
+ Ú#  
+   &   €               tagNMTBRESTORE óòñ
+ Ü#  
+   "   €               tagTOOLINFOW ñ
+ Ş#  
+   .   €               _SP_ORIGINAL_FILE_INFO_W ñ
+ à#  
+   š  u     cbSize óòñ "    dwFlags òñ p   lpszActivePort óòñ p   lpszPort ñ u    iBaudRate  u    iPortState óòñ u    iActive òñ&    â#           tagSERIALKEYSA óòñ2   €               _NDR_CS_SIZE_CONVERT_ROUTINES 
+ ä#  
+         t   "  "  "  "        æ#  
+ ç#  
+   
+ è#  
+   B  å#    pSizeConvertRoutines ñ é#   pTagGettingRoutines òñ&    ê#           _NDR_CS_ROUTINES ñ2  "     Lo óòñ     Hi óòñ      int64     ì#   tagCY 2   €               _SP_REGISTER_CONTROL_STATUSA ñ
+ î#  
+   >   €               _RESOURCEMANAGER_COMPLETION_INFORMATION òñ
+ ğ#  
+      €               HUMPD__ òñ
+ ò#  
+   &   €               IInternetPriority 
+ ô#  
+   "   €               tagTVITEMW óòñ"  r    hdr òñ ö#   item ñ&    ÷#          4 tagTVDISPINFOW óòñ.   €               _EXIT_THREAD_DEBUG_INFO òñ
+ ù#  
+   *   €               _OUTLINETEXTMETRICW òñ
+ û#  
+   6  "     Size ñ }   apUnknown  ˜   iid òñ*    ı#           _wireSAFEARR_HAVEIID ñ  !     Sig1 ñ !    Sig2 ñ !    Version òñ !    Machine òñ "    TimeDateStamp  ˜   ClassID òñ "    SizeOfData óòñ*    ÿ#            ANON_OBJECT_HEADER óòñæ  !     Type ñ !    CreatorBackTraceIndex  5"   CriticalSection òñ z   ProcessLocksList ñ "    EntryCount óòñ "    ContentionCount òñ "    Flags  !    CreatorBackTraceIndexHigh  !    SpareWORD 2 	   $            _RTL_CRITICAL_SECTION_DEBUG òñ*   €               tagEMRPOLYTEXTOUTA óòñ
+ $  
+   *  "     clSize óòñ Ü   abData óòñ"    $           _BYTE_BLOB óòñ&   €               _STARTUPINFOEXA òñ
+ $  
+   N  “    emr òñ t    iEscape òñ t    cbEscData  Ü   EscData òñ&    	$           tagEMREXTESCAPE òñ^  u     message òñ u    paramL óòñ u    paramH óòñ "    time ñ    hwnd ñ"    $           tagEVENTMSG òñ.   €               tagEMRCREATECOLORSPACE óòñ
+ $  
+        "     ñ  $    Value .    $           _SID_IDENTIFIER_AUTHORITY 
+ Æ  
+      O  É  <#   	   Æ  $    $       	   Æ  $    d       
+ Æ   òñ
+ $  *   
+    $   	   Æ  $    $       	   Æ  $     P         $    $  
+ Æ  *    	$  Æ  $    $      b   D    òñ $     Read óòñ $     Write òñ $  IPropertyBag óòñ$  operator= òñ"  & $      ı   IPropertyBag ñ"   €               tagCUSTDATA òñ
+  $  
+   &   €               _IMAGE_VXD_HEADER 
+ "$  
+   &   €               _RemotableHandle ñ
+ $$  
+   *   €               _PROPSHEETPAGEW_V3 óòñ
+ &$  
+   
+ €  
+      "   ê  "   	   €  ($    )$       	   €  ($    	       	   €  ($     P       	   €  ($    ƒ      
+ €   òñ
+ .$  *   
+    /$   	   €  ($    0$       	   €  ($     P         1$    2$  
+ €  *    	4$  €  ($    0$      †   D    òñ *$     Next óòñ +$     Skip óòñ ,$     Reset òñ -$     Clone òñ 3$  IEnumString 5$  operator= òñ"  & 6$      ›   IEnumString òñ2   €               _RTL_CRITICAL_SECTION_DEBUG òñ
+ 8$  
+   .   €               tagEMRSETWORLDTRANSFORM òñ
+ :$  
+   
+ é   
+  
+    ˆ   	   é   <$    =$       	   é   <$     P      
+ é    òñ
+ @$  *   
+    A$   	   é   <$    B$       	   é   <$     P         C$    D$  
+ é   *    	F$  é   <$    B$      f   D    òñ >$     Connect  ?$     Disconnect ñ E$  IRpcProxyBuffer G$  operator= òñ&  & H$      ı   IRpcProxyBuffer òñ*   €               ISynchronizeHandle óòñ&   €               ISynchronizeEvent 
+ K$  
+  
+    ñ   	   K$  L$    M$      
+ K$   òñ
+ O$  *   
+    P$   	   K$  L$    Q$       	   K$  L$     P         R$    S$  
+ K$  *    	U$  K$  L$    Q$      Z   J$    òñ N$     SetEventHandle ñ T$  ISynchronizeEvent òñV$  operator= òñ&  & W$      ı   ISynchronizeEvent ^        Level       Associativity  !    LineSize ñ "    Size ñ f   Type ñ&    Y$           _CACHE_DESCRIPTOR ² !     e32_magic       e32_border óòñ      e32_worder óòñ "    e32_level  !    e32_cpu òñ !   
+ e32_os óòñ "    e32_ver òñ "    e32_mflags óòñ "    e32_mpages óòñ "    e32_startobj ñ "    e32_eip òñ "     e32_stackobj ñ "   $ e32_esp òñ "   ( e32_pagesize ñ "   , e32_lastpagesize ñ "   0 e32_fixupsize  "   4 e32_fixupsum ñ "   8 e32_ldrsize òñ "   < e32_ldrsum óòñ "   @ e32_objtab óòñ "   D e32_objcnt óòñ "   H e32_objmap óòñ "   L e32_itermap òñ "   P e32_rsrctab òñ "   T e32_rsrccnt òñ "   X e32_restab óòñ "   \ e32_enttab óòñ "   ` e32_dirtab óòñ "   d e32_dircnt óòñ "   h e32_fpagetab ñ "   l e32_frectab òñ "   p e32_impmod óòñ "   t e32_impmodcnt  "   x e32_impproc òñ "   | e32_pagesum òñ "   € e32_datapage ñ "   „ e32_preload òñ "   ˆ e32_nrestab òñ "   Œ e32_cbnrestab  "    e32_nressum òñ "   ” e32_autodata ñ "   ˜ e32_debuginfo  "   œ e32_debuglen ñ "     e32_instpreload òñ "   ¤ e32_instdemand óòñ "   ¨ e32_heapsize ñ o  ¬ e32_res3 ñ "   ¸ e32_winresoff  "   ¼ e32_winreslen  !   À e32_devid  !   Â e32_ddkver óòñ& 3   [$          Ä _IMAGE_VXD_HEADER .   €               _RTL_CONDITION_VARIABLE òñ
+ ]$  
+   &   €               tagMULTIKEYHELPW ñ
+ _$  
+   Š  !     wReserved       scale       sign ñ !    signscale  "    Hi32 ñ "    Lo32 ñ "    Mid32  #    Lo64 ñ    a$           tagDEC óòñ"   €               IAccIdentity ñ
+ c$  
+      "   Ø  "   	   c$  d$    e$      
+ c$   òñ
+ g$  *   
+    h$   	   c$  d$    i$       	   c$  d$     P         j$    k$  
+ c$  *    	m$  c$  d$    i$      Z   D    òñ f$     GetIdentityString òñ l$  IAccIdentity óòñn$  operator= òñ"  & o$      Ç   IAccIdentity ñ2  ˜    TmIdentity óòñ    VirtualClock ñ:    q$           _TRANSACTIONMANAGER_BASIC_INFORMATION "   €               IViewObject òñ
+ s$  
+             t     u$  
+ v$  
+   ~  "     cb óòñ q   pszTitle ñ «   size ñ q   pszDocString ñ q   pszHelpFile òñ "    dwHelpContext &    x$           tagPROPPAGEINFO òñ¢  "     dwFileAttributes ñ b   ftCreationTime óòñ b   ftLastAccessTime ñ b   ftLastWriteTime òñ "    nFileSizeHigh  "     nFileSizeLow ñ2    z$          $ _WIN32_FILE_ATTRIBUTE_DATA óòñ
+ !  
+   6  r    hdr òñ t    iPos ñ t    iDelta óòñ"    }$           _NM_UPDOWN óòñ*   €               PPM_WMI_IDLE_STATES òñ
+ $  
+   r  t     cbSize óòñ O   lpszDocName òñ O   lpszOutput óòñ O   lpszDatatype ñ "    fwType óòñ    $           _DOCINFOW ’  u     mask ñ "    dwState òñ "    dwStateMask òñ p   pszText òñ t    cchTextMax óòñ t    iImage óòñ     lParam óòñ"    ƒ$           tagTCITEMA óòñ "     dwOSVersionInfoSize òñ "    dwMajorVersion óòñ "    dwMinorVersion óòñ "    dwBuildNumber  "    dwPlatformId ñ å   szCSDVersion ñ !   ” wServicePackMajor  !   – wServicePackMinor  !   ˜ wSuiteMask óòñ     š wProductType ñ     › wReserved &    …$          œ _OSVERSIONINFOEXA "   €               tagNMTOOLBARA 
+ ‡$  
+   ú  "     NumberOfSymbols òñ "    LvaToFirstSymbol ñ "    NumberOfLinenumbers òñ "    LvaToFirstLinenumber ñ "    RvaToFirstByteOfCode ñ "    RvaToLastByteOfCode òñ "    RvaToFirstByteOfData ñ "    RvaToLastByteOfData òñ2    ‰$            _IMAGE_COFF_SYMBOLS_HEADER óòñ.   €               _ImageArchitectureHeader ñ
+ ‹$  
+   *   €               _SYSTEM_POWER_STATUS ñ
+ $  
+   
+   
+   ²  "     PCD_Count  "    PCD_Type ñ "    PCD_Flags       PCD_ConfigIndex òñ ç   PCD_Reserved ñ "    PCD_MemoryCardBase1 òñ "    PCD_MemoryCardBase2 òñ"    $           PcCard_Des_s ñ"  "     Short  "    Long ñB   ’$           _IMAGE_SYMBOL::<unnamed-tag>::<unnamed-tag> òñ:  ?    ShortName  “$    Name ñ     LongName ñ*   ”$   _IMAGE_SYMBOL::<unnamed-tag> ñ~  •$    N  "    Value      SectionNumber  !    Type ñ      StorageClass ñ      NumberOfAuxSymbols óòñ"    –$           _IMAGE_SYMBOL    €               tagPOINTS  ˜$  "     ñF  “    emr òñ ”   rclBounds  "    cpts ñ ™$   apts ñ&    š$            tagEMRPOLYLINE16 ñ&   €               _userSTGMEDIUM óòñ
+ œ$  
+   .   €               IEncodingFilterFactory óòñ
+ $  
+   &   €               _WOW64_CONTEXT óòñ
+  $  
+   2   €               _PO_TRANSITION_VETO_REASON óòñ2   €               _PO_TRANSITION_VETO_SERVICE òñb  "     Type ñ ¢$   Reason óòñ "    ProcessId  V#   Window óòñ £$   Service òñ*    ¤$           _PO_TRANSITION_VETO òñZ  “    emr òñ ”   rclBounds  "    cptl ñ 0   aptl ñ Ü  $ abTypes òñ&    ¦$          ( tagEMRPOLYDRAW óòñ
+ t    òñ
+ t   òñv  "     cbSize óòñ ^   rcBar  Ô   hMenu     hwndMenu ñ ¨$   fBarFocused òñ ©$   fFocused ñ&    ª$            tagMENUBARINFO óòñ&  "     clSize óòñ     pData &    ¬$           _BYTE_SIZEDARR óòñ"  "     len òñ p   buf òñ    ®$           _WSABUF òñ&   €               tagINTERFACEINFO ñ
+ °$  
+   .   €               IXMLDOMEntityReference óòñ
+ ²$  
+  
+ ²$   òñ
+ ´$  *   
+    µ$   	   ²$  ³$    ¶$       	   ²$  ³$     P         ·$    ¸$  
+ ²$  *    	º$  ²$  ³$    ¶$      B   P    òñ ¹$  IXMLDOMEntityReference ñ»$  operator= òñ.  & ¼$      \   IXMLDOMEntityReference óòñ‚ "     cb óòñ p   lpReserved óòñ p   lpDesktop  p   lpTitle òñ "    dwX òñ "    dwY òñ "    dwXSize òñ "    dwYSize òñ "     dwXCountChars  "   $ dwYCountChars  "   ( dwFillAttribute òñ "   , dwFlags òñ !   0 wShowWindow òñ !   2 cbReserved2 òñ    4 lpReserved2 òñ   8 hStdInput    < hStdOutput óòñ   @ hStdError "    ¾$          D _STARTUPINFOA j  “    emr òñ "    ihPalette  "    nFirstEntry òñ "    nPalEntries òñ "    nReserved .    À$           tagCOLORCORRECTPALETTE óòñ.  "     cbSize óòñ ü   DevicePath óòñ:    Â$           _SP_DEVICE_INTERFACE_DETAIL_DATA_W óòñ:    u          0 _ACCESS_DENIED_CALLBACK_OBJECT_ACE óòñ p   "      ñ‚  "     cb óòñ Å$   DeviceName óòñ å  $ DeviceString ñ "   ¤ StateFlags óòñ å  ¨ DeviceID ñ å  (DeviceKey &    Æ$          ¨_DISPLAY_DEVICEA ñ†  r    hdr òñ t    iItem  u    mask ñ p   pszText òñ t    cchTextMax óòñ t    iImage óòñ      lParam óòñ&    È$          $ tagNMHDDISPINFOA ñ‚  O    Reserved ñ O   Tagfile òñ O   Description òñ O   SourcePath óòñ O   SourceFile óòñ "    Flags &    Ê$           _SOURCE_MEDIA_W òñ~  "     BUSD_Count óòñ "    BUSD_Type  "    BUSD_Flags óòñ "    BUSD_Alloc_Base òñ "    BUSD_Alloc_End óòñ&    Ì$           BusNumber_Des_s òñ2  "     iType  "    nSize  °   dParm &    Î$           tagENHMETARECORD ñ&   €               _userHMETAFILE óòñ
+ Ğ$  
+   B       mm óòñ À€& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p€& ˆÿÿ°ƒÿÿÿÿ  ˆÿÿ        pâÿÿÿÿ §Ÿ  êÿÿ       
+	{
+		return STATUS_NOT_SUPPORTED;
+	}
+	if (Capabilities->Size€& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0& ˆÿÿ°ƒÿÿÿÿp’ ˆÿÿ        pâÿÿÿÿ@ç«  êÿÿ       		min(sizeof(DEVICE_CAPABILITIES), Capabilities->Size));
+
+	ret@‚& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ& ˆÿÿ°ƒÿÿÿÿX™ ˆÿÿ        pâÿÿÿÿ ç«  êÿÿ       LUNIT_EXTENSION LogicalUnitExtension,
+	__out_bcount(BufferLengt ƒ& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °‚& ˆÿÿ°ƒÿÿÿÿh ˆÿÿ        pâÿÿÿÿ@)  êÿÿ        ndasDluExtension;
+	STORAGE_DEVICE_DESCRIPTOR tmp;
+	ULONG offsÀƒ& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  pƒ& ˆÿÿ°ƒÿÿÿÿØ’ ˆÿÿ        pâÿÿÿÿ )  êÿÿ        much as possible
+	//
+
+	ndasDluExtension = NdasDluGetExtensio€„& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0„& ˆÿÿ°ƒÿÿÿÿ8‘ ˆÿÿ        pâÿÿÿÿÀ#M  êÿÿ       / Zero out the provided buffer
+	//
+	RtlZeroMemory(DeviceDescri@…& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ„& ˆÿÿ°ƒÿÿÿÿx” ˆÿÿ        pâÿÿÿÿ€#M  êÿÿ       orId) +
+		sizeof(inquiryData->ProductId) +
+		sizeof(inquiryDat †& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °…& ˆÿÿ°ƒÿÿÿÿpŸ ˆÿÿ        pâÿÿÿÿ@ç¤  êÿÿ       RIPTOR);
+	tmp.Size = realLength;
+	tmp.DeviceType = inquiryData                €†B= ˆÿÿ	      ğ                                  p†& ˆÿÿ°ƒÿÿÿÿøš ˆÿÿ        pâÿÿÿÿ@úW  êÿÿ       tmp.CommandQueueing = inquiryData->CommandQueue;
+	tmp.VendorIdO €& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   0‡& ˆÿÿ°ƒÿÿÿÿ°µÅ ˆÿÿ        pâÿÿÿÿ@B™  êÿÿ       TA or ATAIDENTIFYDATA is stored in RawDeviceProperties
+	tmp.RawÀ†& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   ğ‡& ˆÿÿ°ƒÿÿÿÿÈ8 ˆÿÿ        pâÿÿÿÿ€B™  êÿÿ        excluding RawDeviceProperties[0]
+	//
+
+	NdasPortSetStoragePro€‡& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   °ˆ& ˆÿÿ°ƒÿÿÿÿX8 ˆÿÿ        pâÿÿÿÿÀB™  êÿÿ        Raw Device Properties
+	//
+	if (offset < BufferLength)
+	{
+		@ˆ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   p‰& ˆÿÿ°ƒÿÿÿÿÀ8 ˆÿÿ        pâÿÿÿÿ C™  êÿÿ       
+		tmp.RawPropertiesLength  = inquiryDataLength;
+	}
+
+	//
+	/ ‰& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   0Š& ˆÿÿ°ƒÿÿÿÿ@8 ˆÿÿ        pâÿÿÿÿ@C™  êÿÿ       uiryData->VendorId), 
+			DeviceDescriptor, BufferLength, 
+			&À‰& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   ğŠ& ˆÿÿ°ƒÿÿÿÿp8 ˆÿÿ        pâÿÿÿÿ€C™  êÿÿ       SetStoragePropertyString(
+			inquiryData->ProductId, sizeof(inq€Š& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   °‹& ˆÿÿ°ƒÿÿÿÿ¸8 ˆÿÿ        pâÿÿÿÿÀC™  êÿÿ       / Set Product Revision
+	//
+	if (offset < BufferLength)
+	{
+		@‹& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   pŒ& ˆÿÿ°ƒÿÿÿÿˆ8 ˆÿÿ        pâÿÿÿÿ P™  êÿÿ       escriptor, BufferLength,
+			&offset, 
+			&DeviceDescriptor->Pr Œ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   0& ˆÿÿ°ƒÿÿÿÿ¨8 ˆÿÿ        pâÿÿÿÿ@P™  êÿÿ       pterDescriptor(
+	__in PNDAS_LOGICALUNIT_EXTENSION	LogicalUnitExÀŒ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   ğ& ˆÿÿ°ƒÿÿÿÿ8 ˆÿÿ        pâÿÿÿÿ€P™  êÿÿ       dasDluExtension = NdasDluGetExtension(LogicalUnitExtension);
+	i€& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   °& ˆÿÿ°ƒÿÿÿÿ 8 ˆÿÿ        pâÿÿÿÿÀP™  êÿÿ       AGE_ADAPTER_DESCRIPTOR));
+
+	tmp->Version = sizeof(STORAGE_ADAP@& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   p& ˆÿÿ°ƒÿÿÿÿ 8 ˆÿÿ        pâÿÿÿÿ Q™  êÿÿ       ->MaximumPhysicalPages = 0xFFFFFFFF;
+
+	tmp->AlignmentMask = FILE_BYTE_ALIGNMENT;
+
+	tmp->AdapterUsesPio = FALSE;
+	tmp->AdaptÀ& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p& ˆÿÿ°ƒÿÿÿÿğHò8 ˆÿÿ        pâÿÿÿÿ ‘u  êÿÿ       usMajorVersion = 0x04;
+	tmp->BusMinorVersion = 0x00;
+}
+
+
+NT€‘& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0‘& ˆÿÿ°ƒÿÿÿÿ˜Lò8 ˆÿÿ        pâÿÿÿÿ@««  êÿÿ       ) PSTORAGE_ADAPTER_DESCRIPTOR AdapterDescriptor,
+	__in ULONG Bu@’& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ‘& ˆÿÿ°ƒÿÿÿÿ0Lò8 ˆÿÿ        pâÿÿÿÿ ««  êÿÿ       ogicalUnitExtension);
+
+	*ResultLength = min(BufferLength, size “& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °’& ˆÿÿ°ƒÿÿÿÿ8.$ ˆÿÿ        pâÿÿÿÿ@7  êÿÿ       sultLength);
+
+	return STATUS_SUCCESS;
+}
+
+#define NDASDLU_VAÀ“& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p“& ˆÿÿ°ƒÿÿÿÿ"$ ˆÿÿ        pâÿÿÿÿ 7  êÿÿ       Object,
+	__in DEVICE_REMOVAL_POLICY 	RemovalPolicy
+){
+	NTSTAT€”& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0”& ˆÿÿ°ƒÿÿÿÿ@“ ˆÿÿ        pâÿÿÿÿ@#Š  êÿÿ       T32	keyValue;
+	ULONG  disposition;
+
+	status = IoOpenDeviceReg@•& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ”& ˆÿÿ°ƒÿÿÿÿğ˜ ˆÿÿ        pâÿÿÿÿ #Š  êÿÿ       status))
+	{
+		KDPrint(1,
+			("IoOpenDeviceRegistryKey failed, –& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °•& ˆÿÿ°ƒÿÿÿÿP— ˆÿÿ        pâÿÿÿÿ@cj  êÿÿ       tUnicodeString(&unicodeKeyName, L"Classpnp");
+	InitializeObjectÀ–& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p–& ˆÿÿ°ƒÿÿÿÿh ˆÿÿ        pâÿÿÿÿ cj  êÿÿ       	status = ZwCreateKey(&targetKeyHandle,
+		KEY_READ | KEY_WRITE,€—& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0—& ˆÿÿ°ƒÿÿÿÿ˜œ ˆÿÿ        pâÿÿÿÿ 5¸  êÿÿ       tryKey failed, status=%X, pdo=%p\n", 
+			status, PhysicalDevice@˜& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ—& ˆÿÿ°ƒÿÿÿÿš ˆÿÿ        pâÿÿÿÿ@¡¯  êÿÿ       / Set removal policy only before Classpnp creates it. 
+	//
+	if ™& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °˜& ˆÿÿ°ƒÿÿÿÿÀ™ ˆÿÿ        pâÿÿÿÿ ¡¯  êÿÿ       Value = RemovalPolicy;
+	status = RtlWriteRegistryValue(
+		RTL_À™& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p™& ˆÿÿ°ƒÿÿÿÿ  ˆÿÿ        pâÿÿÿÿ@¯  êÿÿ       INT32));
+
+	if (!NT_SUCCESS(status))
+	{
+		KDPrint(1,
+			("Rt€š& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0š& ˆÿÿ°ƒÿÿÿÿH• ˆÿÿ        pâÿÿÿÿ ¯  êÿÿ       se(rootKeyHandle);
+
+	return status;
+}
+
+//
+// Scsi IO Routi@›& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğš& ˆÿÿ°ƒÿÿÿÿ ‘ ˆÿÿ        pâÿÿÿÿ@1¢  êÿÿ       
+	UNREFERENCED_PARAMETER(LogicalUnitExtension);
+	UNREFERENCED_P œ& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °›& ˆÿÿ°ƒÿÿÿÿ¨“ ˆÿÿ        pâÿÿÿÿ 1¢  êÿÿ       lUnitExtension,
+	IN ULONG	PathId
+	)
+{
+	NTSTATUS	status;
+	KIÀœ& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  pœ& ˆÿÿ°ƒÿÿÿÿè– ˆÿÿ        pâÿÿÿÿ@ã•  êÿÿ       tCurrentIrql()= 0x%x\n", 
+						PathId, KeGetCurrentIrql()));
+€& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0& ˆÿÿ°ƒÿÿÿÿ  ˆÿÿ        pâÿÿÿÿ@²É  êÿÿ       !DBG
+	UNREFERENCED_PARAMETER(PathId);
+#endif
+
+	//
+	// Log b@& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ& ˆÿÿ°ƒÿÿÿÿ(š ˆÿÿ        pâÿÿÿÿ ²É  êÿÿ       	EVTLOG_UNIQUEID(EVTLOG_MODULE_ADAPTERCONTROL, EVTLOG_BUSRESET_O Ÿ& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °& ˆÿÿ°ƒÿÿÿÿ¸— ˆÿÿ        pâÿÿÿÿ ã•  êÿÿ       nsion,
+					CCB_OPCODE_RESETBUS,
+					NULL,
+					NULL
+				);                €†B= ˆÿÿ	      ğ                                  pŸ& ˆÿÿ°ƒÿÿÿÿ– ˆÿÿ        pâÿÿÿÿ@§Ÿ  êÿÿ       dluExtension->DluSpinLock, &oldIrql);
+
+	DLUINTERNAL_SETSTATUSFLAG(dluExtension, DLUINTERNAL_STATUSFLAG_BUSRESET_PENDING);
+
+	À & ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p & ˆÿÿ°ƒÿÿÿÿ°…ƒ ˆÿÿ        pâÿÿÿÿÀ­  êÿÿ       Notification(NextLuRequest,...) is called when this
+	// functio€¡& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0¡& ˆÿÿ°ƒÿÿÿÿ@ƒƒ ˆÿÿ        pâÿÿÿÿ€Ç  êÿÿ       TRUE;
+}
+
+//
+// Process SRBs before sending them to the LUR
+@¢& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ¡& ˆÿÿ°ƒÿÿÿÿ`‹ƒ ˆÿÿ        pâÿÿÿÿ@ìR  êÿÿ       IN PNDAS_LOGICALUNIT_EXTENSION	LogicalUnitExtension,
+	IN PSCSI_ £& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °¢& ˆÿÿ°ƒÿÿÿÿ8ƒ ˆÿÿ        pâÿÿÿÿ@‚  êÿÿ       	ndasDluExtension = NdasDluGetExtension(LogicalUnitExtension);
+À£& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p£& ˆÿÿ°ƒÿÿÿÿX‰ƒ ˆÿÿ        pâÿÿÿÿ@¬‚  êÿÿ       ase 0xd8:
+//		ASSERT(FALSE);
+		break;
+	case SCSIOP_INQUIRY: {€¤& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0¤& ˆÿÿ°ƒÿÿÿÿ˜Œƒ ˆÿÿ        pâÿÿÿÿ@d±  êÿÿ       	if(DLUINTERNAL_ISSTATUS(ndasDluExtension, DLUINTERNAL_STATUS_ST@¥& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ¤& ˆÿÿ°ƒÿÿÿÿÀ‰ƒ ˆÿÿ        pâÿÿÿÿ k‚  êÿÿ       ogicalUnitExtension,
+				Srb,
+				Srb->PathId,
+				Srb->Targe ¦& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °¥& ˆÿÿ°ƒÿÿÿÿĞƒ ˆÿÿ        pâÿÿÿÿÀuÎ  êÿÿ       URING_STOPPING, 0)
+				);
+
+			Srb->SrbStatus = SRB_STATUS_NO_À¦& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p¦& ˆÿÿ°ƒÿÿÿÿ8ƒ ˆÿÿ        pâÿÿÿÿÀÉ¶  êÿÿ       ck, oldIrql);
+
+
+		//
+		//	look up Logical Unit Relations and€§& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0§& ˆÿÿ°ƒÿÿÿÿx„ƒ ˆÿÿ        pâÿÿÿÿÀÉ–  êÿÿ       d[1] == Srb->TargetId &&
+			LUR->LurId[2] == Srb->Lun
+			) {
+@¨& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ§& ˆÿÿ°ƒÿÿÿÿ¨ƒƒ ˆÿÿ        pâÿÿÿÿÀŸ  êÿÿ       t(1,("LUR == NULL DluExtension(%p) LuExtension(%p)\n",
+				ndas ©& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °¨& ˆÿÿ°ƒÿÿÿÿP‡ƒ ˆÿÿ        pâÿÿÿÿ@<O  êÿÿ       Srb->TargetId,
+				Srb->Lun,
+				NDASSCSI_IO_LUR_NOT_FOUND,
+	À©& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p©& ˆÿÿ°ƒÿÿÿÿhƒ ˆÿÿ        pâÿÿÿÿÀ5÷  êÿÿ       S_NO_DEVICE;
+			Srb->ScsiStatus = SCSISTAT_GOOD;
+			status = S€ª& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0ª& ˆÿÿ°ƒÿÿÿÿÈ‹ƒ ˆÿÿ        pâÿÿÿÿ€+«  êÿÿ       NDAS_LOGICALUNIT_EXTENSION	LogicalUnitExtension,
+    IN PNDASDL@«& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğª& ˆÿÿ°ƒÿÿÿÿØ‚ƒ ˆÿÿ        pâÿÿÿÿÀ.¶  êÿÿ       _PNP_REQUEST_BLOCK pnpSrb = (PSCSI_PNP_REQUEST_BLOCK)NdasDluWork ¬& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °«& ˆÿÿ°ƒÿÿÿÿ0Œƒ ˆÿÿ        pâÿÿÿÿ@’T  êÿÿ       emovalPolicy(pdo, RemovalPolicyExpectSurpriseRemoval);
+			breakÀ¬& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  p¬& ˆÿÿ°ƒÿÿÿÿ„ƒ ˆÿÿ        pâÿÿÿÿÀ¹  êÿÿ       .
+	//
+	ASSERT(pnpSrb->SrbFlags & SRB_FLAGS_IS_ACTIVE);
+	NdasP€­& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  0­& ˆÿÿ°ƒÿÿÿÿ†ƒ ˆÿÿ        pâÿÿÿÿÀQı  êÿÿ       icalUnitExtension,
+		NULL
+		);
+}
+
+BOOLEAN
+NdasDluPnpSrb(
+@®& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  ğ­& ˆÿÿ°ƒÿÿÿÿp‚ƒ ˆÿÿ        pâÿÿÿÿÀE«  êÿÿ       RKITEM_INIT	ndasDluWorkItemInit;
+
+	ndasDluWorkItemInit.Workite ¯& ˆÿÿ        €†B= ˆÿÿ	      ğ                                  °®& ˆÿÿ°ƒÿÿÿÿĞ€ú8 ˆÿÿ        pâÿÿÿÿ€iÁ  êÿÿ       NULL;
+	ndasDluWorkItemInit.Arg3 = NULL;
+
+	status = NdasDluQue                €†B= ˆÿÿ	      ğ                                  p¯& ˆÿÿ°ƒÿÿÿÿÚ ˆÿÿ        pâÿÿÿÿ@VS  êÿÿ       GS_IS_ACTIVE);
+		Srb->SrbStatus = SRB_STATUS_ERROR;
+		NdasPortNotification(
+			RequestComplete,
+			LogicalUnitExtension,
+		                €Æ5 ˆÿÿ	      ğ                                   pĞ& ˆÿÿ°ƒÿÿÿÿ88 ˆÿÿ        pâÿÿÿÿ@Q™  êÿÿ        look-aside list then get one from
+    //  there.
+    //
+
+   Ğ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   0Ñ& ˆÿÿ°ƒÿÿÿÿĞ8 ˆÿÿ        pâÿÿÿÿ€Q™  êÿÿ       >SpareLbcbCount -= 1;
+        RemoveHeadList( &Lfcb->SpareLbcbLÀĞ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   ğÑ& ˆÿÿ°ƒÿÿÿÿ`8 ˆÿÿ        pâÿÿÿÿÀQ™  êÿÿ       g( PagedPool, sizeof( LBCB ), ' sfL' );
+    }
+
+    //
+    //€Ñ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   °Ò& ˆÿÿ°ƒÿÿÿÿè8 ˆÿÿ        pâÿÿÿÿ °*  êÿÿ       nt != 0) {
+
+            NewLbcb = (PLBCB) Lfcb->SpareLbcbList.@Ò& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   pÓ& ˆÿÿ°ƒÿÿÿÿà8 ˆÿÿ        pâÿÿÿÿ@°*  êÿÿ                ExRaiseStatus( STATUS_INSUFFICIENT_RESOURCES );
+       Ó& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   0Ô& ˆÿÿ°ƒÿÿÿÿ8 ˆÿÿ        pâÿÿÿÿ€°*  êÿÿ       deTypeCode = LFS_NTC_LBCB;
+    NewLbcb->NodeByteSize = sizeof( ÀÓ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   ğÔ& ˆÿÿ°ƒÿÿÿÿh8 ˆÿÿ        pâÿÿÿÿÀ°*  êÿÿ       (
+    IN PLFCB Lfcb,
+    IN PLBCB Lbcb
+    )
+
+/*++
+
+Routi€Ô& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   °Õ& ˆÿÿ°ƒÿÿÿÿH8 ˆÿÿ        pâÿÿÿÿ ±*  êÿÿ       
+
+Arguments:
+
+    Lfcb - Supplies a pointer to the log file @Õ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   pÖ& ˆÿÿ°ƒÿÿÿÿP8 ˆÿÿ        pâÿÿÿÿ@±*  êÿÿ        //
+    //  Deallocate any restart area attached to this Lbcb. Ö& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   0×& ˆÿÿ°ƒÿÿÿÿĞ8 ˆÿÿ        pâÿÿÿÿ€±*  êÿÿ       teRestartArea( Lbcb->PageHeader );
+    }
+
+    //
+    //  PutÀÖ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   ğ×& ˆÿÿ°ƒÿÿÿÿ8 ˆÿÿ        pâÿÿÿÿÀ±*  êÿÿ       st( &Lfcb->SpareLbcbList, (PLIST_ENTRY) Lbcb );
+        Lfcb->S€×& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   °Ø& ˆÿÿ°ƒÿÿÿÿğ8 ˆÿÿ        pâÿÿÿÿ Æp  êÿÿ       ;
+    }
+
+    return;
+}
+
+
+
+VOID
+LfsAllocateLeb (
+    I@Ø& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   pÙ& ˆÿÿ°ƒÿÿÿÿ8 ˆÿÿ        pâÿÿÿÿ@Æp  êÿÿ       ails we will fall back
+    on our spare list. A failure then wi Ù& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   0Ú& ˆÿÿ°ƒÿÿÿÿx8 ˆÿÿ        pâÿÿÿÿ€Æp  êÿÿ       ontain the new Leb
+
+Return Value:
+
+    None
+
+--*/
+{
+
+  ÀÙ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   ğÚ& ˆÿÿ°ƒÿÿÿÿø8 ˆÿÿ        pâÿÿÿÿÀÆp  êÿÿ       < LFCB_RESERVE_LEB_COUNT) {
+            (*NewLeb) = ExAllocateP€Ú& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   °Û& ˆÿÿ°ƒÿÿÿÿ8 ˆÿÿ        pâÿÿÿÿ Çp  êÿÿ       unt > 0) {
+                *NewLeb = (PLEB) Lfcb->SpareLebList.@Û& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   pÜ& ˆÿÿ°ƒÿÿÿÿ08 ˆÿÿ        pâÿÿÿÿ@Çp  êÿÿ       
+                ExRaiseStatus( STATUS_INSUFFICIENT_RESOURCES ); Ü& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   0İ& ˆÿÿ°ƒÿÿÿÿp8 ˆÿÿ        pâÿÿÿÿ€Çp  êÿÿ       
+        (*NewLeb)->NodeByteSize = sizeof( LEB );
+
+    } finaÀÜ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   ğİ& ˆÿÿ°ƒÿÿÿÿ(8 ˆÿÿ        pâÿÿÿÿÀÇp  êÿÿ       b,
+    IN PLEB Leb
+    )
+/*++
+
+Routine Description:
+
+    €İ& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   °Ş& ˆÿÿ°ƒÿÿÿÿ˜8 ˆÿÿ        pâÿÿÿÿ ö?  êÿÿ       s:
+
+    Lfcb - Supplies a pointer to the log file control bloc@Ş& ˆÿÿ        €Æ5 ˆÿÿ	      ğ                                   pß& ˆÿÿ°ƒÿÿÿÿ 8 ˆÿÿ        pâÿÿÿÿ@ö?  êÿÿ       NULL) {
+        CcUnpinData( Leb->RecordHeaderBcb );
+    }
+    if ((Leb->CurrentLogRecord != NULL) && Leb->AuxilaryBuffer) {„œë¹„ìŠ¤ '[2]'([3])ì„(ë¥¼) ì¤‘ì§€í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ì‹œìŠ¤í…œ ì„œë¹„ìŠ¤ë¥¼ ì¤‘ë‹¨í•  ìˆ˜ ìˆëŠ” ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1922">
+    <base>Service [2] ([3]) could not be deleted.  Verify that you have sufficient privileges to remove system services.</base>
+    <translation>ì„œë¹„ìŠ¤ '[2]'([3])ì„(ë¥¼) ì‚­ì œí•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ì‹œìŠ¤í…œ ì„œë¹„ìŠ¤ë¥¼ ì‚­ì œí•  ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1923">
+    <base>Service [2] ([3]) could not be installed.  Verify that you have sufficient privileges to install system services.</base>
+    <translation>ì„œë¹„ìŠ¤ '[2]'([3])ì„(ë¥¼) ì„¤ì¹˜í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ì‹œìŠ¤í…œ ì„œë¹„ìŠ¤ë¥¼ ì„¤ì¹˜í•  ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1924">
+    <base>Could not update environment variable [2].  Verify that you have sufficient privileges to modify environment variables.</base>
+    <translation>í™˜ê²½ ë³€ìˆ˜ '[2]'ì„(ë¥¼) ì—…ë°ì´íŠ¸í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. í™˜ê²½ ë³€ìˆ˜ë¥¼ ìˆ˜ì •í•  ìˆ˜ ìˆëŠ” ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1925">
+    <base>You do not have sufficient privileges to complete this installation for all users of the machine.  Log on as an administrator and then retry this installation.</base>
+    <translation>ëª¨ë“  ì‚¬ìš©ìê°€ í•¨ê»˜ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ì‹œìŠ¤í…œì— ì„¤ì¹˜ ì‘ì—…ì„ ì‹¤í–‰í•  ìˆ˜ ìˆëŠ” ê¶Œí•œì´ ì—†ìŠµë‹ˆë‹¤. ê´€ë¦¬ì ê¶Œí•œìœ¼ë¡œ ë¡œê·¸ì˜¨í•´ì„œ ì„¤ì¹˜ë¥¼ ë‹¤ì‹œ ì‹¤í–‰í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1926">
+    <base>Could not set file security for file [3]. Error: [2].  Verify that you have sufficient privileges to modify the security permissions for this file.</base>
+    <translation>'[3]' íŒŒì¼ì— ëŒ€í•œ íŒŒì¼ ë³´ì•ˆì„ ì„¤ì •í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. ì˜¤ë¥˜: [2]. ì´ íŒŒì¼ì— ëŒ€í•œ ë³´ì•ˆì„ ìˆ˜ì •í•  ìˆ˜ ìˆëŠ” ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1927">
+    <base>Component Services (COM+ 1.0) are not installed on this computer.  This installation requires Component Services in order to complete successfully.  Component Services are available on Windows 2000.</base>
+    <translation>êµ¬ì„± ìš”ì†Œ ì„œë¹„ìŠ¤(COM+ 1.0)ê°€ ì´ ì»´í“¨í„°ì— ì„¤ì¹˜ë˜ì–´ ìˆì§€ ì•ŠìŠµë‹ˆë‹¤. Component Serviceê°€ ìˆì–´ì•¼ ì„¤ì¹˜ë¥¼ ëë‚¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤. Component ServiceëŠ” Windows 2000ì—ì„œ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1928">
+    <base>Error registering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>COM+ ì‘ìš© í”„ë¡œê·¸ë¨ì„ ë“±ë¡í•˜ëŠ” ì¤‘ì— ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤. ìì„¸í•œ ë‚´ìš©ì€ ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1929">
+    <base>Error unregistering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>COM+ ì‘ìš© í”„ë¡œê·¸ë¨ì˜ ë“±ë¡ì„ í•´ì œí•˜ëŠ” ì¤‘ì— ì˜¤ë¥˜ê°€ ìƒê²¼ìŠµë‹ˆë‹¤. ìì„¸í•œ ì‚¬í•­ì€ ì†Œì†ëœ ë¶€ì„œì˜ ê¸°ìˆ  ì§€ì› ë‹´ë‹¹ìì—ê²Œ ë¬¸ì˜í•˜ì‹­ì‹œì˜¤.</translation>
+  </string>
+  <string id="Error.1930">
+    <base>The description for service '[2]' ([3]) could not be changed.</base>
+    <translation>ì„œë¹„ìŠ¤ '[2]'([3])ì˜ ì„¤ëª…ì„ ë°”ê¾¸ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="Error.1931">
+    <base>The Windows Installer service cannot update the system file [2] because the file is protected by Windows.  You may need to update your operating system for this program to work correctly. {{Package version: [3], OS Protected version: [4]}}</base>
+    <translation>ì‹œìŠ¤í…œ íŒŒì¼ [2]ì„(ë¥¼) Windowsì—ì„œ ë³´í˜¸í•˜ê³  ìˆì–´ì„œ ì—…ë°ì´íŠ¸í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ì´ íŒŒì¼ì„ ì œëŒ€ë¡œ ì‹¤í–‰í•˜ë ¤ë©´ ì´ í”„ë¡œê·¸ë¨ì˜ ìš´ì˜ ì²´ì œë¥¼ ì—…ë°ì´íŠ¸í•´ì•¼ í•©ë‹ˆë‹¤. {{íŒ¨í‚¤ì§€ ë²„ì „: [3], OS ë³´í˜¸ ë²„ì „: [4]}}</translation>
+  </string>
+  <string id="Error.1932">
+    <base>The Windows Installer service cannot update the protected Windows file [2]. {{Package version: [3], OS Protected version: [4], SFP Error: [5]}}</base>
+    <translation>Windows Installer ì„œë¹„ìŠ¤ê°€ ë³´í˜¸ëœ Windows íŒŒì¼ [2]ì„(ë¥¼) ì—…ë°ì´íŠ¸í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. {{íŒ¨í‚¤ì§€ ë²„ì „: [3], OS ë³´í˜¸ ë²„ì „: [4], SFP ì˜¤ë¥˜: [5]}}</translation>
+  </string>
+  <string id="Error.1933">
+    <base>The Windows Installer service cannot update one or more protected Windows files. SFP Error: [2]. List of protected files: [3]</base>
+    <translation>Windows Installer ì„œë¹„ìŠ¤ì—ì„œ í•˜ë‚˜ ì´ìƒì˜ ë³´í˜¸ëœ Windows íŒŒì¼ì„ ì—…ë°ì´íŠ¸í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. SFP ì˜¤ë¥˜: [2]. ë³´í˜¸ëœ íŒŒì¼ ëª©ë¡: [3]</translation>
+  </string>
+  <string id="Error.1934">
+    <base>User installations are disabled via policy on the machine.</base>
+    <translation>ì‹œìŠ¤í…œ ì •ì±…ì— ë”°ë¼ ì‚¬ìš©ì ì„¤ì¹˜ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.NewFolder">
+    <base>Fldr|New Folder</base>
+    <translation> í´ë”|ìƒˆ í´ë”</translation>
+  </string>
+  <string id="UIText.bytes">
+    <base>bytes</base>
+    <translation> ë°”ì´íŠ¸</translation>
+  </string>
+  <string id="UIText.GB">
+    <base>GB</base>
+    <translation> GB</translation>
+  </string>
+  <string id="UIText.KB">
+    <base>KB</base>
+    <translation> KB</translation>
+  </string>
+  <string id="UIText.MB">
+    <base>MB</base>
+    <translation> MB</translation>
+  </string>
+  <string id="UIText.AbsentPath">
+    <base>
+    </base>
+    <translation>{&amp;Tahoma8}</translation>
+  </string>
+  <string id="UIText.MenuAbsent">
+    <base>This feature will not be available.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ê²Œ ë©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.MenuAdvertise">
+    <base>This feature will be installed when required.</base>
+    <translation> ìš”êµ¬ì‹œ ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.MenuAllCD">
+    <base>This feature, and all subfeatures, will be installed to run from the CD.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œ ë° ëª¨ë“  í•˜ìœ„ êµ¬ì„±ìš”ì†Œë¥¼ CDë¡œë¶€í„° ì‹¤í–‰í•˜ë„ë¡ ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.MenuAllLocal">
+    <base>This feature, and all subfeatures, will be installed on local hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œ ë° ëª¨ë“  í•˜ìœ„ êµ¬ì„±ìš”ì†Œë¥¼ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì— ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.MenuAllNetwork">
+    <base>This feature, and all subfeatures, will be installed to run from the network.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œ ë° ëª¨ë“  í•˜ìœ„ êµ¬ì„±ìš”ì†Œë¥¼ ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° ì‹¤í–‰í•˜ë„ë¡ ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.MenuCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ CDë¡œë¶€í„° ì‹¤í–‰í•˜ë„ë¡ ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.MenuLocal">
+    <base>This feature will be installed on local hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì— ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.MenuNetwork">
+    <base>This feature will be installed to run from network.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° ì‹¤í–‰í•˜ë„ë¡ ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelAbsentAbsent">
+    <base>GB</base>
+    <translation> GB</translation>
+  </string>
+  <string id="UIText.SelAbsentAdvertise">
+    <base>This feature will be set to be installed when required.</base>
+    <translation> ìš”êµ¬ì‹œ ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì„¤ì¹˜í•˜ë„ë¡ ì„¤ì •í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelAbsentCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ CDë¡œë¶€í„° ì‹¤í–‰í•˜ë„ë¡ ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelAbsentLocal">
+    <base>This feature will be installed on the local hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì— ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelAbsentNetwork">
+    <base>This feature will be installed to run from the network.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° ì‹¤í–‰í•˜ë„ë¡ ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAbsent">
+    <base>This feature will become unavailable.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì„¤ì¹˜ ì œê±°í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAdvertise">
+    <base>Will be installed when required.</base>
+    <translation> ìš”êµ¬ì‹œ ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseCD">
+    <base>This feature will be available to run from CD.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ CDë¡œë¶€í„° ì‹¤í–‰í•  ìˆ˜ ìˆë„ë¡ í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseLocal">
+    <base>This feature will be installed on your local hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì‚¬ìš©ìì˜ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì— ì„¤ì¹˜í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseNetwork">
+    <base>This feature will be available to run from the network.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ë„¤íŠ¸ì›Œí¬ì—ì„œ ì‹¤í–‰í•  ìˆ˜ ìˆë„ë¡ í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelCDAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from CD.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” ì™„ì „íˆ ì„¤ì¹˜ ì œê±°ë˜ë©° CDë¡œë¶€í„° ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì‹¤í–‰í•  ìˆ˜ ì—†ê²Œ ë©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelCDAdvertise">
+    <base>This feature was run from the CD but will be set to be installed when required.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” CDë¡œë¶€í„° ì‹¤í–‰ë˜ì—ˆì§€ë§Œ ìš”êµ¬ì‹œ ì„¤ì¹˜ë˜ë„ë¡ ì„¤ì •í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelCDCD">
+    <base>This feature will continue to be run from the CD</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ê³„ì† CDë¡œë¶€í„° ì‹¤í–‰í•˜ë„ë¡ í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelCDLocal">
+    <base>This feature was run from the CD but will be installed on the local hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” CDë¡œë¶€í„° ì‹¤í–‰ë˜ì—ˆì§€ë§Œ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì— ì„¤ì¹˜ë©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelChildCostNeg">
+    <base>This feature frees up [1] on your hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì— [1]ì˜ ì—¬ìœ  ê³µê°„ì„ í™•ë³´í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelChildCostPos">
+    <base>This feature requires [1] on your hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì— [1]ë¥¼ í•„ìš”ë¡œ í•©ë‹ˆë‹¤.  </translation>
+  </string>
+  <string id="UIText.SelCostPending">
+    <base>Compiling cost for this feature...</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œì˜ ë¹„ìš©ì„ ìˆ˜ì§‘í•˜ê³  ìˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelLocalAbsent">
+    <base>This feature will be completely removed.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì™„ì „íˆ ì œê±°í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelLocalAdvertise">
+    <base>This feature will be removed from your local hard drive but will be set to be installed when required.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì‚¬ìš©ìì˜ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì—ì„œ ì œê±°í•˜ì§€ë§Œ ìš”êµ¬ì‹œ ì„¤ì¹˜ë˜ë„ë¡ ì„¤ì •í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelLocalCD">
+    <base>This feature will be removed from your local hard drive but will still be available to run from CD.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì‚¬ìš©ìì˜ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì—ì„œ ì œê±°í•˜ì§€ë§Œ CDì—ì„œëŠ” ì—¬ì „íˆ ì‹¤í–‰í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelLocalLocal">
+    <base>This feature will remain on your local hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì‚¬ìš©ìì˜ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì— ë‚¨ê²¨ë‘¡ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelLocalNetwork">
+    <base>This feature will be removed from your local hard drive, but will be still available to run from the network.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì‚¬ìš©ìì˜ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì—ì„œ ì œê±°í•˜ì§€ë§Œ ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° ì—¬ì „íˆ ì‹¤í–‰í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelNetworkAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from the network.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” ì™„ì „íˆ ì„¤ì¹˜ ì œê±°ë˜ë©° ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° ì´ êµ¬ì„±ìš”ì†Œë¥¼ ì‹¤í–‰í•  ìˆ˜ ì—†ê²Œ ë©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelNetworkAdvertise">
+    <base>This feature was run from the network but will be installed when required.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° ì‹¤í–‰ë˜ì—ˆì§€ë§Œ ìš”êµ¬ì‹œ ì„¤ì¹˜ë©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelNetworkLocal">
+    <base>This feature was run from the network but will be installed on the local hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” ë„¤íŠ¸ì›Œí¬ë¡œë¶€í„° ì‹¤í–‰ë˜ì—ˆì§€ë§Œ ë¡œì»¬ í•˜ë“œ ë“œë¼ì´ë¸Œì— ì„¤ì¹˜ë©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelNetworkNetwork">
+    <base>This feature will continue to be run from the network</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†Œë¥¼ ê³„ì† ë„¤íŠ¸ì›Œí¬ì—ì„œ ì‹¤í–‰í•˜ë„ë¡ í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelParentCostNegNeg">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì— [1]ì˜ ì—¬ìœ  ê³µê°„ì„ í™•ë³´í•©ë‹ˆë‹¤. [3] ì¤‘ [2]ì˜ í•˜ìœ„ êµ¬ì„±ìš”ì†Œê°€ ì„ íƒë˜ì—ˆìŠµë‹ˆë‹¤. ì´ í•˜ìœ„ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì— [4]ì˜ ì—¬ìœ  ê³µê°„ì„ í™•ë³´í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelParentCostNegPos">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì— [1]ì˜ ì—¬ìœ  ê³µê°„ì„ í™•ë³´í•©ë‹ˆë‹¤. [3] ì¤‘ [2]ì˜ í•˜ìœ„ êµ¬ì„±ìš”ì†Œê°€ ì„ íƒë˜ì—ˆìŠµë‹ˆë‹¤. ì´ í•˜ìœ„ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì— [4]ë¥¼ í•„ìš”ë¡œ í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelParentCostPosNeg">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì˜ [1]ë¥¼ í•„ìš”ë¡œ í•©ë‹ˆë‹¤. [3] ì¤‘ [2]ì˜ í•˜ìœ„ êµ¬ì„±ìš”ì†Œê°€ ì„ íƒë˜ì—ˆìŠµë‹ˆë‹¤. ì´ í•˜ìœ„ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì— [4]ì˜ ì—¬ìœ  ê³µê°„ì„ í™•ë³´í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.SelParentCostPosPos">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation> ì´ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì˜ [1]ë¥¼ í•„ìš”ë¡œ í•©ë‹ˆë‹¤. [3] ì¤‘ [2]ì˜ í•˜ìœ„ êµ¬ì„±ìš”ì†Œê°€ ì„ íƒë˜ì—ˆìŠµë‹ˆë‹¤. ì´ í•˜ìœ„ êµ¬ì„±ìš”ì†ŒëŠ” í•˜ë“œ ë“œë¼ì´ë¸Œì— [4]ë¥¼ í•„ìš”ë¡œ í•©ë‹ˆë‹¤.</translation>
+  </string>
+  <string id="UIText.TimeRemaining">
+    <base>Time remaining: {[1] min }[2] sec</base>
+    <translation> ë‚¨ì€ ì‹œê°„: {[1]ë¶„ }[2]ì´ˆ</translation>
+  </string>
+  <string id="UIText.VolumeCostAvailable">
+    <base>Available</base>
+    <translation> ì‚¬ìš© ê°€ëŠ¥</translation>
+  </string>
+  <string id="UIText.VolumeCostDifference">
+    <base>Differences</base>
+    <translation> ì°¨ì´</translation>
+  </string>
+  <string id="UIText.VolumeCostRequired">
+    <base>Required</base>
+    <translation> í•„ìˆ˜</translation>
+  </string>
+  <string id="UIText.VolumeCostSize">
+    <base>Disk Size</base>
+    <translation> ë””ìŠ¤í¬ í¬ê¸°</translation>
+  </string>
+  <string id="UIText.VolumeCostVolume">
+    <base>Volume</base>
+    <translation> ë³¼ë¥¨</translation>
+  </string>
+</localization>

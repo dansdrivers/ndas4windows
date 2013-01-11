@@ -1,0 +1,19 @@
+// Do not open this file from Resource Editor
+#ifndef APSTUDIO_INVOKED
+#include <windows.h>
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+#include "ndupdate.ver"
+#include "ndasverp.h"
+
+#define VER_FILETYPE			VFT_DLL
+#define VER_FILESUBTYPE			VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR "NDAS Software Updater"
+#define VER_INTERNALNAME_STR	"ndupdate.dll"
+
+#include "ndascommon.ver"
+
+#endif    // not APSTUDIO_INVOKED
+

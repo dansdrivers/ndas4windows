@@ -1,0 +1,141 @@
+/* 
+	netdisk enable mode
+
+	shared R/W
+	exclusive R/W
+	R/O
+
+	When netdisk Enable, determine enable mode and access mode
+
+	provide interface to set wirteAllowRange and oobWriteRange 
+*/
+
+ACCESS_MODE			desiredAccess;
+ACCESS_MODE			grantedAccess;
+WRITE_ALLOW_RANGE	writeAllowRange; // secondary 가 직접 넷디스크에 write 할 수 있는 영역 (Ndas Fat)
+WRITE_ALLOW_RANGE	fakeWriteRange;	 // windows 2000 에서 R/O 로 마운트 했을 때, Ntfs 를 속이기 위한 영역
+WRITE_ALLOW_RANGE	oobWriteRange;
+READ_ONLY_RAGE		readOnlyRange;   // Ndas router 에서 write 를 막기 위한 영역 (MBR, r/o fat 등)
+
+
+ULONG	netdiskFlag;
+
+FLAG_OOB_WRITE;
+FLAG_FAKE_WRITE;
+FLAG_READ_LOCK;
+
+
+
+processScsiOpWriteCommand(lur, command) {
+
+	if (FlagOn(netdiskFlag, FLAG_OOB_WRITE)) {
+
+		if (writeBlockStart and writeBlockEnd is in oobWriteRange) {
+
+			status = call writeBlock(lurn, lock=TRUE, command);
+			return status;
+		}
+	}
+
+	if (writeBlockStart and writeBlockEnd is not in DiskBlockRange)
+		return status_invalid_parameter;
+
+	if (writeBlockStart and writeBlockEnd is in readOnlyRange)
+		return status_success;	// fake write on ndas router
+
+	if (exclusive R/W) {
+
+		if (FlagOn(netdiskFlag, OOB_WRITE))
+			status = call writeBlock( lurn, lock=TRUE, command );
+		else
+			status = call writeBlock( lurn, lock=FALSE, command );
+
+		return status;
+	}
+
+	if (R/O) { // basically don't allow write
+
+		if (writeStart and writeEnd is in fakeWriteRange)
+			return status_success;	// fake write
+
+		return status_not_allowed;
+	}
+
+// shared R/W	// basically fake write
+
+	ASSERT( FlagOn(desiredAccess, WRITE_ACCESS) );
+    
+	if (!FlagOn(grantedAccess, WRITE_ACCESS)) { // sencondary
+
+		if (writeStart and writeEnd is not in writeAllowRange)
+			return status_success;	// fake write
+	}
+
+	status = call writeBlock( lurn, lock=TRUE, command );
+
+	return status;
+}
+
+ProcessScsiOpReadLock(lur, command) {
+
+	if (FlagOn(netdiskFlag, FLAG_READ_LOCK))
+		status = call readBlock( lurn, lock=TRUE, command );
+	else
+		status = call readBlock( lurn, lock=FALSE, command );
+
+	return status;
+}
+
+ProcessScsiopModeSendseCommand(lur, command) {
+
+	status = call modeSense( lunrn, lock=FALSE, command );
+	
+	if (FlagOn(netdiskFlag, FLAG_FAKE_WRITE)) {
+	
+		ASSERT( R/O );
+		ASSERT( FlagOn(parameterHeader->DeviceSpecificParameter, MODE_DSP_WRITE_PROTECT) );
+		
+		ClearFlag( parameterHeader->DeviceSpecificParameter, MODE_DSP_WRITE_PROTECT );
+	}
+}
+	
+	
+writeBlock (lurn, lock, command) {
+
+	if (lock = TRUE) {
+
+		lockNetdisk();
+		writeNetdisk(command);
+		unlockNetdisk();
+	
+	} else {
+
+		writeNetdisk(command);
+	}
+}
+
+
+//port interface
+
+
+interface setOobRange(lur, oobWriteRange) {
+
+	.......
+	
+	SetFlag( netdiskFlag, FLAG_OOB_WRITE );	
+}
+
+interface setWriteAllowRange(lur, writeAllowRange); // for secodary to direct Write of Ndas Fat
+interface setFakeWriteRange(lur, fakeWriteRange) {  // windows 2000 R/O support
+	.......
+	
+	SetFlag( netdiskFlag, FLAG_FAKE_WRITE );	
+}
+ 
+interface getReadOnlyRange(lur, &readOnlyRange); // for ndas router support
+
+interface setReadLock(lur) {  
+	.......
+	
+	SetFlag( netdiskFlag, FLAG_READ_LOCK );	
+}

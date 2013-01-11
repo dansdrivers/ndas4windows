@@ -1,0 +1,110 @@
+
+enablemapdirect3216 = true;
+
+typedef unsigned char BYTE;
+typedef BYTE* LPBYTE;
+typedef unsigned short WORD;
+typedef unsigned long DWORD;
+
+typedef struct _SectorInfo
+{
+	 BYTE bDrive;
+	 WORD wCylinder;
+	 BYTE bHead;
+	 BYTE bSector;
+	 BYTE bCount;
+} SECTORINFO, *LPSECTORINFO;
+
+typedef struct BlockInfo
+{
+	BYTE drive;
+	DWORD blockAddressLo;
+	DWORD blockAddressHi;
+	WORD count;
+} BLOCKINFO, *LPBLOCKINFO;
+
+typedef struct DiskAddressPacket
+{
+	BYTE size;
+	BYTE reserved;
+	WORD count;
+	DWORD buffer;
+	DWORD startLo;
+	DWORD startHi;
+} DISKADDRESSPACKET, *LPDISKADDRESSPACKET;
+
+typedef struct DriveParameters
+{
+	WORD size;
+	WORD flags;
+	DWORD cylinders;
+	DWORD heads;
+	DWORD sectors;
+	DWORD sectorsLo;
+	DWORD sectorsHi;
+	WORD bytesPerSector;
+//---v2.0+ ---
+	DWORD EDDptr;
+//---v3.0 ---
+	WORD signature;
+	BYTE v3size;
+	BYTE reserved[3];
+	BYTE bus[4];
+	BYTE interface[8];
+	BYTE interfacePath[8];
+	BYTE devicePath[8];
+	BYTE reserved2;
+	BYTE checksum;
+} DRIVEPARAMETERS, *LPDRIVEPARAMETERS;
+
+typedef struct ExtDriveInfo
+{
+	BYTE drive;
+	DWORD cylinders;
+	DWORD heads;
+	DWORD sectors;
+	DWORD sectorsLo;
+	DWORD sectorsHi;
+	WORD bytesPerSector;
+} EXTDRIVEINFO, *LPEXTDRIVEINFO;
+
+DWORD ResetDisk(LPSECTORINFO s)
+{
+    s = inout;
+}
+
+DWORD ReadPhysicalSector (LPSECTORINFO s,  LPBYTE lpBuffer, DWORD  cbBuffSize)
+{
+    s = inout;
+    lpBuffer = inout;
+}
+
+DWORD WritePhysicalSector (LPSECTORINFO s, LPBYTE lpBuffer, DWORD  cbBuffSize)
+{
+    s = inout;
+    lpBuffer = inout;
+}
+
+DWORD ReadDiskGeometry (LPSECTORINFO s)
+{
+    s = inout;
+}
+
+DWORD EI13GetDriveParameters(LPEXTDRIVEINFO b)
+{
+    b = inout;
+}
+
+DWORD EI13ReadSector (LPBLOCKINFO b, LPBYTE lpBuffer, DWORD bufferSize)
+{
+    b = inout;
+    lpBuffer = inout;
+}
+
+DWORD EI13WriteSector(LPBLOCKINFO b, LPBYTE lpBuffer, DWORD bufferSize)
+{
+    b = inout;
+    lpBuffer = inout;
+}
+
+

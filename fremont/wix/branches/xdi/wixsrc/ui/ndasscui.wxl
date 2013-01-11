@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+
+	<String Id="ActionText.NcRemove_NDASSCSI_INF">Removing driver INF</String>
+	<String Id="ActionText.NcRemove_NDASBUS_INF">Removing driver INF</String>
+	<String Id="ActionText.NcRemove_LPX_INF">Removing driver INF</String>
+	<String Id="ActionText.NcRemove_AllOemInf">Removing driver INF</String>
+
+	<String Id="ActionText.NcSetARFlags">Setting NDAS AR configurations</String>
+	<String Id="ActionText.NcSetECFlags">Setting NDAS EC configurations</String>
+
+	<String Id="ActionText.NcRemove_NDASSCSI">Removing NDAS SCSI driver</String>
+	<String Id="ActionText.NcRemove_NDASBUS">Removing NDAS bus driver</String>
+	<String Id="ActionText.NcRemove_ROFILT">Removing ROFILT driver</String>
+	<String Id="ActionText.NcRemove_LFSFILT">Removing LFS driver</String>
+	<String Id="ActionText.NcRemove_LPX">Removing LPX protocol</String>
+	<String Id="ActionText.NcRemove_NDASNTFS">Removing NDAS NTFS driver</String>
+	<String Id="ActionText.NcRemove_NDASFAT">Removing NDAS FAT driver</String>
+
+	<String Id="ActionText.NcPreRemove_LANSCSIMP">Removing old drivers</String>
+	<String Id="ActionText.NcPreRemove_LANSCSIBUS">Removing old drivers</String>
+
+	<String Id="ActionText.NcCheckPreboot_LFSFILT">Checking driver status</String>
+	<String Id="ActionText.NcCheckPreboot_LPX">Checking driver status</String>
+	<String Id="ActionText.NcCheckPreboot_NDASBUS">Checking driver status</String>
+	<String Id="ActionText.NcCheckPreboot_NDASSCSI">Checking driver status</String>
+	<String Id="ActionText.NcCheckPreboot_NDASSVC">Checking driver status</String>
+	<String Id="ActionText.NcCheckPreboot_ROFILT">Checking driver status</String>
+	<String Id="ActionText.NcCheckPreboot_NDASNTFS">Checking driver status</String>
+	<String Id="ActionText.NcCheckPreboot_NDASFAT">Checking driver status</String>
+
+	<String Id="ActionText.NcRBack_Remove_LFSFILT">Removing LFS driver</String>
+	<String Id="ActionText.NcRBack_Remove_NDASBUS">Removing NDAS bus driver</String>
+	<String Id="ActionText.NcRBack_Remove_LPX">Removing LPX protocol</String>
+	<String Id="ActionText.NcRBackRem_NDASSCSI_INF">Removing driver INF</String>
+	<String Id="ActionText.NcRBackRem_NDASBUS_INF">Removing driver INF</String>
+	<String Id="ActionText.NcRBackRem_LPX_INF">Removing driver INF</String>
+	<String Id="ActionText.NcRBack_Remove_NDASNTFS">Removing NDAS NTFS driver</String>
+	<String Id="ActionText.NcRBack_Remove_NDASFAT">Removing NDAS FAT driver</String>
+
+	<String Id="ActionText.NcInstall_LPX">Installing LPX protocol</String>
+	<String Id="ActionText.NcInstall_NDASBUS">Installing NDAS bus driver</String>
+	<String Id="ActionText.NcInstall_LFSFILT">Installing LFS driver</String>
+	<String Id="ActionText.NcInstall_ROFILT">Installing ROFILT driver</String>
+	<String Id="ActionText.NcInstall_NDASSCSI_INF">Installing NDAS SCSI driver</String>
+	<String Id="ActionText.NcInstall_NDASNTFS">Installing NDAS NTFS driver</String>
+	<String Id="ActionText.NcInstall_NDASFAT">Installing NDAS FAT driver</String>
+
+	<String Id="ActionText.NcSetNdasSvcAutoStart">Setting NDAS service configurations</String>
+	<String Id="ActionText.NcStartNDASSVCOnNoReboot">Starting services</String>
+	<String Id="ActionText.NcStartNDASSVCOnNoReboot.Template">Service: [1]</String>	
+
+	<String Id="Error.28801">Installation of LPX protocol failed.[4]Error: [2].[4]Description: [3]</String>
+	<String Id="Error.28802">Installation of NDAS bus device driver failed.[4]Error: [2].[4]Description: [3]</String>
+	<String Id="Error.28803">Installation of NDAS SCSI device driver failed.[4]Error: [2].[4]Description: [3]If you have clicked STOP installation from the Digial Signature Warning Dialog, please click Retry and click Continue to continue.</String>
+	<String Id="Error.28804">Installation of LFS driver failed.[4]Error: [2].[4]Description: [3]</String>
+	<String Id="Error.28805">Installation of ROFILT driver failed.[4]Error: [2].[4]Description: [3]</String>
+	<String Id="Error.28806">Removing LPX protocol failed.[4]Error: [2].[4]Description: [3]</String>
+	<String Id="Error.28807">Removing NDAS bus device failed.[4]Error: [2].[4]Description: [3]</String>
+	<String Id="Error.28808">Removing NDAS SCSI controller devices failed.[4]Error: [2].[4]Description: [3]</String>
+    <String Id="Error.28809">Removing LFS driver failed.[4]Error: [2].[4]Description: [3]</String>
+    <String Id="Error.28810">Removing ROFILT driver failed.[4]Error: [2].[4]Description: [3]</String>
+    <String Id="Error.28811">Removing LANSCSI bus device failed.[4]Error: [2].[4]Description: [3]</String>
+    <String Id="Error.28812">Removing LANSCSI controller devices failed.[4]Error: [2].[4]Description: [3]</String>
+    <String Id="Error.28813">Removing driver information files failed.[4]Error: [2].[4]Description: [3]</String>
+    <String Id="Error.28814">Removing existing installation requires system reboot before performing further installation. Setup will now exit. You must re-run setup after rebooting for continuing setup. Do you want to restart the system now?</String>
+    <String Id="Error.28815">There are enabled NDAS drives in the system.[4]Please disable them first to continue installation.</String>
+	<String Id="Error.28816">There are mounted NDAS drives in the system.[4]Please unmount them first to continue installation.</String>
+	<String Id="Error.28817">Installation of NDAS NTFS driver failed.[4]Error: [2].[4]Description: [3]</String>
+	<String Id="Error.28818">Installation of NDAS FAT driver failed.[4]Error: [2].[4]Description: [3]</String>
+	<String Id="Error.28819">Removing NDAS NTFS driver failed.[4]Error: [2].[4]Description: [3]</String>
+	<String Id="Error.28820">Removing NDAS FAT driver failed.[4]Error: [2].[4]Description: [3]</String>
+
+</WixLocalization>

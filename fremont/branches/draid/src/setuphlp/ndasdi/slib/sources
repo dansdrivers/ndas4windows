@@ -1,0 +1,25 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=libndasdi
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=libndasdi
+
+SOURCES_USED=..\sources.inc
+!INCLUDE ..\sources.inc
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+# to publish library
+PASS1_PUBLISH={$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME).lib}

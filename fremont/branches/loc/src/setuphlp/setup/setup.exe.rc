@@ -1,0 +1,13 @@
+#ifndef APSTUDIO_INVOKED
+
+#include <windows.h>
+
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "setup.exe.manifest"
+
+#endif    // not APSTUDIO_INVOKED
+

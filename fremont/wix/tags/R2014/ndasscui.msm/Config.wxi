@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+<?include ..\CommonConfig.wxi?>
+
+<?ifndef TargetLanguageName?>
+<?define TargetLanguageName="English"?>
+<?endif?>
+
+<?ifndef TargetLanguage?>
+<?define TargetLanguage="1033"?>
+<?endif?>
+
+<?ifndef TargetCodepage?>
+<?define TargetCodepage="1252"?>
+<?endif?>
+
+<?ifndef TargetVersion?>
+<?define TargetVersion="$(var.NdasScMsmVersion)"?>
+<?endif?>
+
+<?ifndef TargetDisplayVersion?>
+<?define TargetDisplayVersion="$(var.NdasScMsmDisplayVersion)"?>
+<?endif?>
+
+<!-- Level 1 -->
+<?if $(var.TargetLanguage)="1033"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1033)"?>
+<!-- Level 2 -->
+<?elseif $(var.TargetLanguage)="1031"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1031)"?>
+<?elseif $(var.TargetLanguage)="1036"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1036)"?>
+<?elseif $(var.TargetLanguage)="1040"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1040)"?>
+<?elseif $(var.TargetLanguage)="1041"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1041)"?>
+<?elseif $(var.TargetLanguage)="1042"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1042)"?>
+<?elseif $(var.TargetLanguage)="2070"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_2070)"?>
+<?elseif $(var.TargetLanguage)="3082"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_3082)"?>
+<!-- Level 3 -->
+<?elseif $(var.TargetLanguage)="1028"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1028)"?>
+<?elseif $(var.TargetLanguage)="2052"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_2052)"?>
+<!-- Level 4 -->
+<?elseif $(var.TargetLanguage)="1030"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1030)"?>
+<?elseif $(var.TargetLanguage)="1035"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1035)"?>
+<?elseif $(var.TargetLanguage)="1043"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1043)"?>
+<?elseif $(var.TargetLanguage)="1044"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1044)"?>
+<?elseif $(var.TargetLanguage)="1045"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1045)"?>
+<?elseif $(var.TargetLanguage)="1053"?>
+<?define TargetProductCode="$(var.NdasScuiMsmProductCode_1053)"?>
+<!-- Default -->
+<?else?>
+<?define TargetProductCode="D7906330-974B-4B0F-A30A-2D4CE2B4F532"?>
+<?endif?>
+
+<?ifndef TargetMsmTag?>
+<?define TargetMsmTag="$(var.NdasScMsmProductCodeTag)"?>
+<!-- .D790633D_974B_4B0F_A30A_2D4CE2B4F532 -->
+<?endif?>
+
+<?ifndef SISCodepage?>
+<?define SISCodepage="$(var.TargetCodepage)"?>
+<?endif?>
+
+<?ifndef SISLanguages?>
+<?define SISLanguages="0"?>
+<?endif?>
+
+<?ifndef SISPlatforms?>
+<?define SISPlatforms="Intel"?>
+<?endif?>
+
+<?ifdef AltConfigInclude?>
+<?include $(var.AltConfigInclude)?>
+<?endif?>
+
+</Include>

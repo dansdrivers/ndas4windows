@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+	<?include config.wxi?>
+
+	<?ifdef WixCustomTableLocBug?>
+	<?define ActionData.NDASFAT   = "NDAS FAT File System" ?>
+	<?endif?>
+
+	<Fragment>
+
+		<?ifdef Include.NDASFAT?>
+
+		<InstallExecuteSequence>
+			<Custom Action="NdasFatShutdown" Before="xDiMsiStopServices">(?ndasfat=3) AND ($ndasfat=2 OR $ndasfat=4)</Custom>
+		</InstallExecuteSequence>
+
+		<CustomAction Id="NdasFatShutdown" BinaryKey="ndasfsms.dll" DllEntry="NdasFatMsiShutdown" Execute="deferred" Return="ignore" Impersonate="no" />
+
+		<UI>
+			<ProgressText Action="NdasFatShutdown">$(loc.ActionText.NdasFatShutdown)</ProgressText>
+		</UI>
+
+		<Binary Id="ndasfsms.dll" SourceFile="$(var.SetupDataDir.CustomActionDll)\ndasfsms.dll" />
+
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.SetupFileSource)">
+			<Component Id="ndasfat" Guid="$(var.NDASFAT.GUID)" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasfat.sys" Name="ndasfat.sys" KeyPath="yes" Checksum="yes" />
+				<File Id="ndasfat.inf" Name="ndasfat.inf" Checksum="yes" />
+				<File Id="ndasfat.cat" Name="ndasfat.cat" Checksum="yes" />
+				<Registry Id="ndasfat" Root="HKLM" Key="SOFTWARE\NDAS\Install\OEMINF" Type="string" Name="NDASFAT" />
+			</Component>
+		</DirectoryRef>
+
+		<CustomTable Id="xDriverInstall">
+			<Row>
+				<Data Column="Id">StopNDASFAT</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASFAT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASFAT)</Data>
+				<?endif?>
+				<Data Column="Phase">3</Data>
+				<Data Column="Type">StopService</Data>
+				<Data Column="HardwareId">ndasfat</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASFAT.Stop)</Data>
+				<Data Column="Condition">(?ndasfat=3) AND ($ndasfat=2 OR $ndasfat=4)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">UninstallNDASFAT</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASFAT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASFAT)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultUninstall</Data>
+				<Data Column="INF">[#ndasfat.inf]</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASFAT.Uninstall)</Data>
+				<Data Column="Condition">(?ndasfat=3) AND ($ndasfat=2 OR $ndasfat=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasfat</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">InstallNDASFAT</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASFAT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASFAT)</Data>
+				<?endif?>
+				<Data Column="Phase">2</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultInstall;DefaultUninstall</Data>
+				<Data Column="INF">[#ndasfat.inf]</Data>
+				<Data Column="Flags">2</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASFAT.Install)</Data>
+				<Data Column="Condition">($ndasfat=3)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasfat</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">StartNDASFAT</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASFAT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASFAT)</Data>
+				<?endif?>
+				<Data Column="Phase">4</Data>
+				<Data Column="Type">StartService</Data>
+				<Data Column="HardwareId">ndasfat</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASFAT.Start)</Data>
+				<Data Column="Condition">($ndasfat=3)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+		</CustomTable>
+
+		<?endif?>
+
+	</Fragment>
+</Wix>

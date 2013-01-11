@@ -1,0 +1,894 @@
+#include "port.h"
+#include <ntddk.h>
+#include "KDebug.h"
+#include "LSMPIoctl.h"
+#include "LanscsiMiniport.h"
+#include "LSCcb.h"
+#include "LSLurn.h"
+
+#ifdef __MODULE__
+#undef __MODULE__
+#endif // __MODULE__
+#define __MODULE__ "LSMP_Ioctl"
+
+UCHAR
+SrbIoctlQueryInfo(
+		PMINIPORT_DEVICE_EXTENSION	HwDeviceExtension,
+		PMINIPORT_LU_EXTENSION		LuExtension,
+		PLSMPIOCTL_QUERYINFO		QueryInfo,
+		ULONG						OutputBufferLength,
+		PUCHAR						OutputBuffer,
+		PNTSTATUS					NtStatus
+) {
+	UCHAR				status;
+	PCCB				Ccb;
+	NTSTATUS			ntStatus;
+	KIRQL				oldIrql;
+
+	status = SRB_STATUS_SUCCESS;
+	switch(QueryInfo->InfoClass) {
+	case LsmpAdapterInformation: {
+		PLSMPIOCTL_ADAPTERINFO	adapter = (PLSMPIOCTL_ADAPTERINFO)OutputBuffer;
+
+		KDPrint(1,("LsmpAdapterInformation\n"));
+
+		if(OutputBufferLength < sizeof(LSMPIOCTL_ADAPTERINFO)) {
+			KDPrint(1,("Too small output buffer. OutputBufferLength:%d\n", OutputBufferLength));
+			*NtStatus = STATUS_BUFFER_TOO_SMALL;
+			status = SRB_STATUS_INVALID_REQUEST;
+			break;
+		}
+
+		adapter->Length								= sizeof(LSMPIOCTL_ADAPTERINFO);
+		adapter->Adapter.SlotNo						= HwDeviceExtension->SlotNumber;
+		adapter->Adapter.Length						= sizeof(LSMP_ADAPTER);
+		adapter->Adapter.InitiatorId				= HwDeviceExtension->InitiatorId;
+		adapter->Adapter.NumberOfBuses				= HwDeviceExtension->NumberOfBuses;
+		adapter->Adapter.MaximumNumberOfTargets		= HwDeviceExtension->MaximumNumberOfTargets;
+		adapter->Adapter.MaximumNumberOfLogicalUnits= HwDeviceExtension->MaximumNumberOfLogicalUnits;
+		adapter->Adapter.MaxBlocksPerRequest		= HwDeviceExtension->MaxBlocksPerRequest;
+
+		ACQUIRE_SPIN_LOCK(&HwDeviceExtension->LanscsiAdapterSpinLock, &oldIrql);
+		adapter->Adapter.Status						= HwDeviceExtension->AdapterStatus;
+		RELEASE_SPIN_LOCK(&HwDeviceExtension->LanscsiAdapterSpinLock, oldIrql);
+
+		*NtStatus = STATUS_SUCCESS;
+		status = SRB_STATUS_SUCCESS;
+		break;
+		}
+	case LsmpPrimaryUnitDiskInformation: {
+		PLSMPIOCTL_PRIMUNITDISKINFO	primUnitDisk = (PLSMPIOCTL_PRIMUNITDISKINFO)OutputBuffer;
+		PLUR_QUERY					LurQuery;
+		PLURN_PRIMARYINFORMATION	LurPrimaryInfo;
+		BYTE						LurBuffer[sizeof(LURN_PRIMARYINFORMATION)];
+		ACCESS_MASK					DesiredAccess;
+
+		KDPrint(1,("LsmpPrimaryUnitDiskInformation\n"));
+
+		if(OutputBufferLength < sizeof(LSMPIOCTL_PRIMUNITDISKINFO)) {
+			KDPrint(1,("Too small output buffer\n"));
+			*NtStatus = STATUS_BUFFER_TOO_SMALL;
+			status = SRB_STATUS_INVALID_REQUEST;
+			break;
+		}
+
+		//
+		//	Query to the LUR
+		//
+		ntStatus = LSCcbAllocate(&Ccb);
+		if(!NT_SUCCESS(ntStatus)) {
+			KDPrint(1,("LSCcbAllocate() failed.\n"));
+			*NtStatus = STATUS_INSUFFICIENT_RESOURCES;
+			status = SRB_STATUS_INVALID_REQUEST;
+			break;
+		}
+
+		LSCCB_INITIALIZE(Ccb);
+		Ccb->OperationCode = CCB_OPCODE_QUERY;
+		LSCcbSetFlag(Ccb, CCB_FLAG_SYNCHRONOUS|CCB_FLAG_ALLOCATED);
+		Ccb->DataBuffer = LurBuffer;
+		Ccb->DataBufferLength = sizeof(LURN_PRIMARYINFORMATION);
+
+		LurQuery = (PLUR_QUERY)LurBuffer;
+		LurPrimaryInfo = (PLURN_PRIMARYINFORMATION)LurBuffer;
+
+		LurQuery->InfoClass			= LurPrimaryLurnInformation;
+		LurQuery->Length			= sizeof(LUR_QUERY) - 1*sizeof(UCHAR);
+		LurQuery->QueryDataLength	= 0;
+
+		if(LuExtension) {
+			KDPrint(3,("going to LuExtention %p.\n", LuExtension));
+			ntStatus = LurRequest(
+								LuExtension->LUR,
+								Ccb
+							);
+			DesiredAccess = LuExtension->LUR->DesiredAccess;
+		} else {
+			KDPrint(3,("going to default LuExtention 0.\n"));
+			ntStatus = LurRequest(
+								HwDeviceExtension->LURs[0],	// default: 0.
+								Ccb
+							);
+			DesiredAccess = HwDeviceExtension->LURs[0]->DesiredAccess;
+		}
+		if(!NT_SUCCESS(ntStatus)) {
+			KDPrint(1,("LurnRequest() failed.\n"));
+			*NtStatus = STATUS_INSUFFICIENT_RESOURCES;
+			status = SRB_STATUS_INVALID_REQUEST;
+			break;
+		}
+		
+		//
+		//	Set return values.
+		//
+		primUnitDisk->Length					= sizeof(LSMPIOCTL_PRIMUNITDISKINFO);
+		primUnitDisk->UnitDisk.Length			= sizeof(LSMP_UNITDISK);
+		
+		// added by ktkim at 03/06/2004
+		primUnitDisk->EnabledTime    = HwDeviceExtension->EnabledTime;
+
+		primUnitDisk->UnitDisk.UnitDiskId		= LurPrimaryInfo->PrimaryLurn.UnitDiskId;
+		primUnitDisk->UnitDisk.DesiredAccess	= DesiredAccess;
+		primUnitDisk->UnitDisk.GrantedAccess	= LurPrimaryInfo->PrimaryLurn.AccessRight;
+		RtlCopyMemory(
+			primUnitDisk->UnitDisk.UserID,
+			&LurPrimaryInfo->PrimaryLurn.UserID,
+			sizeof(primUnitDisk->UnitDisk.UserID)
+			);
+		RtlCopyMemory(
+			primUnitDisk->UnitDisk.Password,
+			&LurPrimaryInfo->PrimaryLurn.Password,
+			sizeof(primUnitDisk->UnitDisk.Password)
+			);
+
+		RtlCopyMemory(	&primUnitDisk->UnitDisk.NetDiskAddress,
+						&LurPrimaryInfo->PrimaryLurn.NetDiskAddress,
+						sizeof(TA_LSTRANS_ADDRESS)
+			);
+		RtlCopyMemory(	&primUnitDisk->UnitDisk.BindingAddress,
+						&LurPrimaryInfo->PrimaryLurn.BindingAddress,
+						sizeof(TA_LSTRANS_ADDRESS)
+			);
+		primUnitDisk->UnitDisk.UnitBlocks		= (UINT32)LurPrimaryInfo->PrimaryLurn.UnitBlocks;
+		primUnitDisk->UnitDisk.SlotNo			= HwDeviceExtension->SlotNumber;
+		break;
+		}
+
+	default:
+		KDPrint(1,("Invalid Information Class!!\n"));
+		*NtStatus = STATUS_INVALID_PARAMETER;
+		status = SRB_STATUS_INVALID_REQUEST;
+	}
+
+	return status;
+}
+
+NTSTATUS
+AddNewDeviceToMiniport_Worker(
+		IN PDEVICE_OBJECT		DeviceObject,
+		IN PLSMP_WORKITEM_CTX	WorkitemCtx
+	) {
+	PMINIPORT_DEVICE_EXTENSION	HwDeviceExtension;
+	PMINIPORT_LU_EXTENSION		LuExtension;
+	PCCB						Ccb;
+	PLURELATION_DESC			LurDesc;
+	PLURELATION					Lur;
+	NTSTATUS					status;
+	LONG						LURCount;
+
+	ASSERT(WorkitemCtx);
+	UNREFERENCED_PARAMETER(DeviceObject);
+
+	LuExtension =(PMINIPORT_LU_EXTENSION) WorkitemCtx->Arg1;
+	LurDesc = (PLURELATION_DESC)WorkitemCtx->Arg2;
+	HwDeviceExtension = (PMINIPORT_DEVICE_EXTENSION)WorkitemCtx->Arg3;
+	Ccb = WorkitemCtx->Ccb;
+
+	status = LurCreate(LurDesc, &Lur, HwDeviceExtension->ScsiportFdoObject, LsmpLurnCallback);
+	if(NT_SUCCESS(status)) {
+		LURCount = InterlockedIncrement(&HwDeviceExtension->LURCount);
+		//
+		//	We support only one LUR for now.
+		//
+		ASSERT(LURCount == 1);
+
+		HwDeviceExtension->LURs[0] = Lur;
+		LuExtension->LUR = Lur;
+	}
+
+	//
+	//	Free LUR Descriptor
+	//
+	ExFreePoolWithTag(LurDesc, LSMP_PTAG_IOCTL);
+
+	//
+	//	Notify a bus change.
+	//
+	LSCcbSetStatusFlag(Ccb, CCBSTATUS_FLAG_BUSRESET_REQUIRED);
+
+	LSCcbCompleteCcb(Ccb);
+
+	return status;
+}
+
+
+NTSTATUS
+AddNewDeviceToMiniport(
+		IN PMINIPORT_DEVICE_EXTENSION	HwDeviceExtension,
+		IN PMINIPORT_LU_EXTENSION		LuExtension,
+		IN PSCSI_REQUEST_BLOCK			Srb,
+		IN PLURELATION_DESC				LurDesc
+	) {
+	LSMP_WORKITEM_CTX			WorkitemCtx;
+	NTSTATUS					status;
+	PCCB						Ccb;
+
+	status = LSCcbAllocate(&Ccb);
+	if(!NT_SUCCESS(status)) {
+		KDPrint(1, ("failed.\n"));
+		return status;
+	}
+	LSCcbInitialize(
+					Srb,
+					HwDeviceExtension,
+					Ccb
+				);
+	InterlockedIncrement(&HwDeviceExtension->RequestExecuting);
+	LSCcbSetCompletionRoutine(Ccb, LanscsiMiniportCompletion, HwDeviceExtension);
+	LSCcbSetNextStackLocation(Ccb);
+
+
+	//
+	//	Queue a workitem
+	//
+	LSMP_INIT_WORKITEMCTX(&WorkitemCtx, AddNewDeviceToMiniport_Worker, Ccb, LuExtension, LurDesc, HwDeviceExtension);
+	status = LSMP_QueueMiniportWorker(HwDeviceExtension->ScsiportFdoObject,&WorkitemCtx);
+	if(NT_SUCCESS(status)) {
+		status = STATUS_PENDING;
+	}
+
+	return status;
+}
+
+NTSTATUS
+RemoveDeviceFromMiniport_Worker(
+		IN PDEVICE_OBJECT		DeviceObject,
+		IN PLSMP_WORKITEM_CTX	WorkitemCtx
+	) {
+	PMINIPORT_DEVICE_EXTENSION	HwDeviceExtension;
+	PMINIPORT_LU_EXTENSION		LuExtension;
+	LONG						LURCount;
+	KIRQL						oldIrql;
+	PLURELATION					Lur;
+	PCCB						Ccb;
+	UINT32						AdapterStatus;
+
+	ASSERT(WorkitemCtx);
+	UNREFERENCED_PARAMETER(DeviceObject);
+
+	LuExtension			= (PMINIPORT_LU_EXTENSION)WorkitemCtx->Arg1;
+	HwDeviceExtension	= (PMINIPORT_DEVICE_EXTENSION)WorkitemCtx->Arg3;
+	Ccb					= WorkitemCtx->Ccb;
+
+	ACQUIRE_SPIN_LOCK(&HwDeviceExtension->LanscsiAdapterSpinLock, &oldIrql);
+	if(ADAPTER_ISSTATUS(HwDeviceExtension,ADAPTER_STATUS_STOPPING)) {
+		KDPrint(1,("Error! stopping in progress.\n"));
+		RELEASE_SPIN_LOCK(&HwDeviceExtension->LanscsiAdapterSpinLock, oldIrql);
+		return STATUS_SUCCESS;
+	}
+	AdapterStatus = ADAPTER_SETSTATUS(HwDeviceExtension, ADAPTER_STATUS_STOPPING);
+	RELEASE_SPIN_LOCK(&HwDeviceExtension->LanscsiAdapterSpinLock, oldIrql);
+
+	UpdatePdoInfoInLSBus(HwDeviceExtension, AdapterStatus);
+
+	if(LuExtension) {
+		Lur = LuExtension->LUR;
+		LuExtension->LUR = NULL;
+	} else {
+		//
+		//	We support only one LUR for now.
+		//
+		Lur = HwDeviceExtension->LURs[0];
+		HwDeviceExtension->LURs[0] = NULL;
+	}
+
+	if(!Lur) {
+		KDPrint(1,("Error! LUR is NULL!\n"));
+		return STATUS_SUCCESS;
+	}
+
+	SendCcbToLURSync(HwDeviceExtension, Lur, CCB_OPCODE_STOP);
+	LurClose(Lur);
+	LURCount = InterlockedDecrement(&HwDeviceExtension->LURCount);
+
+	//
+	//	stop CCB
+	//
+	ASSERT(LURCount == 0);
+
+	//
+	//	Notify a bus change.
+	//
+	LSCcbSetStatusFlag(Ccb, CCBSTATUS_FLAG_BUSRESET_REQUIRED);
+
+	LSCcbCompleteCcb(Ccb);
+
+	return STATUS_SUCCESS;
+}
+
+
+NTSTATUS
+RemoveDeviceFromMiniport(
+		IN PMINIPORT_DEVICE_EXTENSION	HwDeviceExtension,
+		IN PMINIPORT_LU_EXTENSION		LuExtension,
+		IN PSCSI_REQUEST_BLOCK			Srb
+	) {
+	LSMP_WORKITEM_CTX			WorkitemCtx;
+	NTSTATUS					status;
+	PCCB						Ccb;
+
+	//
+	//	initilize Ccb in srb.
+	//
+	status = LSCcbAllocate(&Ccb);
+	if(!NT_SUCCESS(status)) {
+		KDPrint(1, ("failed.\n"));
+		return status;
+	}
+	LSCcbInitialize(
+					Srb,
+					HwDeviceExtension,
+					Ccb
+				);
+	InterlockedIncrement(&HwDeviceExtension->RequestExecuting);
+	LSCcbSetCompletionRoutine(Ccb, LanscsiMiniportCompletion, HwDeviceExtension);
+	LSCcbSetNextStackLocation(Ccb);
+
+	//
+	//	Queue a workitem
+	//
+	LSMP_INIT_WORKITEMCTX(&WorkitemCtx, RemoveDeviceFromMiniport_Worker, Ccb, LuExtension, NULL, HwDeviceExtension);
+	status = LSMP_QueueMiniportWorker(HwDeviceExtension->ScsiportFdoObject, &WorkitemCtx);
+	if(NT_SUCCESS(status)) {
+		status = STATUS_PENDING;
+	}
+
+	return status;
+}
+
+
+// Added by ILGU HONG 2004_07_05
+UCHAR
+SrbIoctlGetDVDSTatus(
+		PMINIPORT_DEVICE_EXTENSION	HwDeviceExtension,
+		PMINIPORT_LU_EXTENSION		LuExtension,
+		ULONG						OutputBufferLength,
+		PUCHAR						OutputBuffer,
+		PNTSTATUS					NtStatus
+) {
+	UCHAR				status ;
+	PCCB				Ccb;
+	NTSTATUS			ntStatus;
+
+
+	PBUSENUM_DVD_STATUS DvdStatusInfo = (PBUSENUM_DVD_STATUS)OutputBuffer; 
+	BYTE				LurBuffer[sizeof(LURN_DVD_STATUS)];
+	PLURN_DVD_STATUS	pDvdStatusHeader;
+
+
+
+	KDPrint(1,("\n"));
+
+	if(OutputBufferLength < sizeof(BUSENUM_DVD_STATUS)) {
+		KDPrint(1,("Too small output buffer\n"));
+		*NtStatus = STATUS_BUFFER_TOO_SMALL ;
+		status = SRB_STATUS_INVALID_REQUEST ;
+		return status;
+	}
+
+	//
+	//	Query to the LUR
+	//
+	ntStatus = LSCcbAllocate(&Ccb);
+	if(!NT_SUCCESS(ntStatus)) {
+		KDPrint(1,("LSCcbAllocate() failed.\n"));
+		*NtStatus = STATUS_INSUFFICIENT_RESOURCES ;
+		status = SRB_STATUS_INVALID_REQUEST ;
+		return status;
+	}
+
+	LSCCB_INITIALIZE(Ccb);
+	Ccb->OperationCode = CCB_OPCODE_DVD_STATUS;
+	LSCcbSetFlag(Ccb, CCB_FLAG_SYNCHRONOUS|CCB_FLAG_ALLOCATED);
+	Ccb->DataBuffer = LurBuffer;
+	Ccb->DataBufferLength = sizeof(LURN_DVD_STATUS);
+	
+	pDvdStatusHeader = (PLURN_DVD_STATUS)LurBuffer;
+	pDvdStatusHeader->Length = sizeof(LURN_DVD_STATUS);
+
+	if(LuExtension) {
+		KDPrint(3,("going to LuExtention %p.\n", LuExtension));
+		ntStatus = LurRequest(
+							LuExtension->LUR,
+							Ccb
+						);
+	} else {
+		KDPrint(3,("going to default LuExtention 0.\n"));
+		ntStatus = LurRequest(
+							HwDeviceExtension->LURs[0],	// default: 0.
+							Ccb
+						);
+
+	}
+	if(!NT_SUCCESS(ntStatus)) {
+		KDPrint(1,("LurnRequest() failed.\n"));
+		*NtStatus = STATUS_INSUFFICIENT_RESOURCES ;
+		status = SRB_STATUS_INVALID_REQUEST ;
+		return status;
+	}
+		
+	//
+	//	Set return values.
+	//
+	KDPrint(1,("Last Access Time :%I64d\n",pDvdStatusHeader->Last_Access_Time.QuadPart));
+	KDPrint(1,("Result  %d\n",pDvdStatusHeader->Status));
+	DvdStatusInfo->Status = pDvdStatusHeader->Status;
+	*NtStatus = STATUS_SUCCESS;
+	return SRB_STATUS_SUCCESS;
+}
+// Added by ILGU HONG 2004_07_05 end
+
+NTSTATUS
+MiniSrbControl(
+	   IN PMINIPORT_DEVICE_EXTENSION	HwDeviceExtension,
+	   IN PMINIPORT_LU_EXTENSION		LuExtension,
+	   IN PSCSI_REQUEST_BLOCK			Srb
+	)
+/*++
+
+Routine Description:
+
+    This is the SRB_IO_CONTROL handler for this driver. These requests come from
+    the management driver.
+    
+Arguments:
+
+    DeviceExtension - Context
+    Srb - The request to process.
+    
+Return Value:
+
+    Value from the helper routines, or if handled in-line, SUCCESS or INVALID_REQUEST. 
+    
+--*/
+{
+    PSRB_IO_CONTROL	srbIoControl;
+    PUCHAR			srbIoctlBuffer;
+	LONG			srbIoctlBufferLength;
+    ULONG			controlCode;
+    ULONG			transferPages = 0;
+    NTSTATUS		status;
+    UCHAR			srbStatus;
+
+    //
+    // Start off being paranoid.
+    //
+    if (Srb->DataBuffer == NULL) {
+		KDPrint(1,("DataBuffer is NULL\n"));
+        return SRB_STATUS_INVALID_REQUEST;
+    }
+	status = STATUS_MORE_PROCESSING_REQUIRED;
+
+	//
+    // Extract the io_control
+    //
+    srbIoControl = (PSRB_IO_CONTROL)Srb->DataBuffer;
+
+    //
+    // Ensure the signature is correct.
+    //
+    if (strncmp(srbIoControl->Signature, LANSCSIMINIPORT_IOCTL_SIGNATURE, 8) != 0) {
+
+		KDPrint(1,("Signature mismatch %s, %s\n", srbIoControl->Signature, LANSCSIMINIPORT_IOCTL_SIGNATURE));
+		Srb->SrbStatus = SRB_STATUS_INVALID_REQUEST;
+        return STATUS_INVALID_PARAMETER;
+    }
+    
+    //
+    // Get the control code.
+    // 
+    controlCode = srbIoControl->ControlCode;
+
+    //
+    // Get the Ioctl buffer. If this is a send message request, it gets
+    // fixed up to be an I2O message later.
+    //
+    srbIoctlBuffer = ((PUCHAR)Srb->DataBuffer) + sizeof(SRB_IO_CONTROL);
+	srbIoctlBufferLength = srbIoControl->Length;
+
+    //
+    // Based on the control code, figure out what to do.
+    //
+    switch (controlCode) {
+		case LANSCSIMINIPORT_IOCTL_GET_DVD_STATUS:
+			{
+				srbStatus = SrbIoctlGetDVDSTatus(
+								HwDeviceExtension,
+								LuExtension,
+								srbIoctlBufferLength,
+								srbIoctlBuffer,
+								&srbIoControl->ReturnCode
+								) ;
+				if(srbStatus == SRB_STATUS_SUCCESS) {
+					KDPrint(4,("LANSCSIMINIPORT_IOCTL_QUERYINFO_EX: Successful.\n"));
+					status = STATUS_SUCCESS ;
+				} else {
+					status = STATUS_UNSUCCESSFUL ;
+				}								
+			}
+			break;
+		case LANSCSIMINIPORT_IOCTL_GET_SLOT_NO:
+            KDPrint(2,("Get Slot No. Slot number is %d\n", HwDeviceExtension->SlotNumber));
+
+			*(PULONG)srbIoctlBuffer = HwDeviceExtension->SlotNumber;
+			srbIoControl->ReturnCode = 0;
+
+			srbStatus = SRB_STATUS_SUCCESS;
+			status = STATUS_SUCCESS;
+            break;
+
+		case LANSCSIMINIPORT_IOCTL_QUERYINFO_EX: {
+			PLSMPIOCTL_QUERYINFO	QueryInfo;
+			PUCHAR tmpBuffer;
+            KDPrint(5, ("Query information EX.\n"));
+
+			QueryInfo = (PLSMPIOCTL_QUERYINFO)srbIoctlBuffer;
+
+			tmpBuffer = ExAllocatePoolWithTag(NonPagedPool, srbIoctlBufferLength, LSMP_PTAG_IOCTL);
+			if(tmpBuffer == NULL) {
+				ASSERT(FALSE);
+	            KDPrint(1,("LANSCSIMINIPORT_IOCTL_QUERYINFO_EX: SRB_STATUS_DATA_OVERRUN. BufferLength:%d\n", srbIoctlBufferLength));
+				srbStatus = SRB_STATUS_DATA_OVERRUN;
+				break;
+			}
+
+			srbStatus = SrbIoctlQueryInfo(
+							HwDeviceExtension,
+							LuExtension,
+							QueryInfo,
+							srbIoctlBufferLength,
+							tmpBuffer,
+							&srbIoControl->ReturnCode
+						);
+			if(srbStatus == SRB_STATUS_SUCCESS) {
+	            KDPrint(4,("LANSCSIMINIPORT_IOCTL_QUERYINFO_EX: Successful.\n"));
+				RtlCopyMemory(srbIoctlBuffer, tmpBuffer, srbIoctlBufferLength);
+				status = STATUS_SUCCESS;
+			} else {
+				status = STATUS_UNSUCCESSFUL;
+			}
+
+			ExFreePoolWithTag(tmpBuffer, LSMP_PTAG_IOCTL);
+			break;
+		}
+		case LANSCSIMINIPORT_IOCTL_UPGRADETOWRITE: {
+			PLURN_UPDATE		LurnUpdate;
+			PCCB				Ccb;
+
+			//
+			//	Set a CCB
+			//
+			status = LSCcbAllocate(&Ccb);
+			if(!NT_SUCCESS(status)) {
+				KDPrint(1,("LANSCSIMINIPORT_IOCTL_UPGRADETOWRITE: LSCcbAllocate() failed.\n"));
+				break;
+			}
+			LurnUpdate = (PLURN_UPDATE)ExAllocatePoolWithTag(NonPagedPool, sizeof(LURN_UPDATE), LSMP_PTAG_IOCTL);
+			if(!LurnUpdate) {
+				KDPrint(1,("LANSCSIMINIPORT_IOCTL_UPGRADETOWRITE: ExAllocatePoolWithTag() failed.\n"));
+				status = STATUS_INSUFFICIENT_RESOURCES;
+				break;
+			}
+
+			LSCCB_INITIALIZE(Ccb);
+			Ccb->OperationCode = CCB_OPCODE_UPDATE;
+			Ccb->DataBuffer = LurnUpdate;
+			Ccb->DataBufferLength = sizeof(LURN_UPDATE);
+			LSCcbSetFlag(Ccb, CCB_FLAG_ALLOCATED|CCB_FLAG_DATABUF_ALLOCATED);
+
+			//	Ioctl Srb will complete asynchronously.
+			Ccb->Srb = Srb;
+			InterlockedIncrement(&HwDeviceExtension->RequestExecuting);
+			LSCcbSetCompletionRoutine(Ccb, LanscsiMiniportCompletion, HwDeviceExtension);
+
+			LurnUpdate->UpdateClass = LURN_UPDATECLASS_WRITEACCESS_USERID;
+
+			if(LuExtension) {
+				KDPrint(3,("LANSCSIMINIPORT_IOCTL_UPGRADETOWRITE:  going to LuExtention %p.\n", LuExtension));
+				status = LurRequest(
+									LuExtension->LUR,
+									Ccb
+								);
+			} else {
+				KDPrint(3,("LANSCSIMINIPORT_IOCTL_UPGRADETOWRITE:  going to default LuExtention 0.\n"));
+				status = LurRequest(
+									HwDeviceExtension->LURs[0],	// default: 0.
+									Ccb
+								);
+			}
+			if(!NT_SUCCESS(status)) {
+				KDPrint(1,("LANSCSIMINIPORT_IOCTL_UPGRADETOWRITE:  LurnRequest() failed.\n"));
+				LSCcbFree(Ccb);
+				ExFreePoolWithTag(LurnUpdate, LSMP_PTAG_IOCTL);
+				status = STATUS_SUCCESS;
+			} else {
+				status = STATUS_PENDING;
+			}
+			break;
+		}
+
+		case LANSCSIMINIPORT_IOCTL_ADD_TARGET: {
+			PLANSCSI_ADD_TARGET_DATA	AddTargetData;
+			PLURELATION_DESC			LurDesc;
+			LONG						LurDescLength;
+			LONG						LurnCnt;
+
+			AddTargetData	= (PLANSCSI_ADD_TARGET_DATA)srbIoctlBuffer;
+			LurnCnt			=	AddTargetData->ulNumberOfUnitDiskList;
+			LurDescLength	=	sizeof(LURELATION_DESC) +											// LURELATION_DESC
+								(sizeof(LURELATION_NODE_DESC) + sizeof(LONG) * (LurnCnt-1)) *		// LURELATION_NODE_DESC
+								(LurnCnt - 1);
+			//
+			//	Allocate LUR Descriptor
+			//	It will be freed in the worker routine.
+			//
+			LurDesc = (PLURELATION_DESC)ExAllocatePoolWithTag(NonPagedPool,  LurDescLength, LSMP_PTAG_IOCTL);
+			if(LurDesc == NULL) {
+				return STATUS_INSUFFICIENT_RESOURCES;
+			}
+
+			LurTranslateAddTargetDataToLURDesc(AddTargetData, HwDeviceExtension->MaxBlocksPerRequest, LurDescLength, LurDesc);
+			ASSERT(LurDescLength>0);
+			status = AddNewDeviceToMiniport(HwDeviceExtension, LuExtension, Srb, LurDesc);
+		}
+		case LANSCSIMINIPORT_IOCTL_ADD_DEVICE: {
+			PLURELATION_DESC			LurDesc;
+
+			LurDesc = (PLURELATION_DESC)srbIoctlBuffer;
+
+			status = AddNewDeviceToMiniport(HwDeviceExtension, LuExtension, Srb, LurDesc);
+			break;
+		}
+		case LANSCSIMINIPORT_IOCTL_REMOVE_DEVICE: {
+			status = RemoveDeviceFromMiniport(HwDeviceExtension, LuExtension, Srb);
+			break;
+		}
+
+		case LANSCSIMINIPORT_IOCTL_REMOVE_TARGET: {
+			PLANSCSI_REMOVE_TARGET_DATA	RemoveTargetData;
+
+			RemoveTargetData = (PLANSCSI_REMOVE_TARGET_DATA)srbIoctlBuffer;
+			status = RemoveDeviceFromMiniport(HwDeviceExtension, NULL, Srb);
+			break;
+		}
+		case LANSCSIMINIPORT_IOCTL_NOOP: {
+			PCCB	Ccb;
+
+			//
+			//	Query to the LUR
+			//
+			status = LSCcbAllocate(&Ccb);
+			if(!NT_SUCCESS(status)) {
+				srbStatus = SRB_STATUS_ERROR;
+				status = STATUS_SUCCESS;
+				KDPrint(1,("LSCcbAllocate() failed.\n"));
+				break;
+			}
+
+			LSCCB_INITIALIZE(Ccb);
+			Ccb->OperationCode = CCB_OPCODE_NOOP;
+			LSCcbSetFlag(Ccb, CCB_FLAG_ALLOCATED);
+			Ccb->Srb = Srb;
+			LSCcbSetCompletionRoutine(Ccb, LanscsiMiniportCompletion, HwDeviceExtension);
+
+			KDPrint(3,("going to default LuExtention 0.\n"));
+			status = LurRequest(
+								HwDeviceExtension->LURs[0],	// default: 0.
+								Ccb
+							);
+			if(!NT_SUCCESS(status)) {
+				srbStatus = SRB_STATUS_ERROR;
+				status = STATUS_SUCCESS;
+				KDPrint(1,("LurRequest() failed.\n"));
+				break;
+			}
+
+			InterlockedIncrement(&HwDeviceExtension->RequestExecuting);
+			srbStatus = SRB_STATUS_SUCCESS;
+			status = STATUS_PENDING;
+		break;
+		}
+        default:
+
+            KDPrint(2,("Control Code (%x)\n", controlCode));
+            srbStatus = SRB_STATUS_INVALID_REQUEST;
+			status = STATUS_MORE_PROCESSING_REQUIRED;
+    }
+
+	Srb->SrbStatus = srbStatus;
+
+    return status;
+}
+
+
+
+NTSTATUS
+LSMPSendIoctlSrb(
+		IN PDEVICE_OBJECT	DeviceObject,
+		IN ULONG			IoctlCode,
+		IN PVOID			InputBuffer,
+		IN LONG				InputBufferLength,
+		OUT PVOID			OutputBuffer,
+		IN LONG				OutputBufferLength
+	) {
+
+    PIRP				irp;
+    KEVENT				event;
+	PSRB_IO_CONTROL		psrbIoctl;
+	LONG				srbIoctlLength;
+	PVOID				srbIoctlBuffer;
+	LONG				srbIoctlBufferLength;
+    NTSTATUS			status;
+    PIO_STACK_LOCATION	irpStack;
+    SCSI_REQUEST_BLOCK	srb;
+    LARGE_INTEGER		startingOffset;
+    IO_STATUS_BLOCK		ioStatusBlock;
+
+	ASSERT(KeGetCurrentIrql() == PASSIVE_LEVEL);
+
+	psrbIoctl	= NULL;
+	irp = NULL;
+
+	//
+	//	build an SRB for the miniport
+	//
+	srbIoctlBufferLength = (InputBufferLength>OutputBufferLength)?InputBufferLength:OutputBufferLength;
+	srbIoctlLength = sizeof(SRB_IO_CONTROL) +  srbIoctlBufferLength;
+
+	psrbIoctl = (PSRB_IO_CONTROL)ExAllocatePoolWithTag(NonPagedPool , srbIoctlLength, LSMP_PTAG_SRB);
+	if(psrbIoctl == NULL) {
+		KDPrint(1, ("TATUS_INSUFFICIENT_RESOURCES\n"));
+		status = STATUS_INSUFFICIENT_RESOURCES;
+		goto cleanup;
+	}
+
+	RtlZeroMemory(psrbIoctl, srbIoctlLength);
+	psrbIoctl->HeaderLength = sizeof(SRB_IO_CONTROL);
+	RtlCopyMemory(psrbIoctl->Signature, LANSCSIMINIPORT_IOCTL_SIGNATURE, 8);
+	psrbIoctl->Timeout = 10;
+	psrbIoctl->ControlCode = IoctlCode;
+	psrbIoctl->Length = srbIoctlBufferLength;
+
+	srbIoctlBuffer = (PUCHAR)psrbIoctl + sizeof(SRB_IO_CONTROL);
+	RtlCopyMemory(srbIoctlBuffer, InputBuffer, InputBufferLength);
+
+    //
+    // Initialize the notification event.
+    //
+
+    KeInitializeEvent(&event,
+                        NotificationEvent,
+                        FALSE);
+	startingOffset.QuadPart = 1;
+
+    //
+    // Build IRP for this request.
+    // Note we do this synchronously for two reasons.  If it was done
+    // asynchonously then the completion code would have to make a special
+    // check to deallocate the buffer.  Second if a completion routine were
+    // used then an additional IRP stack location would be needed.
+    //
+
+    irp = IoBuildSynchronousFsdRequest(
+                IRP_MJ_SCSI,
+                DeviceObject,
+                psrbIoctl,
+                srbIoctlLength,
+                &startingOffset,
+                &event,
+                &ioStatusBlock);
+
+    irpStack = IoGetNextIrpStackLocation(irp);
+
+    if (irp == NULL) {
+        KDPrint(1,("STATUS_INSUFFICIENT_RESOURCES\n"));
+
+		status = STATUS_INSUFFICIENT_RESOURCES;
+		goto cleanup;
+    }
+
+    //
+    // Set major and minor codes.
+    //
+
+    irpStack->MajorFunction = IRP_MJ_SCSI;
+    irpStack->MinorFunction = 1;
+
+    //
+    // Fill in SRB fields.
+    //
+
+    irpStack->Parameters.Others.Argument1 = &srb;
+
+    //
+    // Zero out the srb.
+    //
+
+    RtlZeroMemory(&srb, sizeof(SCSI_REQUEST_BLOCK));
+
+    srb.PathId = 0;
+    srb.TargetId = 0;
+    srb.Lun = 0;
+
+    srb.Function = SRB_FUNCTION_IO_CONTROL;
+    srb.Length = sizeof(SCSI_REQUEST_BLOCK);
+
+    srb.SrbFlags = /*SRB_FLAGS_DATA_IN |*/ SRB_FLAGS_NO_QUEUE_FREEZE /*| SRB_FLAGS_BYPASS_FROZEN_QUEUE */;
+
+    srb.OriginalRequest = irp;
+
+    //
+    // Set timeout to requested value.
+    //
+
+    srb.TimeOutValue = psrbIoctl->Timeout;
+
+    //
+    // Set the data buffer.
+    //
+
+    srb.DataBuffer = psrbIoctl;
+    srb.DataTransferLength = srbIoctlLength;
+
+    //
+    // Flush the data buffer for output. This will insure that the data is
+    // written back to memory.  Since the data-in flag is the the port driver
+    // will flush the data again for input which will ensure the data is not
+    // in the cache.
+    //
+/*
+    KeFlushIoBuffers(irp->MdlAddress, FALSE, TRUE);
+*/
+    status = IoCallDriver( DeviceObject, irp );
+
+    //
+    // Wait for request to complete.
+    //
+    if (status == STATUS_PENDING) {
+
+        (VOID)KeWaitForSingleObject( 
+									&event,
+                                     Executive,
+                                     KernelMode,
+                                     FALSE,
+                                     (PLARGE_INTEGER)NULL 
+									 );
+
+        status = ioStatusBlock.Status;
+    }
+
+	//
+	//	get the result
+	//
+	if(status == STATUS_SUCCESS) {
+		if(OutputBuffer && OutputBufferLength)
+			RtlCopyMemory(OutputBuffer, srbIoctlBuffer, OutputBufferLength);
+			KDPrint(1,("Ioctl(%d) succeeded!\n", IoctlCode));
+	}
+
+cleanup:
+	if(psrbIoctl)
+		ExFreePool(psrbIoctl);
+
+    return status;
+}

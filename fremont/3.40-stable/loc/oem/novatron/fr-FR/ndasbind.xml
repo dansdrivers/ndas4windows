@@ -1,0 +1,1067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="" version="" lang="fra" oem="base" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/13/09">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>Une version incompatible de NDASUSER.DLL est installée.\r\nVeuillez vérifier l'installation du logiciel.</translation>
+  </string>
+  <string id="/STR/13/10">
+    <base><![CDATA[Incompatible NDASCOMM.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>Une version incompatible de NDASCOMM.DLL est installée.\r\nVeuillez vérifier l'installation du logiciel.</translation>
+  </string>
+  <string id="/STR/18/14">
+    <base><![CDATA[%1!3d!.%2!02d! GB]]></base>
+    <translation>%1!3d!.%2!02d! GB</translation>
+  </string>
+  <string id="/STR/19/02">
+    <base><![CDATA[A disk cannot be mirrored by the smaller disk in size.]]></base>
+    <translation>Un disque ne peut avoir pour miroir un disque de taille plus petite.</translation>
+  </string>
+  <string id="/STR/20/05">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation>Gestionnaire de liaison NDAS</translation>
+  </string>
+  <string id="/STR/20/07">
+    <base><![CDATA[Component]]></base>
+    <translation>Composant</translation>
+  </string>
+  <string id="/STR/20/08">
+    <base><![CDATA[Version]]></base>
+    <translation>Version</translation>
+  </string>
+  <string id="/STR/20/11">
+    <base><![CDATA[Name]]></base>
+    <translation>Nom</translation>
+  </string>
+  <string id="/STR/20/12">
+    <base><![CDATA[NDAS ID]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/20/13">
+    <base><![CDATA[Capacity]]></base>
+    <translation>Capacité</translation>
+  </string>
+  <string id="/STR/20/14">
+    <base><![CDATA[Number]]></base>
+    <translation>Capacité</translation>
+  </string>
+  <string id="/STR/21/06">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation>Gestionnaire de liaison NDAS</translation>
+  </string>
+  <string id="/STR/22/02">
+    <base><![CDATA[NDAS Bind Error]]></base>
+    <translation>Erreur de liaison NDAS</translation>
+  </string>
+  <string id="/STR/22/03">
+    <base><![CDATA[Failed to convert the selected disk to a basic disk.]]></base>
+    <translation>Echec de conversion du disque sélectionné en disque basique.</translation>
+  </string>
+  <string id="/STR/22/09">
+    <base><![CDATA[Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!]]></base>
+    <translation>Service: NDAS 0x%1!04X!\r\nCode erreur: %2!u! (0x%2!04X!)\r\n%3!s!</translation>
+  </string>
+  <string id="/STR/22/10">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation>Code Erreur: %1!u! (0x%1!04X!)\r\n%2!s!</translation>
+  </string>
+  <string id="/STR/22/11">
+    <base><![CDATA[All of the data will be lost once the disks are bound. Are you sure you want to bind the disks?]]></base>
+    <translation>Toutes les données seront perdues une fois les disques liés. Êtes vous sûr de vouloir lier les disques?</translation>
+  </string>
+  <string id="/STR/22/12">
+    <base><![CDATA[Some version of Windows cannot access a disk larger than 2 TBytes and the size of bound disks is larger than the limit. Do you want to continue?]]></base>
+    <translation>Certaines versions de Windows ne peuvent pas accéder à un disque d'une capacité supérieure à 2 Tbytes et la taille des disques liés est supérieure à cette limite. Voulez vous continuer?</translation>
+  </string>
+  <string id="/STR/23/00">
+    <base><![CDATA[%1!s! does not have Write access privilege. The NDAS device's Write Key is required to be registered to gain Write access.]]></base>
+    <translation>%1!s! n'a pas de droit d'accès en écriture. La clé d'écriture du périphérique NDAS doit être enregistrée pour obtenir le droit d'accès en écriture.</translation>
+  </string>
+  <string id="/STR/23/05">
+    <base><![CDATA[All of the data will be lost once the disks are unbound. Are you sure you want to unbind the disks?]]></base>
+    <translation>Toutes les données seront perdues une fois les disques détachés. Êtes vous sûr de vouloir détacher les disques ?</translation>
+  </string>
+  <string id="/STR/23/06">
+    <base><![CDATA[Selected disks are successfully unbound. You must first mount and then format each of the unbound disks before using them.]]></base>
+    <translation>Les disques sélectionnés ont été détachés avec succès. Vous devez d'abord monter puis formater chacun des disques détachés avant de les utiliser.</translation>
+  </string>
+  <string id="/STR/23/08">
+    <base><![CDATA[A problem occurred while operating on the NDAS device '%1!s!'.]]></base>
+    <translation>Un problème est survenu pendant une action sur le périphérique NDAS '%1!s!'.</translation>
+  </string>
+  <string id="/STR/23/09">
+    <base><![CDATA[A problem occurred while operating on the NDAS devices.]]></base>
+    <translation>Un problème est survenu pendant une action sur les périphériques NDAS.</translation>
+  </string>
+  <string id="/STR/24/00">
+    <base><![CDATA[Bind type]]></base>
+    <translation>Type de liaison</translation>
+  </string>
+  <string id="/STR/24/01">
+    <base><![CDATA[Striped Disk (RAID-0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/02">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation>Mirrored Disk (RAID-1) (Obsolète)</translation>
+  </string>
+  <string id="/STR/24/03">
+    <base><![CDATA[RAID-2 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/04">
+    <base><![CDATA[RAID-3 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/05">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation>RAID-4 Disk(Obsolète)</translation>
+  </string>
+  <string id="/STR/24/06">
+    <base><![CDATA[RAID-5 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/07">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation>Disque agrégé</translation>
+  </string>
+  <string id="/STR/24/08">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Lecteur de compact flash</translation>
+  </string>
+  <string id="/STR/24/09">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation>Lecteur de DVD</translation>
+  </string>
+  <string id="/STR/24/10">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/11">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>Lecteur MO</translation>
+  </string>
+  <string id="/STR/24/12">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation>Disque Basique</translation>
+  </string>
+  <string id="/STR/24/13">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation>Type Inconnu (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/24/14">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation>Lecteur virtuel de DVD</translation>
+  </string>
+  <string id="/STR/25/02">
+    <base><![CDATA[Device not found]]></base>
+    <translation>Périphérique introuvable</translation>
+  </string>
+  <string id="/STR/25/03">
+    <base><![CDATA[Status]]></base>
+    <translation>Statut</translation>
+  </string>
+  <string id="/STR/25/04">
+    <base><![CDATA[RAID status]]></base>
+    <translation>Statut RAID</translation>
+  </string>
+  <string id="/STR/25/05">
+    <base><![CDATA[Comment]]></base>
+    <translation>Commentaire</translation>
+  </string>
+  <string id="/STR/25/07">
+    <base><![CDATA[Yes]]></base>
+    <translation>Oui</translation>
+  </string>
+  <string id="/STR/25/08">
+    <base><![CDATA[No]]></base>
+    <translation>Non</translation>
+  </string>
+  <string id="/STR/25/09">
+    <base><![CDATA[Missing Member]]></base>
+    <translation>Membre manquant</translation>
+  </string>
+  <string id="/STR/25/10">
+    <base><![CDATA[Yes (Need Resynchronizing)]]></base>
+    <translation>Oui (Besoin de resynchroniser)</translation>
+  </string>
+  <string id="/STR/25/12">
+    <base><![CDATA[Offline]]></base>
+    <translation>Déconnecté</translation>
+  </string>
+  <string id="/STR/25/13">
+    <base><![CDATA[In use]]></base>
+    <translation>En cours d'utilisation</translation>
+  </string>
+  <string id="/STR/25/14">
+    <base><![CDATA[No Write Key]]></base>
+    <translation>Pas de clé d'écriture</translation>
+  </string>
+  <string id="/STR/25/15">
+    <base><![CDATA[Ready]]></base>
+    <translation>Prêt</translation>
+  </string>
+  <string id="/STR/26/00">
+    <base><![CDATA[Migrates mirrored disks to recoverable disks\nMigrate]]></base>
+    <translation>Faire migrer les disques miroir en disques récupérables\nMigrer</translation>
+  </string>
+  <string id="/STR/26/01">
+    <base><![CDATA[Disabled]]></base>
+    <translation>Désactivé</translation>
+  </string>
+  <string id="/STR/26/02">
+    <base><![CDATA[Do you want to unbind the following disks?]]></base>
+    <translation>Souhaitez vous détacher les disques suivants?</translation>
+  </string>
+  <string id="/STR/26/03">
+    <base><![CDATA[Selected disks are successfully unbound.]]></base>
+    <translation>Les disques sélectionnés ont été correctement détachés.</translation>
+  </string>
+  <string id="/STR/27/06">
+    <base><![CDATA[NDAS Bind Wizard]]></base>
+    <translation>Assistant de liaison NDAS</translation>
+  </string>
+  <string id="/STR/27/07">
+    <base><![CDATA[Select Bind Type]]></base>
+    <translation>Sélectionnez le type de liaison</translation>
+  </string>
+  <string id="/STR/27/08">
+    <base><![CDATA[You can select the bind type.]]></base>
+    <translation>Vous pouvez sélectionner le type de liaison.</translation>
+  </string>
+  <string id="/STR/27/09">
+    <base><![CDATA[Select Disk]]></base>
+    <translation>Choisir un disque</translation>
+  </string>
+  <string id="/STR/27/10">
+    <base>You can select the disks to be bound.</base>
+    <translation>Vous pouvez sélectionner les disques à lier.</translation>
+  </string>
+  <string id="/STR/27/13">
+    <base>Verdana</base>
+    <translation>Verdana</translation>
+  </string>
+  <string id="/STR/27/14">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/28/01">
+    <base><![CDATA[You have successfully completed the Disk Bind Wizard. You must first mount and then format the bound disks before using them.]]></base>
+    <translation>Vous avez terminé avec succès l'assistant de liaison de disque. Vous devez d'abord monter puis formater les disques liés avant de les utiliser.</translation>
+  </string>
+  <string id="/STR/28/02">
+    <base><![CDATA[You have failed to bind disks.]]></base>
+    <translation>La liaison des disques a échouée.</translation>
+  </string>
+  <string id="/STR/28/03">
+    <base><![CDATA[Bind Type: %1!s!]]></base>
+    <translation>Type de liaison: %1!s!</translation>
+  </string>
+  <string id="/STR/28/04">
+    <base><![CDATA[Disks selected:]]></base>
+    <translation>Disques sélectionnés:</translation>
+  </string>
+  <string id="/STR/28/05">
+    <base><![CDATA[Disks size: %1!s!]]></base>
+    <translation>Taille des disques: %1!s!</translation>
+  </string>
+  <string id="/STR/28/06">
+    <base><![CDATA[Failed device: %1!s!]]></base>
+    <translation>Périphérique en echec: %1!s!</translation>
+  </string>
+  <string id="/STR/28/07">
+    <base><![CDATA[An aggregated disk is made up of more than one disks. Create an aggregated disk if you need a disk that is too large for a basic disk.]]></base>
+    <translation>Un disque agrégé est fait de un ou plusieurs disques. Créez un disque agrégé si vous avez besoin d'un disque dont la capacité est trop grande pour qu'il soit basique.</translation>
+  </string>
+  <string id="/STR/28/08">
+    <base><![CDATA[A striped disk (RAID-0) stores data in stripes on two or more disks. A striped disk gives you faster access to your data than a basic or aggregated volume.]]></base>
+    <translation>Un disque rayé (RAID-0) stocke les données en raies sur un ou plusieurs disques. Un disque rayé vous donne un accès plus rapide à vos données qu'un disque basique ou un volume agrégé.</translation>
+  </string>
+  <string id="/STR/28/09">
+    <base><![CDATA[A mirrored disk (RAID-1) duplicates your data on two disks. Create a mirrored disk if you want to keep two separate copies of all your information to prevent data loss.]]></base>
+    <translation>Un disque miroir (RAID-1) duplique vos données sur deux disques. Créez un disque miroir si vous souhaitez garder deux copies séparées de vos informations pour prévenir la perte de données.</translation>
+  </string>
+  <string id="/STR/28/10">
+    <base><![CDATA[A RAID-4 disk stores data in stripes on three or more disks. It provides a way of recovering data if part of the data is lost.]]></base>
+    <translation>Un disque RAID-4 stocke les données en raies sur trois ou plusieurs disques. Il fournit un moyen de récupérer les données si une partie d'entre elles est perdue.</translation>
+  </string>
+  <string id="/STR/28/11">
+    <base>Mirrored Disk (RAID-1) (Deprecated)</base>
+    <translation>Disque miroir (RAID-1) (Obsolète)</translation>
+  </string>
+  <string id="/STR/28/12">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation>Disque RAID-5 (Obsolète)</translation>
+  </string>
+  <string id="/STR/28/13">
+    <base><![CDATA[Mirrored Disk (RAID-1)]]></base>
+    <translation>Disque miroir (RAID-1)</translation>
+  </string>
+  <string id="/STR/28/14">
+    <base><![CDATA[RAID-4 Disk]]></base>
+    <translation>Disque RAID-4</translation>
+  </string>
+  <string id="/STR/28/15">
+    <base><![CDATA[Not registered]]></base>
+    <translation>Non enregistré</translation>
+  </string>
+  <string id="/STR/29/01">
+    <base><![CDATA[Failed to migrate.]]></base>
+    <translation>La migration a échouée.</translation>
+  </string>
+  <string id="/STR/29/02">
+    <base><![CDATA[Requested operation cannot be processed while the NDAS device is offline or in use in other hosts.]]></base>
+    <translation>Les opérations requises ne peuvent pas être exécutées pendant que le périphérique NDAS est déconnecté ou en cours d'utilisation par d'autres hôtes.</translation>
+  </string>
+  <string id="/STR/68/06">
+    <base><![CDATA[Press the start button to continue.]]></base>
+    <translation>Appuyez sur le bouton démarrer pour continuer.</translation>
+  </string>
+  <string id="/STR/68/07">
+    <base><![CDATA[Synchronizing devices...]]></base>
+    <translation>Synchronisation des périphériques en cours…</translation>
+  </string>
+  <string id="/STR/68/08">
+    <base><![CDATA[Synchronization completed.]]></base>
+    <translation>Synchronisation terminée.</translation>
+  </string>
+  <string id="/STR/68/09">
+    <base><![CDATA[Failed to synchronize devices.]]></base>
+    <translation>La synchronisation des périphériques a échouée.</translation>
+  </string>
+  <string id="/STR/68/10">
+    <base><![CDATA[Add mirror disk]]></base>
+    <translation>Ajouter un disque miroir</translation>
+  </string>
+  <string id="/STR/68/13">
+    <base><![CDATA[Adds a spare disk to the fault tolerant RAID disk group.\nAdd Spare Disk]]></base>
+    <translation>Ajoute un disque de secours au groupe de disque RAID à tolérance de panne.\nAjouter un disque de secours</translation>
+  </string>
+  <string id="/STR/68/14">
+    <base><![CDATA[Removes a spare disk from the fault tolerant RAID disk group.\nRemove Spare Disk]]></base>
+    <translation>Supprime un disque de secours du groupe de disque RAID à tolérance de panne.\nSupprimer un disque de secours</translation>
+  </string>
+  <string id="/STR/69/05">
+    <base><![CDATA[Select a spare disk]]></base>
+    <translation>Sélectionner un disque de secours</translation>
+  </string>
+  <string id="/STR/69/06">
+    <base><![CDATA[Select a disk to be used as a spare disk for the RAID]]></base>
+    <translation>Sélectionne un disque qui sera utilisé comme disque de secours pour le RAID</translation>
+  </string>
+  <string id="/STR/69/08">
+    <base><![CDATA[The disk is too small to be used as a spare disk.]]></base>
+    <translation>La capacité du disque est trop petite pour qu'il soit utilisé comme un disque de secours.</translation>
+  </string>
+  <string id="/STR/69/09">
+    <base><![CDATA[Select a mirror disk]]></base>
+    <translation>Sélectionne un disque miroir</translation>
+  </string>
+  <string id="/STR/69/10">
+    <base><![CDATA[Select a backup disk to make a mirror.]]></base>
+    <translation>Sélectionne un disque de secours pour faire un miroir.</translation>
+  </string>
+  <string id="/STR/69/11">
+    <base><![CDATA[Unbind]]></base>
+    <translation>Détacher</translation>
+  </string>
+  <string id="/STR/69/12">
+    <base><![CDATA[Data on the following disks will be deleted.\nAre you sure you want to unbind them?]]></base>
+    <translation>Les données sur les disques suivants seront effacées.\nÊtes vous sûr de vouloir les détacher?</translation>
+  </string>
+  <string id="/STR/69/13">
+    <base><![CDATA[Replace the selected device in RAID with another one.]]></base>
+    <translation>Remplacer le périphérique sélectionné dans le RAID par un autre.</translation>
+  </string>
+  <string id="/STR/69/14">
+    <base><![CDATA[Use this device as RAID member.]]></base>
+    <translation>Remplacer le périphérique sélectionné dans le RAID par un autre.</translation>
+  </string>
+  <string id="/STR/69/15">
+    <base><![CDATA[The requested operation has not succeeded.]]></base>
+    <translation>L'opération demandée n'a pas réussi.</translation>
+  </string>
+  <string id="/STR/70/00">
+    <base><![CDATA[Removing a spare disk]]></base>
+    <translation>Suppression d'un disque de secours</translation>
+  </string>
+  <string id="/STR/70/01">
+    <base><![CDATA[Are you sure you want to remove the selected spare disk?]]></base>
+    <translation>Êtes vous certain de vouloir supprimer le disque de secours sélectionné?</translation>
+  </string>
+  <string id="/STR/70/02">
+    <base><![CDATA[Convert to the Basic Disk]]></base>
+    <translation>Convertir en disque basique</translation>
+  </string>
+  <string id="/STR/70/03">
+    <base><![CDATA[All of the data will be lost once the disk is reset to a basic disk. Would you like to continue?]]></base>
+    <translation>Toutes les données seront perdues une fois le disque réinitialisé en disque basique. Souhaitez vous continuer?</translation>
+  </string>
+  <string id="/STR/70/14">
+    <base><![CDATA[Select a replace disk]]></base>
+    <translation>Choisir un disque de remplacement</translation>
+  </string>
+  <string id="/STR/70/15">
+    <base><![CDATA[Select a disk to be used as a replacement.]]></base>
+    <translation>Choisir un disque pour être utilisé en disque de remplacement.</translation>
+  </string>
+  <string id="/STR/71/00">
+    <base><![CDATA[Replace a hard drive]]></base>
+    <translation>Remplacer un disque dur</translation>
+  </string>
+  <string id="/STR/71/01">
+    <base><![CDATA[Press OK if you want to replace a missing drive with new one.]]></base>
+    <translation>Appuyez sur OK si vous souhaitez remplacer un disque manquant par un autre.</translation>
+  </string>
+  <string id="/STR/71/02">
+    <base><![CDATA[Migrate]]></base>
+    <translation>Migrer</translation>
+  </string>
+  <string id="/STR/71/03">
+    <base><![CDATA[Previous version of NDAS software may not be able to use these devices after migration.\nAre you sure you want to migrate them?]]></base>
+    <translation>Les versions précédentes du logiciel NDAS ne pourront peut être pas utiliser ces périphériques après migration.\nÊtes vous sûr de vouloir les migrer?</translation>
+  </string>
+  <string id="/STR/71/04">
+    <base><![CDATA[Reset bind information to remove unrecognized bind information.]]></base>
+    <translation>Réinitialiser les informations de liaison pour supprimer les informations de liaison non reconnues.</translation>
+  </string>
+  <string id="/STR/71/05">
+    <base><![CDATA[Clear defective flag from the disk.]]></base>
+    <translation>Effacer les marques défectueuses du disque.</translation>
+  </string>
+  <string id="/STR/71/06">
+    <base><![CDATA[Remove disk from RAID set. Disk type is not changed.]]></base>
+    <translation>Supprimer le disque de l'ensemble RAID. Le type du disque ne sera pas changé.</translation>
+  </string>
+  <string id="/STR/71/07">
+    <base><![CDATA[Remove disk from RAID set and convert it to basic disk.]]></base>
+    <translation>Supprimer le disque de l'ensemble RAID et le convertir en disque basique.</translation>
+  </string>
+  <string id="/STR/71/08">
+    <base><![CDATA[Cannot replace the selected disk. \nReplacement will break RAID.]]></base>
+    <translation>Impossible de remplacer le disque sélectionné. \nLe remplacement va corrompre le RAID.</translation>
+  </string>
+  <string id="/STR/71/09">
+    <base><![CDATA[Not all member disks are accessible.\nChanging RAID configuration with missing member can make RAID fail.\nDo you want to continue?]]></base>
+    <translation>Tous les disques membres ne sont pas accessibles.\nLe changement de la configuration du RAID avec un disque manquant pourrait mettre en echec le RAID.\nSouhaitez vous continuer?</translation>
+  </string>
+  <string id="/STR/71/10">
+    <base><![CDATA[The disk is too small to be used as this RAID member.]]></base>
+    <translation>La capacité du disque est trop petite pour qu'il soit utilisé comme membre de ce RAID.</translation>
+  </string>
+  <string id="/STR/71/11">
+    <base><![CDATA[The data of this disk will be lost and if this disk is a member of another RAID, it may be broken.Do you want to continue?]]></base>
+    <translation>Les données de ce disque seront perdues et si le disque est membre d'un autre RAID, il pourrait être corrompu. Souhaitez vous continuer?</translation>
+  </string>
+  <string id="/STR/71/12">
+    <base><![CDATA[RAID containing this disk may be broken after this operation. Do you want to continue?]]></base>
+    <translation>Le RAID contenant ce disque pourrait être corrompu après cette opération. Souhaitez vous continuer?</translation>
+  </string>
+  <string id="/STR/71/13">
+    <base><![CDATA[Cannot remove the selected disk.\nIt will break RAID.]]></base>
+    <translation>Impossible de supprimer le disque sélectionné.\nCette opération va corrompre le RAID.</translation>
+  </string>
+  <string id="/STR/71/14">
+    <base><![CDATA[Not all member disks are accessible.]]></base>
+    <translation>Tous les disques membres ne sont pas accessibles.</translation>
+  </string>
+  <string id="/STR/71/15">
+    <base><![CDATA[Corrupted RAID information]]></base>
+    <translation>Informations de RAID corrompues</translation>
+  </string>
+  <string id="/STR/72/00">
+    <base><![CDATA[Member of another RAID]]></base>
+    <translation>Membre d'un autre RAID</translation>
+  </string>
+  <string id="/STR/72/02">
+    <base><![CDATA[Read failure]]></base>
+    <translation>Echec de lecture</translation>
+  </string>
+  <string id="/STR/72/03">
+    <base><![CDATA[Not a RAID member]]></base>
+    <translation>Pas membre d'un RAID</translation>
+  </string>
+  <string id="/STR/72/04">
+    <base><![CDATA[Bad disk]]></base>
+    <translation>Disque défectueux</translation>
+  </string>
+  <string id="/STR/72/05">
+    <base><![CDATA[Bad sector found]]></base>
+    <translation>Secteur défectueux trouvé</translation>
+  </string>
+  <string id="/STR/72/06">
+    <base><![CDATA[Unknown defect]]></base>
+    <translation>Défaut inconnu</translation>
+  </string>
+  <string id="/STR/72/07">
+    <base><![CDATA[Out-of-sync]]></base>
+    <translation>Erreur de synchronisation</translation>
+  </string>
+  <string id="/STR/72/08">
+    <base><![CDATA[Spare disk]]></base>
+    <translation>Disque de secours</translation>
+  </string>
+  <string id="/STR/72/09">
+    <base><![CDATA[RAID information on this disk is corrupted. \nTry "%1!s!" menu.]]></base>
+    <translation>Les informations RAID sur ce disque sont corrompues. \nEssayez le menu "%1!s!".</translation>
+  </string>
+  <string id="/STR/72/11">
+    <base><![CDATA[Cannot read. Replace disk or remove from RAID]]></base>
+    <translation>Impossible de lire. Remplacez ou supprimez le disque du RAID</translation>
+  </string>
+  <string id="/STR/72/12">
+    <base><![CDATA[Reconfigure RAID members.]]></base>
+    <translation>Reconfigure les membres RAID.</translation>
+  </string>
+  <string id="/STR/72/13">
+    <base><![CDATA[Replace bad disk with new one and run "%1!s!" menu\n or use "%2!s!" menu to ignore defect and retry]]></base>
+    <translation>Remplacez le disque défectueux avec un autre puis exécutez le menu "%1!s!"\n Ou utilisez le menu "%2!s!" pour ignorer les défauts et réessayer</translation>
+  </string>
+  <string id="/STR/72/14">
+    <base><![CDATA[Data of this disk is out of sync with another RAID member's data.]]></base>
+    <translation>Le lecteur de disque est utilisé comme membre actif RAID si un autre membre tombe en panne.</translation>
+  </string>
+  <string id="/STR/72/15">
+    <base><![CDATA[This disk will be used as active RAID member when any of other member fails.]]></base>
+    <translation>Ce disque sera utilisé comme un membre actif du RAID quand aucun autre membre n'est en échec.</translation>
+  </string>
+  <string id="/STR/73/00">
+    <base><![CDATA[This disk may be configured by higher version of NDAS software.\n Use "%1!s!" menu to convert to a single disk]]></base>
+    <translation>Ce disque pourrait être configuré avec une version plus récente du logiciel NDAS.\n Utilisez le menu "%1!s!" pour le convertir en un disque simple</translation>
+  </string>
+  <string id="/STR/73/01">
+    <base><![CDATA[Migration required]]></base>
+    <translation>Migration requise</translation>
+  </string>
+  <string id="/STR/73/02">
+    <base><![CDATA[Unsupported RAID]]></base>
+    <translation>RAID non supporté</translation>
+  </string>
+  <string id="/STR/73/04">
+    <base><![CDATA[Irreconcilable state]]></base>
+    <translation>Statut non réconciliable</translation>
+  </string>
+  <string id="/STR/73/05">
+    <base><![CDATA[Non-mountable\nRAID information is corrupted]]></base>
+    <translation>Pas-montable\nLes informations RAID sont corrompues</translation>
+  </string>
+  <string id="/STR/73/06">
+    <base><![CDATA[Missing member]]></base>
+    <translation>Membre manquant</translation>
+  </string>
+  <string id="/STR/73/07">
+    <base><![CDATA[Migration required]]></base>
+    <translation>Migration requise</translation>
+  </string>
+  <string id="/STR/73/08">
+    <base><![CDATA[Defective disk]]></base>
+    <translation>Disque défectueux</translation>
+  </string>
+  <string id="/STR/73/09">
+    <base><![CDATA[Non-mountable]]></base>
+    <translation>Non-montable</translation>
+  </string>
+  <string id="/STR/73/10">
+    <base><![CDATA[Degraded mode]]></base>
+    <translation>Mode dégradé</translation>
+  </string>
+  <string id="/STR/73/11">
+    <base><![CDATA[Need resynchronizing\n%1!d!%% in sync]]></base>
+    <translation>Besoin de resynchronisation\n%1!d!%% dans la synchronisation</translation>
+  </string>
+  <string id="/STR/73/12">
+    <base><![CDATA[Need resynchronizing]]></base>
+    <translation>Besoin de resynchronisation</translation>
+  </string>
+  <string id="/STR/73/13">
+    <base><![CDATA[Healthy]]></base>
+    <translation>En bon état</translation>
+  </string>
+  <string id="/STR/73/14">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nIf any of the disk is missing, unbind RAID and create it again]]></base>
+    <translation>Connecter tous les périphériques membres et utiliser le menu "%1!s!".\nSi l'un des disques est manquant, défaire le RAID et le créer de nouveau</translation>
+  </string>
+  <string id="/STR/73/15">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nYou cannot migrate with missing member]]></base>
+    <translation>Connecter tous les périphériques manquants et utiliser le menu "%1!s!".\nVous ne pouvez pas migrer avec un membre manquant</translation>
+  </string>
+  <string id="/STR/74/00">
+    <base><![CDATA[This RAID is created by higher version of software. Please update NDAS software]]></base>
+    <translation>Ce RAID a été créé avec une version plus récente du logiciel. Veuillez mettre à jour le logiciel NDAS</translation>
+  </string>
+  <string id="/STR/74/01">
+    <base><![CDATA[Each member has been used in degraded mode separately.\nYou need to convert one member to basic disk or unbind RAID.]]></base>
+    <translation>Chaque membre a été utilisé en mode dégradé séparément.\nVous devez convertir un des membres en disque basique ou défaire le RAID.</translation>
+  </string>
+  <string id="/STR/74/02">
+    <base><![CDATA[Reconfigure the corrupted member disk.]]></base>
+    <translation>Reconfigure le disque membre corrompu.</translation>
+  </string>
+  <string id="/STR/74/03">
+    <base><![CDATA[Non fault-tolerant RAID.\nAll members should be available to mount this RAID set.]]></base>
+    <translation>RAID sans tolérance de panne.\nTous les membres devraient être capables de monter cet ensemble RAID.</translation>
+  </string>
+  <string id="/STR/74/04">
+    <base><![CDATA[The number of valid members is not enough to mount.]]></base>
+    <translation>Le nombre de membres valides n'est pas suffisant pour le montage.</translation>
+  </string>
+  <string id="/STR/74/05">
+    <base><![CDATA[This RAID is created by older version of NDAS software.\nOnce migrated, this RAID cannot be used by older version of NDAS software]]></base>
+    <translation>Ce RAID a été créé avec une vieille version du logiciel NDAS.\nUne fois la migration terminée, ce RAID ne pourra plus être utilisé par une vieille version du logiciel NDAS</translation>
+  </string>
+  <string id="/STR/74/06">
+    <base><![CDATA[Disk has defects. Replace the defective disk.]]></base>
+    <translation>Le disque a des défauts. Remplacez le disque défectueux.</translation>
+  </string>
+  <string id="/STR/74/07">
+    <base><![CDATA[RAID will work without fault-tolerant feature due to missing member(s).]]></base>
+    <translation>Le RAID fonctionnera sans la fonctionnalité de tolérance de panne à cause d'un ou plusieurs membres manquants.</translation>
+  </string>
+  <string id="/STR/74/08">
+    <base><![CDATA[Resynchronizing will be started when RAID is mounted in Read/Write mode.]]></base>
+    <translation>La resynchronisation sera démarrée quand le RAID sera monté en mode Lecture/Ecriture.</translation>
+  </string>
+  <string id="/STR/74/09">
+    <base><![CDATA[Invalid member]]></base>
+    <translation>Membre invalide</translation>
+  </string>
+  <string id="/STR/74/11">
+    <base><![CDATA[RAID can be mounted only when all members are registered]]></base>
+    <translation>Le RAID ne peut être monté que quand tous les membres sont enregistrés</translation>
+  </string>
+  <string id="/STR/74/12">
+    <base><![CDATA[RAID can be mounted only when all members are enabled]]></base>
+    <translation>Le RAID ne peut être monté que quand tous les membres sont autorisés</translation>
+  </string>
+  <string id="/STR/74/13">
+    <base><![CDATA[Not registered]]></base>
+    <translation>Non enregistré</translation>
+  </string>
+  <string id="/STR/74/14">
+    <base><![CDATA[Spare used]]></base>
+    <translation>Utilisé comme secours</translation>
+  </string>
+  <string id="/STR/74/15">
+    <base><![CDATA[After spare disk is used, RAID needs reconfiguration.]]></base>
+    <translation>Après l'utilisation du disque de secours, le RAID a besoin d'être reconfiguré.</translation>
+  </string>
+  <string id="/STR/75/00">
+    <base><![CDATA[Inconsistent bind information]]></base>
+    <translation>Informations de liaison incohérentes</translation>
+  </string>
+  <string id="/STR/75/01">
+    <base><![CDATA[Bind information on the disk is inconsistent or unrecognizable.\nUse "%1!s!" menu to use as a single disk.]]></base>
+    <translation>Les informations de liaison sur le disque sont incohérentes ou non reconnues.\nUtilisez le menu "%1!s!" pour l'utiliser comme un disque simple.</translation>
+  </string>
+  <string id="/STR/75/02">
+    <base><![CDATA[Replaced by spare]]></base>
+    <translation>Remplacé par le secours</translation>
+  </string>
+  <string id="/STR/75/03">
+    <base><![CDATA[This disk's role is replaced by the spare disk. Reconfigure the RAID using \n"%1!s!" or "%2!s!" or "%3!s!" menu.]]></base>
+    <translation>Le rôle de ce disque est remplacé par le disque de secours. Reconfigurez le RAID en utilisant le menu  \n"%1!s!" ou "%2!s!" ou "%3!s!".</translation>
+  </string>
+  <string id="/STR/75/04">
+    <base><![CDATA[Used in degraded mode]]></base>
+    <translation>Utilisé en mode dégradé</translation>
+  </string>
+  <string id="/STR/75/05">
+    <base><![CDATA[This disk is used in degraded mode and may have different data.\nUse "%1!s!" menu to retain the data in this disk.]]></base>
+    <translation>Ce disque est utilisé en mode dégradé et pourrait avoir des données différentes.\nUtilisez le menu "%1!s!" pour maintenir les données sur ce disque.</translation>
+  </string>
+  <string id="/STR/75/06">
+    <base><![CDATA[This operation will reset all configuration information which may be used by a higher version of NDAS software. Do you want to continue?]]></base>
+    <translation>Cette opération va réinitialiser toutes les informations de configuration qui pourraient avoir été utilisées par une version plus récente du logiciel NDAS. Souhaitez vous continuer ?</translation>
+  </string>
+  <string id="/STR/75/07">
+    <base><![CDATA[RAID is in broken status. Requested operation cannot be processed.]]></base>
+    <translation>Le RAID a un statut corrompu. Les opérations requises ne peuvent pas être exécutées.</translation>
+  </string>
+  <string id="/STR/75/08">
+    <base><![CDATA[Cannot clear defect mark because no valid copy of data exists.\nPlease unbind RAID and try to recover data from each disk\n]]></base>
+    <translation>Impossible d'effacer les marques défectueuses parce qu'aucune copie valide des données n'existe.\nVeuillez défaire le RAID et essayer de récupérer les données de chaque disque\n</translation>
+  </string>
+  <string id="/STR/76/00">
+    <base><![CDATA[Defective]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/2049/05">
+    <base><![CDATA[Quit application\nExit]]></base>
+    <translation>Quitter l'application\nQuitter</translation>
+  </string>
+  <string id="/STR/2049/06">
+    <base><![CDATA[Bind disks\nBind]]></base>
+    <translation>Lier les disques\nLier</translation>
+  </string>
+  <string id="/STR/2049/08">
+    <base><![CDATA[Unbind aggregated/mirrored disks into basic disks\nUnbind]]></base>
+    <translation>Détacher les disques agrégés/miroirs en disques basiques\nDétacher</translation>
+  </string>
+  <string id="/STR/2049/09">
+    <base><![CDATA[Convert the selected disk to a basic disk]]></base>
+    <translation>Convertir le disque sélectionné en disque basique</translation>
+  </string>
+  <string id="/STR/2049/11">
+    <base><![CDATA[Resynchronize an outdated bound disk.\nResynchronize]]></base>
+    <translation>Resynchroniser une liaison de disque non à jour.\nResynchroniser</translation>
+  </string>
+  <string id="/STR/2049/14">
+    <base><![CDATA[Displays program information, version number and copyright\nAbout NDAS Software]]></base>
+    <translation>Afficher les informations de programme, le numéro de version et le copyright\nA propos du logiciel NDAS</translation>
+  </string>
+  <string id="/STR/2050/07">
+    <base><![CDATA[Adds a mirrored disk to a basic disk\nAdd Mirror]]></base>
+    <translation>Ajoute un disque miroir à un disque basique\nAjouter un miroir</translation>
+  </string>
+  <string id="/STR/2050/08">
+    <base><![CDATA[Refresh the NDAS device list\nRefresh]]></base>
+    <translation>Rafraîchit la liste des périphériques NDAS\nRafraîchir</translation>
+  </string>
+  <string id="/DLG/100">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation>A propos du logiciel NDAS</translation>
+  </string>
+  <string id="/DLG/100/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/100/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation>Logiciel NDAS</translation>
+  </string>
+  <string id="/DLG/100/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation>Version %1!s!</translation>
+  </string>
+  <string id="/DLG/100/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&amp;</translation>
+  </string>
+  <string id="/DLG/100/04">
+    <base><![CDATA[Copyright © 2002-2007 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+		<translation><![CDATA[-]]></translation>
+	</string>
+  <string id="/DLG/100/05">
+    <base><![CDATA[Components]]></base>
+    <translation>Composants</translation>
+  </string>
+  <string id="/DLG/242">
+    <base><![CDATA[Unbind]]></base>
+    <translation>Détacher</translation>
+  </string>
+  <string id="/DLG/242/00">
+    <base><![CDATA[&Yes]]></base>
+    <translation>&amp;Oui</translation>
+  </string>
+  <string id="/DLG/242/01">
+    <base><![CDATA[&No]]></base>
+    <translation>&amp;Non</translation>
+  </string>
+  <string id="/DLG/242/03">
+    <base><![CDATA[The following disks will be unbound.\nAre you sure you want to unbind them?]]></base>
+    <translation>Les disques suivants vont être détachés.\nÊtes vous sûr de vouloir les détacher?</translation>
+  </string>
+  <string id="/DLG/249">
+    <base><![CDATA[Synchronize disks]]></base>
+    <translation>Synchroniser les disques</translation>
+  </string>
+  <string id="/DLG/249/00">
+    <base><![CDATA[Bind Type:]]></base>
+    <translation>Type de liaison:</translation>
+  </string>
+  <string id="/DLG/249/01">
+    <base><![CDATA[Type]]></base>
+    <translation>Type</translation>
+  </string>
+  <string id="/DLG/249/02">
+    <base><![CDATA[Target:]]></base>
+    <translation>Cible:</translation>
+  </string>
+  <string id="/DLG/249/03">
+    <base><![CDATA[Name]]></base>
+    <translation>Nom</translation>
+  </string>
+  <string id="/DLG/249/06">
+    <base><![CDATA[Time Remaining:]]></base>
+    <translation>Temps restant:</translation>
+  </string>
+  <string id="/DLG/249/07">
+    <base><![CDATA[MB/s]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/08">
+    <base><![CDATA[Start]]></base>
+    <translation>Démarrer</translation>
+  </string>
+  <string id="/DLG/249/09">
+    <base><![CDATA[Close]]></base>
+    <translation>Fermer</translation>
+  </string>
+  <string id="/DLG/249/10">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuler</translation>
+  </string>
+  <string id="/DLG/249/12">
+    <base><![CDATA[00:00:00]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/14">
+    <base><![CDATA[0.0]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/340">
+    <base><![CDATA[NDAS Bind Management Error]]></base>
+    <translation>Erreur du gestionnaire de liaison NDAS</translation>
+  </string>
+  <string id="/DLG/340/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406">
+    <base><![CDATA[Repair fault tolerant disks]]></base>
+    <translation>Réparer les disques à tolérance de panne</translation>
+  </string>
+  <string id="/DLG/406/00">
+    <base><![CDATA[Select one of the NDAS Device listed below. It will be used as a replacement for the broken NDAS Device]]></base>
+    <translation>Sélectionner l'un des périphériques NDAS listés ci-dessous. Il sera utilisé en remplacement du périphérique NDAS en panne.</translation>
+  </string>
+  <string id="/DLG/406/01">
+    <base><![CDATA[&Devices:]]></base>
+    <translation>&amp;Périphériques:</translation>
+  </string>
+  <string id="/DLG/406/02">
+    <base><![CDATA[List1]]></base>
+    <translation>List1</translation>
+  </string>
+  <string id="/DLG/406/03">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuler</translation>
+  </string>
+  <string id="/DLG/411">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Assistant de liaison de disque</translation>
+  </string>
+  <string id="/DLG/411/00">
+    <base><![CDATA[This wizard helps you create bound disks.]]></base>
+    <translation>Cet assistant vous aidera à créer des disques liés.</translation>
+  </string>
+  <string id="/DLG/411/01">
+    <base><![CDATA[You can bind disks of NDAS Devices to build a new disk with faster speed, larger capacity and fault tolerance. Many bind types are given to fit your needs.]]></base>
+    <translation>Vous pouvez lier les disques des périphériques NDAS pour construire un nouveau disque plus rapide, de plus grande capacité et à tolérance de panne. Plusieurs de types de liaison sont préconfigurés pour répondre à vos besoins.</translation>
+  </string>
+  <string id="/DLG/411/02">
+    <base><![CDATA[Welcome to the Disk Bind Wizard]]></base>
+    <translation>Bienvenue dans l'assistant de liaison de disque.</translation>
+  </string>
+  <string id="/DLG/411/03">
+    <base><![CDATA[To continue, click Next.]]></base>
+    <translation>Pour continuer, cliquer sur Suivant.</translation>
+  </string>
+  <string id="/DLG/413">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Assistant de liaison de disque</translation>
+  </string>
+  <string id="/DLG/413/00">
+    <base><![CDATA[Select the bind type you want to create:]]></base>
+    <translation>Sélectionnez le type de liaison que vous souhaitez créer:</translation>
+  </string>
+  <string id="/DLG/413/01">
+    <base><![CDATA[Aggregation]]></base>
+    <translation>Agrégation</translation>
+  </string>
+  <string id="/DLG/413/02">
+    <base><![CDATA[Stripe (RAID 0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/03">
+    <base><![CDATA[Mirror (RAID 1)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/04">
+    <base><![CDATA[RAID 4]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/05">
+    <base><![CDATA[Number of disks:]]></base>
+    <translation>Nombre de disques:</translation>
+  </string>
+  <string id="/DLG/413/07">
+    <base><![CDATA[Description]]></base>
+    <translation>Description</translation>
+  </string>
+  <string id="/DLG/415">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Assistant de liaison de disque</translation>
+  </string>
+  <string id="/DLG/415/00">
+    <base><![CDATA[Available:]]></base>
+    <translation>Disponible:</translation>
+  </string>
+  <string id="/DLG/415/02">
+    <base><![CDATA[&Add >]]></base>
+    <translation>&amp;Ajouter &gt;</translation>
+  </string>
+  <string id="/DLG/415/03">
+    <base><![CDATA[< &Remove]]></base>
+    <translation>&lt; Supp&amp;rimer</translation>
+  </string>
+  <string id="/DLG/415/04">
+    <base><![CDATA[< Re&move All]]></base>
+    <translation>&lt; Suppri&amp;mer Tous</translation>
+  </string>
+  <string id="/DLG/415/05">
+    <base><![CDATA[Selected:]]></base>
+    <translation>Sélectionné:</translation>
+  </string>
+  <string id="/DLG/415/07">
+    <base><![CDATA[Total number of disks required:]]></base>
+    <translation>Nombre total de disques requis:</translation>
+  </string>
+  <string id="/DLG/415/09">
+    <base><![CDATA[Total disk size in gigabytes (GB):]]></base>
+    <translation>Taille totale du disque en gigabytes (GB):</translation>
+  </string>
+  <string id="/DLG/415/11">
+    <base><![CDATA[Note: The data on the disks will be deleted once binding is completed.]]></base>
+    <translation>Note: Les données sur les disques seront effacées une fois la liaison terminée.</translation>
+  </string>
+  <string id="/DLG/420">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Assistant de liaison de disque</translation>
+  </string>
+  <string id="/DLG/420/00">
+    <base><![CDATA[Completing the Disk Bind Wizard]]></base>
+    <translation>Exécution de l'assistant de liaison de disques</translation>
+  </string>
+  <string id="/DLG/420/02">
+    <base><![CDATA[The binding results are followings:]]></base>
+    <translation>Les résultats de la liaison sont les suivants:</translation>
+  </string>
+  <string id="/DLG/420/04">
+    <base><![CDATA[To close this wizard, click Finish.]]></base>
+    <translation>Pour fermer cet assistant, cliquer sur Terminer.</translation>
+  </string>
+  <string id="/DLG/1091/01">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/1091/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuler</translation>
+  </string>
+  <string id="/MNU/128/00">
+    <base><![CDATA[&File]]></base>
+    <translation>&amp;Fichier</translation>
+  </string>
+  <string id="/MNU/128/00/00">
+    <base><![CDATA[E&xit]]></base>
+    <translation>Quitter</translation>
+  </string>
+  <string id="/MNU/128/01">
+    <base><![CDATA[&Tool]]></base>
+    <translation>&amp;Outil</translation>
+  </string>
+  <string id="/MNU/128/01/00">
+    <base><![CDATA[&Refresh]]></base>
+    <translation>&amp;Rafraîchir</translation>
+  </string>
+  <string id="/MNU/128/01/01">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation>&amp;Lier les disques</translation>
+  </string>
+  <string id="/MNU/128/01/02">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation>Ajouter un &amp;Miroir</translation>
+  </string>
+  <string id="/MNU/128/01/03">
+    <base><![CDATA[R&eset bind information]]></base>
+    <translation>R&amp;éinitialiser l'information de liaison</translation>
+  </string>
+  <string id="/MNU/128/01/04">
+    <base><![CDATA[&Unbind]]></base>
+    <translation>Détacher</translation>
+  </string>
+  <string id="/MNU/128/01/05">
+    <base><![CDATA[Mi&grate]]></base>
+    <translation>Mi&amp;grer</translation>
+  </string>
+  <string id="/MNU/128/01/06">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation>Ajouter un di&amp;sque de secours</translation>
+  </string>
+  <string id="/MNU/128/01/07">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation>Remplacer le périphérique</translation>
+  </string>
+  <string id="/MNU/128/01/08">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation>Utiliser comme un &amp;membre RAID</translation>
+  </string>
+  <string id="/MNU/128/01/09">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation>Effa&amp;cer les points défectueux</translation>
+  </string>
+  <string id="/MNU/128/01/10">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation>Con&amp;figurer le RAID sans ce disque</translation>
+  </string>
+  <string id="/MNU/128/01/11">
+    <base><![CDATA[Convert to a basic &disk]]></base>
+    <translation>Convertir en &amp;disque basique</translation>
+  </string>
+  <string id="/MNU/128/02">
+    <base><![CDATA[&Help]]></base>
+    <translation>Aide</translation>
+  </string>
+  <string id="/MNU/128/02/00">
+    <base><![CDATA[&About NDAS Software]]></base>
+    <translation>&amp;A propos du logiciel NDAS</translation>
+  </string>
+  <string id="/MNU/448/00/00">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation>Lier les disques</translation>
+  </string>
+  <string id="/MNU/448/00/01">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation>Ajouter un &amp;Miroir</translation>
+  </string>
+  <string id="/MNU/448/00/02">
+    <base><![CDATA[&Reset bind information]]></base>
+    <translation>&amp;Réinitialiser l'information de liaison</translation>
+  </string>
+  <string id="/MNU/448/01/00">
+    <base><![CDATA[&Unbind]]></base>
+    <translation>&amp;Détacher</translation>
+  </string>
+  <string id="/MNU/448/01/01">
+    <base><![CDATA[&Migrate]]></base>
+    <translation>&amp;Migrer</translation>
+  </string>
+  <string id="/MNU/448/01/02">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation>Ajouter un di&amp;sque de secours</translation>
+  </string>
+  <string id="/MNU/448/02/00">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation>Remplacer le périphérique</translation>
+  </string>
+  <string id="/MNU/448/02/01">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation>Utiliser comme un &amp;membre RAID</translation>
+  </string>
+  <string id="/MNU/448/02/02">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation>Effa&amp;cer les points défectueux</translation>
+  </string>
+  <string id="/MNU/448/02/03">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation>Con&amp;figurer le RAID sans ce disque</translation>
+  </string>
+  <string id="/MNU/448/02/04">
+    <base><![CDATA[Convert to a &basic disk]]></base>
+    <translation>Convertir en &amp;disque basique</translation>
+  </string>
+</localization>

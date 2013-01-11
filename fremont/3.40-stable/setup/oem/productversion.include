@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Project InitialTargets="ReadProductVersion" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="ReadProductVersion" Condition="'$(ProductVersion)'==''">
+	<ReadLinesFromFile File="..\productver.txt">
+	  <Output TaskParameter="Lines" PropertyName="ProductVersion" />
+	</ReadLinesFromFile>
+	<Message Text="Product Version is $(ProductVersion)" />
+  </Target>
+</Project>

@@ -1,0 +1,2 @@
+DIRS=enu kor chs deu esn fra ita jpn ptg 
+OPTION_DIRS=

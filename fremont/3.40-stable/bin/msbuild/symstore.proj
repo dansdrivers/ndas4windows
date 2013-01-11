@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<SymstoreDir Condition="''=='$(SymstoreDir)'">$(Local_Symstore)</SymstoreDir>
+		<SymstoreDir Condition="''=='$(SymstoreDir)'">c:\symbols\local</SymstoreDir>
+		<ProductName Condition="''=='$(ProductName)'">NDAS Software</ProductName>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildProjectFullPath)</MSBuildAllProjects>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ProjectBaseDir Condition="''=='$(ProjectBaseDir)'">..\..\</ProjectBaseDir>
+		<ScratchDir>$(ProjectBaseDir)scratch\</ScratchDir>
+	</PropertyGroup>
+
+	<!-- $(SymstoreCmd) e.g. C:\Program Files\Debugging Tools for Windows\symstore.exe -->
+
+	<PropertyGroup>
+		<WindbgDir32>$(ProgramFiles)\Debugging Tools for Windows\</WindbgDir32>
+		<WindbgDir64>$(ProgramFiles)\Debugging Tools for Windows 64-bit\</WindbgDir64>
+		<WindbgDirWow32>$(ProgramFiles%28x86%29)\Debugging Tools for Windows\</WindbgDirWow32>
+		<WindbgDir Condition="''=='$(WindbgDir)' And Exists('$(WindbgDir64)')">$(WindbgDir64)</WindbgDir>
+		<WindbgDir Condition="''=='$(WindbgDir)' And Exists('$(WindbgDir32)')">$(WindbgDir32)</WindbgDir>
+		<WindbgDir Condition="''=='$(WindbgDir)' And Exists('$(WindbgDirWow32)')">$(WindbgDirWow32)</WindbgDir>
+		<SymstoreCmd>$(WindbgDir)symstore.exe</SymstoreCmd>
+	</PropertyGroup>
+
+	<!-- ProjectBaseDirItem as an item from ProjectBaseDir -->
+
+	<ItemGroup>
+		<ProjectBaseDirItem Include="$(ProjectBaseDir)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PublishDir Include="$(ProjectBaseDir)publish\fre\i386">
+			<Configuration>fre</Configuration>
+			<ProcessArchitecture>i386</ProcessArchitecture>
+			<Comment>i386 free build</Comment>
+		</PublishDir>
+		<PublishDir Include="$(ProjectBaseDir)publish\fre\amd64">
+			<Configuration>fre</Configuration>
+			<ProcessArchitecture>amd64</ProcessArchitecture>
+			<Comment>amd64 free build</Comment>
+		</PublishDir>
+		<PublishDir Include="$(ProjectBaseDir)publish\chk\i386">
+			<Configuration>chk</Configuration>
+			<ProcessArchitecture>i386</ProcessArchitecture>
+			<Comment>i386 checked build</Comment>
+		</PublishDir>
+		<PublishDir Include="$(ProjectBaseDir)publish\chk\amd64">
+			<Configuration>chk</Configuration>
+			<ProcessArchitecture>amd64</ProcessArchitecture>
+			<Comment>amd64 checked build</Comment>
+		</PublishDir>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<_ProductVersionTag Condition="''!='$(ProductVersion)' And ''=='$(ProductRevision)'">$(ProductVersion)</_ProductVersionTag>
+		<_ProductVersionTag Condition="''!='$(ProductVersion)' And ''!='$(ProductRevision)'">$(ProductVersion).$(ProductRevision)</_ProductVersionTag>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<SymbolType></SymbolType>
+		<CompressSymbols Condition="''=='$(CompressSymbols)'">false</CompressSymbols>
+		<Verbose Condition="''=='$(Verbose)'">false</Verbose>
+		<SymstoreFlags>$(SymstoreFlags) /s &quot;$(SymstoreDir)&quot;</SymstoreFlags>
+		<SymstoreFlags>$(SymstoreFlags) /t &quot;$(ProductName)&quot;</SymstoreFlags>
+		<SymstoreFlags Condition="''!='$(SymbolType)'">$(SymstoreFlags) /z $(SymbolType)</SymstoreFlags>
+		<SymstoreFlags Condition="''!='$(_ProductVersionTag)'">$(SymstoreFlags) /v &quot;$(_ProductVersionTag)&quot;</SymstoreFlags>
+		<SymstoreFlags Condition="$(CompressSymbols)">$(SymstoreFlags) /compress</SymstoreFlags>
+		<SymstoreFlags Condition="$(Verbose)">$(SymstoreFlags) /o</SymstoreFlags>
+		<SymstoreFlags Condition="''!='$(SymstoreLogFile)'">$(SymstoreFlags) /d $(SymstoreLogFile)</SymstoreFlags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<SymstoreTargets Include="$(ProjectBaseDir)publish\fre\i386\**\*.*"
+						 Exclude="$(ProjectBaseDir)publish\fre\i386\symbols.pub\**\*.*;
+								  $(ProjectBaseDir)publish\fre\i386\symbols\TraceFormat\**\*.*">
+			<Type>fre_i386</Type>
+			<Comment>i386 free build</Comment>
+		</SymstoreTargets>
+		<SymstoreTargets Include="$(ProjectBaseDir)publish\fre\amd64\**\*.*"
+						 Exclude="$(ProjectBaseDir)publish\fre\amd64\symbols.pub\**\*.*;
+								  $(ProjectBaseDir)publish\fre\amd64\symbols\TraceFormat\**\*.*">
+			<Type>fre_amd64</Type>
+			<Comment>amd64 free build</Comment>
+		</SymstoreTargets>
+		<SymstoreTargets Include="$(ProjectBaseDir)publish\chk\i386\**\*.*"
+						 Exclude="$(ProjectBaseDir)publish\chk\i386\symbols.pub\**\*.*;
+								  $(ProjectBaseDir)publish\chk\i386\symbols\TraceFormat\**\*.*">
+			<Type>chk_i386</Type>
+			<Comment>i386 checked build</Comment>
+		</SymstoreTargets>
+		<SymstoreTargets Include="$(ProjectBaseDir)publish\chk\amd64\**\*.*"
+						 Exclude="$(ProjectBaseDir)publish\chk\amd64\symbols.pub\**\*.*;
+								  $(ProjectBaseDir)publish\chk\amd64\symbols\TraceFormat\**\*.*">
+			<Type>chk_amd64</Type>
+			<Comment>amd64 checked build</Comment>
+		</SymstoreTargets>
+	</ItemGroup>
+
+	<Target Name="Symstore" DependsOnTargets="StoreSymbols" />
+
+	<Target Name="StoreSymbols" DependsOnTargets="StoreSymbolsFromIndex" />
+
+	<Target Name="StoreSymbolsFromIndex" DependsOnTargets="IndexSymbols"
+			Inputs="$(ScratchDir)_symbols_%(SymstoreTargets.Type).lst"
+			Outputs="$(ScratchDir)_symbols_%(SymstoreTargets.Type).stored">
+		<Message Text="Target: %(SymstoreTargets.Comment)" />
+		<CreateProperty Value="$(ScratchDir)_symbols_%(SymstoreTargets.Type)">
+			<Output TaskParameter="ValueSetByTask" PropertyName="_IndexFile" />
+		</CreateProperty>
+		<CreateProperty Value="%(ProjectBaseDirItem.FullPath)">
+			<Output TaskParameter="ValueSetByTask" PropertyName="_SharePath" />
+		</CreateProperty>
+		<Exec Command="&quot;$(SymstoreCmd)&quot; add /l /y $(_IndexFile).idx /g $(_SharePath) /c &quot;%(SymstoreTargets.Comment)&quot; $(SymstoreFlags) " />
+		<Touch Files="$(ScratchDir)_symbols_%(SymstoreTargets.Type).stored" ForceTouch="true" AlwaysCreate="true" />
+	</Target>
+
+	<Target Name="IndexSymbols" 
+			Inputs="$(ScratchDir)_symbols_%(SymstoreTargets.Type).lst" 
+			Outputs="$(ScratchDir)_symbols_%(SymstoreTargets.Type).idx"
+			DependsOnTargets="CreateFileList">
+		<Message Text="Target: %(SymstoreTargets.Comment)" />
+		<CreateProperty Value="$(ScratchDir)_symbols_%(SymstoreTargets.Type)">
+			<Output TaskParameter="ValueSetByTask" PropertyName="_IndexFile" />
+		</CreateProperty>
+		<Exec Command="&quot;$(SymstoreCmd)&quot; add /g %(ProjectBaseDirItem.FullPath) /f @$(_IndexFile).lst /x $(_IndexFile).idx" />
+	</Target>
+
+	<Target Name="CreateFileList" 
+			Inputs="@(SymstoreTargets)"
+			Outputs="$(ScratchDir)_symbols_%(SymstoreTargets.Type).lst"> 
+		<Message Text="Target: %(SymstoreTargets.Comment)" />
+		<Delete Files="$(ScratchDir)_symbols_%(SymstoreTargets.Type).lst" />
+		<WriteLinesToFile File="$(ScratchDir)_symbols_%(SymstoreTargets.Type).lst"
+						  Lines="@(SymstoreTargets)" />
+	</Target>
+
+	<Target Name="Clean">
+		<CreateItem Include="$(ScratchDir)_symbols_*">
+			<Output TaskParameter="Include" ItemName="ScratchFiles" />
+		</CreateItem>
+		<Delete Files="@(ScratchFiles)" />
+	</Target>
+
+	<Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+
+	<Target Name="Build" DependsOnTargets="Symstore" />
+
+</Project>

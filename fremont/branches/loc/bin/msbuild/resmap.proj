@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<ProjectRoot>..\..\</ProjectRoot>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ResourceScript Include="$(ProjectRoot)src\umapps\ndasmgmt\ndasmgmt.rc" />
+		<ResourceScript Include="$(ProjectRoot)src\umapps\ndasmgmt\ndasmgmt_app.rc" />
+		<ResourceScript Include="$(ProjectRoot)src\umapps\ndasbind\ndasbind.rc" />
+		<ResourceScript Include="$(ProjectRoot)src\umapps\ndasbind\ndasbind_app.rc" />
+		<MessageXml Include="$(ProjectRoot)src\umapps\ndasmsg\ndasmsg.xml" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<ResMapOutputDir>$(ProjectRoot)publish\loc\meta\</ResMapOutputDir>
+		<ResDataOutputDir>$(ProjectRoot)publish\loc\resdata\</ResDataOutputDir>
+	</PropertyGroup>
+
+	<UsingTask TaskName="MSBuild.Private.Xml.CreateItem" AssemblyFile="MSBuild.Private.Tasks.dll" />
+
+	<Target Name="Build" DependsOnTargets="CreateResMap;CopyMsgXml;CopyResData">
+	</Target>
+
+	<Target Name="Clean">
+		<RemoveDir Directories="$(ResMapOutputDir);$(ResDataOutputDir)" />
+	</Target>
+
+	<Target Name="Rebuild" DependsOnTargets="Clean;Build">
+	</Target>
+
+	<ItemGroup>
+		<!-- <ResMapFile Include="$(ResMapOutputDir)\*.resmap" /> -->
+	</ItemGroup>
+
+	<Target Name="CreateResMap" 
+			Inputs="%(ResourceScript.Identity);%(ResourceScript.RelativeDir)resource.h"
+			Outputs="$(ResMapOutputDir)%(ResourceScript.FileName).resmap"
+			DependsOnTargets="_CreateOutputDirs">
+
+		<!-- creates a resmap xml file from ndasmgmt.rc -->
+
+		<Exec Command="$(ProjectRoot)bin\resmap.exe /out:$(ResMapOutputDir)%(ResourceScript.FileName).resmap %(ResourceScript.Identity)">
+		</Exec>
+
+		<CreateItem Include="$(ResMapOutputDir)%(ResourceScript.FileName).resmap"
+					AdditionalMetadata="ResDataDir=%(ResourceScript.RelativeDir)"
+					Condition="''!='%(ResourceScript.RelativeDir)'">
+			<Output TaskParameter="Include"
+					ItemName="ResMapFile" />
+		</CreateItem>
+
+		<!-- gather resource data files from the generated resmap xml file -->
+
+		<Private.Xml.CreateItem
+			XmlFile="%(ResMapFile.Identity)"
+			XPath="/resmap/resource/@fileName"
+			ItemSpecPrefix="%(ResMapFile.ResDataDir)">
+			<Output TaskParameter="CreatedItems" ItemName="ResDataFile" />
+		</Private.Xml.CreateItem>
+
+	</Target>
+
+	<Target Name="CopyMsgXml" DependsOnTargets="_CreateOutputDirs">
+		<Copy SourceFiles="@(MessageXml)"
+			  DestinationFolder="$(ResMapOutputDir)" 
+			  SkipUnchangedFiles="true" />
+	</Target>
+
+	<Target Name="CopyResData" DependsOnTargets="_CreateOutputDirs">
+		<Copy SourceFiles="@(ResDataFile)" 
+			  DestinationFolder="$(ResDataOutputDir)" 
+			  SkipUnchangedFiles="true" />
+	</Target>
+
+	<Target Name="_CreateOutputDirs">
+		<MakeDir Directories="$(ResMapOutputDir);$(ResDataOutputDir)" />
+	</Target>
+
+</Project>

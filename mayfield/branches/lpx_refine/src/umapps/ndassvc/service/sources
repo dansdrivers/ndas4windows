@@ -1,0 +1,108 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=ndassvc
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+#COMPILER_WARNINGS=
+
+NTTARGETFILE0=mofcomp
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+INCLUDES=$(NDAS_INC_PATH);$(NDAS_PUBLIC_INC_PATH);$(PSDK_INC_PATH)
+USER_INCLUDES=.\inc;..\inc;..\support
+RCOPTIONS=/i $(NDAS_SDK_INC_PATH)
+USECXX_FLAG=/Tp
+USE_NATIVE_EH=1
+USER_C_FLAGS=/Wp64
+USE_STL=1
+UMENTRY=wmain
+UMTYPE=console
+
+LINK_TIME_CODE_GENERATION=1
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+BUILD_CONSUMES=ndassvc_support
+BUILD_CONSUMES=lpxtrans
+BUILD_CONSUMES=des
+BUILD_CONSUMES=hash
+BUILD_CONSUMES=scrc32
+BUILD_CONSUMES=lanscsiop
+BUILD_CONSUMES=lsbusctl
+BUILD_CONSUMES=lfsfiltctl
+BUILD_CONSUMES=rofiltctl
+
+TARGETLIBS= \
+	..\lib\$(DDKBUILDENV)\*\ndassvc_support.lib \
+	$(NDAS_LIB_PATH)\lpxtrans.lib \
+	$(NDAS_LIB_PATH)\des.lib \
+	$(NDAS_LIB_PATH)\hash.lib \
+	$(NDAS_LIB_PATH)\scrc32.lib \
+	$(NDAS_LIB_PATH)\lanscsiop.lib \
+	$(NDAS_LIB_PATH)\lsbusctl.lib \
+	$(NDAS_LIB_PATH)\lfsfiltctl.lib \
+	$(NDAS_LIB_PATH)\rofiltctl.lib \
+	$(NDAS_LIB_PATH)\ndascntenc.lib \
+	$(NDAS_LIB_PATH)\ndassyscfg.lib \
+	$(NDAS_LIB_PATH)\ndasautrs.lib \
+	$(NDAS_LIB_PATH)\xcrypt.lib \
+	$(NDAS_LIB_PATH)\xregcfg.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib \
+	$(PSDK_LIB_PATH)\crypt32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(PSDK_LIB_PATH)\iphlpapi.lib \
+	$(PSDK_LIB_PATH)\ole32.lib
+
+MSC_WARNING_LEVEL=-W3 -WX
+MSC_OPTIMIZATION=/Oitb2
+#MSC_OPTIMIZATION=/Od /Oi
+
+PRECOMPILED_INCLUDE=stdafx.h
+PRECOMPILED_CXX=1
+
+SOURCES= \
+	ndassvc.rc \
+	lpxcomm.cpp \
+	ndasdev.cpp \
+	ndasunitdev.cpp \
+	ndasdevreg.cpp \
+	ndaslogdev.cpp \
+	ndaslogdevman.cpp \
+	ndasdevhb.cpp \
+	ndassvc.cpp \
+	ndasinstman.cpp \
+	ndasmain.cpp \
+	ndascmdproc.cpp \
+	ndascmdserver.cpp \
+	ndaspnp.cpp \
+	drivematch.cpp \
+	ndascfg.cpp \
+	ndaseventmon.cpp \
+	ndasix.cpp \
+	ndaseventpub.cpp \
+	sysutil.cpp \
+	ndashixutil.cpp \
+	ndashixcli.cpp \
+	ndashixsrv.cpp \
+	ndasobjs.cpp \
+	ndasautoreg.cpp \
+	ndashostinfocache.cpp \
+	ndasdevcomm.cpp \
+	ndasunitdevfactory.cpp \
+	eventlog.cpp
+

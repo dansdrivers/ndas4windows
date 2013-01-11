@@ -1,0 +1,7 @@
+DIRS= \
+	filter	\
+    minifilter \
+	lfsflt2k_cat \
+	lfsfilt_cat \
+	ndasfs_cat
+

@@ -1,0 +1,812 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_KOREAN
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""windows.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WATERMARK256        BITMAP                  "res\\water256.bmp"
+IDB_BANNER256           BITMAP                  "res\\banner256.bmp"
+IDB_PROPTREE            BITMAP                  "res\\proptree.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TASKBAR MENU 
+BEGIN
+    POPUP "{TaskBar}"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "새 디바이스 등록(&N)...",   IDR_REGISTER_DEVICE
+        MENUITEM "전체 언마운트(&U)",                IDR_UNMOUNT_ALL
+        MENUITEM "새로 고침(&R)",             IDR_REFRESH_STATUS
+        MENUITEM SEPARATOR
+        MENUITEM "정보(&A)...",                   ID_APP_ABOUT
+        MENUITEM "옵션(&O)...",                 IDR_APP_OPTION
+        MENUITEM SEPARATOR
+        MENUITEM "종료(&X)",                       ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CD_DRIVE            ICON                    "res\\cddrive.ico"
+IDR_MAINFRAME           ICON                    "res\\ndasmgmt.ico"
+IDR_TASKBAR             ICON                    "res\\taskbar.ico"
+IDI_DISK_DRIVE          ICON                    "res\\diskdrive.ico"
+IDI_DVD_DRIVE           ICON                    "res\\dvddrive.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 200
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,208,178,50,14
+    LTEXT           "NDAS 소프트웨어 버전 %1!s!",IDC_PRODVER,7,52,251,14
+    LTEXT           "http://www.ximeta.com",IDC_LINK,7,73,251,8,WS_TABSTOP
+    LTEXT           "Copyright (C) 2002-2004 XIMETA, Inc.\nAll rights reserved.",
+                    IDC_STATIC,7,85,251,20
+    GROUPBOX        "구성 요소",IDC_STATIC,7,106,251,67
+    CONTROL         "",IDC_COMPVER,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,119,236,47
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,43,265,1
+    PUSHBUTTON      "업데이트 확인(&U)",IDC_CHECK_UPDATE,8,178,80,14
+END
+
+IDR_OPTION_GENERAL DIALOGEX 0, 0, 293, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "일반"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "사용자 인터페이스",IDC_STATIC,7,7,279,43
+	LTEXT           "다음 언어로 메뉴 및 대화 상자 표시: ",
+                    IDC_STATIC,47,18,221,8
+    COMBOBOX        IDC_UILANG,47,31,224,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "경고 메시지",IDC_STATIC,7,53,279,51
+    ICON            "",IDC_STATIC,15,67,20,20
+    CONTROL         "디바이스 연결이 끊겼을 때 경고 메시지 표시",
+                    IDC_ALERT_DISCONNECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,47,66,231,10
+    CONTROL         "디바이스 연결이 불안정 할 때 경고 메시지 표시",
+                    IDC_ALERT_RECONNECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,47,80,231,10
+END
+
+IDD_REGISTER_DEVICE DIALOGEX 0, 0, 212, 157
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "새 NDAS 디바이스 등록"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DEV_NAME,17,23,179,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_1,17,63,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_2,63,63,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_3,109,63,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_4,155,63,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_KEY,17,95,40,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "등록 후 디바이스를 활성화(&A)",
+                    IDC_ENABLE_DEVICE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    14,122,183,10
+    PUSHBUTTON      "등록(&R)",IDC_REGISTER,100,136,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "취소",IDCANCEL,155,136,50,14
+    LTEXT           "쓰기 키",IDC_STATIC,19,82,107,8
+    LTEXT           "읽기/쓰기 모드로 사용하기 위해서는 쓰기 키가 필요합니다.",
+                    IDC_STATIC,64,94,132,17
+    GROUPBOX        "디바이스 이름",IDC_STATIC,7,7,197,40
+    GROUPBOX        "디바이스 ID",IDC_STATIC,7,50,198,67
+END
+
+IDD_DEVPROP_GENERAL DIALOGEX 0, 0, 256, 227
+STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "일반"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "디바이스 이름:",IDC_STATIC,7,10,54,8
+    EDITTEXT        IDC_DEVICE_NAME,66,7,128,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "변경(&R)",IDC_RENAME,197,6,50,14
+    LTEXT           "디바이스 ID:",IDC_STATIC,7,27,54,8
+    EDITTEXT        IDC_DEVICE_ID,66,25,183,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "쓰기 키:",IDC_STATIC,7,46,54,8
+    EDITTEXT        IDC_DEVICE_WRITE_KEY,66,43,128,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "추가(&A)",IDC_ADD_WRITE_KEY,197,43,50,14
+    LTEXT           "상태:",IDC_STATIC,7,64,54,8
+    EDITTEXT        IDC_DEVICE_STATUS,66,61,183,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    ICON            "",IDC_UNITDEVICE_TYPE_ICON,18,97,20,20
+    LTEXT           "상태",IDC_STATIC,64,94,22,8
+    EDITTEXT        IDC_UNITDEVICE_STATUS,144,91,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "용량",IDC_STATIC,64,111,29,8
+    EDITTEXT        IDC_UNITDEVICE_CAPACITY,144,108,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "읽기 전용 연결",IDC_STATIC,64,128,59,8
+    EDITTEXT        IDC_UNITDEVICE_RO_HOSTS,144,125,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "읽기/쓰기 연결",IDC_STATIC,64,145,62,8
+    EDITTEXT        IDC_UNITDEVICE_RW_HOSTS,144,142,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "{Unit Device Info Placeholder}",IDC_UNITDEVICE_TYPE,7,
+                    82,242,138
+    LTEXT           "논리 디바이스 정보:",
+                    IDC_STATIC,15,159,224,8
+    CONTROL         "",IDC_LOGDEV_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | WS_BORDER | WS_TABSTOP,15,169,225,46,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DEVPROP_HW DIALOGEX 0, 0, 256, 227
+STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "하드웨어"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "NDAS 디바이스 하드웨어 정보",IDC_STATIC,
+                    7,7,152,8
+    LISTBOX         IDC_PROPLIST,7,22,232,146,LBS_OWNERDRAWVARIABLE | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_RENAME DIALOGEX 0, 0, 243, 48
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "디바이스 이름 변경"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DEVICE_NAME,53,7,183,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "확인",IDOK,130,27,50,14
+    PUSHBUTTON      "취소",IDCANCEL,186,27,50,14
+    LTEXT           "새로운 이름(&N):",IDC_STATIC,7,10,37,8
+END
+
+IDD_DEVREG_WIZARD_INTRO DIALOGEX 0, 0, 317, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "다음부터 등록시 마법사 사용하지 않음",
+                    IDC_DONT_SHOW_REGWIZ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,167,195,10
+    LTEXT           "NDAS 디바이스 등록 마법사 시작",
+                    IDC_BIG_BOLD_TITLE,115,8,195,24
+    LTEXT           "{intro1}",IDC_INTRO_1,115,40,195,119
+END
+
+IDD_DEVREG_WIZARD_COMPLETE DIALOGEX 0, 0, 317, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "NDAS 디바이스 등록 마법사 완료",
+                    IDC_BIG_BOLD_TITLE,115,8,195,24
+    LTEXT           "{Complete Message Placeholder}",IDC_COMPLETE_MESSAGE,
+                    115,46,195,85
+END
+
+IDD_DEVREG_WIZARD_DEVICE_ID DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "NDAS 디바이스를 등록하고 사용하기 위해서는, 디바이스 ID가 필요합니다. 읽기/쓰기 모드로 사용하려면 쓰기 키가 필요합니다. 하드웨어 뒷면에 ID와 키가 있습니다.",
+                    IDC_STATIC,21,1,275,40
+    LTEXT           "디바이스 ID는 20자의 알파벳과 숫자의 조합으로 되어 있습니다.\r\n쓰기 키는 4자로 되어 있습니다.",
+                    IDC_STATIC,21,30,275,21
+    LTEXT           "디바이스 ID를 아래에 입력하십시오.",IDC_STATIC,21,52,275,8
+    EDITTEXT        IDC_DEV_ID_1,21,65,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_2,65,65,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_3,109,65,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_4,153,65,40,14,ES_AUTOHSCROLL
+    LTEXT           "쓰기 키를 아래에 입력하십시오. (선택사항)",IDC_STATIC,21,88,
+                    275,8
+    EDITTEXT        IDC_DEV_KEY,21,100,40,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "입력이 완료되면 ""다음""을 누르십시오.\r\n디바이스 ID나 쓰기 키가 정확하지 않으면 ""다음"" 버튼이 활성화 되지 않습니다.",
+                    IDC_STATIC,21,123,275,18
+END
+
+IDD_DEVREG_WIZARD_DEVICE_NAME DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "NDAS 디바이스의 이름을 정할 수 있습니다. 디바이스 이름은 시스템에 등록된 디바이스들을 구분하는 데 사용됩니다. 등록된 이름은 이 시스템에서만 사용됩니다.",
+                    -1,21,1,275,25
+    LTEXT           "31글자까지 이름을 등록할 수 있습니다.",-1,21,30,
+                    275,21
+    LTEXT           "아래에 이름을 입력하십시오.",-1,21,52,275,8
+    EDITTEXT        IDC_DEV_NAME,21,65,197,14,ES_AUTOHSCROLL
+    LTEXT           "입력 후 ""다음""을 누르십시오.",
+                    -1,21,124,275,18
+END
+
+IDD_DEVREG_WIZARD_MOUNT DIALOGEX 0, 0, 317, 143
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "{Status Message Placeholder}",IDC_MOUNT_STATUS,21,1,275,
+                    16
+    LTEXT           "지금 디바이스를 마운트 하시겠습니까?",
+                    IDC_MOUNT_QUESTION,21,20,275,15
+    LTEXT           "디바이스를 마운트 하는 중에, 디바이스 드라이버 보안 경고창이 나올 수 있습니다. 창에서 ""계속""을 누르지 않으면 마운트가 정상적으로 진행되지 않습니다.",
+                    IDC_MOUNT_WARNING,21,120,275,18
+    CONTROL         "예, 지금 디바이스를 읽기/쓰기 모드로 마운트 하겠습니다.",
+                    IDC_MOUNT_RW,"Button",BS_AUTORADIOBUTTON,21,33,275,12
+    CONTROL         "예, 지금 디바이스를 읽기 전용 모드로 마운트 하겠습니다.",
+                    IDC_MOUNT_RO,"Button",BS_AUTORADIOBUTTON,21,45,275,12
+    CONTROL         "아니로, 지금 디바이스를 마운트 하지 않겠습니다.",
+                    IDC_DONT_MOUNT,"Button",BS_AUTORADIOBUTTON,21,57,275,12
+END
+
+IDD_ADD_WRITE_KEY DIALOGEX 0, 0, 201, 93
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "쓰기 키 입력"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DEVICE_WRITE_KEY,66,43,48,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "확인",IDOK,90,72,50,14
+    PUSHBUTTON      "취소",IDCANCEL,144,72,50,14
+    EDITTEXT        IDC_DEVICE_NAME,66,7,128,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    EDITTEXT        IDC_DEVICE_ID,66,25,128,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    LTEXT           "디바이스 이름:",IDC_STATIC,7,10,54,8
+    LTEXT           "디바이스 ID:",IDC_STATIC,7,28,54,8
+    LTEXT           "쓰기 키:",IDC_STATIC,7,46,54,8
+END
+
+IDD_DEVPROP_LOGDEV DIALOGEX 0, 0, 284, 177
+STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "{Unit Device XX}"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Logical Device Information",IDC_STATIC,39,109,85,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,83,151,180,1
+END
+
+IDD_WAIT DIALOGEX 0, 0, 251, 63
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "{Dialog}"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "취소",IDCANCEL,255,51,50,14
+	LTEXT           "{Static}",IDC_WAIT_MESSAGE,7,7,298,37
+END
+
+IDD_DEVPROP_HOSTINFO DIALOGEX 0, 0, 254, 227
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Hosts"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_HOST_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,28,242,130
+    LTEXT           "디바이스를 사용하고 있는 호스트 정보입니다.\r\n사용중인 소프트웨어의 버전이 다른 경우 호스트 정보가 나타나지 않을 수 있습니다.",
+                    IDC_STATIC,7,7,242,19
+END
+
+IDD_WORKING DIALOGEX 0, 0, 248, 65
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NDAS 디바이스 관리"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,137,44,50,14
+    PUSHBUTTON      "취소",IDCANCEL,191,44,50,14
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,12,21,20
+    LTEXT           "{Progress Message Placeholder}",IDC_PROGRESS_MESSAGE,46,
+                    7,195,24
+END
+
+IDD_ERROR DIALOGEX 0, 0, 304, 100
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NDAS 디바이스 관리 오류"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,247,79,50,14
+    LTEXT           "{Error Message Placeholder}",IDC_ERROR_MESSAGE,37,11,
+                    260,13
+    EDITTEXT        IDC_ERROR_DESCRIPTION,37,28,260,47,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    ICON            "",IDC_ERROR_ICON,7,11,21,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,38,24,260,1
+END
+
+IDD_OPTION_ADVANCED DIALOGEX 0, 0, 293, 191
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "고급"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_OPTION_TREE,"SysTreeView32",TVS_NOSCROLL | 
+                    WS_BORDER | WS_TABSTOP,7,21,279,163
+    LTEXT           "고급 설정:",IDC_STATIC,7,7,279,13
+END
+
+IDD_CONFIRM DIALOGEX 0, 0, 275, 83
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "{Dialog}"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "예(&Y)",IDYES,147,43,58,14
+    PUSHBUTTON      "아니오(&N)",IDNO,210,43,58,14
+    ICON            IDR_TASKBAR,IDC_CONFIRM_ICON,10,10,20,20
+    LTEXT           "{Confirmation message placeholder}",IDC_CONFIRM_MESSAGE,
+                    41,14,224,24
+    CONTROL         "다음부터 이 확인 메시지 표시 안함.",
+                    IDC_DONT_SHOW_AGAIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,67,163,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,63,275,1
+    CONTROL         "",IDC_HIDDEN,"Static",SS_BLACKFRAME,0,63,275,20
+END
+
+IDD_DEVICE_AVAIL DIALOGEX 0, 0, 289, 79
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NDAS Device Available"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,232,7,50,14
+    CONTROL         "예, I want to mount this device as Read/Write access mode.",
+                    IDC_MOUNT_RW,"Button",BS_AUTORADIOBUTTON,7,28,275,12
+    LTEXT           "%1!s! is now available to mount.\r\nDo you want to mount the device to your system now?",
+                    IDC_MOUNT_QUESTION,7,7,218,21
+    CONTROL         "Yes, I want to mount this device as Read-Only access mode.",
+                    IDC_MOUNT_RO,"Button",BS_AUTORADIOBUTTON,7,41,275,12
+    CONTROL         "No, I don't want to mount this device now.",
+                    IDC_DONT_MOUNT,"Button",BS_AUTORADIOBUTTON,7,55,275,12
+END
+
+IDD_DEVPROP_ADVANCED DIALOGEX 0, 0, 256, 227
+STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "고급"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "NDAS 디바이스를 사용 안함 상태로 만들어 시스템과 통신을 하지 않도록 할 수 있습니다.",
+                    IDC_STATIC,43,16,198,45
+    PUSHBUTTON      "사용 안함(&D)",IDC_DEACTIVATE_DEVICE,191,64,50,14
+    GROUPBOX        "NDAS 디바이스 사용 안함",IDC_STATIC,7,3,242,81
+    ICON            "",IDC_STATIC,15,17,20,20
+    GROUPBOX        "NDAS 디바이스 연결 재설정",IDC_STATIC,7,87,242,58
+    ICON            "",IDC_STATIC,15,100,21,20
+    LTEXT           "NDAS 디바이스 연결을 재설정합니다.",
+                    IDC_STATIC,44,99,198,27
+    PUSHBUTTON      "&Reset",IDC_RESET_DEVICE,192,125,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDR_OPTION_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_REGISTER_DEVICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_DEVPROP_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_DEVPROP_HW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_RENAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 41
+    END
+
+    IDD_DEVREG_WIZARD_COMPLETE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 8
+    END
+
+    IDD_DEVREG_WIZARD_DEVICE_ID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 21
+        VERTGUIDE, 296
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_DEVREG_WIZARD_DEVICE_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 21
+        VERTGUIDE, 296
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_DEVREG_WIZARD_MOUNT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 21
+        VERTGUIDE, 296
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_ADD_WRITE_KEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_DEVPROP_LOGDEV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_WAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DEVPROP_HOSTINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_WORKING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_OPTION_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+        HORZGUIDE, 20
+    END
+
+    IDD_CONFIRM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_DEVICE_AVAIL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_DEVPROP_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// IMAGE
+//
+
+IDB_ABOUT_HEADER        IMAGE                   "res\\aboutheader.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+	IDR_MAINFRAME           "ndasmgmt"
+	IDR_NDD_MOUNT_RO         "읽기 전용 마운트(&R)"
+	IDR_NDD_MOUNT_RW         "읽기 쓰기 마운트(&W)"
+	IDR_NDD_UNMOUNT          "언마운트(&U)"
+	IDR_OPTION_GENERAL      "일반"
+	IDR_TASKBAR             "NDAS 디바이스 관리"
+	IDR_UNMOUNT_ALL          "전체 언마운트(&U)"
+	IDS_ABOUTDLG_HYPERLINK  "http://www.ximeta.com"
+	IDS_ADD_WRITE_KEY "추가(&A)"
+	IDS_ASK_SURRENDER_REQUEST_FMT	"NDAS 호스트(%1!s!)에서 ""%2!s!""에 대한 쓰기 권한을 요청하고 있습니다.\r\n요청을 수락하고 드라이브를 언마운트 하시겠습니까?"
+	IDS_BIG_BOLD_FONT_NAME  "Gulim"
+	IDS_BIG_BOLD_FONT_SIZE  "12"
+	IDS_BT_DISCONNECTED_INFO	"다음 NDAS 디바이스의 연결이 끊겼습니다.\r\n%s"
+	IDS_BT_DISCONNECTED_INFO_TITLE "NDAS 디바이스 연결 끊김"
+	IDS_BT_RECONNECTED_INFO "다음 NDAS 디바이스들이 다시 연결되었습니다.\r\n%s"
+	IDS_BT_RECONNECTED_INFO_TITLE "NDAS 디바이스가 다시 연결됨"
+	IDS_BT_RECONNECTING_INFO	"다음 NDAS 디바이스의 연결 상태가 좋지 않아 다시 연결을 시도하고 있습니다.\r\n%s"
+	IDS_BT_RECONNECTING_INFO_TITLE "NDAS 디바이스로 다시 연결 시도 중"
+	IDS_CONFIRM_EXIT        "NDAS 디바이스 관리 프로그램을 끝내시겠습니까?"
+	IDS_CONFIRM_UNMOUNT     "이 디바이스를 언마운트 하시겠습니까?\r\n다른 프로그램들이 드라이브를 사용 중이면 언마운트가 성공하지 못 할 수 있습니다."
+	IDS_CONFIRM_UNMOUNT_ALL "모든 디바이스를 언마운트 하시겠습니까?\r\n다른 프로그램들이 드라이브를 사용 중이면 언마운트가 성공하지 못 할 수 있습니다."
+	IDS_CONFIRM_UNMOUNT_FMT """%1!s!""를 언마운트 하시겠습니까?\r\n다른 프로그램들이 드라이브를 사용 중이면 언마운트가 성공하지 못 할 수 있습니다."
+	IDS_CONFIRM_UNREGISTER  """%1!s!""의 등록을 제거 하시겠습니까?"
+	IDS_CONFIRM_UNREGISTER_FMT """%1!s!""의 등록을 제거하시겠습니까?"
+	IDS_DEVICE_PROP_TITLE   "%1!s! 등록 정보"
+	IDS_DEVMST_CONNECTED    "연결 됨"
+	IDS_DEVMST_CONNECTED_MOUNTED_ANOTHER "연결됨 *"
+	IDS_DEVMST_DEACTIVATED     "사용 안함"
+	IDS_DEVMST_DISCONNECTED "연결이 끊김"
+	IDS_DEVMST_ERROR        "오류"
+	IDS_DEVMST_MOUNTED_RO   "마운트됨 (읽기 전용))"
+	IDS_DEVMST_MOUNTED_RW   "마운트됨 (읽기/쓰기)"
+	IDS_DEVMST_UNKNOWN      "알 수 없는 상태"
+	IDS_DEVPROP_CATEGORY_HARDWARE "하드웨어"
+	IDS_DEVPROP_HW_MAX_LU_COUNT "최대 LU 수"
+	IDS_DEVPROP_HW_MAX_REQUEST_BLOCKS "최대 요청 블럭"
+	IDS_DEVPROP_HW_MAX_TARGET_COUNT "최대 SCSI 타겟 수"
+	IDS_DEVPROP_HW_SLOT_COUNT "슬롯 수"
+	IDS_DEVPROP_HW_TARGET_COUNT "SCSI 타겟 수"
+	IDS_DEVPROP_HW_VERSION  "버전"
+	IDS_DEVPROP_UNITDEV_DEVICE_TYPE "디바이스 종류"
+	IDS_DEVPROP_UNITDEV_FWREV "펌웨어 번호"
+	IDS_DEVPROP_UNITDEV_LBA_MODE "LBA 방식"
+	IDS_DEVPROP_UNITDEV_MODEL "모델"
+	IDS_DEVPROP_UNITDEV_SERIALNO "시리얼 번호"
+	IDS_DEVPROP_UNITDEV_TITLE_FMT "유닛 디바이스 %1!d!"
+	IDS_DEVPROP_UNITDEV_TRANSFER_MODE "전송 방식"
+	IDS_DEVWIZ_MOUNT_STATUS_NORMAL	"등록이 완료되었으며, 디바이스에 연결되었습니다."
+	IDS_DEVWIZ_MOUNT_STATUS_WAIT	"디바이스 상태를 확인하는 중입니다..."
+	IDS_DISABLE_DEVICE      "사용 안함(&D)"
+	IDS_DRZ_DEVICE_ID_HEADER_SUBTITLE "NDAS 디바이스 ID 입력"
+	IDS_DRZ_DEVICE_ID_HEADER_TITLE "NDAS 디바이스 ID"
+	IDS_DRZ_DEVICE_NAME_HEADER_SUBTITLE	"NDAS 디바이스 이름 설정"
+	IDS_DRZ_DEVICE_NAME_HEADER_TITLE "NDAS 디바이스 이름"
+	IDS_DRZ_INTRO_1         "등록 마법사가 NDAS 디바이스를 시스템에 등록하는데 필요한 정보를 물어볼 것입니다. NDAS 디바이스를 등록하기 위해서는:\r\n\r\n- NDAS 디바이스의 전원을 ON 상태로 하십시오.\r\n- 네트워크 스위치에 연결 하십시오.\r\n- 디바이스 이름을 정하십시오.\r\n- 디바이스 ID와 쓰기 키(선택 사항)를 준비하십시오.\r\n\r\n계속 하기 위해서는 ""다음""을 누르십시오."
+	IDS_DRZ_INTRO_TITLE     "NDAS Device 등록 마법사"
+	IDS_DRZ_MOUNT_HEADER_SUBTITLE	"지금 이 디바이스를 마운트 하시겠습니까?"
+	IDS_DRZ_MOUNT_HEADER_TITLE "NDAS 디바이스 마운트"
+	IDS_DRZ_TITLE           "NDAS 디바이스 등록 마법사"
+	IDS_ENABLE_DEVICE       "사용(&E)"
+	IDS_ERROR_ADD_WRITE_KEY "쓰기 키를 설정 중에 오류가 발생하였습니다."
+	IDS_ERROR_DISABLE_DEVICE "디바이스를 ""사용 하지 않음"" 상태로 바꾸는 중에 오류가 발생하였습니다."
+	IDS_ERROR_ENABLE_DEVICE "디바이스를 ""사용 가능"" 상태로 바꾸는 중에 오류가 발생하였습니다."
+	IDS_ERROR_MOUNT_DEVICE_RO "디바이스를 읽기 전용 모드로 마운트 하는 중에 오류가 발생하였습니다."
+	IDS_ERROR_MOUNT_DEVICE_RW "디바이스를 읽기/쓰기 모드로 마운트 하는 중에 오류가 발생하였습니다."
+	IDS_ERROR_NDAS_DESCRIPTION_FMT	"기능: NDAS 0x%1!04X!\r\n오류 번호: %2!u! (0x%2!04X!)\r\n%3!s!"
+	IDS_ERROR_REGISTER_DEVICE_FAILURE "등록 중 오류가 발생하였습니다."
+	IDS_ERROR_REMOVE_WRITE_KEY "쓰키 키를 제거하는 중에 오류가 발생하였습니다."
+	IDS_ERROR_RENAME_DEVICE "디바이스 명을 바꾸는 중에 오류가 발생하였습니다."
+	IDS_ERROR_SYSTEM_DESCRIPTION_FMT "오류 번호: %1!u! (0x%1!04X!)\r\n%2!s!"
+	IDS_ERROR_TITLE         "NDAS 디바이스 관리 오류"
+	IDS_ERROR_UNMOUNT_DEVICE "디바이스를 언마운트하는 중에 오류가 발생하였습니다."
+	IDS_ERROR_UNREGISTER_DEVICE "디바이스 등록을 제거하는 중에 오류가 발생하였습니다."
+	IDS_ERROR_UPDATE_DEVICE_LIST "디바이스 목록을 갱신 중에 오류가 발생하였습니다."
+	IDS_HOSTSTAT_ACCESS		"권한"
+	IDS_HOSTSTAT_HOSTNAME	"호스트명"
+	IDS_HOSTSTAT_NETWORK_ADDRESS	"네트워크 주소"
+	IDS_INVALID_DEVICE_ID_TOOLTIP_TEXT	"디바이스 ID는 20자의 알파벳과 숫자로 되어 있습니다.\r\n"
+	IDS_INVALID_DEVICE_ID_TOOLTIP_TITLE "잘못된 디바이스 ID?"
+	IDS_KNOWN_NDAS_HOST     "알 수 없음"
+	IDS_LANG_AUTO           "자동 선택 (Automatic)"
+	IDS_LANGUAGE_CHANGE	"언어 변경은 프로그램을 재시작해야 적용이 됩니다."
+	IDS_LOGDEV_INFO_UNAVAILABLE "알 수 없음"
+	IDS_LOGDEV_LOCATION     "위치: "
+	IDS_LOGDEV_LOCATION_FMT "위치 - 슬롯 %1!d!, 타겟번호 %2!d!, LUN %3!d!"
+	IDS_LOGDEV_STATUS_MOUNTED_RO "읽기 전용 모드로 마운트 됨"
+	IDS_LOGDEV_STATUS_MOUNTED_RW "읽기/쓰기 모드로 마운트 됨"
+	IDS_LOGDEV_STATUS_MOUNT_PENDING "마운트 준비 중"
+	IDS_LOGDEV_STATUS_NOT_MOUNTABLE "마운트 할 수 없음"
+	IDS_LOGDEV_STATUS_UNKNOWN_FMT "알 수 없는 상태 (0x%1!08X!)"
+	IDS_LOGDEV_STATUS_UNMOUNTED "마운트 되지 않음"
+	IDS_LOGDEV_STATUS_UNMOUNT_PENDING "언마운트 준비 중"
+	IDS_LOGDEV_TYPE_AGGREGATED_DISK "어그리게이션 디스크"
+	IDS_LOGDEV_TYPE_CF_DRIVE "CF 드라이브"
+	IDS_LOGDEV_TYPE_DISK_RAID1 "디스크 (RAID 1)"
+	IDS_LOGDEV_TYPE_DVD_DRIVE "DVD 드라이브"
+	IDS_LOGDEV_TYPE_MIRRORED_DISK "미러 디스크"
+	IDS_LOGDEV_TYPE_MO_DRIVE "MO 드라이브"
+	IDS_LOGDEV_TYPE_SINGLE_DISK "디스크 (일반)"
+	IDS_LOGDEV_TYPE_UNKNOWN_FMT "알 수 없는 종류 (0x%1!08X!)"
+	IDS_LOGDEV_TYPE_VIRTUAL_DVD_DRIVE "가상 DVD 드라이브"
+	IDS_MAIN_TITLE          "NDAS 디바이스 관리"
+	IDS_NDASMGMT_ALREADY_RUNNING_TITLE	"NDAS 디바이스 관리"
+	IDS_NDASMGMT_ALREADY_RUNNING_TOOLTIP "NDAS 디바이스 관리가 이미 실행 중입니다.\r\n프로그램을 사용하려면 작업 표시줄의 아이콘을 눌러 메뉴에서 기능들을 선택하십시오."
+	IDS_NDASMGMT_WELCOME_TITLE	"NDAS 디바이스 관리"
+	IDS_NDASMGMT_WELCOME_TOOLTIP	"NDAS 디바이스 관리가 실행 중입니다.\r\n이곳을 누르면 새로운 NDAS 디바이스를 등록할 수 있습니다."
+	IDS_NDAS_DEVICE_STATUS_CONNECTED "연결됨"
+	IDS_NDAS_DEVICE_STATUS_DISABLED "사용 안함"
+	IDS_NDAS_DEVICE_STATUS_DISCONNECTED "연결이 끊김"
+	IDS_NDAS_DEVICE_STATUS_UNKNOWN "알 수 없는 상태"
+	IDS_NEW_DEVICE_NAME_TEMPLATE "NDAS 디바이스 %1!d!"
+	IDS_NO_DEVICE           "(NDAS 디바이스 없음)"
+	IDS_OG_DONT_CONFIRM_EXIT     "종료 시 확인 창 사용 안함"
+	IDS_OG_DONT_CONFIRM_REMOVE_WRITE_KEY	"쓰기 키 제거 시 확인 창 사용 안함"
+	IDS_OG_DONT_CONFIRM_UNMOUNT "언마운트 시 확인 창 사용 안함"
+	IDS_OG_DONT_CONFIRM_UNMOUNT_ALL "전체 언마운트 시 확인 창 사용 안함"
+	IDS_OG_DONT_CONFIRM_UNREGISTER	"등록 제거 시 확인 창 사용 안함"
+	IDS_OG_MENU_DISPLAY_STATUS_TEXT "디바이스 상태를 텍스트로 표시"
+	IDS_OG_MENU_DISPLAY_UNMOUNT_ALL "전체 언마운트 명령 표시"
+	IDS_OG_MENU_USE_REG_WIZARD "디바이스 등록 시 등록 마법사 사용"
+	IDS_OPTIONDLG_TITLE     "옵션"
+	IDS_OPTION_GROUP_CONFIRM "확인 창"
+	IDS_OPTION_GROUP_MENU   "메뉴"
+	IDS_REGWIZ_COMPLETE_NORMAL	"NDAS 디바이스 등록 마법사가 성공적으로 완료 되었습니다.\r\n\r\n창을 닫으려면 ""완료""를 누르십시오."
+	IDS_REGWIZ_COMPLETE_NOT_CONNECTED	"새로운 NDAS Device를 성공적으로 등록하였습니다.\r\n\r\n그러나, 디바이스 연결이 실패하였습니다. 작업 표시줄의 메뉴에서 상태를 확인하시기 바랍니다.\r\n\r\n창을 닫으려면 ""완료""를 누르십시오."
+	IDS_REGWIZ_COMPLETE_NOT_MOUNTABLE	"새로운 NDAS Device를 성공적으로 등록하였고, 디바이스에 연결되었습니다.\r\n\r\n그러나, 현재 마운트 가능한 디바이스를 찾지 못하였습니다. 작업 표시줄의 메뉴에서 상태를 확인하시기 바랍니다.\r\n\r\n창을 닫으려면 ""완료""를 누르십시오."
+	IDS_REMOVE_WRITE_KEY "제거(&R)"
+	IDS_REMOVE_WRITE_KEY_CONFIRM    "쓰기 키가 없으면 더 이상 읽기/쓰기 모드로 마운트 할 수 없습니다.\r\n쓰기 키를 제거하시겠습니까?"
+	IDS_REMOVE_WRITE_KEY_CONFIRM_TITLE "쓰기 키 제거"
+	IDS_REQUEST_SURRENDER_RW_ACCESS	"다른 호스트가 이 디바이스를 읽기/쓰기 모드로 사용 중입니다.\r\n읽기/쓰기 권한을 요청하시겠습니까?"
+	IDS_SHOW_DEVICE_PROPERTIES "등록 정보(&P)..."
+	IDS_SURRENDER_REQUEST_CONNECTING	"NDAS 호스트에 연결 중입니다..."
+	IDS_SURRENDER_REQUEST_WAITING "다른 호스트의 응답을 기다리는 중입니다..."
+	IDS_UNITDEVICE_NONE     "알 수 없음"
+	IDS_UNITDEVICE_STATUS_MOUNTED "마운트 됨"
+	IDS_UNITDEVICE_STATUS_NOT_MOUNTED "마운트 되지 않음"
+	IDS_UNITDEVICE_STATUS_UNKNOWN_FMT "알 수 없는 상태 (%1!04X!)"
+	IDS_UNITDEV_MEDIA_TYPE_CDROM "CD/DVD 드라이브"
+	IDS_UNITDEV_MEDIA_TYPE_COMPACT_FLASH "CF 드라이브"
+	IDS_UNITDEV_MEDIA_TYPE_DISK "디스크 드라이브"
+	IDS_UNITDEV_MEDIA_TYPE_OPMEM "MO 드라이브"
+	IDS_UNITDEV_MEDIA_TYPE_UNKNOWN_FMT "알 수 없는 종류 (%1!08X!)"
+	IDS_UNITDEV_TYPE_CDROM  "CD/DVD 드라이브"
+	IDS_UNITDEV_TYPE_DISK   "디스크 드라이브"
+	IDS_UNITDEV_TYPE_DISK_AGGREGATED "디스크 드라이브 (어그리게이션)"
+	IDS_UNITDEV_TYPE_DISK_MIRROR_MASTER "디스크 드라이브 (미러 마스터)"
+	IDS_UNITDEV_TYPE_DISK_MIRROR_SLAVE "디스크 드라이브 (미러 슬레이브)"
+    IDS_UNITDEV_TYPE_DISK_RAID0 "디스크 드라이브 (RAID 0)"
+    IDS_UNITDEV_TYPE_DISK_RAID1 "디스크 드라이브 (RAID 1 - 미러)"
+    IDS_UNITDEV_TYPE_DISK_RAID2 "디스크 드라이브 (RAID 2)"
+    IDS_UNITDEV_TYPE_DISK_RAID3 "디스크 드라이브 (RAID 3)"
+    IDS_UNITDEV_TYPE_DISK_RAID4 "디스크 드라이브 (RAID 4)"
+    IDS_UNITDEV_TYPE_DISK_RAID5 "디스크 드라이브 (RAID 5)"
+	IDS_UNITDEV_TYPE_DISK_SINGLE "디스크 드라이브"
+	IDS_UNITDEV_TYPE_DISK_UNKNOWN_FMT "디스크 드라이브 (알 수 없는 종류 - %1!04X!)"
+	IDS_UNITDEV_TYPE_UNKNOWN_FMT "알 수 없는 종류 (0x%1!04X!)"
+	IDS_UNKNOWN_UNITDEVICE_TYPE "알 수 없는 유닛 디바이스 종류"
+	IDS_UNREGISTER_DEVICE   "등록 제거(&U)"
+    IDS_WAIT_CHECK_UPDATE   "소프트웨어 업데이트를 확인하는 중입니다..."
+    IDS_WAIT_MOUNT          "NDAS 디바이스를 마운트하는 중입니다..."
+    IDS_WAIT_UNMOUNT        "NDAS 디바이스를 언마운트하는 중입니다..."
+	IDS_WRITE_KEY_NONE "입력되지 않음"
+	IDS_WRITE_KEY_PRESENT "입력됨"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_CURRENT_LANGUAGE "한국어 - Korean"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

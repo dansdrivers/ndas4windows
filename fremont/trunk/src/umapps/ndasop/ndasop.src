@@ -1,0 +1,34 @@
+LIBRARY ndasop
+EXPORTS
+		NdasOpGetAPIVersion			@1
+		
+;		NdasOpBind					@2 NONAME
+;		NdasOpIsBitmapClean			@3 NONAME
+;		NdasOpGetFaultSectorSize	@4 NONAME
+;		NdasOpSynchronize			@5 NONAME
+;		NdasOpReadDIB				@6 NONAME
+;		NdasOpRMDWrite				@7 NONAME
+;		NdasOpRMDRead				@8 NONAME
+;		NdasOpSpareAdd				@9 NONAME
+;		NdasOpSpareRemove			@10 NONAME
+;		NdasOpReplaceDevice			@11 NONAME
+;		NdasOpReplaceUnitDevice		@12 NONAME
+;		NdasOpMigrate				@13 NONAME
+
+		NdasOpReadBACL				@14 NONAME
+		NdasOpWriteBACL				@15 NONAME
+
+;		NdasOpGetRaidInfo				@16 NONAME
+;		NdasOpClearDefectMark			@17 NONAME
+;		NdasOpRemoveFromRaid			@18 NONAME
+;		NdasOpAppend					@19 NONAME
+;		NdasOpRAID1R3IsFixRequired		@20 NONAME
+;		NdasOpRAID4R3or5IsFixRequired	@21 NONAME
+
+		NdasVsmReadLogicalUnitDefinition		@22 NONAME
+		NdasVsmInitializeLogicalUnitDefinition	@23 NONAME
+		NdasVsmGetRaidSimpleStatus				@24 NONAME
+		GetNdasSimpleSerialNo					@25 NONAME
+
+		InitSystemCfg	@26 NONAME
+		InitUserCfg		@27 NONAME

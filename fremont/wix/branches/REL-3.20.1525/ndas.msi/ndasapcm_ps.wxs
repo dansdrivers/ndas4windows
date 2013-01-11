@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<?include ComponentGuid.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment>
+    <DirectoryRef Id="NdasAppFolder" src="$(var.SourceDir)">
+      <Component Id="ndasapcm_ps.dll" DiskId="1" Guid="$(var.ndasapcm_ps.dll_GUID)" Win64="$(var.Win64YesNo)">
+        <File Id="ndasapcm_ps.dll" Name="NDASAP_1.DLL" LongName="ndasapcm_ps.dll" />
+        <Registry Root="HKCR" Key="CLSID\{F36D0A58-3D84-4BC1-9A18-28CAAD5A7707}" Value="PSFactoryBuffer" Type="string" />
+        <Registry Root="HKCR" Key="CLSID\{F36D0A58-3D84-4BC1-9A18-28CAAD5A7707}\InProcServer32" Value="[#ndasapcm_ps.dll]" Type="string" />
+        <Registry Root="HKCR" Key="CLSID\{F36D0A58-3D84-4BC1-9A18-28CAAD5A7707}\InProcServer32" Name="ThreadingModel" Value="Both" Type="string" />
+        <Registry Root="HKCR" Key="Interface\{F36D0A58-3D84-4BC1-9A18-28CAAD5A7707}" Value="IAutoPlayConfig" Type="string" />
+        <Registry Root="HKCR" Key="Interface\{F36D0A58-3D84-4BC1-9A18-28CAAD5A7707}\NumMethods" Value="5" Type="string" />
+        <Registry Root="HKCR" Key="Interface\{F36D0A58-3D84-4BC1-9A18-28CAAD5A7707}\ProxyStubClsid32" Value="{F36D0A58-3D84-4BC1-9A18-28CAAD5A7707}" Type="string" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

@@ -1,0 +1,7 @@
+[HTML]
+HOME=autorun.htm
+;WIDTH=500
+HEIGHT=400
+
+[DATA]
+TEXT=autorun.inf file contains the data

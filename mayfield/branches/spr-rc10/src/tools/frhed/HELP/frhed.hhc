@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="python">
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+    <param name="ImageType" value="Folder">
+</OBJECT>
+
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="The Free Hex Editor Help File">
+	    <param name="Local" value="index.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Features">
+		    <param name="Local" value="file1.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Disclaimer">
+		    <param name="Local" value="file2.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="License">
+		    <param name="Local" value="file3.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Acknowledgements">
+		    <param name="Local" value="file4.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="frhed on the Web">
+		    <param name="Local" value="file5.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="Installation">
+	    <param name="Local" value="file6.htm">
+	</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="Binary Files">
+	    <param name="Local" value="file7.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="What are binary files?">
+		    <param name="Local" value="file8.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="What are bits and bytes?">
+		    <param name="Local" value="file9.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="File operations">
+	    <param name="Local" value="file10.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Creating new files">
+		    <param name="Local" value="file11.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Opening files">
+		    <param name="Local" value="file12.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Opening files partially">
+		    <param name="Local" value="file13.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Saving files">
+		    <param name="Local" value="file14.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Saving selections">
+		    <param name="Local" value="file15.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Reverting to the saved file">
+		    <param name="Local" value="file16.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Exporting the file as a hexdump text">
+		    <param name="Local" value="file17.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Deleting the current file">
+		    <param name="Local" value="file18.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Importing a hexdump file">
+		    <param name="Local" value="file19.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="The main window">
+	    <param name="Local" value="file20.htm">
+	</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="Moving in the file">
+	    <param name="Local" value="file21.htm">
+	</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="Editing the file">
+	    <param name="Local" value="file22.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Using the mouse">
+		    <param name="Local" value="file23.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Using the keyboard">
+		    <param name="Local" value="file24.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Cut command">
+		    <param name="Local" value="file25.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Copy command">
+		    <param name="Local" value="file26.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Paste command">
+		    <param name="Local" value="file27.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Paste with dialogue command">
+		    <param name="Local" value="file28.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Append command">
+		    <param name="Local" value="file29.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Delete command">
+		    <param name="Local" value="file30.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Select block command">
+		    <param name="Local" value="file31.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Enter decimal value command">
+		    <param name="Local" value="file32.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Manipulate bits command">
+		    <param name="Local" value="file33.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Fill selection with command">
+		    <param name="Local" value="file34.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The File/Insert file command">
+		    <param name="Local" value="file35.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Reverse bytes command">
+		    <param name="Local" value="file36.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Move/Copy bytes command">
+		    <param name="Local" value="file37.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="Misc. Edit functions">
+	    <param name="Local" value="file38.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Compare from current offset command">
+		    <param name="Local" value="file39.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Get floating point value command">
+		    <param name="Local" value="file40.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/File properties command">
+		    <param name="Local" value="file41.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Apply template command">
+		    <param name="Local" value="file42.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Edit/Open in text editor command">
+		    <param name="Local" value="file43.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="The Disk menu">
+	    <param name="Local" value="file44.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Disk/Open Drive command">
+		    <param name="Local" value="file45.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Disk/Close Drive command">
+		    <param name="Local" value="file46.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Disk/Goto First Sector command">
+		    <param name="Local" value="file47.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Disk/Goto Next Sector command">
+		    <param name="Local" value="file48.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Disk/Goto Previous Sector command">
+		    <param name="Local" value="file49.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Disk/Goto Last Sector command">
+		    <param name="Local" value="file50.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Disk/Goto Sector # command">
+		    <param name="Local" value="file51.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="The Options menu">
+	    <param name="Local" value="file52.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/View settings command">
+		    <param name="Local" value="file53.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/Color settings/Text color command">
+		    <param name="Local" value="file54.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/Color settings/Background color command">
+		    <param name="Local" value="file55.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/Color settings/Separator color command">
+		    <param name="Local" value="file56.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/Character set command">
+		    <param name="Local" value="file57.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/Color settings/Reset colors to standard command">
+		    <param name="Local" value="file58.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/Binary mode command">
+		    <param name="Local" value="file59.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/Color settings/Adopt OS colour scheme command">
+		    <param name="Local" value="file60.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/OLE Drag-drop command">
+		    <param name="Local" value="file61.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Options/Make backups option">
+		    <param name="Local" value="file62.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="The Bookmarks menu">
+	    <param name="Local" value="file63.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Bookmarks/Add bookmark command">
+		    <param name="Local" value="file64.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Bookmarks/Remove bookmark command">
+		    <param name="Local" value="file65.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Bookmarks/Clear all bookmarks command">
+		    <param name="Local" value="file66.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="The Misc menu">
+	    <param name="Local" value="file67.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Misc/Goto DLL Exports command">
+		    <param name="Local" value="file68.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Misc/Goto DLL Imports command">
+		    <param name="Local" value="file69.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="The Misc/Encode Decode command">
+		    <param name="Local" value="file70.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="Using the special syntax">
+	    <param name="Local" value="file71.htm">
+	</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="Character Tables">
+	    <param name="Local" value="file72.htm">
+	</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="The Registry Menu">
+	    <param name="Local" value="file73.htm">
+	</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="In all context menu">
+		    <param name="Local" value="file74.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="In unknown context menu">
+		    <param name="Local" value="file75.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Is default in unknown context">
+		    <param name="Local" value="file76.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Save ini when required">
+		    <param name="Local" value="file77.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Change instance">
+		    <param name="Local" value="file78.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Remove frhed">
+		    <param name="Local" value="file79.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Upgrade">
+		    <param name="Local" value="file80.htm">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		    <param name="Name" value="Shortcuts to frhed">
+		    <param name="Local" value="file81.htm">
+		</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="Frequently Asked Questions">
+	    <param name="Local" value="file82.htm">
+	</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="Custom stylesheets">
+	    <param name="Local" value="file83.htm">
+	</OBJECT>
+</UL>
+</BODY></HTML>

@@ -1,0 +1,41 @@
+TARGETNAME=ndashb
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=/DUNICODE /D_UNICODE
+INCLUDES=..\;..\..\inc;$(NDAS_INC_PATH);$(NDAS_INC_PATH)\ndas;..\..\support
+RCOPTIONS=/i $(PROJECT_PATH)\inc /i $(NDAS_SDK_INC_PATH)
+USECXX_FLAG=/Tp
+USER_C_FLAGS=/EHsc
+USE_STL=1
+UMENTRY=wmain
+UMTYPE=console
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+#DEBUG_CRTS=1
+!ENDIF
+
+BUILD_CONSUMES=hash
+
+TARGETLIBS= \
+	$(SDK_LIB_PATH)\kernel32.lib \
+	$(SDK_LIB_PATH)\user32.lib \
+	$(SDK_LIB_PATH)\setupapi.lib \
+	$(SDK_LIB_PATH)\ws2_32.lib \
+	$(NDAS_LIB_PATH)\hash.lib \
+	..\..\lib\$(DDKBUILDENV)\*\ndassvc_support.lib
+
+MSC_WARNING_LEVEL=-W3 -WX
+MSC_OPTIMIZATION=/Oitb2
+
+PRECOMPILED_INCLUDE=..\stdafx.h
+PRECOMPILED_CXX=1
+
+SOURCES= \
+	main.cpp \
+	../ndasdevhb.cpp \
+	../lpxcomm.cpp
+

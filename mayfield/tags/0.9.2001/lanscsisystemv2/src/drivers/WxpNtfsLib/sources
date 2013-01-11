@@ -1,0 +1,21 @@
+TARGETNAME=WxpNtfsLib
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+DRIVERTYPE=FS
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE
+C_DEFINES=$(C_DEFINES) -D__LFS__
+
+SOURCES=	WxpNtfsLib.c \
+			Ntfs.c       \
+			mcbsup.c
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+INCLUDES=$(INCLUDES);C:\winhdr\wxp\base\ntos\inc
+INCLUDES=$(INCLUDES);C:\winhdr\wxp\public\sdk\inc
+INCLUDES=$(INCLUDES);C:\winhdr\wxp\public\internal\base\inc
+INCLUDES=$(INCLUDES);..\inc;..\inc\kernel;..\lfsfilter;..\lfsfiltlib
+
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_DRIVER_LIB_PATH)\$(TARGETNAME).lib}

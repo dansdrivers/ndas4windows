@@ -1,0 +1,4 @@
+ndasseteep.exe requires local copy of ndascomm.dll, ndashear.dll and ndasuser.dll.
+Please build whole tree to get ndascomm.dll and ndasuser.dll. And put ndasseteep.exe.local(which is 0-size file) in the same directory.
+This will make ndasseteep.exe run any version of NDAS software.
+

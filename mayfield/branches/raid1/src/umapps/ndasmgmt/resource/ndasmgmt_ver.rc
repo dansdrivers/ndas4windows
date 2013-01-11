@@ -1,0 +1,39 @@
+/////////////////////////////////////////////////////////////////////////////
+#ifndef APSTUDIO_INVOKED
+#include <windows.h>
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+#include "ndasmgmtres.ver"
+
+#ifdef NDAS_OEM_BUILD
+#include "ndasoemverp.h"
+#else
+#include "ndasverp.h"
+#endif
+
+// #define VER_NO_PRODUCT_VERSION
+#define VER_FILETYPE			VFT_DLL
+#define VER_FILESUBTYPE			VFT2_UNKNOWN
+
+#ifndef VER_FILEDESCRIPTION_STR
+# ifdef RCLANGDESCR
+#  define VER_FILEDESCRIPTION_STR "NDAS Device Management Resource DLL"
+# else
+#  define VER_FILEDESCRIPTION_STR "NDAS Device Management Resource DLL"
+# endif
+#endif
+
+#ifndef VER_INTERNALNAME_STR
+#define VER_INTERNALNAME_STR	"ndasmgmtres.dll"
+#endif
+
+#ifdef NDAS_OEM_BUILD
+#include "ndasoemcommon.ver"
+#else
+#include "ndascommon.ver"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif //APSTUDIO_INVOKED

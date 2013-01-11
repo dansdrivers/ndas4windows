@@ -1,0 +1,438 @@
+/translation>
+  </string>
+  <string id="/DLG/249/14">
+    <base><![CDATA[0.0]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/340">
+    <base><![CDATA[NDAS Bind Management Error]]></base>
+    <translation><![CDATA[Erro de gestão de ligação NDAS]]></translation>
+  </string>
+  <string id="/DLG/340/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406">
+    <base><![CDATA[Repair fault tolerant disks]]></base>
+    <translation><![CDATA[Reparar discos que suportam falhas]]></translation>
+  </string>
+  <string id="/DLG/406/00">
+    <base><![CDATA[Select one of the NDAS Device listed below. It will be used as a replacement for the broken NDAS Device]]></base>
+    <translation><![CDATA[Seleccione um dos dispositivos NDAS listados abaixo. Será usado para substituir o dispositivo NDAS quebrado]]></translation>
+  </string>
+  <string id="/DLG/406/01">
+    <base><![CDATA[&Devices:]]></base>
+    <translation><![CDATA[&Dispositivos:]]></translation>
+  </string>
+  <string id="/DLG/406/02">
+    <base><![CDATA[List1]]></base>
+    <translation><![CDATA[Lista1]]></translation>
+  </string>
+  <string id="/DLG/406/03">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Cancelar]]></translation>
+  </string>
+  <string id="/DLG/411">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation><![CDATA[Assistente de enlace de disco]]></translation>
+  </string>
+  <string id="/DLG/411/00">
+    <base><![CDATA[This wizard helps you create bound disks.]]></base>
+    <translation><![CDATA[Este assistente ajudar-lhe-á a criar discos desligados.]]></translation>
+  </string>
+  <string id="/DLG/411/01">
+    <base><![CDATA[You can bind disks of NDAS Devices to build a new disk with faster speed, larger capacity and fault tolerance. Many bind types are given to fit your needs.]]></base>
+    <translation><![CDATA[Pode ligar discos de dispositivos NDAS para criar um novo disco com mais velocidade, maior capacidade e que suporte falhas. São indicados alguns tipos de enlaces para satisfazer as suas necessidades.]]></translation>
+  </string>
+  <string id="/DLG/411/02">
+    <base><![CDATA[Welcome to the Disk Bind Wizard]]></base>
+    <translation><![CDATA[Bem-vindo ao Assistente de enlace de discos]]></translation>
+  </string>
+  <string id="/DLG/411/03">
+    <base><![CDATA[To continue, click Next.]]></base>
+    <translation><![CDATA[Para continuar faça clique em Seguinte.]]></translation>
+  </string>
+  <string id="/DLG/413">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation><![CDATA[Assistente de enlace de disco]]></translation>
+  </string>
+  <string id="/DLG/413/00">
+    <base><![CDATA[Select the bind type you want to create:]]></base>
+    <translation><![CDATA[Seleccione o tipo de enlace que deseja criar:]]></translation>
+  </string>
+  <string id="/DLG/413/01">
+    <base><![CDATA[Aggregation]]></base>
+    <translation><![CDATA[Agregação]]></translation>
+  </string>
+  <string id="/DLG/413/02">
+    <base><![CDATA[Stripe (RAID 0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/03">
+    <base><![CDATA[Mirror (RAID 1)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/04">
+    <base><![CDATA[RAID 4]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/05">
+    <base><![CDATA[Number of disks:]]></base>
+    <translation><![CDATA[Número de discos:]]></translation>
+  </string>
+  <string id="/DLG/413/07">
+    <base><![CDATA[Description]]></base>
+    <translation><![CDATA[Descrição]]></translation>
+  </string>
+  <string id="/DLG/415">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation><![CDATA[Assistente de enlace de disco]]></translation>
+  </string>
+  <string id="/DLG/415/00">
+    <base><![CDATA[Available:]]></base>
+    <translation><![CDATA[Disponível:]]></translation>
+  </string>
+  <string id="/DLG/415/02">
+    <base><![CDATA[&Add >]]></base>
+    <translation><![CDATA[&Adicionar >]]></translation>
+  </string>
+  <string id="/DLG/415/03">
+    <base><![CDATA[< &Remove]]></base>
+    <translation><![CDATA[<&Excluir]]></translation>
+  </string>
+  <string id="/DLG/415/04">
+    <base><![CDATA[< Re&move All]]></base>
+    <translation><![CDATA[< Ex&cluir tudo]]></translation>
+  </string>
+  <string id="/DLG/415/05">
+    <base><![CDATA[Selected:]]></base>
+    <translation><![CDATA[Seleccionado:]]></translation>
+  </string>
+  <string id="/DLG/415/07">
+    <base><![CDATA[Total number of disks required:]]></base>
+    <translation><![CDATA[Número total de discos requeridos:]]></translation>
+  </string>
+  <string id="/DLG/415/09">
+    <base><![CDATA[Total disk size in gigabytes (GB):]]></base>
+    <translation><![CDATA[Tamanho total do disco em gigabytes (GB):]]></translation>
+  </string>
+  <string id="/DLG/415/11">
+    <base><![CDATA[Note: The data on the disks will be deleted once binding is completed.]]></base>
+    <translation><![CDATA[Nota: Os dados nos discos serão apagados quando o enlace for concluído.]]></translation>
+  </string>
+  <string id="/DLG/420">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation><![CDATA[Assistente de enlace de disco]]></translation>
+  </string>
+  <string id="/DLG/420/00">
+    <base><![CDATA[Completing the Disk Bind Wizard]]></base>
+    <translation><![CDATA[Finalizar o Assistente de enlace de discos]]></translation>
+  </string>
+  <string id="/DLG/420/02">
+    <base><![CDATA[The binding results are followings:]]></base>
+    <translation><![CDATA[Os resultados de enlace são os seguintes:]]></translation>
+  </string>
+  <string id="/DLG/420/04">
+    <base><![CDATA[To close this wizard, click Finish.]]></base>
+    <translation><![CDATA[Para fechar o assistente, faça clique em Finalizar.]]></translation>
+  </string>
+  <string id="/DLG/1091/01">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/1091/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Cancelar]]></translation>
+  </string>
+  <string id="/MNU/128/00">
+    <base><![CDATA[&File]]></base>
+    <translation><![CDATA[&Ficheiro]]></translation>
+  </string>
+  <string id="/MNU/128/00/00">
+    <base><![CDATA[E&xit]]></base>
+    <translation><![CDATA[S&air]]></translation>
+  </string>
+  <string id="/MNU/128/01">
+    <base><![CDATA[&Tool]]></base>
+    <translation><![CDATA[&Ferramenta]]></translation>
+  </string>
+  <string id="/MNU/128/01/00">
+    <base><![CDATA[&Refresh]]></base>
+    <translation><![CDATA[&Actualizar]]></translation>
+  </string>
+  <string id="/MNU/128/01/01">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation><![CDATA[&Discos ligados]]></translation>
+  </string>
+  <string id="/MNU/128/01/02">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation><![CDATA[Adicionar &espelho]]></translation>
+  </string>
+  <string id="/MNU/128/01/03">
+    <base><![CDATA[R&eset bind information]]></base>
+    <translation><![CDATA[R&estaurar informação de conexão]]></translation>
+  </string>
+  <string id="/MNU/128/01/04">
+    <base><![CDATA[&Unbind]]></base>
+    <translation><![CDATA[&Desligar]]></translation>
+  </string>
+  <string id="/MNU/128/01/05">
+    <base><![CDATA[Mi&grate]]></base>
+    <translation><![CDATA[Mi&grar]]></translation>
+  </string>
+  <string id="/MNU/128/01/06">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation><![CDATA[Adicionar &reservar disco]]></translation>
+  </string>
+  <string id="/MNU/128/01/07">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation><![CDATA[Substituir &dispositivo]]></translation>
+  </string>
+  <string id="/MNU/128/01/08">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation><![CDATA[Utilizar como um &membro RAID]]></translation>
+  </string>
+  <string id="/MNU/128/01/09">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation><![CDATA[&Limpar marca defeituosa]]></translation>
+  </string>
+  <string id="/MNU/128/01/10">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation><![CDATA[Con&figurar RAID sem este disco]]></translation>
+  </string>
+  <string id="/MNU/128/01/11">
+    <base><![CDATA[Convert to a basic &disk]]></base>
+    <translation><![CDATA[Converter para um &disco básico]]></translation>
+  </string>
+  <string id="/MNU/128/02">
+    <base><![CDATA[&Help]]></base>
+    <translation><![CDATA[&Ajuda]]></translation>
+  </string>
+  <string id="/MNU/128/02/00">
+    <base><![CDATA[&About NDAS Software]]></base>
+    <translation><![CDATA[&Sobre o software NDAS]]></translation>
+  </string>
+  <string id="/MNU/448/00/00">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation><![CDATA[&Discos ligados]]></translation>
+  </string>
+  <string id="/MNU/448/00/01">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation><![CDATA[Adicionar &espelho]]></translation>
+  </string>
+  <string id="/MNU/448/00/02">
+    <base><![CDATA[&Reset bind information]]></base>
+    <translation><![CDATA[&Restaurar informação de enlace]]></translation>
+  </string>
+  <string id="/MNU/448/01/00">
+    <base><![CDATA[&Unbind]]></base>
+    <translation><![CDATA[&Desligar]]></translation>
+  </string>
+  <string id="/MNU/448/01/01">
+    <base><![CDATA[&Migrate]]></base>
+    <translation><![CDATA[&Migrar]]></translation>
+  </string>
+  <string id="/MNU/448/01/02">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation><![CDATA[Adicionar &reservar disco]]></translation>
+  </string>
+  <string id="/MNU/448/02/00">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation><![CDATA[Substituir &dispositivo]]></translation>
+  </string>
+  <string id="/MNU/448/02/01">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation><![CDATA[Utilizar como um &membro RAID]]></translation>
+  </string>
+  <string id="/MNU/448/02/02">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation><![CDATA[&Limpar marca defeituosa]]></translation>
+  </string>
+  <string id="/MNU/448/02/03">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation><![CDATA[Con&figurar RAID sem este disco]]></translation>
+  </string>
+  <string id="/MNU/448/02/04">
+    <base><![CDATA[Convert to a &basic disk]]></base>
+    <translation><![CDATA[Converter para um disco &básico]]></translation>
+  </string>
+</localization>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ranslation>Intern feil: NDASCOMM_FEIL_RI_EKSISTERER_IKKE.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.]]></base>
+    <translation>Intern feil: NDASCOMM_FEIL_RI_AUTH_MISLYKKET.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.]]></base>
+    <translation>Intern feil: NDASCOMM_FEIL_RI_KOMMANDO_MISLYKKET.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.]]></base>
+    <translation>Intern feil: NDASCOMM_FEIL_MASKINVARE_STØTTES IKKE.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_NOT_EXIST.]]></base>
+    <translation>Intern feil: NDASCOMM_FEIL_T_EKSISTERER_IKKE.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.]]></base>
+    <translation>Intern feil: NDASCOMM_FEIL_T_FEIL_KOMMANDO.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.]]></base>
+    <translation>Intern feil: NDASCOMM_FEIL_T_KOMMANDO_MISLYKKET.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BROKEN_DATA">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.]]></base>
+    <translation>Intern feil: NDASCOMM_FEIL_T_ØDELAGT_DATA.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_AUTH_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_AUTH_FAILED.]]></base>
+    <translation>Intern feil: NDASCOMM_FEIL_RI_AUTH_MISLYKKET.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+    <base><![CDATA[Unknown error for login process.]]></base>
+    <translation>Ukjent feil under login prosess.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RW_USER_EXIST">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s) with read-write access privilege.]]></base>
+    <translation>NDAS apparatet brukes av en annen prosess(er) eller vert(er) med lese/skrive tilgang+A54sprivileg.A7</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation>Ikke nok minne for å fullføre jobben.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_PROTOCOL">
+    <base><![CDATA[Lanscsi protocol error.]]></base>
+    <translation>Lanscsi protokollfeil.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_OPERATION">
+    <base><![CDATA[Invalid operation.]]></base>
+    <translation>Ugyldig utførelse.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>Oppgaven som kreves støttes ikke.</translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_FAIL">
+    <base><![CDATA[Accessing to the device is failed.]]></base>
+    <translation>Tilgangen til apparatet mislykkes.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_SINGLE_DISK">
+    <base><![CDATA[The NDAS device must be a single disk to operate this job.]]></base>
+    <translation>NDAS apparatet må være en singel disk for å utføre denne jobben.</translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+    <base><![CDATA[The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.]]></base>
+    <translation>NDAS apparatet støttes ikke. Hvis apparatet er et HDD apparat, konverter apparatet til en enkelt disk før du gjør denne jobben.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_BOUND_DISK">
+    <base><![CDATA[The NDAS device must be a bound disk to operate this job.]]></base>
+    <translation>NDAS apparatet må være en innbundet disk for å utføre denne jobben.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>Ugyldig parameter.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation>Ikke nok minne for å fullføre jobben.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_DISK_COUNT">
+    <base><![CDATA[Incorrect disk count to bind disks.]]></base>
+    <translation>Ugyldig diskantall til innbindende disker.</translation>
+  </string>
+  <string id="NDASOP_ERROR_ALREADY_USED">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s).]]></base>
+    <translation>NDAS apparatet brukes av en annen prosess(er) eller vert(er).</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+    <base><![CDATA[The NDAS device has invalid bind information to migrate.]]></base>
+    <translation>NDAS apparatet omstilles til ugyldig innbindende informasjon.</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_SIZE_LIMIT">
+    <base><![CDATA[The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.]]></base>
+    <translation>Total størrelse av forbundene disker kan ikke overgå 2TB. Begrensningen kommer fra Windows OS.</translation>
+  </string>
+  <string id="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+    <base><![CDATA[There is too many missing member to replace(repair) in bound disks.]]></base>
+    <translation>Det er for mange manglende medlemmer å erstatte(reparere) i de innbindende diskene.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NO_MISSING_MEMBER">
+    <base><![CDATA[There is no missing NDAS device to replace(repair) in bound disks.]]></base>
+    <translation>Det finnes ingen manglende NDAS apparat å erstatte(reparere) i de innbindende diskene.</translation>
+  </string>
+  <string id="NDASOP_ERROR_CRITICAL_REPAIR">
+    <base><![CDATA[There was a critical error while replacing(repairing) bound disks.]]></base>
+    <translation>Det var en kritisk feil under utskiftning(reparasjon) av forbundene disker.</translation>
+  </string>
+  <string id="NDASOP_ERROR_REPLACE_TOO_SMALL">
+    <base><![CDATA[Size of a replacement disk is too small.]]></base>
+    <translation>Størrelsen til en erstatningsdisk er for liten.</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_UNSUPPORTED">
+    <base><![CDATA[This type of RAID does not support the requested command.]]></base>
+    <translation>Denne typen RAID støtter ikke ønsket kommando.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_CAPACITY">
+    <base><![CDATA[The device does not have enough capacity to operate request command.]]></base>
+    <translation>Apparatet har ikke nok kapasitet for å utføre ønsket kommando.</translation>
+  </string>
+  <string id="NDASVOL_ERROR_NON_NDAS_VOLUME">
+    <base><![CDATA[The specified volume is not related with the NDAS devices.]]></base>
+    <translation>Spesifisert volum er ikke forbundet med NDAS apparater.</translation>
+  </string>
+  <string id="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>Oppgaven som kreves støttes ikke.</translation>
+  </string>
+  <string id="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+    <base><![CDATA[Non-SCSI type device is found.]]></base>
+    <translation>Ikke-SCSI type apparat funnet.</translation>
+  </string>
+  <string id="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+    <base><![CDATA[SRB IO CONTROL Error]]></base>
+    <translation>SRB IO KONTROLL feil</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+    <base><![CDATA[The NDAS disk is encrypted and the corresponding NDAS system key is not registered in the system.]]></base>
+    <translation>NDAS disken er kryptert og den korresponderende NDAS system koden er ikke registrert i systemet.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+    <base><![CDATA[NDAS system key does not match with the NDAS disk key.]]></base>
+    <translation>NDAS systemkode passer ikke med NDAS diskkode.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+    <base><![CDATA[Invalid CEB CRC.]]></base>
+    <translation>Ugyldig CEB CRC.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+    <base><![CDATA[Unsupported CEB Revision.]]></base>
+    <translation>Ikke støttet CEB revisjon.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+    <base><![CDATA[CEB Key Length is invalid.]]></base>
+    <translation>CEB kodelengden er ugyldig.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+    <base><![CDATA[Failed to read CEB.]]></base>
+    <translation>Å lese CEB mislykkes.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+    <base><![CDATA[CE key generation failed.]]></base>
+    <translation>CE kodegenerasjon mislykket.</translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+    <base><![CDATA[A new NDAS Device is found from the network and is being registered.]]></base>
+    <translation>Et nytt NDAS apparat er funnet av nettverket og registreres.</translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+    <base><![CDATA[Unsupported hardware version (%2) detected from the NDAS Device (%1).]]></base>
+    <translation>Ikke støttet maskinvareversjon (%2) oppdaget av NDAS apparatet (%1).</translation>
+  </string>
+</localization>

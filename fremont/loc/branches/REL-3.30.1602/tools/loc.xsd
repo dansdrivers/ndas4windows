@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="LocDataSet" targetNamespace="http://schemas.ximeta.com/meta/loc/2006" xmlns:mstns="http://schemas.ximeta.com/meta/loc/2006" xmlns="http://schemas.ximeta.com/meta/loc/2006" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="localization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="string" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="base" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+              <xs:element name="translation" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+            </xs:sequence>
+            <xs:attribute name="id" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="component" form="unqualified" type="xs:string" />
+      <xs:attribute name="version" form="unqualified" type="xs:string" />
+      <xs:attribute name="lang" form="unqualified" type="xs:string" />
+      <xs:attribute name="oem" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="localization" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

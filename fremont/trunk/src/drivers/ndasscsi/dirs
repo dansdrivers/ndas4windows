@@ -1,0 +1,2 @@
+DIRS=ndasminiport cat
+#DIRS=ndasscsiport cat

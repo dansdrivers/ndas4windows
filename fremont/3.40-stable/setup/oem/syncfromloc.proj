@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+	<LocDir>..\..\loc\ndas-3.11.1327</LocDir>
+	<DestDirName>_binsrc</DestDirName>
+  </PropertyGroup>
+  
+  <ItemGroup>
+	<Oem Include="ximeta" />
+	<Oem Include="coworld" />
+	<Oem Include="digilandhk" />
+	<Oem Include="digilandint" />
+	<Oem Include="trekstor" />
+	<Platform Include="i386" />
+	<Platform Include="amd64" />
+  </ItemGroup>
+
+  <Target Name="CopyFromOem"
+		  Inputs="%(oem.identity)"
+		  Outputs="_____always___">
+
+	<CreateProperty Value="%(oem.identity)">
+	  <Output TaskParameter="Value" PropertyName="OemName" />
+	</CreateProperty>
+
+	<CreateItem Include="$(LocDir)\$(OemName)\branded\i386\*.*">
+	  <Output TaskParameter="Include" ItemName="SourceFile" />
+	</CreateItem>
+
+	<CreateProperty Value="$(OemName)\$(DestDirName)\i386">
+	  <Output TaskParameter="Value" PropertyName="DestDir" />
+	</CreateProperty>
+
+	<Copy SourceFiles="@(SourceFile)" DestinationFolder="$(DestDir)" SkipUnchangedFiles="true" />
+
+	<CreateItem Include="$(LocDir)\$(OemName)\branded\amd64\*.*">
+	  <Output TaskParameter="Include" ItemName="SourceFile64" />
+	</CreateItem>
+	<CreateProperty Value="$(OemName)\$(DestDirName)\amd64">
+	  <Output TaskParameter="Value" PropertyName="DestDir64" />
+	</CreateProperty>
+
+	<Copy SourceFiles="@(SourceFile64)" DestinationFolder="$(DestDir64)" SkipUnchangedFiles="true"/>
+
+  </Target>
+
+  <Target Name="CopyFromOemPlatform">
+	  
+  </Target>
+
+</Project>

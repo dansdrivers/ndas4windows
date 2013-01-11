@@ -1,0 +1,28 @@
+#ifndef APSTUDIO_INVOKED
+
+#include <windows.h>
+#include "resource.h"
+#pragma code_page(949)
+
+LANGUAGE LANG_KOREAN, SUBLANG_KOREAN
+STRINGTABLE DISCARDABLE 
+BEGIN
+	IDS_OK              "확인"
+    IDS_CANCEL          "취소"
+	IDS_YES				"예(&Y)"
+	IDS_NO				"아니오(&N)"
+	IDS_CLOSE			"닫기(&C)"
+	IDS_UPDATER_TITLE	"NDAS 소프트웨어 업데이트"
+	IDS_UPDATER_ERROR_UPDATE_CHECK	"업데이트 정보를 확인하는데 실패했습니다.\r\n인터넷 연결이 정상적인지 확인하고 다시 시도해 보십시오.\r\n"
+	IDS_UPDATER_ERROR_DOWNLOAD		"서버에서 파일을 다운로드하는데 실패했습니다.\r\n인터넷 연결이 정상적인지 확인하고 다시 시도해 보십시오.\r\n"
+	IDS_UPDATER_ERROR_FMT	"%1!s!오류 0x%2!08X!"
+
+	IDS_STATUS_CHECK_UPDATE	"업데이트된 버전이 있는지 확인 중입니다..."
+	IDS_STATUS_CHECK_UPDATE_DONE	"업데이트 확인이 완료되었습니다."
+	IDS_STATUS_DOWNLOAD_UPDATE	"업데이트된 버전을 다운로드 중입니다..."
+	IDS_STATUS_DOWNLOAD_UPDATE_DONE	"다운로드가 완료되었습니다."
+	IDS_NO_UPDATE	"현재 최신 버전의 소프트웨어를 사용 중입니다."
+	IDS_NEW_UPDATE	"새로운 버전의 소프트웨어가 있습니다.\r\n새 버전을 다운로드하여 설치하시겠습니까?"
+END
+
+#endif    // APSTUDIO_INVOKED

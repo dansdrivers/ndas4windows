@@ -1,0 +1,283 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SnGen2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\SnGen2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SnGen2 정보"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "SNGEN version 2.0",IDC_STATIC,50,13,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2003 Ximeta Technology Inc.",IDC_STATIC,
+                    20,31,145,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_SNGEN2_DIALOG DIALOGEX 0, 0, 250, 171
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SnGen2"
+FONT 9, "굴림"
+BEGIN
+    EDITTEXT        IDC_EDIT_ADDR0,46,14,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ADDR1,71,14,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ADDR2,96,14,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ADDR3,120,14,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ADDR4,144,14,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ADDR5,168,14,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Address",IDC_STATIC,13,16,28,8
+    EDITTEXT        IDC_EDIT_VID,29,37,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RESERVED0,87,37,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RESERVED1,106,37,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RANDOM,165,37,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key00,46,71,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key01,64,71,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key02,82,71,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key03,100,71,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key04,118,71,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key05,136,71,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key06,154,71,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key07,172,71,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key10,47,91,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key11,65,91,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key12,83,91,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key13,101,91,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key14,119,91,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key15,137,91,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key16,155,91,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Key17,173,91,18,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Vid",IDC_STATIC,13,39,11,8
+    LTEXT           "reserved",IDC_STATIC,54,39,29,8
+    LTEXT           "Random",IDC_STATIC,132,39,28,8
+    LTEXT           "Key1",IDC_STATIC,13,74,17,8
+    LTEXT           "Key2",IDC_STATIC,13,92,17,8
+    EDITTEXT        IDC_EDIT_SERIAL0,46,126,34,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SERIAL1,83,126,34,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SERIAL2,120,126,34,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SERIAL3,157,126,34,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Information",IDC_STATIC,7,1,236,54
+    GROUPBOX        "Serial",IDC_STATIC,7,113,236,51
+    LTEXT           "Serial",IDC_STATIC,14,129,19,8
+    EDITTEXT        IDC_EDIT_WRITE_KEY,47,146,34,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Write Key",IDC_STATIC,14,148,31,8
+    PUSHBUTTON      "&Generate",IDC_BUTTON_GEN,200,12,34,14
+    PUSHBUTTON      "&Check",IDC_BUTTON_CHECK,200,126,34,14
+    EDITTEXT        IDC_EDIT_WRITABLE,129,146,17,12,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Writable ?",IDC_STATIC,95,148,32,8
+    GROUPBOX        "Encryption Key",IDC_STATIC,7,58,236,51
+    PUSHBUTTON      "Co&py",IDC_BUTTON_COPY_ADDRESS,200,35,34,14
+    PUSHBUTTON      "C&opy",IDC_BUTTON_COPY_ID,200,144,34,14
+    PUSHBUTTON      "&Burst",IDC_BUTTON_BURST,200,90,34,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SnGen2 MFC 응용 프로그램\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "SnGen2\0"
+            VALUE "LegalCopyright", "Copyright (C) 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SnGen2.EXE\0"
+            VALUE "ProductName", "SnGen2 응용 프로그램\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SNGEN2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 164
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "SnGen2 정보(&A)..."
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\SnGen2.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

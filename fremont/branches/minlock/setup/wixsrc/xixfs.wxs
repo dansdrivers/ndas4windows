@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+	<?include config.wxi?>
+
+	<?ifdef WixCustomTableLocBug?>
+	<?define ActionData.XIXFS = "XIX File System" ?>
+	<?endif?>
+
+	<Fragment>
+
+		<!-- XIXFS FORMATTER -->
+
+		<?ifdef Include.XIXFSFORMATTER?>
+
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.XixfsSetupFileSource)">
+			<Component Id="uxixfs" Guid="$(var.UXIXFS.GUID)" DiskId="1" Win64="$(var.Win64.YesNo)">
+				<File Id="uxixfs.dll" Name="uxixfs.dll" KeyPath="yes" Checksum="yes" >
+					<CopyFile Id="uxixfs.dll_sys" DestinationProperty="SystemFolder" />
+					<!--<?ifdef Win64Build?>-->
+					<!--<CopyFile Id="uxixfs.dll_sys" DestinationProperty="System64Folder" />-->
+					<!--<?endif?>-->
+				</File>
+			</Component>
+
+			<?ifdef Include.XIXFSFORMATTER_EXTRA_DEPS?>
+			<Component Id="uxixfs_deps" Guid="$(var.UXIXFS_DEPS.GUID)" DiskId="1" Win64="$(var.Win64.YesNo)">
+				<CreateFolder />
+				<CopyFile Id="uxixfs_deps_ndasvol.dll" FileId="ndasvol.dll" DestinationProperty="SystemFolder" />
+				<CopyFile Id="uxixfs_deps_ndasuser.dll" FileId="ndasuser.dll" DestinationProperty="SystemFolder" />
+			</Component>
+			<?endif?>
+			
+		</DirectoryRef>
+
+		<?endif?>
+
+		<!-- XIXFS -->
+
+		<?ifdef Include.XIXFS?>
+
+		<InstallExecuteSequence>
+			<Custom Action="XixfsShutdown" Before="xDiMsiStopServices">(?xixfs=3) AND ($xixfs=2 OR $xixfs=4)</Custom>
+		</InstallExecuteSequence>
+
+		<CustomAction Id="XixfsShutdown" BinaryKey="xixfsmsi.dll" DllEntry="XixfsMsiShutdown" Execute="deferred" Return="ignore" Impersonate="no" />
+
+		<UI>
+			<ProgressText Action="XixfsShutdown">$(loc.ActionText.XixfsShutdown)</ProgressText>
+		</UI>
+
+		<Binary Id="xixfsmsi.dll" SourceFile="$(var.SetupDataDir.CustomActionDll)\xixfsmsi.dll" />
+
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.XixfsSetupFileSource)">
+			<Component Id="xixfs" Guid="$(var.XIXFS.GUID)" DiskId="1" Win64="$(var.Win64.YesNo)">
+				<File Id="xixfs.sys" Name="xixfs.sys" KeyPath="yes" Checksum="yes" />
+				<File Id="xixfs.inf" Name="xixfs.inf" Checksum="yes" />
+				<File Id="xixfs.cat" Name="xixfs.cat" Checksum="yes" />
+				<Registry Id="xixfs" Root="HKLM" Key="SOFTWARE\NDAS\Install\OEMINF" Type="string" Name="XIXFS" />
+			</Component>
+		</DirectoryRef>
+
+		<CustomTable Id="xDriverInstall">
+			<Row>
+				<Data Column="Id">StopXIXFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.XIXFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.XIXFS)</Data>
+				<?endif?>
+				<Data Column="Phase">3</Data>
+				<Data Column="Type">StopService</Data>
+				<Data Column="HardwareId">xixfs</Data>
+				<Data Column="Sequence">$(var.Sequence.XIXFS.Stop)</Data>
+				<Data Column="Condition">(?xixfs=3) AND ($xixfs=2 OR $xixfs=4)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">UninstallXIXFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.XIXFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.XIXFS)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultUninstall</Data>
+				<Data Column="INF">[#xixfs.inf]</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.XIXFS.Uninstall)</Data>
+				<Data Column="Condition">(?xixfs=3) AND ($xixfs=2 OR $xixfs=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">xixfs</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">InstallXIXFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.XIXFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.XIXFS)</Data>
+				<?endif?>
+				<Data Column="Phase">2</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultInstall;DefaultUninstall</Data>
+				<Data Column="INF">[#xixfs.inf]</Data>
+				<Data Column="Flags">2</Data>
+				<Data Column="Sequence">$(var.Sequence.XIXFS.Install)</Data>
+				<Data Column="Condition">($xixfs=3)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">xixfs</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">StartXIXFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.XIXFS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.XIXFS)</Data>
+				<?endif?>
+				<Data Column="Phase">4</Data>
+				<Data Column="Type">StartService</Data>
+				<Data Column="HardwareId">xixfs</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.XIXFS.Start)</Data>
+				<Data Column="Condition">($xixfs=3)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+		</CustomTable>
+
+		<?endif?>
+
+	</Fragment>
+</Wix>

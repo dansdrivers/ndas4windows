@@ -1,0 +1,45 @@
+TARGETNAME=ndaspext
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+MSC_OPTIMIZATION=
+
+INCLUDES=..\inc;$(DDK_INC_PATH);$(NDAS_DRIVER_INC_PATH);$(NDAS_INC_PATH)
+
+SOURCES=\
+	filedisk.c \
+	ramdisk.c \
+	ndasportext.c \
+    ndaspext.rc
+
+TARGETLIBS=\
+	$(NDAS_DRIVER_LIB_PATH)\ndasport.lib \
+	$(DDK_LIB_PATH)\ksecdd.lib \
+	$(DDK_LIB_PATH)\wdmsec.lib
+
+PASS0_PUBLISH=\
+	{filediskioctl.h=$(NDAS_INC_PATH)\ndas\filediskioctl.h} \
+	{filediskguid.h=$(NDAS_INC_PATH)\ndas\filediskguid.h} \
+	{ramdiskioctl.h=$(NDAS_INC_PATH)\ndas\ramdiskioctl.h} \
+	{ramdiskguid.h=$(NDAS_INC_PATH)\ndas\ramdiskguid.h}
+
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\ntstrsafe.lib \
+	$(DDK_LIB_PATH)\csq.lib
+
+#
+# WPP Settings
+#
+!IF $(_NT_TARGET_VERSION) <= 0x500
+WPP_TEMPLATE=km-w2k.tpl
+!ELSE
+WPP_TEMPLATE=km-default.tpl
+!ENDIF
+
+RUN_WPP=$(SOURCES) -km -gen:{$(WPP_TEMPLATE)}*.tmh -func:NdasPortTrace(FLAG,LEVEL,MSG,...)
+
+#
+# INF File Generation
+#
+INF_TEMPLATE_EXT=inx
+!include $(NDAS_TOOLS)\create_inf.inc

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" InitialTargets="PreCondition">
+
+  <PropertyGroup>
+    <!-- User should specify this directory -->
+    <BinPubDir />
+  </PropertyGroup>
+  <ItemGroup>
+    <BinPub32 Include="$(BinPubDir)\i386\*.*" Exclude="$(BinPubDir)\i386\*.pdb;$(BinPubDir)\i386\*.cdf"/>
+    <BinPub64 Include="$(BinPubDir)\amd64\*.*" Exclude="$(BinPubDir)\amd64\*.pdb;$(BinPubDir)\amd64\*.cdf"/>
+  </ItemGroup>
+
+  <Target Name="PreCondition">
+    <Error Condition="'$(BinPubDir)'==''" Text="BinPubDir property is not set. e.g. /p:BinPubDir=c:\fremont\trunk\publish\fre" />
+  </Target>
+ 
+  <Target Name="Build">
+    <Copy SourceFiles="@(BinPub32)" DestinationFolder="bin\i386\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(BinPub64)" DestinationFolder="bin\amd64\" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="Clean">
+    <RemoveDir Directories="bin\i386;bin\amd64" />
+  </Target>
+
+  <Target Name="DistClean">
+  </Target>
+
+</Project>

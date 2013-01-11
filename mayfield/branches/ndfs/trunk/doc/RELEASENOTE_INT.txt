@@ -1,0 +1,53 @@
+11-15-2003	NetDisk S/W 2.2.0 Build 505 - 2.2.0 International Pre-release
+	- added multiple languages support (English, Spanish, German, French, Italian, Korean and Japanese)
+	- "First Run Dialog" is replaced with HTML dialog to support multiple languages.
+	  (FirstRunDlg.cpp and FirstRunDlg.h is removed from the project)
+	- enhanced localization features
+
+11-13-2003	NetDisk S/W 2.2.0 bulid 504 - 2.2.0 US Release
+	- introduced localization features using XML and unicode resources.
+	- replaced Startup.exe with Autorun.exe which now uses HTML dialogs to support multiple languages.
+	  Admin.exe <langid> will use the specified language resource.
+	- added manifest files to Admin.exe and AggrMirUI.exe to support Windows XP look 
+	- enhanced and simplified the Build procedure
+	- fixed Admin Tool shows wrong status of NetDisk.
+	- improved stability on multi-processor PCs.
+	- increased stability for file transfers.
+	- fixed NetDisk is not transformed to Windows dynamic disk.
+	- fixed bugs which may result a system crash when a NIC is disabled and enabled.
+	- fixed minor bugs.
+
+10-26-2003 	NetDisk S/W 2.1.4.4
+(Released as 2.1.4a_RC1)
+INTERNAL ONLY:
+	- LPX is revised to incorporate bug fixes in 2.1.4beta2
+	- NDINST.DLL uses a unicode resource file to support multilingual messages 
+	- Uses GetUserDefaultUILanguage() instead of GetSystemDefaultUILanguage()
+          to load language-specific resources.
+          (ADMIN, AGGRMIRUI, LDSERV)
+        - Removed "Launch Program" check box when the user uninstalls the NetDisk from the CD-ROM
+        - Localized the messages of "Installing device drivers", "Uninstalling device drivers", etc
+                
+PUBLIC:
+        - Fixed some minor bugs
+        - Enhanced stability of the data transfer
+	- Enhanced support for multilingual interfaces
+        - Reduced the size of the Setup
+
+10-24-2003      NetDisk S/W 2.1.4.3
+(Released as 2.1.4 English Only)
+(Internal Release as 2.1.4 RC2)
+	-  
+
+09-25-2003	NetDisk S/W 2.1.4beta2
+	- support for IEEE802.3 type such as Linksys 802.11b router.
+
+09-18-2003	NetDisk S/W 2.1.4beta1
+	- Reboot is no longer required for the first-time installation.
+	- Updated to check installation pending status to ensure the proper installation.
+	- does not delay booting process on Windows XP.
+	- Fixed splash screen to show the close button upper right in higher DPI screens.
+	- Updated to support SMP and Hyperthreading machines.
+	- Fixed some minor bugs.
+	- support for hibernation mode.
+

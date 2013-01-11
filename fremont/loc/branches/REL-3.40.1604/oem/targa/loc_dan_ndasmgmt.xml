@@ -1,0 +1,1507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="" version="" lang="dan" oem="base" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/09/00">
+    <base><![CDATA[ndasmgmt]]></base>
+    <translation>ndasmgmt</translation>
+  </string>
+  <string id="/STR/126/05">
+    <base><![CDATA[NDAS Software is configured to reject suspend/hibernation request when devices are mounted.\r\nYou can change this behavior from Options - Advanced.]]></base>
+    <translation>NDAS softwaren er konfigureret til at afvise suspend/hibernation forespørgsel, når enheder tilsluttes.\r\nDu kan ændre denne funktion i Indstillinger - Avanceret</translation>
+  </string>
+  <string id="/STR/126/06">
+    <base><![CDATA[Mount (&Read-only)]]></base>
+    <translation>Tilslut (&Skrivebeskyttet (Read-only))</translation>
+  </string>
+  <string id="/STR/126/07">
+    <base><![CDATA[Mount (Read/&Write)]]></base>
+    <translation>Tilslut (Læs/&Skriv)</translation>
+  </string>
+  <string id="/STR/126/08">
+    <base><![CDATA[Dismo&unt]]></base>
+    <translation>Frakobl</translation>
+  </string>
+  <string id="/STR/126/09">
+    <base><![CDATA[General]]></base>
+    <translation>Generelt</translation>
+  </string>
+  <string id="/STR/126/10">
+    <base><![CDATA[An NDAS device with the name you specified is already registered.\r\nSpecify a different NDAS device name.]]></base>
+    <translation>Der er allerede registreret en NDAS-enhed med det angivne navn.\r\nAngiv et andet NDAS-enhedsnavn.</translation>
+  </string>
+  <string id="/STR/126/11">
+    <base><![CDATA[An error occurred while checking duplicate NDAS device name.]]></base>
+    <translation>Der opstod en fejl ved kontrol af dobbelt NDAS-enhedsnavn.</translation>
+  </string>
+  <string id="/STR/126/12">
+    <base><![CDATA[[%1!d!] %2!s!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/126/13">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>Styring af NDAS-enhed</translation>
+  </string>
+  <string id="/STR/126/14">
+    <base><![CDATA[Dismount &All]]></base>
+    <translation>Frakobl &alle</translation>
+  </string>
+  <string id="/STR/126/15">
+    <base><![CDATA[MAC Address]]></base>
+    <translation>MAC-adresse</translation>
+  </string>
+  <string id="/STR/127/00">
+    <base><![CDATA[This application requires administrative privileges.\r\nLog on as a user in Administrators Group and run this application again.]]></base>
+    <translation>Dette program kræver administratorprivilegier.\r\nLog på som bruger i administratorgruppen og kør dette program igen.</translation>
+  </string>
+  <string id="/STR/127/01">
+    <base><![CDATA[Loading NDASUSER.DLL failed.\r\nPlease check the installation of the software.]]></base>
+    <translation>Indlæsning af NDASUSER.DLL mislykket.\r\nKontrollér installationen af softwaren.</translation>
+  </string>
+  <string id="/STR/127/02">
+    <base><![CDATA[Window creation failed. Possibly system is running out of memory.\r\nClose other applications and try again.]]></base>
+    <translation>Kunne ikke danne vindue. Systemet har sandsynligvis ikke mere hukommelse.\r\nLuk andre programmer og prøv igen.</translation>
+  </string>
+  <string id="/STR/127/03">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>Inkompatibel NDASUSER.DLL installeret.\r\nKontrollér installationen af softwaren.</translation>
+  </string>
+  <string id="/STR/127/04">
+    <base><![CDATA[Unknown]]></base>
+    <translation>Ukendt</translation>
+  </string>
+  <string id="/STR/127/05">
+    <base><![CDATA[KB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/06">
+    <base><![CDATA[MB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/07">
+    <base><![CDATA[GB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/08">
+    <base><![CDATA[TB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/09">
+    <base><![CDATA[Not Available]]></base>
+    <translation>Ikke tilgængelig</translation>
+  </string>
+  <string id="/STR/127/10">
+    <base><![CDATA[Not Available]]></base>
+    <translation>Ikke tilgængelig</translation>
+  </string>
+  <string id="/STR/127/11">
+    <base><![CDATA[NDAS Registration Files (*.ndas)]]></base>
+    <translation>NDAS registreringsfiler (*.ndas)</translation>
+  </string>
+  <string id="/STR/127/12">
+    <base><![CDATA[Encrypted Disk with %1!s! (%2!d! bits) R%3!X!.%4!X!]]></base>
+    <translation>Krypteret disk med %1!s! (%2!d! bits) R%3!X!.%4!X!</translation>
+  </string>
+  <string id="/STR/127/13">
+    <base><![CDATA[AES]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/14">
+    <base><![CDATA[Simple]]></base>
+    <translation>Simpel</translation>
+  </string>
+  <string id="/STR/127/15">
+    <base><![CDATA[None]]></base>
+    <translation>Ingen</translation>
+  </string>
+  <string id="/STR/128/00">
+    <base><![CDATA[Unknown Encryption (%1!04X!)]]></base>
+    <translation>Ukendt kryptering (%1!04X!)</translation>
+  </string>
+  <string id="/STR/128/01">
+    <base><![CDATA[NDAS Registration Files (*.nda)]]></base>
+    <translation>NDAS registreringsfiler (*.nda)</translation>
+  </string>
+  <string id="/STR/128/02">
+    <base><![CDATA[All Files (*.*)]]></base>
+    <translation>Alle filer (*.*)</translation>
+  </string>
+  <string id="/STR/128/03">
+    <base><![CDATA[*.ndas]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/04">
+    <base><![CDATA[*.nda]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/05">
+    <base><![CDATA[*.*]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/06">
+    <base><![CDATA[An error occurred during saving the registration.]]></base>
+    <translation>Der opstod en fejl under lagring af registreringen.</translation>
+  </string>
+  <string id="/STR/128/07">
+    <base><![CDATA[,\_]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/08">
+    <base><![CDATA[The NDAS device is already registered.]]></base>
+    <translation>NDAS-enheden er allerede registreret.</translation>
+  </string>
+  <string id="/STR/128/09">
+    <base><![CDATA['%1!s!' is registered successfully.\r\nClick the taskbar icon to use the registered NDAS device.]]></base>
+    <translation>'%1!s!' er vellykket registreret.\r\nKlik på taskbar-ikonet for at bruge den registrerede NDAS-enhed.</translation>
+  </string>
+  <string id="/STR/128/10">
+    <base><![CDATA[Registered]]></base>
+    <translation>Registreret</translation>
+  </string>
+  <string id="/STR/128/11">
+    <base><![CDATA[Invalid]]></base>
+    <translation>Ugyldig</translation>
+  </string>
+  <string id="/STR/128/12">
+    <base><![CDATA[New]]></base>
+    <translation>Ny</translation>
+  </string>
+  <string id="/STR/128/13">
+    <base><![CDATA[Device ID: %1!s!-%2!s!-%3!s!-%4!s!\r\nWrite Key: %5!s!\r\n%6!s!]]></base>
+    <translation>Enheds-ID: %1!s!-%2!s!-%3!s!-%4!s!\r\nSkriv-nøgle (Write key): %5!s!\r\n%6!s!</translation>
+  </string>
+  <string id="/STR/128/14">
+    <base><![CDATA[Name]]></base>
+    <translation>Navn</translation>
+  </string>
+  <string id="/STR/128/15">
+    <base><![CDATA[Status]]></base>
+    <translation>Status</translation>
+  </string>
+  <string id="/STR/129/00">
+    <base><![CDATA[Error (Code: %1!d!)]]></base>
+    <translation>Fejl (Kode: %1!d!)</translation>
+  </string>
+  <string id="/STR/129/01">
+    <base><![CDATA[An error occurred while reading the file '%1!s!'.]]></base>
+    <translation>Der opstod en fejl ved læsning af filen '%1!s!'.</translation>
+  </string>
+  <string id="/STR/129/02">
+    <base><![CDATA[RW]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/03">
+    <base><![CDATA[RO]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/04">
+    <base><![CDATA[PIO]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/05">
+    <base><![CDATA[DMA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/06">
+    <base><![CDATA[UDMA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/07">
+    <base><![CDATA[LBA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/08">
+    <base><![CDATA[LBA48]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/09">
+    <base><![CDATA[Shared RW]]></base>
+    <translation>Delt RW</translation>
+  </string>
+  <string id="/STR/129/10">
+    <base><![CDATA[Shared RW *]]></base>
+    <translation>Delt RW *</translation>
+  </string>
+  <string id="/STR/129/11">
+    <base><![CDATA[Exclusive RW]]></base>
+    <translation>Eksklusive RW</translation>
+  </string>
+  <string id="/STR/129/12">
+    <base><![CDATA[Dismounting the NDAS device failed because a program is still using it. Close any programs that might be using it, and then try again.]]></base>
+    <translation>Frakobling af NDAS-enheden mislykket fordi et program stadig bruger den. Luk alle programmer, der bruger den, og prøv igen.</translation>
+  </string>
+  <string id="/STR/129/13">
+    <base><![CDATA[Dismount devices asynchronously]]></base>
+    <translation>Frakobl enheder asynkront</translation>
+  </string>
+  <string id="/STR/129/14">
+    <base><![CDATA[Status]]></base>
+    <translation>Status</translation>
+  </string>
+  <string id="/STR/129/15">
+    <base><![CDATA[Logical Unit]]></base>
+    <translation>Logisk enhed</translation>
+  </string>
+  <string id="/STR/130/00">
+    <base><![CDATA[Mounting (RO)]]></base>
+    <translation>Tilslutning (RO)</translation>
+  </string>
+  <string id="/STR/130/01">
+    <base><![CDATA[Mounting (RW)]]></base>
+    <translation>Tilslutning (RW)</translation>
+  </string>
+  <string id="/STR/130/02">
+    <base><![CDATA[Dismounting (RO)]]></base>
+    <translation>Frakobling (RO)</translation>
+  </string>
+  <string id="/STR/130/03">
+    <base><![CDATA[Dismounting (RW)]]></base>
+    <translation>Frakobling (RW)</translation>
+  </string>
+  <string id="/STR/130/04">
+    <base><![CDATA[Failed]]></base>
+    <translation>Mislykket</translation>
+  </string>
+  <string id="/STR/130/05">
+    <base><![CDATA[Dismounted]]></base>
+    <translation>Frakoblet</translation>
+  </string>
+  <string id="/STR/130/06">
+    <base><![CDATA[Revision]]></base>
+    <translation>Revision</translation>
+  </string>
+  <string id="/STR/188/09">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&</translation>
+  </string>
+  <string id="/STR/188/10">
+    <base><![CDATA[&Add]]></base>
+    <translation>&Tilføj</translation>
+  </string>
+  <string id="/STR/188/11">
+    <base><![CDATA[The host (%1!s!) is requesting the Write Access of "%2!s!'s".\r\nDo you want to accept the request and dismount the NDAS device?]]></base>
+    <translation>Værten (%1!s!) anmoder om Skrive-adgang til "%2!s!'s".\r\nVil du acceptere denne anmodning og frakoble NDAS-enheden?</translation>
+  </string>
+  <string id="/STR/188/12">
+    <base><![CDATA[Verdana]]></base>
+    <translation>Verdana</translation>
+  </string>
+  <string id="/STR/188/13">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/188/14">
+    <base><![CDATA[Connection to the following NDAS devices has been lost.\r\n%1!s!]]></base>
+    <translation>Forbindelsen til følgende NDAS-enheder mistet.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/188/15">
+    <base><![CDATA[NDAS Device Disconnected]]></base>
+    <translation>NDAS-enhed frakoblet</translation>
+  </string>
+  <string id="/STR/189/00">
+    <base><![CDATA[Connection to the following NDAS devices are restored.\r\n%1!s!]]></base>
+    <translation>Forbindelsen til følgende NDAS-enheder genoprettet.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/189/02">
+    <base><![CDATA[Connection to the following devices are unstable.\r\nThe system is reconnecting to the devices...\r\n%1!s!]]></base>
+    <translation>Forbindelsen til følgende enheder er ustabil.\r\nSystemet genopretter forbindelse til enhederne...\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/189/04">
+    <base><![CDATA[Are you sure you want to exit from NDAS Device Management?]]></base>
+    <translation>Er du sikker på, at du vil afsluttet styring af NDAS-enhed?</translation>
+  </string>
+  <string id="/STR/189/05">
+    <base><![CDATA[Are you sure you want to dismount the NDAS device?\r\nThe dismounting may fail if some applications are accessing the NDAS device.]]></base>
+    <translation>Er du sikker på at du vil frakoble NDAS-enheden?\r\nFrakoblingen kan mislykkes, hvis nogle programmer forsøger adgang til NDAS-enheden.</translation>
+  </string>
+  <string id="/STR/189/06">
+    <base><![CDATA[Are you sure you want to dismount all NDAS devices?\r\nThe dismounting may fail if some applications are accessing the NDAS device.]]></base>
+    <translation>Er du sikker på at du vil frakoble alle NDAS-enheder?\r\nFrakoblingen kan mislykkes, hvis nogle programmer forsøger adgang til NDAS-enheden.</translation>
+  </string>
+  <string id="/STR/189/07">
+    <base><![CDATA[Are you sure you want to dismount %1!s!?\r\nThe dismounting may fail if some applications are accessing the NDAS device.]]></base>
+    <translation>Er du sikker på at du vil frakoble alle %1!s!?\r\nFrakoblingen kan mislykkes, hvis nogle programmer forsøger adgang til NDAS-enheden.</translation>
+  </string>
+  <string id="/STR/189/08">
+    <base><![CDATA[Are you sure you want to remove the %1!s!?]]></base>
+    <translation>Er du sikker på, at du vil fjerne %1!s!?</translation>
+  </string>
+  <string id="/STR/189/09">
+    <base><![CDATA[Are you sure you want to deregister "%1!s!"?]]></base>
+    <translation>Er du sikker på, at du vil afregistrere "%1!s!"?</translation>
+  </string>
+  <string id="/STR/189/10">
+    <base><![CDATA[This RAID will run in degraded mode due to a missing/defective member and this can cause irreconcilable RAID status. Do you want to continue? (Use NDAS Bind management for more information)]]></base>
+    <translation>Dette RAID vil køre i forringet modus på grund et manglende/defekt element, og dettet kan forårsage uforenelig RAID status. Vil du fortsætte? (Brug NDAS Bind management for mere information)</translation>
+  </string>
+  <string id="/STR/189/11">
+    <base><![CDATA[%1!s! Properties]]></base>
+    <translation>%1!s! Egenskaber</translation>
+  </string>
+  <string id="/STR/189/12">
+    <base><![CDATA[Online]]></base>
+    <translation>Online</translation>
+  </string>
+  <string id="/STR/189/13">
+    <base><![CDATA[Online *]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/189/14">
+    <base><![CDATA[Deactivated]]></base>
+    <translation>Deaktiveret</translation>
+  </string>
+  <string id="/STR/189/15">
+    <base><![CDATA[Offline]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/190/00">
+    <base><![CDATA[Error]]></base>
+    <translation>Fejl</translation>
+  </string>
+  <string id="/STR/190/01">
+    <base><![CDATA[Mounted (RO)]]></base>
+    <translation>Tilsluttet (RO)</translation>
+  </string>
+  <string id="/STR/190/02">
+    <base><![CDATA[Mounted (RW)]]></base>
+    <translation>Tilsluttet (RW)</translation>
+  </string>
+  <string id="/STR/190/03">
+    <base><![CDATA[Unknown]]></base>
+    <translation>Tilsluttet (RW)</translation>
+  </string>
+  <string id="/STR/190/04">
+    <base><![CDATA[Hardware]]></base>
+    <translation>Hardware</translation>
+  </string>
+  <string id="/STR/190/05">
+    <base><![CDATA[Max LUs]]></base>
+    <translation>Maks. LU'er</translation>
+  </string>
+  <string id="/STR/190/06">
+    <base><![CDATA[Max Transfer Blocks]]></base>
+    <translation>Maks. overføringsblokke</translation>
+  </string>
+  <string id="/STR/190/07">
+    <base><![CDATA[Max Unit Devices]]></base>
+    <translation>Maks. enheder</translation>
+  </string>
+  <string id="/STR/190/08">
+    <base><![CDATA[Command Processing Slots]]></base>
+    <translation>Kommandobehandlingsslots</translation>
+  </string>
+  <string id="/STR/190/10">
+    <base><![CDATA[Version]]></base>
+    <translation>Version</translation>
+  </string>
+  <string id="/STR/190/11">
+    <base><![CDATA[Device Type]]></base>
+    <translation>Enhedstype</translation>
+  </string>
+  <string id="/STR/190/12">
+    <base><![CDATA[Firmware Revision]]></base>
+    <translation>Firmware revision</translation>
+  </string>
+  <string id="/STR/190/13">
+    <base><![CDATA[LBA Mode]]></base>
+    <translation>LBA modus</translation>
+  </string>
+  <string id="/STR/190/14">
+    <base><![CDATA[Model]]></base>
+    <translation>Model</translation>
+  </string>
+  <string id="/STR/190/15">
+    <base><![CDATA[Serial Number]]></base>
+    <translation>Serienummer</translation>
+  </string>
+  <string id="/STR/191/00">
+    <base><![CDATA[Unit Device %1!d!]]></base>
+    <translation>Enhed %1!d!</translation>
+  </string>
+  <string id="/STR/191/01">
+    <base><![CDATA[Transfer Mode]]></base>
+    <translation>Overføringsmodus</translation>
+  </string>
+  <string id="/STR/191/02">
+    <base><![CDATA[Registration is finished successfully and the device is now ready to use.]]></base>
+    <translation>Registrering er vellykket gennemført og enheden er klar til brug.</translation>
+  </string>
+  <string id="/STR/191/03">
+    <base><![CDATA[Please wait while checking the NDAS device status...]]></base>
+    <translation>Vent venligst mens NDAS-enhedens status kontrolleres...</translation>
+  </string>
+  <string id="/STR/191/04">
+    <base><![CDATA[&Disable]]></base>
+    <translation>&Deaktiver</translation>
+  </string>
+  <string id="/STR/191/05">
+    <base><![CDATA[Enter the NDAS device ID to register.]]></base>
+    <translation>Indtast NDAS-enhedens ID for at registrere.</translation>
+  </string>
+  <string id="/STR/191/06">
+    <base><![CDATA[NDAS device ID]]></base>
+    <translation>NDAS-enhedens ID</translation>
+  </string>
+  <string id="/STR/191/07">
+    <base><![CDATA[Specify the name for the NDAS device.]]></base>
+    <translation>Angiv navnet til NDAS-enheden.</translation>
+  </string>
+  <string id="/STR/191/08">
+    <base><![CDATA[NDAS Device Name]]></base>
+    <translation>NDAS-enheds navn</translation>
+  </string>
+  <string id="/STR/191/09">
+    <base><![CDATA[The Wizard will guide you through the NADS device registration. Before continuing to the next step, please do the following:\r\n\r\n- Connect the NDAS device to the network.\r\n- Turn on the NDAS device.\r\n\r\nTo continue, click "Next".]]></base>
+    <translation>Guiden vil lede dig igennem registreringen af NADS-enheden. Inden du fortsætter til næste trin, skal du gøre følgende:\r\n\r\n- Forbind NDAS-enheden til netværket.\r\n- Tænd NDAS-enheden.\r\n\r\nKlik på Næste for at fortsætte.</translation>
+  </string>
+  <string id="/STR/191/10">
+    <base><![CDATA[NDAS Device Registration Wizard]]></base>
+    <translation>NDAS-enhedens registreringsguide</translation>
+  </string>
+  <string id="/STR/191/11">
+    <base><![CDATA[Do you want to mount this NDAS device now?]]></base>
+    <translation>Vil du tilslutte denne NDAS-enhed nu?</translation>
+  </string>
+  <string id="/STR/191/12">
+    <base><![CDATA[Mount NDAS Device]]></base>
+    <translation>Tilslut NDAS-enheden</translation>
+  </string>
+  <string id="/STR/191/13">
+    <base><![CDATA[NDAS Device Registration Wizard]]></base>
+    <translation>NDAS-enhedens registreringsguide</translation>
+  </string>
+  <string id="/STR/191/15">
+    <base><![CDATA[An error has occurred while setting up a Write Key.]]></base>
+    <translation>Der er opstået en fejl under opsætning af Skriv-nøglen (Write key).</translation>
+  </string>
+  <string id="/STR/192/00">
+    <base><![CDATA[An error occurred while disabling an NDAS device.]]></base>
+    <translation>Der opstod en fejl ved deaktivering af en NDAS-enhed.</translation>
+  </string>
+  <string id="/STR/192/01">
+    <base><![CDATA[An error occurred while enabling an NDAS device.]]></base>
+    <translation>Der opstod en fejl ved aktivering af en NDAS-enhed.</translation>
+  </string>
+  <string id="/STR/192/02">
+    <base><![CDATA[An error occurred while mounting an NDAS device as Read-Only Mode.]]></base>
+    <translation>Der opstod en fejl ved tilslutning af en NDAS-enhed som skrivebeskyttet (Read-Only) funktion.</translation>
+  </string>
+  <string id="/STR/192/03">
+    <base><![CDATA[An error occurred while mounting an NDAS device as Read/Write Mode.]]></base>
+    <translation>Der opstod en fejl ved tilslutning af en NDAS-enhed som Læs/Skriv-funktion.</translation>
+  </string>
+  <string id="/STR/192/04">
+    <base><![CDATA[Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!]]></base>
+    <translation>Facilitet: NDAS 0x%1!04X!\r\nFejlkode: %2!u! (0x%2!04X!)\r\n%3!s!</translation>
+  </string>
+  <string id="/STR/192/05">
+    <base><![CDATA[An error occurred during registration.]]></base>
+    <translation>Der opstod en fejl under registreringen.</translation>
+  </string>
+  <string id="/STR/192/06">
+    <base><![CDATA[An error occurred while removing a Write Key.]]></base>
+    <translation>Der opstod en fejl under fjernelse af en Skriv-nøgle (Write key).</translation>
+  </string>
+  <string id="/STR/192/07">
+    <base><![CDATA[An error occurred while renaming an NDAS device.]]></base>
+    <translation>Der opstod en fejl ved omdøbning af en NDAS-enhed.</translation>
+  </string>
+  <string id="/STR/192/08">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation>Fejlkode: %1!u! (0x%1!04X!)\r\n%2!s!</translation>
+  </string>
+  <string id="/STR/192/09">
+    <base><![CDATA[NDAS Device Management Error]]></base>
+    <translation>Styringsfejl for NDAS-enhed</translation>
+  </string>
+  <string id="/STR/192/10">
+    <base><![CDATA[An error occurred while dismounting an NDAS device.]]></base>
+    <translation>Der opstod en fejl ved frakobling af en NDAS-enhed.</translation>
+  </string>
+  <string id="/STR/192/11">
+    <base><![CDATA[An error occurred while deregistering an NDAS device.]]></base>
+    <translation>Der opstod en fejl ved afregistrering af en NDAS-enhed.</translation>
+  </string>
+  <string id="/STR/192/12">
+    <base><![CDATA[An error occurred while updating an NDAS device list.]]></base>
+    <translation>Der opstod en fejl ved opdatering af en NDAS-enhedsliste.</translation>
+  </string>
+  <string id="/STR/192/13">
+    <base><![CDATA[NDAS device ID is 20 characters long and it is composed of alphanumeric characters!\r\n]]></base>
+    <translation>NDAS-enhedens ID er 20 tegn lang og er sammensat af alfanumeriske tegn!\r\n</translation>
+  </string>
+  <string id="/STR/192/14">
+    <base><![CDATA[Invalid Device ID!]]></base>
+    <translation>Ugyldig enhed-ID!</translation>
+  </string>
+  <string id="/STR/192/15">
+    <base><![CDATA[Unknown Host]]></base>
+    <translation>Ugyldig enhed-ID!</translation>
+  </string>
+  <string id="/STR/193/00">
+    <base><![CDATA[Automatic]]></base>
+    <translation>Automatisk</translation>
+  </string>
+  <string id="/STR/193/01">
+    <base><![CDATA[Changing the user interface language requires application restart. Do you want to restart the application now?]]></base>
+    <translation>Ændring af brugergrænsefladens sprog kræver genstart af programmet. Vil du genstarte programmet nu?</translation>
+  </string>
+  <string id="/STR/193/11">
+    <base><![CDATA[Unavailable]]></base>
+    <translation>Utilgængelig</translation>
+  </string>
+  <string id="/STR/193/14">
+    <base><![CDATA[Mounted in Read-only mode]]></base>
+    <translation>Tilsluttet i skrivebeskyttet (Read-only) modus</translation>
+  </string>
+  <string id="/STR/193/15">
+    <base><![CDATA[Mounted in Read/Write mode]]></base>
+    <translation>Tilsluttet i Læs/Skriv-modus</translation>
+  </string>
+  <string id="/STR/194/00">
+    <base><![CDATA[Mounting]]></base>
+    <translation>Tilslutning</translation>
+  </string>
+  <string id="/STR/194/01">
+    <base><![CDATA[Not Mountable]]></base>
+    <translation>Kan ikke tilsluttes</translation>
+  </string>
+  <string id="/STR/194/02">
+    <base><![CDATA[Unknown Status (0x%1!08X!)]]></base>
+    <translation>Ukendt status (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/194/03">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation>Ikke tilsluttet</translation>
+  </string>
+  <string id="/STR/194/04">
+    <base><![CDATA[Dismounting]]></base>
+    <translation>Frakobling</translation>
+  </string>
+  <string id="/STR/194/05">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation>Sammensat disk</translation>
+  </string>
+  <string id="/STR/194/06">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Compact Flash-drev</translation>
+  </string>
+  <string id="/STR/194/08">
+    <base>DVD Drive</base>
+    <translation>DVD-drev</translation>
+  </string>
+  <string id="/STR/194/09">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation>Spejl-disk</translation>
+  </string>
+  <string id="/STR/194/10">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO-drev</translation>
+  </string>
+  <string id="/STR/194/11">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation>Grunddisk</translation>
+  </string>
+  <string id="/STR/194/12">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation>Ukendt type (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/194/13">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation>Virtuelt DVD-drev</translation>
+  </string>
+  <string id="/STR/194/14">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>Styring af NDAS-enhed</translation>
+  </string>
+  <string id="/STR/194/15">
+    <base><![CDATA[Online]]></base>
+    <translation>Online</translation>
+  </string>
+  <string id="/STR/195/00">
+    <base><![CDATA[Deactivated]]></base>
+    <translation>Deaktiveret</translation>
+  </string>
+  <string id="/STR/195/01">
+    <base><![CDATA[Offline]]></base>
+    <translation>Offline</translation>
+  </string>
+  <string id="/STR/195/02">
+    <base><![CDATA[Unknown]]></base>
+    <translation>Ukendt</translation>
+  </string>
+  <string id="/STR/195/03">
+    <base><![CDATA[NDAS Device %1!d!]]></base>
+    <translation>NDAS-enhed %1!d!</translation>
+  </string>
+  <string id="/STR/195/04">
+    <base><![CDATA[(No NDAS Device)]]></base>
+    <translation>(Ingen NDAS-enhed)</translation>
+  </string>
+  <string id="/STR/195/05">
+    <base><![CDATA[Do not show the confirmation dialog on exit]]></base>
+    <translation>Vis ikke bekræftelsesdialogen ved afslutning</translation>
+  </string>
+  <string id="/STR/195/06">
+    <base><![CDATA[Show NDAS Device Status text]]></base>
+    <translation>Vis statustekst for NDAS-enheden</translation>
+  </string>
+  <string id="/STR/195/07">
+    <base><![CDATA[Show Dismount All command]]></base>
+    <translation>Vis kommandoen Frakobl alle</translation>
+  </string>
+  <string id="/STR/195/08">
+    <base><![CDATA[Options]]></base>
+    <translation>Indstillinger</translation>
+  </string>
+  <string id="/STR/195/09">
+    <base><![CDATA[Confirmation]]></base>
+    <translation>Bekræftelse</translation>
+  </string>
+  <string id="/STR/195/10">
+    <base><![CDATA[Menu]]></base>
+    <translation>Menu</translation>
+  </string>
+  <string id="/STR/195/11">
+    <base><![CDATA[You have successfully completed the NDAS device Registration Wizard.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation>Du har vellykket gennemført NDAS-enhedens registreringsguide.\r\n\r\nKlik på Afslut for at lukke denne guide.</translation>
+  </string>
+  <string id="/STR/195/12">
+    <base><![CDATA[You have successfully registered the NDAS device. \r\n\r\nHowever, the NDAS device is not found and cannot be connected at this time. Please check the NDAS device connection.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation>Du har vellykket registreret NDAS-enheden. \r\n\r\nImidlertid kan NDAS-enheden ikke findes og kan ikke tilsluttes nu. Kontrollér NDAS-enhedens forbindelse.\r\n\r\nKlik på Afslut for at lukke denne guide.</translation>
+  </string>
+  <string id="/STR/195/13">
+    <base><![CDATA[You have successfully registered and the NDAS device is connected. \r\n\r\nHowever, there is no mountable NDAS device found at this time. Please check the status from the task bar icon menu.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation>Du har vellykket registreret NDAS-enheden. \r\n\r\nImidlertid kan NDAS-enheden ikke findes og kan ikke tilsluttes nu. Kontrollér NDAS-enhedens forbindelse.\r\n\r\nKlik på Afslut for at lukke denne guide.</translation>
+  </string>
+  <string id="/STR/195/14">
+    <base><![CDATA[Remo&ve]]></base>
+    <translation>Fjern</translation>
+  </string>
+  <string id="/STR/195/15">
+    <base><![CDATA[Are you sure you want to remove the Write Key?\r\nYou cannot mount this device as Read/Write anymore without the Write Key.]]></base>
+    <translation>Er du sikker på at du vil fjerne Skriv-nøglen (Write key)?\r\nDu kan ikke mere tilslutte denne enhed som Læs/Skriv-enhed uden Skriv-nøglen.</translation>
+  </string>
+  <string id="/STR/196/00">
+    <base><![CDATA[Remove Write Key]]></base>
+    <translation>Fjern Skriv-nøglen</translation>
+  </string>
+  <string id="/STR/196/01">
+    <base><![CDATA[This NDAS device is being used by another host who has the Read/Write access to the NDAS device. And shared-write mode cannot be used at this time.\r\nWould you like to request the Read/Write access of the NDAS device?]]></base>
+    <translation>Denne NDAS-enhed bruges af anden vært, som har Læse/Skrive-adgang til NDAS-enheden. Og delt skrive-modus kan ikke bruges på dette tidpunkt.\r\nVil du anmode om Læse/Skrive-adgang til NDAS-enheden?</translation>
+  </string>
+  <string id="/STR/196/02">
+    <base><![CDATA[&Properties...]]></base>
+    <translation>&Egenskaber...</translation>
+  </string>
+  <string id="/STR/196/03">
+    <base><![CDATA[Please wait while connecting to the host...]]></base>
+    <translation>Vent, mens der oprettes forbindelse til værten...</translation>
+  </string>
+  <string id="/STR/196/04">
+    <base><![CDATA[Waiting for a response...]]></base>
+    <translation>Venter på response...</translation>
+  </string>
+  <string id="/STR/196/05">
+    <base><![CDATA[Unit Device information is not available]]></base>
+    <translation>Information om enheden er ikke tilgængelig</translation>
+  </string>
+  <string id="/STR/196/06">
+    <base><![CDATA[Other]]></base>
+    <translation>Andet</translation>
+  </string>
+  <string id="/STR/196/07">
+    <base><![CDATA[Mounted]]></base>
+    <translation>Tilsluttet</translation>
+  </string>
+  <string id="/STR/196/08">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation>Ikke tilsluttet</translation>
+  </string>
+  <string id="/STR/196/10">
+    <base><![CDATA[Unknown (%1!d!)]]></base>
+    <translation>Ukendt (%1!d!)</translation>
+  </string>
+  <string id="/STR/196/11">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation>CD/DVD-drev</translation>
+  </string>
+  <string id="/STR/196/12">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Compact Flash-drev</translation>
+  </string>
+  <string id="/STR/196/13">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>Diskdrev</translation>
+  </string>
+  <string id="/STR/196/14">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO-drev</translation>
+  </string>
+  <string id="/STR/196/15">
+    <base><![CDATA[Unknown Type (%1!08X!)]]></base>
+    <translation>Ukendt type (%1!08X!)</translation>
+  </string>
+  <string id="/STR/197/00">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation>CD/DVD-drev</translation>
+  </string>
+  <string id="/STR/197/01">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>Diskdrev</translation>
+  </string>
+  <string id="/STR/197/02">
+    <base><![CDATA[Member of Aggregated Disk]]></base>
+    <translation>Element i sammensat disk</translation>
+  </string>
+  <string id="/STR/197/03">
+    <base><![CDATA[Member of Mirrored Disk (Primary)]]></base>
+    <translation>Element i spejldisk (primær)</translation>
+  </string>
+  <string id="/STR/197/04">
+    <base><![CDATA[Member of Mirrored Disk (Secondary)]]></base>
+    <translation>Element i spejldisk (sekundær)</translation>
+  </string>
+  <string id="/STR/197/05">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>Diskdrev</translation>
+  </string>
+  <string id="/STR/197/06">
+    <base><![CDATA[Disk Drive (Unrecognized Type %1!04X!)]]></base>
+    <translation>Diskdrev (ukendt type %1!04X!)</translation>
+  </string>
+  <string id="/STR/197/07">
+    <base><![CDATA[Unknown Type (0x%1!04X!)]]></base>
+    <translation>Ukendt type (0x%1!04X!)</translation>
+  </string>
+  <string id="/STR/197/08">
+    <base><![CDATA[Unknown Unit Device Type]]></base>
+    <translation>Ukendt type enhed</translation>
+  </string>
+  <string id="/STR/197/09">
+    <base><![CDATA[&Deregister]]></base>
+    <translation>&Afregistrér</translation>
+  </string>
+  <string id="/STR/197/10">
+    <base><![CDATA[None]]></base>
+    <translation>Ingen</translation>
+  </string>
+  <string id="/STR/197/11">
+    <base><![CDATA[Present]]></base>
+    <translation>Til stede</translation>
+  </string>
+  <string id="/STR/197/12">
+    <base><![CDATA[Do not show a confirmation dialog on removing the Write Key]]></base>
+    <translation>Vis ikke en bekræftelsesdialog ved fjernelse af Skriv-nøglen (Write key)</translation>
+  </string>
+  <string id="/STR/197/13">
+    <base><![CDATA[Do not show a confirmation dialog on deregistering an NDAS device]]></base>
+    <translation>Vis ikke en bekræftelsesdialog ved afregistrering af en NDAS-enhed</translation>
+  </string>
+  <string id="/STR/197/14">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting an NDAS device]]></base>
+    <translation>Vis ikke en bekræftelsesdialog ved frakobling af en NDAS-enhed</translation>
+  </string>
+  <string id="/STR/197/15">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting all of the NDAS devices]]></base>
+    <translation>Vis ikke en bekræftelsesdialog ved frakobling af alle NDAS-enheder</translation>
+  </string>
+  <string id="/STR/198/00">
+    <base><![CDATA[Use Wizard for Registration]]></base>
+    <translation>Brug guiden til registrering</translation>
+  </string>
+  <string id="/STR/198/01">
+    <base><![CDATA[NDAS Device Management is running now.\r\nClick here to register a new NDAS Device to your system.]]></base>
+    <translation>Styring af NDAS-enhed kører nu.\r\nKlik her for at registrere en ny NDAS-enhed på systemet.</translation>
+  </string>
+  <string id="/STR/198/02">
+    <base><![CDATA[NDAS Device Management is running]]></base>
+    <translation>Styring af NDAS-enhed kører</translation>
+  </string>
+  <string id="/STR/198/03">
+    <base><![CDATA[NDAS Device Management is already running.\r\nClick the task bar icon to show the menu such that you can access the features.]]></base>
+    <translation>Styring af NDAS-enhed kører allerede.\r\nKlik på taskbar-ikonet for at vise menuen, så du kan få adgang til funktionerne.</translation>
+  </string>
+  <string id="/STR/198/04">
+    <base><![CDATA[NDAS Device Management is already running]]></base>
+    <translation>Styring af NDAS-enhed kører allerede</translation>
+  </string>
+  <string id="/STR/198/05">
+    <base><![CDATA[Access]]></base>
+    <translation>Adgang</translation>
+  </string>
+  <string id="/STR/198/06">
+    <base><![CDATA[Hostname]]></base>
+    <translation>Værtsnavn</translation>
+  </string>
+  <string id="/STR/198/07">
+    <base><![CDATA[Network Address]]></base>
+    <translation>Netværksadresse</translation>
+  </string>
+  <string id="/STR/198/08">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/09">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Not registered)]]></base>
+    <translation>[%1!d!] %2!s!:%3!d! (Ikke registreret)</translation>
+  </string>
+  <string id="/STR/198/10">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Unavailable)]]></base>
+    <translation>[%1!d!] %2!s!:%3!d! (Utilgængelig)</translation>
+  </string>
+  <string id="/STR/198/11">
+    <base><![CDATA[Please wait while mounting a requested NDAS device...]]></base>
+    <translation>Vent venligst mens en forespurgt NDAS-enhed tilsluttes...</translation>
+  </string>
+  <string id="/STR/198/12">
+    <base><![CDATA[Please wait while dismounting a requested NDAS device...]]></base>
+    <translation>Vent venligst mens en forespurgt NDAS-enhed frakobles...</translation>
+  </string>
+  <string id="/STR/198/13">
+    <base><![CDATA[The new user interface language will be applied when you restart the application.]]></base>
+    <translation>Det nye brugergrænsefladesprog anvendes, når du genstarter programmet.</translation>
+  </string>
+  <string id="/STR/198/14">
+    <base><![CDATA[Suspend/Hibernation Support]]></base>
+    <translation>Suspend/Hibernation understøtning</translation>
+  </string>
+  <string id="/STR/198/15">
+    <base><![CDATA[Allow suspend/hibernation]]></base>
+    <translation>Tillad suspend/hibernation</translation>
+  </string>
+  <string id="/STR/199/00">
+    <base><![CDATA[NDAS Device Management is running now.\r\nClick the task bar icon to show the menu such that you can access the features.]]></base>
+    <translation>Styring af NDAS-enhed kører nu.\r\nKlik på taskbar-ikonet for at vise menuen, så du kan få adgang til funktionerne.</translation>
+  </string>
+  <string id="/STR/199/01">
+    <base><![CDATA[Deny suspend/hibernation if there are mounted devices]]></base>
+    <translation>Afvis suspend/hibernation hvis der er tilsluttede enheder</translation>
+  </string>
+  <string id="/STR/199/02">
+    <base><![CDATA[Allowing suspend/hibernation may cause a data corruption and the device may not be available on resuming in multi-write mode.\r\nAre you sure you want to enable this feature?]]></base>
+    <translation>Tilladelse af suspend/hibernation kan forårsage ødelagte data, og enheden vil måske ikke være tilgængelig ved genoptagelse i multi-skrive modus.\r\nEr du sikker på at du vil aktivere denne funktion?</translation>
+  </string>
+  <string id="/STR/199/03">
+    <base><![CDATA[&Activate]]></base>
+    <translation>&Aktivér</translation>
+  </string>
+  <string id="/STR/199/04">
+    <base><![CDATA[[%1!d!] %2!s! (Unavailable)]]></base>
+    <translation>[%1!d!] %2!s! (Utilgængelig)</translation>
+  </string>
+  <string id="/STR/199/05">
+    <base><![CDATA[Are you sure you want to deactivate this NDAS device?\r\nAfter deactivating, you can reactivate this device from the menu]]></base>
+    <translation>Er du sikker på at du vil deaktivere denne NDAS-enhed?\r\nEfter deaktivering kan du genaktivere denne enhed fra menuen</translation>
+  </string>
+  <string id="/STR/199/06">
+    <base><![CDATA[Are you sure you want to reset the connection to this NDAS device?]]></base>
+    <translation>Er du sikker på, at du vil tilbagestille forbindelsen til denne NDAS-enhed?</translation>
+  </string>
+  <string id="/STR/199/07">
+    <base><![CDATA[A member of RAID is inaccessible or not configured correctly. RAID system will be running in degraded mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation>Et element af RAID er utilgængeligt eller konfigureret forkert. RAID-systemet vil køre i forringet modus. Brug NDAS Bind Management værktøjet for mere information.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/08">
+    <base><![CDATA[The NDAS Device is running in degraded mode]]></base>
+    <translation>NDAS-enheden kører i forringet modus</translation>
+  </string>
+  <string id="/STR/199/09">
+    <base><![CDATA[Component]]></base>
+    <translation>Komponent</translation>
+  </string>
+  <string id="/STR/199/10">
+    <base><![CDATA[Version]]></base>
+    <translation>Version</translation>
+  </string>
+  <string id="/STR/199/11">
+    <base><![CDATA[NDAS Device status]]></base>
+    <translation>NDAS-enheds tilstand</translation>
+  </string>
+  <string id="/STR/199/12">
+    <base><![CDATA[NDAS Device is running in normal status\r\n%1!s!]]></base>
+    <translation>NDAS-enheden kører i normal tilstand\r\n%1!s</translation>
+  </string>
+  <string id="/STR/199/13">
+    <base><![CDATA[The RAID is now running in recovery mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation>RAID kører nu i genoprettelsesmodus. Brug NDAS Bind Management værktøjet for mere information.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/14">
+    <base><![CDATA[Connection(s) to one or more NDAS device(s) has been recovered.\r\n%1!s!]]></base>
+    <translation>Forbindelsen til én eller flere NDAS-enheder er genoprettet.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/15">
+    <base><![CDATA[The RAID is now fully recovered.\r\n%1!s!]]></base>
+    <translation>RAID er nu fuldt genoprettet.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/200/00">
+    <base><![CDATA[[%1!d!] %2!s! (Not registered)]]></base>
+    <translation>[%1!d!] %2!s! (Ikke registreret)</translation>
+  </string>
+  <string id="/STR/200/01">
+    <base><![CDATA[Re&set]]></base>
+    <translation>Tilbagestil</translation>
+  </string>
+  <string id="/STR/200/02">
+    <base><![CDATA[The RAID is in failure state. Use NDAS Bind Management tool for more information\r\n%1!s!]]></base>
+    <translation>RAID er i fejltilstand. Brug NDAS Bind Management værktøjet for mere information\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/251/02">
+    <base><![CDATA[NDAS Device Management\r\nNDAS Service is not available.]]></base>
+    <translation>Styring af NDAS-enhed\r\nNDAS-service ikke tilgængelig.</translation>
+  </string>
+  <string id="/STR/251/12">
+    <base><![CDATA[Connecting]]></base>
+    <translation>Tilslutter</translation>
+  </string>
+  <string id="/STR/257/04">
+    <base><![CDATA[Disk (RAID-0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/05">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/08">
+    <base><![CDATA[Disk (RAID-4) Rev.1]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/11">
+    <base><![CDATA[Disk (RAID-4) Rev.2]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/14">
+    <base><![CDATA[Member of Striped Disk (RAID-0)]]></base>
+    <translation>Element af  Striped Disk (RAID-0)</translation>
+  </string>
+  <string id="/STR/257/15">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation>Element af Mirrored Disk (RAID-1) Rev.1</translation>
+  </string>
+  <string id="/STR/258/02">
+    <base><![CDATA[Member of RAID-4 Disk Rev. 1]]></base>
+    <translation>Element af RAID-4 Disk Rev. 1</translation>
+  </string>
+  <string id="/STR/258/04">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation>Element af Mirrored Disk (RAID-1) Rev.2</translation>
+  </string>
+  <string id="/STR/258/05">
+    <base><![CDATA[Member of RAID-4 Disk Rev.2]]></base>
+    <translation>Element af RAID-4 Disk Rev.2</translation>
+  </string>
+  <string id="/STR/258/08">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation>Element af Mirrored Disk (RAID-1) Rev.3</translation>
+  </string>
+  <string id="/STR/258/09">
+    <base><![CDATA[Member of RAID-4 Disk Rev.3]]></base>
+    <translation>Element af RAID-4 Disk Rev.3</translation>
+  </string>
+  <string id="/STR/258/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/258/11">
+    <base><![CDATA[Disk (RAID-4) Rev.3]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/258/12">
+    <base><![CDATA[Missing member]]></base>
+    <translation>Manglende element</translation>
+  </string>
+  <string id="/STR/258/13">
+    <base><![CDATA[Migration is required. Use NDAS Bind management to migrate.]]></base>
+    <translation>Migrering nødvendig. Brug NDAS Bind management til at migrere.</translation>
+  </string>
+  <string id="/STR/258/14">
+    <base><![CDATA[Conflicting RAID information. Use NDAS Bind management to resolve conflicts.]]></base>
+    <translation>Uoverensstemmende RAID-information. Brug NDAS Bind management til at afhjælpe uoverensstemmelser.</translation>
+  </string>
+  <string id="/STR/258/15">
+    <base><![CDATA[Mountable in degraded mode]]></base>
+    <translation>Tilslutningsklar i forringet modus</translation>
+  </string>
+  <string id="/STR/259/00">
+    <base><![CDATA[Do not show a warning dialog when mounting RAID in degraded mode]]></base>
+    <translation>Vis ikke en advarselsdialog ved tilslutning af RAID i forringet modus</translation>
+  </string>
+  <string id="/STR/307/05">
+    <base><![CDATA[Please wait while checking for a software update...]]></base>
+    <translation>Vent, mens der kontrolleres for softwareopdatering...</translation>
+  </string>
+  <string id="/STR/307/06">
+    <base><![CDATA[An error occurred while checking a software update.]]></base>
+    <translation>Der opstod en fejl under kontrol for softwareopdatering.</translation>
+  </string>
+  <string id="/STR/625/15">
+    <base><![CDATA[English]]></base>
+    <translation><![CDATA[dansk (Danish)]]></translation>
+  </string>
+  <string id="/DLG/301">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation>Om NDAS software</translation>
+  </string>
+  <string id="/DLG/301/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/301/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/301/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation>Version %1!s!</translation>
+  </string>
+  <string id="/DLG/301/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&</translation>
+  </string>
+  <string id="/DLG/301/04">
+    <base><![CDATA[Copyright © 2002-2007 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+    <translation>Copyright © 2002-2007 TARGA GmbH and XIMETA, Inc.\r\nAll rights reserved.</translation>
+  </string>
+  <string id="/DLG/301/05">
+    <base><![CDATA[Components]]></base>
+    <translation>Komponenter</translation>
+  </string>
+  <string id="/DLG/301/07">
+    <base><![CDATA[Check for &Updates]]></base>
+    <translation>Kontrollér for &opdateringer</translation>
+  </string>
+  <string id="/DLG/302">
+    <base><![CDATA[Enter the Write Key]]></base>
+    <translation>Indtast Skriv-nøglen (Write key)</translation>
+  </string>
+  <string id="/DLG/302/01">
+    <base><![CDATA[OK]]></base>
+    <translation>OK</translation>
+  </string>
+  <string id="/DLG/302/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuller</translation>
+  </string>
+  <string id="/DLG/302/05">
+    <base><![CDATA[Device Name:]]></base>
+    <translation>Enhedsnavn:</translation>
+  </string>
+  <string id="/DLG/302/06">
+    <base><![CDATA[Device ID:]]></base>
+    <translation>Enheds-ID:</translation>
+  </string>
+  <string id="/DLG/302/07">
+    <base><![CDATA[Write Key:]]></base>
+    <translation>Skriv-nøgle:</translation>
+  </string>
+  <string id="/DLG/303/00">
+    <base><![CDATA[&Yes]]></base>
+    <translation>&Ja</translation>
+  </string>
+  <string id="/DLG/303/01">
+    <base><![CDATA[&No]]></base>
+    <translation>&Nej</translation>
+  </string>
+  <string id="/DLG/303/04">
+    <base><![CDATA[In the future, do not show me this dialog box.]]></base>
+    <translation>Vis ikke denne dialogboks i fremtiden.</translation>
+  </string>
+  <string id="/DLG/306">
+    <base><![CDATA[General]]></base>
+    <translation>Generelt</translation>
+  </string>
+  <string id="/DLG/306/00">
+    <base><![CDATA[Device Name:]]></base>
+    <translation>Enhedsnavn:</translation>
+  </string>
+  <string id="/DLG/306/02">
+    <base><![CDATA[&Rename]]></base>
+    <translation>&Omdøb</translation>
+  </string>
+  <string id="/DLG/306/03">
+    <base><![CDATA[Device ID:]]></base>
+    <translation>Enheds-ID:</translation>
+  </string>
+  <string id="/DLG/306/05">
+    <base><![CDATA[Write Key:]]></base>
+    <translation>Skriv-nøgle:</translation>
+  </string>
+  <string id="/DLG/306/07">
+    <base><![CDATA[&Add]]></base>
+    <translation>Skriv-nøgle:</translation>
+  </string>
+  <string id="/DLG/306/08">
+    <base><![CDATA[Status:]]></base>
+    <translation>Status:</translation>
+  </string>
+  <string id="/DLG/306/10">
+    <base>Unit Device Information</base>
+    <translation>Enhedsinformation</translation>
+  </string>
+  <string id="/DLG/306/14">
+    <base><![CDATA[Status]]></base>
+    <translation>Status</translation>
+  </string>
+  <string id="/DLG/306/16">
+    <base><![CDATA[Capacity]]></base>
+    <translation>Kapacitet</translation>
+  </string>
+  <string id="/DLG/306/18">
+    <base><![CDATA[Read-Only Access]]></base>
+    <translation>Skrivebeskyttet adgang</translation>
+  </string>
+  <string id="/DLG/306/20">
+    <base><![CDATA[Read/Write Access]]></base>
+    <translation>Læs/Skriv adgang</translation>
+  </string>
+  <string id="/DLG/306/22">
+    <base><![CDATA[Logical Device Information:]]></base>
+    <translation>Information om logisk enhed:</translation>
+  </string>
+  <string id="/DLG/307">
+    <base><![CDATA[Hosts]]></base>
+    <translation>Værter</translation>
+  </string>
+  <string id="/DLG/307/01">
+    <base><![CDATA[The following hosts are using this NDAS device.\r\nSome information may not be available.]]></base>
+    <translation>Følgende værter bruger denne NDAS-enhed.\r\nNogle informationer er måske ikke tilgængelige.</translation>
+  </string>
+  <string id="/DLG/307/02">
+    <base><![CDATA[Click here to refresh the list.]]></base>
+    <translation>Klik her for at opdatere listen.</translation>
+  </string>
+  <string id="/DLG/308">
+    <base><![CDATA[Hardware]]></base>
+    <translation>Hardware</translation>
+  </string>
+  <string id="/DLG/308/00">
+    <base><![CDATA[Hardware Information about your NDAS device]]></base>
+    <translation>Hardwareinformation om din NDAS-enhed</translation>
+  </string>
+  <string id="/DLG/310/00">
+    <base><![CDATA[Completing the NDAS Device Registration Wizard]]></base>
+    <translation>Afslutter NDAS-enhedens registreringsguide</translation>
+  </string>
+  <string id="/DLG/310/02">
+    <base><![CDATA[Click here to save as a file.]]></base>
+    <translation>Klik her for at gemme som en fil.</translation>
+  </string>
+  <string id="/DLG/310/03">
+    <base><![CDATA[Optionally, you can save the registration to the file for registering from other computers.]]></base>
+    <translation>Alternativt kan du gemme registreringen til filen for registrering fra andre computere.</translation>
+  </string>
+  <string id="/DLG/311/00">
+    <base><![CDATA[To register the NDAS device, please enter the NDAS device ID. The ID and Write Key are located on the bottom of the NDAS device.\r\n\r\nNDAS device ID is composed of 20 characters.]]></base>
+    <translation>For at registrere NDAS-enheden skal du indtaste NDAS-enhedens ID. ID'en og Skriv-nøglen (Write key) findes på undersiden af NDAS-enheden.\r\n\r\nNDAS-enhedens ID består af 20 tegn.</translation>
+  </string>
+  <string id="/DLG/311/01">
+    <base><![CDATA[Please enter the NDAS device ID.]]></base>
+    <translation>Indtast NDAS-enhedens ID.</translation>
+  </string>
+  <string id="/DLG/311/06">
+    <base><![CDATA[Write Key is needed for Read/Write mode. It is composed of 5 characters.]]></base>
+    <translation>Skriv-nøglen er nødvendig for Læs/Skriv-funktion. Den består at 5 tegn.</translation>
+  </string>
+  <string id="/DLG/311/08">
+    <base><![CDATA[Click Next when you finish.\r\nIf the NDAS device ID and/or the Write Key is invalid, Next will not be enabled.]]></base>
+    <translation>Klik på Næste for at afslutte.\r\nIf NDAS-enhedens ID og/eller Skrive-nøgle er ugyldig, du kan ikke trykke på Næste.</translation>
+  </string>
+  <string id="/DLG/311/09">
+    <base><![CDATA[Please enter the Write Key. (Optional)]]></base>
+    <translation>Indtast Skriv-nøglen (Write key) (valgfri)</translation>
+  </string>
+  <string id="/DLG/313/00">
+    <base><![CDATA[Please choose a name for the NDAS device. This name will be used to identify the NDAS device in your system only.]]></base>
+    <translation>Vælg et navn til NDAS-enheden. Dette navn bruges kun til at identificere NDAS-enheden i systemet.</translation>
+  </string>
+  <string id="/DLG/313/01">
+    <base><![CDATA[The name can be up to 30 characters long.]]></base>
+    <translation>Navnet kan fylde op til 30 tegn.</translation>
+  </string>
+  <string id="/DLG/313/02">
+    <base><![CDATA[Please enter the name.]]></base>
+    <translation>Indtast navnet.</translation>
+  </string>
+  <string id="/DLG/313/04">
+    <base><![CDATA[Click Next when you finish.]]></base>
+    <translation>Klik på Næste for at afslutte.</translation>
+  </string>
+  <string id="/DLG/314/00">
+    <base><![CDATA[Welcome to the NDAS Device Registration Wizard]]></base>
+    <translation>Velkommen til NDAS-enhedens registreringsguide</translation>
+  </string>
+  <string id="/DLG/315/01">
+    <base><![CDATA[Do you want to mount the NDAS device to your system now?]]></base>
+    <translation>Vil du tilslutte NDAS-enheden til dit system nu?</translation>
+  </string>
+  <string id="/DLG/315/02">
+    <base><![CDATA[While mounting the NDAS device, a security warning dialog may appear. You must click "Continue" to successfully mount the NDAS device. Otherwise, it will not be mounted.]]></base>
+    <translation>Der kan fremkomme en sikkerheds-advarselsdialog under tilslutning af NDAS-enheden. Du skal klikke på "Fortsæt" for at tilsluttet NDAS-enheden vellykket. Ellers bliver den ikke tilsluttet.</translation>
+  </string>
+  <string id="/DLG/315/03">
+    <base><![CDATA[Yes, I want to mount this NDAS device as Read/Write Mode.]]></base>
+    <translation>Ja, jeg vil tilslutte NDAS-enheden som Læs/Skriv-funktion.</translation>
+  </string>
+  <string id="/DLG/315/04">
+    <base><![CDATA[Yes, I want to mount this NDAS device as Read-Only Mode.]]></base>
+    <translation>Ja, jeg vil tilslutte NDAS-enheden som skrivebeskyttet (Read-Only) funktion.</translation>
+  </string>
+  <string id="/DLG/315/05">
+    <base><![CDATA[No, I don't want to mount this NDAS device now.]]></base>
+    <translation>Nej, jeg vil ikke tilslutte denne NDAS-enhed nu.</translation>
+  </string>
+  <string id="/DLG/317">
+    <base><![CDATA[Export Registration]]></base>
+    <translation>Eksportér registrering</translation>
+  </string>
+  <string id="/DLG/317/02">
+    <base><![CDATA[Select a &NDAS Device to export:]]></base>
+    <translation>Vælg en &NDAS-enhed til at eksportere:</translation>
+  </string>
+  <string id="/DLG/317/04">
+    <base><![CDATA[You need to complete the following information to export the registration data.]]></base>
+    <translation>Du skal udfylde følgende information for at eksportere registreringsdataene.</translation>
+  </string>
+  <string id="/DLG/317/05">
+    <base><![CDATA[Device &ID:]]></base>
+    <translation>Enheds-&ID:</translation>
+  </string>
+  <string id="/DLG/317/10">
+    <base><![CDATA[&Write Key:]]></base>
+    <translation>&Skriv-nøgle:</translation>
+  </string>
+  <string id="/DLG/317/12">
+    <base><![CDATA[Do not export the Write Key.]]></base>
+    <translation>Skriv-nøglen (Write key) skal ikke eksporteres.</translation>
+  </string>
+  <string id="/DLG/317/13">
+    <base><![CDATA[Des&cription:]]></base>
+    <translation>Beskrivelse:</translation>
+  </string>
+  <string id="/DLG/317/15">
+    <base><![CDATA[&Save]]></base>
+    <translation>&Gem</translation>
+  </string>
+  <string id="/DLG/317/16">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuller</translation>
+  </string>
+  <string id="/DLG/318">
+    <base><![CDATA[NDAS Device Management Error]]></base>
+    <translation>Styringsfejl for NDAS-enhed</translation>
+  </string>
+  <string id="/DLG/318/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/319">
+    <base><![CDATA[Advanced]]></base>
+    <translation>Avanceret</translation>
+  </string>
+  <string id="/DLG/319/01">
+    <base><![CDATA[Advanced settings:]]></base>
+    <translation>Avancerede indstillinger:</translation>
+  </string>
+  <string id="/DLG/322">
+    <base><![CDATA[Rename]]></base>
+    <translation>Omdøb</translation>
+  </string>
+  <string id="/DLG/322/01">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/322/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuller</translation>
+  </string>
+  <string id="/DLG/322/03">
+    <base><![CDATA[&New name:]]></base>
+    <translation>&Nyt navn:</translation>
+  </string>
+  <string id="/DLG/2009">
+    <base><![CDATA[General]]></base>
+    <translation>Generelt</translation>
+  </string>
+  <string id="/DLG/2009/00">
+    <base><![CDATA[User Interface]]></base>
+    <translation>Brugergrænseflade</translation>
+  </string>
+  <string id="/DLG/2009/01">
+    <base><![CDATA[Display menus and dialogs in the following language:]]></base>
+    <translation>Vis menuer og dialoger i følgende sprog:</translation>
+  </string>
+  <string id="/DLG/2009/03">
+    <base><![CDATA[Alerts]]></base>
+    <translation>Advarsler </translation>
+  </string>
+  <string id="/DLG/2009/05">
+    <base><![CDATA[Display an alert when connection to an NDAS device is lost.]]></base>
+    <translation>Vis en advarsel, når forbindelsen til en NDAS-enhed afbrydes.</translation>
+  </string>
+  <string id="/DLG/2009/06">
+    <base><![CDATA[Display an alert when connection to an NDAS device is unstable.]]></base>
+    <translation>Vis en advarsel, når forbindelsen til en NDAS-enhed er ustabil.</translation>
+  </string>
+  <string id="/DLG/2009/08">
+    <base><![CDATA[Auto Play Configuration]]></base>
+    <translation>Auto Play konfiguration</translation>
+  </string>
+  <string id="/DLG/2009/09">
+    <base><![CDATA[Disable Auto Play for all fixed hard drives.]]></base>
+    <translation>Deaktiver Auto Play for alle faste harddiske.</translation>
+  </string>
+  <string id="/DLG/4001">
+    <base><![CDATA[NDAS Device Available]]></base>
+    <translation>&Nyt navn:</translation>
+  </string>
+  <string id="/DLG/4001/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/4001/01">
+    <base><![CDATA[Yes, I want to mount this device as Read/Write access mode.]]></base>
+    <translation>Ja, jeg vil tilslutte denne enhed som Læs/Skriv-funktion.</translation>
+  </string>
+  <string id="/DLG/4001/02">
+    <base><![CDATA[%1!s! is now available to mount.\r\nDo you want to mount the device to your system now?]]></base>
+    <translation>%1!s! er nu tilgængelig for tilslutning.\r\nVil du tilslutte enheden til dit system nu?</translation>
+  </string>
+  <string id="/DLG/4001/03">
+    <base><![CDATA[Yes, I want to mount this device as Read-Only access mode.]]></base>
+    <translation>Ja, jeg vil tilslutte denne enhed som skrivebeskyttet (Read-Only) funktion.</translation>
+  </string>
+  <string id="/DLG/4001/04">
+    <base><![CDATA[No, I don't want to mount this device now.]]></base>
+    <translation>Nej, jeg vil ikke tilslutte denne enhed nu.</translation>
+  </string>
+  <string id="/DLG/4002">
+    <base><![CDATA[Advanced]]></base>
+    <translation>Avanceret</translation>
+  </string>
+  <string id="/DLG/4002/00">
+    <base><![CDATA[Deactivate NDAS device]]></base>
+    <translation>Deaktiver NDAS-enheden</translation>
+  </string>
+  <string id="/DLG/4002/02">
+    <base><![CDATA[Deactivation of the NDAS device will end communication between your system and the device. However, the device is still registered on your system. This allows the device to be activated without re-registration.]]></base>
+    <translation>Deaktivering af NDAS-enheden vil afsluttet kommunikationen mellem systemet og enheden. Enheden vil dog stadig være registreret på systemet. Derved kan enheden aktiveres uden ny registrering.</translation>
+  </string>
+  <string id="/DLG/4002/03">
+    <base><![CDATA[&Deactivate]]></base>
+    <translation>&Deaktiver</translation>
+  </string>
+  <string id="/DLG/4002/04">
+    <base><![CDATA[Reset NDAS Device Connection]]></base>
+    <translation>Tilbagestil NDAS-enhedens forbindelse</translation>
+  </string>
+  <string id="/DLG/4002/06">
+    <base><![CDATA[You can reset the connection to the NDAS device.]]></base>
+    <translation>Du kan tilbagestille forbindelsen til NDAS-enheden.</translation>
+  </string>
+  <string id="/DLG/4002/07">
+    <base><![CDATA[&Reset]]></base>
+    <translation>&Tilbagestil</translation>
+  </string>
+  <string id="/DLG/4002/08">
+    <base><![CDATA[Export]]></base>
+    <translation>Eksportér</translation>
+  </string>
+  <string id="/DLG/4002/10">
+    <base><![CDATA[You can save the registration to the file and import it from other computers.]]></base>
+    <translation>Du kan gemme registreringen til filen og importere den fra andre computere.</translation>
+  </string>
+  <string id="/DLG/4002/11">
+    <base><![CDATA[E&xport]]></base>
+    <translation>E&ksportér</translation>
+  </string>
+  <string id="/DLG/4003">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>Styring af NDAS-enhed</translation>
+  </string>
+  <string id="/DLG/4003/00">
+    <base><![CDATA[&Close]]></base>
+    <translation>&Luk</translation>
+  </string>
+  <string id="/DLG/4003/01">
+    <base><![CDATA[Mounting the requested NDAS device, please wait...]]></base>
+    <translation>Den ønskede NDAS-enhed tilsluttes, vent venligst...</translation>
+  </string>
+  <string id="/DLG/4004">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>Styring af NDAS-enhed</translation>
+  </string>
+  <string id="/DLG/4004/01">
+    <base><![CDATA[Dismounting the requested NDAS device, please wait...]]></base>
+    <translation>Den ønskede NDAS-enhed frakobles, vent venligst...</translation>
+  </string>
+  <string id="/DLG/4004/03">
+    <base><![CDATA[&Retry]]></base>
+    <translation>&Prøv igen</translation>
+  </string>
+  <string id="/DLG/4004/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuller</translation>
+  </string>
+  <string id="/DLG/4008">
+    <base><![CDATA[Import Registration]]></base>
+    <translation>Importér registrering</translation>
+  </string>
+  <string id="/DLG/4008/02">
+    <base><![CDATA[Select &NDAS Devices to register:]]></base>
+    <translation>Vælg &NDAS-enheder til at registrere:</translation>
+  </string>
+  <string id="/DLG/4008/04">
+    <base><![CDATA[Des&cription:]]></base>
+    <translation>Beskrivelse:</translation>
+  </string>
+  <string id="/DLG/4008/06">
+    <base><![CDATA[&Register]]></base>
+    <translation>&Registrér</translation>
+  </string>
+  <string id="/DLG/4008/07">
+    <base><![CDATA[Close]]></base>
+    <translation>Luk</translation>
+  </string>
+  <string id="/DLG/4009">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>Styring af NDAS-enhed</translation>
+  </string>
+  <string id="/DLG/4009/01">
+    <base><![CDATA[Dismounting NDAS devices, please wait...]]></base>
+    <translation>NDAS-enheder frakobles, vent venligst...</translation>
+  </string>
+  <string id="/DLG/4009/03">
+    <base><![CDATA[&Retry]]></base>
+    <translation>&Prøv igen</translation>
+  </string>
+  <string id="/DLG/4009/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuller</translation>
+  </string>
+  <string id="/MNU/2013/00/01">
+    <base><![CDATA[Register a &New Device...]]></base>
+    <translation>Registrér en &ny enhed...</translation>
+  </string>
+  <string id="/MNU/2013/00/02">
+    <base><![CDATA[Dismo&unt All]]></base>
+    <translation>Frakobl alle</translation>
+  </string>
+  <string id="/MNU/2013/00/03">
+    <base><![CDATA[&Refresh Status]]></base>
+    <translation>&Opdateringsstatus</translation>
+  </string>
+  <string id="/MNU/2013/00/05">
+    <base><![CDATA[&About NDAS Software...]]></base>
+    <translation>&Om NDAS software...</translation>
+  </string>
+  <string id="/MNU/2013/00/06">
+    <base><![CDATA[&Options...]]></base>
+    <translation>&Indstillinger...</translation>
+  </string>
+  <string id="/MNU/2013/00/08">
+    <base><![CDATA[E&xit]]></base>
+    <translation>Afslut</translation>
+  </string>
+</localization>

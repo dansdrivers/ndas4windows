@@ -1,0 +1,7 @@
+TARGETNAME=liblpxtrans
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=liblpxtrans
+
+!include ..\sources.inc

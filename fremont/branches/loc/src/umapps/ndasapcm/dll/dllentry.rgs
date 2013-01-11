@@ -1,0 +1,14 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'NdasAutoplayConfigModule'
+		{
+			val DllSurrogate = s ''
+		}
+		'ndasapcm.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

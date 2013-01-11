@@ -1,0 +1,66 @@
+#TARGETNAME=filespy
+#TARGETPATH=obj
+#TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+TARGETLIBS=\
+    ..\LfsFiltLib\$(O)\LfsFiltLib.lib
+
+INCLUDES=..\LfsFiltLib
+
+SOURCES=filespy.c  \
+        fspyLib.c  \
+        fspyCtx.c  \
+        fspyHash.c \
+        filespy.rc
+
+TARGETNAME=lfsfilt
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+TARGETLIBS=\
+    $(NDAS_DRIVER_LIB_PATH)\LfsFiltLib.lib			\
+    $(NDAS_DRIVER_LIB_PATH)\desc.lib				\
+	$(NDAS_DRIVER_LIB_PATH)\LpxTdi.lib					\
+	$(NDAS_DRIVER_LIB_PATH)\W2kFatLib.lib				\
+	$(NDAS_DRIVER_LIB_PATH)\WxpFatLib.lib				\
+	$(NDAS_DRIVER_LIB_PATH)\WnetFatLib.lib				\
+	$(NDAS_DRIVER_LIB_PATH)\W2kNtfsLib.lib				\
+	$(NDAS_DRIVER_LIB_PATH)\WxpNtfsLib.lib
+
+INCLUDES=$(INCLUDES);$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;..\LfsFiltLib;$(NDAS_SRC_PATH)\common\desc;$(NDAS_INC_PATH)
+
+SOURCES=filespy.c  \
+        fspyLib.c  \
+        fspyCtx.c  \
+        fspyHash.c \
+		Lfs.c      \
+		Primary.c  \
+		PrimarySession.c \
+		LfsTable.c	\
+		LfsLib.c	\
+		Secondary.c \
+		SecondaryRedirectIrp.c \
+		SecondaryThread.c \
+		ReadOnly.c \
+		LfsDbg.c   \
+		MemoryMap.c \
+		FastIoDispatch.c \
+		LfsProto.c	\
+		LfsDGSvrCli.c \
+		md5.c		\
+		NetdiskManager.c \
+        filespy.rc
+
+#C_DEFINES=$(C_DEFINES) -D__LFS__ -DUNICODE -D_WIN2K_COMPAT_SLIST_USAGE -D_X86_
+C_DEFINES=$(C_DEFINES) -D__LFS__ -DUNICODE -D_WIN2K_COMPAT_SLIST_USAGE
+
+#C_DEFINES=$(C_DEFINES) -D__LFS__ -DUNICODE
+#C_DEFINES=$(C_DEFINES) -D__TEST_MODE__
+#C_DEFINES=$(C_DEFINES) -D__LFS_DEBUG_MODE__
+#C_DEFINES=$(C_DEFINES) -D__LFS_HCT_TEST_MODE__
+#C_DEFINES=$(C_DEFINES) -D__ENABLE_RECYLEBIN_PATCH__
+#C_DEFINES=$(C_DEFINES) -D__LFSDBG_MEMORY__
+
+
+INCLUDES=$(INCLUDES);..\WxpNtfsLib;..\WxpFatLib;..\W2kFatLib;..\W2kNtfsLib;..\WnetFatLib

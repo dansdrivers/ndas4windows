@@ -1,0 +1,31 @@
+TARGETNAME=ndasapcm_ps
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+C_DEFINES=$(C_DEFINES) -DREGISTER_PROXY_DLL
+
+INCLUDES=..;..\..\inc;$(PSDK_INC_PATH);$(NDAS_INC_PATH)
+
+DLLDEF=com.def
+
+UMTYPE=windows
+DLLENTRY=_DllMainCRTStartup
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+SOURCES=\
+	ndasapcm_ps.rc \
+	$(O)\dlldata.c \
+	$(O)\autoplayconfig_p.c
+
+TARGETLIBS=\
+	$(SDK_LIB_PATH)\kernel32.lib \
+	$(SDK_LIB_PATH)\rpcproxy.lib \
+	$(SDK_LIB_PATH)\rpcrt4.lib \
+	..\slib\$(O)\libndasapcm_i.lib
+

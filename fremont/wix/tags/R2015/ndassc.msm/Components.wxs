@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?include Config.wxi?>
+<?include ComponentGuid.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="NDASMSM_Components">
+	<DirectoryRef Id="NdasDriverDir" 
+				  src="$(var.SourceDir)">
+	  
+	  <Component Id="NDAS_LFSFILT_SYS" 
+				 Guid="$(var.NDAS_LFSFILT_SYS_GUID)"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="lfsfilt.sys" Name="lfsfilt.sys" KeyPath="yes"/>
+		<Condition>NOT NDASMSM_NO_LFSFILT OR NDASMSM_NO_LFSFILT = 0</Condition>
+	  </Component>
+	  
+	  <Component Id="NDAS_ROFILT_SYS" 
+				 Guid="$(var.NDAS_ROFILT_SYS_GUID)"
+				 Win64="$(var.Win64YesNo)">
+		<CreateFolder />
+		<Condition>NDASMSM_USE_ROFILT=1 And VersionNT = 500</Condition>
+	  </Component>
+	  
+	  <Component Id="NDAS_LPX_SYS" 
+				 Guid="$(var.NDAS_LPX_SYS_GUID)"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="lpx.sys" Name="lpx.sys" KeyPath="yes" />
+		<File Id="netlpx.cat" Name="netlpx.cat" />
+		<File Id="netlpx.inf" Name="netlpx.inf" />
+		<File Id="wshlpx.dll" Name="wshlpx.dll" />
+		<?ifdef Win64Build?>
+		<File Id="wshlpx32.dll" Name="wshlpx32.dll" />
+		<?endif?>
+	  </Component>
+	  
+	  <Component Id="NDAS_NDASBUS_SYS" 
+				 Guid="$(var.NDAS_NDASBUS_SYS_GUID)"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasbus.sys" Name="ndasbus.sys" KeyPath="yes" />
+		<File Id="ndasbus.cat" Name="ndasbus.cat" />
+		<File Id="ndasbus.inf" Name="ndasbus.inf" />
+	  </Component>
+	  
+	  <Component Id="NDAS_NDASSCSI_SYS" 
+				 Guid="$(var.NDAS_NDASSCSI_SYS_GUID)"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasscsi.sys" Name="ndasscsi.sys" KeyPath="yes" />
+		<File Id="ndasscsi.cat" Name="ndasscsi.cat" />
+		<File Id="ndasscsi.inf" Name="ndasscsi.inf" />
+	  </Component>
+
+	  <?ifndef NdasSetupFlags_ExcludeNDASIOMGDLL?>
+	  <Component Id="NDAS_NDASIOMG_DLL" 
+				 Guid="$(var.NDAS_NDASIOMG_DLL_GUID)"
+				 SharedDllRefCount="yes"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasiomg.dll" Name="ndasiomg.dll" KeyPath="yes">
+		  <!-- SystemFolder_ is not a typo. This is a workaround for a bug in WiX -->
+		  <CopyFile Id="ndasiomsg.dll_sys" DestinationProperty="SystemFolder_" />
+		  <?ifdef Win64Build?>
+		  <CopyFile Id="ndasiomsg.dll_sys64" DestinationProperty="System64Folder_" />
+		  <?endif?>
+		</File>
+	  </Component>
+	  <?endif?>
+
+	  <?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+	  <Component Id="NDAS_NDASNTFS_SYS"
+				 Guid="$(var.NDAS_NDASNTFS_SYS_GUID)"
+				 SharedDllRefCount="yes"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasntfs.sys" Name="ndasntfs.sys" KeyPath="yes" />
+	  </Component>
+	  <?endif?>
+
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <Component Id="NDAS_NDASFAT_SYS"
+				 Guid="$(var.NDAS_NDASFAT_SYS_GUID)"
+				 SharedDllRefCount="yes"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasfat.sys" Name="ndasfat.sys" KeyPath="yes" />
+	  </Component>
+	  <?endif?>
+
+	</DirectoryRef>
+
+	<DirectoryRef Id="NdasSysCompDir" 
+				  src="$(var.SourceDir)">
+
+	  <Component Id="NDAS_NDASCOMM_DLL" 
+				 Guid="$(var.NDAS_NDASCOMM_DLL_GUID)" 
+				 SharedDllRefCount="yes" 
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndascomm.dll" Name="ndascomm.dll" KeyPath="yes" />
+	  </Component>
+
+	  <Component Id="NDAS_NDASMSG_DLL" 
+				 Guid="$(var.NDAS_NDASMSG_DLL_GUID)" 
+				 SharedDllRefCount="yes" 
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasmsg.dll" Name="ndasmsg.dll" KeyPath="yes" />
+		<Registry Root="HKLM" 
+				  Key="SYSTEM\CurrentControlSet\Services\Eventlog\Application\ndassvc"
+				  Action="createKeyAndRemoveKeyOnUninstall">
+		  <Registry Name="EventMessageFile" Type="string" Value="[#ndasmsg.dll]" />
+		  <Registry Name="TypesSupported" Type="integer" Value="7" />
+		</Registry>
+
+	  </Component>
+
+	  <Component Id="NDAS_NDASOP_DLL" 
+				 Guid="$(var.NDAS_NDASOP_DLL_GUID)" 
+				 SharedDllRefCount="yes"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasop.dll" Name="ndasop.dll" KeyPath="yes" />
+	  </Component>
+
+	  <Component Id="NDAS_NDASUSER_DLL" 
+				 Guid="$(var.NDAS_NDASUSER_DLL_GUID)" 
+				 SharedDllRefCount="yes"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasuser.dll" Name="ndasuser.dll" KeyPath="yes" />
+	  </Component>
+
+	  <Component Id="NDAS_NDASVOL_DLL" 
+				 Guid="$(var.NDAS_NDASVOL_DLL_GUID)" 
+				 SharedDllRefCount="yes"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasvol.dll" Name="ndasvol.dll" KeyPath="yes" />
+	  </Component>
+
+	  <Component Id="NDAS_NDASNIF_DLL" 
+				 Guid="$(var.NDAS_NDASNIF_DLL_GUID)" 
+				 SharedDllRefCount="yes"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+		<File Id="ndasnif.dll" Name="ndasnif.dll" KeyPath="yes" />
+	  </Component>
+
+	  <Component Id="NDAS_NDASSVC_EXE" 
+				 Guid="$(var.NDAS_NDASSVC_EXE_GUID)" 
+				 SharedDllRefCount="yes"
+				 DiskId="1"
+				 Win64="$(var.Win64YesNo)">
+
+		<File Id="ndassvc.exe" Name="ndassvc.exe" KeyPath="yes" />
+
+		<Registry Root="HKLM" Key="Software\NDAS">
+		  <Registry Key="Keys" Action="removeKeyOnUninstall" />
+		  <Registry Key="ndassvc\ARFlags" Action="removeKeyOnUninstall" />
+		</Registry>
+
+      <Registry Root="HKLM" Key="Software\NDAS\LogDevices" Action="removeKeyOnUninstall" />
+      <Registry Root="HKLM" Key="Software\NDAS\LogDevices" Action="removeKeyOnInstall" />
+
+      <ServiceControl Id="DefaultEvent" 
+						Name="ndassvc" 
+						Stop="both" 
+						Remove="both" />
+
+		<ServiceInstall Id="NDASSVCInstall" 
+						Name="ndassvc" 
+						DisplayName="NDAS Service" 
+						Type="ownProcess"
+						Start="demand" 
+						ErrorControl="normal" 
+						Description="User-mode service for NDAS Device Management">
+		  <!-- Start 'demand' will be changed to 'auto' by the custom action -->
+		  <ServiceDependency Id="lpx" />
+		</ServiceInstall>
+
+	  </Component>
+
+	  <Component Id="RunOnceWorkaround"
+				 Guid="$(var.RunOnceWorkaround_GUID)"
+				 Win64="$(var.Win64YesNo)">
+		<Registry Root="HKLM" 
+				  Key="SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce"
+				  Action="createKey" />
+	  </Component>
+
+	  <Component Id="NDAS_INSTALLINFO" 
+				 Guid="$(var.NDAS_INSTALLINFO_GUID)" 
+				 KeyPath="yes"
+				 SharedDllRefCount="yes"
+				 Win64="$(var.Win64YesNo)">
+		<CreateFolder />
+		<Registry Root="HKLM" Key="Software\NDAS">
+		  <!-- <Registry Name="ProductVersion" Type="string" Value="[NdasMsmVersion]" /> -->
+		  <Registry Key="Install" Action="removeKeyOnUninstall">
+			<Registry Name="MsmVersion" Type="string" Value="[NdasMsmVersion]" />
+			<Registry Name="ComponentDir" Type="string" Value="[NdasSysCompDir]" />
+			<Registry Name="DriverDir" Type="string" Value="[NdasDriverDir]" />
+		  </Registry>
+		</Registry>
+
+	  </Component>
+
+	  <Component Id="NDAS_CUSTOMINFO" 
+				 Guid="$(var.NDAS_CUSTOMINFO_GUID)" 
+				 KeyPath="yes"
+				 SharedDllRefCount="yes"
+				 Win64="$(var.Win64YesNo)">
+		<Condition>NdasMsmReleaseTag</Condition>
+		<CreateFolder />
+		<Registry Root="HKLM" Key="Software\NDAS\Install"
+				  Name="MsmReleaseTag"
+				  Type="string" 
+				  Value="[NdasMsmReleaseTag]" />
+	  </Component>
+
+	</DirectoryRef>
+
+  </Fragment>
+</Wix>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ntkrnllib"
+	ProjectGUID="{AFABDCCE-8DAB-46E1-A3BF-BFB7F0B8C3C1}"
+	RootNamespace="ntkrnllib"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild -WNET2K chk . -c0i"
+				Output="ntkrnllib.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild -WNET2K fre . -c0i"
+				Output="objfre_w2k_x86\i386\ntkrnllib.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
+			<File
+				RelativePath=".\debug.c"
+				>
+			</File>
+			<File
+				RelativePath=".\descriptor.c"
+				>
+			</File>
+			<File
+				RelativePath=".\init.c"
+				>
+			</File>
+			<File
+				RelativePath=".\irq.c"
+				>
+			</File>
+			<File
+				RelativePath=".\malloc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ntkrnlapi.c"
+				>
+			</File>
+			<File
+				RelativePath=".\time.c"
+				>
+			</File>
+			<File
+				RelativePath=".\timer.c"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
+			<File
+				RelativePath=".\desc.h"
+				>
+			</File>
+			<File
+				RelativePath=".\irq.h"
+				>
+			</File>
+			<File
+				RelativePath=".\malloc.h"
+				>
+			</File>
+			<File
+				RelativePath=".\time.h"
+				>
+			</File>
+			<File
+				RelativePath=".\timer.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
+			>
+		</Filter>
+		<File
+			RelativePath=".\sources.inc"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

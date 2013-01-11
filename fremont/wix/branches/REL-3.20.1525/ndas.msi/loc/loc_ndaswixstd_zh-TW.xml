@@ -1,0 +1,1665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="ActionText.CostInitialize">
+    <base>Computing space requirements</base>
+    <translation>計算所需空間</translation>
+  </string>
+  <string id="ActionText.AppSearch">
+    <base>Searching for installed applications</base>
+    <translation>搜尋已安裝的應用程式</translation>
+  </string>
+  <string id="ActionText.AppSearch.Template">
+    <base>Property: [1], Signature: [2]</base>
+    <translation>屬性: [1], 簽名: [2]</translation>
+  </string>
+  <string id="ActionText.BindImage">
+    <base>Binding executables</base>
+    <translation>正在結合可執檔</translation>
+  </string>
+  <string id="ActionText.BindImage.Template">
+    <base>File: [1]</base>
+    <translation>檔案: [1]</translation>
+  </string>
+  <string id="ActionText.CCPSearch">
+    <base>Unregistering modules</base>
+    <translation>解除登錄模組</translation>
+  </string>
+  <string id="ActionText.CostFinalize">
+    <base>Computing space requirements</base>
+    <translation>計算所需空間</translation>
+  </string>
+  <string id="ActionText.FileCost">
+    <base>Computing space requirements</base>
+    <translation>計算所需空間</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage">
+    <base>Copying files to the network</base>
+    <translation>正在複製網路安裝檔案</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage.Template">
+    <base>File: [1], Directory: [9], Size: [6]</base>
+    <translation>檔案: [1], 目錄: [9], 大小: [6]</translation>
+  </string>
+  <string id="ActionText.InstallFiles">
+    <base>Copying new files</base>
+    <translation>正在複製新的檔案</translation>
+  </string>
+  <string id="ActionText.InstallFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>檔案: [1], 目錄: [9],  大小: [6]</translation>
+  </string>
+  <string id="ActionText.InstallValidate">
+    <base>Validating install</base>
+    <translation>驗證安裝</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts">
+    <base>Creating shortcuts</base>
+    <translation>正在建立捷徑</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>捷徑: [1]</translation>
+  </string>
+  <string id="ActionText.PublishComponents">
+    <base>Publishing qualified components</base>
+    <translation>發佈合格元件</translation>
+  </string>
+  <string id="ActionText.PublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>元件 ID: [1], Qualifier: [2]</translation>
+  </string>
+  <string id="ActionText.PublishFeatures">
+    <base>Publishing product features</base>
+    <translation>發佈產品功能</translation>
+  </string>
+  <string id="ActionText.PublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>功能: [1]</translation>
+  </string>
+  <string id="ActionText.PublishProduct">
+    <base>Publishing product information</base>
+    <translation>發佈產品資訊</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo">
+    <base>Registering class servers</base>
+    <translation>登錄 Class 伺服器</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Class Id: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo">
+    <base>Registering extension servers</base>
+    <translation>登錄延伸伺服器</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>延伸: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo">
+    <base>Registering MIME info</base>
+    <translation>登錄 MIME 資訊</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>MIME Content Type: [1], Extension: [2]</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo">
+    <base>Registering program identifiers</base>
+    <translation>解除登錄程式識別</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>ProgId: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries">
+    <base>Registering type libraries</base>
+    <translation>登錄 type libraries</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>LibID: [1]</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace">
+    <base>Allocating registry space</base>
+    <translation>整理登錄值空間</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace.Template">
+    <base>Free space: [1]</base>
+    <translation>可用空間: [1]</translation>
+  </string>
+  <string id="ActionText.CreateFolders">
+    <base>Creating folders</base>
+    <translation>正在建立資料夾</translation>
+  </string>
+  <string id="ActionText.CreateFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>資料夾: [1]</translation>
+  </string>
+  <string id="ActionText.DeleteServices">
+    <base>Deleting services</base>
+    <translation>刪除服務</translation>
+  </string>
+  <string id="ActionText.DeleteServices.Template">
+    <base>Service: [1]</base>
+    <translation>服務: [1]</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles">
+    <base>Creating duplicate files</base>
+    <translation>建立重複檔案</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>檔案: [1], 目錄: [9],  大小: [6]</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts">
+    <base>Searching for related applications</base>
+    <translation>搜尋相關應用程式</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts.Template">
+    <base>Found application: [1]</base>
+    <translation>已找到之應用程式: [1]</translation>
+  </string>
+  <string id="ActionText.InstallODBC">
+    <base>Installing ODBC components</base>
+    <translation>安裝 ODBC 元件</translation>
+  </string>
+  <string id="ActionText.InstallServices">
+    <base>Installing new services</base>
+    <translation>安裝</translation>
+  </string>
+  <string id="ActionText.InstallServices.Template">
+    <base>Service: [2]</base>
+    <translation>服務: [2]</translation>
+  </string>
+  <string id="ActionText.LaunchConditions">
+    <base>Evaluating launch conditions</base>
+    <translation>檢驗執行條件</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates">
+    <base>Migrating feature states from related applications</base>
+    <translation>從相關應用程式轉換功能狀態</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates.Template">
+    <base>Application: [1]</base>
+    <translation>應用程式: [1]</translation>
+  </string>
+  <string id="ActionText.MoveFiles">
+    <base>Moving files</base>
+    <translation>正在移動檔案</translation>
+  </string>
+  <string id="ActionText.MoveFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>檔案: [1], 目錄: [9],  大小: [6]</translation>
+  </string>
+  <string id="ActionText.PatchFiles">
+    <base>Patching files</base>
+    <translation>修補檔案</translation>
+  </string>
+  <string id="ActionText.PatchFiles.Template">
+    <base>File: [1],  Directory: [2],  Size: [3]</base>
+    <translation>檔案: [1],  目錄: [2],  大小: [3]</translation>
+  </string>
+  <string id="ActionText.ProcessComponents">
+    <base>Updating component registration</base>
+    <translation>更新元件登錄</translation>
+  </string>
+  <string id="ActionText.RMCCPSearch">
+    <base>Searching for qualifying products</base>
+    <translation>正在搜尋符合條件的產品</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus">
+    <base>Registering COM+ Applications and Components</base>
+    <translation>登錄 COM+ 應用程式及元件</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2], Users: [3], RSN: [4]}}</base>
+    <translation>AppId: [1]{{, AppType: [2], Users: [3], RSN: [4]}}</translation>
+  </string>
+  <string id="ActionText.RegisterFonts">
+    <base>Registering fonts</base>
+    <translation>登錄字型</translation>
+  </string>
+  <string id="ActionText.RegisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>字型: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterProduct">
+    <base>Registering product</base>
+    <translation>正在登錄產品</translation>
+  </string>
+  <string id="ActionText.RegisterProduct.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RegisterUser">
+    <base>Registering user</base>
+    <translation>正在登錄使用者</translation>
+  </string>
+  <string id="ActionText.RegisterUser.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles">
+    <base>Removing duplicated files</base>
+    <translation>移除重複檔案</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>檔案: [1], 目錄: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>更新環境字串</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>名撐: [1], 值: [2], 動作 [3]</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts">
+    <base>Removing applications</base>
+    <translation>移除應用程式</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts.Template">
+    <base>Application: [1], Command line: [2]</base>
+    <translation>應用程式: [1], 命令列: [2]</translation>
+  </string>
+  <string id="ActionText.RemoveFiles">
+    <base>Removing files</base>
+    <translation>正在移除檔案</translation>
+  </string>
+  <string id="ActionText.RemoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>檔案: [1], 目錄: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveFolders">
+    <base>Removing folders</base>
+    <translation>正在移除資料夾</translation>
+  </string>
+  <string id="ActionText.RemoveFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>資料夾: [1]</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues">
+    <base>Removing INI file entries</base>
+    <translation>正在移除 INI 檔案</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>檔案: [1],  Section: [2],  Key: [3], Value: [4]</translation>
+  </string>
+  <string id="ActionText.RemoveODBC">
+    <base>Removing ODBC components</base>
+    <translation>正在移除 ODBC 元件</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues">
+    <base>Removing system registry values</base>
+    <translation>正在移除系統登錄值</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues.Template">
+    <base>Key: [1], Name: [2]</base>
+    <translation>機碼: [1], 名稱: [2]</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts">
+    <base>Removing shortcuts</base>
+    <translation>正在移除捷徑</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>捷徑: [1]</translation>
+  </string>
+  <string id="ActionText.SelfRegModules">
+    <base>Registering modules</base>
+    <translation>正在登錄模組</translation>
+  </string>
+  <string id="ActionText.SelfRegModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>檔案: [1], 資料夾: [2]</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules">
+    <base>Unregistering modules</base>
+    <translation>解除登錄模組</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>檔案: [1], 資料夾: [2]</translation>
+  </string>
+  <string id="ActionText.SetODBCFolders">
+    <base>Initializing ODBC directories</base>
+    <translation>啟動 ODBC 目錄</translation>
+  </string>
+  <string id="ActionText.StartServices">
+    <base>Starting services</base>
+    <translation>啟動服務</translation>
+  </string>
+  <string id="ActionText.StartServices.Template">
+    <base>Service: [1]</base>
+    <translation>服務: [1]</translation>
+  </string>
+  <string id="ActionText.StopServices">
+    <base>Stopping services</base>
+    <translation>停止服務</translation>
+  </string>
+  <string id="ActionText.StopServices.Template">
+    <base>Service: [1]</base>
+    <translation>服務: [1]</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents">
+    <base>Unpublishing Qualified Components</base>
+    <translation>解除發佈合格元件</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>元件 ID: [1], Qualifier: [2]</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures">
+    <base>Unpublishing product features</base>
+    <translation>解除發佈產品功能</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>功能: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo">
+    <base>Unregister class servers</base>
+    <translation>解除登錄 Class 伺服器</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Class Id: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus">
+    <base>Unregistering COM+ Applications and Components</base>
+    <translation>解除登錄 COM+ 應用程式及元件</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2]}}</base>
+    <translation>AppId: [1]{{, AppType: [2]}}</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo">
+    <base>Unregistering extension servers</base>
+    <translation>解除登錄延伸伺服器</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>延伸: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts">
+    <base>Unregistering fonts</base>
+    <translation>解除登錄字型</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>字型: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo">
+    <base>Unregistering MIME info</base>
+    <translation>解除登錄 MIME 資訊</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>MIME Content Type: [1], Extension: [2]</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo">
+    <base>Unregistering program identifiers</base>
+    <translation>解除登錄程式識別</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>ProgId: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries">
+    <base>Unregistering type libraries</base>
+    <translation>解除登錄 type libraries</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>LibID: [1]</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>更新環境字串</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>名撐: [1], 值: [2], 動作 [3]</translation>
+  </string>
+  <string id="ActionText.WriteIniValues">
+    <base>Writing INI file values</base>
+    <translation>寫入 INI 檔案</translation>
+  </string>
+  <string id="ActionText.WriteIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>檔案: [1],  Section: [2],  Key: [3], Value: [4]</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues">
+    <base>Writing system registry values</base>
+    <translation>正在寫入系統登錄</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues.Template">
+    <base>Key: [1], Name: [2], Value: [3]</base>
+    <translation>機碼: [1], 名稱: [2], 值: [3]</translation>
+  </string>
+  <string id="ActionText.Advertise">
+    <base>Advertising application</base>
+    <translation>正在宣傳應用程式</translation>
+  </string>
+  <string id="ActionText.GenerateScript">
+    <base>Generating script operations for action:</base>
+    <translation>正在為動作產生 script 操作:</translation>
+  </string>
+  <string id="ActionText.GenerateScript.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile">
+    <base>Installing system catalog</base>
+    <translation>安裝系統目錄</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile.Template">
+    <base>File: [1],  Dependencies: [2]</base>
+    <translation>檔案︰[1],  依存物： [2]</translation>
+  </string>
+  <string id="ActionText.Rollback">
+    <base>Rolling back action:</base>
+    <translation>復原動作:</translation>
+  </string>
+  <string id="ActionText.Rollback.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup">
+    <base>Removing backup files</base>
+    <translation>正在移除備份檔案</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup.Template">
+    <base>File: [1]</base>
+    <translation>檔案: [1]</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles">
+    <base>Removing moved files</base>
+    <translation>正在移除被移動的檔案</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>檔案: [1], 目錄: [9]</translation>
+  </string>
+  <string id="ActionText.UnpublishProduct">
+    <base>Unpublishing product information</base>
+    <translation>解除發佈產品資訊</translation>
+  </string>
+  <string id="ActionText.caCreateVRoots">
+    <base>Creating IIS Virtual Roots...</base>
+    <translation>正在建立 IIS 虛擬根目錄...</translation>
+  </string>
+  <string id="ActionText.caRemoveVRoots">
+    <base>Removing IIS Virtual Roots...</base>
+    <translation>正在移除 IIS 虛擬根目錄...</translation>
+  </string>
+  <string id="Text.Title">
+    <base>[ProductName] Setup</base>
+    <translation>[ProductName] Setup</translation>
+  </string>
+  <string id="Text.ErrorTitle">
+    <base>[ProductName] Installer Information</base>
+    <translation>[ProductName] Installer Information</translation>
+  </string>
+  <string id="Text.PatchTitle">
+    <base>[ProductName] Patch Setup</base>
+    <translation>[ProductName] Patch Setup</translation>
+  </string>
+  <string id="Text.OK">
+    <base>OK</base>
+    <translation>{&amp;Tahoma8}確定</translation>
+  </string>
+  <string id="Text.Cancel">
+    <base>Cancel</base>
+    <translation>取消</translation>
+  </string>
+  <string id="Text.Next">
+    <base>&amp;Next &gt;</base>
+    <translation>下一步(&amp;N) &gt;</translation>
+  </string>
+  <string id="Text.Back">
+    <base>&lt; &amp;Back</base>
+    <translation>&lt; 上一步(&amp;B)</translation>
+  </string>
+  <string id="Text.Y">
+    <base>&amp;Yes</base>
+    <translation>{&amp;Tahoma8}是(&amp;Y)</translation>
+  </string>
+  <string id="Text.N">
+    <base>&amp;No</base>
+    <translation>{&amp;Tahoma8}否(&amp;N)</translation>
+  </string>
+  <string id="Text.A">
+    <base>&amp;Abort</base>
+    <translation>{&amp;Tahoma8}放棄(&amp;A)</translation>
+  </string>
+  <string id="Text.C">
+    <base>&amp;Cancel</base>
+    <translation>{&amp;Tahoma8}取消(&amp;C)</translation>
+  </string>
+  <string id="Text.I">
+    <base>&amp;Ignore</base>
+    <translation>{&amp;Tahoma8}忽略(&amp;I)</translation>
+  </string>
+  <string id="Text.O">
+    <base>&amp;OK</base>
+    <translation>{&amp;Tahoma8}確定(&amp;O)</translation>
+  </string>
+  <string id="Text.R">
+    <base>&amp;Retry</base>
+    <translation>{&amp;Tahoma8}重試(&amp;R)</translation>
+  </string>
+  <string id="Text.Install">
+    <base>&amp;Install</base>
+    <translation>{&amp;Tahoma8}安裝(&amp;I)</translation>
+  </string>
+  <string id="Text.Exit">
+    <base>&amp;Exit</base>
+    <translation>{&amp;Tahoma8}退出(&amp;E)</translation>
+  </string>
+  <string id="Text.Remove">
+    <base>&amp;Remove</base>
+    <translation>{&amp;Tahoma8}刪除(&amp;R)</translation>
+  </string>
+  <string id="Text.Change">
+    <base>&amp;Change...</base>
+    <translation>{&amp;Tahoma8}變更(&amp;C)...</translation>
+  </string>
+  <string id="Text.Finish">
+    <base>&amp;Finish</base>
+    <translation>{&amp;Tahoma8}完成(&amp;F)</translation>
+  </string>
+  <string id="Text.FolderName">
+    <base>&amp;Folder name:</base>
+    <translation>{&amp;Tahoma8}資料夾名稱(&amp;F)：</translation>
+  </string>
+  <string id="Text.Help">
+    <base>&amp;Help</base>
+    <translation>{&amp;Tahoma8}說明(&amp;H)</translation>
+  </string>
+  <string id="Text.LookIn">
+    <base>&amp;Look in:</base>
+    <translation>{&amp;Tahoma8}查詢(&amp;L)：</translation>
+  </string>
+  <string id="Text.NetworkLocation">
+    <base>&amp;Network location:</base>
+    <translation>{&amp;Tahoma8}網路位置(&amp;N)：</translation>
+  </string>
+  <string id="Text.Space">
+    <base>&amp;Space</base>
+    <translation>{&amp;Tahoma8}空間(&amp;S)</translation>
+  </string>
+  <string id="Text.Update">
+    <base>&amp;Update &gt;</base>
+    <translation>更新(&amp;U) &gt;</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}瀏覽目的地資料夾。</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}變更目前目的地資料夾</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgDesc">
+    <base>Specify a network location for the server image of the product.</base>
+    <translation>{&amp;Tahoma8}為產品的伺服器圖示指定網路位置。</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgTitle">
+    <base>{&amp;MSSansBold8}Network Location</base>
+    <translation>{&amp;MSSansBold8}網路位置</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgText">
+    <base>Enter the network location or click Change to browse to a location.  Click Install to create a server image of [ProductName] at the specified network location or click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}輸入網路位置或按一下「變更」以瀏覽網路位置。 按一下「安裝」在指定的網路位置建立 {TAG} 的伺服器圖示，或按一下「取消」退出精靈。</translation>
+  </string>
+  <string id="AdminWelcome.TextLine2">
+    <base>The Setup Wizard will create a server image of [ProductName] at a specified network location. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard 將在指定的網路位置建立 [ProductName] 的伺服器圖示。要繼續，請按一下「下一步」。</translation>
+  </string>
+  <string id="AdminWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;VerdanaBold14}歡迎使用 [ProductName] Setup Wizard</translation>
+  </string>
+  <string id="CancelSetup.Text">
+    <base>Are you sure you want to cancel [ProductName] installation?</base>
+    <translation>{&amp;Tahoma8}要取消 [ProductName] 安裝嗎？</translation>
+  </string>
+  <string id="CustomSetup.DlgDesc">
+    <base>Select the program features you want installed.</base>
+    <translation>{&amp;Tahoma8}選擇要安裝的程式功能。</translation>
+  </string>
+  <string id="CustomSetup.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup</base>
+    <translation>{&amp;MSSansBold8}自訂安裝</translation>
+  </string>
+  <string id="CustomSetup.DlgText">
+    <base>Click on an icon in the list below to change how a feature is installed.</base>
+    <translation>{&amp;Tahoma8}按一下下面列表內的圖示以變更要安裝的功能。</translation>
+  </string>
+  <string id="CustomSetup.ItemDescription">
+    <base>Multiline description of the currently selected item</base>
+    <translation>{&amp;Tahoma8}目前選擇項目的數行說明</translation>
+  </string>
+  <string id="CustomSetup.Size">
+    <base>Feature size</base>
+    <translation>{&amp;Tahoma8}功能大小</translation>
+  </string>
+  <string id="CustomSetup.InstallLabel">
+    <base>Install to:</base>
+    <translation>{&amp;Tahoma8}安裝到：</translation>
+  </string>
+  <string id="CustomSetup.Location">
+    <base>&lt;selected feature path&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;selected feature path&gt;</translation>
+  </string>
+  <string id="CustomSetup.FeatureGroup">
+    <base>Feature Description</base>
+    <translation>{&amp;Tahoma8}功能說明</translation>
+  </string>
+  <string id="CustomSetupTips.DlgDesc">
+    <base>Custom Setup allows you to selectively install program features.</base>
+    <translation>{&amp;Tahoma8}「自訂安裝」讓您可以選擇性地安裝程式功能。</translation>
+  </string>
+  <string id="CustomSetupTips.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup Tips</base>
+    <translation>{&amp;MSSansBold8}自訂安裝提示</translation>
+  </string>
+  <string id="CustomSetupTips.DontInstallText">
+    <base>Will not be installed.</base>
+    <translation>{&amp;Tahoma8}將不安裝。</translation>
+  </string>
+  <string id="CustomSetupTips.FirstInstallText">
+    <base>Will be installed on first use. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}將在第一次使用時安裝。（只有在該功能支援此選項時有效）。</translation>
+  </string>
+  <string id="CustomSetupTips.InstallStateText">
+    <base>This install state means the feature...</base>
+    <translation>{&amp;Tahoma8}此安裝狀態意味著該功能...</translation>
+  </string>
+  <string id="CustomSetupTips.InstallText">
+    <base>Will be completely installed to the local hard drive.</base>
+    <translation>{&amp;Tahoma8}將全部安裝到本地硬碟上。</translation>
+  </string>
+  <string id="CustomSetupTips.MenuText">
+    <base>The icon next to the feature name indicates the install state of the feature. Click the icon to drop down the install state menu for each feature.</base>
+    <translation>{&amp;Tahoma8}緊鄰該功能名稱的圖示顯示該功能的安裝狀態。按一下該圖示可拉下每個功能的安裝狀態功能表。</translation>
+  </string>
+  <string id="CustomSetupTips.NetworkInstallText">
+    <base>Will be installed to run from the network. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}安裝後將從網路中執行。（只有在該功能支援此選項時有效）。</translation>
+  </string>
+  <string id="CustomSetupTips.PartialText">
+    <base>Will have some subfeatures installed to the local hard drive. (Available only if the feature has subfeatures.)</base>
+    <translation>{&amp;Tahoma8}將把一些子功能安裝到本地硬碟上。（只有在該功能含有子功能時有效）。</translation>
+  </string>
+  <string id="DestinationFolder.DlgDesc">
+    <base>Click Next to install to this folder, or click Change to install to a different folder.</base>
+    <translation>{&amp;Tahoma8}按一下「下一步」安裝到此資料夾，或按一下「變更」安裝到不同的資料夾。</translation>
+  </string>
+  <string id="DestinationFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Destination Folder</base>
+    <translation>{&amp;MSSansBold8}目的地資料夾</translation>
+  </string>
+  <string id="DestinationFolder.LocLabel">
+    <base>Install [ProductName] to:</base>
+    <translation>{&amp;Tahoma8}將 [ProductName] 安裝到：</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgDesc">
+    <base>The disk space required for the installation of the selected features.</base>
+    <translation>{&amp;Tahoma8}安裝選擇功能所需的磁碟空間。</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgTitle">
+    <base>{&amp;MSSansBold8}Disk Space Requirements</base>
+    <translation>{&amp;MSSansBold8}磁碟空間需求</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}醒目提示的磁碟沒有足夠的磁碟空間可供目前選擇的功能使用。您可以從醒目提示的磁碟中移除檔案，或選擇較少的功能以安裝到本地磁碟機，或選擇另一個目的地磁碟機。</translation>
+  </string>
+  <string id="DiskSpaceRequirements.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="FilesInUse.DlgDesc">
+    <base>Some files that need to be updated are currently in use.</base>
+    <translation>{&amp;Tahoma8}某些需要更新的檔案目前正在使用。</translation>
+  </string>
+  <string id="FilesInUse.DlgTitle">
+    <base>{&amp;MSSansBold8}Files in Use</base>
+    <translation>{&amp;MSSansBold8}正在使用的檔案</translation>
+  </string>
+  <string id="FilesInUse.DlgText">
+    <base>The following applications are using files that need to be updated by this setup. Close these applications and click Retry to continue.</base>
+    <translation>{&amp;Tahoma8}下列應用程式正在使用此安裝程式需要更新的檔案。關閉這些應用程式並按一下「重試」繼續。</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}瀏覽目的地資料夾。</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}變更目前目的地資料夾</translation>
+  </string>
+  <string id="InstallWelcome.Copyright">
+    <base>WARNING: This program is protected by copyright law and international treaties.</base>
+    <translation>警告︰本程式受版權法和國際條約的保護。</translation>
+  </string>
+  <string id="InstallWelcome.TextLine2">
+    <base>Setup will install [ProductName] on your computer. To continue, click Next.</base>
+    <translation>Setup will install [ProductName] on your computer. To continue, click Next.</translation>
+  </string>
+  <string id="InstallWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;VerdanaBold14}歡迎使用 [ProductName] Setup Wizard</translation>
+  </string>
+  <string id="LicenseAgreement.DlgDesc">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="COND_X64_IS_NOT_SUPPORTED">
+    <base>This setup package is for 32-bit version of Windows. Please install the 64-bit version of this software.</base>
+    <translation>Ce kit d'installation a été conçu pour une version 32 bits de Windows. Veuillez installer la version 64 bits de ce logiciel.</translation>
+  </string>
+  <string id="COND_REQUIRE_WIN2000">
+    <base>[ProductName] requires that your computer is running Windows 2000, Windows XP or Windows 2003 Server.</base>
+    <translation>[ProductName] requiert l'exécution de Windows 2000, Windows XP ou Windows 2003 Server sur votre ordinateur.</translation>
+  </string>
+  <string id="COND_NOT_PRIVILEGED">
+    <base>You do not have sufficient privileges to complete this installation. Log on as an administrator and then retry this installation.</base>
+    <translation>Vous ne disposez pas des privilèges suffisants pour exécuter cette installation. Ouvrez une session en tant qu'administrateur, puis essayez à nouveau d'exécuter l'installation.</translation>
+  </string>
+  <string id="ProductName64Suffix">
+    <base> (64-bit Windows)</base>
+    <translation>(Windows 64 bits)</translation>
+  </string>
+  <string id="Text.SetupVersion">
+    <base>[NdasSetupVersion]</base>
+    <translation>[NdasSetupVersion]</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText2">
+    <base>It is recommended that this product is used in 100Mbps wired LAN or 802.11g/a wireless LAN environment.</base>
+    <translation>Il est conseillé d'utiliser ce produit dans un environnement LAN câblé de 100 Mbits/s ou dans un environnement LAN 802.11g/a sans fil.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText1">
+    <base>If you are using this product in a wired 10Mbps LAN or wireless 802.11b LAN environment, there is a possiblity of data transmit error or unstable connection.</base>
+    <translation>L'utilisation de ce produit dans un environnement LAN câblé de 10 Mbits/s ou dans un environnement LAN 802.11b sans fil peut donner lieu à des erreurs de transmission de données ou à une connexion instable.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeGroupBox">
+    <base>Notice</base>
+    <translation>Remarque</translation>
+  </string>
+  <string id="SFWarning.SFWarnCheck">
+    <base>I &amp;acknowledge this warning message.</base>
+    <translation>J'&amp;ai pris connaissance de ce message d'avertissement.</translation>
+  </string>
+  <string id="SFWarning.DlgDesc">
+    <base>Setup detected a software.</base>
+    <translation>Le programme d'installation a détecté un logiciel.</translation>
+  </string>
+  <string id="SFWarning.DlgTitle">
+    <base>{&amp;MSSansBold8}Compatibility Warning</base>
+    <translation>{&amp;MSSansBold8}Avertissement de compatibilité</translation>
+  </string>
+  <string id="SFWarning.MemoLine1">
+    <base>{&amp;Arial8BoldBlue}Setup has found that StarForce Copy Protection software is installed in your system. Some old versions of this software may cause a system crash for using thirdy party storage device drivers.</base>
+    <translation>{&amp;Arial8BoldBlue}Le programme d'installation a détecté l'installation du logiciel de protection contre la copie StarForce sur votre système. Des versions plus anciennes de ce logiciel peuvent provoquer l'arrêt inattendu du système en cas d'utilisation de pilotes de périphériques de stockage de fabricants tiers.</translation>
+  </string>
+  <string id="SFWarning.MemoLine2">
+    <base>It is highly recommended to update the StarForce Copy Protection software before proceeding the installation. Check the web site of the Protection Technology (http://www.star-force.com) for the updates.</base>
+    <translation>Il est fortement recommandé de mettre à jour le logiciel de protection contre la copie StarForce avant de procéder à l'installation. Visitez le site Web de Protection Technology (http://www.star-force.com) pour accéder aux mises à jour disponibles.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgDesc">
+    <base>Setup has found a previous version of the software.</base>
+    <translation>Le programme d'installation a détecté une version antérieure du logiciel.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgTitle">
+    <base>{&amp;MSSansBold8}Upgrade Confirmation</base>
+    <translation>{&amp;MSSansBold8}Confirmation de la mise à niveau</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine1">
+    <base>Setup has found a previous version of the software and will perform an upgrade. During an upgrade, you may have to reboot the system twice.</base>
+    <translation>Le programme d'installation a détecté une version antérieure du logiciel et procèdera à sa mise à niveau. Une mise à niveau requiert généralement deux redémarrages du système.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine2">
+    <base>To ensure proper operation, please do not interrupt the system reboot and follow the instructions until the setup is completed.</base>
+    <translation>Pour assurer la mise à niveau correcte du logiciel, veillez à ne pas interrompre le redémarrage du système et à suivre les instructions indiquées jusqu'à la fin de la mise à niveau.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine3">
+    <base>Click Next to continue installation.</base>
+    <translation>Cliquez sur "Suivant" pour continuer l'installation.</translation>
+  </string>
+  <string id="Error.25900">
+    <base>Newer version of the software is already installed. If you have to downgrade the software, uninstall the higher version software first.</base>
+    <translation>Une version plus récente du logiciel est déjà installée. Si vous souhaitez rétrograder le logiciel, désinstallez d'abord la version la plus récente du logiciel.</translation>
+  </string>
+  <string id="Error.27500">
+    <base>This setup requires Internet Information Server 4.0 or higher for configuring IIS Virtual Roots. Please make sure that you have IIS 4.0 or higher.</base>
+    <translation>Ce programme d'installation requiert Internet Information Server 4.0 ou une version supérieure pour configurer les racines virtuelles IIS. Vérifiez que la version IIS 4.0 ou une version supérieure est installée.</translation>
+  </string>
+  <string id="Error.27501">
+    <base>This setup requires Administrator privileges for configuring IIS Virtual Roots.</base>
+    <translation>Ce programme d'installation requiert des privilèges d'administrateur pour configurer les racines virtuelles IIS.</translation>
+  </string>
+</localization>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      INDX( 	 ..4O           (   �  �       a �x                �    � �     �    CΏ�E� ?�ea�CΏ�E��ZxlL�        R              !l o c _ n d a s w i x o e m _ n l - N L . x m l . s v n - b a s e ea��    � �     �    CΏ�E� ?�ea�CΏ�E���xlL�        _              !l o c _ n d a s w i x o e m _ p t - P T . x m l . s v n - b a s e ea��    � �     �    CΏ�E� ?�ea�CΏ�E�:�xlL�        f              !l o c _ n d a s w i x o e m _ r u - R U . x m l . s v n - b  s e ea��    � �     �    CΏ�E� ?�ea�CΏ�E���xlL�        R              !l o c _ n d a s w i x o e m _ s v - S E . x m l . s v n - b a s e ea��    � �     �    CΏ�E� ?�ea���Ϗ�E��5ylL�        �              !l o c _ n d a s w i x o e m _ z h - C N . x m l . s v n - b a s e ea��    � �     �    ��Ϗ�E� �ea���Ϗ�E�
+��lL�        &              #l o c _ n d a s w i x s t d e x _ d a - D K . x m l . s v n - b a s e �    � �     �    ��Ϗ�E� �ea���Ϗ�E x΅lL�        :              #l o c _ n d a s w i x s t d e x _ d e - D E . x m l . s v n - b a s e �    � �     �    ��Ϗ�E� ?�ea���Ϗ�E���lL�        x              #l o c _ n d a s w i x s t d e x _ e n - U S . x m l . s v n - b a s e �    � �     �    ��Ϗ�E� ?�ea���Ϗ�E��&�lL�        �              #l o c _ n d a s w i x s t d e x _ e s - E S . x m l . s v n - b a s e �    � �     �    ��Ϗ�E� ?�ea�QPя�E�L�lL�        �              #l o c _ n d a s w i  s t d e x _ f r - F R . x m l . s v n - b a s e  �    � �     �    QPя�E� ?�ea�QPя�E��ІlL�        �              #l o c _ n d a s w i x s t d e x _ n b - N O . x m l . s v n - b a s e !�    � �     �    ��ҏ�E� �ea���ҏ�E�b�lL�        �              #l o c _ n d a s w i x s t d e x _ n l - N L . x m l . s v n - b a s e "�    � �     �    ��ҏ�E� ?�ea���ҏ�E�J-�lL�        �              #l o c _ n d a s w i x s t d e x _ p t - P T . x m l . s v n - b a s e              �    ��ҏ�E� ?�ea���ҏ�E���ҏ�E�        }              #l o c _ n d a s w i x s t d e x _ r u - R U . x m l . s v n - b a s e $�    � �     �    �]ԏ�E� ?�ea��]ԏ�E��]ԏ�E�        �              #l o c _ n d a s w i x s t d e x _ s v - S E . x m l . s v n - b a s e %�    � �     �    �]ԏ�E� ?�ea��]ԏ�E��]ԏ�E�        ,              #l o c _ n d a s w i x s t d e x _ z h - C N . x m l . s v n - b a s e &�    � �     �    �]ԏ�E� ?�ea��]ԏ�E��]ԏ�E� �    ��             !l o c _ n d a s w i x s t d _ d a - D K . x m l . s v n - b a s e ea�'�    � �     �    �]ԏ�E� ?�ea��]ԏ�E��]ԏ�E� �     �             !l o c _ n d a s w i x s t d _ d e - D E . x m l . s v n - b a s e ea�(�    � �     �    2�Տ�E� ?�ea�2�Տ�E�2�Տ�E�       6             !l o c _ n d a s w i x s t d _ e n - U S . x m l . s v n - b a s e ea��    p Z     �    �5ˏ�E� ?�ea��5ˏ�E��5ˏ�E�        X              L O C _ N D ~ 1 . S V N       �    p Z     �    �5ˏ�E� ?�ea��5ˏ�E��5ˏ�E�        :              L O C _ N D ~ 2 . S V N       �    p Z     �    �5ˏ�E� �ea�q�̏�E��5ˏ�E�        �              L O C _ N D ~ 3 . S V N       �    p Z     �    q�̏�E� ?�ea�q�̏�E�q�̏�E�        O              L O C _ N D ~ 4 . S V N       �    p Z     �    CΏ�E� ?�ea�CΏ�E�CΏ�E�        R              L O D 0 E 3 ~ 1 . S V N       $�    p Z     �    �]ԏ�E� ?�ea��]ԏ�E��]ԏ�E�        �             L O D 5 C 2 ~ 1 . S V N        �    p Z     �    QPя�E� ?�ea�QPя�E�QPя�E�        �              L O D A A D ~ 1 . S V N       &�    p Z     �    �]ԏ�E� ?�ea��]ԏ�E��]ԏ�E� �     ��             L O E F 8 B ~ 1 . S V N       %�    p Z     �    �]ԏ�E� ?�ea��]ԏ�E��]ԏ�E�        ,              L O F D 4 8 ~ 1 . S V N                                                                                                                                            ﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="COND_X64_IS_NOT_SUPPORTED">
+    <base>This setup package is for 32-bit version of Windows. Please install the 64-bit version of this software.</base>
+    <translation>Denne installasjonspakken er for 32-biters versjoner av Windows. Installer en 64-biters versjon av denne programvaren.</translation>
+  </string>
+  <string id="COND_REQUIRE_WIN2000">
+    <base>[ProductName] requires that your computer is running Windows 2000, Windows XP or Windows 2003 Server.</base>
+    <translation>[ProductName] krever at datamaskinen kjører Windows 2000, Windows XP eller Windows 2003 Server.</translation>
+  </string>
+  <string id="COND_NOT_PRIVILEGED">
+    <base>You do not have sufficient privileges to complete this installation. Log on as an administrator and then retry this installation.</base>
+    <translation>Du har ikke tilstrekkelige rettigheter til å fullføre denne installasjonen. Logg deg på som administrator, og prøv deretter å installere på nytt.</translation>
+  </string>
+  <string id="ProductName64Suffix">
+    <base> (64-bit Windows)</base>
+    <translation>(64-biters Windows)</translation>
+  </string>
+  <string id="Text.SetupVersion">
+    <base>[NdasSetupVersion]</base>
+    <translation>[NdasSetupVersion]</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText2">
+    <base>It is recommended that this product is used in 100Mbps wired LAN or 802.11g/a wireless LAN environment.</base>
+    <translation>Det anbefales at produktet brukes i et miljø med 100Mbps kablet LAN eller 802.11g/a trådløst LAN.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText1">
+    <base>If you are using this product in a wired 10Mbps LAN or wireless 802.11b LAN environment, there is a possiblity of data transmit error or unstable connection.</base>
+    <translation>Hvis du bruker dette produktet i et miljø med kablet 10Mbps LAN eller trådløst 802.11b LAN, kan resultatet være dataoverføringsfeil eller ustabil tilkobling.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeGroupBox">
+    <base>Notice</base>
+    <translation>Merknad</translation>
+  </string>
+  <string id="SFWarning.SFWarnCheck">
+    <base>I &amp;acknowledge this warning message.</base>
+    <translation>Jeg &amp;godtar denne varselmeldingen.</translation>
+  </string>
+  <string id="SFWarning.DlgDesc">
+    <base>Setup detected a software.</base>
+    <translation>Installasjonsprogrammet oppdaget en programvare.</translation>
+  </string>
+  <string id="SFWarning.DlgTitle">
+    <base>{&amp;MSSansBold8}Compatibility Warning</base>
+    <translation>{&amp;MSSansBold8}Kompatibilitetsadvarsel</translation>
+  </string>
+  <string id="SFWarning.MemoLine1">
+    <base>{&amp;Arial8BoldBlue}Setup has found that StarForce Copy Protection software is installed in your system. Some old versions of this software may cause a system crash for using thirdy party storage device drivers.</base>
+    <translation>{&amp;Arial8BoldBlue}Installasjonsprogrammet har oppdaget at programvaren StarForce Copy Protection er installert i systemet. Enkelte eldre versjoner av denne programvaren kan føre til systemkrasj ved bruk av tredjeparts lagringsenhetsdrivere.</translation>
+  </string>
+  <string id="SFWarning.MemoLine2">
+    <base>It is highly recommended to update the StarForce Copy Protection software before proceeding the installation. Check the web site of the Protection Technology (http://www.star-force.com) for the updates.</base>
+    <translation>Det anbefales strekt at du oppdaterer programvaren StarForce Copy Protection før du fortsetter installasjonen. Gå til webområdet for Protection Technology (http://www.star-force.com) for å få oppdateringer.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgDesc">
+    <base>Setup has found a previous version of the software.</base>
+    <translation>Installasjonsprogrammet har funnet en tidligere versjon av programvaren.</translation>
+  </string>
+se>
+    <translation>{&amp;Tahoma8}Setup 將在電腦上完成 [ProductName] 的安裝過程。要繼續，請按一下「下一步」。</translation>
+  </string>
+  <string id="SetupResume.ResumeText">
+    <base>The Setup Wizard will complete the suspended installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}Setup Wizard 將完成電腦上暫停的 [ProductName] 安裝過程。要繼續，請按一下「下一步」。</translation>
+  </string>
+  <string id="SetupResume.TextLine1">
+    <base>{&amp;TahomaBold10}Resuming the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}繼續執行 [ProductName] Setup Wizard</translation>
+  </string>
+  <string id="SetupType.DlgDesc">
+    <base>Choose the setup type that best suits your needs.</base>
+    <translation>{&amp;Tahoma8}選擇最適合自己需要的安裝類型。</translation>
+  </string>
+  <string id="SetupType.DlgTitle">
+    <base>{&amp;MSSansBold8}Setup Type</base>
+    <translation>{&amp;MSSansBold8}安裝類型</translation>
+  </string>
+  <string id="SetupType.DlgText">
+    <base>Please select a setup type.</base>
+    <translation>{&amp;Tahoma8}請選擇一個安裝類型。</translation>
+  </string>
+  <string id="SetupType.CompText">
+    <base>All program features will be installed. (Requires the most disk space.)</base>
+    <translation>{&amp;Tahoma8}將安裝所有的程式功能 （需要的磁碟空間最大）。</translation>
+  </string>
+  <string id="SetupType.CustText">
+    <base>Choose which program features you want installed and where they will be installed. Recommended for advanced users.</base>
+    <translation>{&amp;Tahoma8}選擇要安裝的程式功能和將要安裝的位置。建議進階使用者使用。</translation>
+  </string>
+  <string id="SetupType.Complete">
+    <base>{&amp;MSSansBold8}&amp;Complete</base>
+    <translation>{&amp;MSSansBold8}完整安裝(&amp;C)</translation>
+  </string>
+  <string id="SetupType.Custom">
+    <base>{&amp;MSSansBold8}Cu&amp;stom</base>
+    <translation>{&amp;MSSansBold8}自訂(&amp;S)</translation>
+  </string>
+  <string id="Error.0">
+    <base>{{Fatal error: }}</base>
+    <translation>{{嚴重錯誤: }}</translation>
+  </string>
+  <string id="Error.1">
+    <base>Error [1].</base>
+    <translation>{{錯誤 [1]. }}</translation>
+  </string>
+  <string id="Error.2">
+    <base>Warning [1].</base>
+    <translation>警告 [1]. </translation>
+  </string>
+  <string id="Error.4">
+    <base>Info [1].</base>
+    <translation>資訊 [1]. </translation>
+  </string>
+  <string id="Error.5">
+    <base>Internal Error [1]. [2]{, [3]}{, [4]}</base>
+    <translation>內部錯誤 [1]. [2]{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.7">
+    <base>{{Disk full: }}</base>
+    <translation>{{磁碟已滿: }}</translation>
+  </string>
+  <string id="Error.8">
+    <base>Action [Time]: [1]. [2]</base>
+    <translation>動作 [Time]: [1]. [2]</translation>
+  </string>
+  <string id="Error.9">
+    <base>[ProductName]</base>
+    <translation>[ProductName]</translation>
+  </string>
+  <string id="Error.10">
+    <base>{[2]}{, [3]}{, [4]}</base>
+    <translation>{[2]}{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.11">
+    <base>Message type: [1], Argument: [2]</base>
+    <translation>訊息類型: [1], 引數: [2]</translation>
+  </string>
+  <string id="Error.12">
+    <base>=== Logging started: [Date]  [Time] ===</base>
+    <translation>=== 開啟記錄時間: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.13">
+    <base>=== Logging stopped: [Date]  [Time] ===</base>
+    <translation>=== 停止記錄時間: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.14">
+    <base>Action start [Time]: [1].</base>
+    <translation>動作開始 [Time]: [1].</translation>
+  </string>
+  <string id="Error.15">
+    <base>Action ended [Time]: [1]. Return value [2].</base>
+    <translation>動作結束 [Time]: [1]. 傳回值 [2]。</translation>
+  </string>
+  <string id="Error.16">
+    <base>Time remaining: {[1] minutes }{[2] seconds}</base>
+    <translation>剩餘時間: {[1] 分 }{[2] 秒}</translation>
+  </string>
+  <string id="Error.17">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>記憶體不足，重試之前先關閉其它應用程式。</translation>
+  </string>
+  <string id="Error.18">
+    <base>Installer is no longer responding.</base>
+    <translation>Installer 不再有回應。</translation>
+  </string>
+  <string id="Error.19">
+    <base>Installer terminated prematurely.</base>
+    <translation>Installer 已完全中止。</translation>
+  </string>
+  <string id="Error.20">
+    <base>Please wait while Windows configures [ProductName]</base>
+    <translation>請稍待，Windows 在設定 [ProductName]</translation>
+  </string>
+  <string id="Error.21">
+    <base>Gathering required information...</base>
+    <translation>正在蒐集必要的資訊...</translation>
+  </string>
+  <string id="Error.22">
+    <base>Removing older versions of this application</base>
+    <translation>移除舊版應用程式...</translation>
+  </string>
+  <string id="Error.23">
+    <base>Preparing to remove older versions of this application</base>
+    <translation>準備移除舊版應用程式...</translation>
+  </string>
+  <string id="Error.32">
+    <base>{[ProductName] }Setup completed successfully.</base>
+    <translation>{[ProductName] }成功地完成安裝。</translation>
+  </string>
+  <string id="Error.33">
+    <base>{[ProductName] }Setup failed.</base>
+    <translation>{[ProductName] }安裝失敗。</translation>
+  </string>
+  <string id="Error.1101">
+    <base>Error reading from file: [2]. {{ System error [3].}}  Verify that the file exists and that you can access it.</base>
+    <translation>讀取檔案錯誤: [2]。{{ 系統錯誤 [3]。}}  檢查檔案是否存在，以及您是否有權限可以存取它。</translation>
+  </string>
+  <string id="Error.1301">
+    <base>Cannot create the file [3].  A directory with this name already exists.  Cancel the installation and try installing to a different location.</base>
+    <translation>無法建立檔案 '[2]'。同名的目錄已經存在，取消安裝然後嘗試安裝至別的位置。</translation>
+  </string>
+  <string id="Error.1302">
+    <base>Please insert the disk: [2]</base>
+    <translation>請插入磁片: [2]</translation>
+  </string>
+  <string id="Error.1303">
+    <base>The installer has insufficient privileges to access this directory: [2].  The installation cannot continue.  Log on as an administrator or contact your system administrator.</base>
+    <translation>Installer 的權限不足，無法存取這個目錄: [2]，安裝無法繼續，以管理員的身份登入或是連絡您的系統管理員。</translation>
+  </string>
+  <string id="Error.1304">
+    <base>Error writing to file [2].  Verify that you have access to that directory.</base>
+    <translation>寫入至檔案時發生錯誤: [2]。檢查您是否有權限可以存取那個目錄。</translation>
+  </string>
+  <string id="Error.1305">
+    <base>Error reading from file [2].  Verify that the file exists and that you can access it.</base>
+    <translation>讀取檔案時發生錯誤: [2]。{{ 系統錯誤 [3]。}} 檢查檔案是否存在，以及您是否有權限可以存取它。</translation>
+  </string>
+  <string id="Error.1306">
+    <base>Another application has exclusive access to the file [2].  Please shut down all other applications, then click Retry.</base>
+    <translation>其它的應用程式對檔案 '[2]' 獨佔存取。請關閉所有其它的應用程式，然後按 "重試"。</translation>
+  </string>
+  <string id="Error.1307">
+    <base>There is not enough disk space to install the file [2].  Free some disk space and click Retry, or click Cancel to exit.</base>
+    <translation>磁碟空間不足，無法安裝這個檔案: [2]。釋放一些磁碟空間然後重試，或按 "放棄" 結束。</translation>
+  </string>
+  <string id="Error.1308">
+    <base>Source file not found: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>找不到來源檔案: [2]。檢查檔案是否存在，以及您是否有權限可以存取它。</translation>
+  </string>
+  <string id="Error.1309">
+    <base>Error reading from file: [3]. {{ System error [2].}}  Verify that the file exists and that you can access it.</base>
+    <translation>讀取檔案錯誤: [3]。{{ 系統錯誤 [2]。}}  檢查檔案是否存在，以及您是否有權限可以存取它。</translation>
+  </string>
+  <string id="Error.1310">
+    <base>Error writing to file: [3]. {{ System error [2].}}  Verify that you have access to that directory.</base>
+    <translation>寫入至檔案時發生錯誤: [3]。{{ 系統錯誤 [2]。}}檢查您是否有權限可以存取那個目錄。</translation>
+  </string>
+  <string id="Error.1311">
+    <base>Source file not found{{(cabinet)}}: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>找不到來源檔案{{(cabinet)}}: [2]。檢查檔案是否存在，以及您是否有權限可以存取它。</translation>
+  </string>
+  <string id="Error.1312">
+    <base>Cannot create the directory [2].  A file with this name already exists.  Please rename or remove the file and click Retry, or click Cancel to exit.</base>
+    <translation>無法建立目錄 '[2]'。同名的檔案已經存在，請更名或移除此檔案，然後重試，或按 "取消" 結束。</translation>
+  </string>
+  <string id="Error.1313">
+    <base>The volume [2] is currently unavailable.  Please select another.</base>
+    <translation>目前無使用磁碟機 [2]，請選取別的磁碟機。</translation>
+  </string>
+  <string id="Error.1314">
+    <base>The specified path [2] is unavailable.</base>
+    <translation>指定的路徑 '[2]' 無法使用。</translation>
+  </string>
+  <string id="Error.1315">
+    <base>Unable to write to the specified folder [2].</base>
+    <translation>指定的資料夾 [2] 無法寫入。</translation>
+  </string>
+  <string id="Error.1316">
+    <base>A network error occurred while attempting to read from the file [2]</base>
+    <translation>嘗試從檔案讀取時發生網路錯誤: [2]</translation>
+  </string>
+  <string id="Error.1317">
+    <base>An error occurred while attempting to create the directory [2]</base>
+    <translation>嘗試建立目錄時發生錯誤: [2]</translation>
+  </string>
+  <string id="Error.1318">
+    <base>A network error occurred while attempting to create the directory [2]</base>
+    <translation>嘗試建立目錄時發生網路錯誤: [2]</translation>
+  </string>
+  <string id="Error.1319">
+    <base>A network error occurred while attempting to open the source file cabinet [2].</base>
+    <translation>嘗試開啟來源檔案時發生網路錯誤: [2]</translation>
+  </string>
+  <string id="Error.1320">
+    <base>The specified path is too long [2].</base>
+    <translation>指定的路徑太長: [2]</translation>
+  </string>
+  <string id="Error.1321">
+    <base>The Installer has insufficient privileges to modify the file [2].</base>
+    <translation>Installer 的權限不足以修改這個檔案: [2]。</translation>
+  </string>
+  <string id="Error.1322">
+    <base>A portion of the path [2] exceeds the length allowed by the system.</base>
+    <translation>資料夾路徑 '[2]' 的部份超過系統允許的長度或參雜系統不允許的字元。</translation>
+  </string>
+  <string id="Error.1323">
+    <base>The path [2] contains words that are not valid in folders.</base>
+    <translation>資料夾路徑 '[2]' 含有無效資料夾路徑字元。</translation>
+  </string>
+  <string id="Error.1324">
+    <base>The path [2] contains an invalid character.</base>
+    <translation>資料夾路徑 '[2]' 含有無效字元。</translation>
+  </string>
+  <string id="Error.1325">
+    <base>[2] is not a valid short file name.</base>
+    <translation>'[2]' 不是有效的短檔名。</translation>
+  </string>
+  <string id="Error.1326">
+    <base>Error getting file security: [3] GetLastError: [2]</base>
+    <translation>取得檔案安全性時發生錯誤: [3] GetLastError: [2]</translation>
+  </string>
+  <string id="Error.1327">
+    <base>Invalid Drive: [2]</base>
+    <translation>無效的磁碟機: [2]</translation>
+  </string>
+  <string id="Error.1328">
+    <base>Error applying patch to file [2].  It has probably been updated by other means, and can no longer be modified by this patch.  For more information contact your patch vendor.  {{System Error: [3]}}</base>
+    <translation>套用修正至檔案 [2] 發生錯誤。可能已被其他方法更新過，並且無法被此修正更改。請接洽此修正程式的廠商以取得更多訊息。{{系統錯誤: [3]}}</translation>
+  </string>
+  <string id="Error.1401">
+    <base>Could not create key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>無法建立機碼: [2]。{{ 系統錯誤 [3]。}}  檢查您是有足夠的權限存取該機碼，或是連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1402">
+    <base>Could not open key: [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>無法開啟機碼: [2]。{{ 系統錯誤 [3]。}}  檢查您是有足夠的權限存取該機碼，或是連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1403">
+    <base>Could not delete value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>無法刪除值: [2] 從機碼 [3]。{{ 系統錯誤 [4]。}}  檢查您是有足夠的權限存取該機碼，或是連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1404">
+    <base>Could not delete key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>無法刪除機碼: [2]。{{ 系統錯誤 [3]。}}  檢查您是有足夠的權限存取該機碼，或是連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1405">
+    <base>Could not read value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>無法從機碼 [3] 讀取值 [2]。{{ 系統錯誤 [4]。}}   檢查您是有足夠的權限存取該機碼，或是連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1406">
+    <base>Could not write value [2] to key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>無法寫入值 [2] 至機碼 [3]。{{ 系統錯誤 [4]。}}   檢查您是有足夠的權限存取該機碼，或是連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1407">
+    <base>Could not get value names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>無法取機碼 [2] 的值名稱。{{ 系統錯誤 [3]。}}   檢查您是有足夠的權限存取該機碼，或是連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1408">
+    <base>Could not get sub key names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>無法取子機碼 [2] 的值名稱。{{ 系統錯誤 [3]。}}   檢查您是有足夠的權限存取該機碼，或是連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1409">
+    <base>Could not read security information for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>無法讀取機碼 [2] 的保全資訊。{{ 系統錯誤 [3]。}}   檢查您是有足夠的權限存取該機碼，或是連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1410">
+    <base>Could not increase the available registry space. [2] KB of free registry space is required for the installation of this application.</base>
+    <translation>無法增加可用的登錄空間。此應用程式須要 [2] KB 以上的空間。</translation>
+  </string>
+  <string id="Error.1500">
+    <base>Another installation is in progress. You must complete that installation before continuing this one.</base>
+    <translation>其它的安裝正在進行中，您必須完成該項安裝之後才能繼續。</translation>
+  </string>
+  <string id="Error.1501">
+    <base>Error accessing secured data. Please make sure the Windows Installer is configured properly and try the installation again.</base>
+    <translation>存取保全資料時發生錯誤，請確定 Windows Installer 是否正確地被設定，然後再試一次。</translation>
+  </string>
+  <string id="Error.1502">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.  Your current installation will now continue.</base>
+    <translation>使用者 '[2]' 已先前安裝了產品 '[3]'。使用者必須再一次執行安裝以使用此產品。您目前的安裝將會繼續。</translation>
+  </string>
+  <string id="Error.1503">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.</base>
+    <translation>使用者 '[2]' 已先前安裝了產品 '[3]'。使用者必須再一次執行安裝以使用此產品。</translation>
+  </string>
+  <string id="Error.1601">
+    <base>Out of disk space -- Volume: '[2]'; required space: [3] KB; available space: [4] KB.  Free some disk space and retry.</base>
+    <translation>磁碟空間不足 -- 磁碟機: '[2]'; 需要空間: [3] KB; 可用空間: [4] KB，釋放一些空間後再重試。</translation>
+  </string>
+  <string id="Error.1602">
+    <base>Are you sure you want to cancel?</base>
+    <translation>您確定要取消嗎 ?</translation>
+  </string>
+  <string id="Error.1603">
+    <base>The file [2][3] is being held in use{ by the following process: Name: [4], ID: [5], Window Title: [6]}.  Close that application and retry.</base>
+    <translation>檔案 [2][3] 正被下列應用程式: '[6]'{{, 名稱: [4], Id: [5]}}，關閉該應用程式然後重試。</translation>
+  </string>
+  <string id="Error.1604">
+    <base>The product [2] is already installed, preventing the installation of this product.  The two products are incompatible.</base>
+    <translation>已經安裝產品 '[2]'，會阻止您安裝這項產品，這兩項產品不相容。</translation>
+  </string>
+  <string id="Error.1605">
+    <base>Out of disk space -- Volume: [2]; required space: [3] KB; available space: [4] KB.  If rollback is disabled, enough space is available. Click Cancel to quit, Retry to check available disk space again, or Ignore to continue without rollback.</base>
+    <translation>磁碟空間不足 -- 磁碟機: '[2]'; 需要空間: [3] KB; 可用空間: [4] KB，如果關閉 rollback 就會有足夠的空間，按 "取消" 結束，按 "放棄" 再次檢查可用的磁碟空間，或按 [忽略] 繼續但沒有 rollback。</translation>
+  </string>
+  <string id="Error.1606">
+    <base>Could not access network location [2].</base>
+    <translation>無法存取網路位置 [2]。</translation>
+  </string>
+  <string id="Error.1607">
+    <base>The following applications should be closed before continuing the installation:</base>
+    <translation>繼續安裝之前下列應用程式應該被關閉:</translation>
+  </string>
+  <string id="Error.1608">
+    <base>Could not find any previously installed compliant products on the machine for installing this product.</base>
+    <translation>無法找到先前安裝在此機器上的產品。</translation>
+  </string>
+  <string id="Error.1701">
+    <base>The key [2] is not valid.  Verify that you entered the correct key.</base>
+    <translation>Key [2] 是無效的，檢查您輸入的 Key 是否正確。</translation>
+  </string>
+  <string id="Error.1702">
+    <base>The installer must restart your system before configuration of [2] can continue.  Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>Installer 必須重新啟動您的系統才能繼續設定 [2]，按 "是" 立即重新啟動，按 "否"，如果您想要稍後手動重新啟動。</translation>
+  </string>
+  <string id="Error.1703">
+    <base>You must restart your system for the configuration changes made to [2] to take effect. Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>Installer 必須重新啟動您的系統，對 [2] 設定的變更才會生效，按 "是" 立即重新啟動，按 "否"，如果您想要稍後手動重新啟動。</translation>
+  </string>
+  <string id="Error.1704">
+    <base>An installation for [2] is currently suspended.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>安裝 [2] 目前被暫停，您必須復原該安裝所做的變更才能繼續，您要復原這些變更嗎 ?</translation>
+  </string>
+  <string id="Error.1705">
+    <base>A previous installation for this product is in progress.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>另一個安裝這個產品的程式正在進行中，您必須復原該安裝所做的變更才能繼續，您要復原這些變更嗎 ?</translation>
+  </string>
+  <string id="Error.1706">
+    <base>No valid source could be found for product [2].  The Windows Installer cannot continue.</base>
+    <translation>找不到產品 [2] 的有效來源，Windows Installer 無法繼續。請嘗試使用正確的安裝封裝 '[3]' 再安裝一次。</translation>
+  </string>
+  <string id="Error.1707">
+    <base>Installation operation completed successfully.</base>
+    <translation>成功地完成安裝作業。</translation>
+  </string>
+  <string id="Error.1708">
+    <base>Installation operation failed.</base>
+    <translation>安裝作業失敗。</translation>
+  </string>
+  <string id="Error.1709">
+    <base>Product: [2] -- [3]</base>
+    <translation>產品: [2] -- [3]</translation>
+  </string>
+  <string id="Error.1710">
+    <base>You may either restore your computer to its previous state or continue the installation later. Would you like to restore?</base>
+    <translation>您可以將電腦還原成先前的狀態或是稍後繼續安裝，您要還原嗎 ?</translation>
+  </string>
+  <string id="Error.1711">
+    <base>An error occurred while writing installation information to disk.  Check to make sure enough disk space is available, and click Retry, or Cancel to end the installation.</base>
+    <translation>寫入安裝資訊至磁碟時發生錯誤，確定磁碟的空間足夠，並按 "重試"，或按 "取消" 來結束安裝。</translation>
+  </string>
+  <string id="Error.1712">
+    <base>One or more of the files required to restore your computer to its previous state could not be found.  Restoration will not be possible.</base>
+    <translation>找不到還原您的電腦成之前的狀態所需的一個或多個檔案。</translation>
+  </string>
+  <string id="Error.1713">
+    <base>[2] cannot install one of its required products. Contact your technical support group.  {{System Error: [3].}}</base>
+    <translation>[2] 無法安裝其裝其中一個必須的產品。請接洽技術支援人員。{{系統錯誤: [3].}}</translation>
+  </string>
+  <string id="Error.1714">
+    <base>The older version of [2] cannot be removed.  Contact your technical support group.  {{System Error [3].}}</base>
+    <translation>舊版本的 [2] 無法移除。請接洽技術支援人員。{{系統錯誤: [3].}}</translation>
+  </string>
+  <string id="Error.1801">
+    <base>The path [2] is not valid.  Please specify a valid path.</base>
+    <translation>路徑 [2] 是無效的，請指定有效的路徑。</translation>
+  </string>
+  <string id="Error.1802">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>記憶體不足，重試之前先關閉其它應用程式。</translation>
+  </string>
+  <string id="Error.1803">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to go back to the previously selected volume.</base>
+    <translation>磁碟機 [2] 中沒有磁片，請插入磁片然後重試，或按 "取消" 回到上次選取的磁碟機代號。</translation>
+  </string>
+  <string id="Error.1804">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to return to the browse dialog and select a different volume.</base>
+    <translation>磁碟機 [2] 中沒有磁片，請插入磁片然後重試，或按 "取消" 回到瀏覽對話方塊，並選取別的磁碟機代號。</translation>
+  </string>
+  <string id="Error.1805">
+    <base>The folder [2] does not exist.  Please enter a path to an existing folder.</base>
+    <translation>資料夾 [2] 不存在，請輸入一個指向現存資料夾的路徑。</translation>
+  </string>
+  <string id="Error.1806">
+    <base>You have insufficient privileges to read this folder.</base>
+    <translation>您的權限不足，無法讀取這個資料夾。</translation>
+  </string>
+  <string id="Error.1807">
+    <base>A valid destination folder for the installation could not be determined.</base>
+    <translation>無法決定正確的目地資料夾。</translation>
+  </string>
+  <string id="Error.1901">
+    <base>Error attempting to read from the source installation database: [2].</base>
+    <translation>嘗試讀取來源安裝資料庫時發生錯誤: [2]。</translation>
+  </string>
+  <string id="Error.1902">
+    <base>Scheduling reboot operation: Renaming file [2] to [3]. Must reboot to complete operation.</base>
+    <translation>正在排定重新開機作業: 正在更改檔案名稱 [2] 成 [3]，必須重新開機才能完成作業。</translation>
+  </string>
+  <string id="Error.1903">
+    <base>Scheduling reboot operation: Deleting file [2]. Must reboot to complete operation.</base>
+    <translation>正在排定重新開機作業: 正在刪除檔案 [2]，必須重新開機才能完成作業。</translation>
+  </string>
+  <string id="Error.1904">
+    <base>Module [2] failed to register.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>註冊模組 [2] 失敗。 HRESULT [3]. 連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1905">
+    <base>Module [2] failed to unregister.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>註冊模組 [2] 失敗。 HRESULT [3]. 連絡您的支援人員。</translation>
+  </string>
+  <string id="Error.1906">
+    <base>Failed to cache package [2]. Error: [3]. Contact your support personnel.</base>
+    <translation>無法遇存 [2]. 錯誤: [3]. 請連絡支援人員。</translation>
+  </string>
+  <string id="Error.1907">
+    <base>Could not register font [2].  Verify that you have sufficient permissions to install fonts, and that the system supports this font.</base>
+    <translation>無法註冊字形 [2]。請確認您有足夠的權限及系統支援。</translation>
+  </string>
+  <string id="Error.1908">
+    <base>Could not unregister font [2]. Verify that you have sufficient permissions to remove fonts.</base>
+    <translation>無法解除註冊字形 [2]。請確認您有足夠的權限以移除字形。</translation>
+  </string>
+  <string id="Error.1909">
+    <base>Could not create shortcut [2]. Verify that the destination folder exists and that you can access it.</base>
+    <translation>無法建立捷徑 [2]。請確認目地資料夾是否存在及您的存取權。</translation>
+  </string>
+  <string id="Error.1910">
+    <base>Could not remove shortcut [2]. Verify that the shortcut file exists and that you can access it.</base>
+    <translation>無法移除捷徑 [2]。請確認目地資料夾是否存在及您的存取權。</translation>
+  </string>
+  <string id="Error.1911">
+    <base>Could not register type library for file [2].  Contact your support personnel.</base>
+    <translation>無法註冊檔案 [2] 的 type library。請連絡系統支援人員"。</translation>
+  </string>
+  <string id="Error.1912">
+    <base>Could not unregister type library for file [2].  Contact your support personnel.</base>
+    <translation>無法解除註冊檔案 [2] 的 type library。請連絡系統支援人員"。</translation>
+  </string>
+  <string id="Error.1913">
+    <base>Could not update the INI file [2][3].  Verify that the file exists and that you can access it.</base>
+    <translation>無法更新 ini 檔 [2][3]。 請確認檔案是否存在及您的存取權。</translation>
+  </string>
+  <string id="Error.1914">
+    <base>Could not schedule file [2] to replace file [3] on reboot.  Verify that you have write permissions to file [3].</base>
+    <translation>無法預定在重開機時將檔案 [2] 取代 [3] 。請確認您有 [3] 的存取權。</translation>
+  </string>
+  <string id="Error.1915">
+    <base>Error removing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>移除 ODBC 驅動程式管理員錯誤，ODBC 錯誤 [2]: [3]。請連絡系統支援人員。</translation>
+  </string>
+  <string id="Error.1916">
+    <base>Error installing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>安裝 ODBC 驅動程式管理員錯誤，ODBC 錯誤 [2]: [3]。請連絡系統支援人員。</translation>
+  </string>
+  <string id="Error.1917">
+    <base>Error removing ODBC driver [4], ODBC error [2]: [3]. Verify that you have sufficient privileges to remove ODBC drivers.</base>
+    <translation>移除 ODBC 驅動程式管理員錯誤[4]，ODBC 錯誤 [2]: [3]。請確認您有足夠權限。</translation>
+  </string>
+  <string id="Error.1918">
+    <base>Error installing ODBC driver [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>安裝 ODBC 驅動程式管理員錯誤[4]，ODBC 錯誤 [2]: [3]。請確認檔案 [4] 存在並可存取。</translation>
+  </string>
+  <string id="Error.1919">
+    <base>Error configuring ODBC data source [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>設定 ODBC 驅動程式管理員錯誤[4]，ODBC 錯誤 [2]: [3]。請確認檔案 [4] 存在並可存取。</translation>
+  </string>
+  <string id="Error.1920">
+    <base>Service [2] ([3]) failed to start.  Verify that you have sufficient privileges to start system services.</base>
+    <translation>服務 '[2]' ([3]) 無法啟動。請確認您有足夠權限。</translation>
+  </string>
+  <string id="Error.1921">
+    <base>Service [2] ([3]) could not be stopped.  Verify that you have sufficient privileges to stop system services.</base>
+    <translation>服務 '[2]' ([3]) 無法停止。請確認您有足夠權限。</translation>
+  </string>
+  <string id="Error.1922">
+    <base>Service [2] ([3]) could not be deleted.  Verify that you have sufficient privileges to remove system services.</base>
+    <translation>服務 '[2]' ([3]) 無法刪除。請確認您有足夠權限。</translation>
+  </string>
+  <string id="Error.1923">
+    <base>Service [2] ([3]) could not be installed.  Verify that you have sufficient privileges to install system services.</base>
+    <translation>服務 '[2]' ([3]) 無法安裝。請確認您有足夠權限。</translation>
+  </string>
+  <string id="Error.1924">
+    <base>Could not update environment variable [2].  Verify that you have sufficient privileges to modify environment variables.</base>
+    <translation>無法更新環境變數 '[2]'。請確認您有足夠權限。</translation>
+  </string>
+  <string id="Error.1925">
+    <base>You do not have sufficient privileges to complete this installation for all users of the machine.  Log on as an administrator and then retry this installation.</base>
+    <translation>您沒有足夠的權限完成所有使用者的安裝。請用系統管理者身份登入再重新安裝一次。</translation>
+  </string>
+  <string id="Error.1926">
+    <base>Could not set file security for file [3]. Error: [2].  Verify that you have sufficient privileges to modify the security permissions for this file.</base>
+    <translation>無法設定檔案 '[3]' 的安全資訊。錯誤: [2]。請確認您有足夠權限。</translation>
+  </string>
+  <string id="Error.1927">
+    <base>Component Services (COM+ 1.0) are not installed on this computer.  This installation requires Component Services in order to complete successfully.  Component Services are available on Windows 2000.</base>
+    <translation>Component Services (COM+ 1.0) 並未被安裝在此電腦上。此安裝必須有 Component Services 才能安裝成功。Component Services 內建於 Windows 2000。</translation>
+  </string>
+  <string id="Error.1928">
+    <base>Error registering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>登錄 COM+ 應用程式錯誤。請接洽技術支援人員。</translation>
+  </string>
+  <string id="Error.1929">
+    <base>Error unregistering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>解除登錄 COM+ 應用程式錯誤。請接洽技術支援人員。</translation>
+  </string>
+  <string id="Error.1930">
+    <base>The description for service '[2]' ([3]) could not be changed.</base>
+    <translation>服務 '[2]' ([3]) 的敘述無法變更。</translation>
+  </string>
+  <string id="Error.1931">
+    <base>The Windows Installer service cannot update the system file [2] because the file is protected by Windows.  You may need to update your operating system for this program to work correctly. {{Package version: [3], OS Protected version: [4]}}</base>
+    <translation>Windows Installer 服務無法更動系統檔案 [2] ，因為已被  Windows 所保護。您可能要更新作業系統使此程式正常工作。{{Package version: [3], OS Protected version: [4]}}</translation>
+  </string>
+  <string id="Error.1932">
+    <base>The Windows Installer service cannot update the protected Windows file [2]. {{Package version: [3], OS Protected version: [4], SFP Error: [5]}}</base>
+    <translation>Windows Installer 服務無法更動系統保護檔案 [2]。{{Package version: [3], OS Protected version: [4], SFP Error: [5]}}</translation>
+  </string>
+  <string id="Error.1933">
+    <base>The Windows Installer service cannot update one or more protected Windows files. SFP Error: [2]. List of protected files: [3]</base>
+    <translation>Windows Installer 服務無法更新一個或多個受保護的 Windows 檔案。SFP 錯誤︰[2]. 受保護的檔案清單：[3]</translation>
+  </string>
+  <string id="Error.1934">
+    <base>User installations are disabled via policy on the machine.</base>
+    <translation>使用者安裝已透過機器上規則禁止。</translation>
+  </string>
+  <string id="UIText.NewFolder">
+    <base>Fldr|New Folder</base>
+    <translation>資料夾|新資料夾</translation>
+  </string>
+  <string id="UIText.bytes">
+    <base>bytes</base>
+    <translation>位元組</translation>
+  </string>
+  <string id="UIText.GB">
+    <base>GB</base>
+    <translation>GB</translation>
+  </string>
+  <string id="UIText.KB">
+    <base>KB</base>
+    <translation>KB</translation>
+  </string>
+  <string id="UIText.MB">
+    <base>MB</base>
+    <translation>MB</translation>
+  </string>
+  <string id="UIText.AbsentPath">
+    <base>
+    </base>
+    <translation>{&amp;Tahoma8}</translation>
+  </string>
+  <string id="UIText.MenuAbsent">
+    <base>This feature will not be available.</base>
+    <translation>此功能將不能使用。</translation>
+  </string>
+  <string id="UIText.MenuAdvertise">
+    <base>This feature will be installed when required.</base>
+    <translation>此功能在需要時可進行安裝。</translation>
+  </string>
+  <string id="UIText.MenuAllCD">
+    <base>This feature, and all subfeatures, will be installed to run from the CD.</base>
+    <translation>此功能及所有子功能安裝後將從光碟上執行。</translation>
+  </string>
+  <string id="UIText.MenuAllLocal">
+    <base>This feature, and all subfeatures, will be installed on local hard drive.</base>
+    <translation>此功能及所有子功能將安裝在本地硬碟上。</translation>
+  </string>
+  <string id="UIText.MenuAllNetwork">
+    <base>This feature, and all subfeatures, will be installed to run from the network.</base>
+    <translation>此功能及所有子功能安裝後將從網路上執行。</translation>
+  </string>
+  <string id="UIText.MenuCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation>此功能安裝後將從光碟上執行。</translation>
+  </string>
+  <string id="UIText.MenuLocal">
+    <base>This feature will be installed on local hard drive.</base>
+    <translation>此功能將安裝在本地硬碟上。</translation>
+  </string>
+  <string id="UIText.MenuNetwork">
+    <base>This feature will be installed to run from network.</base>
+    <translation>a功能安裝後將從網路中執行。</translation>
+  </string>
+  <string id="UIText.SelAbsentAbsent">
+    <base>GB</base>
+    <translation>GB</translation>
+  </string>
+  <string id="UIText.SelAbsentAdvertise">
+    <base>This feature will be set to be installed when required.</base>
+    <translation>此功能將被設定為在需要時安裝。</translation>
+  </string>
+  <string id="UIText.SelAbsentCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation>此功能安裝後將從光碟上執行。</translation>
+  </string>
+  <string id="UIText.SelAbsentLocal">
+    <base>This feature will be installed on the local hard drive.</base>
+    <translation>此功能將安裝在本地硬碟上。</translation>
+  </string>
+  <string id="UIText.SelAbsentNetwork">
+    <base>This feature will be installed to run from the network.</base>
+    <translation>此功能安裝後將從網路中執行。</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAbsent">
+    <base>This feature will become unavailable.</base>
+    <translation>此功能將不能使用。</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAdvertise">
+    <base>Will be installed when required.</base>
+    <translation>此功能將在需要時安裝。</translation>
+  </string>
+  <string id="UIText.SelAdvertiseCD">
+    <base>This feature will be available to run from CD.</base>
+    <translation>此功能可從光碟上執行。</translation>
+  </string>
+  <string id="UIText.SelAdvertiseLocal">
+    <base>This feature will be installed on your local hard drive.</base>
+    <translation>此功能將安裝在本地硬碟上。</translation>
+  </string>
+  <string id="UIText.SelAdvertiseNetwork">
+    <base>This feature will be available to run from the network.</base>
+    <translation>此功能可從網路中執行。</translation>
+  </string>
+  <string id="UIText.SelCDAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from CD.</base>
+    <translation>此功能將全部移除，您將無法從光碟上執行。</translation>
+  </string>
+  <string id="UIText.SelCDAdvertise">
+    <base>This feature was run from the CD but will be set to be installed when required.</base>
+    <translation>此功能可從光碟上執行，但被設定為需要時才進行安裝。</translation>
+  </string>
+  <string id="UIText.SelCDCD">
+    <base>This feature will continue to be run from the CD</base>
+    <translation>此功能將繼續從光碟上執行</translation>
+  </string>
+  <string id="UIText.SelCDLocal">
+    <base>This feature was run from the CD but will be installed on the local hard drive.</base>
+    <translation>此功能可從光碟上執行，但將安裝在本地硬碟上。</translation>
+  </string>
+  <string id="UIText.SelChildCostNeg">
+    <base>This feature frees up [1] on your hard drive.</base>
+    <translation>此功能將釋放放硬碟上的 [1] 。</translation>
+  </string>
+  <string id="UIText.SelChildCostPos">
+    <base>This feature requires [1] on your hard drive.</base>
+    <translation>此功能需要硬碟上的 [1] 。</translation>
+  </string>
+  <string id="UIText.SelCostPending">
+    <base>Compiling cost for this feature...</base>
+    <translation>此功能的編譯成本...</translation>
+  </string>
+  <string id="UIText.SelLocalAbsent">
+    <base>This feature will be completely removed.</base>
+    <translation>此功能將被全部移除。</translation>
+  </string>
+  <string id="UIText.SelLocalAdvertise">
+    <base>This feature will be removed from your local hard drive but will be set to be installed when required.</base>
+    <translation>此功能將從本地硬碟中移除，但需要時將進行安裝。</translation>
+  </string>
+  <string id="UIText.SelLocalCD">
+    <base>This feature will be removed from your local hard drive but will still be available to run from CD.</base>
+    <translation>此功能將從本地硬碟中移除，但仍可以從光碟上執行。</translation>
+  </string>
+  <string id="UIText.SelLocalLocal">
+    <base>This feature will remain on your local hard drive.</base>
+    <translation>此功能將保留在本地硬碟中。</translation>
+  </string>
+  <string id="UIText.SelLocalNetwork">
+    <base>This feature will be removed from your local hard drive, but will be still available to run from the network.</base>
+    <translation>此功能將從本地硬碟中移除，但仍可以從網路中執行。</translation>
+  </string>
+  <string id="UIText.SelNetworkAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from the network.</base>
+    <translation>此功能將被全部移除，您將無法從網路中執行。</translation>
+  </string>
+  <string id="UIText.SelNetworkAdvertise">
+    <base>This feature was run from the network but will be installed when required.</base>
+    <translation>此功能從網路中執行，但在需要時將進行安裝。</translation>
+  </string>
+  <string id="UIText.SelNetworkLocal">
+    <base>This feature was run from the network but will be installed on the local hard drive.</base>
+    <translation>此功能從網路中執行，但將安裝在本地硬碟上。</translation>
+  </string>
+  <string id="UIText.SelNetworkNetwork">
+    <base>This feature will continue to be run from the network</base>
+    <translation>此功能將繼續從網路中執行</translation>
+  </string>
+  <string id="UIText.SelParentCostNegNeg">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation>此功能將釋放放硬碟上的 [1] 。它具有選擇的 [3] 子功能的 [2] 。該子功能釋放硬碟上的[4]。</translation>
+  </string>
+  <string id="UIText.SelParentCostNegPos">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation>此功能將釋放放硬碟上的 [1] 。它具有選擇的 [3] 子功能的 [2] 。該子功能需要硬碟上的[4]。</translation>
+  </string>
+  <string id="UIText.SelParentCostPosNeg">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation>此功能需要硬碟上的 [1] 。它具有選擇的 [3]子功能的 [2] 。該子功能釋放硬碟上的[4]。</translation>
+  </string>
+  <string id="UIText.SelParentCostPosPos">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation>此功能需要硬碟上的 [1] 。它具有選擇的 [3] 子功能的 [2] 。該子功能需要硬碟上的[4]。</translation>
+  </string>
+  <string id="UIText.TimeRemaining">
+    <base>Time remaining: {[1] min }[2] sec</base>
+    <translation>剩餘時間：{[1]  分 }[2] 秒</translation>
+  </string>
+  <string id="UIText.VolumeCostAvailable">
+    <base>Available</base>
+    <translation>可用的</translation>
+  </string>
+  <string id="UIText.VolumeCostDifference">
+    <base>Differences</base>
+    <translation>差異</translation>
+  </string>
+  <string id="UIText.VolumeCostRequired">
+    <base>Required</base>
+    <translation>需要</translation>
+  </string>
+  <string id="UIText.VolumeCostSize">
+    <base>Disk Size</base>
+    <translation>磁碟空間</translation>
+  </string>
+  <string id="UIText.VolumeCostVolume">
+    <base>Volume</base>
+    <translation>磁碟</translation>
+  </string>
+</localization>

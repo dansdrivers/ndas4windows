@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>		
+    <!-- AssemblyFile path is relative to ndaswix.targets -->
+    <NdasWixTaskDir Condition="'$(NdasWixTaskDir)'==''">.</NdasWixTaskDir>
+    <NdasWixProductVersionFile Condition="'$(NdasWixProductVersionFile)'==''">$(WixProjectRoot)\productver.txt</NdasWixProductVersionFile>
+    <NdasWixProductCodeFile Condition="'$(NdasWixProductCodeFile)'==''">$(WixProjectRoot)\ndaswix.xml</NdasWixProductCodeFile>
+  </PropertyGroup>
+
+  <UsingTask TaskName="GetProductCode" AssemblyFile="$(NdasWixTaskDir)\XIMETA.MSBuild.Tasks.dll" />
+
+  <Target Name="NdasWix_CheckPrecondition">
+    <Error Condition="'$(WixProjectRoot)'==''" Text="WixProjectRoot property is not set!" />
+  </Target>
+
+  <Target Name="GetProductVersion" Condition="'$(MsiProductVersion)'==''">
+    <ReadLinesFromFile File="$(NdasWixProductVersionFile)" Condition="'$(MsiProductVersion)'==''">
+      <Output TaskParameter="Lines" PropertyName="MsiProductVersion" />
+    </ReadLinesFromFile>
+    <Error Condition="'$(MsiProductVersion)'==''" Text="Cannot read ProductVersion. Set MsiProductVersion property." />
+    <Message Text="ProductVersion=$(MsiProductVersion)" />
+  </Target>
+
+  <Target Name="GetProductCode" Condition="'$(MsiProductCode)'==''">
+    <GetProductCode ProductVersion="$(MsiProductVersion)" ConfigFile="$(NdasWixProductCodeFile)" Condition="'$(MsiProductCode)'==''">
+      <Output TaskParameter="ProductCode" PropertyName="MsiProductCode"/>
+    </GetProductCode>
+    <Message Text="ProductCode=$(MsiProductCode)" />
+  </Target>
+
+</Project>

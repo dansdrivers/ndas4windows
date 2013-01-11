@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndasbind", "ndasbind.vcproj", "{4642F12C-C6DD-4FF5-8333-012FA979033C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		Unicode_Debug = Unicode_Debug
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4642F12C-C6DD-4FF5-8333-012FA979033C}.Debug.ActiveCfg = Debug|Win32
+		{4642F12C-C6DD-4FF5-8333-012FA979033C}.Debug.Build.0 = Debug|Win32
+		{4642F12C-C6DD-4FF5-8333-012FA979033C}.Release.ActiveCfg = Release|Win32
+		{4642F12C-C6DD-4FF5-8333-012FA979033C}.Release.Build.0 = Release|Win32
+		{4642F12C-C6DD-4FF5-8333-012FA979033C}.Unicode_Debug.ActiveCfg = Unicode_Debug|Win32
+		{4642F12C-C6DD-4FF5-8333-012FA979033C}.Unicode_Debug.Build.0 = Unicode_Debug|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

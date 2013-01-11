@@ -1,0 +1,26 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndasmgmt", "ndasmgmt_vs71.vcproj", "{FB4D6E53-1525-4636-AB34-6EB4EB2ADE00}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FB4D6E53-1525-4636-AB34-6EB4EB2ADE00}.Debug.ActiveCfg = Debug|Win32
+		{FB4D6E53-1525-4636-AB34-6EB4EB2ADE00}.Debug.Build.0 = Debug|Win32
+		{FB4D6E53-1525-4636-AB34-6EB4EB2ADE00}.Release.ActiveCfg = Release|Win32
+		{FB4D6E53-1525-4636-AB34-6EB4EB2ADE00}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+TARGETNAME=libxixfsctl
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+BUILD_PRODUCES=libxixfsctl
+
+PASS0_PUBLISH={..\xixfsctl.h=$(NDAS_INC_PATH)\xixfsctl.h}
+
+!include ..\sources.inc

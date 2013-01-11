@@ -1,0 +1,7 @@
+TARGETNAME=afdtcp
+TARGETTYPE=DRIVER_LIBRARY
+TARGETPATH=obj
+
+INCLUDES=..\inc;..\inc\kernel
+
+SOURCES= afdtcp.c 

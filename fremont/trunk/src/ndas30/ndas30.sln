@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndasemu", "ndasemu\ndasemu.vcproj", "{7EC17F01-09B8-4CCA-8630-FA02D600B41A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inc", "inc\inc.vcproj", "{A5D67AB2-1C19-4DE7-B249-6F5EE5BEBC82}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndascli", "ndascli\ndascli.vcproj", "{9ACC6E1D-7A34-43F9-BB72-7C7E09B16F13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EC17F01-09B8-4CCA-8630-FA02D600B41A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7EC17F01-09B8-4CCA-8630-FA02D600B41A}.Debug|Win32.Build.0 = Debug|Win32
+		{7EC17F01-09B8-4CCA-8630-FA02D600B41A}.Release|Win32.ActiveCfg = Release|Win32
+		{7EC17F01-09B8-4CCA-8630-FA02D600B41A}.Release|Win32.Build.0 = Release|Win32
+		{A5D67AB2-1C19-4DE7-B249-6F5EE5BEBC82}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A5D67AB2-1C19-4DE7-B249-6F5EE5BEBC82}.Debug|Win32.Build.0 = Debug|Win32
+		{A5D67AB2-1C19-4DE7-B249-6F5EE5BEBC82}.Release|Win32.ActiveCfg = Release|Win32
+		{A5D67AB2-1C19-4DE7-B249-6F5EE5BEBC82}.Release|Win32.Build.0 = Release|Win32
+		{9ACC6E1D-7A34-43F9-BB72-7C7E09B16F13}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9ACC6E1D-7A34-43F9-BB72-7C7E09B16F13}.Debug|Win32.Build.0 = Debug|Win32
+		{9ACC6E1D-7A34-43F9-BB72-7C7E09B16F13}.Release|Win32.ActiveCfg = Release|Win32
+		{9ACC6E1D-7A34-43F9-BB72-7C7E09B16F13}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

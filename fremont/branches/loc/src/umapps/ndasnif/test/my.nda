@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nif xmlns="http://schemas.ximeta.com/ndas/2005/01/nif">
+  <ndasDevice>
+	<name>2C1PX-FVKM2-N79PG-NHFMG FV8JK</name>
+	<id>2C1PX-FVKM2-N79PG-NHFMG</id>
+	<writeKey>FV8JK</writeKey>
+	<description></description>
+  </ndasDevice>
+</nif>

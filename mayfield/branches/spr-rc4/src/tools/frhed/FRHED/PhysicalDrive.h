@@ -1,0 +1,36 @@
+  GROUPBOX        "Choose character set",IDC_STATIC,7,7,101,40
+    LTEXT           "Font size in points:",IDC_STATIC,7,53,59,8
+    EDITTEXT        IDC_EDIT1,7,62,65,12,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_CHOOSEDIFFDIALOG DIALOG  0, 0, 258, 231
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose area of difference to display"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,210,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,74,210,50,14
+    LISTBOX         IDC_LIST1,7,29,244,178,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "number_of_diffs",IDC_STATIC1,7,18,244,8
+    LTEXT           "file_sizes",IDC_STATIC2,7,7,244,8
+    PUSHBUTTON      "Copy above list",IDCOPY,187,210,64,14
+END
+
+IDD_BINARYMODEDIALOG DIALOG  0, 0, 183, 58
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Binary mode setting"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,126,12,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,126,29,50,14
+    CONTROL         "Little-endian (Intel)",IDC_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON,15,20,73,10
+    CONTROL         "Big-endian (Motorola)",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,15,34,83,10
+    GROUPBOX        "Choose binary mode",IDC_STATIC,7,7,104,44
+END
+
+IDD_SELECT_BLOCK_DIALOG DIALOG  0, 0, 207, 68
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select bloc

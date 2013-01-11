@@ -1,0 +1,4 @@
+!INCLUDE ..\sources.inc
+
+TARGETTYPE=DYNLINK
+DLLDEF=$(O)\dsig.def

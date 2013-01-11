@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="COND_X64_IS_NOT_SUPPORTED">
+    <base>This setup package is for 32-bit version of Windows. Please install the 64-bit version of this software.</base>
+    <translation>Данный установочный пакет предназначен для 32-битной версии Windows. Пожалуйста, установите 64-битную версию данного программного обеспечения.</translation>
+  </string>
+  <string id="COND_REQUIRE_WIN2000">
+    <base>[ProductName] requires that your computer is running Windows 2000, Windows XP or Windows 2003 Server.</base>
+    <translation>Для [ProductName] необходимо, чтобы на Вашем компьютере была установлена ОС Windows 2000, Windows XP или Windows 2003 Server.</translation>
+  </string>
+  <string id="COND_NOT_PRIVILEGED">
+    <base>You do not have sufficient privileges to complete this installation. Log on as an administrator and then retry this installation.</base>
+    <translation>У Вас недостаточно прав для завершения установки. Войдите в систему как администратор и возобновите процесс установки.</translation>
+  </string>
+  <string id="ProductName64Suffix">
+    <base> (64-bit Windows)</base>
+    <translation>(Windows 64-бит)</translation>
+  </string>
+  <string id="Text.SetupVersion">
+    <base>[NdasSetupVersion]</base>
+    <translation>[NdasSetupVersion]</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText2">
+    <base>It is recommended that this product is used in 100Mbps wired LAN or 802.11g/a wireless LAN environment.</base>
+    <translation>Мы рекомендуем использовать данный продукт в 100Mbps локальной проводной сети или беспроводной сети, отвечающей стандартам 802.11g/a.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText1">
+    <base>If you are using this product in a wired 10Mbps LAN or wireless 802.11b LAN environment, there is a possiblity of data transmit error or unstable connection.</base>
+    <translation>Если Вы используете этот продукт в 10Mbps проводной сети или беспроводной сети 802.11b, то возможны ошибки при передаче данных или нестабильность соединения.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeGroupBox">
+    <base>Notice</base>
+    <translation>Предупреждение</translation>
+  </string>
+  <string id="SFWarning.SFWarnCheck">
+    <base>I &amp;acknowledge this warning message.</base>
+    <translation>Подтвердить данное сообщение.</translation>
+  </string>
+  <string id="SFWarning.DlgDesc">
+    <base>Setup detected a software.</base>
+    <translation>Установщик обнаружил программное обеспечение.</translation>
+  </string>
+  <string id="SFWarning.DlgTitle">
+    <base>{&amp;MSSansBold8}Compatibility Warning</base>
+    <translation>{&amp;MSSansBold8}Возможна несовместимость</translation>
+  </string>
+  <string id="SFWarning.MemoLine1">
+    <base>{&amp;Arial8BoldBlue}Setup has found that StarForce Copy Protection software is installed in your system. Some old versions of this software may cause a system crash for using thirdy party storage device drivers.</base>
+    <translation>{&amp;Arial8BoldBlue}Установщик обнаружил, что на Вашем ПК установлена копия программного обеспечения StarForce Copy Protection. Некоторые старые версии этого программного обеспечения могут вызвать сбои в работе при использовании драйверов запоминающих устройств сторонних производителей.</translation>
+  </string>
+  <string id="SFWarning.MemoLine2">
+    <base>It is highly recommended to update the StarForce Copy Protection software before proceeding the installation. Check the web site of the Protection Technology (http://www.star-force.com) for the updates.</base>
+    <translation>Мы настоятельно рекомендуем обновить программное обеспечение StarForce Copy Protection перед продолжением процесса установки. Зайдите на сайт производителя Protection Technology (http://www.star-force.com) для загрузки обновлений.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgDesc">
+    <base>Setup has found a previous version of the software.</base>
+    <translation>Установщик обнаружил предыдущую версию программного обеспечения.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgTitle">
+    <base>{&amp;MSSansBold8}Upgrade Confirmation</base>
+    <translation>{&amp;MSSansBold8}Подтверждение обновления</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine1">
+    <base>Setup has found a previous version of the software and will perform an upgrade. During an upgrade, you may have to reboot the system twice.</base>
+    <translation>Установщик обнаружил предыдущую версию программного обеспечения и произведет обновление. В процессе обновления Вам, возможно, понадобится дважды перезагрузить Ваш компьютер.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine2">
+    <base>To ensure proper operation, please do not interrupt the system reboot and follow the instructions until the setup is completed.</base>
+    <translation>Для обеспечения надлежащей установки, пожалуйста, не прерывайте процесс перезагрузки и следуйте инструкциям до окончания процесса установки.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine3">
+    <base>Click Next to continue installation.</base>
+    <translation>Нажмите Далее, чтобы продолжить установку.</translation>
+  </string>
+  <string id="Error.25900">
+    <base>Newer version of the software is already installed. If you have to downgrade the software, uninstall the higher version software first.</base>
+    <translation>Последняя версия программного обеспечения уже установлена. Если Вам нужна более ранняя версия ПО, сначала удалите текущую версию.</translation>
+  </string>
+  <string id="Error.27500">
+    <base>This setup requires Internet Information Server 4.0 or higher for configuring IIS Virtual Roots. Please make sure that you have IIS 4.0 or higher.</base>
+    <translation>Для установки необходим Internet Information Server 4.0 или более поздней версии, чтобы настроить IIS Virtual Roots. Пожалуйста, убедитесь, что у вас установлен IIS версии 4.0 или позднее.</translation>
+  </string>
+  <string id="Error.27501">
+    <base>This setup requires Administrator privileges for configuring IIS Virtual Roots.</base>
+    <translation>Для установки необходимы права администратора, чтобы настроить IIS Virtual Roots.</translation>
+  </string>
+</localization>

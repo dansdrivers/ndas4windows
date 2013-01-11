@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<projectDefinition>
+  <process>
+    <includePattern>(inc)|(common)|(drivers)|(umapps)|(setuphlp)</includePattern>
+  </process>
+  <solution>
+    <name>ndas_all</name>
+    <include recursive="true">inc</include>
+    <include recursive="true">common</include>
+    <include recursive="true">drivers</include>
+    <include recursive="true">umapps</include>
+    <include recursive="true">setuphlp</include>
+  </solution>
+</projectDefinition>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ndasmsg"
+	ProjectGUID="{E4DFEA97-69A2-4A82-B725-B2EC808FA981}"
+	RootNamespace=""
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\bin\ddkbuild.bat -WNET2K chk . -e"
+				ReBuildCommandLine="..\..\bin\ddkbuild.bat -WNET2K chk . -ceZ"
+				CleanCommandLine="..\..\bin\ddkbuild.bat -WNET2K chk . -c0"
+				Output="objchk_w2k_x86\i386\ndasmsg.exe"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\bin\ddkbuild.bat -WNET2K fre . -ce"
+				ReBuildCommandLine="..\..\bin\ddkbuild.bat -WNET2K fre . -ceZ"
+				Output="objfre_w2k_x86\i386\ndasmsg.exe"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\ndasmsg.c">
+			</File>
+			<File
+				RelativePath=".\ndasmsg.def">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\_ndasmsg.h">
+			</File>
+			<File
+				RelativePath="..\inc\ndas\ndaserror.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\_ndasmsg.rc">
+			</File>
+			<File
+				RelativePath=".\_ndasmsg1033.bin">
+			</File>
+			<File
+				RelativePath=".\_ndasmsg1042.bin">
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\_ndasmsg.mc">
+		</File>
+		<File
+			RelativePath=".\makefile">
+		</File>
+		<File
+			RelativePath=".\makefile.32">
+		</File>
+		<File
+			RelativePath=".\makefile.inc">
+		</File>
+		<File
+			RelativePath=".\ndasmsg.xml">
+		</File>
+		<File
+			RelativePath=".\sources">
+		</File>
+		<File
+			RelativePath=".\string2mc.xsl">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

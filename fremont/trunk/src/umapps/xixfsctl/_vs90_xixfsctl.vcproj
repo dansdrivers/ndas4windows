@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="xixfsctl"
+	ProjectGUID="{A1400097-DE43-4D7E-AC56-81C1DA58D3C0}"
+	RootNamespace="xixfsctl"
+	Keyword="MakeFileProj"
+	TargetFrameworkVersion="131072"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 chk . -c0i"
+				Output="xixfsctl.exe"
+				PreprocessorDefinitions="WIN32;_DEBUG"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="libxixfsctl.lib"
+				PreprocessorDefinitions="WIN32;_DEBUG"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 fre . -c0i"
+				Output="xixfsctl.exe"
+				PreprocessorDefinitions="WIN32;NDEBUG"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="xixfsctl.exe"
+				PreprocessorDefinitions="WIN32;NDEBUG"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
+			<File
+				RelativePath=".\xixfsctl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\xixfsmsi\xixfsmsi.cpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
+			<File
+				RelativePath=".\trace.h"
+				>
+			</File>
+			<File
+				RelativePath=".\xixfsctl.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
+			>
+			<File
+				RelativePath=".\xixfsmsi\xixfsmsi.rc"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name=".xifscmd"
+			>
+			<File
+				RelativePath=".\xixfscmd\makefile"
+				>
+			</File>
+			<File
+				RelativePath=".\xixfscmd\sources"
+				>
+			</File>
+			<File
+				RelativePath=".\xixfscmd\xixfscmd.cpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name=".slib"
+			>
+			<File
+				RelativePath=".\slib\makefile"
+				>
+			</File>
+			<File
+				RelativePath=".\slib\sources"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name=".wpp"
+			>
+			<File
+				RelativePath=".\slib_wpp\makefile"
+				>
+			</File>
+			<File
+				RelativePath=".\slib_wpp\sources"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\xixfsmsi\makefile"
+			>
+		</File>
+		<File
+			RelativePath=".\xixfsmsi\sources"
+			>
+		</File>
+		<File
+			RelativePath=".\sources.inc"
+			>
+		</File>
+		<File
+			RelativePath=".\xixfsmsi\xixfsmsi.src"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

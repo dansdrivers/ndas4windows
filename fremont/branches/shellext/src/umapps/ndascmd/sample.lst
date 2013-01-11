@@ -1,0 +1,12 @@
+argp.c
+argp.h
+misc.c
+ndascmd.c
+ndascmd.h
+ndastraceevent.c
+ndastraceevent.h
+ndaststr.c
+ndaststr.h
+precomp.h
+ndascmd.sln
+ndascmd.vcproj

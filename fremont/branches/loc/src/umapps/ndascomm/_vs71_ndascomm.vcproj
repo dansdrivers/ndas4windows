@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ndascomm"
+	ProjectGUID="{00E45391-FA7D-4753-B522-6A9A44FBCB74}"
+	RootNamespace="ndascomm"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="dll\objchk_w2k_x86\i386"
+			IntermediateDirectory="dll\objchk_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 chk . -c0i"
+				Output="dll\objchk_w2k_x86\i386\ndascomm.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="dll\objfre_w2k_x86\i386"
+			IntermediateDirectory="dll\objfre_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 fre . -c0i"
+				Output="dll\objfre_w2k_x86\i386\ndascomm.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug (x64)|Win32"
+			OutputDirectory="dll\objchk_wnet_amd64\amd64"
+			IntermediateDirectory="dll\objchk_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="dll\objchk_wnet_amd64\amd64\ndascomm.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release (x64)|Win32"
+			OutputDirectory="dll\objfre_wnet_amd64\amd64"
+			IntermediateDirectory="dll\objfre_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="dll\objfre_wnet_amd64\amd64\ndascomm.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\dllentry.cpp" />
+			<File
+				RelativePath=".\ndascomm.cpp" />
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\ctrace.hxx" />
+			<File
+				RelativePath=".\ndascomm_type_internal.h" />
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\ndascomm.rc" />
+		</Filter>
+		<File
+			RelativePath=".\dirs" />
+		<File
+			RelativePath=".\ndascomm.ver" />
+		<File
+			RelativePath=".\sources.inc" />
+		<Filter
+			Name=".apitest"
+			Filter=""
+			UniqueIdentifier="{92CA9EEF-71BC-4F03-8C24-7FB6B04EE5E9}">
+			<Filter
+				Name=".usedll"
+				Filter=""
+				UniqueIdentifier="{A524E6AF-D01C-48C7-9D70-24F729E9472B}">
+				<File
+					RelativePath=".\apitest\usedll\makefile" />
+				<File
+					RelativePath=".\apitest\usedll\sources" />
+			</Filter>
+			<Filter
+				Name=".useslib"
+				Filter=""
+				UniqueIdentifier="{820EFE69-D20A-4183-864B-808CD7309BF1}">
+				<File
+					RelativePath=".\apitest\useslib\makefile" />
+				<File
+					RelativePath=".\apitest\useslib\sources" />
+			</Filter>
+			<File
+				RelativePath=".\apitest\apitest.c" />
+			<File
+				RelativePath=".\apitest\dirs" />
+			<File
+				RelativePath=".\apitest\sources.inc" />
+		</Filter>
+		<Filter
+			Name=".dll"
+			Filter=""
+			UniqueIdentifier="{44F849FD-679A-4D78-BBAE-ED1D817EEFE4}">
+			<File
+				RelativePath=".\dll\makefile" />
+			<File
+				RelativePath=".\dll\sources" />
+		</Filter>
+		<Filter
+			Name=".ndasinfo"
+			Filter=""
+			UniqueIdentifier="{8B0AD9F6-E3E3-43BE-AA77-C5900061BF5F}">
+			<Filter
+				Name=".usedll"
+				Filter=""
+				UniqueIdentifier="{C9AC7C16-7659-4CF2-9C0A-4E281F1F2330}">
+				<File
+					RelativePath=".\ndasinfo\usedll\makefile" />
+				<File
+					RelativePath=".\ndasinfo\usedll\sources" />
+			</Filter>
+			<Filter
+				Name=".useslib"
+				Filter=""
+				UniqueIdentifier="{6DFBD76B-2793-42E0-A4C3-602FF725EAE4}">
+				<File
+					RelativePath=".\ndasinfo\useslib\makefile" />
+				<File
+					RelativePath=".\ndasinfo\useslib\sources" />
+			</Filter>
+			<File
+				RelativePath=".\ndasinfo\dirs" />
+			<File
+				RelativePath=".\ndasinfo\hdreg.h" />
+			<File
+				RelativePath=".\ndasinfo\ndasinfo.c" />
+			<File
+				RelativePath=".\ndasinfo\sources.inc" />
+		</Filter>
+		<Filter
+			Name=".slib"
+			Filter=""
+			UniqueIdentifier="{73EF432E-AB7A-45ED-A0AD-63FEC70A18EA}">
+			<File
+				RelativePath=".\slib\makefile" />
+			<File
+				RelativePath=".\slib\sources" />
+		</Filter>
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

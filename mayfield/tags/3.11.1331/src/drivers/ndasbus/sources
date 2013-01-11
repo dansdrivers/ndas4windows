@@ -1,0 +1,48 @@
+TARGETNAME=ndasbus
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+
+MSC_WARNING_LEVEL=-W3 -WX -Wp64
+
+NTTARGETFILE0=mofcomp
+NTTARGETFILES=cdfcopy
+
+#
+# Set INI File Version
+#
+INFFILENAME=$(TARGETNAME)
+
+!IF "$(_BUILDARCH)" == "AMD64"
+INFSRCNAME=$(INFFILENAME).amd64
+!ELSE
+INFSRCNAME=$(INFFILENAME)
+!ENDIF
+CDFSRCFILE=$(TARGETNAME).cdf
+CDFFILE=$(O)\$(TARGETNAME).cdf
+
+POST_BUILD_CMD=$(NDAS_TOOLS)\setinfver $(O)\$(TARGETNAME).sys $(INFSRCNAME).inf $(O)\$(INFFILENAME).inf
+BINPLACE_FLAGS=$(O)\$(INFFILENAME).inf $(CDFFILE)
+
+C_DEFINES=/DUNICODE /D_UNICODE
+INCLUDES=$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+BUILD_CONSUMES=libhash liblpxtdi libndask libscrc32
+
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\ntstrsafe.lib \
+	$(DDK_LIB_PATH)\tdi.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(NDAS_LIB_PATH)\libhash.lib \
+	$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib \
+	$(NDAS_DRIVER_LIB_PATH)\libndask.lib
+
+SOURCES= busenum.rc \
+	busenum.c \
+	pnp.c \
+	power.c \
+	buspdo.c \
+	wmi.c \
+	ndasbus.c \
+	register.c \
+	utils.c

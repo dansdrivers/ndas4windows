@@ -1,0 +1,18 @@
+LIBRARY NDInst
+
+EXPORTS
+	NDMsiInstallDriver
+	NDMsiUninstallDriver
+	NDMsiCheckDriver
+	NDMsiCheckSystemStatus
+	NDMsiSetReboot
+	InstallLPX
+	UninstallLPX
+	InstallLANSCSIBusDevice
+	RemoveLANSCSIBusDevice
+	RemoveLANSCSIBusDriver
+	InstallLANSCSIMiniportInf
+	RemoveLANSCSIMiniportDevice
+	InstallROFilter
+	UninstallROFilter
+	ShowDlgDebug

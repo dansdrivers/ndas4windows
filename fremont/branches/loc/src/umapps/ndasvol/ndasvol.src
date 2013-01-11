@@ -1,0 +1,19 @@
+LIBRARY ndasvol
+EXPORTS
+	NdasGetNdasLocationForVolume
+	NdasEnumNdasLocationsForVolume
+	NdasRequestDeviceEjectW
+	NdasIsNdasPathW
+	NdasIsNdasPathA
+	NdasIsNdasVolume
+	NdasEnumNdasScsiLocationsForVolume
+	NdasGetNdasScsiLocationForVolume
+	SetTrace=NdasVolSetTrace PRIVATE
+	pGetNdasSlotNumberFromStorageDeviceHandle @11 NONAME
+	pRequestNdasPortDeviceEjectW @12 NONAME
+	pRequestNdasScsiDeviceEjectW @13 NONAME
+	pOpenStorageDeviceByNumber @14 NONAME
+	pGetStorageDeviceNumber @15 NONAME
+	pGetNdasSlotNumberFromDeviceNameW @16 NONAME
+	pGetNdasSlotNumberFromDeviceHandle @17 NONAME
+	

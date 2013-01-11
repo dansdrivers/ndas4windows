@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndaswix", "ndaswix.vcproj", "{F655652D-70F4-4C26-AC5E-D9A86842EE0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F655652D-70F4-4C26-AC5E-D9A86842EE0A}.Debug|Win32.ActiveCfg = fre|Win32
+		{F655652D-70F4-4C26-AC5E-D9A86842EE0A}.Debug|Win32.Build.0 = fre|Win32
+		{F655652D-70F4-4C26-AC5E-D9A86842EE0A}.Release|Win32.ActiveCfg = fre|Win32
+		{F655652D-70F4-4C26-AC5E-D9A86842EE0A}.Release|Win32.Build.0 = fre|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

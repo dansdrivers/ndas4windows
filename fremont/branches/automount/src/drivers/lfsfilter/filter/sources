@@ -1,0 +1,37 @@
+TARGETNAME=lfsfilt
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+NT_UP=0
+
+!include ..\sources.inc
+
+TARGETLIBS=\
+$(DDK_LIB_PATH)\ntstrsafe.lib			\
+$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib
+
+!IF "$(_BUILDARCH)" == "AMD64" || "$(_BUILDARCH)" == "64"
+
+TARGETLIBS= $(TARGETLIBS) \
+$(NDAS_DRIVER_LIB_PATH)\libwnetfat.lib
+
+INCLUDES=$(INCLUDES);..\..\WnetFatLib
+
+!ELSE
+
+TARGETLIBS= $(TARGETLIBS) \
+$(NDAS_DRIVER_LIB_PATH)\libw2kfat.lib	\
+$(NDAS_DRIVER_LIB_PATH)\libwxpfat.lib	\
+$(NDAS_DRIVER_LIB_PATH)\libwnetfat.lib
+
+INCLUDES=$(INCLUDES);..\..\WxpNtfsLib;..\..\WxpFatLib;..\..\W2kFatLib;..\..\W2kNtfsLib;..\..\WnetFatLib
+
+!ENDIF
+
+
+INCLUDES=$(INCLUDES);$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_WIN2K_COMPAT_SLIST_USAGE -D_WDM_INCLUDED_
+
+MSC_OPTIMIZATION=/Od

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="Build">
+    <MSBuild Projects="ndassc.msm\ndassc.proj"
+			 Targets="$(SubProjectTargets)">
+	  <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+	</MSBuild>
+    <MSBuild Projects="ndasscui.msm\ndasscui.proj"
+			 Targets="$(SubProjectTargets)">
+	  <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+	</MSBuild>
+    <MSBuild Projects="ndas.msi\ndas.proj"
+			 Targets="$(SubProjectTargets)">
+	  <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+	</MSBuild>
+  </Target>
+
+  <Target Name="Build64">
+    <MSBuild Projects="$(MSBuildProjectFullPath)" Properties="Platform=x64" />
+  </Target>
+
+  <PropertyGroup>
+	<ToolPath>bin</ToolPath>
+    <PublishDir>publish</PublishDir>
+  </PropertyGroup>
+
+  <Import Project="bin\msbuild\codesign.targets" />
+
+  <Target Name="SignMsiFiles" DependsOnTargets="CreateSigningTargets;SignCode" 
+		  Condition="'$(XM_SIGNCODE_CMD)'!=''"/>
+
+  <Target Name="CreateSigningTargets">
+	<CreateItem Include="$(publishdir)\*.msm;$(publishdir)\*.msi">
+	  <Output TaskParameter="Include" ItemName="SigningFile" />
+	</CreateItem>
+	<Message Text="tosign=$(signingfile.identity)" />
+  </Target>
+
+  <PropertyGroup>
+    <BuildPublishDependsOn>
+      Clean;
+      CleanupPublish;
+      BuildAllPlatforms
+    </BuildPublishDependsOn>
+    <BuildPublishX86DependsOn>
+      Clean;
+      CleanupPublish;
+      BuildX86
+    </BuildPublishX86DependsOn>
+    <BuildPublishX64DependsOn>
+      Clean;
+      CleanupPublish;
+      BuildX64
+    </BuildPublishX64DependsOn>
+    <BuildPublishDependsOn Condition="$(signcode)==true">
+      $(BuildPublishDependsOn);
+      SignMsiFiles
+    </BuildPublishDependsOn>
+    <BuildPublishDependsOn Condition="'$(DEPLOYPATH)'!=''">
+      $(BuildPublishDependsOn);
+      Deploy
+    </BuildPublishDependsOn>
+  </PropertyGroup>
+
+  <Target Name="BuildPublish" DependsOnTargets="$(BuildPublishDependsOn)" >
+  </Target>
+
+  <Target Name="BuildPublishX86" DependsOnTargets="$(BuildPublishX86DependsOn)" >
+  </Target>
+
+  <Target Name="BuildPublishX64" DependsOnTargets="$(BuildPublishX64DependsOn)" >
+  </Target>
+
+  <Target Name="Clean" DependsOnTargets="SetSubTargetsForClean;Build">
+  </Target>
+
+  <Target Name="SetSubTargetsForClean">
+	<CreateProperty Value="Clean;$(SubProjectTargets)">
+	  <Output TaskParameter="Value" PropertyName="SubProjectTargets" />
+	</CreateProperty>
+  </Target>
+
+  <Target Name="CleanupPublish">
+    <CreateItem Include="$(publishdir)\*.*">
+      <Output TaskParameter="Include" ItemName="DeletingFile" />
+    </CreateItem>
+    <Delete Files="@(DeletingFile)" TreatErrorsAsWarnings="true"/>
+  </Target>
+
+  <Target Name="BuildX86">
+    <MSBuild Projects="$(MSBuildProjectFullPath)" Properties="Platform=x86" />
+  </Target>
+
+  <Target Name="BuildX64">
+    <MSBuild Projects="$(MSBuildProjectFullPath)" Properties="Platform=x64" />
+  </Target>
+
+  <Target Name="BuildAllPlatforms">
+    <MSBuild Projects="$(MSBuildProjectFullPath)" Properties="Platform=x86" />
+    <MSBuild Projects="$(MSBuildProjectFullPath)" Properties="Platform=x64" />
+  </Target>
+
+  <Target Name="Deploy">
+    <CreateItem Include="$(publishdir)\*.msm;$(publishdir)\*.msi">
+      <Output TaskParameter="Include" ItemName="DeployFile" />
+    </CreateItem>
+    <Copy SourceFiles="@(DeployFile)" DestinationFolder="$(DeployPath)" />
+  </Target>
+
+  <Target Name="DistClean">
+	<RemoveDir Directories="ndassc.msm\obj;ndassc.msm\bin" />
+	<RemoveDir Directories="ndasscui.msm\obj;ndasscui.msm\bin" />
+	<RemoveDir Directories="ndas.msi\obj;ndas.msi\bin" />
+	<CallTarget Targets="CleanupPublish" />
+  </Target>
+
+</Project>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="7.10" Name="lanscsik" ProjectGUID="{FF8E76DE-AD59-4EC1-B04E-1CB5365A832F}" RootNamespace="lanscsik" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="objchk_w2k_x86\i386" IntermediateDirectory="objchk_w2k_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET2K chk . -c0i" Output="objchk_w2k_x86\i386\lanscsik.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="objfre_w2k_x86\i386" IntermediateDirectory="objfre_w2k_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET2K fre . -c0i" Output="objfre_w2k_x86\i386\lanscsik.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug (x64)|Win32" OutputDirectory="objchk_wnet_amd64\amd64" IntermediateDirectory="objchk_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -c0i" Output="objchk_wnet_amd64\amd64\lanscsik.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release (x64)|Win32" OutputDirectory="objfre_wnet_amd64\amd64" IntermediateDirectory="objfre_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -c0i" Output="objfre_wnet_amd64\amd64\lanscsik.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+    <Filter Name="Source Files" Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml" UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+    <File RelativePath=".\cipher.c" /><File RelativePath=".\devreg.c" /><File RelativePath=".\kdebug.c" /><File RelativePath=".\lsccb.c" /><File RelativePath=".\lslurn.c" /><File RelativePath=".\lslurnassoc.c" /><File RelativePath=".\lslurnide.c" /><File RelativePath=".\lslurnidedisk.c" /><File RelativePath=".\lslurnideodd.c" /><File RelativePath=".\lsproto.c" /><File RelativePath=".\lsprotoide.c" /><File RelativePath=".\lstransport.c" /><File RelativePath=".\lsutils.c" /></Filter>
+    <Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl;xsd" UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+    <File RelativePath=".\lslurnassoc.h" /><File RelativePath=".\ver.h" /></Filter>
+    <Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx" UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+    </Filter>
+  <File RelativePath=".\makefile" /><File RelativePath=".\sources" /></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

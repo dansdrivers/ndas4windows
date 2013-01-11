@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<MSBuildExtensionsTaskDll>MSBuild.Extensions.Tasks.dll</MSBuildExtensionsTaskDll>
+		<MSBuildExtensionsTaskDll>C:\Users\patria\perforce\buildtools\XIMETA.Tasks\bin\debug\MSBuild.Extensions.Tasks.dll</MSBuildExtensionsTaskDll>
+	</PropertyGroup>
+
+	<UsingTask AssemblyFile="$(MSBuildExtensionsTaskDll)" TaskName="CreateItemEx" />
+	<UsingTask AssemblyFile="$(MSBuildExtensionsTaskDll)" TaskName="TempFileName" />
+
+	<ItemGroup>
+		<SigningTarget Include="publish\fre\**\*.dll" />
+		<SigningTarget Include="publish\fre\**\*.sys" />
+		<SigningTarget Include="publish\fre\**\*.exe" />
+		<SignTagFile Include="publish\fre\**\*.signed" />
+		<SigningTarget Include="publish\chk\**\*.dll" />
+		<SigningTarget Include="publish\chk\**\*.sys" />
+		<SigningTarget Include="publish\chk\**\*.exe" />
+		<SignTagFile Include="publish\chk\**\*.signed" />
+	</ItemGroup>
+
+	<Target Name="CreateSignedTagItem">
+		<CreateItem Include="@(SigningTarget->'%(Identity).signed')">
+			<Output TaskParameter="Include" ItemName="SignedTag" />
+		</CreateItem>
+	</Target>
+
+	<Target Name="PreBuild">
+	</Target>
+
+	<Target Name="PostBuild">
+	</Target>
+
+	<Target Name="Build" DependsOnTargets="PreBuild;GenerateOutdated;ReadOutdated;PostBuild">
+		<Exec Command="bin\signcode_ximeta.cmd @(OutdatedFiles->'%(Identity)', ' ')" Condition="'@(OutdatedFiles)'!=''"/>
+		<WriteLinesToFile File="%(OutdatedFiles.Identity).signed" Overwrite="true" Lines="Signed"/>
+	</Target>
+
+	<Target Name="GenerateOutdated" Inputs="%(SigningTarget.Identity)" Outputs="%(SigningTarget.Identity).signed"
+					DependsOnTargets="GetTempFileName">
+		<WriteLinesToFile File="$(TargetListFile)" Lines="%(SigningTarget.Identity)" />
+		<!-- <Exec Command="bin\signcode_ximeta.cmd @(SigningTarget->'%(Identity)', ' ')" /> -->
+		<!-- <WriteLinesToFile File="%(SigningTarget.Identity).signed" Overwrite="true" Lines="Signed"/> -->
+	</Target>
+
+	<Target Name="ReadOutdated">
+		<ReadLinesFromFile File="$(TargetListFile)">
+			<Output TaskParameter="Lines" ItemName="OutdatedFiles"/>
+		</ReadLinesFromFile>
+		<Delete Files="$(TargetListFile)" />
+	</Target>
+
+	<Target Name="GetTempFileName">
+		<TempFileName>
+			<Output TaskParameter="TemporaryFileName" PropertyName="TargetListFile" />
+		</TempFileName>
+	</Target>
+
+	<Target Name="CleanSignTag">
+		<Delete Files="@(SignTagFile)" />
+	</Target>
+
+</Project>

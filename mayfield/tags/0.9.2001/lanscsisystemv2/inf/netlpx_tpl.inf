@@ -1,0 +1,134 @@
+;-------------------------------------------------------------------------
+; netLpx.INF -- Lean Packet eXchange Protocol Driver
+;
+; Installation file (.inf) for the LPX Protocol Driver.
+;
+; Copyright (c) 2002-2003 XIMETA, Inc.
+;
+;-------------------------------------------------------------------------
+[version]
+Signature   = "$Windows NT$"
+Class       = NetTrans
+ClassGUID   = {4d36e975-e325-11ce-bfc1-08002be10318}
+Provider    = %PROVIDER%
+CatalogFile = netlpx.cat
+DriverVer=00/00/0000,0.0.0.0
+
+[Manufacturer]
+%PROVIDER%=LPX.Mfg
+
+[LPX.Mfg]
+%Lpx_Desc%=Install, NKC_LPX
+
+;-------------------------------------------------------------------------
+; Installation Section
+;-------------------------------------------------------------------------
+[Install]
+AddReg=Inst_Ndi
+Characteristics=0 ; Has no characterstic
+CopyFiles=CpyFiles_Sys, CpyFiles_Dll
+
+;-------------------------------------------------------------------------
+; Ndi installation support
+;-------------------------------------------------------------------------
+[Inst_Ndi]
+;HKR,Ndi,ClsID,,"{98E32798-5CF4-4165-8180-FFAE504FBDB1}"
+HKR,Ndi,HelpText,,%Lpx_HelpText%
+HKR,Ndi,Service,,"lpx"
+HKR, Ndi\Interfaces, UpperRange,,"winsock"
+HKR,"Ndi\Interfaces","LowerRange",,"ndis5,ndis4"
+
+;-------------------------------------------------------------------------
+; Service installation support
+;-------------------------------------------------------------------------
+[Install.Services]
+AddService=lpx,,lpx_Service_Inst
+
+[lpx_Service_Inst]
+DisplayName     = %Lpx_Desc%
+ServiceType     = 1 ;SERVICE_KERNEL_DRIVER
+StartType       = 0 ;SERVICE_BOOT_START
+ErrorControl    = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\lpx.sys
+LoadOrderGroup  = "PNP_TDI"
+AddReg          = AddReg_Lpx_Service_Inst
+Description     = %Lpx_Desc%
+
+[AddReg_Lpx_Service_Inst]
+;HKR,"Parameters","NbProvider",,"_nb"
+HKLM,"System\CurrentControlSet\Services\lpx","TextModeFlags",%REG_DWORD%,0x0001
+HKR,"parameters\winsock","UseDelayedAcceptance",%REG_DWORD%,0x0001
+
+;-------------------------------------------------------------------------
+; Winsock installation support
+;-------------------------------------------------------------------------
+[Install.Winsock]
+AddSock = Install.LpxWinsock
+
+[Install.LpxWinsock]
+TransportService	= lpx
+;SupportedNameSpace	= 13
+HelperDllName		= %11%\wshLpx.dll
+MaxSockAddrLength	= 0x14
+MinSockAddrLength	= 0x14
+
+;-------------------------------------------------------------------------
+; Support for removal of static registry settings
+;-------------------------------------------------------------------------
+[Install.Remove]
+DelReg=Del_Static_Reg
+
+[Install.Remove.Services]
+DelService=lpx
+
+[Del_Static_Reg]
+HKLM,"System\CurrentControlSet\Services\lpx","TextModeFlags"
+
+;-------------------------------------------------------------------------
+; Winsock Remove support
+;-------------------------------------------------------------------------
+[Install.Remove.Winsock]
+DelSock = Remove.LpxWinsock
+
+[Remove.LpxWinsock]
+TransportService	= Lpx
+
+;-------------------------------------------------------------------------
+; Declare Destination Directories for file copy/deletion
+;-------------------------------------------------------------------------
+[DestinationDirs]
+CpyFiles_Sys    = 12    ; DIRID_DRIVERS
+CpyFiles_Dll	= 11	; SYSTEM32
+
+
+;-------------------------------------------------------------------------
+; Files to Copy/Delete - Referenced by Install and Remove sections above
+;-------------------------------------------------------------------------
+[CpyFiles_Sys]
+lpx.sys
+
+[CpyFiles_Dll]
+wshlpx.dll
+
+[SourceDisksNames]
+1 = %DiskId1%,,,
+
+[SourceDisksFiles]
+lpx.sys=1
+wshlpx.dll=1
+
+[Strings]
+;
+; Non-Localizable Strings
+;
+
+REG_DWORD = 0x10001
+
+;
+; Localizable Strings
+;
+
+PROVIDER = "XIMETA"
+Lpx_Desc = "LPX Protocol"
+Lpx_HelpText = "Lean Packet eXchange protocol for NetDisk"
+DiskId1 = "XIMETA NetDisk Installation Disk #1"

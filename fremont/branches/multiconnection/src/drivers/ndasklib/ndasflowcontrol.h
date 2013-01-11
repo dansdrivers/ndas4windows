@@ -1,0 +1,51 @@
+#ifndef _NDAS_FLOW_CONTROL_H_
+#define _NDAS_FLOW_CONTROL_H_
+
+
+#define NDAS_FC_LOG_OF_FRACTION	(6)
+#define NDAS_FC_FRACTION_RATE	(1 << NDAS_FC_LOG_OF_FRACTION)
+
+#define NDAS_FC_LOG_OF_AMPLIFIER	(20)
+#define NDAS_FC_AMPLIFIER			(1 << NDAS_FC_LOG_OF_AMPLIFIER)
+
+#define NDAS_FC_LOG_OF_SEND_BLOCK_SIZE	(10)
+#define NDAS_FC_SEND_BLOCK_SIZE			(1 << NDAS_FC_LOG_OF_SEND_BLOCK_SIZE)
+
+#define NDAS_FC_MAX_SEND_SIZE	(64 * 1024)
+
+#define NDAS_FC_DEFAULT_TROUGHPUT	((LONGLONG)((32 * 1024 * 1024) >> 3)) 
+
+typedef struct _NDAS_FC_STATISTICS {
+
+	ULONGLONG		SentCount;
+	LARGE_INTEGER	TotalThroughput;
+	LARGE_INTEGER	MaxTotalThroughput;
+	LARGE_INTEGER	PreviousTotalThroughput;
+	LARGE_INTEGER	MinimumRoundTripTime;
+	LARGE_INTEGER	Throughput[NDAS_FC_MAX_SEND_SIZE/NDAS_FC_SEND_BLOCK_SIZE];
+	ULONG			HitCount[NDAS_FC_MAX_SEND_SIZE/NDAS_FC_SEND_BLOCK_SIZE];
+
+} NDAS_FC_STATISTICS, *PNDAS_FC_STATISTICS;
+
+
+NTSTATUS
+NdasFcInitialize (
+	IN PNDAS_FC_STATISTICS	NdasFcStatistics
+	);
+
+UINT32
+NdasFcChooseSendSize (
+	IN PNDAS_FC_STATISTICS	NdasFcStatistics,
+	IN UINT32				MaxSize
+	);
+
+VOID
+NdasFcUpdateSendSize (
+	IN PNDAS_FC_STATISTICS	NdasFcStatistics,
+	IN UINT32				ChooseSendSize,
+	IN UINT32				TotalSend,
+	IN LARGE_INTEGER		StartTime,
+	IN LARGE_INTEGER		EndTime
+	);
+
+#endif

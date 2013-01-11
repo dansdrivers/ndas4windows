@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="7.10" Name="ndasop" ProjectGUID="{8B3C7064-69A8-430D-9589-0899F8D29F03}" RootNamespace="ndasop" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="dll\objchk_w2k_x86\i386" IntermediateDirectory="dll\objchk_w2k_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET2K chk . -c0i" Output="dll\objchk_w2k_x86\i386\ndasop.dll" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="dll\objfre_w2k_x86\i386" IntermediateDirectory="dll\objfre_w2k_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET2K fre . -c0i" Output="dll\objfre_w2k_x86\i386\ndasop.dll" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug (x64)|Win32" OutputDirectory="dll\objchk_wnet_amd64\amd64" IntermediateDirectory="dll\objchk_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -c0i" Output="dll\objchk_wnet_amd64\amd64\ndasop.dll" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release (x64)|Win32" OutputDirectory="dll\objfre_wnet_amd64\amd64" IntermediateDirectory="dll\objfre_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -c0i" Output="dll\objfre_wnet_amd64\amd64\ndasop.dll" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+    <Filter Name="Source Files" Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml" UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+    <File RelativePath=".\dllentry.cpp" /><File RelativePath=".\ndasop.cpp" /><File RelativePath=".\stdafx.cpp" /></Filter>
+    <Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl;xsd" UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+    <File RelativePath=".\stdafx.h" /></Filter>
+    <Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx" UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+    <File RelativePath=".\ndasop.rc" /></Filter>
+  <File RelativePath=".\dirs" /><File RelativePath=".\ndasop.ver" /><File RelativePath=".\sources.inc" /><Filter Name=".apitest" Filter="" UniqueIdentifier="{7BA69A45-D1F7-4EF0-A4CB-6B00BEA30C8F}"><File RelativePath=".\apitest\apitest.c" /><File RelativePath=".\apitest\makefile" /><File RelativePath=".\apitest\sources" /></Filter><Filter Name=".dll" Filter="" UniqueIdentifier="{F51A577B-2431-4976-AAFA-760055139FF7}"><File RelativePath=".\dll\makefile" /><File RelativePath=".\dll\sources" /></Filter><Filter Name=".slib" Filter="" UniqueIdentifier="{9CB0AFEF-7DB6-43C8-B2DC-3D63F2984CCF}"><File RelativePath=".\slib\makefile" /><File RelativePath=".\slib\sources" /></Filter></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

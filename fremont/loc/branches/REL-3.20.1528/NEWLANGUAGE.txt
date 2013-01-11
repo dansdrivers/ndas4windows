@@ -1,0 +1,264 @@
+﻿-----------------------------------------------------
+Adding a new language
+-----------------------------------------------------
+
+We are adding Polish (PLK, pl-PL) in this example.
+
+Affected files are 
+
+M      oem\loc.targets
+M      oem\loc.items
+A  +   oem\coworld\loc_plk_ndasbind.xml  <- svn copy from oem\coworld\loc_enu_ndasbind.xml
+A  +   oem\coworld\loc_plk_ndasmsg.xml   <- svn copy from oem\coworld\loc_enu_ndasmsg.xml
+A  +   oem\coworld\loc_plk_ndasmgmt.xml  <- svn copy from oem\coworld\loc_enu_ndasmgmt.xml
+M      base\meta\ndasmsg.xml
+
+
+1. Create translation xml files from the base english
+
+
+   [CDPATH: ...\loc\oem\coworld]
+   > svn copy loc_enu_ndasbind.xml loc_plk_ndasbind.xml
+   > svn copy loc_enu_ndasmsg.xml loc_plk_ndasmsg.xml
+   > svn copy loc_enu_ndasmgmt.xml loc_plk_ndasmgmt.xml
+
+
+2. Change the lang attribute of the /localization node to 
+   the language code of the new language
+
+
+Index: oem/coworld/loc_plk_ndasmgmt.xml
+===================================================================
+--- oem/coworld/loc_plk_ndasmgmt.xml	(revision 10877)
++++ oem/coworld/loc_plk_ndasmgmt.xml	(working copy)
+@@ -1,5 +1,5 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-<localization component="ndasmgmt" version="3.20.1519" lang="enu" oem="coworld" xmlns="http://schemas.ximeta.com/meta/loc/2006">
++<localization component="ndasmgmt" version="3.20.1519" lang="plk" oem="coworld" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+   <string id="/STR/126/05">
+     <base><![CDATA[NDAS Software is configured to reject suspend/hibernation request when devices are mounted.\r\nYou can change this behavior from Options - Advanced.]]></base>
+     <translation><![CDATA[-]]></translation>
+
+
+3. Add the native language name in the /STR/626/15 node in loc_plk_ndasmgmt.xml
+
+
+Index: oem/coworld/loc_plk_ndasmgmt.xml
+===================================================================
+--- oem/coworld/loc_plk_ndasmgmt.xml	(revision 10877)
++++ oem/coworld/loc_plk_ndasmgmt.xml	(working copy)
+@@ -1034,7 +1034,7 @@
+   </string>
+   <string id="/STR/625/15">
+     <base><![CDATA[English]]></base>
+-    <translation><![CDATA[-]]></translation>
++    <translation><![CDATA[polski (Polish)]]></translation>
+   </string>
+   <string id="/DLG/301">
+     <base><![CDATA[About NDAS Software]]></base>
+
+
+4. Add the language in ndasmsg.xml. 
+   0x415 is the language code (1045) in hexadecimal base
+
+
+Index: base/meta/ndasmsg.xml
+===================================================================
+--- base/meta/ndasmsg.xml	(revision 10877)
++++ base/meta/ndasmsg.xml	(working copy)
+@@ -39,6 +39,8 @@
+     <language name="SVE" value="0x41D" output="ndasmsg_sve" />
+ 
+     <language name="RUS" value="0x419" output="ndasmsg_rus" />
++
++    <language name="PLK" value="0x415" output="ndasmsg_plk" />
+   </languages>
+   <messages>
+     <!-- NDASSVC -->
+
+
+5. Add language support in loc.items
+
+
+Index: oem/loc.items
+===================================================================
+--- oem/loc.items	(revision 10877)
++++ oem/loc.items	(working copy)
+@@ -31,6 +31,7 @@
+     <Languages Include="nor" />
+     <Languages Include="sve" />
+     <Languages Include="rus" />
++    <Languages Include="plk" />
+   </ItemGroup>
+ 
+   <ItemGroup>
+@@ -123,6 +124,11 @@
+       <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+       <LangID>1049</LangID>
+     </MsgLocFile>
++    <MsgLocFile Include="$(oemdatadir)\*_plk_ndasmsg.xml">
++      <ResDll>ndasmsg.dll</ResDll>
++      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
++      <LangID>1045</LangID>
++    </MsgLocFile>
+   </ItemGroup>
+ 
+   <PropertyGroup>
+
+
+
+6. Add LangID and LangCodePage in loc.targets
+
+
+Index: oem/loc.targets
+===================================================================
+--- oem/loc.targets	(revision 10877)
++++ oem/loc.targets	(working copy)
+@@ -130,13 +130,12 @@
+     <LangID Condition="'$(LangCode)'=='jpn'">1041</LangID>
+     <LangID Condition="'$(LangCode)'=='kor'">1042</LangID>
+     <LangID Condition="'$(LangCode)'=='ptg'">2070</LangID>
+-
+     <LangID Condition="'$(LangCode)'=='dan'">1030</LangID>
+     <LangID Condition="'$(LangCode)'=='nld'">1043</LangID>
+     <LangID Condition="'$(LangCode)'=='nor'">1044</LangID>
+     <LangID Condition="'$(LangCode)'=='sve'">1053</LangID>
+-
+     <LangID Condition="'$(LangCode)'=='rus'">1049</LangID>
++    <LangID Condition="'$(LangCode)'=='plk'">1045</LangID>
+ 
+     <LangCodePage Condition="'$(LangCode)'=='enu'">1252</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='chs'">936</LangCodePage>
+@@ -148,13 +147,12 @@
+     <LangCodePage Condition="'$(LangCode)'=='jpn'">932</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='kor'">949</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='ptg'">1252</LangCodePage>
+-
+     <LangCodePage Condition="'$(LangCode)'=='dan'">1252</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='nld'">1252</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='nor'">1252</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='sve'">1252</LangCodePage>
+-
+     <LangCodePage Condition="'$(LangCode)'=='rus'">1251</LangCodePage>
++    <LangCodePage Condition="'$(LangCode)'=='plk'">1250</LangCodePage>
+ 
+   </PropertyGroup>
+ 
+-----------------------------------------------------
+Diff Script
+-----------------------------------------------------
+
+Index: oem/loc.targets
+===================================================================
+--- oem/loc.targets	(revision 10877)
++++ oem/loc.targets	(working copy)
+@@ -130,13 +130,12 @@
+     <LangID Condition="'$(LangCode)'=='jpn'">1041</LangID>
+     <LangID Condition="'$(LangCode)'=='kor'">1042</LangID>
+     <LangID Condition="'$(LangCode)'=='ptg'">2070</LangID>
+-
+     <LangID Condition="'$(LangCode)'=='dan'">1030</LangID>
+     <LangID Condition="'$(LangCode)'=='nld'">1043</LangID>
+     <LangID Condition="'$(LangCode)'=='nor'">1044</LangID>
+     <LangID Condition="'$(LangCode)'=='sve'">1053</LangID>
+-
+     <LangID Condition="'$(LangCode)'=='rus'">1049</LangID>
++    <LangID Condition="'$(LangCode)'=='plk'">1045</LangID>
+ 
+     <LangCodePage Condition="'$(LangCode)'=='enu'">1252</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='chs'">936</LangCodePage>
+@@ -148,13 +147,12 @@
+     <LangCodePage Condition="'$(LangCode)'=='jpn'">932</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='kor'">949</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='ptg'">1252</LangCodePage>
+-
+     <LangCodePage Condition="'$(LangCode)'=='dan'">1252</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='nld'">1252</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='nor'">1252</LangCodePage>
+     <LangCodePage Condition="'$(LangCode)'=='sve'">1252</LangCodePage>
+-
+     <LangCodePage Condition="'$(LangCode)'=='rus'">1251</LangCodePage>
++    <LangCodePage Condition="'$(LangCode)'=='plk'">1250</LangCodePage>
+ 
+   </PropertyGroup>
+ 
+Index: oem/loc.items
+===================================================================
+--- oem/loc.items	(revision 10877)
++++ oem/loc.items	(working copy)
+@@ -31,6 +31,7 @@
+     <Languages Include="nor" />
+     <Languages Include="sve" />
+     <Languages Include="rus" />
++    <Languages Include="plk" />
+   </ItemGroup>
+ 
+   <ItemGroup>
+@@ -123,6 +124,11 @@
+       <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+       <LangID>1049</LangID>
+     </MsgLocFile>
++    <MsgLocFile Include="$(oemdatadir)\*_plk_ndasmsg.xml">
++      <ResDll>ndasmsg.dll</ResDll>
++      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
++      <LangID>1045</LangID>
++    </MsgLocFile>
+   </ItemGroup>
+ 
+   <PropertyGroup>
+Index: oem/coworld/loc_plk_ndasbind.xml
+===================================================================
+--- oem/coworld/loc_plk_ndasbind.xml	(revision 10877)
++++ oem/coworld/loc_plk_ndasbind.xml	(working copy)
+@@ -1,5 +1,5 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-<localization component="ndasbind" version="3.20.1519" lang="enu" oem="coworld" xmlns="http://schemas.ximeta.com/meta/loc/2006">
++<localization component="ndasbind" version="3.20.1519" lang="plk" oem="coworld" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+   <string id="/STR/13/09">
+     <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+     <translation><![CDATA[-]]></translation>
+Index: oem/coworld/loc_plk_ndasmsg.xml
+===================================================================
+--- oem/coworld/loc_plk_ndasmsg.xml	(revision 10877)
++++ oem/coworld/loc_plk_ndasmsg.xml	(working copy)
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<localization component="ndasmsg" version="3.20.1519" lang="enu" oem="coworld" xmlns="http://schemas.ximeta.com/meta/loc/2006">
++<localization component="ndasmsg" version="3.20.1519" lang="plk" oem="coworld" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+ 	<string id="NDAS_ERROR_INVALID_ID_FORMAT">
+ 		<base><![CDATA[NDAS device ID or Key is invalid.]]></base>
+ 		<translation><![CDATA[-]]></translation>
+Index: oem/coworld/loc_plk_ndasmgmt.xml
+===================================================================
+--- oem/coworld/loc_plk_ndasmgmt.xml	(revision 10877)
++++ oem/coworld/loc_plk_ndasmgmt.xml	(working copy)
+@@ -1,5 +1,5 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-<localization component="ndasmgmt" version="3.20.1519" lang="enu" oem="coworld" xmlns="http://schemas.ximeta.com/meta/loc/2006">
++<localization component="ndasmgmt" version="3.20.1519" lang="plk" oem="coworld" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+   <string id="/STR/126/05">
+     <base><![CDATA[NDAS Software is configured to reject suspend/hibernation request when devices are mounted.\r\nYou can change this behavior from Options - Advanced.]]></base>
+     <translation><![CDATA[-]]></translation>
+@@ -1034,7 +1034,7 @@
+   </string>
+   <string id="/STR/625/15">
+     <base><![CDATA[English]]></base>
+-    <translation><![CDATA[-]]></translation>
++    <translation><![CDATA[polski (Polish)]]></translation>
+   </string>
+   <string id="/DLG/301">
+     <base><![CDATA[About NDAS Software]]></base>
+Index: base/meta/ndasmsg.xml
+===================================================================
+--- base/meta/ndasmsg.xml	(revision 10877)
++++ base/meta/ndasmsg.xml	(working copy)
+@@ -39,6 +39,8 @@
+     <language name="SVE" value="0x41D" output="ndasmsg_sve" />
+ 
+     <language name="RUS" value="0x419" output="ndasmsg_rus" />
++
++    <language name="PLK" value="0x415" output="ndasmsg_plk" />
+   </languages>
+   <messages>
+     <!-- NDASSVC -->
+

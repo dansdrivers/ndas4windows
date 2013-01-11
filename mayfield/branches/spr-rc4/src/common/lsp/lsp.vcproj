@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="lsp"
+	ProjectGUID="{35ADD7EC-CA36-445D-83D9-BC058C3F2F1A}"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\ddkbuild -wnet2k chk . -Pw"
+				ReBuildCommandLine="..\..\..\bin\ddkbuild -wnet2k chk . -cPw"
+				CleanCommandLine="...\..\..\bin\ddkbuild -wnet2k chk . -c0"
+				Output="lsp.exe"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				Output="lsp.exe"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\lsp.c">
+			</File>
+			<File
+				RelativePath=".\lsp_hash.c">
+			</File>
+			<File
+				RelativePath=".\lsp_util.c">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\lsp_binparm.h">
+			</File>
+			<File
+				RelativePath=".\lsp_hash.h">
+			</File>
+			<File
+				RelativePath=".\lsp_impl.h">
+			</File>
+			<File
+				RelativePath=".\lsp_type_internal.h">
+			</File>
+			<Filter
+				Name="published"
+				Filter="">
+				<File
+					RelativePath="..\..\inc\lsp\lsp.h">
+				</File>
+				<File
+					RelativePath="..\..\inc\lsp\lsp_spec.h">
+				</File>
+				<File
+					RelativePath="..\..\inc\lsp\lsp_type.h">
+				</File>
+				<File
+					RelativePath="..\..\inc\lsp\lsp_util.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

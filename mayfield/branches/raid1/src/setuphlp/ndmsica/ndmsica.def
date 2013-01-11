@@ -1,0 +1,23 @@
+LIBRARY NDMSICA
+
+EXPORTS
+	NDMsiCheckPnpDeviceInstance
+	NDMsiInstallNetComponent
+	NDMsiInstallPnpDevice
+	NDMsiInstallLegacyDriver
+	NDMsiPreRemoveNetComponent
+	NDMsiPreRemoveDevice
+	NDMsiPreRemoveDriverService
+	NDMsiRemoveNetComponent
+	NDMsiRemoveDevice
+	NDMsiRemoveDriverService
+	NDMsiQuestion
+	NDMsiSchedulePreboot
+	NDMsiCopyOEMInf
+	; Not Used
+	NDMsiFindNetComponent
+	NDMsiFindPnpDevice
+	NDMsiFindService
+	NDMsiDeleteOEMInf
+	NDMsiSetMigration
+	NDMsiRefreshShellIconCache

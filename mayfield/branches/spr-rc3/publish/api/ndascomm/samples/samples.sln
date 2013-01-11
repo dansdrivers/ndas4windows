@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "apitest", "apitest\apitest.vcproj", "{32F21D42-5D64-4E5D-86D6-62C85AA3BF93}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndasinfo", "ndasinfo\ndasinfo.vcproj", "{E746B9A9-86F0-4318-BC44-E2FAC588CD77}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{32F21D42-5D64-4E5D-86D6-62C85AA3BF93}.Debug.ActiveCfg = Debug|Win32
+		{32F21D42-5D64-4E5D-86D6-62C85AA3BF93}.Debug.Build.0 = Debug|Win32
+		{32F21D42-5D64-4E5D-86D6-62C85AA3BF93}.Release.ActiveCfg = Release|Win32
+		{32F21D42-5D64-4E5D-86D6-62C85AA3BF93}.Release.Build.0 = Release|Win32
+		{E746B9A9-86F0-4318-BC44-E2FAC588CD77}.Debug.ActiveCfg = Debug|Win32
+		{E746B9A9-86F0-4318-BC44-E2FAC588CD77}.Debug.Build.0 = Debug|Win32
+		{E746B9A9-86F0-4318-BC44-E2FAC588CD77}.Release.ActiveCfg = Release|Win32
+		{E746B9A9-86F0-4318-BC44-E2FAC588CD77}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

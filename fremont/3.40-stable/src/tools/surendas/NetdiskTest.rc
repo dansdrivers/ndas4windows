@@ -1,0 +1,295 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\NetdiskTest.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NetdiskTest.ico"
+IDI_CIRCLE_GREEN        ICON                    "res\\icon1.ico"
+IDI_CIRCLE_RED          ICON                    "res\\icon2.ico"
+IDI_CIRCLE_WHITE        ICON                    "res\\circle_r.ico"
+IDI_CIRCLE_YELLOW       ICON                    "res\\circle_w.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NetdiskTest"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "NetdiskTest Version 0.2",IDC_STATIC,11,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) Ximeta Technology, 2003 - 2008",IDC_STATIC,11,25,155,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_NETDISKTEST_DIALOG DIALOGEX 0, 0, 419, 343
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SureNetdisk"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_SEQ0,59,51,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS0,125,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #0",IDC_STATIC_N0,15,55,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ1,59,91,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS1,125,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #1",IDC_STATIC_N1,15,95,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ2,59,131,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS2,125,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #2",IDC_STATIC_N2,15,135,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ3,59,171,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS3,125,171,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #3",IDC_STATIC_N3,15,175,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ4,260,51,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS4,327,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #4",IDC_STATIC_N4,219,55,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ5,260,91,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS5,327,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #5",IDC_STATIC_N5,219,95,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ6,260,131,62,16,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS6,327,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "NetDisk #6",IDC_STATIC_N6,219,135,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_SEQ7,260,172,62,16,ES_CENTER | ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_PASS7,327,172,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_GROUP
+    LTEXT           "NetDisk #7",IDC_STATIC_N7,219,176,35,8,SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_GRP_LEFT,7,36,200,172,BS_LEFT
+    PUSHBUTTON      "Refresh",IDC_BUTTON_REFRESH,158,212,94,19
+    LTEXT           "SureNetdisk Ver 2.2",IDC_STATIC_T1,9,9,128,12,0,WS_EX_TRANSPARENT
+    LTEXT           "Copyright (C) Ximeta, 2003-2008",IDC_STATIC_T2,211,9,201,12,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH0,71,73,128,13,ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH1,71,113,128,13,ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH2,71,153,128,13,ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH3,71,193,128,12,ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH4,275,76,128,13,ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH5,275,116,128,13,ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH6,275,154,128,13,ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_ETH7,275,190,128,13,ES_READONLY | WS_DISABLED | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT1_LOT,342,234,43,14,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_VISIBLE,WS_EX_RIGHT
+    LTEXT           "LOT",IDC_STATIC,322,239,14,8,NOT WS_VISIBLE
+    GROUPBOX        "",IDC_GRP_RIGHT,210,36,202,172,BS_LEFT
+    EDITTEXT        IDC_EDIT_PASS02,151,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS03,177,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS12,151,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS13,177,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS22,151,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS23,177,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS32,151,171,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS33,177,171,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS42,354,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS43,381,51,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS52,354,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS53,381,91,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS62,354,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS63,381,131,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS72,354,172,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASS73,381,172,22,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_01,15,63,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_02,34,64,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_03,55,64,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_11,14,104,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_12,34,105,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_13,54,105,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_21,15,148,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_22,34,149,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_23,55,149,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_31,16,185,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_32,35,185,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_33,56,185,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_41,215,68,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_42,234,69,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_43,255,69,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_51,215,106,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_52,234,107,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_53,255,107,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_61,216,150,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_62,235,151,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_63,256,151,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_71,215,183,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_72,234,184,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    ICON            IDI_CIRCLE_RED,IDC_STAT_73,255,184,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    EDITTEXT        IDC_EDIT_DBG,7,248,405,88,ES_AUTOHSCROLL
+    CONTROL         "1 MB",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,13,216,31,10
+    CONTROL         "5 MB",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,64,216,31,10
+    CONTROL         "10 MB",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,115,216,34,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,1,0,0
+ PRODUCTVERSION 2,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "SureNetdisk Application"
+            VALUE "FileVersion", "2, 1, 0, 0"
+            VALUE "InternalName", "NetdiskTest"
+            VALUE "LegalCopyright", "Copyright (C) 2003 - 2008"
+            VALUE "OriginalFilename", "SureNetdisk.EXE"
+            VALUE "ProductName", "SureNetdisk Application"
+            VALUE "ProductVersion", "2, 1, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_NETDISKTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 412
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 336
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About SureNetdisk..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\NetdiskTest.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

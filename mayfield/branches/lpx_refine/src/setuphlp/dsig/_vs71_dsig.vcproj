@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="7.10" Name="dsig" ProjectGUID="{68CBD37D-D056-4883-A32C-58587604520C}" RootNamespace="dsig" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="slib\objchk_w2k_x86\i386" IntermediateDirectory="slib\objchk_w2k_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET2K chk . -c0i" Output="slib\objchk_w2k_x86\i386\dsig.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="slib\objfre_w2k_x86\i386" IntermediateDirectory="slib\objfre_w2k_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET2K fre . -c0i" Output="slib\objfre_w2k_x86\i386\dsig.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug (x64)|Win32" OutputDirectory="slib\objchk_wnet_amd64\amd64" IntermediateDirectory="slib\objchk_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -c0i" Output="slib\objchk_wnet_amd64\amd64\dsig.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release (x64)|Win32" OutputDirectory="slib\objfre_wnet_amd64\amd64" IntermediateDirectory="slib\objfre_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -c0i" Output="slib\objfre_wnet_amd64\amd64\dsig.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+    <Filter Name="Source Files" Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml" UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+    <File RelativePath=".\dsig.cpp" /><File RelativePath=".\osverify.cpp" /></Filter>
+    <Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl;xsd" UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+    <File RelativePath=".\dsig.h" /><File RelativePath=".\osverify.h" /></Filter>
+    <Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx" UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+    </Filter>
+  <File RelativePath=".\dirs" /><File RelativePath=".\notes.txt" /><File RelativePath=".\sources.inc" /><Filter Name=".cmdtool" Filter="" UniqueIdentifier="{7A9C0002-E577-431D-B845-3F39E810B7B8}"><File RelativePath=".\cmdtool\main.cpp" /><File RelativePath=".\cmdtool\makefile" /><File RelativePath=".\cmdtool\sources" /></Filter><Filter Name=".dll" Filter="" UniqueIdentifier="{7E5191B7-2F90-4957-B730-8313FD144ADC}"><File RelativePath=".\dll\dlltest.cpp" /><File RelativePath=".\dll\dsig.src" /><File RelativePath=".\dll\makefile" /><File RelativePath=".\dll\sources" /></Filter><Filter Name=".slib" Filter="" UniqueIdentifier="{F1535424-709E-4F2D-8C86-8B0ADC6A34C9}"><File RelativePath=".\slib\makefile" /><File RelativePath=".\slib\sources" /></Filter></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

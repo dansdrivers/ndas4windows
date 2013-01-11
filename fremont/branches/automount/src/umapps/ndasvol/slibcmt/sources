@@ -1,0 +1,10 @@
+TARGETNAME=libndasvol_cmt
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=libndasvol_cmt
+
+USE_LIBCMT=1
+
+SOURCES_USED=..\sources.inc
+!include ..\sources.inc

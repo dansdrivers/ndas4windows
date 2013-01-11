@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+
+	<String Id="ActionData.NDASBUS">NDAS Bus</String>
+	<String Id="ActionData.NDASSCSI">NDAS SCSI HBA Miniport</String>
+	<String Id="ActionData.NDASPORT">NDAS Host Initiator</String>
+	<String Id="ActionData.LPX">LPX Protocol</String>
+	<String Id="ActionData.LFSFILT">LFS Filter</String>
+	<String Id="ActionData.NDASFS">NDAS File System Mini Filter</String>
+	<String Id="ActionData.NDASDLU">NDAS Logical Unit Driver</String>
+
+	<String Id="ActionData.NDASSVC">NDAS Service</String>
+
+	<!--
+  <String Id="ActionText.StartNDASSVC">Starting services</String>
+
+  <String Id="ActionText.UninstallNDASBUS">Removing NDAS BUS devices</String>
+  <String Id="ActionText.CleanupInfNDASBUS">Removing NDAS BUS driver files</String>
+  <String Id="ActionText.InstallNDASBUS">Installing NDAS BUS devices</String>
+
+  <String Id="ActionText.UninstallNDASSCSI">Removing NDAS SCSI host adapter devices</String>
+  <String Id="ActionText.CleanupInfNDASSCSI">Removing NDAS SCSI host adapter driver files</String>
+  <String Id="ActionText.InstallNDASSCSI">Installing NDAS SCSI host adapter</String>
+
+  <String Id="ActionText.UninstallNDASPORT">Removing NDAS host initiator devices</String>
+  <String Id="ActionText.CleanupInfNDASPORT">Removing NDAS host initiator files</String>
+  <String Id="ActionText.InstallNDASPORT">Installing NDAS host initiator devices</String>
+
+  <String Id="ActionText.UninstallLPX">Removing LPX Protocol</String>
+  <String Id="ActionText.CleanupInfLPX">Removing LPX Protocol</String>
+  <String Id="ActionText.InstallLPX">Installing LPX Protocol</String>
+  <String Id="ActionText.StopLPX">Stopping driver services</String>
+  <String Id="ActionText.StartLPX">Starting driver services</String>
+
+  <String Id="ActionText.UninstallLFS">Removing LFS driver</String>
+  <String Id="ActionText.InstallLFS">Installing LFS driver</String>
+  <String Id="ActionText.StopLFSFILT">Stopping driver services</String>
+  <String Id="ActionText.QueueScheduleRebootLFSFILT">Queuing reboot</String>
+
+  <String Id="ActionText.UninstallNDASFS">Removing NDASFS driver</String>
+  <String Id="ActionText.InstallNDASFS">Installing NDASFS driver</String>
+  <String Id="ActionText.StopNDASFS">Stopping driver services</String>
+  <String Id="ActionText.StartNDASFS">Starting driver services</String>
+
+  <String Id="ActionText.UninstallNDASDLU">Removing NDASDLU driver</String>
+  <String Id="ActionText.InstallNDASDLU">Installing NDASDLU driver</String>
+  <String Id="ActionText.StopNDASDLU">Stopping driver services</String>
+  <String Id="ActionText.StartNDASDLU">Starting driver services</String>
+	-->
+
+</WixLocalization>

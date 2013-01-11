@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Locale Include="da-DK"><WinLangCode>DAN</WinLangCode><LangId>1030</LangId><CodePage>1252</CodePage><Name>Danish</Name></Locale>
+		<Locale Include="de-DE"><WinLangCode>DEU</WinLangCode><LangId>1031</LangId><CodePage>1252</CodePage><Name>German</Name></Locale>
+		<Locale Include="en-US"><WinLangCode>ENU</WinLangCode><LangId>1033</LangId><CodePage>1252</CodePage><Name>English</Name></Locale>
+		<Locale Include="es-ES"><WinLangCode>ESN</WinLangCode><LangId>3082</LangId><CodePage>1252</CodePage><Name>Spanish</Name></Locale>
+		<Locale Include="fr-FR"><WinLangCode>FRA</WinLangCode><LangId>1036</LangId><CodePage>1252</CodePage><Name>French</Name></Locale>
+		<Locale Include="it-IT"><WinLangCode>ITA</WinLangCode><LangId>1040</LangId><CodePage>1252</CodePage><Name>Italian</Name></Locale>
+		<Locale Include="ja-JP"><WinLangCode>JPN</WinLangCode><LangId>1041</LangId><CodePage>932</CodePage><Name>Japanese</Name></Locale>
+		<Locale Include="ko-KR"><WinLangCode>KOR</WinLangCode><LangId>1042</LangId><CodePage>949</CodePage><Name>Korean</Name></Locale>
+		<Locale Include="nb-NO"><WinLangCode>NOR</WinLangCode><LangId>1044</LangId><CodePage>1252</CodePage><Name>Norwegian, Bokmal</Name></Locale>
+		<Locale Include="nl-NL"><WinLangCode>NLD</WinLangCode><LangId>1043</LangId><CodePage>1252</CodePage><Name>Dutch</Name></Locale>
+		<Locale Include="pt-PT"><WinLangCode>PTG</WinLangCode><LangId>2070</LangId><CodePage>1252</CodePage><Name>Portuguese</Name></Locale>
+		<Locale Include="ru-RU"><WinLangCode>RUS</WinLangCode><LangId>1049</LangId><CodePage>1251</CodePage><Name>Russian</Name></Locale>
+		<Locale Include="sv-SE"><WinLangCode>SVE</WinLangCode><LangId>1053</LangId><CodePage>1252</CodePage><Name>Swedish</Name></Locale>
+		<Locale Include="zh-CN"><WinLangCode>CHS</WinLangCode><LangId>2052</LangId><CodePage>936</CodePage><Name>Simplified Chinese</Name></Locale>
+		<Locale Include="zh-TW"><WinLangCode>CHT</WinLangCode><LangId>1028</LangId><CodePage>950</CodePage><Name>Traditional Chinese</Name></Locale>
+	</ItemGroup>
+</Project>

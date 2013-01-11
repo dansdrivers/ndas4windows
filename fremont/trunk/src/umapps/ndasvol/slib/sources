@@ -1,0 +1,15 @@
+TARGETNAME=libndasvol
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=libndasvol
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+!ENDIF
+
+SOURCES_USED=..\sources.inc
+!include ..\sources.inc
+

@@ -1,0 +1,91 @@
+ZwClose(busDevReg);
+
+	ExReleaseFastMutexUnsafe(&FdoData->RegMutex);
+	KeLeaveCriticalRegion();
+
+	Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("Removing a target into registry is completed. NTSTATUS:%08lx\n", status));
+
+	return status;
+}
+
+
+NTSTATUS
+LSBus_IsRegistered(
+		PFDO_DEVICE_DATA	FdoData,
+		ULONG				SlotNo
+){
+	NTSTATUS			status;
+	HANDLE				busDevReg;
+	HANDLE				ndasDevRoot;
+	HANDLE				devInstTobeDeleted;
+
+	ASSERT(KeGetCurrentIrql() == PASSIVE_LEVEL);
+
+	status = STATUS_SUCCESS;
+	busDevReg = NULL;
+	ndasDevRoot = NULL;
+	devInstTobeDeleted = NULL;
+
+
+	//
+	//	Open a BUS device registry, an NDAS device root, and device instance key.
+	//
+	KeEnterCriticalRegion();
+	ExAcquireFastMutexUnsafe(&FdoData->RegMutex);
+
+	status = Reg_OpenDeviceControlRoot(&busDevReg, KEY_READ|KEY_WRITE);
+	if(!NT_SUCCESS(status)) {
+		ExReleaseFastMutexUnsafe(&FdoData->RegMutex);
+		KeLeaveCriticalRegion();
+
+		Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("Reg_OpenDeviceControlRoot() failed.\n"));
+		return status;
+	}
+	status = Reg_OpenNdasDeviceRoot(&ndasDevRoot, KEY_READ|KEY_WRITE, busDevReg);
+	if(!NT_SUCCESS(status)) {
+		ZwClose(busDevReg);
+		ExReleaseFastMutexUnsafe(&FdoData->RegMutex);
+		KeLeaveCriticalRegion();
+
+		Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("Reg_OpenNdasDeviceRoot() failed.\n"));
+		return status;
+	}
+
+	status = Reg_OpenDeviceInst(&devInstTobeDeleted, SlotNo, FALSE, ndasDevRoot);
+
+	//
+	//	Close handles
+	//
+
+	if(ndasDevRoot)
+		ZwClose(ndasDevRoot);
+	if(busDevReg)
+		ZwClose(busDevReg);
+
+	ExReleaseFastMutexUnsafe(&FdoData->RegMutex);
+	KeLeaveCriticalRegion();
+
+	return status;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+//	Init & Destory the registrar
+//
+NTSTATUS
+LSBus_RegInitialize(
+	PFDO_DEVICE_DATA	FdoData
+){
+	NTSTATUS status;
+	
+	ExAcquireFastMutex(&Globals.Mutex);
+	if(Globals.FdoDataTdiPnP == NULL) {
+		Globals.FdoDataTdiPnP = FdoData;
+		ExReleaseFastMutex(&Globals.Mutex);
+	} else {
+		ExReleaseFastMutex(&Globals.Mutex);
+		Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("Another FDO owns it.\n"));
+		return STATUS_UNSUCCESSFUL;
+	}
+

@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="ActionText.NcRemove_NDASSCSI_INF">
+    <base>Removing driver INF</base>
+    <translation>Treiber-INF wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRemove_NDASBUS_INF">
+    <base>Removing driver INF</base>
+    <translation>Treiber-INF wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRemove_LPX_INF">
+    <base>Removing driver INF</base>
+    <translation>Treiber-INF wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRemove_AllOemInf">
+    <base>Removing driver INF</base>
+    <translation>Treiber-INF wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcSetARFlags">
+    <base>Setting NDAS AR configurations</base>
+    <translation>NDAS AR-Einstellungen werden festgelegt</translation>
+  </string>
+  <string id="ActionText.NcSetECFlags">
+    <base>Setting NDAS EC configurations</base>
+    <translation>NDAS EC-Einstellungen werden ferstgelegt</translation>
+  </string>
+  <string id="ActionText.NcRemove_NDASSCSI">
+    <base>Removing NDAS SCSI driver</base>
+    <translation>NDAS SCSI-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRemove_NDASBUS">
+    <base>Removing NDAS bus driver</base>
+    <translation>NDAS Bus-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRemove_ROFILT">
+    <base>Removing ROFILT driver</base>
+    <translation>ROFILT-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRemove_LFSFILT">
+    <base>Removing LFS driver</base>
+    <translation>LFS-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRemove_LPX">
+    <base>Removing LPX protocol</base>
+    <translation>LPX-Protokoll wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRemove_NDASNTFS">
+    <base>Removing NDAS NTFS driver</base>
+    <translation>NDAS NTFS-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRemove_NDASFAT">
+    <base>Removing NDAS FAT driver</base>
+    <translation>NDAS FAT-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcPreRemove_LANSCSIMP">
+    <base>Removing old drivers</base>
+    <translation>Alte Treiber werden entfernt</translation>
+  </string>
+  <string id="ActionText.NcPreRemove_LANSCSIBUS">
+    <base>Removing old drivers</base>
+    <translation>Alte Treiber werden entfernt</translation>
+  </string>
+  <string id="ActionText.NcCheckPreboot_LFSFILT">
+    <base>Checking driver status</base>
+    <translation>Treiber-Status wird geprüft</translation>
+  </string>
+  <string id="ActionText.NcCheckPreboot_LPX">
+    <base>Checking driver status</base>
+    <translation>Treiber-Status wird geprüft</translation>
+  </string>
+  <string id="ActionText.NcCheckPreboot_NDASBUS">
+    <base>Checking driver status</base>
+    <translation>Treiber-Status wird geprüft</translation>
+  </string>
+  <string id="ActionText.NcCheckPreboot_NDASSCSI">
+    <base>Checking driver status</base>
+    <translation>Treiber-Status wird geprüft</translation>
+  </string>
+  <string id="ActionText.NcCheckPreboot_NDASSVC">
+    <base>Checking driver status</base>
+    <translation>Treiber-Status wird geprüft</translation>
+  </string>
+  <string id="ActionText.NcCheckPreboot_ROFILT">
+    <base>Checking driver status</base>
+    <translation>Treiber-Status wird geprüft</translation>
+  </string>
+  <string id="ActionText.NcCheckPreboot_NDASNTFS">
+    <base>Checking driver status</base>
+    <translation>Treiber-Status wird geprüft</translation>
+  </string>
+  <string id="ActionText.NcCheckPreboot_NDASFAT">
+    <base>Checking driver status</base>
+    <translation>Treiber-Status wird geprüft</translation>
+  </string>
+  <string id="ActionText.NcRBack_Remove_LFSFILT">
+    <base>Removing LFS driver</base>
+    <translation>LFS-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRBack_Remove_NDASBUS">
+    <base>Removing NDAS bus driver</base>
+    <translation>NDAS Bus-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRBack_Remove_LPX">
+    <base>Removing LPX protocol</base>
+    <translation>LPX-Protokoll wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRBackRem_NDASSCSI_INF">
+    <base>Removing driver INF</base>
+    <translation>Treiber-INF wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRBackRem_NDASBUS_INF">
+    <base>Removing driver INF</base>
+    <translation>Treiber-INF wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRBackRem_LPX_INF">
+    <base>Removing driver INF</base>
+    <translation>Treiber-INF wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRBack_Remove_NDASNTFS">
+    <base>Removing NDAS NTFS driver</base>
+    <translation>NDAS FTFS-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcRBack_Remove_NDASFAT">
+    <base>Removing NDAS FAT driver</base>
+    <translation>NDAS FAT-Treiber wird entfernt</translation>
+  </string>
+  <string id="ActionText.NcInstall_LPX">
+    <base>Installing LPX protocol</base>
+    <translation>LPX-Protokoll wird installiert</translation>
+  </string>
+  <string id="ActionText.NcInstall_NDASBUS">
+    <base>Installing NDAS bus driver</base>
+    <translation>NDAS Bus-Treiber wird installiert</translation>
+  </string>
+  <string id="ActionText.NcInstall_LFSFILT">
+    <base>Installing LFS driver</base>
+    <translation>LFS-Treiber wird installiert</translation>
+  </string>
+  <string id="ActionText.NcInstall_ROFILT">
+    <base>Installing ROFILT driver</base>
+    <translation>ROFILT-Treiber wird installiert</translation>
+  </string>
+  <string id="ActionText.NcInstall_NDASSCSI_INF">
+    <base>Installing NDAS SCSI driver</base>
+    <translation>NDAS SCSI-Treiber wird installiert</translation>
+  </string>
+  <string id="ActionText.NcInstall_NDASNTFS">
+    <base>Installing NDAS NTFS driver</base>
+    <translation>NDAS NTFS-Treiber wird installiert</translation>
+  </string>
+  <string id="ActionText.NcInstall_NDASFAT">
+    <base>Installing NDAS FAT driver</base>
+    <translation>NDAS FAT-Treiber wird installiert</translation>
+  </string>
+  <string id="ActionText.NcSetNdasSvcAutoStart">
+    <base>Setting NDAS service configurations</base>
+    <translation>NDAS Service-Einstellungen werden festgelegt</translation>
+  </string>
+  <string id="ActionText.NcStartNDASSVCOnNoReboot">
+    <base>Starting services</base>
+    <translation>Dienste werden gestartet</translation>
+  </string>
+  <string id="ActionText.NcStartNDASSVCOnNoReboot.Template">
+    <base>Service: [1]</base>
+    <translation>Dienst: [1]</translation>
+  </string>
+  <string id="Error.28801">
+    <base>Installation of LPX protocol failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Das LPX-Protokoll konnte nicht installiert werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28802">
+    <base>Installation of NDAS bus device driver failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Der NDAS Bus-Gerätetreiber konnte nicht installiert werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28803">
+    <base>Installation of NDAS SCSI device driver failed.[4]Error: [2].[4]Description: [3]If you have clicked STOP installation from the Digial Signature Warning Dialog, please click Retry and click Continue to continue.</base>
+    <translation>Der NDAS SCSI-Treiber konnte nicht installiert werden.[4]Fehler: [2].[4]Beschreibung: [3]Wenn Sie in dem Warnfenster Digital Signature auf Installierung "STOPPEN" geklickt haben, klicken Sie bitte auf "Wiederholen" und auf "Fortfahren", um fortzufahren.</translation>
+  </string>
+  <string id="Error.28804">
+    <base>Installation of LFS driver failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Der LFS-Treiber konnte nicht installiert werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28805">
+    <base>Installation of ROFILT driver failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Der ROFILT-Treiber konnte nicht installiert werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28806">
+    <base>Removing LPX protocol failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Das LPX -Protokoll konnte nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28807">
+    <base>Removing NDAS bus device failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Das NDAS Bus-Gerät konnte nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28808">
+    <base>Removing NDAS SCSI controller devices failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Die NDAS SCSI-Kontrollgeräte konnten nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28809">
+    <base>Removing LFS driver failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Der LFS-Treiber konnte nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28810">
+    <base>Removing ROFILT driver failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Das ROFILT-Treiber konnte nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28811">
+    <base>Removing LANSCSI bus device failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Das LANSCSI Bus-Gerät konnte nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28812">
+    <base>Removing LANSCSI controller devices failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Die LANSCSI-Kontrollgeräte konnten nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3][2].[4]Description: [3]</translation>
+  </string>
+  <string id="Error.28813">
+    <base>Removing driver information files failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Die Informationsdaten über den Treiber konnten nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28814">
+    <base>Removing existing installation requires system reboot before performing further installation. Setup will now exit. You must re-run setup after rebooting for continuing setup. Do you want to restart the system now?</base>
+    <translation>Um die existierende Installation zu entfernen, ist ein Reboot des Systems erforderlich, bevor weitere Installationen durchgeführt werden können. Das Setup wird jetzt beendet. Sie müssen das Setup nach dem Rebooten wieder laufen lassen, um mit dem Setup fortzufahren. Wollen Sie das System jetzt neu starten?</translation>
+  </string>
+  <string id="Error.28815">
+    <base>There are enabled NDAS drives in the system.[4]Please disable them first to continue installation.</base>
+    <translation>Es sind aktivierte NDAS-Treiber im System.[4] Bitte deaktivieren Sie diese zuerst, bevor Sie mit der Installation fortfahren.</translation>
+  </string>
+  <string id="Error.28816">
+    <base>There are mounted NDAS drives in the system.[4]Please unmount them first to continue installation.</base>
+    <translation>Es sind aktivierte NDAS-Treiber im System.[4] Bitte deaktivieren Sie diese zuerst, bevor Sie mit der Installation fortfahren.</translation>
+  </string>
+  <string id="Error.28817">
+    <base>Installation of NDAS NTFS driver failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Der NDAS NTFS-Treiber konnte nicht installiert werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28818">
+    <base>Installation of NDAS FAT driver failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Der NDAS FAT-Treiber konnte nicht installiert werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28819">
+    <base>Removing NDAS NTFS driver failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Der NDAS NTFS-Treiber konnte nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+  <string id="Error.28820">
+    <base>Removing NDAS FAT driver failed.[4]Error: [2].[4]Description: [3]</base>
+    <translation>Der NDAS FAT-Treiber konnte nicht entfernt werden.[4]Fehler: [2].[4]Beschreibung: [3]</translation>
+  </string>
+</localization>

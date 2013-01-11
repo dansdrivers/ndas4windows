@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="binaries">
+    <Binary Id="Banner.ibd" src="$(var.SetupDataDir.Ibd)\SetupBanner.jpg" />
+    <Binary Id="DialogBitmap.ibd" src="$(var.SetupDataDir.Ibd)\SetupBitmap.jpg" />
+    <Binary Id="CompleteSetup.ibd" src="$(var.SetupDataDir.Ibd)\CompleteSetupIco.ico" />
+    <Binary Id="CustomSetup.ibd" src="$(var.SetupDataDir.Ibd)\CustomSetupIco.ico" />
+    <Binary Id="DestIcon.ibd" src="$(var.SetupDataDir.Ibd)\DestIcon.ico" />
+    <Binary Id="DontInstall.ibd" src="$(var.SetupDataDir.Ibd)\DontInstall.ico" />
+    <Binary Id="Install.ibd" src="$(var.SetupDataDir.Ibd)\Install.ico" />
+    <Binary Id="InsFirstUse.ibd" src="$(var.SetupDataDir.Ibd)\InstallFirstUse.ico" />
+    <Binary Id="InsPartial.ibd" src="$(var.SetupDataDir.Ibd)\InstallPartial.ico" />
+    <Binary Id="InsStateMenu.ibd" src="$(var.SetupDataDir.Ibd)\InstallStateMenu.ico" />
+    <Binary Id="NetworkInstall.ibd" src="$(var.SetupDataDir.Ibd)\NetworkInstall.ico" />
+    <Binary Id="New.ibd" src="$(var.SetupDataDir.Ibd)\New.ico" />
+    <Binary Id="ReinstIco.ibd" src="$(var.SetupDataDir.Ibd)\ReinstIco.ico" />
+    <Binary Id="RemoveIco.ibd" src="$(var.SetupDataDir.Ibd)\RemoveIco.ico" />
+    <Binary Id="SetupIcon.ibd" src="$(var.SetupDataDir.Ibd)\SetupIcon.ico" />
+    <Binary Id="Up.ibd" src="$(var.SetupDataDir.Ibd)\Up.ico" />
+    <Binary Id="WarningIcon.ibd" src="$(var.SetupDataDir.Ibd)\WarningIcon.ico" />
+  </Fragment>
+</Wix>

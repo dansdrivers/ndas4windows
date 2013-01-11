@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="dsig"
+	ProjectGUID="{FB26A50E-693E-4CFC-A585-D70B0B3E3F7C}"
+	RootNamespace="dsig"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="slib\objchk_w2k_x86\i386"
+			IntermediateDirectory="slib\objchk_w2k_x86\i386"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild -WIN2K chk . -egwMiIBZ"
+				ReBuildCommandLine="..\..\..\bin\xbuild -WIN2K chk . -cegwMiIBZ"
+				CleanCommandLine="..\..\..\bin\xbuild -WIN2K chk . -c0i"
+				Output="slib\objchk_w2k_x86\i386\dsig.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="slib\objchk_wnet_amd64\amd64"
+			IntermediateDirectory="slib\objchk_wnet_amd64\amd64"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 chk . -egwMiIBZ"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 chk . -cegwMiIBZ"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="slib\objchk_wnet_amd64\amd64\dsig.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="slib\objfre_w2k_x86\i386"
+			IntermediateDirectory="slib\objfre_w2k_x86\i386"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild -WIN2K fre . -egwMiIBZ"
+				ReBuildCommandLine="..\..\..\bin\xbuild -WIN2K fre . -cegwMiIBZ"
+				CleanCommandLine="..\..\..\bin\xbuild -WIN2K fre . -c0i"
+				Output="slib\objfre_w2k_x86\i386\dsig.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="slib\objfre_wnet_amd64\amd64"
+			IntermediateDirectory="slib\objfre_wnet_amd64\amd64"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 fre . -egwMiIBZ"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 fre . -cegwMiIBZ"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="slib\objfre_wnet_amd64\amd64\dsig.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
+			<File
+				RelativePath=".\dsig.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\osverify.cpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
+			<File
+				RelativePath=".\dsig.h"
+				>
+			</File>
+			<File
+				RelativePath=".\osverify.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
+			>
+		</Filter>
+		<Filter
+			Name=".cmdtool"
+			UniqueIdentifier="{4A458852-0A3F-4641-8DD7-E085E32DC164}"
+			>
+			<File
+				RelativePath=".\cmdtool\main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\cmdtool\makefile"
+				>
+			</File>
+			<File
+				RelativePath=".\cmdtool\sources"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name=".dll"
+			UniqueIdentifier="{B0B23857-0014-48D4-A588-AF4BB18DAF4E}"
+			>
+			<File
+				RelativePath=".\dll\dlltest.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\dll\dsig.src"
+				>
+			</File>
+			<File
+				RelativePath=".\dll\makefile"
+				>
+			</File>
+			<File
+				RelativePath=".\dll\sources"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name=".slib"
+			UniqueIdentifier="{340F4003-B564-4E88-AE8D-8558D8F0B8D7}"
+			>
+			<File
+				RelativePath=".\slib\makefile"
+				>
+			</File>
+			<File
+				RelativePath=".\slib\sources"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\dirs"
+			>
+		</File>
+		<File
+			RelativePath=".\notes.txt"
+			>
+		</File>
+		<File
+			RelativePath=".\sources.inc"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

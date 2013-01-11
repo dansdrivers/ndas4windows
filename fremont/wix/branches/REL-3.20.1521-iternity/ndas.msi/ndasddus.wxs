@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<?include ComponentGuid.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment Id="ndasddus">
+		<DirectoryRef Id="NdasAppFolder" src="$(var.SourceDir)">
+			<Component Id="ndasddus" Guid="$(var.ndasddus.guid)" SharedDllRefCount="yes" DiskId="1" Win64="$(var.Win64YesNo)">
+				<!-- Required only in Windows versions prior to Windows Vista -->
+				<Condition><![CDATA[VersionNT < 600]]></Condition>
+				<File Id="ndasddus.exe" Name="ndasddus.exe" KeyPath="yes" />
+				<ServiceControl Id="ndasddus" Name="ndasddus" Start="install" Stop="both" Remove="uninstall" Wait="yes" />
+				<ServiceInstall Id="ndasddus" Name="ndasddus" DisplayName="$(loc.ndasddus.Service.DisplayName)" Type="ownProcess" Interactive="yes" Start="auto" ErrorControl="normal" Description="$(loc.ndasddus.Service.Description)" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+</Wix>

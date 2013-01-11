@@ -1,0 +1,101 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "AutoRun"=.\AutoRun\AutoRun.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "NDDeviceLib"=.\NDDeviceLib\NDDeviceLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "NDFilterLib"=.\NDFilterLib\NDFilterLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "NDInst"=.\NDInst\NDInst.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name NDDeviceLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name NDFilterLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name NDLogLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name NDNetCompLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "NDLogLib"=.\NDLogLib\NDLogLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "NDNetCompLib"=.\NDNetCompLib\NDNetCompLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

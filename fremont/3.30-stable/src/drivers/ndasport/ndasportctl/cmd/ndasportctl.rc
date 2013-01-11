@@ -1,0 +1,25 @@
+#include <windows.h>
+
+// Do not open this file from Resource Editor
+#ifndef APSTUDIO_INVOKED
+#include <windows.h>
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+#include "ndasportctl.ver"
+#include "ndasverp.h"
+
+#define VER_FILETYPE    VFT_DRV
+#define VER_FILESUBTYPE VFT2_DRV_SYSTEM
+#define VER_FILEDESCRIPTION_STR     "NDAS Port Driver Control CLI"
+#define VER_INTERNALNAME_STR        "ndasportctl.exe"
+#define VER_ORIGINALFILENAME_STR    "ndasportctl.exe"
+#define VER_LANGNEUTRAL
+
+#include "ndascommon.ver"
+
+#define MANIFEST_RESOURCE_ID 1
+MANIFEST_RESOURCE_ID RT_MANIFEST "ndasportctl.exe.manifest"
+
+#endif /* APSTUDIO_INVOKED */

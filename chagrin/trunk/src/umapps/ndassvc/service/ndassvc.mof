@@ -1,0 +1,58 @@
+/*++
+
+Copyright (c) 2002-2004 XIMETA, Inc.
+
+Module Name:
+
+    tracedp.mof
+
+Abstract:
+
+    This file defines MOF class for the event trace provider
+
+Revision History:
+
+--*/
+#pragma classflags("forceupdate")
+#pragma namespace ("\\\\.\\Root\\WMI")
+//
+// XDEBUG classes
+
+// XDebugEventTraceControlGuid
+[Dynamic,
+ Description("NDAS Helper Service Trace Data Provider") : amended,
+ Guid("{a4f3cd16-e134-4d13-bafe-3e22abd4fcd8}"),
+ locale("MS\\0x409")
+]
+class UMTraceDP:EventTrace
+{
+};
+
+// XDebugEventTraceTransactionGuid
+// 
+[Dynamic,
+ Description("NDAS Helper Service Data Provider") : amended,
+ Guid("{2560cabf-47ec-4c43-a021-0f2b927025e6}"),
+ DisplayName("NDASHLPSVC") : amended,
+ locale("MS\\0x409")
+]
+class TraceDPData:UMTraceDP
+{
+};
+
+
+[Dynamic,
+ Description("Trace Message Data") : amended,
+ EventType{1, 2},
+ EventTypeName{"Start", "End"} : amended,
+ locale("MS\\0x409")
+]
+class TraceDPData_Ulong:TraceDPData
+{
+    [WmiDataId(1),
+     Description("Trace Message") : amended,
+     read]
+     uint32	Level;
+     string Data;
+};
+

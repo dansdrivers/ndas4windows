@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="NDASMSM_InstallExecuteSequence">
+	<InstallExecuteSequence>
+
+	  <LaunchConditions Sequence="100" />
+
+	  <Custom Action="NcCheck_LSMP_Instance_SP" After="FindRelatedProducts">
+		NOT NDASMSM_NO_INSTANCE_CHECK
+	  </Custom>
+	  <Custom Action="NcCheck_LSMP_Instance_XC" After="NcCheck_LSMP_Instance_SP">
+		NOT NDASMSM_NO_INSTANCE_CHECK
+	  </Custom>
+	  <Custom Action="NcCheck_NDASSCSI_Inst_SP" After="NcCheck_LSMP_Instance_XC">
+		NOT NDASMSM_NO_INSTANCE_CHECK
+	  </Custom>
+	  <Custom Action="NcCheck_NDASSCSI_Inst_XC" After="NcCheck_NDASSCSI_Inst_SP">
+		NOT NDASMSM_NO_INSTANCE_CHECK
+	  </Custom>
+
+	  <Custom Action="NcSetUpgSafeRemoveContext" Before="RemoveExistingProducts">
+		NDASMSM_USE_SAFE_UPGRADE
+	  </Custom>
+
+	  <RemoveExistingProducts Sequence="1410" />
+
+	  <Custom Action="NcClearUpgSafeRemoveContext" After="RemoveExistingProducts">
+		NDASMSM_USE_SAFE_UPGRADE
+	  </Custom>
+
+	  <!-- 
+		   <PublishProduct Sequence="6400" /> 
+		   -->
+
+	  <Custom Action="NcSetARFlags_SP" After="PublishProduct">
+		NDASMSM_AR_SCOPENAME AND NOT Installed
+	  </Custom>
+	  <Custom Action="NcSetARFlags_XC" After="NcSetARFlags_SP">
+		NDASMSM_AR_SCOPENAME AND NOT Installed
+	  </Custom>
+	  <Custom Action="NcSetECFlags_SP" After="NcSetARFlags_XC">
+		NDASMSM_EC_KEYFILE AND NOT Installed
+	  </Custom>
+	  <Custom Action="NcSetECFlags_XC" After="NcSetECFlags_SP">
+		NDASMSM_EC_KEYFILE AND NOT Installed
+	  </Custom>
+
+	  <Custom Action="NcResetProgressBar_SP" Before="NcResetProgressBar_XC" />
+	  <Custom Action="NcResetProgressBar_XC" Before="NcSetUpgSafeRemoveProp" />
+
+	  <Custom Action="NcSetUpgSafeRemoveProp" Before="NcDisableCancelForRemove">
+		UPGRADINGPRODUCTCODE AND REMOVE="ALL"
+	  </Custom>
+
+	  <Custom Action="NcDisableCancelForRemove" Before="NcRemove_NDASSCSI_SP">
+		REMOVE="ALL"
+	  </Custom>
+
+	  <!-- 
+		   Removing a component will execute Remove Device Driver actions.
+		   Also installing a component wll pre-remove installed components
+		-->
+	  
+	  <Custom Action="NcRemove_NDASSCSI_SP" Before="NcRemove_NDASSCSI_XC">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_NDASSCSI_SYS=2 OR $NDAS_NDASSCSI_SYS=3 )
+	  </Custom>
+	  <Custom Action="NcRemove_NDASSCSI_XC" Before="NcRemove_NDASBUS_SP">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_NDASSCSI_SYS=2 OR $NDAS_NDASSCSI_SYS=3 )
+	  </Custom>
+
+	  <Custom Action="NcRemove_NDASBUS_SP" Before="NcRemove_NDASBUS_XC">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_NDASBUS_SYS=2 OR $NDAS_NDASBUS_SYS=3 )
+	  </Custom>
+	  <Custom Action="NcRemove_NDASBUS_XC" Before="NcRemove_ROFILT_SP">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_NDASBUS_SYS=2 OR $NDAS_NDASBUS_SYS=3 )
+	  </Custom>
+
+	  <Custom Action="NcRemove_ROFILT_SP" Before="NcRemove_ROFILT_XC">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_ROFILT_SYS=2 OR $NDAS_ROFILT_SYS=3 )
+	  </Custom>
+	  <Custom Action="NcRemove_ROFILT_XC" Before="NcRemove_LFSFILT_SP">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_ROFILT_SYS=2 OR $NDAS_ROFILT_SYS=3 )
+	  </Custom>
+
+	  <Custom Action="NcRemove_LFSFILT_SP" Before="NcRemove_LFSFILT_XC">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_LFSFILT_SYS=2 OR $NDAS_LFSFILT_SYS=3 )
+	  </Custom>
+
+	  <!-- LFSFILT_XC before condition affected by the setup flags -->
+	  <?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+	  <?define NcRemove_LFSFILT_XC_Before="NcRemove_NDASNTFS_SP"?>
+	  <?else?>
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <?define NcRemove_LFSFILT_XC_Before="NcRemove_NDASFAT_SP"?>
+	  <?else?>
+	  <?define NcRemove_LFSFILT_XC_Before="NcRemove_LPX_SP"?>
+	  <?endif?>
+	  <?endif?>
+
+	  <Custom Action="NcRemove_LFSFILT_XC" Before="$(var.NcRemove_LFSFILT_XC_Before)">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_LFSFILT_SYS=2 OR $NDAS_LFSFILT_SYS=3 )
+	  </Custom>
+
+	  <!-- NDASNTFS_XC before condition affected by the setup flags -->
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <?define NcRemove_NDASNTFS_XC_Before="NcRemove_NDASFAT_SP"?>
+	  <?else?>
+	  <?define NcRemove_NDASNTFS_XC_Before="NcRemove_LPX_SP"?>
+	  <?endif?>
+
+	  <?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+	  <Custom Action="NcRemove_NDASNTFS_SP" Before="NcRemove_NDASNTFS_XC">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_NDASNTFS_SYS=2 OR $NDAS_NDASNTFS_SYS=3 )
+	  </Custom>
+	  <Custom Action="NcRemove_NDASNTFS_XC" Before="$(var.NcRemove_NDASNTFS_XC_Before)">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_NDASNTFS_SYS=2 OR $NDAS_NDASNTFS_SYS=3 )
+	  </Custom>
+	  <?endif?>
+
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <Custom Action="NcRemove_NDASFAT_SP" Before="NcRemove_NDASFAT_XC">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_NDASFAT_SYS=2 OR $NDAS_NDASFAT_SYS=3 )
+	  </Custom>
+	  <Custom Action="NcRemove_NDASFAT_XC" Before="NcRemove_LPX_SP">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_NDASFAT_SYS=2 OR $NDAS_NDASFAT_SYS=3 )
+	  </Custom>
+	  <?endif?>
+
+	  <Custom Action="NcRemove_LPX_SP" Before="NcRemove_LPX_XC">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_LPX_SYS=2 OR $NDAS_LPX_SYS=3 )
+	  </Custom>
+	  <Custom Action="NcRemove_LPX_XC" Before="NcRemove_NDASSCSI_INF_SP">
+		NOT NdasMsmUpgradeSafeRemove AND NOT NDASMSM_NO_DRIVER_REMOVE AND ( $NDAS_LPX_SYS=2 OR $NDAS_LPX_SYS=3 )
+	  </Custom>
+
+	  <!-- 
+		   Remove OEM INF files on UNINSTALL and INSTALL (installation will reinstall inf)
+		   If REMOVE="ALL" all NcRemoveAllOemInf is used instead of individual actions.
+		-->
+
+	  <Custom Action="NcRemove_NDASSCSI_INF_SP" Before="NcRemove_NDASSCSI_INF_XC">
+		REMOVE&lt;&gt;"ALL" AND NOT NDASMSM_NO_OEMINF_REMOVE AND ( $NDAS_NDASSCSI_SYS=2 OR $NDAS_NDASSCSI_SYS=3 )
+	  </Custom>
+	  <Custom Action="NcRemove_NDASSCSI_INF_XC" Before="NcRemove_NDASBUS_INF_SP">
+		REMOVE&lt;&gt;"ALL" AND NOT NDASMSM_NO_OEMINF_REMOVE AND ( $NDAS_NDASSCSI_SYS=2 OR $NDAS_NDASSCSI_SYS=3 )
+	  </Custom>
+
+	  <Custom Action="NcRemove_NDASBUS_INF_SP" Before="NcRemove_NDASBUS_INF_XC">
+		REMOVE&lt;&gt;"ALL" AND NOT NDASMSM_NO_OEMINF_REMOVE AND ( $NDAS_NDASBUS_SYS=2 OR $NDAS_NDASBUS_SYS=3 )
+	  </Custom>
+	  <Custom Action="NcRemove_NDASBUS_INF_XC" Before="NcRemove_LPX_INF_SP">
+		REMOVE&lt;&gt;"ALL" AND NOT NDASMSM_NO_OEMINF_REMOVE AND ( $NDAS_NDASBUS_SYS=2 OR $NDAS_NDASBUS_SYS=3 )
+	  </Custom>
+	  
+	  <Custom Action="NcRemove_LPX_INF_SP" Before="NcRemove_LPX_INF_XC">
+		REMOVE&lt;&gt;"ALL" AND NOT NDASMSM_NO_OEMINF_REMOVE AND ( $NDAS_LPX_SYS=2 OR $NDAS_LPX_SYS=3 )
+	  </Custom>
+	  <Custom Action="NcRemove_LPX_INF_XC" Before="NcRemove_AllOemInf_SP">
+		REMOVE&lt;&gt;"ALL" AND NOT NDASMSM_NO_OEMINF_REMOVE AND ( $NDAS_LPX_SYS=2 OR $NDAS_LPX_SYS=3 )
+	  </Custom>
+
+	  <Custom Action="NcRemove_AllOemInf_SP" Before="NcRemove_AllOemInf_XC">
+		REMOVE="ALL" AND NOT NDASMSM_NO_OEMINF_REMOVE
+	  </Custom>
+	  <Custom Action="NcRemove_AllOemInf_XC" Before="NcPreRemove_LANSCSIMP_SP">
+		REMOVE="ALL" AND NOT NDASMSM_NO_OEMINF_REMOVE
+	  </Custom>
+
+	  <!-- 
+		   Removing LANSCSIMP and LANSCSIBUS is performed on first install only 
+		-->
+
+	  <Custom Action="NcPreRemove_LANSCSIMP_SP" Before="NcPreRemove_LANSCSIMP_XC">
+		NOT Installed
+	  </Custom>
+	  <Custom Action="NcPreRemove_LANSCSIMP_XC" Before="NcPreRemove_LANSCSIBUS_SP">
+		NOT Installed
+	  </Custom>
+	  <Custom Action="NcPreRemove_LANSCSIBUS_SP" Before="NcPreRemove_LANSCSIBUS_XC">
+		NOT Installed
+	  </Custom>
+	  <Custom Action="NcPreRemove_LANSCSIBUS_XC" Before="NcCheckPreboot_LFSFILT_SP">
+		NOT Installed
+	  </Custom>
+
+	  <!-- 
+		   Preremoving NDASSCSI, NDASSCSIBUS, LPX and LFSFILT is performed 
+		   on non-upgrading first installation 
+		-->
+
+	  <!--
+		  <Custom Action="NcPreRemove_NDASSCSI_SP" Before="NcPreRemove_NDASSCSI_XC">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_NDASSCSI_XC" Before="NcPreRemove_NDASBUS_SP">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_NDASBUS_SP" Before="NcPreRemove_NDASBUS_XC">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_NDASBUS_XC" Before="NcPreRemove_ROFILT_SP">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_ROFILT_SP" Before="NcPreRemove_ROFILT_XC">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_ROFILT_XC" Before="NcPreRemove_LFSFILT_SP">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_LFSFILT_SP" Before="NcPreRemove_LFSFILT_XC">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_LFSFILT_XC" Before="NcPreRemove_LPX_SP">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_LPX_SP" Before="NcPreRemove_LPX_XC">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_LPX_XC" Before="NcPreRemove_OEM_INF_SP">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_OEM_INF_SP" Before="NcPreRemove_OEM_INF_XC">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  <Custom Action="NcPreRemove_OEM_INF_XC" Before="NcCheckPreboot_LFSFILT_SP">
+			NOT Installed AND NOT NDAS_DONT_PREREMOVE_DRIVERS
+		  </Custom>
+		  -->
+
+	  <!-- 
+		   Check if preboot is required for further installations
+		-->
+
+	  <Custom Action="NcCheckPreboot_LFSFILT_SP" Before="NcCheckPreboot_LFSFILT_XC">
+		($NDAS_LFSFILT_SYS=3)
+	  </Custom>
+
+	  <!-- LFSFILT_XC before condition affected by the setup flags -->
+	  <?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+	  <?define NcCheckPreboot_LFSFILT_XC_Before="NcCheckPreboot_NDASNTFS_SP"?>
+	  <?else?>
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT)?>
+	  <?define NcCheckPreboot_LFSFILT_XC_Before="NcCheckPreboot_NDASFAT_SP"?>
+	  <?else?>
+	  <?define NcCheckPreboot_LFSFILT_XC_Before="NcCheckPreboot_LPX_SP"?>
+	  <?endif?>
+	  <?endif?>
+
+	  <Custom Action="NcCheckPreboot_LFSFILT_XC" Before="$(var.NcCheckPreboot_LFSFILT_XC_Before)">
+		($NDAS_LFSFILT_SYS=3)
+	  </Custom>
+
+	  <!-- NDASNTFS_XC before condition affected by the setup flags -->
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <?define NcCheckPreboot_NDASNTFS_XC_Before="NcCheckPreboot_NDASFAT_SP"?>
+	  <?else?>
+	  <?define NcCheckPreboot_NDASNTFS_XC_Before="NcCheckPreboot_LPX_SP"?>
+	  <?endif?>
+
+	  <?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+	  <Custom Action="NcCheckPreboot_NDASNTFS_SP" Before="NcCheckPreboot_NDASNTFS_XC">
+		($NDAS_NDASNTFS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_NDASNTFS_XC" Before="$(var.NcCheckPreboot_NDASNTFS_XC_Before)">
+		($NDAS_NDASNTFS_SYS=3)
+	  </Custom>
+	  <?endif?>
+
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <Custom Action="NcCheckPreboot_NDASFAT_SP" Before="NcCheckPreboot_NDASFAT_XC">
+		($NDAS_NDASFAT_SYS=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_NDASFAT_XC" Before="NcCheckPreboot_LPX_SP">
+		($NDAS_NDASFAT_SYS=3)
+	  </Custom>
+	  <?endif?>
+
+	  <Custom Action="NcCheckPreboot_LPX_SP" Before="NcCheckPreboot_LPX_XC">
+		($NDAS_LPX_SYS=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_LPX_XC" Before="NcCheckPreboot_NDASBUS_SP">
+		($NDAS_LPX_SYS=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_NDASBUS_SP" Before="NcCheckPreboot_NDASBUS_XC">
+		($NDAS_NDASBUS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_NDASBUS_XC" Before="NcCheckPreboot_NDASSCSI_SP">
+		($NDAS_NDASBUS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_NDASSCSI_SP" Before="NcCheckPreboot_NDASSCSI_XC">
+		($NDAS_NDASSCSI_SYS=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_NDASSCSI_XC" Before="NcCheckPreboot_NDASSVC_SP">
+		($NDAS_NDASSCSI_SYS=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_NDASSVC_SP" Before="NcCheckPreboot_NDASSVC_XC">
+		($NDAS_NDASSVC_EXE=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_NDASSVC_XC" Before="NcCheckPreboot_ROFILT_SP">
+		($NDAS_NDASSVC_EXE=3)
+	  </Custom>
+	  <Custom Action="NcCheckPreboot_ROFILT_SP" Before="NcCheckPreboot_ROFILT_XC">
+		($NDAS_ROFILT_SYS=3)
+	  </Custom>
+      
+      <!-- 
+		   NcInstallExecute may screw up the msi engine in Korean Windows
+		   So, we use htere InstallExecute instead of NcInstallExecute,
+		   which will limit the MergeModule user not to use InstallExecute arbitarily 
+		-->
+      
+	  <!--
+		  <Custom Action="NcCheckPreboot_ROFILT_XC" Before="NcInstallExecute">
+			($NDAS_ROFILT_SYS=3)
+		  </Custom>
+		  <Custom Action="NcInstallExecute" Before="NcSetPrebootScheduled" />
+		  -->
+
+      <Custom Action="NcCheckPreboot_ROFILT_XC" Before="InstallExecute">
+        ($NDAS_ROFILT_SYS=3)
+      </Custom>
+
+      <InstallExecute Before="NcSetPrebootScheduled" />
+
+      <Custom Action="NcSetPrebootScheduled" Before="NcForceReboot" />
+
+      
+
+      <Custom Action="NcForceReboot" Before="NcRBRemove_LFSFILT_SP">
+		NdasCAPrebootRequired
+	  </Custom>
+
+	  <!-- Rollback Actions -->
+
+	  <!-- LFSFILT_XC before condition affected by the setup flags -->
+	  <?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+	  <?define NcRBRemove_LFSFILT_XC_Before="NcRBRemove_NDASNTFS_SP"?>
+	  <?else?>
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <?define NcRBRemove_LFSFILT_XC_Before="NcRBRemove_NDASFAT_SP"?>
+	  <?else?>
+	  <?define NcRBRemove_LFSFILT_XC_Before="NcRBRemove_NDASBUS_SP"?>
+	  <?endif?>
+	  <?endif?>
+	  
+	  <Custom Action="NcRBRemove_LFSFILT_SP" Before="NcRBRemove_LFSFILT_XC">
+		($NDAS_LFSFILT_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_LFSFILT_XC" Before="$(var.NcRBRemove_LFSFILT_XC_Before)">
+		($NDAS_LFSFILT_SYS=3)
+	  </Custom>
+	  
+	  <!-- NDASNTFS_XC before condition affected by the setup flags -->
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <?define NcRBRemove_NDASNTFS_XC_Before="NcRBRemove_NDASFAT_SP"?>
+	  <?else?>
+	  <?define NcRBRemove_NDASNTFS_XC_Before="NcRBRemove_NDASBUS_SP"?>
+	  <?endif?>
+	  
+	  <?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+	  <Custom Action="NcRBRemove_NDASNTFS_SP" Before="NcRBRemove_NDASNTFS_XC">
+		($NDAS_NDASNTFS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_NDASNTFS_XC" Before="$(var.NcRBRemove_NDASNTFS_XC_Before)">
+		($NDAS_NDASNTFS_SYS=3)
+	  </Custom>
+	  <?endif?>
+	  
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <Custom Action="NcRBRemove_NDASFAT_SP" Before="NcRBRemove_NDASFAT_XC">
+		($NDAS_NDASFAT_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_NDASFAT_XC" Before="NcRBRemove_NDASBUS_SP">
+		($NDAS_NDASFAT_SYS=3)
+	  </Custom>
+	  <?endif?>
+	  
+	  <Custom Action="NcRBRemove_NDASBUS_SP" Before="NcRBRemove_NDASBUS_XC">
+		($NDAS_NDASBUS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_NDASBUS_XC" Before="NcRBRemove_LPX_SP">
+		($NDAS_NDASBUS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_LPX_SP" Before="NcRBRemove_LPX_XC">
+		($NDAS_LPX_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_LPX_XC" Before="NcRBRemove_NDASSCSI_INF_SP">
+		($NDAS_LPX_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_NDASSCSI_INF_SP" Before="NcRBRemove_NDASSCSI_INF_XC">
+		($NDAS_NDASSCSI_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_NDASSCSI_INF_XC" Before="NcRBRemove_NDASBUS_INF_SP">
+		($NDAS_NDASSCSI_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_NDASBUS_INF_SP" Before="NcRBRemove_NDASBUS_INF_XC">
+		($NDAS_NDASBUS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_NDASBUS_INF_XC" Before="NcRBRemove_LPX_INF_SP">
+		($NDAS_NDASBUS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_LPX_INF_SP" Before="NcRBRemove_LPX_INF_XC">
+		($NDAS_LPX_SYS=3)
+	  </Custom>
+	  <Custom Action="NcRBRemove_LPX_INF_XC" Before="NcResetProgressBar2_SP">
+		($NDAS_LPX_SYS=3)
+	  </Custom>
+	  
+	  <!-- Install Actions -->
+	  <Custom Action="NcResetProgressBar2_SP" Before="NcResetProgressBar2_XC" />
+	  <Custom Action="NcResetProgressBar2_XC" Before="NcIncProgBar2" />
+	  
+	  <Custom Action="NcIncProgBar2" Before="NcInstall_LPX_SP" />
+	  
+	  <Custom Action="NcInstall_LPX_SP" Before="NcInstall_LPX_XC">
+		($NDAS_LPX_SYS=3)
+	  </Custom>
+	  <Custom Action="NcInstall_LPX_XC" Before="NcInstall_NDASBUS_SP">
+		($NDAS_LPX_SYS=3)
+	  </Custom>
+	  
+	  <Custom Action="NcInstall_NDASBUS_SP" Before="NcInstall_NDASBUS_XC">
+		($NDAS_NDASBUS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcInstall_NDASBUS_XC" Before="NcInstall_LFSFILT_SP_Win2K">
+		($NDAS_NDASBUS_SYS=3)
+	  </Custom>
+	  
+	  <Custom Action="NcInstall_LFSFILT_SP_Win2K" Before="NcInstall_LFSFILT_SP">
+		($NDAS_LFSFILT_SYS=3) And VersionNT=500
+	  </Custom>
+	  <Custom Action="NcInstall_LFSFILT_SP" Before="NcInstall_LFSFILT_XC">
+		($NDAS_LFSFILT_SYS=3) And VersionNT&gt;500
+	  </Custom>
+	  
+	  <!-- LFSFILT_XC before condition affected by the setup flags -->
+	  <?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+	  <?define NcInstall_LFSFILT_XC_Before="NcInstall_NDASNTFS_SP"?>
+	  <?else?>
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <?define NcInstall_LFSFILT_XC_Before="NcInstall_NDASFAT_SP"?>
+	  <?else?>
+	  <?define NcInstall_LFSFILT_XC_Before="NcInstall_ROFILT_SP"?>
+	  <?endif?>
+	  <?endif?>
+	  
+	  <Custom Action="NcInstall_LFSFILT_XC" Before="$(var.NcInstall_LFSFILT_XC_Before)">
+		($NDAS_LFSFILT_SYS=3)
+	  </Custom>
+	  
+	  <!-- NDASNTFS_XC before condition affected by the setup flags -->
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <?define NcInstall_NDASNTFS_XC_Before="NcInstall_NDASFAT_SP"?>
+	  <?else?>
+	  <?define NcInstall_NDASNTFS_XC_Before="NcInstall_ROFILT_SP"?>
+	  <?endif?>
+	  
+	  <?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+	  <Custom Action="NcInstall_NDASNTFS_SP" Before="NcInstall_NDASNTFS_XC">
+		($NDAS_NDASNTFS_SYS=3)
+	  </Custom>
+	  <Custom Action="NcInstall_NDASNTFS_XC" Before="$(var.NcInstall_NDASNTFS_XC_Before)">
+		($NDAS_NDASNTFS_SYS=3)
+	  </Custom>
+	  <?endif?>
+	  
+	  <?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+	  <Custom Action="NcInstall_NDASFAT_SP" Before="NcInstall_NDASFAT_XC">
+		($NDAS_NDASFAT_SYS=3)
+	  </Custom>
+	  <Custom Action="NcInstall_NDASFAT_XC" Before="NcInstall_ROFILT_SP">
+		($NDAS_NDASFAT_SYS=3)
+	  </Custom>
+	  <?endif?>
+
+	  <Custom Action="NcInstall_ROFILT_SP" Before="NcInstall_ROFILT_XC">
+		($NDAS_ROFILT_SYS=3)
+	  </Custom>
+	  <Custom Action="NcInstall_ROFILT_XC" Before="NcInstall_NDASSCSI_INF_SP">
+		($NDAS_ROFILT_SYS=3)
+	  </Custom>
+	  
+	  <Custom Action="NcInstall_NDASSCSI_INF_SP" Before="NcInstall_NDASSCSI_INF_XC">
+		($NDAS_NDASSCSI_SYS=3)
+	  </Custom>
+	  <Custom Action="NcInstall_NDASSCSI_INF_XC" Before="NcSetNdasSvcAutoStart_SP">
+		($NDAS_NDASSCSI_SYS=3)
+	  </Custom>
+
+
+	  <!-- Change NDAS Service Configuration -->
+
+	  <Custom Action="NcSetNdasSvcAutoStart_SP" Before="NcSetNdasSvcAutoStart_XC">
+		($NDAS_NDASSVC_EXE=3)
+	  </Custom>
+
+	  <Custom Action="NcSetNdasSvcAutoStart_XC" Before="NcStartNDASSVCOnNoReboot_SP">
+		($NDAS_NDASSVC_EXE=3)
+	  </Custom>
+
+	  <Custom Action="NcStartNDASSVCOnNoReboot_SP" Before="NcStartNDASSVCOnNoReboot_XC">
+		($NDAS_NDASSVC_EXE=3)
+	  </Custom>
+	  <Custom Action="NcStartNDASSVCOnNoReboot_XC" Before="InstallFinalize">
+		($NDAS_NDASSVC_EXE=3)
+	  </Custom>
+
+	  <!-- <InstallFinalize Sequence="6600" /> -->
+
+	  <Custom Action="NcUpdateScheduledReboot" After="InstallFinalize"/>
+
+	</InstallExecuteSequence>
+  </Fragment>
+</Wix>

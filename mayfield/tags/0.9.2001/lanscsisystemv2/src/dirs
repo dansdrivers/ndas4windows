@@ -1,0 +1,5 @@
+DIRS= common \
+	lanscsiop lsbusctl \
+	ndasuser ndasmsg ndasmgmt ndascmd ndashlpsvc 
+
+OPTIONDIRS= .

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="StarForceCheck">
+	<!-- This routine search for the star-force device drivers -->
+	<!-- 
+		 Star-Force provides a copy-protection software for the games 
+		 or other software. There are some bugs in the previous
+		 versions of the software which may cause blue-screen when
+		 NDAS SCSI starts. Updating Star-Force device driver will fix 
+		 this problem (not ours) and the update is available from 
+		 star-force.com . We should warn the user about this fact.
+	  -->
+	<Property Id="SF_INSTALLED" Admin="no" Secure="yes">
+	  <RegistrySearch Id="StarForce_prosync1"
+					  Root="HKLM"
+					  Key="System\CurrentControlSet\Services\prosync1"
+					  Name="Type"
+					  Type="raw" />
+	  <RegistrySearch Id="StarForce_sfhlp01"
+					  Root="HKLM"
+					  Key="System\CurrentControlSet\Services\sfhlp01"
+					  Name="Type"
+					  Type="raw" />
+	  <RegistrySearch Id="StarForce_prohlp02"
+					  Root="HKLM"
+					  Key="System\CurrentControlSet\Services\prohlp02"
+					  Name="Type"
+					  Type="raw" />
+	  <RegistrySearch Id="StarForce_prodrv06"
+					  Root="HKLM"
+					  Key="System\CurrentControlSet\Services\prodrv06"
+					  Name="Type"
+					  Type="raw" />
+	  <RegistrySearch Id="StarForce_sfsync02"
+					  Root="HKLM"
+					  Key="System\CurrentControlSet\Services\sfsync02"
+					  Name="Type"
+					  Type="raw" />
+	  <RegistrySearch Id="StarForce_sfsync03"
+					  Key="System\CurrentControlSet\Services\sfsync03"
+					  Root="HKLM"
+					  Name="Type"
+					  Type="raw" />
+	  <RegistrySearch Id="StarForce_sfvfs02"
+					  Key="System\CurrentControlSet\Services\sfvfs02"
+					  Root="HKLM"
+					  Name="Type"
+					  Type="raw" />
+	  <RegistrySearch Id="StarForce_sfhlp02"
+					  Key="System\CurrentControlSet\Services\sfhlp02"
+					  Root="HKLM"
+					  Name="Type"
+					  Type="raw" />
+	  <RegistrySearch Id="StarForce_sfdrv01"
+					  Key="System\CurrentControlSet\Services\sfdrv01"
+					  Root="HKLM"
+					  Name="Type"
+					  Type="raw" />
+	  <!--
+	  <RegistrySearch Id="StarForce_test"
+					  Key="System\CurrentControlSet\Services\ndassvc"
+					  Root="HKLM"
+					  Name="Type"
+					  Type="raw" />
+	  -->
+	</Property>
+  </Fragment>
+</Wix>

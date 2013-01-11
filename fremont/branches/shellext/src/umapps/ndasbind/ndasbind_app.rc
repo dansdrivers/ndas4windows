@@ -1,0 +1,49 @@
+// Do not open this file from Resource Editor
+#ifndef APSTUDIO_INVOKED
+#include <windows.h>
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+#include "ndasbind.ver"
+#include "ndasverp.h"
+
+// #define VER_NO_PRODUCT_VERSION
+#define VER_FILETYPE			VFT_APP
+#define VER_FILESUBTYPE			VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR "NDAS Bind Management"
+#define VER_INTERNALNAME_STR	"ndasbind.exe"
+
+#include "ndascommon.ver"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+#define IDR_MAINFRAME 128
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ndasbind"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "ndasbind.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PROCESS MANIFEST
+//
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "ndasbind.exe.manifest"
+
+#include "ndasbind_appiniterr.rc2"
+
+#endif /* APSTUDIO_INVOKED */

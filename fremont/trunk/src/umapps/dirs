@@ -1,0 +1,21 @@
+DIRS=\
+	ndasportctl		\
+	lfsfiltctl 		\
+	xixfsctl 		\
+	rofiltctl 		\
+	ndasbusctl 		\
+	ndscctl 		\
+	ndashixnotify 	\
+	ndascomm 		\
+	ndasop 			\	
+	ndasuser 		\
+	ndasnif 		\
+	ndassvc 		\
+	ndasmgmt 		\
+	ndascmd 		\
+	ndasbind 		\
+	ndashear 		\
+	ndasvol 		\
+	ndasapcm 		\
+	xtaskdialog 	\
+	ndasfsctl

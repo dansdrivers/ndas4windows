@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+
+	<Product Id="$(var.TargetProductCode)"
+			 UpgradeCode="$(var.TargetUpgradeCode)"
+			 Name="$(var.ProductNamePrefix)$(loc.ProductName)$(var.ProductNameSuffix)"
+			 Version="$(var.TargetVersion)"
+			 Manufacturer="$(loc.Manufacturer)"
+			 Language="$(var.TargetLanguage)"
+			 Codepage="$(var.TargetCodepage)">
+
+		<Package Id="????????-????-????-????-????????????"
+				 Compressed="$(var.CompressedPackage)"
+				 Keywords="$(loc.SIS_KEYWORDS)"
+				 Description="$(loc.PackageDescription)$(var.ProductNameSuffix)"
+				 Comments="$(loc.SIS_COMMENTS)"
+				 Manufacturer="$(loc.SIS_MANUFACTURER)"
+				 InstallerVersion="200"
+				 Platforms="$(var.SISPlatforms)"
+				 Languages="$(var.TargetLanguage)"
+				 SummaryCodepage="$(var.SISCodepage)"
+				 ShortNames="$(var.ShortNames)"
+				 InstallPrivileges="elevated" />
+
+		<!-- Cabinet Definitions -->
+
+		<Media Cabinet="ndas.cab" EmbedCab="yes" Id="$(var.media.ndas)" />
+		<Media Cabinet="ndasapp.cab" EmbedCab="yes" Id="$(var.media.ndasapp)" />
+
+		<?ifdef Win32Build?>
+		<Media Cabinet="msvcrt.cab" EmbedCab="yes" Id="$(var.media.msvcrt)" />
+		<Media Cabinet="msvcp60.cab" EmbedCab="yes" Id="$(var.media.msvcp60)" />
+		<?endif?>
+
+		<!-- Prevent installation on x64 systems. x64 flag will be enabled later -->
+		<?ifndef Win64Build?>
+		<Condition Message="$(loc.COND_X64_IS_NOT_SUPPORTED)">Not VersionNT64</Condition>
+		<?endif?>
+		<Condition Message="$(loc.COND_REQUIRE_WIN2000)">VersionNT &gt;= 500</Condition>
+		<Condition Message="$(loc.COND_NOT_PRIVILEGED)">Privileged</Condition>
+		<!-- prevent the use of Language Neutral version of the package -->
+		<Condition Message="$(loc.Condition.NeutralUsed)"><![CDATA[ProductLanguage <> 0]]></Condition>
+
+		<Upgrade Id="E86E86BB-051E-4F19-B111-0E5D15E7CDE4">
+			<UpgradeVersion Maximum="$(var.TargetVersion)" Property="NDAS_UPGRADE"
+							MigrateFeatures="yes" IncludeMinimum="yes" />
+			<UpgradeVersion Minimum="$(var.TargetVersion)" Property="NDAS_DOWNGRADE"
+							MigrateFeatures="yes" OnlyDetect="yes" />
+			<Property Id="NDAS_UPGRADE" Secure="yes" />
+			<Property Id="NDAS_DOWNGRADE" Secure="yes" />
+		</Upgrade>
+
+		<Feature Id="NdasSoftware" Title="NDAS Software" Level="1" Display="expand">
+
+			<?ifdef Win32Build?>
+			<MergeRef Id="MSVCRT.51D569E0_8A28_11D2_B962_006097C4DE24" />
+			<MergeRef Id="MSVCP60.51D569E3_8A28_11D2_B962_006097C4DE24" />
+			<?endif?>
+
+			<Feature Id="NdasDeviceDrivers" Level="1" Title="Device drivers">
+
+				<?ifdef Include.NDASSCSI?>
+				<Feature Id="NDASSCSI" Level="1" Title="NDAS SCSI Miniport">
+					<ComponentRef Id="ndasbus" />
+					<ComponentRef Id="ndasscsi" />
+					<ComponentRef Id="lpx" />
+					<ComponentRef Id="ndasiomg.dll" />
+				</Feature>
+				<?endif?>
+
+				<?ifdef Include.NDASPORT?>
+				<Feature Id="NDASPORT" Level="1" Title="NDAS Host Initiator">
+					<ComponentRef Id="ndasport" />
+					<?ifdef Include.NDASDLU?>
+					<ComponentRef Id="ndasdlu" />
+					<ComponentRef Id="lpx" />
+					<ComponentRef Id="ndasiomg.dll" />
+					<?endif?>
+				</Feature>
+				<?endif?>
+				
+				<?ifdef Include.LFSFILT?>
+				<Feature Id="LFSFILT" Level="1" Title="Legacy file system filter for NDAS device sharing">
+					<ComponentRef Id="lfsfilt" />
+				</Feature>
+				<?endif?>
+
+				<?ifdef Include.NDASFS?>
+				<Feature Id="NDASFS" Level="1" Title="Mini-file system filter for NDAS device sharing">
+					<ComponentRef Id="ndasfs" />
+				</Feature>
+				<?endif?>
+
+				<?ifdef Include.NDASFAT?>
+				<Feature Id="NDASFAT" Level="1" Title="FAT File System for NDAS devices">
+					<ComponentRef Id="ndasfat" />
+				</Feature>
+				<?endif?>
+
+				<?ifdef Include.NDASNTFS?>
+				<Feature Id="NDASNTFS" Level="1" Title="NTFS File System for NDAS devices">
+					<ComponentRef Id="ndasntfs" />
+				</Feature>
+				<?endif?>
+
+				<?ifdef Include.NDASROFS?>
+				<Feature Id="NDASROFS" Level="1" Title="ROFS File System for NDAS devices">
+					<ComponentRef Id="ndasrofs" />
+				</Feature>
+				<?endif?>
+        
+				<?ifdef Include.XIXFS?>
+				<Feature Id="XixFileSystem" Level="1" Title="XIX File System"
+						 Description="XIX File System provides file-system level storage sharing capability.">
+					<ComponentRef Id="xixfs" />
+				</Feature>
+				<?endif?>
+
+				<?ifdef Include.XIXFSFORMATTER?>
+				<Feature Id="XixFileSystemFormatter" Level="1" Title="XIX File System Formatter"
+						 Description="Format a disk with XIX file system">
+					<ComponentRef Id="uxixfs" />
+					<?ifdef Include.XIXFSFORMATTER_EXTRA_DEPS?>
+					<ComponentRef Id="uxixfs_deps" />
+					<?endif?>
+				</Feature>
+				<?endif?>
+			</Feature>
+
+			<Feature Id="NDASSYS" Level="1" Title="NDAS Services and API libraries"
+					 Description="Components includes NDAS Service and NDAS API library files">
+				<ComponentRef Id="ndassvc.exe" Primary="yes" />
+				<ComponentRef Id="lpx" />
+				<ComponentRef Id="ndasuser.dll" />
+				<ComponentRef Id="ndascomm.dll" />
+				<ComponentRef Id="ndasop.dll" />
+				<ComponentRef Id="ndasvol.dll" />
+				<ComponentRef Id="ndasmsg.dll" />
+			</Feature>
+
+			<Feature Id="NDASAPP" Level="1" Title="NDAS applications"
+					 Description="Components includes NDAS Management and NDAS Bind Management">
+				<ComponentRef Id="NdasProgramMenuFolder" />
+
+				<Feature Id="ndascmd" Level="1" Title="NDAS Management CLI"
+						 Description="Provides command-line interface to manage NDAS devices">
+					<ComponentRef Id="ndascmd.exe" />
+					<ComponentRef Id="ndasuser.dll" />
+					<ComponentRef Id="ndasmsg.dll" />
+				</Feature>
+
+				<Feature Id="ndasmgmt" Level="1" Title="NDAS Device Management"
+						 Description="Taskbar Application to manage NDAS devices">
+					<ComponentRef Id="ndasmgmt.exe" Primary="yes"/>
+					<ComponentRef Id="ndasmgmt.enu.dll" />
+					<ComponentRef Id="ndasapcm.dll" />
+					<ComponentRef Id="ndasapcm_ps.dll" />
+					<ComponentRef Id="NdasmgmtStartupShortcut" />
+					<ComponentRef Id="ndasuser.dll" />
+					<ComponentRef Id="ndasmsg.dll" />
+					<ComponentRef Id="ndasnif.dll" />
+				</Feature>
+
+				<Feature Id="ndasbind" Level="1" Title="NDAS Bind Management"
+						 Description="Provides RAID features for NDAS devices">
+
+					<ComponentRef Id="ndasbind.exe" Primary="yes" />
+					<ComponentRef Id="ndasbind.enu.dll" />
+					<ComponentRef Id="ndascomm.dll" />
+					<ComponentRef Id="ndasop.dll" />
+					<ComponentRef Id="lpx" />
+
+					<?ifdef res.zh-CN ?>
+					<ComponentRef Id="ndasbind.chs.dll" />
+					<?endif?>
+
+				</Feature>
+
+			</Feature>
+
+			<ComponentRef Id="InstallInfo" />
+			<ComponentRef Id="CustomInstallInfo" />
+			<ComponentRef Id="SetupLanguageInfo" />
+
+		</Feature>
+
+		<!-- Windows Installer Built-in Properties -->
+		<Property Id="ALLUSERS">1</Property>
+		<Property Id="INSTALLLEVEL">100</Property>
+		<Property Id="DiskPrompt">1</Property>
+		<Property Id="ProductID">none</Property>
+		<Property Id="NOCOMPANYNAME">1</Property>
+		<Property Id="NOUSERNAME">1</Property>
+
+		<!-- APR Properties -->
+		<Property Id="ARPURLUPDATEINFO">$(loc.ARPURLUPDATEINFO)</Property>
+		<Property Id="ARPHELPLINK">$(loc.ARPHELPLINK)</Property>
+		<!-- <Property Id="ARPNOMODIFY"><![CDATA[1]]></Property> -->
+		<!-- <Property Id="ARPNOREPAIR"><![CDATA[1]]></Property> -->
+		<Property Id="ARPURLINFOABOUT">$(loc.ARPURLINFOABOUT)</Property>
+		<Property Id="ARPPRODUCTICON">$(var.iconid.setup)</Property>
+		<Property Id="ARPCONTACT">$(loc.ARPCONTACT)</Property>
+		<Property Id="ARPCOMMENTS">$(loc.ARPCOMMENTS)</Property>
+
+		<!-- Custom Properties -->
+		<Property Id="RebootYesNo">Yes</Property>
+		<Property Id="DialogCaption">$(loc.DialogCaption)</Property>
+		<?ifdef NdasSetupVersionTag?>
+		<Property Id="NdasSetupVersion"><![CDATA[$(var.NdasSetupVersion)$(var.NdasSetupVersionTag)]]></Property>
+		<?else?>
+		<Property Id="NdasSetupVersion"><![CDATA[$(var.NdasSetupVersion)]]></Property>
+		<?endif?>
+		<Property Id="ApplicationUsers"><![CDATA[AllUsers]]></Property>
+		<Property Id="AxShowNoticeOnReadyToInstall"><![CDATA[1]]></Property>
+		<Property Id="AgreeToLicense">No</Property>
+		<Property Id="Display_IsBitmapDlg"><![CDATA[1]]></Property>
+		<Property Id="InstallChoice">AR</Property>
+		<Property Id="SetupType">Typical</Property>
+		<Property Id="ProgressType0"><![CDATA[install]]></Property>
+		<Property Id="ProgressType1"><![CDATA[Installing]]></Property>
+		<Property Id="ProgressType2"><![CDATA[installed]]></Property>
+		<Property Id="ProgressType3"><![CDATA[installs]]></Property>
+		<Property Id="DisplayNameMinimal"><![CDATA[Minimal]]></Property>
+		<Property Id="DisplayNameTypical"><![CDATA[Typical]]></Property>
+		<Property Id="DisplayNameCustom"><![CDATA[Custom]]></Property>
+
+		<Property Id="ReinstallModeText"><![CDATA[aums]]></Property>
+
+		<Property Id="_IsSetupTypeMin"><![CDATA[Typical]]></Property>
+		<Property Id="_IsMaintenance"><![CDATA[Change]]></Property>
+
+		<Property Id="NDAS_SAFE_UPGRADE" Secure="yes" />
+
+		<?ifdef NdasSetupFlags_NOLFSFILT?>
+		<Property Id="NDASMSM_NO_LFSFILT" Value="1" />
+		<?endif?>
+		<?ifdef NdasSetupFlags_ARFLAGS?>
+		<Property Id="NDASMSM_AR_SCOPENAME" Value="$(var.NdasSetupFlags_ARFLAGS)" />
+		<?endif?>
+		<?ifdef NdasSetupFlags_ECKEYFILE?>
+		<Property Id="NDASMSM_EC_KEYFILE" Value="$(var.NdasSetupFlags_ECKEYFILE)" />
+		<?endif?>
+		<?ifdef NdasSetupReleaseTag?>
+		<Property Id="ProductReleaseTag" Value="$(var.NdasSetupReleaseTag)" />
+		<?endif?>
+
+		<!-- Merge Module References empty tables -->
+		<!-- EnsureTable entries are required to prevent ICE03 -->
+		<EnsureTable Id="Extension"/>
+		<EnsureTable Id="Class"/>
+		<EnsureTable Id="MIME"/>
+
+		<!-- Fragment References -->
+		<FragmentRef Id="xdi" />
+
+		<FragmentRef Id="ActionText"/>
+		<FragmentRef Id="Dialogs"/>
+		<FragmentRef Id="Error"/>
+		<FragmentRef Id="ErrorEx"/>
+		<FragmentRef Id="StarForceCheck"/>
+		<FragmentRef Id="TextStyles"/>
+		<FragmentRef Id="UI" />
+		<FragmentRef Id="UIText" />
+
+		<!-- Merge Modules -->
+		<?ifdef Win32Build?>
+		<DirectoryRef Id="TARGETDIR">
+			<Merge Id="MSVCRT.51D569E0_8A28_11D2_B962_006097C4DE24" Language="0" DiskId="$(var.media.msvcrt)" SourceFile="$(var.ExternalMergeModulePath)\MSVCRT.MSM" />
+			<Merge Id="MSVCP60.51D569E3_8A28_11D2_B962_006097C4DE24" Language="0" DiskId="$(var.media.msvcp60)" SourceFile="$(var.ExternalMergeModulePath)\MSVCP60.MSM" />
+		</DirectoryRef>
+		<?endif?>
+
+		<AdvertiseExecuteSequence>
+			<!-- Nothing special in Advertise Execute Sequence -->
+		</AdvertiseExecuteSequence>
+
+		<AdminExecuteSequence>
+			<!-- Nothing special in Admin Execute Sequence -->
+		</AdminExecuteSequence>
+
+		<InstallUISequence>
+			<?ifdef ExternalEula?>
+			<Custom Action="CA_READ_AND_SET_EULA" Before="InstallWelcome">Not Installed And (Not PATCH Or IS_MAJOR_UPGRADE)</Custom>
+			<?endif?>
+		</InstallUISequence>
+
+		<InstallExecuteSequence>
+			<LaunchConditions After="AppSearch"><![CDATA[Not Installed]]></LaunchConditions>
+			<RemoveExistingProducts After="InstallValidate" />
+			<Custom Action="CA_STOP_DOWNGRADE" After="FindRelatedProducts">NDAS_DOWNGRADE</Custom>
+			<Custom Action="CA_STOP_NDASMGMT" Before="InstallValidate">$ndasmgmt.exe=2</Custom>
+			<Custom Action="CA_SET_ARPINSTALLLOCATION" After="CostFinalize" />
+			<AllocateRegistrySpace />
+		</InstallExecuteSequence>
+
+		<!-- Custom Actions -->
+		<CustomAction Id="CA_STOP_DOWNGRADE" Error="25900" />
+		<CustomAction Id="CA_SET_ARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />
+		<CustomAction Id="CA_STOP_NDASMGMT" Return="check" BinaryKey="NDASMSIU.DLL" DllEntry="NdasMsiStopNdasmgmt" />
+
+		<!-- Detect active instances -->
+
+		<InstallUISequence>
+			<Custom Action="NdasMsiDetectNdasLogicalUnitInstances" After="LaunchConditions"></Custom>
+		</InstallUISequence>
+		
+		<InstallExecuteSequence>
+			<Custom Action="NdasMsiDetectNdasLogicalUnitInstances" After="LaunchConditions"></Custom>
+		</InstallExecuteSequence>
+
+		<CustomAction Id="NdasMsiDetectNdasLogicalUnitInstances" Execute="oncePerProcess"  Return="check" BinaryKey="NDASMSIU.DLL" DllEntry="NdasMsiDetectNdasLogicalUnitInstances" />
+		
+		<!-- Error dialog number for NdasMsiDetectNdasLogicalUnitInstances -->
+		<Property Id="NdasMsiDetectNdasLogicalUnitInstances">28816</Property>
+
+		<UI>
+			<Error Id="28816">$(loc.Error.28816)</Error>
+		</UI>
+
+		<!-- Binary Table -->
+		<Binary Id="NDASMSIU.DLL" src="$(var.SetupDataDir.CustomActionDll)\NDASMSIU.DLL" />
+
+		<!-- EULA Custom Action -->
+		<?ifdef ExternalEula?>
+		<Property Id="EulaFileName">$(var.EULAFile)</Property>
+		<Property Id="EulaFallbackFileName">eula_en-US.rtf</Property>
+		<Property Id="EulaFallbackFileName2">eula.rtf</Property>
+		<!-- ReplaceEula uses properties: EulaFileName, EulaFallbackFileName, EulaFallbackFileName2
+			 to read the EULA from files. Paths are relative to [SourceDir] -->
+		<CustomAction Id="CA_READ_AND_SET_EULA" Return="ignore" BinaryKey="EULACA.DLL" DllEntry="ReplaceEula" />
+		<Binary Id="EULACA.DLL" src="$(var.SetupDataDir.CustomActionDll)\EULACA.DLL" />
+		<?endif?>
+
+		<!-- Main Setup Icon -->
+		<Icon Id="$(var.iconid.setup)" src="$(var.SetupDataDir.Icon)\setup.ico" />
+
+	</Product>
+
+</Wix>

@@ -1,0 +1,15 @@
+	
+NetDisk 2.1.4 (2.1.4.3)
+	
+- NDInst.dll (1.3.0)
+	* Fixed the bug in IsSystemEqualOrLater() function
+- LDServ.exe (2.1.4.3)
+	* Service name changed to 
+	  Service Name: "LanScsiHelper"
+	  Display Name: "LanScsi Helper Service"
+- NetLpx.inf
+	* Display Name changed to "LPX Protocol" from 
+	  "XiMeta Lpx Protocol"
+- LanScsiBus
+	* Hardware ID for NetDisks changed to "XiMeta_NetDisk_"
+	  from "XiMeta_LanScsiBus_"

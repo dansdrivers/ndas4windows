@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="COND_X64_IS_NOT_SUPPORTED">
+    <base>This setup package is for 32-bit version of Windows. Please install the 64-bit version of this software.</base>
+    <translation>Für dieses Setup-Paket wird die 32-bit Version von Windows benötigt. Bitte installieren Sie die 64-bit Version dieser Software.</translation>
+  </string>
+  <string id="COND_REQUIRE_WIN2000">
+    <base>[ProductName] requires that your computer is running Windows 2000, Windows XP or Windows 2003 Server.</base>
+    <translation>[ProductName] erfordert, dass auf Ihrem Computer Windows 2000, Windows XP oder Windows 2003 Server installiert ist.</translation>
+  </string>
+  <string id="COND_NOT_PRIVILEGED">
+    <base>You do not have sufficient privileges to complete this installation. Log on as an administrator and then retry this installation.</base>
+    <translation>Sie haben nicht genügend Rechte, um diese Installierung fertigzustellen. Melden Sie sich als Administrator an und wiederholen Sie die Installation.</translation>
+  </string>
+  <string id="ProductName64Suffix">
+    <base> (64-bit Windows)</base>
+    <translation>-</translation>
+  </string>
+  <string id="Text.SetupVersion">
+    <base>[NdasSetupVersion]</base>
+    <translation>-</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText2">
+    <base>It is recommended that this product is used in 100Mbps wired LAN or 802.11g/a wireless LAN environment.</base>
+    <translation>Es wird empfohlen, dieses Produkt mit einer100Mbps wired LAN oder 802.11g/a wireless LAN Umgebung zu benutzen.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText1">
+    <base>If you are using this product in a wired 10Mbps LAN or wireless 802.11b LAN environment, there is a possiblity of data transmit error or unstable connection.</base>
+    <translation>Wenn Sie dieses Produkt mit einer 10Mbps wired LAN oder wireless 802.11b LAN Umgebung benutzen, können möglicherweise Datenübertragungsfehler oder eine unstabile Verbindungen auftreten.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeGroupBox">
+    <base>Notice</base>
+    <translation>Bemerkung</translation>
+  </string>
+  <string id="SFWarning.SFWarnCheck">
+    <base>I &amp;acknowledge this warning message.</base>
+    <translation>Ich &amp;bestätige diese Warnmeldung.</translation>
+  </string>
+  <string id="SFWarning.DlgDesc">
+    <base>Setup detected a software.</base>
+    <translation>Das Setup hat eine Software entdeckt.</translation>
+  </string>
+  <string id="SFWarning.DlgTitle">
+    <base>{&amp;MSSansBold8}Compatibility Warning</base>
+    <translation>{&amp;MSSansBold8}Kompatibilitätswarnung</translation>
+  </string>
+  <string id="SFWarning.MemoLine1">
+    <base>{&amp;Arial8BoldBlue}Setup has found that StarForce Copy Protection software is installed in your system. Some old versions of this software may cause a system crash for using thirdy party storage device drivers.</base>
+    <translation>{&amp;Arial8BoldBlue}Setup zeigt an, dass StarForce Kopierschutz-Software in Ihrem System installiert ist. Eine alte Version dieser Software kann beim Gebrauch von Treibern für thirdy party Speichergeräte möglicherweise einen Zusammenbruch des Systems verursachen.</translation>
+  </string>
+  <string id="SFWarning.MemoLine2">
+    <base>It is highly recommended to update the StarForce Copy Protection software before proceeding the installation. Check the web site of the Protection Technology (http://www.star-force.com) for the updates.</base>
+    <translation>Es wird dringend empfohlen, die StarForce Kopierschutz-Software zu updaten, bevor Sie mit der Installation fortfahren. Die Updates finden Sie auf der Webseite der Protection Technology (http://www.star-force.com).</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgDesc">
+    <base>Setup has found a previous version of the software.</base>
+    <translation>Beim Setup wurde eine frühere Version der Software gefunden.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgTitle">
+    <base>{&amp;MSSansBold8}Upgrade Confirmation</base>
+    <translation>{&amp;MSSansBold8}Upgrade Bestätigung</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine1">
+    <base>Setup has found a previous version of the software and will perform an upgrade. During an upgrade, you may have to reboot the system twice.</base>
+    <translation>Beim Setup wurde eine frühere Version der Software gefunden. Ein Upgrade wird ausgeführt. Während eines Upgrade müssen Sie das System möglicherweise zweimal rebooten.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine2">
+    <base>To ensure proper operation, please do not interrupt the system reboot and follow the instructions until the setup is completed.</base>
+    <translation>Bitte unterbrechen Sie das Reboot des Systems nicht, um die einwandfreie Durchführung sicherzustellen, und halten Sie sich an die Anweisungen, bis das Setup fertiggestellt ist.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine3">
+    <base>Click Next to continue installation.</base>
+    <translation>Klicken Sie auf "Weiter", um mit der Installierung fortzufahren.</translation>
+  </string>
+  <string id="Error.25900">
+    <base>Newer version of the software is already installed. If you have to downgrade the software, uninstall the higher version software first.</base>
+    <translation>Die neuere Version dieser Software wurde schon installiert. Deinstallieren Sie die höhere Software-Version zuerst, wenn Sie die Software zurückstufen müssen.</translation>
+  </string>
+  <string id="Error.27500">
+    <base>This setup requires Internet Information Server 4.0 or higher for configuring IIS Virtual Roots. Please make sure that you have IIS 4.0 or higher.</base>
+    <translation>Für dieses Setup ist Internet Information Server 4.0 oder höher für die Konfiguration von IIS Virtual Roots erforderlich. Stellen Sie sicher, dass Sie über IIS 4.0 oder höher verfügen.</translation>
+  </string>
+  <string id="Error.27501">
+    <base>This setup requires Administrator privileges for configuring IIS Virtual Roots.</base>
+    <translation>Für dieses Setup müssen Sie über Administratorrechte verfügen, um IIS Virtual Roots zu konfigurieren.</translation>
+  </string>
+</localization>

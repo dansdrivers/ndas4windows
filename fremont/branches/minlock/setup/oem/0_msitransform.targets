@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- requires $(BaseMsi) and @(LocalizedMsi) -->
+
+  <PropertyGroup>
+	<MsiTran>..\bin\msitran.exe</MsiTran>
+  </PropertyGroup>
+
+  <Target Name="GenerateMsiTransforms"
+		  Inputs="$(basemsi);%(targetmsi.identity)"
+		  Outputs="@(targetmsi->'%(relativedir)%(filename).mst')">
+	<Exec Command="$(MsiTran) -g $(basemsi) %(targetmsi.identity) @(targetmsi->'%(relativedir)%(filename).mst')" IgnoreExitCode="true"/>
+  </Target>
+
+  <Target Name="Clean">
+	<Delete Files="@(targetmsi->'%(relativedir)%(filename).mst')" />
+  </Target>
+
+</Project>

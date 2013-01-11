@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?include Config.wxi ?>
+<!-- Codepage="$(var.TargetCodepage)" -->
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Module 
+		Id="NDASUIMSM" 
+		Guid="$(var.TargetProductCode)"
+		Codepage="$(var.TargetCodepage)"
+		Language="$(var.TargetLanguage)" 
+		Version="$(var.TargetVersion)">
+
+		<Package 
+			Id="????????-????-????-????-????????????" 
+			Description="NDAS System Component UI Merge Module $(var.TargetDisplayVersion) ($(var.TargetLanguageName))"
+			Comments="$(var.TargetLanguageName) Error and ActionText Table for NDAS System Component Merge Module" 
+			Manufacturer="XIMETA, Inc." 
+			InstallerVersion="200"
+			SummaryCodepage="$(var.SISCodepage)"
+			Languages="$(var.SISLanguages)"
+			Platforms="$(var.SISPlatforms)"
+			Compressed="yes" />
+
+		<FragmentRef Id="NDASMSM_Error" />
+		<FragmentRef Id="NDASMSM_ActionText" />
+
+	</Module>
+</Wix>
+

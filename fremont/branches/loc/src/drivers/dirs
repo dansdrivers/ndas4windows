@@ -1,0 +1,35 @@
+#
+# the following components are incomplete to build at this time
+# o afdtcp
+# o wanscsiop
+#
+# the following componets should be built with build_lfs.cmd
+#
+# o lfsfilter
+# o lfsfiltlib
+# o w2kfatlib
+# o w2kntfslib
+# o wnetfatlib
+# o wxpfatlib
+# o wxpntfslib
+#
+# Actual build order is determined by BUILD_PRODUCES and BUILD_CONSUMES 
+# macros. Refer to the following sections from Windows DDK Help
+#
+# 	\Driver Development Tools
+#		\Tools for Building Drivers
+#			\Build
+#				\Build Utility Reference
+#					\Build Utility Macros
+#
+DIRS=\
+	ndasiomsg \
+	netlpx \
+	lpxtdi \
+	ndasklib \
+	ndasbus \
+	ndasscsi \
+	xixfs \
+	xixfs_format \
+	xtdi \
+	ndasport

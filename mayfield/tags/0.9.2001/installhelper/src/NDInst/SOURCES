@@ -1,0 +1,63 @@
+!IFNDEF PSDK_INC_PATH
+!ERROR Set Platform SDK Include Path (PSDK_INC_PATH) with no space (e.g. 8.3 format)
+!ENDIF
+
+NETDISK_BINPLACE_TYPE=exe
+
+#DLLBASE=0x2000000
+
+USER_LIB_PATH=..\..\lib\$(BUILD_ALT_DIR)\*\
+
+!IF	"$(DDKBUILDENV)"=="chk"
+LSUSER_LIB_PATH=..\..\..\lanscsisystemv2\lib\Debug\
+!ELSE
+LSUSER_LIB_PATH=..\..\..\lanscsisystemv2\lib\Release\
+!ENDIF
+
+TARGETNAME=NDInst
+TARGETPATH=obj
+#TARGETPATH=..\..\sys\$(BUILD_ALT_DIR)
+TARGETTYPE=DYNLINK
+
+TARGETLIBS=\
+        $(SDK_LIB_PATH)\advapi32.lib  \
+        $(SDK_LIB_PATH)\kernel32.lib  \
+        $(SDK_LIB_PATH)\setupapi.lib  \
+        $(SDK_LIB_PATH)\ole32.lib  \
+        $(SDK_LIB_PATH)\user32.lib \
+        $(SDK_LIB_PATH)\shell32.lib \
+	$(DDK_LIB_PATH)\newdev.lib \
+	$(SDK_LIB_PATH)\msi.lib \
+	$(SDK_LIB_PATH)\uuid.lib \
+	$(SDK_LIB_PATH)\gdi32.lib \
+	$(SDK_LIB_PATH)\strsafe.lib \
+	$(SDK_LIB_PATH)\WSnmp32.lib \
+	$(USER_LIB_PATH)\NDFilter.lib \
+	$(USER_LIB_PATH)\NDLog.lib \
+	$(USER_LIB_PATH)\NDDevice.lib \
+	$(USER_LIB_PATH)\NDNetComp.lib  \
+	$(LSUSER_LIB_PATH)\NetDiskUILib.lib
+
+
+USE_MSVCRT=1
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+!IFDEF DBG
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE -DNDINST_EXPORTS -D_USRDLL -D_WINDOWS -D_DEBUG
+DLLDEF	 = NDInstDebug.def
+!ELSE
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE -DNDINST_EXPORTS -D_USRDLL -D_WINDOWS -DNDEBUG
+DLLDEF	 = NDInst.def
+!ENDIF
+
+DLLENTRY = DllMain
+INCLUDES=..\inc;$(PSDK_INC_PATH);..\..\..\lanscsisystemv2\src\inc
+
+
+!INCLUDE "..\inc\nddef.mak"
+
+SOURCES= NDInst.cpp NDInstDlg.cpp NDInst.rc \
+	RebootFlag.cpp FndApp.c ActivateWarnDlg.cpp InstallTipDlg.cpp MultiLangRes.cpp SvcQuery.cpp
+

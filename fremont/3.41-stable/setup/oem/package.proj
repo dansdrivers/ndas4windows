@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask TaskName="XIMETA.IExpress" AssemblyFile="..\bin\msbuild\XIMETA.Tasks.dll" />
+  <UsingTask TaskName="XIMETA.SignCode" AssemblyFile="..\bin\msbuild\XIMETA.Tasks.dll" />
+
+  <Import Project="$(config).config" Condition="'$(config)' != ''" />
+
+  <PropertyGroup>
+    <PackageTitle>NDAS Software</PackageTitle>
+    <ReleaseDir>$(oem)\package\$(release)_$(platform)</ReleaseDir>
+    <PackageSourceDir>$(ReleaseDir)</PackageSourceDir>
+    <PackageOutputDir>$(oem)\package</PackageOutputDir>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageFile Include="$(PackageSourceDir)\*.*" />
+    <SmallPackageFile
+      Include="$(PackageSourceDir)\*.*" 
+      Exclude="$(PackageSourceDir)\instmsi*.exe"/>
+    <MainMsiFile Include="$(PackageSourceDir)\*.msi" />
+  </ItemGroup>
+
+  <!--
+  <PropertyGroup Condition="'$(PROCESSOR_ARCHITECTURE)'=='AMD64'">
+    <IExpressToolPath>$(SystemRoot)\SysWOW64</IExpressToolPath>
+  </PropertyGroup>
+  -->
+
+  <PropertyGroup>
+    <IExpressToolPath>..\bin</IExpressToolPath>
+  </PropertyGroup>
+
+  <Target Name="Build" DependsOnTargets="PackageAndSign" />
+  <Target Name="Clean" DependsOnTargets="DeletePackages" />
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+
+  <Target Name="DeletePackages">
+	<Delete Files="$(PackageOutputDir)\%(MainMsiFile.filename).exe" />
+	<Delete Files="$(PackageOutputDir)\%(MainMsiFile.filename)-small.exe" />
+	<Delete Files="$(PackageOutputDir)\%(MainMsiFile.filename).exe.signed" />
+	<Delete Files="$(PackageOutputDir)\%(MainMsiFile.filename)-small.exe.signed" />
+  </Target>
+
+  <Target Name="PackageAndSign" 
+          DependsOnTargets="PackageFull;PackageSmall;SignCode">
+  </Target>
+  
+  <Target Name="PackageFull"
+          Inputs="@(PackageFile)"
+          Outputs="$(PackageOutputDir)\%(MainMsiFile.filename).exe">
+
+    <XIMETA.IExpress
+      IExpressOptions="/N /M"
+      ToolPath="$(IExpressToolPath)" 
+      SourceFiles="@(PackageFile)" 
+      FriendlyName="$(PackageTitle)"
+      AppLaunched="setup.exe" 
+      OutputFileName="$(PackageOutputDir)\%(MainMsiFile.filename).exe"
+	  >
+      <Output 
+        TaskParameter="OutputFileName" 
+        ItemName="SigningTargetFile" />
+    </XIMETA.IExpress>
+
+  </Target>
+
+  <Target Name="PackageSmall"
+          Inputs="@(PackageFile)"
+          Outputs="$(PackageOutputDir)\%(MainMsiFile.filename)-small.exe">
+
+    <XIMETA.IExpress
+      IExpressOptions="/N /M"
+      ToolPath="$(IExpressToolPath)" 
+      SourceFiles="@(SmallPackageFile)" 
+      FriendlyName="$(PackageTitle)" 
+      AppLaunched="setup.exe" 
+      OutputFileName="$(PackageOutputDir)\%(MainMsiFile.filename)-small.exe"
+	  ExtractorStub="wextract2.exe">
+      <Output 
+        TaskParameter="OutputFileName" 
+        ItemName="SigningTargetFile" />
+    </XIMETA.IExpress>
+
+  </Target>
+
+  <Target Name="SignCode"
+          Inputs="%(SigningTargetFile.identity)"
+          Outputs="%(SigningTargetFile.identity).signed">
+
+    <XIMETA.SignCode 
+	   ToolPath="..\bin"
+	   CommonName="XIMETA, Inc."
+	   TimestampUrl="http://timestamp.verisign.com/scripts/timstamp.dll" 
+	   FileName="%(SigningTargetFile.identity)" />
+
+    <!-- this tag file is required to track signing -->
+    <WriteLinesToFile File="%(SigningTargetFile.identity).signed" Lines="signed" Overwrite="true" />
+    
+  </Target>
+
+</Project>

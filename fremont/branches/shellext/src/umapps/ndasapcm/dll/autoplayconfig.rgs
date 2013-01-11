@@ -1,0 +1,32 @@
+HKCR
+{
+	NDAS.AutoPlayConfig.1 = s 'AutoPlayConfig Class'
+	{
+		CLSID = s '{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}'
+	}
+	NDAS.AutoPlayConfig = s 'AutoPlayConfig Class'
+	{
+		CLSID = s '{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}'
+		CurVer = s 'NDAS.AutoPlayConfig.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8EFCA4CA-B6CD-43b7-904E-2D486B99E356} = s 'AutoPlayConfig Class'
+		{
+			ProgID = s 'NDAS.AutoPlayConfig.1'
+			VersionIndependentProgID = s 'NDAS.AutoPlayConfig'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{199A5D6E-B2EF-4FCD-935E-BC66D2CA813B}'
+			Elevation
+			{
+				val Enabled = d 1
+			}
+			val LocalizedString = s '@%MODULE%,-101'
+		}
+	}
+}

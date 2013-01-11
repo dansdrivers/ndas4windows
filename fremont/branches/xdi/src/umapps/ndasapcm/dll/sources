@@ -1,0 +1,38 @@
+TARGETNAME=ndasapcm
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE
+#C_DEFINES=$(C_DEFINES) -D_MERGE_PROXYSTUB
+
+UMTYPE=windows
+DLLENTRY=_DllMainCRTStartup
+DLLDEF=autoplayconfig.def
+
+INCLUDES=..;..\inc;..\idl\$(O);$(PSDK_INC_PATH);$(NDAS_INC_PATH)
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+PRECOMPILED_INCLUDE=stdatl.hpp
+
+SOURCES=\
+	dllentry.cpp \
+	coautoplayconfig.cpp \
+	autoplayconfig.rc
+
+TARGETLIBS=\
+	$(SDK_LIB_PATH)\kernel32.lib \
+	$(SDK_LIB_PATH)\advapi32.lib \
+	$(SDK_LIB_PATH)\user32.lib \
+	$(SDK_LIB_PATH)\ole32.lib \
+	$(SDK_LIB_PATH)\oleaut32.lib \
+	$(SDK_LIB_PATH)\shlwapi.lib \
+	$(SDK_LIB_PATH)\uuid.lib \
+	..\idl\slib\$(O)\libndasapcm_i.lib
+
+!INCLUDE $(ATL_SOURCES_INC)

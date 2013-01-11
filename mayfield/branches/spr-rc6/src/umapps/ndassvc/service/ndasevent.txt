@@ -1,0 +1,10 @@
+NDAS Events
+
+NDAS Service generates events through the read-only named pipe 
+(\\.\pipe\ndas\event). Clients can dispatch events from service
+reading this pipe.
+
+When a client connects this event pipe, the initial message
+is sent to the pipe from the service, which shows the version
+of the event publisher.
+

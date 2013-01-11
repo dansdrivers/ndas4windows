@@ -1,0 +1,28 @@
+TARGETNAME=libwxpntfs
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+DRIVERTYPE=FS
+
+BUILD_PRODUCES=libwxpntfs
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE
+C_DEFINES=$(C_DEFINES) -D__LFS__
+
+SOURCES=	WxpNtfsLib.c \
+			Ntfs.c       \
+			mcbsup.c
+
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\base\ntos\inc
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\public\sdk\inc
+INCLUDES=$(INCLUDES);$(XM_WXP_INC_PATH)\public\internal\base\inc
+INCLUDES=$(INCLUDES);$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;..\lfsfilter;..\lfsfiltlib
+INCLUDES=$(INCLUDES);$(NDAS_INC_PATH)
+
+# Only for Windows XP target.
+!IF DEFINED(_NT_TARGET_VERSION)
+!	IF $(_NT_TARGET_VERSION) != 0x501
+!		ERROR	Target OS must be Windows XP.
+!	ENDIF
+!ENDIF
+
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_DRIVER_LIB_PATH)\$(TARGETNAME).lib}

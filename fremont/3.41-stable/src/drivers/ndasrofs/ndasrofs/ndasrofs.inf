@@ -1,0 +1,89 @@
+;-------------------------------------------------------------------------
+; ndasrofs.inf
+; 
+; Installation file (.inf) for NDAS ROFS
+;
+; Copyright (c) 2002-2007, XIMETA, Inc.
+;-------------------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Provider    = %Provider%
+DriverVer   = 12/11/2007,1.0.0.1
+CatalogFile = ndasrofs.cat
+
+[DestinationDirs]
+DefaultDestDir    = %DIRID_DRIVERS%
+ndasrofs.DriverFiles = %DIRID_DRIVERS%
+
+[DefaultInstall]
+OptionDesc          = %ndasrofs.ServiceDesc%
+CopyFiles           = ndasrofs.DriverFiles
+
+[DefaultInstall.Services]
+AddService=%ndasrofs.ServiceName%,,ndasrofs.Service
+
+[DefaultUninstall]
+DelFiles = ndasrofs.DriverFiles
+DelReg   = ndasrofs.DelReg
+
+[DefaultUninstall.Services]
+DelService =%ndasrofs.ServiceName%
+; ,0x200		; Flags note to stop service first
+
+[ndasrofs.Service]
+DisplayName      = %ndasrofs.DisplayName%
+Description      = %ndasrofs.ServiceDesc%
+ServiceBinary    = %12%\ndasrofs.sys ;DIRID_DRIVERS\ndasrofs.sys
+ServiceType      = %SERVICE_FILE_SYSTEM_DRIVER%
+StartType        = %SERVICE_SYSTEM_START%
+ErrorControl     = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup   = %ndasrofs.LoadOrderGroup%
+AddReg           = ndasrofs.AddReg
+
+[ndasrofs.AddReg]
+HKR,,EventMessageFile,%FLG_ADDREG_TYPE_EXPAND_SZ%,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\NdasIoMg.dll"
+
+[ndasrofs.DriverFiles]
+ndasrofs.sys
+
+[SourceDisksNames]
+1=%DiskId1%
+
+[SourceDisksFiles]
+ndasrofs.sys=1
+
+[Strings]
+; Non-localizable Strings
+ndasrofs.ServiceName         = "ndasrofs"
+ndasrofs.RegPath             = "SYSTEM\CurrentControlSet\Services\ndasrofs"
+ndasrofs.LoadOrderGroup      = "File System"
+
+; Localizable Strings
+Provider            = "XIMETA"
+ndasrofs.DisplayName = "NDAS ROFS File System Service"
+ndasrofs.ServiceDesc = "NDAS ROFS File System Service"
+DiskId1             = "NDAS Device Driver Installation Disk"
+
+; Constants
+SERVICE_KERNEL_DRIVER=1
+SERVICE_FILE_SYSTEM_DRIVER=2
+SERVICE_WIN32_OWN_PROCESS=0x10
+SERVICE_WIN32_SHARE_PROCESS=0x20
+SERVICE_INTERACTIVE_PROCESS=0x100
+
+SERVICE_BOOT_START=0
+SERVICE_SYSTEM_START=1
+SERVICE_AUTO_START=2
+SERVICE_DEMAND_START=3
+SERVICE_DISABLED=4
+
+SERVICE_ERROR_IGNORE=0
+SERVICE_ERROR_NORMAL=1
+SERVICE_ERROR_SEVERE=2
+SERVICE_ERROR_CRITICAL=3
+
+DIRID_DRIVERS=12
+
+FLG_ADDREG_TYPE_EXPAND_SZ=0x00020000
+

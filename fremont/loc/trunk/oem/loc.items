@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <Modules Include="ndasmgmt">
+      <ResMap>ndasmgmt.resmap</ResMap>
+    </Modules>
+    <Modules Include="ndasbind">
+      <ResMap>ndasbind.resmap</ResMap>
+    </Modules>
+
+    <NeutralModules Include="$(BaseDataDir)\*.*"
+                    Exclude="
+                    $(BaseDataDir)\ndasmgmt.exe;
+                    $(BaseDataDir)\ndasbind.exe;
+                    $(BaseDataDir)\ndasmgmt.*dll;
+                    $(BaseDataDir)\ndasbind.*dll;
+                    $(BaseDataDir)\ndasmsg.dll" />
+    <Languages Include="enu" />
+    <Languages Include="deu" />
+    <Languages Include="fra" />
+    <Languages Include="esn" />
+    <Languages Include="ita" />
+    <Languages Include="ptg" />
+    <Languages Include="jpn" />
+    <Languages Include="kor" />
+    <Languages Include="chs" />
+    <Languages Include="cht" />
+    <Languages Include="dan" />
+    <Languages Include="nld" />
+    <Languages Include="nor" />
+    <Languages Include="sve" />
+    <Languages Include="rus" />
+    <Languages Include="plk" />
+    <Languages Include="bgr"/>
+    <Languages Include="cat"/>
+    <Languages Include="csy"/>
+    <Languages Include="ell"/>
+    <Languages Include="euq"/>
+    <Languages Include="fin"/>
+    <Languages Include="frc"/>
+    <Languages Include="hrv"/>
+    <Languages Include="hun"/>
+    <Languages Include="ind"/>
+    <Languages Include="rom"/>
+    <Languages Include="sky"/>
+    <Languages Include="slv"/>
+    <Languages Include="srb"/>
+    <Languages Include="tha"/>
+    <Languages Include="trk"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AppFile Include="ndasmgmt.exe">
+      <ResMap>ndasmgmt_app.resmap</ResMap>
+    </AppFile>
+    <AppFile Include="ndasbind.exe">
+      <ResMap>ndasbind_app.resmap</ResMap>
+    </AppFile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <MsgLocFile Include="$(oemdatadir)\*_deu_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1031</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_chs_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>2052</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_cht_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1028</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_deu_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1031</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_enu_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1033</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_esn_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>3082</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_fra_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1036</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_ita_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1040</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_jpn_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1041</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_kor_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1042</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_ptg_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>2070</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_dan_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1030</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_nld_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1043</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_nor_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1044</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_sve_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1053</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_rus_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1049</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_plk_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1045</LangID>
+    </MsgLocFile>
+		
+    <MsgLocFile Include="$(oemdatadir)\*_bgr_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1026</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_cat_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1027</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_csy_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1029</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_ell_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1032</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_euq_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1069</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_fin_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1035</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_frc_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>3084</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_hrv_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1050</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_hun_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1038</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_ind_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1057</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_rom_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1048</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_sky_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1051</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_slv_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1060</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_srb_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>3098</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_tha_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1054</LangID>
+    </MsgLocFile>
+    <MsgLocFile Include="$(oemdatadir)\*_trk_ndasmsg.xml">
+      <ResDll>ndasmsg.dll</ResDll>
+      <Base>$(basemetadatadir)\ndasmsg.xml</Base>
+      <LangID>1055</LangID>
+    </MsgLocFile>
+		
+  </ItemGroup>
+
+  <PropertyGroup>
+    <ResDataDir>resdata</ResDataDir>
+  </PropertyGroup>
+
+</Project>
+

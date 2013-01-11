@@ -1,0 +1,53 @@
+TARGETNAME=ndasbus
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+
+NTTARGETFILE0=mofcomp
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE
+# Windows Vista support
+C_DEFINES=$(C_DEFINES) -D__VISTA_SUPPORT__
+
+INCLUDES=..;$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+PRECOMPILED_INCLUDE=..\ndasbusproc.h
+
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\tdi.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(NDAS_LIB_PATH)\libhash.lib \
+	$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib \
+	$(NDAS_DRIVER_LIB_PATH)\libndask.lib \
+	$(DDK_LIB_PATH)\ntstrsafe.lib
+
+SOURCES=\
+	..\busenum.rc \
+	..\busenum.c \
+	..\pnp.c \
+	..\power.c \
+	..\buspdo.c \
+	..\wmi.c \
+	..\ndasbus.c \
+	..\register.c \
+	..\utils.c
+
+#
+# INF File Generation
+#
+!INCLUDE $(NDAS_TOOLS)\create_inf.inc
+
+!IF 0
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Ox
+!ELSE
+!ENDIF
+
+!ELSE
+
+MSC_OPTIMIZATION=
+
+!ENDIF
+
+PRECOMPILED_INCLUDE=..\ndasbusproc.h

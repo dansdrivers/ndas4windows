@@ -1,0 +1,606 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include ""windows.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Aggiorna stato",             IDM_AGGR_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "&Esci",                       IDM_EXIT
+    END
+    POPUP "&Tool"
+    BEGIN
+        MENUITEM "&Bind",                       IDM_AGGR_BIND
+        MENUITEM "&Unbind",                     IDM_AGGR_UNBIND
+        MENUITEM "&Esegui copia e mirroring",                 IDM_AGGR_ADDMIRROR
+        MENUITEM "&Recupera mirroring",                 IDM_AGGR_SYNCHRONIZE
+        MENUITEM "&Reimposta su singolo",   IDM_AGGR_SINGLE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "About",                       IDM_HELP_ABOUT
+    END
+END
+
+IDR_CONTEXT_MENU MENU
+BEGIN
+    POPUP "Contesto"
+    BEGIN
+        MENUITEM "Proprietà",                  IDM_AGGR_PROPERTY
+    END
+END
+
+IDR_MIRROR_MENU MENU
+BEGIN
+    POPUP "Esegui il Mirroring"
+    BEGIN
+        MENUITEM "&Esegui copia e mirroring",                 IDM_AGGR_ADDMIRROR
+        MENUITEM "&Recupera mirroring",                 IDM_AGGR_SYNCHRONIZE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ndasbind.ico"
+IDI_NDAGGR_BROKEN       ICON                    "res\\aggr_tv_aggr_bad.ico"
+IDI_NDAGGR_OK           ICON                    "res\\aggr_tv_aggr_normal.ico"
+IDI_ND_SLAVE            ICON                    "res\\aggr_tv_mirror_slave.ico"
+IDI_ND_BADKEY           ICON                    "res\\aggr_tv_netdisk_badkey.ico"
+//IDI_ND_DISABLED         ICON                    "res\\aggr_tv_netdisk_disabled.ico"
+IDI_ND_INUSE            ICON                    "res\\aggr_tv_netdisk_inuse.ico"
+IDI_ND_NOEXIST          ICON                    "res\\aggr_tv_netdisk_noexist.ico"
+//IDI_ND_RO               ICON                    "res\\aggr_tv_netdisk_readonly.ico"
+//IDI_ND_RW               ICON                    "res\\aggr_tv_netdisk_readwrite.ico"
+IDI_NDMIRR_OK           ICON                    "res\\aggr_tv_mirror_normal.ico"
+IDI_NDMIRR_BROKEN       ICON                    "res\\aggr_tv_mirror_broken.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ERROR DIALOGEX 0, 0, 304, 120
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "Errore gestione binding NDAS"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,247,100,50,14
+    LTEXT           "{Error Message}",IDC_ERROR_MESSAGE,37,11,
+                    260,33
+    EDITTEXT        IDC_ERROR_DESCRIPTION,37,48,260,47,ES_MULTILINE |
+                    ES_READONLY | NOT WS_BORDER
+    ICON            "",IDC_ERROR_ICON,7,11,21,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,38,44,260,1
+END
+
+IDD_UNBIND DIALOGEX 0, 0, 191, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Unbind"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Sì",IDOK,40,145,50,14
+    PUSHBUTTON      "No",IDCANCEL,99,145,50,14
+    CONTROL         "",IDC_LIST_UNBIND,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    33,177,104,WS_EX_STATICEDGE
+    LTEXT           "I dati contenuti nei dischi seguenti saranno eliminati.\nProcedere a scollegarli (unbinding)?",
+                    IDC_STATIC,7,7,177,24
+END
+
+IDD_RECOVER DIALOGEX 0, 0, 230, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "Synchronize"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Bind Type:",IDC_STATIC,15,17,40,8
+    LTEXT           "Type",IDC_TEXT_BIND_TYPE,84,17,100,8
+    LTEXT           "Disco di destinazione:",IDC_STATIC,15,30,54,8
+    LTEXT           "Nome",IDC_TEXT_DEST,84,30,100,8
+    GROUPBOX        "",IDC_STATIC,10,7,211,37
+    LTEXT           "Phase}",IDC_TEXT_PHASE,15,
+                    52,183,8
+    LTEXT           "Tempo rimanente:",IDC_STATIC,15,61,53,8
+    RTEXT           "MB/s",IDC_STATIC,190,61,19,8
+    PUSHBUTTON      "Start",IDOK,117,93,50,14
+    PUSHBUTTON      "{&Cancel &Close}",IDCANCEL,172,93,50,14
+    GROUPBOX        "",IDC_STATIC,10,41,211,47
+    LTEXT           "00:00:00",IDC_TEXT_LEFTTIME,68,61,30,8
+    CONTROL         "",IDC_PROGBAR,"msctls_progress32",WS_BORDER,15,71,199,
+                    13
+    RTEXT           "0.0",IDC_TEXT_RATE,153,61,40,8
+END
+
+IDD_BIND_PAGE1 DIALOGEX 0, 0, 322, 238
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Aggregation",IDC_BIND_TYPE_AGGR, "Button",BS_AUTORADIOBUTTON | WS_GROUP,38,46,150,10
+    CONTROL         "Stripe(RAID 0)",IDC_BIND_TYPE_RAID0,"Button",BS_AUTORADIOBUTTON,38,58,150,10
+    CONTROL         "Mirroring(RAID 1)",IDC_BIND_TYPE_RAID1,"Button",BS_AUTORADIOBUTTON,38,69,150,10
+    CONTROL         "RAID4",IDC_BIND_TYPE_RAID4,"Button",BS_AUTORADIOBUTTON,38,80,150,10
+    LTEXT           "Numero dei dischi:",IDC_STATIC,181,133,59,8
+    COMBOBOX        IDC_COMBO_DISKCOUNT,241,130,52,14,CBS_DROPDOWNLIST | CBS_SORT |
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Selezionare un tipo di binding e il numero di dischi da collegare con binding",
+                    IDC_STATIC,17,14,160,8
+    GROUPBOX        "Tipo di binding",IDC_STATIC,13,33,288,68
+    GROUPBOX        "Numero dei dischi da collegare con binding",IDC_STATIC,13,110,288,54
+END
+
+IDD_BIND_PAGE2 DIALOGEX 0, 0, 322, 238
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT |
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER |
+                    WS_TABSTOP,7,114,132,98
+    CONTROL         "",IDC_DISKLIST,"Statico",SS_BLACKRECT,30,7,254,84
+    LTEXT           "Selezionare i dischi da collegare con binding.",IDC_STATIC,8,102,92,10
+    PUSHBUTTON      "",IDC_BTN_ADD,144,139,16,14
+    PUSHBUTTON      "",IDC_BTN_REMOVE,144,158,16,14
+    CONTROL         "",IDC_LIST_BIND,"SysListView32",LVS_REPORT |
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER |
+                    WS_BORDER | WS_TABSTOP,163,114,132,98
+//    PUSHBUTTON      "",IDC_BTN_UP,299,139,16,14
+//    PUSHBUTTON      "",IDC_BTN_DOWN,299,158,16,14
+    LTEXT           "Note : I dati contenuto nel disco saranno eliminati non appena sarà completato il binding.",
+                    IDC_STATIC,9,218,184,8
+END
+
+IDD_SELSOURCE DIALOGEX 0, 0, 191, 127
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Selezionare un disco di origine"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,106,50,14
+    PUSHBUTTON      "Annulla",IDCANCEL,99,106,50,14
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    52,177,46,WS_EX_STATICEDGE
+    LTEXT           "I dischi non funzionano più in sync.\nSelezionare un disco.\nI dati copiati dal disco selezionato saranno copiati sull'altro.", 
+                    IDC_STATIC,7,7,177,40
+END
+
+IDD_PROPERTY_PAGE1 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Nome unità:",IDC_STATIC,7,21,70,8
+    LTEXT           "ID unità:",IDC_DEVICE_ID,7,39,70,8
+    LTEXT           "Write Key:",IDC_STATIC,7,57,70,8
+    EDITTEXT        IDC_EDIT_NAME,80,18,154,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_ID,80,36,154,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_WRITEKEY,80,54,154,14,ES_AUTOHSCROLL |
+                    ES_READONLY
+    LTEXT           "Capacità:",IDC_STATIC,7,75,70,8
+    EDITTEXT        IDC_EDIT_CAPACITY,80,72,154,14,ES_AUTOHSCROLL |
+                    ES_READONLY
+    GROUPBOX        "Nota",IDC_ST_MIGRATE,7,92,227,66,NOT WS_VISIBLE
+    LTEXT           "Le informazioni di binding del disco sono state scritte da una versione precedente del driver. Per convertirle nella versione corrente,premere il pulsante 'Migrazione'.",
+                    IDC_TEXT_MIGRATE,14,102,213,32,NOT WS_VISIBLE
+    PUSHBUTTON      "Migrazione",IDC_BTN_MIGRATE,176,137,50,14,NOT WS_VISIBLE
+END
+
+IDD_PROPERTY_PAGE2 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_PROPERTY,"SysListView32",LVS_REPORT |
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,17,18,208,130
+END
+
+IDD_ADDMIR DIALOGEX 0, 0, 191, 161
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Aggiungi un disco di mirroring"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,137,50,14
+    PUSHBUTTON      "Annulla",IDCANCEL,99,137,50,14
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    28,177,104,WS_EX_STATICEDGE
+    LTEXT           "Selezionare un disco da cui eseguire il mirroring",IDC_STATIC,7,7,
+                    177,16
+END
+
+IDD_PROPERTY_PAGE3 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Le informazioni di binding sul disco non sono riconosciute.",
+                    IDC_STATIC,22,52,190,16
+    LTEXT						"Se si desidera usare questo disco, convertire le informazioni di binding nella versione corrente mediante il comando 'inizializza' oppure installare il nuovo driver.",
+                    IDC_STATIC,22,70,190,32
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,208,178,50,14
+	LTEXT           "NDAS Software",IDC_APPNAME,7,48,251,14
+    LTEXT           "Versione %1!s!",IDC_APPVER,7,60,251,8
+    LTEXT           "http://www.ximeta.com",IDC_LINK,7,71,251,8,WS_TABSTOP
+    LTEXT           "Tutti i diritti riservati.",IDC_STATIC,7,94,251,13
+    GROUPBOX        "Componenti",IDC_STATIC,7,106,251,67
+    CONTROL         "",IDC_COMPVER,"SysListView32",LVS_REPORT |
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,119,236,47
+    LTEXT           "Copyright \251 2002-2004 XIMETA, Inc.",IDC_COPYWRITE,7,85,
+                    251,9
+    CONTROL         "",IDC_IMAGE,"Statico",SS_BLACKRECT,0,0,265,45
+END
+
+IDD_UNBIND_MIRROR DIALOGEX 0, 0, 191, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "Scollega con Unbind"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Sì",IDOK,40,145,50,14
+    PUSHBUTTON      "No",IDCANCEL,99,145,50,14
+    CONTROL         "",IDC_LIST_UNBIND,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    33,177,104,WS_EX_STATICEDGE
+    LTEXT           "I dischi seguenti saranno scollegati con unbinding.\nProcedere a scollegarli (unbinding)?",
+                    IDC_STATIC,7,7,177,24
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_UNBIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_RECOVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_BIND_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_BIND_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_SELSOURCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_PROPERTY_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_PROPERTY_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_ADDMIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_PROPERTY_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_UNBIND_MIRROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    VK_F1,          IDM_HELP_ABOUT,         VIRTKEY, NOINVERT
+    VK_F5,          IDM_AGGR_REFRESH,         VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  32, 32
+BEGIN
+    BUTTON      IDM_AGGR_BIND
+    BUTTON      IDM_AGGR_UNBIND
+    BUTTON      IDM_AGGR_MIRROR
+    BUTTON      IDM_AGGR_REFRESH
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\ndasbind.bmp"
+IDB_MAINFRAME           BITMAP                  "res\\ndasbind.bmp"
+IDB_DRAG                BITMAP                  "res\\drag.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// IMAGE
+//
+
+IDB_ABOUT_HEADER        IMAGE                   "res\\aboutheader.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Visualizza le informazioni sul programma, il numero della versione e il copyright\n?"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_EXIT                "Esci dall'applicazione\nEsci"
+    IDM_AGGR_BIND           "Collega i dischi\nBind"
+    IDM_AGGR_UNBIND         "Scollega (Unbind) di dischi su sono stati eseguiti aggregation/mirroring in dischi unici\nUnbind"
+    IDM_AGGR_SINGLE         "Converti il disco selezionato in un disco singolo"
+    IDM_AGGR_SYNCHRONIZE    "Recupera i dischi recuperabili di cui è stato eseguito il mirroring|nRecupera mirroring"
+    IDM_AGGR_MIRROR         "Strumenti"
+    IDM_AGGR_REFRESH        "Aggiorna"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_AGGR_ADDMIRROR      "Aggiungi un disco su cui è già stato eseguito il mirroring ad un'unità disco unica\nCopia ed esegui il mirroring"
+    IDS_APPLICATION         "Gestione binding NDAS"
+END
+
+STRINGTABLE
+BEGIN
+	IDS_BINDPAGE_CAPTION "Procedura guidata binding unità NDAS"
+	IDS_LOGDEV_TYPE "Tipo di binding"
+        IDS_LOGDEV_TYPE_DISK_RAID0 "Striping del disco (RAID 0)"
+        IDS_LOGDEV_TYPE_DISK_RAID1 "Mirroring del disco (RAID 1)"
+        IDS_LOGDEV_TYPE_DISK_RAID2 "Disco (RAID 2)"
+        IDS_LOGDEV_TYPE_DISK_RAID3 "Disco (RAID 3)"
+        IDS_LOGDEV_TYPE_DISK_RAID4 "Disco (RAID 4)"
+        IDS_LOGDEV_TYPE_DISK_RAID5 "Disco (RAID 5)"
+        IDS_LOGDEV_TYPE_AGGREGATED_DISK "Disco con aggregation eseguita"
+        IDS_LOGDEV_TYPE_CF_DRIVE "Unità Compact Flash"
+        IDS_LOGDEV_TYPE_DVD_DRIVE "Lettore DVD"
+        IDS_LOGDEV_TYPE_MIRRORED_DISK "Disco con mirroring eseguito"
+        IDS_LOGDEV_TYPE_MO_DRIVE "Unità MO"
+        IDS_LOGDEV_TYPE_SINGLE_DISK "Disco (Singolo)"
+        IDS_LOGDEV_TYPE_UNKNOWN_FMT "Tipo sconosciuto (0x%1!08X!)"
+        IDS_LOGDEV_TYPE_VIRTUAL_DVD_DRIVE "Letture DVD virtuale"
+        IDS_UNIDEV_TYPE_DISK_EMPTY "Periferica non trovata"
+	IDS_STATUS_REFRESH "Aggiornamenti dello stato dell'unità NDAS in corso. Attendere."
+	IDS_BIND_FAIL_AT_SINGLE_NDAS_FMT "Si è verificato un problema durante il funzionamento della periferica NDAS '%1!s!'."
+	IDS_BIND_FAIL "Si è verificato un problema durante il funzionamento delle periferiche NDAS."
+	IDS_MAINFRAME_SERVICE_FAIL_AT_START "Impossibile recuperare l'elenco delle unità dal servizio.\nImpossibile avviare l'applicazione."
+	IDS_MAINFRAME_NO_DISK_TO_MIRROR "There is no disk available to Mirror."
+	IDS_FAIL_TO_ACCESS_EXCLUSIVELY "A Ndas Device is not reachable or is being accessed by other programs/computers."
+	IDS_MAINFRAME_SINGLE_ACCESS_FAIL "Impossibile convertire il disco selezionato in un disco unico."
+	IDS_MAINFRAME_OLD_VERSION "Il mirroring eseguito da versioni precedenti non può essere ristabilito."
+	IDS_MAINFRAME_SERVICE_FAIL "Impossibile recuperare l'elenco delle unità dal servizio."
+	IDS_ERROR_TITLE "Errore di binding NDAS"
+	IDS_ERROR_NDAS_DESCRIPTION_FMT "Ambiente: NDAS 0x%1!04X!\r\nCodice d'errore: %2!u! (0x%2!04X!)\r\n%3!s!"
+	IDS_ERROR_SYSTEM_DESCRIPTION_FMT "Codice d'errore: %1!u! (0x%1!04X!)\r\n%2!s!"
+	IDS_ERROR_NOT_REGISTERD_WRITE_FMT "%1!s! non dispone del privilegio di accesso in scrittura. La Write Key dell'unità NDAS deve essere registrata per ottenere l'accesso in scrittura."
+	IDS_WARNING_NOT_NEED_RECOVER "Non sono stati rilevati difetti sui dischi."
+	IDS_WARNING_BIND "Quando i dischi saranno collegati, tutti i dati andranno persi. Procedere al binding dei dischi?"
+	IDS_WARNING_BIND_AFTER "I dischi selezionati sono stati collegati con successo. E' necessario installare prima il disco e poi formattarlo per poterlo usare."
+	IDS_WARNING_UNBIND "Tutti i dati andranno persi quando i dischi saranno scollegati. Procedere all'unbinding?"
+	IDS_WARNING_UNBIND_AFTER "Unbounding dei dischi selezionati riuscito. Installare prima il disco, quindi formattarlo prima di poterlo usare."
+	IDS_WARNING_SINGLE "Tutti i dati andranno persi quando il disco sarà convertito in un disco unico. Continuare?"
+	IDS_WARNING_SINGLE_AFTER "Il disco selezionato viene convertito in un disco unico. Installare, quindi formattare il disco prima di usarlo."
+	IDS_WARNING_ADD_MIRROR "I dati contenuti nella periferica NDAS selezionata non verranno salvati. Continuare?"
+	IDS_RECOVER_BTN_CANCEL "Cancel"
+	IDS_RECOVER_BTN_CLOSE "Close"
+	IDS_RECOVERDLG_TASK_ADD_MIRROR "Synchronize mirrored devices"
+	IDS_RECOVERDLG_TASK_RECOVER "Recover bound devices"
+	IDS_RECOVERDLG_PHASE_READY "Press the start button to continue."
+	IDS_RECOVERDLG_PHASE_SYNC "Synchronizing devices..."
+	IDS_RECOVERDLG_PHASE_DONE "Synchronization complete."
+	IDS_RECOVERDLG_FAIL "Failed to synchronize devices."
+	IDS_DISKPROPERTYPAGE_CAPTION "Proprietà disco"
+	IDS_DISKPROPERTYPAGE_MIGRATE_DISK_NOT_EXIST "Tutti i dischi collegati a questo devono esistere."
+	IDS_DISKPROPERTYPAGE_MIGRATE_CONFIRM "Le informazioni di binding sui dischi saranno migrate.\nProcedere alla migrazione delle informazioni di binding?"
+	IDS_DISKPROPERTYPAGE_MIGRATE_FAIL "Migrazione impossibile"
+	IDS_DISKPROPERTYPAGE_MIGRATE_FAIL_AT_FMT "Migrazione di '%1!s non riuscita!'"
+	IDS_DISKPROPERTYPAGE_MIGRATE_SUCCESS "Migration completata con successo"
+	IDS_DISKPROPERTYPAGE_WRITEKEY_PRESENT "Presente"
+	IDS_DISKPROPERTYPAGE_WRITEKEY_NOT_PRESENT "Nessuno"
+	IDS_DISKPROPERTYPAGE_LIST_COL_NAME "Nome"
+	IDS_DISKPROPERTYPAGE_LIST_COL_VALUE "Valore"
+	IDS_DISKPROPERTYPAGE_SIZE_IN_GB "%1!3d!.%2!02d!GB"
+	IDS_SELECTMIRDLG_NO_DISK_SELECTED "Non è stato selezionato alcun disco"
+	IDS_SELECTMIRDLG_SMALLER_DISK "Impossibile eseguire un mirroring su un disco di capacità inferiore."
+	IDS_UIHANDLER_PROPERTY_NUM_BOUND_DISK "Numero di dischi collegati con binding"
+	IDS_UIHANDLER_PROPERTY_NUM_BOUND_DISK_TOOLTIP "Numero di dischi collegati con binding"
+	IDS_UIHANDLER_PROPERTY_DIRTY "Dirty (sporco)"
+	IDS_UIHANDLER_PROPERTY_DIRTY_TRUE "Vero"
+	IDS_UIHANDLER_PROPERTY_DIRTY_FALSE "Falso"
+	IDS_UIHANDLER_PROPERTY_DIRTY_TOOLTIP "Dirty diviene VERO quando i dati sul disco di mirroring sono danneggiati."
+	IDS_UIHANDLER_PROPERTY_MODEL "Modello"
+	IDS_UIHANDLER_PROPERTY_MODEL_TOOLTIP "Numero di modello del produttore del disco"
+	IDS_UIHANDLER_PROPERTY_SERIALNO "N° di serie"
+	IDS_UIHANDLER_PROPERTY_SERIALNO_TOOLTIP "Numero di serie del produttore del disco"
+	IDS_UIHANDLER_CLEARDIB_CONFIRM "Ogni informazione di binding contenuta sul disco sarà eliminata.\nProcedere all'inzializzazione '%1!s!'?"
+	IDS_UIHANDLER_CLEARDIB_FAIL		"Impossibile inizializzare il disco."
+	IDS_UIHANDLER_CLEARDIB_SUCCESS  "Informazioni di binding del disco inizializzate con successo"
+	IDS_DISKPROPERTYPAGE_GENERALTAB "Generale"
+	IDS_DISKPROPERTYPAGE_HARDWARETAB "Hardware"
+	IDS_ABOUTDLG_PRODUCT_NAME "Gestione binding NDAS"
+	IDS_ABOUTDLG_PRODUCT_VER  "Versione %1!d!.%2!d!.%3!d!.%4!d!"
+	IDS_ABOUTDLG_COL_COMPONENT "Componenti"
+	IDS_ABOUTDLG_COL_VERSION "Versione"
+	IDS_ABOUTDLG_COMPONENT_VER "%1!d!.%2!d!.%3!d!.%4!d!"
+	IDS_LISTVIEW_SIZE_IN_GB "%1!3d!.%2!02d!GB"
+	IDS_LISTVIEW_COL_NAME   "Nome"  
+	IDS_LISTVIEW_COL_ID		"ID"
+	IDS_LISTVIEW_COL_SIZE	"Dimensione"
+	IDS_LISTVIEW_COL_STATUS	"Status"
+	IDS_LISTVIEW_COL_TYPE	"Type"
+	IDS_LISTVIEW_COL_FAULT	"Fault tolerance"
+	IDS_LISTVIEW_COL_EMPTY	"No"
+	IDS_FT_UNIT ""
+	IDS_FT_FAULT_TOLERANT "Yes"
+	IDS_FT_NOT_FAULT_TOLERANT "No"
+	IDS_FT_MISSING "Missing Member"
+	IDS_FT_DIRTY "Yes(Need Resync)"
+	IDS_FT_NEED_REPAIR "Yes(Need Repair)"
+	IDS_STATUS_NOT_CONNECTED "Not Connected"
+	IDS_STATUS_IN_USE "In use"
+	IDS_STATUS_READ_ONLY "No Write Key"
+	IDS_STATUS_FINE "Operatable"
+	IDS_COMMAND_BIND	"&Bind"
+	IDS_COMMAND_UNBIND	"&Unbind"
+	IDS_COMMAND_SINGLE	"&Reimposta su singolo"
+	IDS_COMMAND_SYNCHRONIZE "&Recupera mirroring"
+	IDS_COMMAND_ADDMIRROR	"&Esegui copia e mirroring"
+	IDS_COMMAND_CLEARDIB	"&Inizializza"
+END
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

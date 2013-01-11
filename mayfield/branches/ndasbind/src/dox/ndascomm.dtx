@@ -1,0 +1,397 @@
+
+@@Overview
+<B>Purpose</B>
+
+NDAS Communication API(NDASComm) and NDAS Heartbeat
+Listener(NDASHear) API enable programmers to operate a NDAS
+Device. With NDASComm and NDASHear, programmers can operate
+not only basic operations such as reading or writing, but
+also advanced operations including most parts of the ATA
+commands such as identifying or setting features.
+
+<B>
+
+Developer Audience</B>
+
+NDAS API are designed for use by C/C++ programmers,
+Familiarity with networking, NDAS Device and ATA(to use
+advanced features of NDASComm) is required.
+
+
+
+<B>Run-Time Requirements</B>
+
+NDAS API can be used on Windows 2000, Windows XP and Windows
+Server 2003 with LPX(Lean Packet eXchange) protocol
+installed.
+
+@@!!SYMREF
+
+
+@@About NDASComm
+This section describes NDASComm considerations, architecture,
+and capabilities available to NDASComm developers.
+
+@@NDASComm Architecture
+<TITLE NDAS API Architecture>
+
+Following drawing describes the architecture of the NDAS API.
+
+
+
+<IMAGE ndas_architecture>
+
+
+
+NDAS Comm library translates & packs API Call command into
+Lanscsi protocol. Packed command transfered to the NDAS
+Device through ethernet network via LPX protocol.
+
+
+
+NDAS Heartbeat Listener library detects the NDAS Device by
+catching heartbeat packet from the NDAS Device via ethernet.
+
+
+
+There is 3 versions of the NDAS Device. Only ATA Device(HDD)
+can be attached to NDAS Device Ver 1.0.
+
+
+
+NDAS Device does not send any command to the host except
+broadcast message which contains devices version that can be
+catched by NDAS Listener.
+
+@@LPX Protocol
+\Short for Lean Packet eXchange, the suite of communication
+protocols used to connect NDAS Device on the ethernet. LPX is
+designed for home network by XIMETA Inc.
+
+@@NDAS Device
+NDAS(Network Direct Attached Storage) is XIMETA's patented
+technology which enables all digital storage devices(HDD,
+ODD, Memory, Tape Drives) connect into standard Ethernet
+network and all the users or systems in the network directly
+control, use and share those devices.
+
+@@NDAS Device Version
+There is 3 versions of the NDAS Device.
+
+
+
+<B>NDAS Device Ver 1.0</B>
+
+The NDAS Device 1.0 has ability to operate only following ATA
+commands.
+
+READ(0x20)
+
+WRITE(0x30)
+
+VERIFY(0x40)
+
+IDENTIFY(0xFC)
+
+SET FEATURE(0xEF)
+
+
+
+Actually, the NDAS Device 1.0 does not support ATA commands
+but translates few command to real ATA commands. So it is not
+recommanded to use NdasCommIdeCommand fuinction with 1.0.
+
+
+
+The NDAS Device 1.0 supports ethernet connection upto
+100Mbps.
+
+The NDAS Device 1.0 supports Multiword DMA level 0, 1 and 2.
+
+The NDAS Device supports ATA device.
+
+The NDAS Device does not support ATAPI device.
+
+
+
+<B>NDAS Device Ver 1.1</B>
+
+The NDAS Device 1.1 supports virtually all ATA commands
+including packet command(but NDASComm dose not supports
+packet command). The NDAS Device 1.1 receives ATA command and
+send the command directly to unit device attached to the NDAS
+Device.
+
+
+
+The NDAS Device 1.1 supports ethernet connection upto
+100Mbps.
+
+The NDAS Device 1.1 supports Multiword DMA level 0, 1 and 2.
+
+The NDAS Device supports ATA device.
+
+The NDAS Device supports ATAPI device.
+
+
+
+<B>NDAS Device Ver 2.0</B>
+
+The NDAS Device 2.0 is same with 1.1 in supporting commands.
+See table for detailed differences.
+
+
+
+The NDAS Device 2.0 supports ethernet connection upto
+100Mbps.
+
+The NDAS Device 2.0 supports Multiword DMA level 0, 1 and 2.
+
+The NDAS Device 2.0 supports Ultra DMA level 0 to 6.
+
+The NDAS Device supports ATA device.
+
+The NDAS Device supports ATAPI device.
+
+
+
+<B>Differences by the version of the NDAS Device.</B>
+<TABLE>
+\             1.0                  1.1             2.0
+------------  -------------------  --------------  -------------------
+Max Speed     100MBps              100Bps          1000Bps
+Unit Device   ATA Device           ATA/ATAPI       ATA/ATAPI Device
+                                    Deivce          
+DMA level     Multiword DMA 0, 1   Multiword DMA   Multiword DMA 0, 1
+               and 2                0, 1 and 2      and 2<P>
+                                                    Ultra DMA 0 to 6
+Command       READ, WRITE,         All ATA         All ATA Commands
+               VERIFY, IDENTIFY,    Commands        
+               SET FEATURE                          
+</TABLE>
+
+@@Lanscsi Protocol
+Lanscsi is a protocol designed to send/recieve
+commands/replies from/to the NDAS Device.
+
+@@Using NDASComm
+The following is a step-by-step guide to getting started with
+NDASComm library. It is designed to provide an understanding
+\of basic NDASComm functions and data structures, and how
+they work together.
+
+
+
+<B>Creating a Basic NDASComm Application</B>
+
+To create a basic NDASComm application
+
+. Create a new empty project.
+
+. Ensure that the build environment refers to the Include,
+Lib and Src directories of the NDASComm library.
+
+. Ensure that the build envionment links to the NDASComm
+library file ndascomm.lib.
+
+. Begin programming the NDASComm application. Use the
+NDASComm by including the NDASComm header file.
+
+. If the application is using DLL, ensure to place
+ndascomm.dll where an NDASComm application can find at.
+
+<U> Note</U> some other headers should be used for
+convenience specially the printf() function.
+
+
+<CODE>
+\#include "ndascomm.h"
+
+BOOL main() {
+  printf("Starting NDAS application\\n");
+  return TRUE;
+}
+</CODE>
+
+
+<B>Initializing NDASComm</B>
+
+All NDASComm application must be initialized to ensure that
+NDASComm are supported on the system.
+
+To Initialize NDASComm library
+
+. Call NdasCommInitialize and check errors
+
+
+<CODE>
+BOOL bResult = NdasCommInitialize();
+if(!bResult)
+{
+  printf("Error %d at NdasCommInitialize()\\n", GetLastError());
+  return FALSE;
+}
+</CODE>
+
+
+The NdasCommInitialize function is called to initiate use of
+ndascomm.lib
+
+
+<CODE>
+DWORD dwVersion = NdasCommGetAPIVersion();
+WORD wMajorVersion = LOWORD(dwVersion);
+WORD wMinororVersion = HIWORD(dwVersion);
+</CODE>
+
+
+The NdasCommGetAPIVersion function is called to retrieve the
+\version of ndascomm.lib
+
+
+
+<B>Creating connection to an NDAS Device</B>
+
+After initialization, a NDASCOMM_CONNECTION_INFO struct must
+be initialized.
+
+
+<CODE>
+NDASCOMM_CONNECTION_INFO m_ci;
+ZeroMemory(&m_ci, sizeof(m_ci));
+
+m_ci.address_type = NDASCOMM_CONNECTION_INFO_TYPE_ID_A; // address using ansi code ID string
+m_ci.login_type = NDASCOMM_LOGIN_TYPE_NORMAL; // operates active jobs
+m_ci.UnitNo = 0; // use first unit device
+m_ci.bWriteAccess = TRUE; // login with write privilage
+m_ci.ui64OEMCode = NULL; // use default normal user password
+m_ci.protocol = IPPROTO_LPXTCP; // connect with LPX protcol
+memcpy(m_ci.sDeviceStringId, "ABCDE12345EFGHI67890", 20); // set 20 chars of ansi code ID
+memcpy(m_ci.sDeviceStringKey, "12345", 5); // set 5 chars of ansi write key
+</CODE>
+
+
+After NDASCOMM_CONNECTION_INFO struct initialized, Connect to
+the NDAS Device using NdasCommConnect.
+
+
+<CODE>
+HNDAS hNDASDevice = NdasCommConnect(&ConnectionInfo);
+
+if(!hNDASDevice)
+{
+  printf("Error %d at NdasCommConnect()\\n", GetLastError());
+  return FALSE;
+}
+</CODE>
+
+
+<B>Retrieving informations from an NDAS Device and/or Unit
+Device</B>
+
+
+
+See examples of NdasCommGetDeviceID(),
+NdasCommGetDeviceInfo(), NdasCommGetUnitDeviceInfo()
+
+
+
+<B>Operates basic commands</B>
+
+
+
+See examples of NdasCommBlockDeviceRead(),
+NdasCommBlockDeviceWrite(), NdasCommBlockDeviceVerify(),
+NdasCommSetFeatures(), NdasCommBlockDeviceWriteSafeBuffer()
+
+
+
+<B>Operates advanced commands</B>
+
+
+
+See examples of NdasCommIdeCommand(), NdasCommVendorCommand()
+
+
+
+<B>Disconnecting connection from an NDAS Device</B>
+
+The NdasCommDisconnect function is called after the use of
+the NDAS Device.
+
+
+<CODE>
+bResult = NdasCommDisconnect(hNDASDevice);
+if(!bResult)
+{
+  printf("Error %d at NdasCommDisconnect()\\n", GetLastError());
+  return FALSE;
+}
+</CODE>
+
+@@NDAS Unit Device
+The NDAS Unit Device(or Unit Device) is a ATA/ATAPI device
+which is attached to the NDAS Device so that a host can
+access to the Device via the NDAS Device.
+
+
+
+The number of maximum Unit Device that the NDAS Device
+supports can be obtained by NdasCommGetDeviceInfo.
+
+@@NDASComm API
+This is the default topic text for new topics added with the
+Doc-O-Matic editor. You can freely modify the text and
+structure of new text by changing the template topics:
+
+    * Open the Doc-O-Matic project "template.dox" located in
+      your Doc-O-Matic/support directory.
+    * The project contains a list of topics that you can
+      freely modify.
+    * You can even add your own topics and delete existing
+      \ones.
+    * Whatever is in the file "template.dtx" will be used as
+      templates that you can choose from.
+
+
+@@NDASHear API
+This is the default topic text for new topics added with the
+Doc-O-Matic editor. You can freely modify the text and
+structure of new text by changing the template topics:
+
+    * Open the Doc-O-Matic project "template.dox" located in
+      your Doc-O-Matic/support directory.
+    * The project contains a list of topics that you can
+      freely modify.
+    * You can even add your own topics and delete existing
+      \ones.
+    * Whatever is in the file "template.dtx" will be used as
+      templates that you can choose from.
+
+@@About NDASHear
+This is the default topic text for new topics added with the
+Doc-O-Matic editor. You can freely modify the text and
+structure of new text by changing the template topics:
+
+    * Open the Doc-O-Matic project "template.dox" located in
+      your Doc-O-Matic/support directory.
+    * The project contains a list of topics that you can
+      freely modify.
+    * You can even add your own topics and delete existing
+      \ones.
+    * Whatever is in the file "template.dtx" will be used as
+      templates that you can choose from.
+
+@@Using NDASHear
+This is the default topic text for new topics added with the
+Doc-O-Matic editor. You can freely modify the text and
+structure of new text by changing the template topics:
+
+    * Open the Doc-O-Matic project "template.dox" located in
+      your Doc-O-Matic/support directory.
+    * The project contains a list of topics that you can
+      freely modify.
+    * You can even add your own topics and delete existing
+      \ones.
+    * Whatever is in the file "template.dtx" will be used as
+      templates that you can choose from.

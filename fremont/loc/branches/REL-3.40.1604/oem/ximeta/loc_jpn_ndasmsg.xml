@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="ndasmsg" version="3.30.1603.11789" lang="jpn" oem="ximeta" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="NDAS_ERROR_INVALID_ID_FORMAT">
+    <base><![CDATA[NDAS device ID or Key is invalid.]]></base>
+    <translation><![CDATA[NDASのIDまたはライトキーが無効です。]]></translation>
+  </string>
+  <string id="NDAS_ERROR_INVALID_BACL_ON_DISK">
+    <base><![CDATA[BACL data on the disk is invalid.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDAS_ERROR_NEWER_DIB_VERSION">
+    <base><![CDATA[DIB version on the disk is higher than the supported one.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Device Entry Not Found.]]></base>
+    <translation><![CDATA[NDASが見つかりません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNITDEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Unit Device Entry Not Found.]]></base>
+    <translation><![CDATA[NDASドライブが見つかりません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Logical Device Entry Not Found.]]></base>
+    <translation><![CDATA[NDAS論理ドライブが見つかりません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_DISABLE_MOUNTED_DEVICE">
+    <base><![CDATA[Disabling the NDAS device containing any of the mounted unit device is not allowed.]]></base>
+    <translation><![CDATA[他にマウントされているドライブがある場合はNDASの接続を解除できません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_UNREGISTER_ENABLED_DEVICE">
+    <base><![CDATA[Unregistering an enabled NDAS device is not permitted.]]></base>
+    <translation><![CDATA[使用中のNDASは削除できません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SLOT_NUMBER">
+    <base><![CDATA[Invalid NDAS slot number.]]></base>
+    <translation><![CDATA[NDASスロット番号が無効です。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_SLOT_ALREADY_OCCUPIED">
+    <base><![CDATA[Requested slot is used by another device.]]></base>
+    <translation><![CDATA[要求されたNDASスロットは他のNDASが使用してます。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_DEVICE_ENTRY">
+    <base><![CDATA[The requested NDAS device already exists.]]></base>
+    <translation><![CDATA[要求されたNDASは既に登録されています。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_SLOT_FULL">
+    <base><![CDATA[No more NDAS device slot is available.]]></base>
+    <translation><![CDATA[NDASスロットが足りません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_INITIALIZED">
+    <base><![CDATA[NDAS Logical device is not initialized.]]></base>
+    <translation><![CDATA[NDAS論理ドライブが初期化されてません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MEMBER_MISSING">
+    <base><![CDATA[Some NDAS logical device members are missing in the entry.]]></base>
+    <translation><![CDATA[NDAS論理ドライブを構成しているドライブが見つかりません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_MOUNTED">
+    <base><![CDATA[NDAS Logical device is not mounted.]]></base>
+    <translation><![CDATA[NDAS論理ドライブがマウントされてません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_CONFLICT_LOGICALDEVICE_ENTRY">
+    <base><![CDATA[NDAS Logical device entry is conflicts with existing entries.]]></base>
+    <translation><![CDATA[NDAS論理ドライブの情報が既存の情報と競合してます。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_LOGICALDEVICE_ENTRY">
+    <base><![CDATA[The requested NDAS logical device already exists.]]></base>
+    <translation><![CDATA[要求されたNDAS論理ドライブは既に存在してます。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_SLOT_FULL">
+    <base><![CDATA[No more NDAS logical device slot is available.]]></base>
+    <translation><![CDATA[NDAS論理ドライブのスロットが足りません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNSUPPORTED_LOGICALDEVICE_TYPE">
+    <base><![CDATA[Unsupported NDAS logical device type.]]></base>
+    <translation><![CDATA[NDAS論理ドライブタイプが不明です。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_INVALID_BIND_INFORMATION">
+    <base><![CDATA[The bind information in NDAS device is invalid.]]></base>
+    <translation><![CDATA[NDASのバインド情報が無効です。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MODIFIED_BIND_INFORMATION">
+    <base><![CDATA[The bind information in NDAS device is changed.]]></base>
+    <translation><![CDATA[NDASのバインド情報を変更しました。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base><![CDATA[Granted access for the NDAS logical device is insufficient to complete the operation.]]></base>
+    <translation><![CDATA[アクセス許可されたNDAS論理ドライブの権限が不十分なためオペレーションを正常終了できません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+    <base><![CDATA[Requested access to the NDAS logical device is failed.]]></base>
+    <translation><![CDATA[NDAS論理ドライブへ要求されたアクセスが失敗しました。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_UNMOUNTED">
+    <base><![CDATA[NDAS logical device is not in a mountable status.]]></base>
+    <translation><![CDATA[NDAS論理ドライブがマウントできる状態ではありません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_UNITDEVICE_NOT_MOUNTED">
+    <base><![CDATA[NDAS Unit device is not mounted.]]></base>
+    <translation><![CDATA[NDASドライブはマウントされてません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_HOST_INFO_NOT_FOUND">
+    <base><![CDATA[NDAS Host Information cannot be found.]]></base>
+    <translation><![CDATA[NDASのホスト情報が見つかりません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_DEVICE_COMMUNICATION_FAILURE">
+    <base><![CDATA[Communication to the NDAS Device has failed.]]></base>
+    <translation><![CDATA[NDASへの通信が失敗しました。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_MULTIPLE_WRITE_ACCESS_NOT_ALLOWED">
+    <base><![CDATA[Multiple Write Access is not allowed for the specified NDAS unit device.]]></base>
+    <translation><![CDATA[指定されたNDASドライブには複数のライト権限を与えられません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_INCOMPATIBLE_HOSTS_FOR_MULTIPLE_WRITE_ACCESS">
+    <base><![CDATA[Incompatible NDAS hosts for multiple write-access are found for the specified NDAS unit device.]]></base>
+    <translation><![CDATA[指定されたNDASドライブに対し非互換のソフトウェアバージョンを使用するホストが存在します。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NO_MORE_DVD_WRITE_ACCESS_INSTANCE_ALLOWED">
+    <base><![CDATA[No more than constrained instances of DVD Drives as Read/Write mode is allowed.]]></base>
+    <translation><![CDATA[追加のDVDでリードライトモードは使えません。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_CORRUPTED_BIND_INFORMATION">
+    <base><![CDATA[The NDAS device is corrupted and need to be recovered before mounting.]]></base>
+    <translation><![CDATA[このNDASはマウントする前に復旧作業が必要です。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNKNOWN_VENDOR_ID">
+    <base><![CDATA[The NDAS device ID cannot be used with the current version of the software. Upgrade the software to the most recent version or use the vendor-provided software.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_OPERATION_NOT_ALLOWED_WHILE_CONNECTING">
+    <base><![CDATA[The requested operation is not allowed while the system is connecting to the NDAS device.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_FIX_REQUIRED">
+    <base><![CDATA[The NDAS logical device does not have correction status. Fix status in the NDAS Bind Management.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_IS_INCOMPLETE">
+    <base><![CDATA[The NDAS logical unit cannot use required NDAS units to complete the operation. For fault-tolerant RAID sets, you can mount it in degrade mode without all members. You should use NDAS Bind Management to mark the RAID set in degrade mode before you mount it.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_HAS_BAD_DISK">
+    <base><![CDATA[The NDAS logical unit has some bad disks. It is recommended to fix the warning(s).]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_HAS_BAD_SECTOR">
+    <base><![CDATA[The NDAS logical unit has some disks with bad sectors. It is recommended to fix the warning(s).]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_REPLACED_DEVICE_WITH_SPARE">
+    <base><![CDATA[The NDAS logical unit has a disk replaced by a spare disk. It is recommended to fix the warning(s).]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_ASK_EMREGENCY_MOUNT">
+    <base><![CDATA[The NDAS logical unit has too many defective disks to recover. If you proceed, the RAID will mount in non-recoverable emergency mode.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+    <base><![CDATA[Command version is unsupported.]]></base>
+    <translation><![CDATA[コマンドが無効です。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[要求された機能は無効です。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+    <base><![CDATA[Unsupported Read-only filter version.]]></base>
+    <translation><![CDATA[リードオンリーフィルターバージョンが無効です。]]></translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SERVICE_PARAMETER">
+    <base><![CDATA[Invalid service parameter.]]></base>
+    <translation><![CDATA[サービスパラメーターが無効です。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+    <base><![CDATA[Communication to the NDAS service failed.]]></base>
+    <translation><![CDATA[NDASへの通信が失敗しました。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+    <base><![CDATA[NDAS Device ID or Key is invalid.]]></base>
+    <translation><![CDATA[NDASのIDまたはライトキーが無効です。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+    <base><![CDATA[NDAS Device ID is invalid.]]></base>
+    <translation><![CDATA[NDASのIDが無効です。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+    <base><![CDATA[NDAS Device Key is invalid.]]></base>
+    <translation><![CDATA[NDASのライトキーが無効です。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation><![CDATA[パラメーターが無効です。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base><![CDATA[NDAS Logical device access denied.]]></base>
+    <translation><![CDATA[NDAS論理ドライブへの接続が拒否されました。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+    <base><![CDATA[NDAS Service does not support the requested operation.]]></base>
+    <translation><![CDATA[要求されたオペレーションは無効です。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+    <base><![CDATA[Operation is invalid to the NDAS service.]]></base>
+    <translation><![CDATA[無効なオペレーションです。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+    <base><![CDATA[NDAS Service is terminating.]]></base>
+    <translation><![CDATA[NDASサービスを終了します。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+    <base><![CDATA[Unsupported NDAS service version.]]></base>
+    <translation><![CDATA[NDASサービスバージョンが無効です。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+    <base><![CDATA[Unsupport NDAS service event version.]]></base>
+    <translation><![CDATA[NDASサービスイベントバージョンが無効です。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+    <base><![CDATA[No more NDAS event callback is available.]]></base>
+    <translation><![CDATA[追加のNDASイベントコールバックは許可されません。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+    <base><![CDATA[Invalid NDAS event callback handle.]]></base>
+    <translation><![CDATA[NDASイベントコールバック処理が無効です。]]></translation>
+  </string>
+  <string id="NDASUSER_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[要求された機能は無効です。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INTERNAL">
+    <base><![CDATA[Internal error.]]></base>
+    <translation><![CDATA[内部エラー。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[要求された機能は無効です。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation><![CDATA[パラメーターが無効です。]]></translation>
+  </string>
+  <string id="NDASCOMM_WARNING_CONNECTION_FAIL">
+    <base><![CDATA[Connection failed to the NDAS device.]]></base>
+    <translation><![CDATA[NDASへの接続が失敗しました。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_COMMUNICATION">
+    <base><![CDATA[Communication error during login process.]]></base>
+    <translation><![CDATA[ログイン中に通信エラーが起きました。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_NOT_EXIST.]]></base>
+    <translation><![CDATA[内部エラー： NDASCOMM_ERROR_RI_NOT_EXIST。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.]]></base>
+    <translation><![CDATA[内部エラー： NDASCOMM_ERROR_RI_BAD_COMMAND。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.]]></base>
+    <translation><![CDATA[内部エラー： NDASCOMM_ERROR_RI_COMMAND_FAILED。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.]]></base>
+    <translation><![CDATA[内部エラー： NDASCOMM_ERROR_HARDWARE_UNSUPPORTED。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_NOT_EXIST.]]></base>
+    <translation><![CDATA[内部エラー： NDASCOMM_ERROR_T_NOT_EXIST。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.]]></base>
+    <translation><![CDATA[内部エラー： NDASCOMM_ERROR_T_BAD_COMMAND。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.]]></base>
+    <translation><![CDATA[内部エラー： NDASCOMM_ERROR_T_COMMAND_FAILED。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BROKEN_DATA">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.]]></base>
+    <translation><![CDATA[内部エラー： NDASCOMM_ERROR_T_BROKEN_DATA。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_AUTH_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_AUTH_FAILED.]]></base>
+    <translation><![CDATA[内部エラー： NDASCOMM_ERROR_RI_AUTH_FAILED。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+    <base><![CDATA[Unknown error for login process.]]></base>
+    <translation><![CDATA[ログイン中に原因不明のエラーが起きました。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RW_USER_EXIST">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s) with read-write access privilege.]]></base>
+    <translation><![CDATA[このNDASは他の動作または書込み権限を持っているホストが使用中です。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation><![CDATA[メモリ不足のため処理できません。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_PROTOCOL">
+    <base><![CDATA[Lanscsi protocol error.]]></base>
+    <translation><![CDATA[Lanscsiプロトコルエラー。]]></translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_OPERATION">
+    <base><![CDATA[Invalid operation.]]></base>
+    <translation><![CDATA[オペレーションが無効です。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[要求された機能は無効です。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_FAIL">
+    <base><![CDATA[Accessing to the device is failed.]]></base>
+    <translation><![CDATA[NDASへのアクセスが失敗しました。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_SINGLE_DISK">
+    <base><![CDATA[The NDAS device must be a single disk to operate this job.]]></base>
+    <translation><![CDATA[この操作を行うにはNDASをシングルドライブに設定してください。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+    <base><![CDATA[The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.]]></base>
+    <translation><![CDATA[NDASが無効です。HDDの場合、この操作を行う前にNDASをシングルドライブに設定してください。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_BOUND_DISK">
+    <base><![CDATA[The NDAS device must be a bound disk to operate this job.]]></base>
+    <translation><![CDATA[この操作をする場合はNDASをバインドドライブにする必要があります。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation><![CDATA[パラメーターが無効です。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation><![CDATA[メモリ不足のため処理できません。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_DISK_COUNT">
+    <base><![CDATA[Incorrect disk count to bind disks.]]></base>
+    <translation><![CDATA[バインドするドライブの台数が一致しません。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_ALREADY_USED">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s).]]></base>
+    <translation><![CDATA[このNDASは他の動作または書込み権限を持っているホストが使用中です。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+    <base><![CDATA[The NDAS device has invalid bind information to migrate.]]></base>
+    <translation><![CDATA[RAID構成に必要なバインド情報が無効です。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_SIZE_LIMIT">
+    <base><![CDATA[The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.]]></base>
+    <translation><![CDATA[RAID構成する際の総ディスク容量の上限は2TBです。この上限値はWindows OSによって制限されてます。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+    <base><![CDATA[There is too many missing member to replace(repair) in bound disks.]]></base>
+    <translation><![CDATA[RAID構成に使われてるドライブ中、不明／欠損してるドライブ数がスペアドライブ数を超えてます。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NO_MISSING_MEMBER">
+    <base><![CDATA[There is no missing NDAS device to replace(repair) in bound disks.]]></base>
+    <translation><![CDATA[RAID構成に使われてるドライブ中、不明／欠損してるドライブはありません。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_CRITICAL_REPAIR">
+    <base><![CDATA[There was a critical error while replacing(repairing) bound disks.]]></base>
+    <translation><![CDATA[RAIDをスペアドライブで修復中に重大なエラーが起きました。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_REPLACE_TOO_SMALL">
+    <base><![CDATA[Size of a replacement disk is too small.]]></base>
+    <translation><![CDATA[スペアドライブの容量不足です。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_UNSUPPORTED">
+    <base><![CDATA[This type of RAID does not support the requested command.]]></base>
+    <translation><![CDATA[このRAIDタイプには要求されたコマンドは無効です。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_CAPACITY">
+    <base><![CDATA[The device does not have enough capacity to operate request command.]]></base>
+    <translation><![CDATA[要求されたコマンドは容量不足のため処理できません。]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_RAID">
+    <base><![CDATA[The RAID is not valid anymore.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_1_0_NOT_SUPPORTED">
+    <base><![CDATA[NDAS device v1.0 does not support the operation. Check the hardware version of the NDAS device in property page of the NDAS device management.]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="NDASVOL_ERROR_NON_NDAS_VOLUME">
+    <base><![CDATA[The specified volume is not related with the NDAS devices.]]></base>
+    <translation><![CDATA[指定されたボリュームは無効です。]]></translation>
+  </string>
+  <string id="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation><![CDATA[要求された機能は無効です。]]></translation>
+  </string>
+  <string id="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+    <base><![CDATA[Non-SCSI type device is found.]]></base>
+    <translation><![CDATA[SCSIタイプ以外のデバイスが見つかりました。]]></translation>
+  </string>
+  <string id="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+    <base><![CDATA[SRB IO CONTROL Error]]></base>
+    <translation><![CDATA[SRB IO CONTROL エラー。]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+    <base><![CDATA[The NDAS disk is encrypted and the corresponding NDAS system key is not registered in the system.]]></base>
+    <translation><![CDATA[NDASドライブは暗号化されましたがNDASシステムキーが登録されてません。]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+    <base><![CDATA[NDAS system key does not match with the NDAS disk key.]]></base>
+    <translation><![CDATA[システムキーがディスクキーと合いません。]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+    <base><![CDATA[Invalid CEB CRC.]]></base>
+    <translation><![CDATA[CEB CRCが無効です。]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+    <base><![CDATA[Unsupported CEB Revision.]]></base>
+    <translation><![CDATA[CEB Rev．が無効です。]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+    <base><![CDATA[CEB Key Length is invalid.]]></base>
+    <translation><![CDATA[CEBキー長が無効です。]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+    <base><![CDATA[Failed to read CEB.]]></base>
+    <translation><![CDATA[CEBの読出しに失敗しました。]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+    <base><![CDATA[CE key generation failed.]]></base>
+    <translation><![CDATA[CEキーの生成に失敗しました。]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+    <base><![CDATA[A new NDAS Device is found from the network and is being registered.]]></base>
+    <translation><![CDATA[新しいNDASデバイスがネットワーク上で見つかり登録されました。]]></translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+    <base><![CDATA[Unsupported hardware version (%2) detected from the NDAS Device (%1).]]></base>
+    <translation><![CDATA[NDASデバイス(%1)から無効なハードウェアバージョン(%2)が検出されました。]]></translation>
+  </string>
+</localization>

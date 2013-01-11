@@ -1,0 +1,70 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=xdbgflags
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+INCLUDES=.\inc;$(NDAS_INC_PATH);$(NDAS_INC_PATH)\ndas;$(PSDK_INC_PATH)
+RCOPTIONS=/i $(NDAS_SDK_INC_PATH) 
+USECXX_FLAG=/Tp
+#USER_C_FLAGS=/EHsc
+#USE_STL=1
+UMENTRY=wwinmain
+UMTYPE=windows
+USER_CFLAGS=/Wp64 /GS
+
+!if $(FREEBUILD)
+USE_MSVCRT=1
+!else
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!endif
+
+#
+# do not use USE_ATL, USE_ATL will dynamically link to atl.lib
+# which will only use SDK_LIB_PATH=atl.lib
+#
+# ADDITIONAL_ATL_LIBS= (do you have?)
+
+TARGETLIBS=\
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+    $(PSDK_LIB_PATH)\gdi32.lib \
+    $(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+    $(PSDK_LIB_PATH)\shell32.lib \
+    $(PSDK_LIB_PATH)\comctl32.lib \
+    $(PSDK_LIB_PATH)\ole32.lib \
+    $(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\uuid.lib
+
+X_USE_WTL_71=1
+USE_STATIC_ATL=1
+#USE_ATL=1
+# ATL_MIN_CRT=1
+# Be sure to include "xmatl.mk" after TAGETLIBS,
+# as xmatl.mk will provide more TAGETLIBS
+
+!INCLUDE "xmatl.mk"
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+MSC_WARNING_LEVEL=-W3 -WX
+#MSC_OPTIMIZATION=/Oitb2
+#MSC_OPTIMIZATION=/Od /Oi
+
+PRECOMPILED_INCLUDE=stdafx.h
+PRECOMPILED_CXX=1
+
+SOURCES= \
+	maindlg.cpp \
+	xdbgflags.cpp \
+	xdbgflags.rc

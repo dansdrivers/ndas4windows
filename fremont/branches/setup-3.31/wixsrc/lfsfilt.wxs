@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+	<Fragment>
+
+		<?ifdef Include.LFSFILT?>
+
+		<?ifdef WixCustomTableLocBug?>
+		<?define ActionData.LFSFILT  = "LFS Filter" ?>
+		<?endif?>
+
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.SetupFileSource)">
+			<Component Id="lfsfilt" Guid="$(var.LFSFILT.GUID)" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+				<File Id="lfsfilt.sys" Name="lfsfilt.sys" KeyPath="yes" Checksum="yes" />
+				<File Id="lfsfilt.inf" Name="lfsfilt.inf" Checksum="yes" />
+				<File Id="lfsfilt.cat" Name="lfsfilt.cat" Checksum="yes" />
+				<?ifdef Win64Build?>
+				<?else?>
+				<File Id="lfsflt2k.inf" Name="lfsflt2k.inf" Checksum="yes" />
+				<File Id="lfsflt2k.cat" Name="lfsflt2k.cat" Checksum="yes" />
+				<?endif?>
+				<Registry Id="lfsfilt" Root="HKLM" Key="SOFTWARE\NDAS\Install\OEMINF" Type="string" Name="LFSFILT" />
+			</Component>
+		</DirectoryRef>
+
+		<CustomTable Id="xDriverInstall">
+			<!-- 
+				We do not starts LFSFILTER. Only tries to stop LFSFilter
+					 
+				When NDASFS is installed, 
+					( ) if NDASFS is failed to start, then LFSFILTER should work.
+				  (X) if NDASFS is not started, we queue a ScheduleReboot.
+					(X) if NDASFS is running, we do nothing.
+						
+				When NDASFS is not installed,
+					( ) if LFSFILTER is being installed, we queue a ScheduleReboot.
+					( ) if LFSFILTER is not being installed, we do thing.
+			-->
+			<Row>
+				<Data Column="Id">StopLFSFILT</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LFSFILT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LFSFILT)</Data>
+				<?endif?>
+				<Data Column="Phase">3</Data>
+				<Data Column="Type">StopService</Data>
+				<Data Column="HardwareId">lfsfilt</Data>
+				<Data Column="Sequence">$(var.Sequence.LFSFILT.Stop)</Data>
+				<Data Column="Condition">(?lfsfilt=3) AND ($lfsfilt=2 OR $lfsfilt=4)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">UninstallLFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LFSFILT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LFSFILT)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultUninstall</Data>
+				<Data Column="INF">[#lfsfilt.inf]</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.LFSFILT.Uninstall)</Data>
+				<Data Column="Condition">(VersionNT &gt;= 501) AND (?lfsfilt=3) AND ($lfsfilt=2 OR $lfsfilt=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">lfsfilt</Data>
+			</Row>
+			<?ifndef Win64Build ?>
+			<Row>
+				<Data Column="Id">UninstallLFS_Win2000</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LFSFILT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LFSFILT)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultUninstall</Data>
+				<Data Column="INF">[#lfsflt2k.inf]</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.LFSFILT.Uninstall)</Data>
+				<Data Column="Condition">(VersionNT &lt; 501) AND (?lfsfilt=3) AND ($lfsfilt=2 OR $lfsfilt=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">lfsfilt</Data>
+			</Row>
+			<?endif?>
+			<Row>
+				<Data Column="Id">InstallLFS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LFSFILT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LFSFILT)</Data>
+				<?endif?>
+				<Data Column="Phase">2</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultInstall;DefaultUninstall</Data>
+				<Data Column="INF">[#lfsfilt.inf]</Data>
+				<Data Column="Flags">2</Data>
+				<Data Column="Sequence">$(var.Sequence.LFSFILT.Install)</Data>
+				<Data Column="Condition">(VersionNT &gt;= 501) AND ($lfsfilt=3)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">lfsfilt</Data>
+			</Row>
+			<?ifndef Win64Build ?>
+			<Row>
+				<Data Column="Id">InstallLFS_Win2000</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LFSFILT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LFSFILT)</Data>
+				<?endif?>
+				<Data Column="Phase">2</Data>
+				<Data Column="Type">InstallFromInfSection</Data>
+				<Data Column="HardwareId">DefaultInstall;DefaultUninstall</Data>
+				<Data Column="INF">[#lfsflt2k.inf]</Data>
+				<Data Column="Flags">2</Data>
+				<Data Column="Sequence">$(var.Sequence.LFSFILT.Install)</Data>
+				<Data Column="Condition">(VersionNT &lt; 501) AND ($lfsfilt=3)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">lfsfilt</Data>
+			</Row>
+			<?endif?>
+			<!--
+			<Row>
+				<Data Column="Id">StartLFSFILT</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LFSFILT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LFSFILT)</Data>
+				<?endif?>
+				<Data Column="Phase">4</Data>
+				<Data Column="Type">StartService</Data>
+				<Data Column="HardwareId">lfsfilt</Data>
+				<Data Column="Sequence">$(var.Sequence.LFSFILT.Start)</Data>
+				<Data Column="Condition">($lfsfilt=3)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+			-->
+			<Row>
+				<Data Column="Id">QueueScheduleRebootLFSFILT</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LFSFILT)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LFSFILT)</Data>
+				<?endif?>
+				<Data Column="Phase">4</Data>
+				<Data Column="Type">QueueScheduleReboot</Data>
+				<Data Column="Sequence">$(var.Sequence.LFSFILT.Start)</Data>
+				<Data Column="Condition">($lfsfilt=3) AND ($ndasfs &lt;&gt; 3)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">lfsfilt</Data>
+			</Row>
+		</CustomTable>
+
+		<?endif?>
+
+	</Fragment>
+</Wix>

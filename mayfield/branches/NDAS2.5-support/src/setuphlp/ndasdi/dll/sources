@@ -1,0 +1,49 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=ndasdi
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+BUILD_PRODUCES=ndasdi_dll
+UMTYPE=windows
+
+#
+# Without DLLENTRY, you won't get DllMain run
+#
+DLLENTRY=_DllMainCRTStartup
+
+# to publish library
+PASS1_PUBLISH={$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME)_dll.lib}
+
+SOURCES_USED=..\sources.inc
+!INCLUDE ..\sources.inc
+
+C_DEFINES=$(C_DEFINES) /DNDASDI_DLL_EXPORTS
+SOURCES=dllentry.cpp $(SOURCES)
+
+DLLDEF=$(TARGETNAME).src
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+
+VC7_SYMBOLS=1
+
+TARGETLIBS=\
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\uuid.lib \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib
+

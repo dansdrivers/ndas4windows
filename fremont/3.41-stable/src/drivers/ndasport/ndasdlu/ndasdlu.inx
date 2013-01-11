@@ -1,0 +1,60 @@
+;-------------------------------------------------------------------------
+; ndaspext.inf
+; 
+; Installation file (.inf) for NDAS Port Extender
+;
+; Copyright (c) 2002-2006, XIMETA, Inc.
+;-------------------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Provider    = %PROVIDER%
+DriverVer   = 08/28/2000,1.0.0.1
+CatalogFile = ndasdlu.cat
+
+[DestinationDirs]
+DefaultDestDir          = 12 ; DIRID_DRIVERS
+NdasPortExt.DriverFiles = 12 ; DIRID_DRIVERS
+
+[DefaultInstall]
+OptionDesc = %NdasPortExt.ServiceDesc%
+CopyFiles = NdasPortExt.DriverFiles
+
+[DefaultInstall.Services]
+AddService=%NdasPortExt.ServiceName%,,NdasPortExt.Service
+
+[DefaultUninstall]
+DelFiles = NdasPortExt.DriverFiles
+
+[DefaultUninstall.Services]
+DelService = ndasdlu,0x200 ; Flags note to stop service first
+
+[NdasPortExt.Service]
+DisplayName      = %NdasPortExt.DisplayName%
+Description      = %NdasPortExt.ServiceDesc%
+ServiceBinary    = %12%\ndasdlu.sys ; DIRID_DRIVERS\ndasdlu.sys
+ServiceType      = 1 ;SERVICE_KERNEL_DRIVER
+StartType        = 1 ;SERVICE_SYSTEM_START
+ErrorControl     = 1 ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = %NdasPortExt.LoadOrderGroup%
+
+[NdasPortExt.DriverFiles]
+ndasdlu.sys
+
+[SourceDisksNames]
+1=%DiskId1%
+
+[SourceDisksFiles]
+ndasdlu.sys=1
+
+[Strings]
+; Non-localizable Strings
+NdasPortExt.ServiceName    = "ndasdlu"
+NdasPortExt.RegPath        = "SYSTEM\CurrentControlSet\Services\ndasdlu"
+NdasPortExt.LoadOrderGroup = "System Bus Extender"
+
+; Localizable Strings
+Provider                = "XIMETA"
+NdasPortExt.DisplayName = "NDAS Downlevel Logical Unit Driver"
+NdasPortExt.ServiceDesc = "NDAS Downlevel Logical Unit Driver"
+DiskId1                 = "NDAS Device Driver Installation Disk"

@@ -1,0 +1,79 @@
+#ifndef APSTUDIO_INVOKED
+
+#include <windows.h>
+#include "resource.h"
+#pragma code_page(1252)
+
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+
+IDR_INSTALL_BUTTON_MENU MENU 
+BEGIN
+    POPUP "{Menu}"
+    BEGIN
+        MENUITEM "&Start (English)",	ID_INSTALL_ENU
+        MENUITEM "&Start (Chinese PRC)", ID_INSTALL_CHS
+        MENUITEM "&Start (German)",		ID_INSTALL_DEU
+        MENUITEM "&Start (Spanish)",	ID_INSTALL_ESN
+        MENUITEM "&Start (French)",		ID_INSTALL_FRA
+        MENUITEM "&Start (Italian)",	ID_INSTALL_ITA
+        MENUITEM "&Start (Japanese)",	ID_INSTALL_JPN
+        MENUITEM "&Start (Korean)",		ID_INSTALL_KOR
+        MENUITEM "&Start (Portuguese)",	ID_INSTALL_PTG
+    END
+END
+
+IDD_INIT_SETUP DIALOGEX 0, 0, 284, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "NDAS Software Setup Starter"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Start",IDOK,144,119,81,14
+    PUSHBUTTON      "E&xit",IDCANCEL,229,119,50,14
+    CONTROL         "&Check for software update",IDC_CHECK_UPDATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,121,128,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,111,283,1
+    ICON            IDI_INSTALLER,IDC_STATIC,9,10,20,20
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,45,90,232,
+                    14
+    LTEXT           "Welcome to NDAS Software Installer",IDC_BANNER_TEXT,
+                    45,15,217,46
+    LTEXT           "{Action Text Placeholder}",IDC_ACTION_TEXT,46,72,230,10
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ndasetup"
+    IDS_INITIALIZE          "Setup is initializing..."
+    IDS_CANCEL              "Canc&el"
+    IDS_EXIT                "E&xit"
+    IDS_INSTALL             "&Start"
+    IDS_ERR_LOADMSI         "Loading Windows Installer API has failed."
+    IDS_ERR_FORMAT          "Error 0x%1!08X!\r\n%2!s!"
+    IDS_SETUP               "NDAS Software Setup"
+    IDS_UPDATE_AVAILABLE_FMT	"New Version of the software %1!s! is available.\r\nDo you want to download it now?"
+    IDS_UPDATE_URL          "http://updates.ximeta.com/update/"
+    IDS_ERR_CHECK_UPDATE    "Connection to the update server failed."
+    IDS_BSC_BEGINDOWNLOADING "Downloading data from the server..."
+    IDS_BSC_CONNECTING      "Connecting to the server..."
+    IDS_BSC_ENDDOWNLOADDATA "Download finished."
+    IDS_ERR_DOWNLOAD_UPDATE "Downloading an update from the server failed."
+    IDS_ERR_RUN_UPDATE      "Running an updated setup failed."
+    IDS_ACTION_CHECK_UPDATE "Checking an updated software from the server..."
+    IDS_ERR_OUTOFMEM        "Out of memory"
+    IDS_MSI_DATABASE        "ndas.msi"
+    IDS_EXE_FILES           "Executable Files"
+    IDS_ACTION_UPGRADE_MSI  "Upgrading Windows Installer..."
+    IDS_ACTION_START_MSI    "Starting Windows Installer..."
+    IDS_NOUPDATE_FMT        "Setup cannot find the file '%1!s!'."
+    IDS_INVALID_PATH_FMT    "The path '%1' is invalid."
+    IDS_INCORRECT_UPDATE_FMT "The provided update package '%1' is invalid."
+    IDS_FAILED_TO_UPGRADE_MSI	"Setup was unable to upgrade the Windows Installer."
+    IDS_ACTION_CHECK_MSI	"Checking Windows Installer..."
+    IDS_ERR_CACHING_TO_SYSTEM_FMT	"Caching the MSI file to '%1' failed.\r\nMake sure that you have the permission to copy files to that directory."
+    IDS_ACTION_CACHE_MSI    "Caching MSI file..."
+    IDS_ERR_CACHE_MSI_FAILED	"Caching the MSI file failed."
+	IDS_ERR_REQUIRES_WINDOWS2000	"This setup package can be installed on Windows 2000 or higher version.\r\nPlease run the other setup package for your operating system."
+	IDS_ERR_REQUIRES_ADMIN_PRIV 	"This setup package requires Administrative Privilege in your system.\r\nPlease log on as an Administrative account and run again."
+END
+
+#endif    // APSTUDIO_INVOKED

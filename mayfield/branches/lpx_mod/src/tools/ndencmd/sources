@@ -1,0 +1,41 @@
+TARGETNAME=ndasenc
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+INCLUDES=$(NDAS_INC_PATH);$(NDAS_INC_PATH)\ndas;$(PSDK_INC_PATH)
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+UMTYPE=console
+UMENTRY=wmain
+
+C_DEFINES=/DUNICODE /D_UNICODE
+USECXX_FLAG=/Tp
+USER_C_FLAGS= /EHsc /Wp64
+USE_STL=1
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib \
+	$(PSDK_LIB_PATH)\crypt32.lib \
+	$(NDAS_LIB_PATH)\scrc32.lib \
+	$(NDAS_LIB_PATH)\ndascomm.lib \
+	$(NDAS_LIB_PATH)\ndascntenc.lib \
+	$(NDAS_LIB_PATH)\ndassyscfg.lib \
+	$(NDAS_LIB_PATH)\xregcfg.lib \
+	$(NDAS_LIB_PATH)\xcrypt.lib \
+	$(NDAS_LIB_PATH)\nhixnotify.lib \
+	$(NDAS_LIB_PATH)\lpxtrans.lib \
+	$(PSDK_LIB_PATH)\ole32.lib
+	
+SOURCES=ndencmd.cpp
+	
+

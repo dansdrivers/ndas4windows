@@ -1,0 +1,23 @@
+
+July 5, 2005 patria
+ndas-3.11.1310a-syscomp-msm
+			 
+  Updated release for 3.11.1310
+  - Updated NDMSICA.DLL
+    based on netdisk/mayfield/trunk/src/setuphlp/ndmsica R4831
+  - Fixed duplicated UI component merge module IDs
+  - Fixed invalid merge module language codes
+  - Fixed rollback actions to be run in system context
+
+June 30, 2005 patria
+ndas-3.11.1310-syscomp-msm
+
+  Initial release for system component merge module.
+  (for NewTech Japan)
+
+  NDMSICA.DLL:
+  based on /mayfield/trunk/src/setuphlp/ndmsica R4797 
+
+  SourceDir:
+  based on ndas-3.11.1310-sdk.zip
+

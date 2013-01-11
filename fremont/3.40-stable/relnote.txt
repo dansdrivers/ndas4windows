@@ -1,0 +1,160 @@
+==== What's New ====
+3.40 (Fremont)
+
+3.30 (Fremont)
+    * 3.30.1601 - first build for QA
+          o Supported platforms
+                + Windows 2000 with Service Pack 4
+                + Windows XP with Service Pack 2
+                + Windows XP Professional x64 Edition
+                + Windows Server 2003 with Service Pack 1
+                + Windows Server 2003 x64 Edition
+                + Windows Vista
+                + Windows Vista x64 Edition 
+          o RAID
+                + Support 'Append Disk' to aggrgated disk
+                + Support 'Append Disk' to single disk resulting aggregated disk
+                + NDAS service will not mount RAID device when fixing required(NDAS bind can fix it)
+                + Improved refreshing speed and stability in NDAS bind
+                + Initialize MBR when RAID 0, RAID 3 and aggregated disk are created
+                + RAID can be made in any sequence of unit device
+
+    	  o Improve multi-read/write performance
+    	      + Introduced NDAS lock contention control mechanism.
+
+	  o Use write connection as primary lock
+		+ netdisk driver connects to netdisks with read/only mode
+
+	  o Improve performance of wirelsess connecting mode
+		+ change flow control mechanism from drop rate base to performance base
+		+ change connection to high speed network connection 
+			ex) wireless -> wire
+
+	  o Use ndasfs
+
+		+ On pc installed fltmgr, ndasfs is installed instead of lfsfilter
+		+ non-booting installation is possible
+
+	  O Revise RAID0, RAID1, Aggregation, RAID4, RAID5
+		
+		+ Integrate seperately implemented procedures to one procedure
+		+ Revice RAID1 protocol
+		+ Support RAID4, RAID5
+	
+	  O R/W share is not supported on RAIDs and Aggregation composed of Ndas 1.0
+
+		+ They can be used only with exclusive write mode and read only mode
+	 	
+
+
+3.20 (Fremont)
+    * 3.20.1520 - release
+          o Fixed minor bugs
+    * 3.20.1519 - beta
+          o Supported platforms
+                + Windows 2000 with Service Pack 4
+                + Windows XP with Service Pack 2
+                + Windows XP Professional x64 Edition
+                + Windows Server 2003 with Service Pack 1
+                + Windows Server 2003 x64 Edition
+                + (Beta) Windows Vista
+                + (Beta) Windows Vista x64 Edition 
+          o User Interface
+                + 'Reset' function menu item on the context menu if needed.
+                + S.M.A.R.T. is now supported on Windows 2000/XP with NDAS hardware version 1.1 or later.
+                + Some terms are changed:
+                      # Connected -> Online
+                      # Disconnected -> Offline
+                      # Unmount -> Dismount
+                      # Unregister -> Deregister 
+                + Auto Play configuration is added in the options dialog.
+                + Dismount is now processed synchronously. No system dialogs or notification will be shown after the dismounting.
+                + "Dismount All" dialog shows the status of each logical unit.
+                + A retry-cancel dialog box appears when dismounting failed. 
+          o Fix
+                + Connection to the NDAS device will not be closed when you have 2 or more NICs on PC and one of them disconnected.
+                + The file system status will be refreshed when your PC mounts a NDAS device as read-only and other PC mounts it read-write.
+                + NDAS service does not hang any more while importing the legacy registry keys in case of read failure.
+                + Better chance of dismounting success.
+                + The NDAS software detects power-cycling of a NDAS device.when Disk power recycle detection on NDAS hardware version 1.1 or later. 
+          o RAID
+                + RAID1
+                      # Degraded mode mount is supported, i.e you can mount RAID1 even if one of the member drive is unavailable.
+                      # To achieve faster recovery, only the out-of-sync parts will be recovered.
+                      # You must migrate the RAID1 by the old version of NDAS software.
+                      # Now supports a very large RAID set (i.e. more than 2TB) in the GPT-capable platforms. The following platforms can handle GPT partitions.
+                            * Windows XP Professional x64 Edition
+                            * Windows Server 2003 with Service Pack 1
+                            * Windows Server 2003 x64 Edition
+                            * Windows Vista
+                            * Windows Vista x64 Edition 
+                      # Marks a member drive as defective when the drive has bad sector(s).
+                      # A replaced member drive by the spare drive will not be back to a member drive automatically. You must reconfigure RAID to do that.
+                      # Detects the member drive which is replaced online. But hot-swapping is not supported yet. You must use NDAS bind management tool to use the replaced drive. 
+          o Changes in the NDAS bind tool
+                + Shows more information about current RAID status.
+                + Faster refreshing status speed. 
+          o Known bugs
+                + For Windows XP Professional x64 Edition, upgrading software is not supported. You must uninstall the previous software first.
+                + RAID status balloon tool-tip message is sometimes inconsistent when a spare drive is being used.
+                + Hibernation
+                + RAID0 does not work on Windows Vista.
+                + RAID1 can be disconnected when it wakes up from hibernation or standby
+                + After norton removal tool is used, NDAS software will not work in some cases. You need to reinstall NDAS software or create "RunOnce" registry key to "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion"
+                + If host PC's OS is Windows Vista and it uses Broadcom NetLink? gigabit ethernet network card, performance of NDAS may be very bad in some network configuration. 
+* NDAS Software 3.11 build 1327
+  NDAS Software Version 3.11 is a new software release with following improvements and bug fixes
+
+    * New icons and UI for NDAS management tool and bind management tool.
+    * Improved RAID1 mechanism.
+          o Users of mirroring or RAID1 made by prior version of software are required to use "Migrate" command from NDAS bind management tool.
+          o New RAID1 disks cannot be used by older software. Aggregation or striped (RAID0) disk can still be used by older software.
+          o Supports write-sharing of RAID1 disks.
+          o Supports spare disk for RAID 1. Spare disk is used as RAID1 member when one of RAID1 member disk is missing.
+          o Automatic RAID1 recovery is added. Manual RAID1 recovery is now obsolete and removed from bind management tool.
+    * Added "Export" function
+          o Export function is used for transferring NDAS registration information from one PC to another.
+          o You can access this function from NDAS device's property menu and registration wizard.
+          o NDAS export files can be used on another host just by double-clicking the export file.
+    * Restricted usage of NDAS device when it is needed.
+          o Operations that require a whole disk access such as scandisk, changing partition and formatting are not available when multiple hosts are accessing the NDAS devices to prevent loss of data.
+          o While one host is using the NDAS device exclusively, another host cannot access the NDAS device.
+    * Notable bug fixes
+          o Fixed a problem that volume name changed by another host is not reflected.
+          o Fixed a problem that write-sharing did not work in some systems when they rebooted with NDAS device mounted.
+          o Fixed a problem that write-sharing did not work when a user changes properties of network interface.
+          o Fixed a problem that a crash occurs when some systems with multiple CPUs run with high network and CPU loads.
+          o Fixed a problem that system crash (blue screen) occurs when jumbo frame is enabled.
+          o Fixed a problem that the performance is low with network configurations that gigabit network and 100Mbps network are mixed, and with the situation that multiple NDAS devices are used at the same time.
+          o Fixed a problem that NDAS management tool sometimes stalls when NDAS device is a broken unit.
+    * Miscellaneous
+          o One-step registration is removed to reduce confusion. Registration wizard is available only when registering new NDAS devices.
+
+* NDAS Software 3.10 build 1230
+  NDAS Software Version 3.10 is a new software release containing updated management framework for NDAS devices, including:
+
+    * Improved User Interfaces
+          o Added more hardware properties
+          o Added information about NDAS hosts using the device
+          o Added options dialogs
+          o Added Suspend/Hibernation support
+          o Unicode support for better multilingual support
+          o Added a feature to deactivate the unused NDAS devices
+    * Improved Setup
+          o More robust support for device driver installations
+          o Single MSI for multiple languages (MUI version only)
+          o Upgrade support
+    * Software Update
+          o Checks for the new software release from the setup and the management software
+    * Bind system
+          o Supports new bind system of RAID 0, RAID 1. The aggregation system is supported also
+          o An user can recover the defected RAID 1 system using the bind management tool
+          o New bind system does not support a mirroring system anymore, but provides a function to migrate mirroring system to a RAID 1 system without losing any data
+    * Miscellaneous
+          o SNMP components are removed from the software
+          o Smaller footprint of the software (around 900KB for the whole software without Windows Installer Redistributable)
+          o New Command-line interface to manage the NDAS devices
+    * NDAS SDK (OEM partners only)
+          o New NDAS device management APIs are provided for customized applications
+
+Copyright (c) 2003-2006 XIMETA, Inc. All rights reserved

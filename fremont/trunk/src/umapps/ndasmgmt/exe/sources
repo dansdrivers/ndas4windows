@@ -1,0 +1,93 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=ndasmgmt
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+INCLUDES=..;..\inc;..\..\ndasapcm\inc
+INCLUDES=$(INCLUDES);$(NDAS_INC_PATH);$(NDAS_PUBLIC_INC_PATH)
+INCLUDES=$(INCLUDES);$(PSDK_INC_PATH);$(BOOST_INC_PATH)
+
+USER_C_FLAGS=/GS
+USE_NATIVE_EH=1
+UMENTRY=wwinmain
+UMTYPE=windows
+
+USE_STL=1
+
+PRECOMPILED_INCLUDE=..\stdafx.h
+PRECOMPILED_CXX=1
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+MSC_OPTIMIZATION=/Ox
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+TARGETLIBS=\
+	$(NDAS_PUBLIC_LIB_PATH)\ndasuser.lib \
+	$(NDAS_PUBLIC_LIB_PATH)\ndasnif.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\gdi32.lib \
+	$(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(PSDK_LIB_PATH)\shell32.lib \
+	$(PSDK_LIB_PATH)\comctl32.lib \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\uuid.lib \
+	$(PSDK_LIB_PATH)\crypt32.lib \
+	$(PSDK_LIB_PATH)\version.lib \
+	$(PSDK_LIB_PATH)\comdlg32.lib \
+	$(NDAS_LIB_PATH)\libxtaskdialog.lib \
+	..\..\ndasapcm\idl\slib\$(O)\libndasapcm_i.lib
+
+SOURCES=\
+	..\ndasmgmt.cpp \
+	..\mainframe.cpp \
+	..\aboutdlg.cpp \
+	..\devpropsh.cpp \
+	..\devregwiz.cpp \
+	..\eventhandler.cpp \
+	..\menubitmap.cpp \
+	..\ndascls.cpp \
+	..\optionpsh.cpp \
+	..\singleinst.cpp \
+	..\syshelp.cpp \
+	..\nmmenu.cpp \
+	..\apperrdlg.cpp \
+	..\regconf.cpp \
+	..\appconf.cpp \
+	..\confirmdlg.cpp \
+	..\muisel.cpp \
+	..\argv.cpp \
+	..\adminprivs.cpp \
+	..\ndastypestr.cpp \
+	..\runtimeinfo.cpp \
+	..\exportdlg.cpp \
+	..\ddecmdparser.cpp \
+	..\importdlg.cpp \
+	..\waitdlg.cpp \
+	..\dismountalldlg.cpp \
+	..\ndastaskdlgs.cpp \
+	..\fileversioninfo.cpp \
+	..\ndasdevicepropgeneralpage.cpp \
+	..\ndasdeviceprophardwarepage.cpp \
+	..\ndasdeviceprophoststatpage.cpp \
+	..\ndasdevicepropadvancedpage.cpp \
+	..\ndasdevicerenamedlg.cpp \
+	..\ndasdeviceaddwritekeydlg.cpp \
+	..\ndasmgmt_app.rc
+
+!INCLUDE $(WTL_SOURCES_INC)
+

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="icons">
+    <Icon Id="$(var.iconid.setup)" src="$(var.icondir)\setup.ico" />
+	<?ifdef NdasSetupFlags_UseUninstallShortcut ?>
+	<Icon Id="$(var.iconid.uninst)" src="$(var.icondir)\uninst.ico" />
+	<?endif?>
+  	<Icon Id="$(var.iconid.ndasmgmt)" src="$(var.icondir)\ndasmgmt.ico" />
+    <?ifndef NdasSetupFlags_ExcludeNdasBind?>
+    <Icon Id="$(var.iconid.ndasbind)" src="$(var.icondir)\ndasbind.ico" />
+	<?endif?>
+    <Icon Id="$(var.iconid.ndasnif)" src="$(var.icondir)\ndasnif.ico" />
+  </Fragment>
+</Wix>

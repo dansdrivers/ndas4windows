@@ -1,0 +1,76 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+typedef struct _NDAS_DEVICE_ID {
+	BYTE Node[6];
+	BYTE Reserved[1];
+	BYTE VID; // vendor ID
+} NDAS_DEVICE_ID;
+
+typedef struct _NDAS_DEVICE_HARDWARE_INFO {
+	BYTE Buffer[64];
+} NDAS_DEVICE_HARDWARE_INFO;
+
+typedef struct _NDAS_UNITDEVICE_STAT
+{
+	/* Size of the structure, set as sizeof(NDAS_UNITDEVICE_STAT) */
+	DWORD Size;
+	/* Non-zero if present, zero otherwise */
+	BOOL  IsPresent;
+	/* Number of hosts count which is connected to the NDAS Device
+	with read write access. */
+	DWORD RWHostCount;
+	/* Number of hosts count which is connected to the NDAS Device
+	with read only access. */
+	DWORD ROHostCount;
+	/* Reserved */
+	BYTE  TargetData[8];
+} NDAS_UNITDEVICE_STAT;
+
+typedef struct _NDAS_DEVICE_STAT {
+	DWORD Size;
+	DWORD NumberOfUnitDevices;
+	NDAS_UNITDEVICE_STAT UnitDevices[2];
+} NDAS_DEVICE_STAT;
+
+typedef DWORD NDAS_DEVICE_STATUS;
+typedef DWORD NDAS_DEVICE_ERROR;
+typedef ULONG ACCESS_MASK;
+
+typedef UINT64 NDAS_OEM_CODE;
+
+typedef struct _NDASID_EXT_DATA {
+	BYTE Seed;
+	BYTE VID;
+	BYTE Reserved[2];
+} NDASID_EXT_DATA;
+
+[
+	object,
+	uuid(FC4D6686-A286-4945-B72D-CDF738D13182),
+	helpstring("INdasDevice Interface"),
+	pointer_default(unique)
+]
+interface INdasDevice : IUnknown
+{
+	[propget] HRESULT NdasDeviceId([out, retval] NDAS_DEVICE_ID* NdasDeviceId);
+	[propget] HRESULT SlotNo([out, retval] DWORD* SlotNo);
+	[propput] HRESULT Name([in] BSTR Name);
+	[propget] HRESULT Name([out, retval] BSTR* Name);
+	[propget] HRESULT Status([out, retval] NDAS_DEVICE_STATUS* Status);
+	[propget] HRESULT DeviceError([out, retval] NDAS_DEVICE_ERROR* Error);
+	[propput] HRESULT GrantedAccess([in] ACCESS_MASK access);
+	[propget] HRESULT GrantedAccess([out, retval] ACCESS_MASK* Access);
+	[propget] HRESULT AllowedAccess([out, retval] ACCESS_MASK* Access);
+	[propget] HRESULT HardwareType([out, retval] DWORD* HardwareType);
+	[propget] HRESULT HardwareVersion([out, retval] DWORD* HardwareVersion);
+	[propget] HRESULT HardwareRevision([out, retval] DWORD* HardwareRevision);
+	[propget] HRESULT HardwarePassword([out, retval] UINT64* HardwarePassword);
+	[propput] HRESULT OemCode([in] NDAS_OEM_CODE* OemCode);
+	[propget] HRESULT OemCode([out, retval] NDAS_OEM_CODE* OemCode);
+	[propget] HRESULT HardwareInfo([out, retval] NDAS_DEVICE_HARDWARE_INFO* HardwareInfo);
+	[propget] HRESULT DeviceStat([out, retval] NDAS_DEVICE_STAT* DeviceStat);
+	[propget] HRESULT NdasIdExtension([out, retval] NDASID_EXT_DATA* IdExtension);
+	[propget] HRESULT MaxTransferBlocks([out, retval] LPDWORD MaxTransferBlocks);
+	[propput] HRESULT Enabled([in] BOOL Enabled);
+};

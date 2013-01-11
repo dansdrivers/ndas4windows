@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <SupportedPlatforms Include="x86" />
+    <SupportedPlatforms Include="x64" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SubProjects Include="ndassc.msm\ndassc.proj" />
+    <SubProjects Include="ndasscui.msm\ndasscui.proj" />
+    <SubProjects Include="ndas.msi\ndas.proj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PublishDir>publish</PublishDir>
+    <Platform>x86</Platform>
+  </PropertyGroup>
+
+  <Target Name="Build" Inputs="%(Subprojects.identity)" Outputs="_force">
+    <MSBuild Projects="%(Subprojects.identity)" Targets="FullBuild">
+      <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+    </MSBuild>
+  </Target>
+
+  <Target Name="Clean" Inputs="%(Subprojects.identity)" Outputs="_force">
+    <CreateItem Include="$(publishdir)\$(Platform)\*.*">
+      <Output TaskParameter="Include" ItemName="DeletingFile" />
+    </CreateItem>
+    <Delete Files="@(DeletingFile)" TreatErrorsAsWarnings="true"/>
+    <MSBuild Projects="%(Subprojects.identity)" Targets="Clean">
+      <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+    </MSBuild>
+  </Target>
+
+  <Target Name="ReBuild" DependsOnTargets="Clean;Build" />
+
+  <Target Name="BuildAllPlatforms"
+          Inputs="__%(SupportedPlatforms.identity)"
+          Outputs="__%(SupportedPlatforms.identity)">
+    <MSBuild Projects="$(MSBuildProjectFullPath)" 
+             Targets="Build"
+             Properties="Platform=%(SupportedPlatforms.identity)" />
+  </Target>
+
+  <Target Name="RebuildAllPlatforms"
+          Inputs="__%(SupportedPlatforms.identity)"
+          Outputs="__%(SupportedPlatforms.identity)">
+    <MSBuild Projects="$(MSBuildProjectFullPath)" 
+             Targets="Rebuild"
+             Properties="Platform=%(SupportedPlatforms.identity)" />
+  </Target>
+
+  <Target Name="CleanAllPlatforms"
+          Inputs="__%(SupportedPlatforms.identity)"
+          Outputs="__%(SupportedPlatforms.identity)">
+    <MSBuild Projects="$(MSBuildProjectFullPath)" 
+             Targets="Clean"
+             Properties="Platform=%(SupportedPlatforms.identity)" />
+  </Target>
+
+</Project>

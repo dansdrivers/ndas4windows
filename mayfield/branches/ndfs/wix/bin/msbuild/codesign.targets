@@ -1,0 +1,29 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask TaskName="XIMETA.SignCode" AssemblyFile="XIMETA.Tasks.dll" />
+  
+  <PropertyGroup>
+    <CodeSignTimestampUrl Condition="$(timestamp)!=false">http://timestamp.verisign.com/scripts/timstamp.dll</CodeSignTimestampUrl>
+    <CodeSignCN>XIMETA, Inc.</CodeSignCN>
+  </PropertyGroup>
+
+  <!-- code signing -->
+  <Target Name="SignCode"
+		  Inputs="@(signingfile)"
+		  Outputs="@(signingfile->'%(identity).signed')">
+
+    <XIMETA.SignCode
+	   ToolPath="$(toolpath)"
+	   CommonName="$(codesigncn)"
+       TimestampUrl="$(codesigntimestampurl)"
+	   FileName="%(SigningFile.identity)">
+      <Output TaskParameter="SignedFile" ItemName="SignedFile" />
+    </XIMETA.SignCode>
+
+	<WriteLinesToFile File="%(SignedFile.identity).signed" Lines="yes" Overwrite="true" /> 
+    
+  </Target>
+
+</Project>
+
+

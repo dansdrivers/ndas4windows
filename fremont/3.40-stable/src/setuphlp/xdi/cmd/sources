@@ -1,0 +1,27 @@
+TARGETNAME=xdi
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+UMTYPE=console
+UMENTRY=wmain
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+INCLUDES=$(NDAS_INC_PATH)
+
+SOURCES=xdicmd.cpp
+
+TARGETLIBS=..\slib\$(O)\libxdi.lib \
+	$(SDK_LIB_PATH)\ole32.lib \
+	$(SDK_LIB_PATH)\oleaut32.lib \
+	$(SDK_LIB_PATH)\setupapi.lib \
+	$(SDK_LIB_PATH)\user32.lib \
+	$(SDK_LIB_PATH)\shlwapi.lib \
+	$(SDK_LIB_PATH)\uuid.lib
+
+!INCLUDE $(ATL_SOURCES_INC)

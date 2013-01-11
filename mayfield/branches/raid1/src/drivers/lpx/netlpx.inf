@@ -1,0 +1,109 @@
+;-------------------------------------------------------------------------
+; netlpx.inf -- Lean Packet Exchange Protocol
+;
+; Installation file (.inf) for the LPX Protocol
+;
+; Copyright (c) 2002-2004 XIMETA, Inc.
+;
+;-------------------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = NetTrans
+ClassGUID   = {4d36e975-e325-11ce-bfc1-08002be10318}
+Provider    = %PROVIDER%
+CatalogFile = netlpx.cat
+DriverVer   = 01/01/2003,1.0.0.0
+
+[Manufacturer]
+%MANUFACTURER%=Models
+
+[Models]
+%LPX.Desc%=LPX.Install, NKC_LPX
+
+[LPX.Install]
+AddReg=LPX.NDI
+Characteristics=0 ; Has no characterstic
+CopyFiles=LPX.DriverFiles,LPX.DLLFiles
+
+[LPX.NDI]
+;HKR,Ndi,ClsID,,"{98E32798-5CF4-4165-8180-FFAE504FBDB1}"
+HKR,Ndi,HelpText,,%LPX.HelpText%
+HKR,Ndi,Service,,"lpx"
+HKR,Ndi\Interfaces, UpperRange,,"winsock"
+HKR,Ndi\Interfaces,"LowerRange",,"ndis5"
+
+[LPX.Install.Services]
+AddService=lpx,,LPX.Service.Install
+
+[LPX.Service.Install]
+DisplayName     = %LPX.Desc%
+ServiceType     = 1 ;SERVICE_KERNEL_DRIVER
+StartType       = 0 ;SERVICE_BOOT_START
+ErrorControl    = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\lpx.sys
+LoadOrderGroup  = "PNP_TDI"
+AddReg          = LPX.Service.Install.AddReg
+Description     = %LPX.Desc%
+
+[LPX.Service.Install.AddReg]
+;HKR,"Parameters","NbProvider",,"_nb"
+HKLM,"System\CurrentControlSet\Services\lpx","TextModeFlags",%REG_DWORD%,0x0001
+HKR,"Parameters\winsock","UseDelayedAcceptance",%REG_DWORD%,0x0001
+
+[LPX.Install.Winsock]
+AddSock = LPX.AddSock
+
+[LPX.AddSock]
+TransportService	= lpx
+;SupportedNameSpace	= 13
+HelperDllName		= %11%\wshlpx.dll
+MaxSockAddrLength	= 0x14
+MinSockAddrLength	= 0x14
+
+[LPX.Install.Remove]
+DelReg=LPX.DelReg
+
+[LPX.Install.Remove.Services]
+DelService=lpx
+
+[LPX.DelReg]
+HKLM,"System\CurrentControlSet\Services\lpx","TextModeFlags"
+
+[LPX.Install.Remove.Winsock]
+DelSock = LPX.Remove.Winsock
+
+[LPX.Remove.Winsock]
+TransportService = LPX
+
+[DestinationDirs]
+LPX.DriverFiles = 12 ; DIRID_DRIVERS
+LPX.DLLFiles    = 11 ; SYSTEM32
+
+[LPX.DriverFiles]
+lpx.sys
+
+[LPX.DLLFiles]
+wshlpx.dll
+
+[SourceDisksNames]
+1 = %DiskId1%,,,
+
+[SourceDisksFiles]
+lpx.sys=1
+wshlpx.dll=1
+
+[Strings]
+;
+; Non-Localizable Strings
+;
+REG_DWORD = 0x10001
+
+;
+; Localizable Strings
+;
+PROVIDER     = "XIMETA"
+MANUFACTURER = "XIMETA"
+LPX.Desc     = "LPX Protocol"
+LPX.HelpText = "Lean Packet Exchange Protocol for NDAS Devices"
+DiskId1      = "NDAS Device Driver Install Disk"

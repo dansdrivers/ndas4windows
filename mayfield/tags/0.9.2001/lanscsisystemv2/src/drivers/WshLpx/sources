@@ -1,0 +1,37 @@
+TARGETNAME=wshlpx
+TARGETTYPE=DYNLINK
+#TARGETPATH=..\..\sys\$(BUILD_ALT_DIR)
+TARGETPATH=obj
+NETDISK_BINPLACE_TYPE=sys
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+
+TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib \
+           $(SDK_LIB_PATH)\advapi32.lib \
+           $(SDK_LIB_PATH)\wsock32.lib \
+           $(SDK_LIB_PATH)\tdi.lib \
+           $(SDK_LIB_PATH)\user32.lib  
+
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+DLLENTRY=DllInitialize
+
+USE_CRTDLL=1
+
+INCLUDES=..\inc
+RCOPTIONS=/i ..\inc
+
+USE_CRTDLL=1
+
+# include drivers.mak right before SOURCES
+!INCLUDE "..\inc\drivers.mak"
+
+SOURCES=wshsmple.c \
+        wshlpx.rc
+
+UMTYPE=console
+DLLBASE=0x400000

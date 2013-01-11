@@ -1,0 +1,245 @@
+////////////////////////////////////////////////////////////////////////////
+//
+// Description of design & implementation
+//
+// @author Ji Young Park(jypark@ximeta.com)
+//
+////////////////////////////////////////////////////////////////////////////
+
+A. Definition of terms regarding disk binding type 
+  1. Single disk
+	- A disk that is not bound to any other disks.
+  2. Mirroring
+	- A pair of disks that mirrors each other.
+  3. Aggregation
+	- A group of disks that are aggregated to form a larger disk.
+	- Aggregation can be composed of mirroring disks.
+	  In this case, the number of disks in aggregation must be even.
+	  (Every disk in aggregation must be mirrored.)
+
+B. Function description
+  1. Bind
+	- Available on single disks
+	- Bind disks to form mirroring or aggregation.
+	- Only single disks can be bound.
+	- Disks will be initialized after bound.
+  2. Unbind
+    - Available on mirroring or aggregation disks.
+    - Break mirroring or aggregation into single disks.
+    - When an aggregation is composed of mirroring disks,
+      the mirroring disks will also be unbound.
+    - Disks will be initialized except they are only mirrored, and not aggregated.
+      This is because for aggregated disks, the size of disk will change after unbind.      
+  3. Synchronize
+	- Available on mirroring disks.
+	- If one of the disks in mirroring is disconnected from the network,
+	 and any write operation is performed on the other disk, the other disk
+	 will be marked as dirty. 'Synchronize' will copy modified blocks from
+	 the disk left to the disk disconnected.
+	- It is also possible that both of the disks are dirty.
+	  In thie case, the program asks the user to select one of the disk
+	  data of which he/she want to keep.
+	  And, it first merges the bitmaps of the two disks (merging is done 
+	  by ORing the bitmaps.), and copies data on the blocks which are
+	  marked as dirty.
+  4. Reestablish mirror.
+    - Available on mirroring disks.
+    - 'Reestablish mirror' binds one of the disks in mirroring with a new disk
+      when the other disk in the mirroring is missing or broken.
+    - Data in the disk will be copied to the new disk and this copying process 
+      can take several hours.
+  5. Add Mirror
+    - Add a mirror to a single disk
+    - Data in the single disk will be copied to the mirror disk and this copying 
+      process can take several hours.
+  6. Migrate
+    - Migrate disks aggregated by the previous versions to the current version.
+    
+C. Procedure of each function.  
+  1. Bind
+	1) Display single disks that can be used for binding to user.
+	2) User selects disks to bind
+	3) Open connection to the disks selected with write privilege.
+	   If any of the disks is accessed by other program/computer with write privilege,
+	   display error message to the user and return to step 2
+	4) Write binding information to the disks in order from the first
+	   disk in the bind the the last disk, and Clear MBR and partition table of the disks
+	   If the program fail to write binding information, it stops the process
+	   , display error message to the user, and return step 2. 
+	   However, binding information can be written to some of disks before
+	   the program fails. In that case the user needs to unbind them before 
+	   he/she restarts bind process. (Since the connections are already
+	   made at step 3, the program only fails when the HDD disk has a bad sector
+	   or network is unnomrally disconnected.)
+	5) If writing to all the disk ends successfully, update the tree view.
+  2. Unbind
+    1) Display list of the disks in the binding.
+	2) Open connection to the disks selected with write privilege.
+	   If any of the disks is accessed by other program/computer with write privilege,
+	   display error message to the user and return to step 1
+    2) Clear binding information on the disks.
+       And also except mirrored disks, clear MBR and partition table of the disks.
+	   If the program fail to write binding information, it displays error message
+	   to the user and stops the process
+    3) If writing to all the disk ends successfully, update the tree view.
+  3. Synchronize
+    1) Display a dialog box with a progress bar. The disk whose dirty flag is set
+       will be the source disk, and the other disk will be the destination disk.
+       If both disks's dirty flag is set, a dialog is popped up to ask the user
+       to select one of the two disks.
+    2) Launch a thread that synchronize the two disks on the background,
+       and display progress with the progress bar.
+    3) The thread reads all the bitmap at once, and counts number of dirty
+       sectors. (The number of dirty sectors are reported back to UI thread)
+    4) The thread copies dirty sectors from the source disk to the destination disk.
+       When the sectors mapped to one sector(512KB) of bitmap are copied,
+       the bitmap sector is cleared.
+    5) When all dirty sectors are copied, clear the dirty flag on the source disk,
+       and ends synchronization.
+  4. Reestablish mirror
+    1) If one of the mirroring disks is missing, 
+    1) Delete the information of the previously bound disk.
+    2) Write the information of the new disk.
+    3) Write binding information to the new disk.
+  5. Add mirror
+    1) Same as bind function except that adding mirror does not clear MBR 
+       and partition table.
+  6. Migrate
+    1) If the disk's binding information is written by a previous version,
+       the 'Migrate' button will be displayed on the dialog when the user 
+       executes 'properties' command on the disk.
+	2) When the user presses the 'Migrate' button, a confirm message box will
+	   be displayed. 
+	3) When the user selects 'Yes', then the program finds all the disks bound
+	   with the selected disk.
+	4) Open connection to the disks bound with write privilege.
+	   If any of the disks is accessed by other program/computer with write privilege,
+	   display error message to the user and stop the process.
+	5) Create DISK_INFORMATION_BLOCK_V2 based on the version1 information,
+	   and write it on the disks. If the program fail to write binding information, 
+	   it displays error message to the user and stops the process
+    6) If writing to all the disk ends successfully, display a success message to 
+       the user and finish the process.
+
+D. Class structure
+  1. Disk object classes
+	- Objects that encaptulate disk.
+	
+	
+                         +-------------------+
+        +--------------->| CDiskObject       |
+        |                +-------------------+
+        |                | GetUniqueID       |
+        |                | GetInfoHandler    |
+        |                | GetTitle          |
+        |                | GetStringDeviceID |
+        |                | GetDiskCount      |
+        |                | IsUsable          |
+        |                | IsSingle          |
+        |                | IsRoot            |
+        |                | GetAccessMask     |
+        |                | Bind              |
+        |                | Unbind            |
+        |                | Rebind            |
+        |                | UpdateData        |
+        |                +-------------------+
+        |                       ^
+        |                       |
+        |            +----------+-------------+
+        |            |                        |
+        |   +----------------------+  +-----------------+
+        +-<>| CDiskObjectComposite |  | CUnitDiskObject |
+            +----------------------+  +-----------------+
+            | AddChild             |  | GetLocation     |
+            | DeleteChild          |  | MarkAllBitmap   |
+            +----------------------+  | Mirror          |
+                                      +-----------------+
+                                      
+  2. Disk Information Handler
+          
+                    +--------------------+
+                    | CDiskInfoHandler   |
+                    +--------------------+
+                    | IsHDD              |
+                    | GetUserSectorCount |
+                    +--------------------+
+                               ^
+                               |
+                    +----------------------------+
+                    | CUnitDiskInfoHandler       |
+                    +----------------------------+
+                    | IsBound                    |
+                    | IsAggregated               |
+                    | IsMirrored                 |
+                    | IsMaster                   |
+                    | IsDirty                    |
+                    | GetTotalSectorCount        |
+                    | GetAggregatedDiskList      |
+                    | FindMirrorDisk             |
+                    | GetFirstDiskLocationInAggr |
+                    | GetPeerLocation            |
+                    | GetPosInBind               |
+                    | GetDiskCountInBind         |
+                    | Bind                       |
+                    | UnBind                     |
+                    | Rebind                     |
+                    | Mirror                     |
+                    | SetDirty                   |
+                    | UpdateData                 |
+                    +----------------------------+
+                                  ^
+                +-----------------+--------------+
+                |                                |
+   +-------------------------+      +---------------------+
+   | CDefaultDiskInfoHandler |      | CHDDDiskInfoHandler |
+   +-------------------------+      +---------------------+
+  3. Disk sector & session classes
+                    
+                        +-------------+                   +------------+
+                        | CDiskSector |                   | CSession   |
+                        +-------------+                   +------------+
+                        | GetData     |----------------->>| Read       |
+                        | GetLocation |                   | Write      |
+                        | GetCount    |                   | IsLoggedIn |
+                        | ReadAccept  |                   +------------+
+                        | WriteAccept |
+                        +-------------+
+                               ^
+                               |
+                      +------------------+
+                      | CDiskMultiSector |
+                      +------------------+
+                      | Resize           |
+                      +------------------+
+                               ^
+           +-------------------+------------------------+
+           |                   |                        |
+   +-------------+     +---------------+     +---------------------+
+   | CDataSector |     | CBitmapSector |     | CDiskInfoSector     |
+   +-------------+     +---------------+     +---------------------+
+   | SetLocation |     | Merge         |     | GetTotalSectorCount |
+   +-------------+     +---------------+     | GetModelName        |
+                                             | GetSerialNo         |
+                                             | IsValidSignature    |
+                                             | IsValid             |
+                                             | IsBlockV2           |
+                                             |     .               |
+                                             |     .               |
+                                             |     .               |
+                                             +---------------------+
+                                                        ^
+                                +-----------------------+
+                                |
+                    +----------------------+
+                    | CTypedDiskInfoSector |
+                    +----------------------+
+                    | operator->           |
+                    | get                  |
+                    +----------------------+
+                                ^
+              +-----------------+----------------+
+              |                                  |
+       +------------+                     +--------------+
+       | CDIBSector |                     | CDIBSectorV2 |
+       +------------+                     +--------------+
+	

@@ -1,0 +1,29 @@
+11-15-2003	NetDisk S/W 2.2.0 Build 505 - 2.2.0 International Pre-release
+	- added multiple languages support (English, Spanish, German, French, Italian, Korean and Japanese)
+
+11-13-2003	NetDisk S/W 2.2.0 Bulid 504 - 2.2.0 US Release
+	- fixed Admin Tool shows wrong status of NetDisk.
+	- improved stability on multi-processor PCs.
+	- Increased stability for file transfers.
+	- fixed NetDisk is not transformed to Windows dynamic disk.
+	- fixed system crash when a NIC is disabled and enabled.
+	- fixed minor bugs.
+
+10-26-2003 	NetDisk S/W 2.1.4.4
+        - Fixed some minor bugs
+        - Enhanced stability of the data transfer
+	- Enhanced support for multilingual interfaces
+        - Reduced the size of the Setup
+
+09-25-2003	NetDisk S/W 2.1.4beta2
+	- support for IEEE802.3 type such as Linksys 802.11b router.
+
+09-18-2003	NetDisk S/W 2.1.4beta1
+	- Reboot is no longer required for the first-time installation.
+	- Updated to check installation pending status to ensure the proper installation.
+	- does not delay booting process on Windows XP.
+	- Fixed splash screen to show the close button upper right in higher DPI screens.
+	- Updated to support SMP and Hyperthreading machines.
+	- Fixed some minor bugs.
+	- support for hibernation mode.
+

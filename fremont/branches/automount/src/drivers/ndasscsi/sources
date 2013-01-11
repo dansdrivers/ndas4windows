@@ -1,0 +1,61 @@
+TARGETNAME=ndasscsi
+TARGETTYPE=MINIPORT
+TARGETPATH=obj
+
+BUILD_PRODUCES=ndasscsi
+BUILD_CONSUMES=libndask liblpxtdi libscrc32 libhash libaes
+
+# We do not support interrupt after NDASDRV 3.07 version.
+# INTERRUPT_SUPPORT1=interruptsupport
+
+# Use dummy IRPs to complete SRBs.
+COMPLETION=completion
+
+!IFDEF COMPLETION
+C_DEFINES=-D__COMPLETION__
+!ENDIF
+
+INCLUDES=$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/O2
+!ELSE
+!ENDIF
+
+SOURCES=ndasscsi.c  \
+        ndscioctl.c \
+        ndsccomp.c  \
+        ndasscsi.rc
+
+TARGETLIBS=\
+    $(DDK_LIB_PATH)\hal.lib     \
+    $(DDK_LIB_PATH)\ntoskrnl.lib \
+    $(DDK_LIB_PATH)\tdi.lib     \
+    $(DDK_LIB_PATH)\scsiport.lib \
+    $(DDK_LIB_PATH)\scsiwmi.lib \
+    $(DDK_LIB_PATH)\bufferoverflowK.lib \
+    $(DDK_LIB_PATH)\ntstrsafe.lib \
+    $(NDAS_LIB_PATH)\libhash.lib \
+    $(NDAS_LIB_PATH)\libaes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+    $(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib \
+    $(NDAS_DRIVER_LIB_PATH)\libndask.lib
+
+# Set INF File Version
+NTTARGETFILES=
+INFFILENAME=$(TARGETNAME)
+CDFFILENAME=$(INFFILENAME)
+
+INFSRCNAME=$(INFFILENAME)
+CDFSRCNAME=$(CDFFILENAME)
+!if exists($(INFFILENAME).$(TARGET_DIRECTORY).inf)
+INFSRCNAME=$(INFSRCNAME).$(TARGET_DIRECTORY)
+!endif
+!if exists($(INFFILENAME).$(TARGET_DIRECTORY).cdf)
+CDFSRCNAME=$(CDFSRCNAME).$(TARGET_DIRECTORY)
+!endif
+
+MISCFILES=$(O)\$(INFFILENAME).inf $(O)\$(CDFFILENAME).cdf
+
+C_DEFINES=$(C_DEFINES) -DUNICODE

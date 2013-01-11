@@ -1,0 +1,18 @@
+// Do not open this file from Resource Editor
+#ifndef APSTUDIO_INVOKED
+#include <windows.h>
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+#include "ndasverp.h"
+
+#define VER_FILETYPE			VFT_DLL
+#define VER_FILESUBTYPE			VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR "NDAS AutoPlay Config Proxy Stub"
+#define VER_INTERNALNAME_STR	"ndasapcm_ps.dll"
+
+#include "ndascommon.ver"
+
+#endif    // not APSTUDIO_INVOKED
+

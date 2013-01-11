@@ -1,0 +1,10 @@
+
+!if exists(.\oemconfig.inc)
+!include oemconfig.inc
+!endif
+
+WIX_OEM_LOC=.\oem.wxl
+#LIGHTFLAGS=$(LIGHTFLAGS) -i $(O)\uncompressed
+WIX_TARGET=$(O)\uncomp\$(TARGETNAME)
+
+!include ..\sources.inc

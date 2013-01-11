@@ -1,0 +1,2 @@
+DIRS= xdi xdimsi ndasmsiu setup
+OPTIONAL_DIRS=.

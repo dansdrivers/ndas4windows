@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization>
+  <String Id="Manufacturer">XIMETA, Inc.</String>
+  <String Id="Description">NDAS System Component Merge Module</String>
+  <String Id="Comments">NDAS System Component Merge Module</String>
+</WixLocalization>

@@ -1,0 +1,7 @@
+//
+// NDASMGMT Version is same as Product Version
+//
+// #define VER_FILEMAJORVERSION	3
+// #define VER_FILEMINORVERSION	11
+// #define VER_FILEBUILD			1302
+// #define VER_FILEBUILD_QFE		0

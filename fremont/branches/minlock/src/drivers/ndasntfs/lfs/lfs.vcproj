@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="lfs"
+	ProjectGUID="{D6DE4645-6C68-4F6F-8CEA-3CBFB07164FA}"
+	RootNamespace="lfs"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+		<Platform
+			Name="x64" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\Release"
+			IntermediateDirectory=".\Release"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild -WINXP fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild -WINXP fre . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild -WINXP fre . -c0i"
+				Output="lfs.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="lfs.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\Debug"
+			IntermediateDirectory=".\Debug"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild -WINXP chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild -WINXP chk . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild -WINXP chk . -c0i"
+				Output="lfs.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="lfs.lib"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File
+				RelativePath="cachesup.c"></File>
+			<File
+				RelativePath="lbcbsup.c"></File>
+			<File
+				RelativePath="lfsdata.c"></File>
+			<File
+				RelativePath="logpgsup.c"></File>
+			<File
+				RelativePath="logrcsup.c"></File>
+			<File
+				RelativePath="lsnsup.c"></File>
+			<File
+				RelativePath="querylog.c"></File>
+			<File
+				RelativePath="registry.c"></File>
+			<File
+				RelativePath="restart.c"></File>
+			<File
+				RelativePath="rstrtsup.c"></File>
+			<File
+				RelativePath="strucsup.c"></File>
+			<File
+				RelativePath="sysinit.c"></File>
+			<File
+				RelativePath="verfysup.c"></File>
+			<File
+				RelativePath="write.c"></File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl">
+			<File
+				RelativePath="lfsdata.h"></File>
+			<File
+				RelativePath="lfsdisk.h"></File>
+			<File
+				RelativePath="lfsprocs.h"></File>
+			<File
+				RelativePath="lfsstruc.h"></File>
+			<File
+				RelativePath="nodetype.h"></File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"></Filter>
+		<File
+			RelativePath="dirs"></File>
+		<File
+			RelativePath="mp\lfs.bsc"></File>
+		<File
+			RelativePath="lfs.dsp"></File>
+		<File
+			RelativePath="lfsques.txt"></File>
+		<File
+			RelativePath="mp\sources"></File>
+		<File
+			RelativePath="sources.inc"></File>
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

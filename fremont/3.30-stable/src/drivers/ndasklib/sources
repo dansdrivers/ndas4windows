@@ -1,0 +1,40 @@
+TARGETNAME=libndask
+TARGETTYPE=DRIVER_LIBRARY
+TARGETPATH=obj
+
+AMD64_WARNING_LEVEL=/W3 /Wp64 -wd4296 /WX
+# -Wp64 will not work with ntddk.h for w2k,wxp headers
+386_WARNING_LEVEL=/W3 /WX
+
+MSC_OPTIMIZATION=
+
+BUILD_PRODUCES=libndask
+
+C_DEFINES = $(C_DEFINES) -DUNICODE
+
+
+INCLUDES=$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+
+SOURCES= lsccb.c			\
+		 lslurn.c			\
+		 lurnata.c			\
+		 ndasprotoata.c		\
+		 kdebug.c			\
+		 lsutils.c			\
+		 cipher.c			\
+		 devreg.c			\
+		 ndasdebug.c		\
+		 lurnatapidev.c		\
+		 lurnatadev.c		\
+		 lurnndasraid.c		\
+		 ndasrclient.c		\
+		 ndasrarbitrator.c	\
+		 lockmgmt.c			\
+		 ndastransport.c	\
+		 ndasproto.c		\
+		 ndasflowcontrol.c	\
+		 
+
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_DRIVER_LIB_PATH)\$(TARGETNAME).lib}
+
+PRECOMPILED_INCLUDE=ndasscsiproc.h

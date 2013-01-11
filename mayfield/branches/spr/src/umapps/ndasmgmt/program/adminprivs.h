@@ -1,0 +1,5 @@
+#pragma once
+
+BOOL
+CheckForAdminPrivs();
+

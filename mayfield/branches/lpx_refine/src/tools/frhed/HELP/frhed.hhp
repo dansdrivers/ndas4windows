@@ -1,0 +1,20 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=frhed.chm
+Contents file=frhed.hhc
+Default topic=index.htm
+Default Window=main
+Display compile progress=No
+Full-text search=Yes
+Index file=frhed.hhk
+Language=0x407 German (Germany)
+Title=frhed
+
+[FILES]
+
+[WINDOWS]
+main="frhed","frhed.hhc","frhed.hhk","index.htm","http://www.kibria.de/frhed.html",,,,,0x2520,,0x304e,,,,,,,,0
+
+[INFOTYPES]
+
+

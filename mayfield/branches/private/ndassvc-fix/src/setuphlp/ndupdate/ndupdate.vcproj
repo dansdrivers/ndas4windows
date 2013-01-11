@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ndupdate"
+	ProjectGUID="{D2088912-157A-49FA-84C4-BC190BAA679C}"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\ddkbuild -WNET2K chk . -e"
+				ReBuildCommandLine="..\..\..\bin\ddkbuild -WNET2K chk . -ceZ"
+				CleanCommandLine="..\..\..\bin\ddkbuild -WNET2K chk . -c0"
+				Output="apitest\objchk_w2k_x86\i386\ndupdate.exe"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\ddkbuild -wnet2k fre . -e"
+				ReBuildCommandLine="..\..\..\bin\ddkbuild -wnet2k fre . -ceZ"
+				CleanCommandLine="..\..\..\bin\ddkbuild -wnet2k fre . -c0"
+				Output="ndaspat.exe"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\dllentry.cpp">
+			</File>
+			<File
+				RelativePath=".\ndupdate.cpp">
+			</File>
+			<File
+				RelativePath=".\ndupdate.src">
+			</File>
+			<File
+				RelativePath=".\stdafx.cpp">
+			</File>
+			<File
+				RelativePath=".\updateui.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\resource.h">
+			</File>
+			<File
+				RelativePath=".\stdafx.h">
+			</File>
+			<File
+				RelativePath=".\updateui.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\ndupdate.jpn.rc">
+			</File>
+			<File
+				RelativePath=".\ndupdate.kor.rc">
+			</File>
+			<File
+				RelativePath=".\ndupdate.rc">
+			</File>
+		</Filter>
+		<Filter
+			Name="dll"
+			Filter="">
+			<File
+				RelativePath=".\dll\makefile">
+			</File>
+			<File
+				RelativePath=".\dll\sources">
+			</File>
+		</Filter>
+		<Filter
+			Name="slib"
+			Filter="">
+			<File
+				RelativePath=".\slib\makefile">
+			</File>
+			<File
+				RelativePath=".\slib\sources">
+			</File>
+		</Filter>
+		<Filter
+			Name="apitest"
+			Filter="">
+			<File
+				RelativePath=".\apitest\apitest.cpp">
+			</File>
+			<File
+				RelativePath=".\apitest\makefile">
+			</File>
+			<File
+				RelativePath=".\apitest\sources">
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\dirs">
+		</File>
+		<File
+			RelativePath=".\ndasupdate.ini">
+		</File>
+		<File
+			RelativePath=".\sources.inc">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

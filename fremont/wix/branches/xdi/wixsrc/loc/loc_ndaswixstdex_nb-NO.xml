@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="COND_X64_IS_NOT_SUPPORTED">
+    <base>This setup package is for 32-bit version of Windows. Please install the 64-bit version of this software.</base>
+    <translation>Denne installasjonspakken er for 32-biters versjoner av Windows. Installer en 64-biters versjon av denne programvaren.</translation>
+  </string>
+  <string id="COND_REQUIRE_WIN2000">
+    <base>[ProductName] requires that your computer is running Windows 2000, Windows XP or Windows 2003 Server.</base>
+    <translation>[ProductName] krever at datamaskinen kjører Windows 2000, Windows XP eller Windows 2003 Server.</translation>
+  </string>
+  <string id="COND_NOT_PRIVILEGED">
+    <base>You do not have sufficient privileges to complete this installation. Log on as an administrator and then retry this installation.</base>
+    <translation>Du har ikke tilstrekkelige rettigheter til å fullføre denne installasjonen. Logg deg på som administrator, og prøv deretter å installere på nytt.</translation>
+  </string>
+  <string id="ProductName64Suffix">
+    <base> (64-bit Windows)</base>
+    <translation>(64-biters Windows)</translation>
+  </string>
+  <string id="Text.SetupVersion">
+    <base>[NdasSetupVersion]</base>
+    <translation>[NdasSetupVersion]</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText2">
+    <base>It is recommended that this product is used in 100Mbps wired LAN or 802.11g/a wireless LAN environment.</base>
+    <translation>Det anbefales at produktet brukes i et miljø med 100Mbps kablet LAN eller 802.11g/a trådløst LAN.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText1">
+    <base>If you are using this product in a wired 10Mbps LAN or wireless 802.11b LAN environment, there is a possiblity of data transmit error or unstable connection.</base>
+    <translation>Hvis du bruker dette produktet i et miljø med kablet 10Mbps LAN eller trådløst 802.11b LAN, kan resultatet være dataoverføringsfeil eller ustabil tilkobling.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeGroupBox">
+    <base>Notice</base>
+    <translation>Merknad</translation>
+  </string>
+  <string id="SFWarning.SFWarnCheck">
+    <base>I &amp;acknowledge this warning message.</base>
+    <translation>Jeg &amp;godtar denne varselmeldingen.</translation>
+  </string>
+  <string id="SFWarning.DlgDesc">
+    <base>Setup detected a software.</base>
+    <translation>Installasjonsprogrammet oppdaget en programvare.</translation>
+  </string>
+  <string id="SFWarning.DlgTitle">
+    <base>{&amp;MSSansBold8}Compatibility Warning</base>
+    <translation>{&amp;MSSansBold8}Kompatibilitetsadvarsel</translation>
+  </string>
+  <string id="SFWarning.MemoLine1">
+    <base>{&amp;Arial8BoldBlue}Setup has found that StarForce Copy Protection software is installed in your system. Some old versions of this software may cause a system crash for using thirdy party storage device drivers.</base>
+    <translation>{&amp;Arial8BoldBlue}Installasjonsprogrammet har oppdaget at programvaren StarForce Copy Protection er installert i systemet. Enkelte eldre versjoner av denne programvaren kan føre til systemkrasj ved bruk av tredjeparts lagringsenhetsdrivere.</translation>
+  </string>
+  <string id="SFWarning.MemoLine2">
+    <base>It is highly recommended to update the StarForce Copy Protection software before proceeding the installation. Check the web site of the Protection Technology (http://www.star-force.com) for the updates.</base>
+    <translation>Det anbefales strekt at du oppdaterer programvaren StarForce Copy Protection før du fortsetter installasjonen. Gå til webområdet for Protection Technology (http://www.star-force.com) for å få oppdateringer.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgDesc">
+    <base>Setup has found a previous version of the software.</base>
+    <translation>Installasjonsprogrammet har funnet en tidligere versjon av programvaren.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgTitle">
+    <base>{&amp;MSSansBold8}Upgrade Confirmation</base>
+    <translation>{&amp;MSSansBold8}Oppgraderingsbekreftelse</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine1">
+    <base>Setup has found a previous version of the software and will perform an upgrade. During an upgrade, you may have to reboot the system twice.</base>
+    <translation>Installasjonsprogrammet har funnet en tidligere versjon av programvaren og vil utføre en oppgradering. Det kan hende du må starte systemet på nytt to ganger under oppgraderingen.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine2">
+    <base>To ensure proper operation, please do not interrupt the system reboot and follow the instructions until the setup is completed.</base>
+    <translation>For å sikre at operasjonen utføres riktig må du ikke avbryte når systemet startes på nytt, og du må følge instruksjonene til installasjonen er fullført.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine3">
+    <base>Click Next to continue installation.</base>
+    <translation>Klikk Neste for å fortsette installasjonen.</translation>
+  </string>
+  <string id="Error.25900">
+    <base>Newer version of the software is already installed. If you have to downgrade the software, uninstall the higher version software first.</base>
+    <translation>En nyere versjon av programvaren er allerede installert. Hvis du vil nedgradere programvaren, må du avinstallere den høyere versjonen først.</translation>
+  </string>
+  <string id="Error.27500">
+    <base>This setup requires Internet Information Server 4.0 or higher for configuring IIS Virtual Roots. Please make sure that you have IIS 4.0 or higher.</base>
+    <translation>Denne installasjonen krever Internet Information Server 4.0 eller høyere for konfigurasjon av IIS Virtual Roots. Sørg for at du har IIS 4.0 eller høyere.</translation>
+  </string>
+  <string id="Error.27501">
+    <base>This setup requires Administrator privileges for configuring IIS Virtual Roots.</base>
+    <translation>Denne installasjonen krever administratorrettigheter for konfigurasjon av IIS Virtual Roots.</translation>
+  </string>
+</localization>

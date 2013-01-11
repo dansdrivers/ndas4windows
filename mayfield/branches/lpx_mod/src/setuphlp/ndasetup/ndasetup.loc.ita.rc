@@ -1,0 +1,79 @@
+#ifndef APSTUDIO_INVOKED
+
+#include <windows.h>
+#include "resource.h"
+#pragma code_page(1252)
+
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+
+IDR_INSTALL_BUTTON_MENU MENU 
+BEGIN
+    POPUP "{Menu}"
+    BEGIN
+        MENUITEM "&Avvio (inglese)",	ID_INSTALL_ENU
+        MENUITEM "&Avvio (cinese RPC)", ID_INSTALL_CHS
+        MENUITEM "&Avvio (tedesco)",		ID_INSTALL_DEU
+        MENUITEM "&Avvio (spagnolo)",	ID_INSTALL_ESN
+        MENUITEM "&Avvio (francese)",		ID_INSTALL_FRA
+        MENUITEM "&Avvio (italiano)",	ID_INSTALL_ITA
+        MENUITEM "&Avvio (giapponese)",	ID_INSTALL_JPN
+        MENUITEM "&Avvio (coreano)",		ID_INSTALL_KOR
+        MENUITEM "&Avvio (Portoghese)",	ID_INSTALL_PTG
+    END
+END
+
+IDD_INIT_SETUP DIALOGEX 0, 0, 284, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Avvio configurazione software NDAS"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Avvio",IDOK,144,119,81,14
+    PUSHBUTTON      "E&sci",IDCANCEL,229,119,50,14
+    CONTROL         "Verifica aggiornamenti software disponibili",IDC_CHECK_UPDATE,"Pulsante",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,121,128,10
+    CONTROL         "",IDC_STATIC,"Statico",SS_ETCHEDHORZ,0,111,283,1
+    ICON            IDI_INSTALLER,IDC_STATIC,9,10,20,20
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,45,90,232,
+                    14
+    LTEXT           "Benvenuti nella procedura guidata d'installazione del software NDAS (Installer)",IDC_BANNER_TEXT,
+                    45,15,217,46
+    LTEXT           "{Action Text Placeholder}",IDC_ACTION_TEXT,46,72,230,10
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ndasetup"
+    IDS_INITIALIZE          "Inizializzazione dell'installazione in corso..."
+    IDS_CANCEL              "Annul&la"
+    IDS_EXIT                "E&sci"
+    IDS_INSTALL             "&Avvio"
+    IDS_ERR_LOADMSI         "Caricamento di Windows Installer API non riuscita."
+    IDS_ERR_FORMAT          "Errore 0x%1!08X!\r\n%2!s!"
+    IDS_SETUP               "Configurazione software NDAS"
+    IDS_UPDATE_AVAILABLE_FMT	"E' disponibile una nuova versione del software %1!s! .\r\nProcedere al download?"
+    IDS_UPDATE_URL          "http://updates.ximeta.com/update/"
+    IDS_ERR_CHECK_UPDATE    "Collegamento al server per l'aggiornamento non riuscita."
+    IDS_BSC_BEGINDOWNLOADING "Download dei dati dal server in corso..."
+    IDS_BSC_CONNECTING      "Collegamento al server in corso..."
+    IDS_BSC_ENDDOWNLOADDATA "Download completato."
+    IDS_ERR_DOWNLOAD_UPDATE "Download dell'aggiornamento dal server non riuscito."
+    IDS_ERR_RUN_UPDATE      "Esecuzione dell'aggiornamento del setup non riuscita."
+    IDS_ACTION_CHECK_UPDATE "Controllo degli aggiornamenti disponibili del software dal server in corso..."
+    IDS_ERR_OUTOFMEM        "Memoria esaurita"
+    IDS_MSI_DATABASE        "ndas.msi"
+    IDS_EXE_FILES           "File eseguibili"
+    IDS_ACTION_UPGRADE_MSI  "Aggiornamento di Windows Installer in corso..."
+    IDS_ACTION_START_MSI    "Avvio di Windows Installer in corso..."
+    IDS_NOUPDATE_FMT        "Impossibile per il setup trovare il file  '%1!s!'."
+    IDS_INVALID_PATH_FMT    "Percorso '%1' non valido."
+    IDS_INCORRECT_UPDATE_FMT "Il pacchetto di aggiornamenoi fornito '%1' non è valido."
+    IDS_FAILED_TO_UPGRADE_MSI	"Impossibile per il setup aggiornare Windows Installer."
+    IDS_ACTION_CHECK_MSI	"Controllo di  Windows Installer in corso..."
+    IDS_ERR_CACHING_TO_SYSTEM_FMT	"Caching del file MSI su '%1' non riuscita.\r\nVerificare di disporre dei permessi necessari a copiare i file in quella directory."
+    IDS_ACTION_CACHE_MSI    "Caching del file MSI in corso..."
+    IDS_ERR_CACHE_MSI_FAILED	"Caching del file MSI non riuscito."
+	IDS_ERR_REQUIRES_WINDOWS2000	"Pacchetto di setup installabile su OS Windows 2000 o versioni superiori.\r\nEseguire gli altri pacchetti di setup disponibili per il sistema operativo in uso!"
+	IDS_ERR_REQUIRES_ADMIN_PRIV 	"Questo pacchetto di configurazione richiede privilegi di Amministratore del sistema.\r\nAccedere con un account Amministratore ed eseguire nuovamente l’applicazione."
+END
+
+#endif    // APSTUDIO_INVOKED

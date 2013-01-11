@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+		 DefaultTargets="Build">
+
+	<Import Project="excluded.items" Condition="exists('excluded.items')"/>
+	
+	<ItemGroup>
+		<ChildProject Include="**\loc.proj" Exclude="@(ExcludedProject)"/>
+	</ItemGroup>
+
+	<Target Name="Build">
+		<MSBuild Targets="Build" Projects="%(ChildProject.identity)" Properties="Platform=x86"/>
+		<MSBuild Targets="Build" Projects="%(ChildProject.identity)" Properties="Platform=x64"/>
+	</Target>
+
+	<Target Name="Rebuild">
+		<MSBuild Targets="Rebuild" Projects="%(ChildProject.identity)" Properties="Platform=x86"/>
+		<MSBuild Targets="Rebuild" Projects="%(ChildProject.identity)" Properties="Platform=x64"/>
+	</Target>
+
+	<Target Name="Clean">
+		<MSBuild Targets="Clean" Projects="%(ChildProject.identity)" Properties="Platform=x86"/>
+		<MSBuild Targets="Clean" Projects="%(ChildProject.identity)" Properties="Platform=x64"/>
+	</Target>
+
+	<Target Name="DistClean">
+		<MSBuild Targets="DistClean" Projects="%(ChildProject.identity)" Properties="Platform=x86"/>
+		<MSBuild Targets="DistClean" Projects="%(ChildProject.identity)" Properties="Platform=x64"/>
+	</Target>
+
+</Project>

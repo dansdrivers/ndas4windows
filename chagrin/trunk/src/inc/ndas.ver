@@ -1,0 +1,6 @@
+#define VER_PRODUCTMAJORVERSION     4
+#define VER_PRODUCTMINORVERSION     0
+#define VER_PRODUCTBUILD            2001
+#define VER_PRODUCTBUILD_QFE        0
+
+#define VER_PRODUCTBETA_STR         ""

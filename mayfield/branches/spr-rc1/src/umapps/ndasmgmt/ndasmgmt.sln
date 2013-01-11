@@ -1,0 +1,34 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndasmgmt", "program\ndasmgmt.vcproj", "{F42DAA8A-2A43-4F8A-818D-CFDB1AEB7C48}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndasmgmtres", "resource\ndasmgmtres.vcproj", "{6D2AEFEE-3694-4291-AA9B-84DA01A45EC7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F42DAA8A-2A43-4F8A-818D-CFDB1AEB7C48}.Debug.ActiveCfg = Debug|Win32
+		{F42DAA8A-2A43-4F8A-818D-CFDB1AEB7C48}.Debug.Build.0 = Debug|Win32
+		{F42DAA8A-2A43-4F8A-818D-CFDB1AEB7C48}.Release.ActiveCfg = Release|Win32
+		{F42DAA8A-2A43-4F8A-818D-CFDB1AEB7C48}.Release.Build.0 = Release|Win32
+		{6D2AEFEE-3694-4291-AA9B-84DA01A45EC7}.Debug.ActiveCfg = Debug|Win32
+		{6D2AEFEE-3694-4291-AA9B-84DA01A45EC7}.Debug.Build.0 = Debug|Win32
+		{6D2AEFEE-3694-4291-AA9B-84DA01A45EC7}.Release.ActiveCfg = Release|Win32
+		{6D2AEFEE-3694-4291-AA9B-84DA01A45EC7}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

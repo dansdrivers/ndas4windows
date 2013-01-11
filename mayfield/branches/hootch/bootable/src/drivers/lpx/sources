@@ -1,0 +1,70 @@
+TARGETNAME=lpx
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+LPX=lpx
+MINORCOMP=lpx
+NETDISK_BINPLACE_TYPE=sys
+
+TARGETLIBS=$(DDK_LIB_PATH)\tdi.lib \
+           $(DDK_LIB_PATH)\ndis.lib
+
+C_DEFINES=-D__LPX__ -D__VERSION_CONTROL__ -DNDIS40 -D_PNP_POWER_ -DNDIS_POOL_TAGGING=1
+
+!IFDEF XP
+C_DEFINES=-D__XP__ $(C_DEFINES)
+!ENDIF
+
+AMD64_WARNING_LEVEL=/W3 /WX /Wp64 -wd4296
+# -Wp64 will not work with ntddk.h for w2k,wxp headers
+386_WARNING_LEVEL=/W3 /WX
+
+INCLUDES=$(NDAS_DRIVER_INC_PATH);$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+PRECOMPILED_INCLUDE=precomp.h
+PRECOMPILED_PCH=precomp.pch
+PRECOMPILED_OBJ=precomp.obj
+
+SOURCES=address.c \
+        connect.c \
+        devctx.c \
+        event.c \
+        info.c \
+        lpx.rc \
+        lpxcnfg.c \
+        lpxdrvr.c \
+        lpxmac.c \
+        lpxndis.c \
+        lpxpnp.c    \
+        rcv.c \
+        request.c \
+        send.c \
+        lpx.c \
+        lpxpacket.c
+
+#
+# CDF Copy
+#
+NTTARGETFILES=cdfcopy
+!IF "$(_BUILDARCH)" == "AMD64"
+CDFSRCFILE=netlpx.amd64.cdf
+!ELSE
+CDFSRCFILE=netlpx.cdf
+!ENDIF
+CDFFILE=$(O)\netlpx.cdf
+
+#
+# Set INF File Version
+#
+
+INFFILENAME=netlpx
+!IF "$(_BUILDARCH)" == "AMD64"
+INFSRCNAME=$(INFFILENAME).amd64
+!ELSE
+INFSRCNAME=$(INFFILENAME)
+!ENDIF
+
+POST_BUILD_CMD=$(NDAS_TOOLS)\setinfver $(O)\$(TARGETNAME).sys $(INFSRCNAME).inf $(O)\$(INFFILENAME).inf
+BINPLACE_FLAGS=$(O)\$(INFFILENAME).inf $(CDFFILE)
+

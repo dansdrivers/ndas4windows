@@ -1,0 +1,7 @@
+TARGETNAME=libndasbusctl
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+BUILD_PRODUCES=libndasbusctl
+
+!include ..\sources.inc

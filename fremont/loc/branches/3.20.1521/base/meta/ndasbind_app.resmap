@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resmap module="ndasbind_app">
+  <resource type="ICON_GROUP" name="#128" fileName="ndasbind.ico" symbolName="IDR_MAINFRAME" />
+</resmap>

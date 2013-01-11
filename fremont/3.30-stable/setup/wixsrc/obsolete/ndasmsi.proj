@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<WixToolPath>..\bin\wix-2.0.4820.0</WixToolPath>
+		<OutputName>ndas</OutputName>
+		<OutputType>package</OutputType>
+		<ToolPath>$(WixToolPath)</ToolPath>
+		<Configuration Condition=" '$(Configuration)' == '' ">chk</Configuration>
+		<AltOutputBase Condition=" '$(AltOutputBase)' == '' ">devel</AltOutputBase>
+		<OutputPath Condition=" '$(OutputPath)' == '' ">bin\$(AltOutputBase)\$(Configuration)\</OutputPath>
+		<IntermediateOutputPath Condition=" '$(IntermediateOutputPath)' == '' ">obj\$(AltOutputBase)\$(Configuration)\</IntermediateOutputPath>
+		<BinPubConfig Condition=" '$(BinPubConfig)' == '' ">$(Configuration)</BinPubConfig>
+		<DefineConstants Condition="'$(Platform)'=='amd64'">Win64Build=1</DefineConstants>
+		<DefineConstants>$(DefineConstants);NdasMsiVersion=3.30.1601</DefineConstants>
+		<DefineConstants>$(DefineConstants);NdasMsiDisplayVersion=3.30.1601</DefineConstants>
+		<DefineConstants>$(DefineConstants);NdasMsiVersionValue=330</DefineConstants>
+		<DefineConstants>$(DefineConstants);ExternalMergeModulePath=..\supplements\msm</DefineConstants>
+		<DefineConstants>$(DefineConstants);BinPubConfig=$(BinPubConfig)</DefineConstants>
+		<!-- <CompileObjOutput>obj\Debug\</CompileObjOutput> -->
+		<VerboseOutputLevel>0</VerboseOutputLevel>
+		<LinkerVerboseOutputLevel>0</LinkerVerboseOutputLevel>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--<Compile Include="*.wxs" />-->
+		<Compile Include="ndasmsi.wxs" />
+		<Compile Include="xdi.wxs" />
+		<Compile Include="directories.wxs" />
+		<Compile Include="icon.wxs" />
+		<Compile Include="binary.wxs" />
+		<Compile Include="components\*.wxs" />
+		<Compile Include="ui\*.wxs" />
+		<!--<WixLibrary Include="$(WixToolPath)\wixui.wixlib" />-->
+		<!--<LocalizedStringFile Include="$(WixToolPath)\WixUI_en-US.wxl" />-->
+		<LocalizedStringFile Include="*.wxl" />
+		<LocalizedStringFile Include="ui\*.wxl" />
+		<IncludeSearchPath Include="." />
+	</ItemGroup>
+
+	<Import Project="..\bin\msbuild\wix2.targets" />
+
+	<Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+
+</Project>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Include>
+
+	<!--<?ifndef XdimsiFileSource?>
+	<?define XdimsiFileSource="..\..\..\publish\$(var.BinPubConfig)\$(var.BinPubArch)\setup"?>
+	<?endif?>
+	
+	<?ifndef XixfsMsiFileSource?>
+	<?define XixfsMsiFileSource="..\..\..\publish\$(var.BinPubConfig)\$(var.BinPubArch)\setup"?>
+	<?endif?>-->
+
+	<!-- PHASE 3 -->
+
+	<?define Sequence.XIXFS.Stop    = 110?>
+	<?define Sequence.NDASFAT.Stop  = 120?>
+	<?define Sequence.NDASNTFS.Stop = 130?>
+	<?define Sequence.LFSFILT.Stop  = 140?>
+	<?define Sequence.NDASFS.Stop   = 150?>
+
+	<!-- PHASE 1 -->
+
+	<?define Sequence.XIXFS.Uninstall    = 100?>
+	<?define Sequence.NDASFAT.Uninstall  = 120?>
+	<?define Sequence.NDASNTFS.Uninstall = 130?>
+	<?define Sequence.LFSFILT.Uninstall  = 200?>
+	<?define Sequence.NDASFS.Uninstall   = 300?>
+	<?define Sequence.NDASSCSI.Uninstall = 400?>
+	<?define Sequence.NDASBUS.Uninstall  = 500?>
+	<?define Sequence.NDASPORT.Uninstall = 600?>
+	<?define Sequence.NDASDLU.Stop       = 700?>
+	<?define Sequence.NDASDLU.Uninstall  = 710?>
+	<?define Sequence.LPX.Stop           = 900?>
+	<?define Sequence.LPX.Uninstall      = 910?>
+
+	<?define Sequence.XIXFS.Cleanup    = 1000?>
+	<?define Sequence.NDASFAT.Cleanup  = 1100?>
+	<?define Sequence.NDASNTFS.Cleanup = 1200?>
+	<?define Sequence.NDASSCSI.Cleanup = 1300?>
+	<?define Sequence.NDASBUS.Cleanup  = 1400?>
+	<?define Sequence.NDASDLU.Cleanup  = 1500?>
+	<?define Sequence.NDASPORT.Cleanup = 1600?>
+	<?define Sequence.LPX.Cleanup      = 1700?>
+
+	<!-- PHASE 2 -->
+
+	<?define Sequence.LPX.Install      = 1000?>
+	<?define Sequence.NDASPORT.Install = 1100?>
+	<?define Sequence.NDASDLU.Install  = 1200?>
+	<?define Sequence.NDASBUS.Install  = 1300?>
+	<?define Sequence.NDASSCSI.Install = 1400?>
+	<?define Sequence.NDASFS.Install   = 1500?>
+	<?define Sequence.LFSFILT.Install  = 1600?>
+	<?define Sequence.NDASNTFS.Install = 1700?>
+	<?define Sequence.NDASFAT.Install  = 1800?>
+	<?define Sequence.XIXFS.Install    = 1900?>
+
+	<!-- PHASE 4 -->
+	
+	<?define Sequence.LPX.Start     = 100?>
+	<?define Sequence.NDASFS.Start  = 200?>
+	<?define Sequence.LFSFILT.Start = 300?>
+	<?define Sequence.NDASNTFS.Start= 400?>
+	<?define Sequence.NDASFAT.Start = 500?>
+	<?define Sequence.XIXFS.Start   = 600?>
+	<?define Sequence.NDASDLU.Start = 700?>
+	<?define Sequence.NDASSVC.Start = 800?>
+
+	<!-- SKU Control -->
+
+	<?define Include.LPX = 1?>
+	<?define Include.NDASIOMG = 1?>
+
+	<?ifdef SKU.NDASSCSI ?>
+	<?define Include.NDASBUS = 1?>
+	<?define Include.NDASSCSI = 1?>
+	<?endif?>
+
+	<?ifdef SKU.NDASPORT ?>
+	<?define Include.NDASPORT = 1?>
+	<?define Include.NDASDLU = 1?>	
+	<?endif?>
+
+	<?ifdef SKU.LFSFILT ?>
+	<?define Include.NDASFS = 1?>
+	<?define Include.LFSFILT = 1?>
+	<?endif?>
+
+	<?ifdef SKU.NDASFAT ?>
+	<?define Include.NDASFAT = 1?>
+	<?endif?>
+	
+	<?ifdef SKU.NDASNTFS?>
+	<?define Include.NDASNTFS = 1?>
+	<?endif?>
+	
+	<?ifdef SKU.XIXFS ?>
+	<?define Include.XIXFS = 1?>
+	<?define Include.XIXFSFORMATTER = 1?>
+	<?define Include.XIXFSFORMATTER_EXTRA_DEPS = 1?>
+	<?endif?>
+	
+</Include>

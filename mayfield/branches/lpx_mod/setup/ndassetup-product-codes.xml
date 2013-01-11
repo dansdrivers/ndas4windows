@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<product-codes>
+    <product-code version="3.10.1214">{16BC2F9F-5D32-484b-9D33-752FFA6DFB57}</product-code>
+    <product-code version="3.10.1215">{292FA0CA-1025-42c8-939A-8E5B6800C9DA}</product-code>
+    <product-code version="3.10.1216">{2EDD3692-FA4E-41A0-B482-6208A4125D1E}</product-code>
+    <!-- since 3.10.1217, we are using sequential product code for incremental builds -->
+    <product-code version="3.10.1217">{D9A342F8-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1218">{D9A342F9-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1219">{D9A342FA-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1220">{D9A342FB-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1221">{D9A342FC-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1222">{D9A342FD-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1223">{D9A342FE-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <product-code version="3.10.1224">{D9A342FF-A7E3-4FDE-ADDA-B7DFD264080A}</product-code>
+    <!-- 9999.9999.9999.9999 is a base product code for testing purpose only -->
+    <product-code version="9999.9999.9999.9999">{E7942563-7627-4837-BBB5-E20826C722D5}</product-code>
+</product-codes>

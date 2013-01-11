@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<projectDefinition>
+  <project>
+    <name>_inc_ndas_setup</name>
+    <type>none</type>
+    <exclude>(^public$)|(^boost$)|(^obsolete$)</exclude>
+  </project>
+</projectDefinition>

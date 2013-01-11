@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+
+	<Fragment>
+
+		<DirectoryRef Id="NdasProgramMenuFolder">
+			<Component Id="NdasProgramMenuFolder" Guid="$(var.NdasProgramMenuFolder_GUID)" Win64="$(var.Win64.YesNo)">
+				<RemoveFolder Id="NdasProgramMenuFolder" Directory="NdasProgramMenuFolder" On="uninstall" />
+				<Registry Root="HKCU" Key="SOFTWARE\NDAS\Components\pmenugroup" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+
+		<?ifdef UseProgramMenuCompanyFolder?>
+		<DirectoryRef Id="NdasProgramMenuCompanyFolder">
+			<Component Id="NdasProgramMenuCompanyFolder" Guid="$(var.NdasProgramMenuCompanyFolder_GUID)" Win64="$(var.Win64.YesNo)">
+				<RemoveFolder Id="NdasProgramMenuCompanyFolder" Directory="NdasProgramMenuCompanyFolder" On="uninstall" />
+				<Registry Root="HKCU" Key="SOFTWARE\NDAS\Components\pmenucompany" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+		<?endif?>
+
+		<Icon Id="$(var.iconid.ndasmgmt)" src="$(var.SetupDataDir.Icon)\ndasmgmt.ico" />
+		<?ifndef NdasSetupFlags_NoNIF ?>
+		<Icon Id="$(var.iconid.ndasnif)" src="$(var.SetupDataDir.Icon)\ndasnif.ico" />
+		<?endif?>
+
+		<DirectoryRef Id="NdasApplicationFolder" FileSource="$(var.SetupFileSource)">
+
+			<?ifndef NdasSetupFlags_NoShortcut ?>
+			<Component Id="NdasmgmtStartupShortcut" Guid="$(var.NdasmgmtStartupShortcut_GUID)" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<CreateFolder />
+				<Shortcut Id="NdasmgmtStartupShortcut" Directory="StartupFolder"
+							Name="NDASMGMT" LongName="$(loc.Ndasmgmt.LongName)"
+							Target="[!ndasmgmt.exe]"
+							Description="$(loc.Ndasmgmt.Description)"
+							Arguments="/startup"
+							Icon="$(var.iconid.ndasmgmt)"
+							IconIndex="0"
+							Show="normal"
+							WorkingDirectory="NdasAppFolder" />
+				<Registry Root="HKCU" Key="SOFTWARE\NDAS\Components\ndasmgmtstartup" KeyPath="yes" />
+			</Component>
+			<?endif?>
+
+			<?ifdef NdasSetupFlags_UseDesktopShortcut?>
+			<Component Id="NdasmgmtDesktopShortcut" Guid="$(var.NdasmgmtDesktopShortcut_GUID)" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<CreateFolder />
+				<Shortcut Id="NdasmgmtDesktopShortcut" Directory="DesktopFolder"
+							Name="NDASMGMT" LongName="$(loc.Ndasmgmt.LongName)"
+							Target="[!ndasmgmt.exe]"
+							Description="$(loc.Ndasmgmt.Description)"
+							Icon="$(var.iconid.ndasmgmt)"
+							IconIndex="0"
+							Show="normal"
+							WorkingDirectory="NdasAppFolder" />
+				<Registry Root="HKCU" Key="SOFTWARE\NDAS\Components\ndasmgmtdesktop" KeyPath="yes" />
+			</Component>
+			<?endif?>
+
+			<Component Id="ndasmgmt.exe" Guid="$(var.ndasmgmt.exe_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.exe" Name="ndasmgmt.exe" KeyPath="yes" Checksum="yes" >
+					<?ifndef NdasSetupFlags_NoShortcut ?>
+					<Shortcut Id="NdasmgmtPMenuShortcut"
+							Advertise="yes"
+							Directory="NdasProgramMenuFolder"
+							Name="NDASMGMT"
+							LongName="$(loc.Ndasmgmt.LongName)"
+							Description="$(loc.Ndasmgmt.Description)"
+							Icon="$(var.iconid.ndasmgmt)"
+							IconIndex="0"
+							Show="normal"
+							WorkingDirectory="NdasAppFolder" />
+					<?endif?>
+				</File>
+				
+				<Registry Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\ndasmgmt.exe" Type="string" Value="[#ndasmgmt.exe]">
+					<Registry Name="Path" Type="string" Value="[$ndasmgmt.exe]" />
+				</Registry>
+
+				<?ifndef NdasSetupFlags_NoNIF ?>
+				<ProgId Id="ndasfile" Advertise="yes" Description="NDAS Registration File" Icon="$(var.iconid.ndasnif)">
+					<Extension Id="ndas" Advertise="yes">
+						<!-- ContentType="text/xml"> -->
+						<!-- 			<MIME ContentType="text/xml" Default="yes" /> -->
+						<Verb Id="Open" Command="&amp;Open" Argument="/dde" />
+					</Extension>
+					<Extension Id="nda" Advertise="yes">
+						<!-- 			<MIME ContentType="text/xml" /> -->
+						<Verb Id="Open" Command="&amp;Open" Argument="/dde" />
+					</Extension>
+				</ProgId>
+				<Registry Root="HKCR" Key=".ndas" Name="PerceivedType" Type="string" Value="text" />
+				<Registry Root="HKCR" Key=".nda" Name="PerceivedType" Type="string" Value="text" />
+				<Registry Root="HKCR" Key="ndasfile\shell\Open\ddeexec" Type="string" Value="[\[]open(&quot;%1&quot;)[\]]" />
+				<Registry Root="HKCR" Key="ndasfile\shell\Open\ddeexec" Name="application" Type="string" Value="ndasmgmt" />
+				<?endif?>
+
+			</Component>
+
+			<Component Id="ndasmgmt.enu.dll" Guid="$(var.ndasmgmt.enu.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.enu.dll" Name="ndasmgmt.enu" LongName="ndasmgmt.enu.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			
+			<?ifdef res.zh-CN ?>
+			<Component Id="ndasmgmt.chs.dll" Guid="$(var.ndasmgmt.chs.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.chs.dll" Name="ndasmgmt.chs" LongName="ndasmgmt.chs.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.zh-TW ?>
+			<Component Id="ndasmgmt.cht.dll" Guid="$(var.ndasmgmt.cht.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.cht.dll" Name="ndasmgmt.cht" LongName="ndasmgmt.cht.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.de-DE ?>
+			<Component Id="ndasmgmt.deu.dll" Guid="$(var.ndasmgmt.deu.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.deu.dll" Name="ndasmgmt.deu" LongName="ndasmgmt.deu.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.es-ES ?>
+			<Component Id="ndasmgmt.esn.dll" Guid="$(var.ndasmgmt.esn.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.esn.dll" Name="ndasmgmt.esn" LongName="ndasmgmt.esn.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.fr-FR ?>
+			<Component Id="ndasmgmt.fra.dll" Guid="$(var.ndasmgmt.fra.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.fra.dll" Name="ndasmgmt.fra" LongName="ndasmgmt.fra.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.it-IT ?>
+			<Component Id="ndasmgmt.ita.dll" Guid="$(var.ndasmgmt.ita.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.ita.dll" Name="ndasmgmt.ita" LongName="ndasmgmt.ita.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.ja-JP ?>
+			<Component Id="ndasmgmt.jpn.dll" Guid="$(var.ndasmgmt.jpn.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.jpn.dll" Name="ndasmgmt.jpn" LongName="ndasmgmt.jpn.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.ko-KR ?>
+			<Component Id="ndasmgmt.kor.dll" Guid="$(var.ndasmgmt.kor.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.kor.dll" Name="ndasmgmt.kor" LongName="ndasmgmt.kor.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.pt-PT ?>
+			<Component Id="ndasmgmt.ptg.dll" Guid="$(var.ndasmgmt.ptg.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.ptg.dll" Name="ndasmgmt.ptg" LongName="ndasmgmt.ptg.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.da-DK ?>
+			<Component Id="ndasmgmt.dan.dll" Guid="$(var.ndasmgmt.dan.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.dan.dll" Name="ndasmgmt.dan" LongName="ndasmgmt.dan.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.nl-NL ?>
+			<Component Id="ndasmgmt.nld.dll" Guid="$(var.ndasmgmt.nld.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.nld.dll" Name="ndasmgmt.nld" LongName="ndasmgmt.nld.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.nb-NO ?>
+			<Component Id="ndasmgmt.nor.dll" Guid="$(var.ndasmgmt.nor.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.nor.dll" Name="ndasmgmt.nor" LongName="ndasmgmt.nor.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.sv-SE ?>
+			<Component Id="ndasmgmt.sve.dll" Guid="$(var.ndasmgmt.sve.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.sve.dll" Name="ndasmgmt.sve" LongName="ndasmgmt.sve.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			<?ifdef res.ru-RU ?>
+			<Component Id="ndasmgmt.rus.dll" Guid="$(var.ndasmgmt.rus.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasmgmt.rus.dll" Name="ndasmgmt.rus" LongName="ndasmgmt.rus.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+		</DirectoryRef>
+
+		<CustomAction Id="RunNdasmgmt" ExeCommand="/setup" Execute="immediate" FileKey="ndasmgmt.exe" Return="asyncNoWait" />
+		<InstallExecuteSequence>
+			<Custom Action="RunNdasmgmt" OnExit="success">Not REBOOT_SCHEDULED</Custom>
+			<!--After="xDiMsiUpdateScheduledReboot"></Custom>-->
+		</InstallExecuteSequence>
+		
+	</Fragment>
+</Wix>

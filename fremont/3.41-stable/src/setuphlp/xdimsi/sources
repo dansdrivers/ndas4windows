@@ -1,0 +1,45 @@
+TARGETNAME=xdimsi
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+DLLDEF=$(O)\xdimsi.def
+UMTYPE=console
+DLLENTRY=_DllMainCRTStartup
+
+C_DEFINES=/DUNICODE /D_UNICODE
+INCLUDES=..\inc;$(NDAS_INC_PATH);$(PSDK_INC_PATH)
+RC_OPTIONS=/i $(NDAS_INC_PATH)
+CXX_FLAGS=/Tp
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+PRECOMPILED_INCLUDE=precomp.hpp
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\uuid.lib \
+	$(PSDK_LIB_PATH)\msi.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib \
+	$(NDAS_LIB_PATH)\libxdi.lib
+
+SOURCES= \
+    dllmain.cpp \
+    xdimsi.cpp \
+    xdimsiproc.cpp \
+    xdimsiprocdata.cpp \
+    xmsiutil.cpp \
+    ascii85ex.cpp \
+    ascii85.c \
+    xdimsi.rc
+
+!INCLUDE $(ATL_SOURCES_INC)

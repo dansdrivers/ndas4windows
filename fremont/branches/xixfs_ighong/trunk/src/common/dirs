@@ -1,0 +1,2 @@
+DIRS=aes des hash ndasautrs ndascntenc ndasidenc ndasid ndassyscfg scrc32 xcrypt xdbgprn xregcfg lsp
+

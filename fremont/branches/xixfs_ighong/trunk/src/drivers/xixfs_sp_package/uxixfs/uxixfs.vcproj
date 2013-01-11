@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="uxixfs"
+	ProjectGUID="{DBE32ACB-C4D7-4B2A-8D99-3E3AA36A3D9C}"
+	RootNamespace="uxixfs"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_wxp_x86\i386"
+			IntermediateDirectory="objfre_wxp_x86\i386"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild -WNETXP fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild -WNETXP fre . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild -WNETXP fre . -c0i"
+				Output="objfre_wxp_x86\i386\uxixfs.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_wxp_x86\i386"
+			IntermediateDirectory="objchk_wxp_x86\i386"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild -WNETXP chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild -WNETXP chk . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild -WNETXP chk . -c0i"
+				Output="objchk_wxp_x86\i386\uxixfs.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="objfre_wnet_amd64\amd64"
+			IntermediateDirectory="objfre_wnet_amd64\amd64"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild -WNET amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild -WNET amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild -WNET amd64 fre . -c0i"
+				Output="objfre_wnet_amd64\amd64\uxixfs.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="objchk_wnet_amd64\amd64"
+			IntermediateDirectory="objchk_wnet_amd64\amd64"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\..\bin\xbuild -WNET amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\..\bin\xbuild -WNET amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\..\bin\xbuild -WNET amd64 chk . -c0i"
+				Output="objchk_wnet_amd64\amd64\uxixfs.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+			>
+			<File
+				RelativePath="entry.cxx"
+				>
+			</File>
+			<File
+				RelativePath="pch.cxx"
+				>
+			</File>
+			<File
+				RelativePath="uxixfs.cxx"
+				>
+			</File>
+			<File
+				RelativePath="xixfs.cxx"
+				>
+			</File>
+			<File
+				RelativePath="xixfs_sa.cxx"
+				>
+			</File>
+			<File
+				RelativePath="xixfs_vol.cxx"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl"
+			>
+			<File
+				RelativePath="uxixfs.hxx"
+				>
+			</File>
+			<File
+				RelativePath="xixfs.hxx"
+				>
+			</File>
+			<File
+				RelativePath="xixfs_sa.hxx"
+				>
+			</File>
+			<File
+				RelativePath="xixfs_vol.hxx"
+				>
+			</File>
+			<File
+				RelativePath="xixRawDiskData.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+			>
+			<File
+				RelativePath="makefile"
+				>
+			</File>
+			<File
+				RelativePath="sources"
+				>
+			</File>
+			<File
+				RelativePath="uxixfs.def"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath="uxixfs.bsc"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

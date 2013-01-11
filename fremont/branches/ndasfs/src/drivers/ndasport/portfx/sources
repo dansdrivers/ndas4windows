@@ -1,0 +1,25 @@
+TARGETNAME=ndasportfx
+TARGETTYPE=DRIVER
+
+NTTARGETFILE0=mofcomp
+
+INCLUDES=$(INCLUDES);..\inc;$(NDAS_INC_PATH)
+
+KMDF_VERSION=1
+
+INF_NAME=ndasportfx
+
+MISCFILES=$(OBJ_PATH)\$(O)\$(INF_NAME).inf
+
+TARGETLIBS=$(TARGETLIBS) \
+           $(DDK_LIB_PATH)\ntstrsafe.lib
+
+NTTARGETFILES=
+
+SOURCES= ndasportfx.rc \
+	init.c \
+	enum.c \
+	pdo.c \
+	scsi.c \
+	wmi.c
+

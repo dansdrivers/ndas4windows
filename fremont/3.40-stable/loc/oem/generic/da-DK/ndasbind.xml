@@ -1,0 +1,1067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="" version="" lang="dan" oem="base" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/13/09">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>Inkompatibel NDASUSER.DLL installeret.\r\nKontrollér installationen af softwaren.</translation>
+  </string>
+  <string id="/STR/13/10">
+    <base><![CDATA[Incompatible NDASCOMM.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>Inkompatibel NDASCOMM.DLL installeret.\r\nKontrollér installationen af softwaren.</translation>
+  </string>
+  <string id="/STR/18/14">
+    <base><![CDATA[%1!3d!.%2!02d! GB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/19/02">
+    <base><![CDATA[A disk cannot be mirrored by the smaller disk in size.]]></base>
+    <translation>En disk kan ikke spejles på en mindre disk.</translation>
+  </string>
+  <string id="/STR/20/05">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation>NDAS Bind Management</translation>
+  </string>
+  <string id="/STR/20/07">
+    <base><![CDATA[Component]]></base>
+    <translation>Komponent</translation>
+  </string>
+  <string id="/STR/20/08">
+    <base><![CDATA[Version]]></base>
+    <translation>Version</translation>
+  </string>
+  <string id="/STR/20/11">
+    <base><![CDATA[Name]]></base>
+    <translation>Navn</translation>
+  </string>
+  <string id="/STR/20/12">
+    <base><![CDATA[NDAS ID]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/20/13">
+    <base><![CDATA[Capacity]]></base>
+    <translation>Kapacitet</translation>
+  </string>
+  <string id="/STR/20/14">
+    <base><![CDATA[Number]]></base>
+    <translation>Antal</translation>
+  </string>
+  <string id="/STR/21/06">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation>NDAS Bind Management</translation>
+  </string>
+  <string id="/STR/22/02">
+    <base><![CDATA[NDAS Bind Error]]></base>
+    <translation>NDAS bindingsfejl</translation>
+  </string>
+  <string id="/STR/22/03">
+    <base><![CDATA[Failed to convert the selected disk to a basic disk.]]></base>
+    <translation>Kunne ikke konvertere den valgte disk til en grunddisk.</translation>
+  </string>
+  <string id="/STR/22/09">
+    <base><![CDATA[Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!]]></base>
+    <translation>Facilitet: NDAS 0x%1!04X!\r\nFejlkode: %2!u! (0x%2!04X!)\r\n%3!s!</translation>
+  </string>
+  <string id="/STR/22/10">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation>Fejlkode: %1!u! (0x%1!04X!)\r\n%2!s!</translation>
+  </string>
+  <string id="/STR/22/11">
+    <base><![CDATA[All of the data will be lost once the disks are bound. Are you sure you want to bind the disks?]]></base>
+    <translation>Alle data bliver slettet, når diskene er bundet. Er du sikker på, at du vil binde diskene?</translation>
+  </string>
+  <string id="/STR/22/12">
+    <base><![CDATA[Some version of Windows cannot access a disk larger than 2 TBytes and the size of bound disks is larger than the limit. Do you want to continue?]]></base>
+    <translation>Nogle versioner af Windows kan ikke anvende diske større end 2 TBytes og størrelsen af bundne diske er større end denne grænse. Ønsker du at fortsætte?</translation>
+  </string>
+  <string id="/STR/23/00">
+    <base><![CDATA[%1!s! does not have Write access privilege. The NDAS device's Write Key is required to be registered to gain Write access.]]></base>
+    <translation>%1!s! har ikke skrive-adgangs privilegium. NDAS-enhedens Skriv-nøgle (Write Key) skal registreres for at få skrive-adgang.</translation>
+  </string>
+  <string id="/STR/23/05">
+    <base><![CDATA[All of the data will be lost once the disks are unbound. Are you sure you want to unbind the disks?]]></base>
+    <translation>Alle data bliver slettet, når diskenes bindinger er fjernet. Er du sikker på, at du vil fjerne diskenes bindinger?</translation>
+  </string>
+  <string id="/STR/23/06">
+    <base><![CDATA[Selected disks are successfully unbound. You must first mount and then format each of the unbound disks before using them.]]></base>
+    <translation>Bindingerne er vellykket fjernet på de valgte diske. Du skal først tilslutte og derefter formatere hver af de frigjorte diske, inden de kan bruges.</translation>
+  </string>
+  <string id="/STR/23/08">
+    <base><![CDATA[A problem occurred while operating on the NDAS device '%1!s!'.]]></base>
+    <translation>Der opstod en fejl ved arbejde på NDAS-enheden '%1!s!'.</translation>
+  </string>
+  <string id="/STR/23/09">
+    <base><![CDATA[A problem occurred while operating on the NDAS devices.]]></base>
+    <translation>Der opstod en fejl ved arbejde på NDAS-enhederne.</translation>
+  </string>
+  <string id="/STR/24/00">
+    <base><![CDATA[Bind type]]></base>
+    <translation>Bindingstype</translation>
+  </string>
+  <string id="/STR/24/01">
+    <base><![CDATA[Striped Disk (RAID-0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/02">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation>Mirrored Disk (RAID-1) (Frarådes)</translation>
+  </string>
+  <string id="/STR/24/03">
+    <base><![CDATA[RAID-2 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/04">
+    <base><![CDATA[RAID-3 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/05">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation>RAID-4 Disk (Frarådes)</translation>
+  </string>
+  <string id="/STR/24/06">
+    <base><![CDATA[RAID-5 Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/07">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation>Sammensat disk</translation>
+  </string>
+  <string id="/STR/24/08">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Compact Flash-drev</translation>
+  </string>
+  <string id="/STR/24/09">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation>DVD-drev</translation>
+  </string>
+  <string id="/STR/24/10">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/24/11">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO-drev</translation>
+  </string>
+  <string id="/STR/24/12">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation>Grunddisk</translation>
+  </string>
+  <string id="/STR/24/13">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation>Ukendt type (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/24/14">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation>Virtuelt DVD-drev</translation>
+  </string>
+  <string id="/STR/25/02">
+    <base><![CDATA[Device not found]]></base>
+    <translation>Enhed ikke fundet</translation>
+  </string>
+  <string id="/STR/25/03">
+    <base><![CDATA[Status]]></base>
+    <translation>Status</translation>
+  </string>
+  <string id="/STR/25/04">
+    <base><![CDATA[RAID status]]></base>
+    <translation>RAID status</translation>
+  </string>
+  <string id="/STR/25/05">
+    <base><![CDATA[Comment]]></base>
+    <translation>Kommentar</translation>
+  </string>
+  <string id="/STR/25/07">
+    <base><![CDATA[Yes]]></base>
+    <translation>Ja</translation>
+  </string>
+  <string id="/STR/25/08">
+    <base><![CDATA[No]]></base>
+    <translation>Nej</translation>
+  </string>
+  <string id="/STR/25/09">
+    <base><![CDATA[Missing Member]]></base>
+    <translation>Manglende element</translation>
+  </string>
+  <string id="/STR/25/10">
+    <base><![CDATA[Yes (Need Resynchronizing)]]></base>
+    <translation>Ja (kræver resynkronisering)</translation>
+  </string>
+  <string id="/STR/25/12">
+    <base><![CDATA[Offline]]></base>
+    <translation>Offline</translation>
+  </string>
+  <string id="/STR/25/13">
+    <base><![CDATA[In use]]></base>
+    <translation>I brug</translation>
+  </string>
+  <string id="/STR/25/14">
+    <base><![CDATA[No Write Key]]></base>
+    <translation>Ingen Skriv-nøgle (Write key)</translation>
+  </string>
+  <string id="/STR/25/15">
+    <base><![CDATA[Ready]]></base>
+    <translation>Klar</translation>
+  </string>
+  <string id="/STR/26/00">
+    <base><![CDATA[Migrates mirrored disks to recoverable disks\nMigrate]]></base>
+    <translation>Migrerer spejldiske til genoprettelige diske\nMigrering</translation>
+  </string>
+  <string id="/STR/26/01">
+    <base><![CDATA[Disabled]]></base>
+    <translation>Deaktiveret</translation>
+  </string>
+  <string id="/STR/26/02">
+    <base><![CDATA[Do you want to unbind the following disks?]]></base>
+    <translation>Vil du fjerne bindinger på følgende diske?</translation>
+  </string>
+  <string id="/STR/26/03">
+    <base><![CDATA[Selected disks are successfully unbound.]]></base>
+    <translation>Bindingerne er vellykket fjernet på de valgte diske.</translation>
+  </string>
+  <string id="/STR/27/06">
+    <base><![CDATA[NDAS Bind Wizard]]></base>
+    <translation>NDAS bindingsguide</translation>
+  </string>
+  <string id="/STR/27/07">
+    <base><![CDATA[Select Bind Type]]></base>
+    <translation>Vælg bindingstype</translation>
+  </string>
+  <string id="/STR/27/08">
+    <base><![CDATA[You can select the bind type.]]></base>
+    <translation>De kan vælge bindingstypen.</translation>
+  </string>
+  <string id="/STR/27/09">
+    <base><![CDATA[Select Disk]]></base>
+    <translation>Vælg disk</translation>
+  </string>
+  <string id="/STR/27/10">
+    <base><![CDATA[You can select the disks to be bound.]]></base>
+    <translation>De kan vælge de diske, der skal bindes.</translation>
+  </string>
+  <string id="/STR/27/13">
+    <base><![CDATA[Verdana]]></base>
+    <translation>Verdana</translation>
+  </string>
+  <string id="/STR/27/14">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/28/01">
+    <base><![CDATA[You have successfully completed the Disk Bind Wizard. You must first mount and then format the bound disks before using them.]]></base>
+    <translation>Du har vellykket gennemført diskbindingsguiden. Du skal først tilslutte og derefter formatere de bundne diske, inden de kan bruges.</translation>
+  </string>
+  <string id="/STR/28/02">
+    <base><![CDATA[You have failed to bind disks.]]></base>
+    <translation>Binding diske mislykkedes.</translation>
+  </string>
+  <string id="/STR/28/03">
+    <base><![CDATA[Bind Type: %1!s!]]></base>
+    <translation>Bindingstype: %1!s!</translation>
+  </string>
+  <string id="/STR/28/04">
+    <base><![CDATA[Disks selected:]]></base>
+    <translation>Valgte diske:</translation>
+  </string>
+  <string id="/STR/28/05">
+    <base><![CDATA[Disks size: %1!s!]]></base>
+    <translation>Disksstørrelse: %1!s!</translation>
+  </string>
+  <string id="/STR/28/06">
+    <base><![CDATA[Failed device: %1!s!]]></base>
+    <translation>Fejlbehæftet enhed: %1!s!</translation>
+  </string>
+  <string id="/STR/28/07">
+    <base><![CDATA[An aggregated disk is made up of more than one disks. Create an aggregated disk if you need a disk that is too large for a basic disk.]]></base>
+    <translation>En sammensat disk består af mere end én disk. Opret en sammensat disk, hvis du har brug for en disk, der er for stor til en grunddisk.</translation>
+  </string>
+  <string id="/STR/28/08">
+    <base><![CDATA[A striped disk (RAID-0) stores data in stripes on two or more disks. A striped disk gives you faster access to your data than a basic or aggregated volume.]]></base>
+    <translation>En striped disk (RAID-0) lagrer data i striber på to eller flere diske. En striped disk giver hurtigere adgang til dine data end en grunddisk eller sammensat disk.</translation>
+  </string>
+  <string id="/STR/28/09">
+    <base><![CDATA[A mirrored disk (RAID-1) duplicates your data on two disks. Create a mirrored disk if you want to keep two separate copies of all your information to prevent data loss.]]></base>
+    <translation>En spejldisk (RAID-1) duplikerer dine data på to diske. Opret en spejldisk, hvis du ønsker at bevare to separate kopier af al information for at forhindre datatab.</translation>
+  </string>
+  <string id="/STR/28/10">
+    <base><![CDATA[A RAID-4 disk stores data in stripes on three or more disks. It provides a way of recovering data if part of the data is lost.]]></base>
+    <translation>En RAID-4 disk lagrer data i striber på tre eller flere diske. Dette giver mulighed for at genoprette data, hvis en del af dataene mistes.</translation>
+  </string>
+  <string id="/STR/28/11">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation>Spejldisk (RAID-1) (Frarådes)</translation>
+  </string>
+  <string id="/STR/28/12">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation>RAID-4 disk (Frarådes)</translation>
+  </string>
+  <string id="/STR/28/13">
+    <base><![CDATA[Mirrored Disk (RAID-1)]]></base>
+    <translation>Spejldisk (RAID-1)</translation>
+  </string>
+  <string id="/STR/28/14">
+    <base><![CDATA[RAID-4 Disk]]></base>
+    <translation>RAID-4 Disk</translation>
+  </string>
+  <string id="/STR/28/15">
+    <base><![CDATA[Not registered]]></base>
+    <translation>Ikke registreret</translation>
+  </string>
+  <string id="/STR/29/01">
+    <base><![CDATA[Failed to migrate.]]></base>
+    <translation>Migrering mislykkedes.</translation>
+  </string>
+  <string id="/STR/29/02">
+    <base><![CDATA[Requested operation cannot be processed while the NDAS device is offline or in use in other hosts.]]></base>
+    <translation>Den ønskede handling kan ikke udføres, mens NDAS-enheden er offline eller i brug hos andre værter.</translation>
+  </string>
+  <string id="/STR/68/06">
+    <base><![CDATA[Press the start button to continue.]]></base>
+    <translation>Tryk på startknappen for at fortsætte.</translation>
+  </string>
+  <string id="/STR/68/07">
+    <base><![CDATA[Synchronizing devices...]]></base>
+    <translation>Synkroniserer enheder...</translation>
+  </string>
+  <string id="/STR/68/08">
+    <base><![CDATA[Synchronization completed.]]></base>
+    <translation>Synkronisering gennemført.</translation>
+  </string>
+  <string id="/STR/68/09">
+    <base><![CDATA[Failed to synchronize devices.]]></base>
+    <translation>Synkronisering af enheder mislykkedes.</translation>
+  </string>
+  <string id="/STR/68/10">
+    <base><![CDATA[Add mirror disk]]></base>
+    <translation>Tilføj spejldisk</translation>
+  </string>
+  <string id="/STR/68/13">
+    <base><![CDATA[Adds a spare disk to the fault tolerant RAID disk group.\nAdd Spare Disk]]></base>
+    <translation>Tilføjer en reservedisk til den fejltolerante RAID disk gruppe.\nTilføj reservedisk</translation>
+  </string>
+  <string id="/STR/68/14">
+    <base><![CDATA[Removes a spare disk from the fault tolerant RAID disk group.\nRemove Spare Disk]]></base>
+    <translation>Fjerner en reservedisk fra den fejltolerante RAID disk gruppe.\nFjern reservedisk</translation>
+  </string>
+  <string id="/STR/69/05">
+    <base><![CDATA[Select a spare disk]]></base>
+    <translation>Vælg en reservedisk</translation>
+  </string>
+  <string id="/STR/69/06">
+    <base><![CDATA[Select a disk to be used as a spare disk for the RAID]]></base>
+    <translation>Vælg en disk der skal bruges som reservedisk til RAID</translation>
+  </string>
+  <string id="/STR/69/08">
+    <base><![CDATA[The disk is too small to be used as a spare disk.]]></base>
+    <translation>Denne disk er for lille til at blive brugt som reservedisk.</translation>
+  </string>
+  <string id="/STR/69/09">
+    <base><![CDATA[Select a mirror disk]]></base>
+    <translation>Vælg en spejldisk</translation>
+  </string>
+  <string id="/STR/69/10">
+    <base><![CDATA[Select a backup disk to make a mirror.]]></base>
+    <translation>Vælg en backup-disk til oprettelse af et spejl.</translation>
+  </string>
+  <string id="/STR/69/11">
+    <base><![CDATA[Unbind]]></base>
+    <translation>Fjern binding</translation>
+  </string>
+  <string id="/STR/69/12">
+    <base><![CDATA[Data on the following disks will be deleted.\nAre you sure you want to unbind them?]]></base>
+    <translation>Data på følgende diske bliver slettet.\nEr du sikker på at du vil fjerne bindingerne?</translation>
+  </string>
+  <string id="/STR/69/13">
+    <base><![CDATA[Replace the selected device in RAID with another one.]]></base>
+    <translation>Udskift den valgte enhed i RAID med en anden.</translation>
+  </string>
+  <string id="/STR/69/14">
+    <base><![CDATA[Use this device as RAID member.]]></base>
+    <translation>Brug denne enhed som RAID element.</translation>
+  </string>
+  <string id="/STR/69/15">
+    <base><![CDATA[The requested operation has not succeeded.]]></base>
+    <translation>Den ønskede handling mislykkedes.</translation>
+  </string>
+  <string id="/STR/70/00">
+    <base><![CDATA[Removing a spare disk]]></base>
+    <translation>Fjerner en reservedisk</translation>
+  </string>
+  <string id="/STR/70/01">
+    <base><![CDATA[Are you sure you want to remove the selected spare disk?]]></base>
+    <translation>Er du sikker på, at du vil fjerne den valgte reservedisk?</translation>
+  </string>
+  <string id="/STR/70/02">
+    <base><![CDATA[Convert to the Basic Disk]]></base>
+    <translation>Konvertér til grunddisk</translation>
+  </string>
+  <string id="/STR/70/03">
+    <base><![CDATA[All of the data will be lost once the disk is reset to a basic disk. Would you like to continue?]]></base>
+    <translation>Alle data bliver slettet, når disken er tilbagestillet til en grunddisk. Vil du fortsætte?</translation>
+  </string>
+  <string id="/STR/70/14">
+    <base><![CDATA[Select a replace disk]]></base>
+    <translation>Vælg en erstatningsdisk</translation>
+  </string>
+  <string id="/STR/70/15">
+    <base><![CDATA[Select a disk to be used as a replacement.]]></base>
+    <translation>Vælg en disk der skal bruges som erstatningsdisk.</translation>
+  </string>
+  <string id="/STR/71/00">
+    <base><![CDATA[Replace a hard drive]]></base>
+    <translation>Erstat en harddisk</translation>
+  </string>
+  <string id="/STR/71/01">
+    <base><![CDATA[Press OK if you want to replace a missing drive with new one.]]></base>
+    <translation>Tryk på OK hvis du vil erstattet en manglende disk med en ny.</translation>
+  </string>
+  <string id="/STR/71/02">
+    <base><![CDATA[Migrate]]></base>
+    <translation>Migrering</translation>
+  </string>
+  <string id="/STR/71/03">
+    <base><![CDATA[Previous version of NDAS software may not be able to use these devices after migration.\nAre you sure you want to migrate them?]]></base>
+    <translation>Tidligere version af NDAS software kan måske ikke bruge disse enheder efter migrering.\nEr du sikker på at du vil migrere dem?</translation>
+  </string>
+  <string id="/STR/71/04">
+    <base><![CDATA[Reset bind information to remove unrecognized bind information.]]></base>
+    <translation>Tilbagestil bindingsinformation for at fjerne ukendt bindingsinformation.</translation>
+  </string>
+  <string id="/STR/71/05">
+    <base><![CDATA[Clear defective flag from the disk.]]></base>
+    <translation>Slet defekt mærke fra disk.</translation>
+  </string>
+  <string id="/STR/71/06">
+    <base><![CDATA[Remove disk from RAID set. Disk type is not changed.]]></base>
+    <translation>Fjern disk fra RAID-sæt. Disktypen er ikke ændret.</translation>
+  </string>
+  <string id="/STR/71/07">
+    <base><![CDATA[Remove disk from RAID set and convert it to basic disk.]]></base>
+    <translation>Fjern disk fra RAID-sæt og konvertér den til grunddisk.</translation>
+  </string>
+  <string id="/STR/71/08">
+    <base><![CDATA[Cannot replace the selected disk. \nReplacement will break RAID.]]></base>
+    <translation>Kan ikke erstatte den valgte disk. \nErstatning vil afbryde RAID.</translation>
+  </string>
+  <string id="/STR/71/09">
+    <base><![CDATA[Not all member disks are accessible.\nChanging RAID configuration with missing member can make RAID fail.\nDo you want to continue?]]></base>
+    <translation>Ikke alle elementdiske er tilgængelige.\nÆndring af RAID-konfiguration med manglende element kan medføre mislykket RAID.\nVil du fortsætte?</translation>
+  </string>
+  <string id="/STR/71/10">
+    <base><![CDATA[The disk is too small to be used as this RAID member.]]></base>
+    <translation>Denne disk er for lille til at blive brugt som dette RAID-element.</translation>
+  </string>
+  <string id="/STR/71/11">
+    <base><![CDATA[The data of this disk will be lost and if this disk is a member of another RAID, it may be broken.Do you want to continue?]]></base>
+    <translation>Dataene på denne disk bliver slettet og hvis denne disk er et element i en anden RAID, kan den blive afbrudt. Vil du fortsætte.</translation>
+  </string>
+  <string id="/STR/71/12">
+    <base><![CDATA[RAID containing this disk may be broken after this operation. Do you want to continue?]]></base>
+    <translation>RAID der indeholder denne disk, kan blive afbrudt efter denne handling. Ønsker du at fortsætte?</translation>
+  </string>
+  <string id="/STR/71/13">
+    <base><![CDATA[Cannot remove the selected disk.\nIt will break RAID.]]></base>
+    <translation>Kan ikke fjerne den valgte disk.\nDet vil afbryde RAID.</translation>
+  </string>
+  <string id="/STR/71/14">
+    <base>Not all member disks are accessible.</base>
+    <translation>Ikke alle elementdiske er tilgængelige.</translation>
+  </string>
+  <string id="/STR/71/15">
+    <base><![CDATA[Corrupted RAID information]]></base>
+    <translation>Ødelagt RAID-information.</translation>
+  </string>
+  <string id="/STR/72/00">
+    <base><![CDATA[Member of another RAID]]></base>
+    <translation>Element i en anden RAID</translation>
+  </string>
+  <string id="/STR/72/02">
+    <base><![CDATA[Read failure]]></base>
+    <translation>Læse-fejl</translation>
+  </string>
+  <string id="/STR/72/03">
+    <base><![CDATA[Not a RAID member]]></base>
+    <translation>Ikke et RAID-element</translation>
+  </string>
+  <string id="/STR/72/04">
+    <base><![CDATA[Bad disk]]></base>
+    <translation>Dårlig sektor fundet</translation>
+  </string>
+  <string id="/STR/72/05">
+    <base><![CDATA[Bad sector found]]></base>
+    <translation>Dårlig sektor fundet</translation>
+  </string>
+  <string id="/STR/72/06">
+    <base><![CDATA[Unknown defect]]></base>
+    <translation>Ukendt defekt</translation>
+  </string>
+  <string id="/STR/72/07">
+    <base><![CDATA[Out-of-sync]]></base>
+    <translation>Synkroniseringsfejl</translation>
+  </string>
+  <string id="/STR/72/08">
+    <base><![CDATA[Spare disk]]></base>
+    <translation>Reservedisk</translation>
+  </string>
+  <string id="/STR/72/09">
+    <base><![CDATA[RAID information on this disk is corrupted. \nTry "%1!s!" menu.]]></base>
+    <translation>RAID-information på denne disk er ødelagt. \nPrøv "%1!s!" menu.</translation>
+  </string>
+  <string id="/STR/72/11">
+    <base><![CDATA[Cannot read. Replace disk or remove from RAID]]></base>
+    <translation>Kan ikke læse. Udskift disk eller fjern den fra RAID</translation>
+  </string>
+  <string id="/STR/72/12">
+    <base><![CDATA[Reconfigure RAID members.]]></base>
+    <translation>Genkonfigurér RAID-elementer.</translation>
+  </string>
+  <string id="/STR/72/13">
+    <base><![CDATA[Replace bad disk with new one and run "%1!s!" menu\n or use "%2!s!" menu to ignore defect and retry]]></base>
+    <translation>Udskift dårlig disk med en ny og kør "%1!s!" menu\n eller brug "%2!s!" menu til at ignorere defekt og prøv igen</translation>
+  </string>
+  <string id="/STR/72/14">
+    <base><![CDATA[Data of this disk is out of sync with another RAID member's data.]]></base>
+    <translation>Data på denne disk har synkroniseringsfejl i forhold til et andet RAID-elements data. </translation>
+  </string>
+  <string id="/STR/72/15">
+    <base><![CDATA[This disk will be used as active RAID member when any of other member fails.]]></base>
+    <translation>Denne disk vil blive brugt som aktivt RAID-element, når ethvert andet element svigter.</translation>
+  </string>
+  <string id="/STR/73/00">
+    <base><![CDATA[This disk may be configured by higher version of NDAS software.\n Use "%1!s!" menu to convert to a single disk]]></base>
+    <translation>Denne disk kan være konfigureret med en nyere version af NDAS softwaren.\n Brug "%1!s!" menu til at konvertere til en enkelt disk.</translation>
+  </string>
+  <string id="/STR/73/01">
+    <base><![CDATA[Migration required]]></base>
+    <translation>Migrering nødvendig</translation>
+  </string>
+  <string id="/STR/73/02">
+    <base><![CDATA[Unsupported RAID]]></base>
+    <translation>Ikke-understøttet RAID</translation>
+  </string>
+  <string id="/STR/73/04">
+    <base><![CDATA[Irreconcilable state]]></base>
+    <translation>Uforenelig tilstand</translation>
+  </string>
+  <string id="/STR/73/05">
+    <base><![CDATA[Non-mountable\nRAID information is corrupted]]></base>
+    <translation>Kan ikke tilsluttes\nRAID information er ødelagt</translation>
+  </string>
+  <string id="/STR/73/06">
+    <base><![CDATA[Missing member]]></base>
+    <translation>Manglende element</translation>
+  </string>
+  <string id="/STR/73/07">
+    <base><![CDATA[Migration required]]></base>
+    <translation>Migrering nødvendig</translation>
+  </string>
+  <string id="/STR/73/08">
+    <base><![CDATA[Defective disk]]></base>
+    <translation>Defekt disk</translation>
+  </string>
+  <string id="/STR/73/09">
+    <base><![CDATA[Non-mountable]]></base>
+    <translation>Kan ikke tilsluttes</translation>
+  </string>
+  <string id="/STR/73/10">
+    <base><![CDATA[Degraded mode]]></base>
+    <translation>Forringet modus</translation>
+  </string>
+  <string id="/STR/73/11">
+    <base><![CDATA[Need resynchronizing\n%1!d!%% in sync]]></base>
+    <translation>Kræver resynkronisering\n%1!d!%% i synk</translation>
+  </string>
+  <string id="/STR/73/12">
+    <base><![CDATA[Need resynchronizing]]></base>
+    <translation>Kræver resynkronisering</translation>
+  </string>
+  <string id="/STR/73/13">
+    <base><![CDATA[Healthy]]></base>
+    <translation>I orden</translation>
+  </string>
+  <string id="/STR/73/14">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nIf any of the disk is missing, unbind RAID and create it again]]></base>
+    <translation>Tilslut alle element-enheder og brug "%1!s!" menu.\nHvis en af diskene mangler, fjern bindingerne i RAID og opret dem igen</translation>
+  </string>
+  <string id="/STR/73/15">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nYou cannot migrate with missing member]]></base>
+    <translation>Denne RAID oprettet med en nyere version af softwaren. Opdatér NDAS softwaren</translation>
+  </string>
+  <string id="/STR/74/00">
+    <base><![CDATA[This RAID is created by higher version of software. Please update NDAS software]]></base>
+    <translation>Denne RAID oprettet med en nyere version af softwaren. Opdatér NDAS softwaren</translation>
+  </string>
+  <string id="/STR/74/01">
+    <base><![CDATA[Each member has been used in degraded mode separately.\nYou need to convert one member to basic disk or unbind RAID.]]></base>
+    <translation>Hvert element er blevet brugt separat i forringet modus.\nDu skal konvertere ét element til grunddisk eller fjerne bindingerne i RAID.</translation>
+  </string>
+  <string id="/STR/74/02">
+    <base><![CDATA[Reconfigure the corrupted member disk.]]></base>
+    <translation>Genkonfigurer den fejlbehæftede element-disk.</translation>
+  </string>
+  <string id="/STR/74/03">
+    <base><![CDATA[Non fault-tolerant RAID.\nAll members should be available to mount this RAID set.]]></base>
+    <translation>Ingen fejl-tolerant RAID.\nAlle elementer skal være tilgængelige for at tilslutte dette RAID-sæt.</translation>
+  </string>
+  <string id="/STR/74/04">
+    <base><![CDATA[The number of valid members is not enough to mount.]]></base>
+    <translation>Antallet af gyldige elementer er ikke tilstrækkeligt til tilslutning.</translation>
+  </string>
+  <string id="/STR/74/05">
+    <base><![CDATA[This RAID is created by older version of NDAS software.\nOnce migrated, this RAID cannot be used by older version of NDAS software]]></base>
+    <translation>Denne RAID er oprettet med en ældre version af NDAS softwaren.\nNår den er migreret, kan denne RAID ikke bruges med ældre versioner af NDAS softwaren</translation>
+  </string>
+  <string id="/STR/74/06">
+    <base><![CDATA[Disk has defects. Replace the defective disk.]]></base>
+    <translation>Disken er defekt. Udskift den defekte disk.</translation>
+  </string>
+  <string id="/STR/74/07">
+    <base><![CDATA[RAID will work without fault-tolerant feature due to missing member(s).]]></base>
+    <translation>RAID vil fungere uden fejl-tolerant funktion pga. manglende element(er).</translation>
+  </string>
+  <string id="/STR/74/08">
+    <base><![CDATA[Resynchronizing will be started when RAID is mounted in Read/Write mode.]]></base>
+    <translation>Resynkronisering bliver startet, når RAID er tilsluttet i Læs/Skriv-modus.</translation>
+  </string>
+  <string id="/STR/74/09">
+    <base><![CDATA[Invalid member]]></base>
+    <translation>Ugyldigt element</translation>
+  </string>
+  <string id="/STR/74/11">
+    <base><![CDATA[RAID can be mounted only when all members are registered]]></base>
+    <translation>RAID kan kun tilsluttes, når alle elementer er registreret</translation>
+  </string>
+  <string id="/STR/74/12">
+    <base><![CDATA[RAID can be mounted only when all members are enabled]]></base>
+    <translation>RAID kan kun tilsluttes, når alle elementer er aktiveret</translation>
+  </string>
+  <string id="/STR/74/13">
+    <base><![CDATA[Not registered]]></base>
+    <translation>Ikke registreret</translation>
+  </string>
+  <string id="/STR/74/14">
+    <base><![CDATA[Spare used]]></base>
+    <translation>Reservedisk brugt</translation>
+  </string>
+  <string id="/STR/74/15">
+    <base><![CDATA[After spare disk is used, RAID needs reconfiguration.]]></base>
+    <translation>Efter brug af reservedisk skal RAID genkonfigureres.</translation>
+  </string>
+  <string id="/STR/75/00">
+    <base><![CDATA[Inconsistent bind information]]></base>
+    <translation>Modstridende bindingsinformation</translation>
+  </string>
+  <string id="/STR/75/01">
+    <base><![CDATA[Bind information on the disk is inconsistent or unrecognizable.\nUse "%1!s!" menu to use as a single disk.]]></base>
+    <translation>Bindingsinformation på disken er modstridende eller ukendt.\nBrug "%1!s!" menu til at bruge den som enkelt disk.</translation>
+  </string>
+  <string id="/STR/75/02">
+    <base><![CDATA[Replaced by spare]]></base>
+    <translation>Udskiftet med reservedisk</translation>
+  </string>
+  <string id="/STR/75/03">
+    <base><![CDATA[This disk's role is replaced by the spare disk. Reconfigure the RAID using \n"%1!s!" or "%2!s!" or "%3!s!" menu.]]></base>
+    <translation>Denne disks rolle er erstattet af reservedisken. Genkonfigurér RAID ved hjælp af\n"%1!s!" eller "%2!s!" eller "%3!s!" menu.</translation>
+  </string>
+  <string id="/STR/75/04">
+    <base><![CDATA[Used in degraded mode]]></base>
+    <translation>Bruges i forringet modus</translation>
+  </string>
+  <string id="/STR/75/05">
+    <base><![CDATA[This disk is used in degraded mode and may have different data.\nUse "%1!s!" menu to retain the data in this disk.]]></base>
+    <translation>Denne disk bruges i forringet modus og kan have forskellige data.\nBrug "%1!s!" menu til at bevare dataene i denne disk.</translation>
+  </string>
+  <string id="/STR/75/06">
+    <base><![CDATA[This operation will reset all configuration information which may be used by a higher version of NDAS software. Do you want to continue?]]></base>
+    <translation>Denne handling vil tilbagestille al konfigurationsinformation, som måske bruges af en nyere version af NDAS softwaren. Ønsker du at fortsætte?</translation>
+  </string>
+  <string id="/STR/75/07">
+    <base><![CDATA[RAID is in broken status. Requested operation cannot be processed.]]></base>
+    <translation>RAID er i afbrudt tilstand. Den ønskede handling kan ikke udføres.</translation>
+  </string>
+  <string id="/STR/75/08">
+    <base><![CDATA[Cannot clear defect mark because no valid copy of data exists.\nPlease unbind RAID and try to recover data from each disk\n]]></base>
+    <translation>Kan ikke slette defekt mærke, da der ikke eksisterer nogen gyldig kopi af dataene.\nFjern bindingerne i RAID og prøv at genoprette data fra hver disk disk\n</translation>
+  </string>
+  <string id="/STR/76/00">
+    <base><![CDATA[Defective]]></base>
+    <translation>Defekt</translation>
+  </string>
+  <string id="/STR/2049/05">
+    <base><![CDATA[Quit application\nExit]]></base>
+    <translation>Afslut program\nAfslut</translation>
+  </string>
+  <string id="/STR/2049/06">
+    <base><![CDATA[Bind disks\nBind]]></base>
+    <translation>Bind diske\nBind</translation>
+  </string>
+  <string id="/STR/2049/08">
+    <base><![CDATA[Unbind aggregated/mirrored disks into basic disks\nUnbind]]></base>
+    <translation>Fjern binding på sammensatte/spejldiske, så de bliver til grunddiske\nFjern binding</translation>
+  </string>
+  <string id="/STR/2049/09">
+    <base><![CDATA[Convert the selected disk to a basic disk]]></base>
+    <translation>Konvertér den valgte disk til en grunddisk</translation>
+  </string>
+  <string id="/STR/2049/11">
+    <base><![CDATA[Resynchronize an outdated bound disk.\nResynchronize]]></base>
+    <translation>Resynkronisér en forældet bunden disk.\nResynkronisér</translation>
+  </string>
+  <string id="/STR/2049/14">
+    <base><![CDATA[Displays program information, version number and copyright\nAbout NDAS Software]]></base>
+    <translation>Viser programinformation, versionsnummer og copyright\nOm NDAS software</translation>
+  </string>
+  <string id="/STR/2050/07">
+    <base><![CDATA[Adds a mirrored disk to a basic disk\nAdd Mirror]]></base>
+    <translation>Tilføjer en spejldisk til en grunddisk\nTilføj spejl</translation>
+  </string>
+  <string id="/STR/2050/08">
+    <base><![CDATA[Refresh the NDAS device list\nRefresh]]></base>
+    <translation>Opdatér listen over NDAS-enheder\nOpdatér</translation>
+  </string>
+  <string id="/DLG/100">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation>Om NDAS software</translation>
+  </string>
+  <string id="/DLG/100/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/100/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation>NDAS Software</translation>
+  </string>
+  <string id="/DLG/100/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation>Version %1!s!</translation>
+  </string>
+  <string id="/DLG/100/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&amp;</translation>
+  </string>
+  <string id="/DLG/100/04">
+    <base><![CDATA[Copyright © 2002-2007 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+		<translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/100/05">
+    <base><![CDATA[Components]]></base>
+    <translation>Komponenter</translation>
+  </string>
+  <string id="/DLG/242">
+    <base><![CDATA[Unbind]]></base>
+    <translation>Fjern binding</translation>
+  </string>
+  <string id="/DLG/242/00">
+    <base><![CDATA[&Yes]]></base>
+    <translation>&amp;Ja</translation>
+  </string>
+  <string id="/DLG/242/01">
+    <base><![CDATA[&No]]></base>
+    <translation>&amp;Nej</translation>
+  </string>
+  <string id="/DLG/242/03">
+    <base><![CDATA[The following disks will be unbound.\nAre you sure you want to unbind them?]]></base>
+    <translation>Binding til følgende diske bliver fjernet.\nEr du sikker på at du vil fjerne bindingerne?</translation>
+  </string>
+  <string id="/DLG/249">
+    <base><![CDATA[Synchronize disks]]></base>
+    <translation>Synkronisér diske</translation>
+  </string>
+  <string id="/DLG/249/00">
+    <base><![CDATA[Bind Type:]]></base>
+    <translation>Bindingstype:</translation>
+  </string>
+  <string id="/DLG/249/01">
+    <base><![CDATA[Type]]></base>
+    <translation>Type</translation>
+  </string>
+  <string id="/DLG/249/02">
+    <base><![CDATA[Target:]]></base>
+    <translation>Mål:</translation>
+  </string>
+  <string id="/DLG/249/03">
+    <base><![CDATA[Name]]></base>
+    <translation>Navn</translation>
+  </string>
+  <string id="/DLG/249/06">
+    <base><![CDATA[Time Remaining:]]></base>
+    <translation>Resterende tid:</translation>
+  </string>
+  <string id="/DLG/249/07">
+    <base><![CDATA[MB/s]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/08">
+    <base><![CDATA[Start]]></base>
+    <translation>Start</translation>
+  </string>
+  <string id="/DLG/249/09">
+    <base><![CDATA[Close]]></base>
+    <translation>Luk</translation>
+  </string>
+  <string id="/DLG/249/10">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuller</translation>
+  </string>
+  <string id="/DLG/249/12">
+    <base><![CDATA[00:00:00]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/14">
+    <base><![CDATA[0.0]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/340">
+    <base><![CDATA[NDAS Bind Management Error]]></base>
+    <translation>Fejl ved NDAS Bind Management</translation>
+  </string>
+  <string id="/DLG/340/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406">
+    <base><![CDATA[Repair fault tolerant disks]]></base>
+    <translation>Reparer fejltolerante diske</translation>
+  </string>
+  <string id="/DLG/406/00">
+    <base><![CDATA[Select one of the NDAS Device listed below. It will be used as a replacement for the broken NDAS Device]]></base>
+    <translation>Vælg én af nedenstående NDAS-enheder. Den vil blive brugt som erstatning for den ødelagte NDAS-enhed</translation>
+  </string>
+  <string id="/DLG/406/01">
+    <base><![CDATA[&Devices:]]></base>
+    <translation>&amp;Enheder:</translation>
+  </string>
+  <string id="/DLG/406/02">
+    <base><![CDATA[List1]]></base>
+    <translation>Liste1</translation>
+  </string>
+  <string id="/DLG/406/03">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuller</translation>
+  </string>
+  <string id="/DLG/411">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Diskbindingsguide</translation>
+  </string>
+  <string id="/DLG/411/00">
+    <base><![CDATA[This wizard helps you create bound disks.]]></base>
+    <translation>Denne guide hjælper med at oprette bundne diske.</translation>
+  </string>
+  <string id="/DLG/411/01">
+    <base><![CDATA[You can bind disks of NDAS Devices to build a new disk with faster speed, larger capacity and fault tolerance. Many bind types are given to fit your needs.]]></base>
+    <translation>Du kan binde diske i NDAS-enheder for at danne en ny disk med højere hastighed, større kapacitet og fejltolerance. Der kan vælges mellem mange bindingstyper efter behov.</translation>
+  </string>
+  <string id="/DLG/411/02">
+    <base><![CDATA[Welcome to the Disk Bind Wizard]]></base>
+    <translation>Velkommen til diskbindingsguiden</translation>
+  </string>
+  <string id="/DLG/411/03">
+    <base><![CDATA[To continue, click Next.]]></base>
+    <translation>Klik på Næste for at fortsætte.</translation>
+  </string>
+  <string id="/DLG/413">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Diskbindingsguide</translation>
+  </string>
+  <string id="/DLG/413/00">
+    <base><![CDATA[Select the bind type you want to create:]]></base>
+    <translation>Vælg den bindingstype du ønsker at oprette:</translation>
+  </string>
+  <string id="/DLG/413/01">
+    <base><![CDATA[Aggregation]]></base>
+    <translation>Sammensætning</translation>
+  </string>
+  <string id="/DLG/413/02">
+    <base><![CDATA[Stripe (RAID 0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/03">
+    <base><![CDATA[Mirror (RAID 1)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/04">
+    <base><![CDATA[RAID 4]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/05">
+    <base><![CDATA[Number of disks:]]></base>
+    <translation>Antal diske:</translation>
+  </string>
+  <string id="/DLG/413/07">
+    <base><![CDATA[Description]]></base>
+    <translation>Beskrivelse</translation>
+  </string>
+  <string id="/DLG/415">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Diskbindingsguide</translation>
+  </string>
+  <string id="/DLG/415/00">
+    <base><![CDATA[Available:]]></base>
+    <translation>Tilgængelig:</translation>
+  </string>
+  <string id="/DLG/415/02">
+    <base><![CDATA[&Add >]]></base>
+    <translation>Tilgængelig:</translation>
+  </string>
+  <string id="/DLG/415/03">
+    <base><![CDATA[< &Remove]]></base>
+    <translation>&lt; &amp;Fjern</translation>
+  </string>
+  <string id="/DLG/415/04">
+    <base><![CDATA[< Re&move All]]></base>
+    <translation>&lt; Fjern alle</translation>
+  </string>
+  <string id="/DLG/415/05">
+    <base><![CDATA[Selected:]]></base>
+    <translation>Valgt:</translation>
+  </string>
+  <string id="/DLG/415/07">
+    <base><![CDATA[Total number of disks required:]]></base>
+    <translation>Totale antal ønskede diske:</translation>
+  </string>
+  <string id="/DLG/415/09">
+    <base><![CDATA[Total disk size in gigabytes (GB):]]></base>
+    <translation>Total diskstørrelse i gigabyte (GB):</translation>
+  </string>
+  <string id="/DLG/415/11">
+    <base><![CDATA[Note: The data on the disks will be deleted once binding is completed.]]></base>
+    <translation>Bemærk: Dataene på diskene bliver slettet, når bindingen er gennemført.</translation>
+  </string>
+  <string id="/DLG/420">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>Diskbindingsguide</translation>
+  </string>
+  <string id="/DLG/420/00">
+    <base><![CDATA[Completing the Disk Bind Wizard]]></base>
+    <translation>Afslutter diskbindingsguiden</translation>
+  </string>
+  <string id="/DLG/420/02">
+    <base><![CDATA[The binding results are followings:]]></base>
+    <translation>Afslutter diskbindingsguiden</translation>
+  </string>
+  <string id="/DLG/420/04">
+    <base><![CDATA[To close this wizard, click Finish.]]></base>
+    <translation>Klik på Afslut for at lukke denne guide.</translation>
+  </string>
+  <string id="/DLG/1091/01">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/1091/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuller</translation>
+  </string>
+  <string id="/MNU/128/00">
+    <base><![CDATA[&File]]></base>
+    <translation>&amp;Filer</translation>
+  </string>
+  <string id="/MNU/128/00/00">
+    <base><![CDATA[E&xit]]></base>
+    <translation>Afslut</translation>
+  </string>
+  <string id="/MNU/128/01">
+    <base><![CDATA[&Tool]]></base>
+    <translation>&amp;Værktøj</translation>
+  </string>
+  <string id="/MNU/128/01/00">
+    <base><![CDATA[&Refresh]]></base>
+    <translation>&amp;Opdatér</translation>
+  </string>
+  <string id="/MNU/128/01/01">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation>&amp;Bind diske</translation>
+  </string>
+  <string id="/MNU/128/01/02">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation>Tilføj &amp;Spejl</translation>
+  </string>
+  <string id="/MNU/128/01/03">
+    <base><![CDATA[R&eset bind information]]></base>
+    <translation>Tilbagestil bindingsinformation</translation>
+  </string>
+  <string id="/MNU/128/01/04">
+    <base><![CDATA[&Unbind]]></base>
+    <translation>&amp;Fjern binding</translation>
+  </string>
+  <string id="/MNU/128/01/05">
+    <base><![CDATA[Mi&grate]]></base>
+    <translation>Migrér</translation>
+  </string>
+  <string id="/MNU/128/01/06">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation>Tilføj &amp;Reservedisk</translation>
+  </string>
+  <string id="/MNU/128/01/07">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation>Udskift &amp;Enhed</translation>
+  </string>
+  <string id="/MNU/128/01/08">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation>Brug som RAID &amp;element</translation>
+  </string>
+  <string id="/MNU/128/01/09">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation>&amp;Slet defekt mærke</translation>
+  </string>
+  <string id="/MNU/128/01/10">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation>Konfigurér RAID uden denne disk</translation>
+  </string>
+  <string id="/MNU/128/01/11">
+    <base><![CDATA[Convert to a basic &disk]]></base>
+    <translation>Konvertér til en grund&amp;disk</translation>
+  </string>
+  <string id="/MNU/128/02">
+    <base><![CDATA[&Help]]></base>
+    <translation>&amp;Hjælp</translation>
+  </string>
+  <string id="/MNU/128/02/00">
+    <base><![CDATA[&About NDAS Software]]></base>
+    <translation>&amp;Om NDAS software</translation>
+  </string>
+  <string id="/MNU/448/00/00">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation>&amp;Bind diske</translation>
+  </string>
+  <string id="/MNU/448/00/01">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation>Tilføj &amp;Spejl</translation>
+  </string>
+  <string id="/MNU/448/00/02">
+    <base><![CDATA[&Reset bind information]]></base>
+    <translation>&amp;Tilbagestil bindingsinformation</translation>
+  </string>
+  <string id="/MNU/448/01/00">
+    <base><![CDATA[&Unbind]]></base>
+    <translation>&amp;Fjern binding</translation>
+  </string>
+  <string id="/MNU/448/01/01">
+    <base><![CDATA[&Migrate]]></base>
+    <translation>&amp;Migrér</translation>
+  </string>
+  <string id="/MNU/448/01/02">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation>Tilføj &amp;Reservedisk</translation>
+  </string>
+  <string id="/MNU/448/02/00">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation>Udskift &amp;Enhed</translation>
+  </string>
+  <string id="/MNU/448/02/01">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation>Brug som RAID &amp;element</translation>
+  </string>
+  <string id="/MNU/448/02/02">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation>&amp;Slet defekt mærke</translation>
+  </string>
+  <string id="/MNU/448/02/03">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation>Konfigurér RAID uden denne disk</translation>
+  </string>
+  <string id="/MNU/448/02/04">
+    <base><![CDATA[Convert to a &basic disk]]></base>
+    <translation>Konvertér til en &amp;grunddisk</translation>
+  </string>
+</localization>

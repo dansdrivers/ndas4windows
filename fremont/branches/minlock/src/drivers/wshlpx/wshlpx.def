@@ -1,0 +1,18 @@
+LIBRARY WSHLPX
+EXPORTS
+        WSHGetSockaddrType
+        WSHGetWildcardSockaddr
+        WSHGetSocketInformation
+        WSHGetWinsockMapping
+        WSHNotify
+        WSHOpenSocket
+        WSHSetSocketInformation
+        WSHEnumProtocols
+        WSHOpenSocket2
+        WSHJoinLeaf
+        WSHGetWSAProtocolInfo
+        WSHGetBroadcastSockaddr
+        WSHAddressToString
+        WSHStringToAddress
+        WSHGetProviderGuid
+        WSHIoctl

@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages>
+	<!-- NDASSVC -->
+	<message id="0x021" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_DEVICE_ENTRY_NOT_FOUND">
+		<text lang="NEU">NDAS Device Entry Not Found.</text>
+		<text lang="KOR">NDAS 디바이스를 찾을 수 없습니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Entrée pour le disque NDAS n'a pas été trouvée.</text>
+		<text lang="DEU">Es wurde kein NDAS-Geräteeintrag gefunden.</text>
+		<text lang="ITA">Immissione unità NDAS non trovata.</text>
+		<text lang="ESN">No se ha hallado la entrada del Aparato NDAS.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x022" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_UNITDEVICE_ENTRY_NOT_FOUND">
+		<text lang="NEU">NDAS Unit Device Entry Not Found.</text>
+		<text lang="KOR">NDAS 유닛 디바이스 정보를 찾을 수 없습니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Entrée pour l'unitée du disque NDAS n'a pas été trouvée.</text>
+		<text lang="DEU">Es wurde kein NDAS-Geräteeintrag gefunden.</text>
+		<text lang="ITA">Immissione periferica unità NDAS non trovata.</text>
+		<text lang="ESN">No se ha hallado la entrada del aparato de la unidad NDAS.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x023" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_LOGICALDEVICE_ENTRY_NOT_FOUND">
+		<text lang="NEU">NDAS Logical Device Entry Not Found.</text>
+		<text lang="KOR">NDAS 논리 디바이스 정보를 찾을 수 없습니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Entrée pour le disque logique NDAS n'a pas été trouvée.</text>
+		<text lang="DEU">Es wurde kein NDAS-Geräteeintrag gefunden.</text>
+		<text lang="ITA">Immissione unità logica NDAS non trovata.</text>
+		<text lang="ESN">No se ha hallado la entrada del Aparato Lógico NDAS.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x24" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_CANNOT_DISABLE_MOUNTED_DEVICE">
+		<text lang="NEU">Disabling the NDAS device containing any of the mounted unit device is not allowed.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Il n'est pas permit de désactiver un disque NDAS contenant des unitées activée.</text>
+		<text lang="DEU">Das Deaktivieren des NDAS Geräts, das Teile der gemounteten Unit Device enthält, ist nicht gestattet.</text>
+		<text lang="ITA">Non è permesso disabilitare la periferica NDAS contenente una delle unità installate.</text>
+		<text lang="ESN">El deshabilitar un aparato NDAS que contenga alguno de los aparatos de la unidad instalado no está permitido.</text>
+		<text lang="CHS">-</text>
+		<text lang="PTG">-</text>
+	</message>
+	<message id="0x031" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_CANNOT_UNREGISTER_ENABLED_DEVICE">
+		<text lang="NEU">Unregistering an enabled NDAS device is not permitted.</text>
+		<text lang="KOR">사용되고 있는 NDAS 디바이스를 제거할 수 없습니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Désenregistrer un disque activé n'est pas autorisé.</text>
+		<text lang="DEU">Sie können aktive NDAS-Geräte nicht deaktivieren.</text>
+		<text lang="ITA">L'annullamento della registrazione di una periferica NDAS abilitata non è consentito.</text>
+		<text lang="ESN">No está permitido el desregistrar un aparato NDAS habilitado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x032" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_INVALID_SLOT_NUMBER">
+		<text lang="NEU">Invalid NDAS slot number.</text>
+		<text lang="KOR">잘못된 NDAS 슬롯 번호입니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Numéro de case non valable.</text>
+		<text lang="DEU">Ungültige NDAS-Slot-nummer</text>
+		<text lang="ITA">Numero slot NDAS non valido.</text>
+		<text lang="ESN">Número de slot NDAS inválido.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x033" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_SLOT_ALREADY_OCCUPIED">
+		<text lang="NEU">Requested slot is used by another device.</text>
+		<text lang="KOR">요청한 슬롯 번호가 다른 NDAS 디바이스에서 이미 사용 중 입니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La case est utilisé par un autre apareille.</text>
+		<text lang="DEU">Der angeforderte Slot wird bereits von einem anderen Gerät verwendet.</text>
+		<text lang="ITA">Lo slot richiesto è attualmente usato da un'altra periferica.</text>
+		<text lang="ESN">El slot solicitado es usado por otro aparato.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x034" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_DUPLICATE_DEVICE_ENTRY">
+		<text lang="NEU">The requested NDAS device already exists.</text>
+		<text lang="KOR">요청한 NDAS 디바이스가 이미 등록되어 있습니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le disque NDAS demandé existe déja.</text>
+		<text lang="DEU">Das angeforderte NDAS-Gerät besteht bereits.</text>
+		<text lang="ITA">L'unità NDAS richiesta esiste già.</text>
+		<text lang="ESN">El aparato NDAS solicitado ya existe.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x035" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_DEVICE_ENTRY_SLOT_FULL">
+		<text lang="NEU">No more NDAS device slot is available.</text>
+		<text lang="KOR">NDAS 디바이스 슬롯이 부족합니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Aucune case pour disque NDAS disponible.</text>
+		<text lang="DEU">Keine NDAS-Geräteslots mehr verfügbar.</text>
+		<text lang="ITA">Non vi sono più slot disponibili per unità NDAS.</text>
+		<text lang="ESN">No está más disponible el slot del aparato NDAS.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x041" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_NOT_INITIALIZED">
+		<text lang="NEU">NDAS Logical device is not initialized.</text>
+		<text lang="KOR">NDAS 논리 디바이스가 아직 초기화되지 못했습니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Aucune case pour disque NDAS disponible.</text>
+		<text lang="DEU">Das logische NDAS-Gerät is nicht initialisiert.</text>
+		<text lang="ITA">L'unità logica NDAS non è ancora inizializzata.</text>
+		<text lang="ESN">El aparato Lógico NDAS no está inicializado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x042" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_MEMBER_MISSING">
+		<text lang="NEU">Some NDAS logical device members are missing in the entry.</text>
+		<text lang="KOR">NDAS 논리 디바이스를 구성하고 있는 유닛 디바이스를 찾을 수 없습니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Quelques membres de disque logique NDAS manque dans l'entrée.</text>
+		<text lang="DEU">Einige Mitglieder der logischen NDAS-Geräte fehlen im Eintrag.</text>
+		<text lang="ITA">Nel campo di inserimento mancano alcuni elementi dell'unità logica NDAS.</text>
+		<text lang="ESN">Algunos de los miembros del aparato lógico NDAS están desaparecidos en la entrada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x043" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_NOT_MOUNTED">
+		<text lang="NEU">NDAS Logical device is not mounted.</text>
+		<text lang="KOR">NDAS 논리 디바이스가 마운트 되지 않았습니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le disque logique NDAS n'a pas été ajouté.</text>
+		<text lang="DEU">Das logische NDAS-Gerät ist nicht gemountet.</text>
+		<text lang="ITA">L'unità logica NDAS non è installata.</text>
+		<text lang="ESN">El aparato Lógico NDAS no está instalado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x044" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_CONFLICT_LOGICALDEVICE_ENTRY">
+		<text lang="NEU">NDAS Logical device entry is conflicts with existing entries.</text>
+		<text lang="KOR">NDAS 논리 디바이스의 정보가 기존의 정보와 충돌합니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">L'entrée pour le disque logique NDAS cause des conflits avec des entrées existante.</text>
+		<text lang="DEU">Es besteht ein Konflikt des Eintrag des logischen Geräts mit existierenden Einträgen.</text>
+		<text lang="ITA">Il dato dell'unità logica NDAS appena immesso è in conflitto con quelli pre-esistenti.</text>
+		<text lang="ESN">La entrada del aparato lógico NDAS está en conflicto con las entradas existentes.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x045" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_DUPLICATE_LOGICALDEVICE_ENTRY">
+		<text lang="NEU">The requested NDAS logical device already exists.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le disque logique NDAS demandé existe dejá.</text>
+		<text lang="DEU">Das angeforderte logische NDAS-Gerät existiert nicht.</text>
+		<text lang="ITA">L'unità logica NDAS richiesta esiste già.</text>
+		<text lang="ESN">El aparato lógico NDAS solicitado ya existe.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x046" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_LOGICALDEVICE_SLOT_FULL">
+		<text lang="NEU">No more NDAS logical device slot is available.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>	
+		<text lang="FRA">Aucune case pour disque logique NDAS disponible.</text>
+		<text lang="DEU">Es ist kein logischer NDAS-Geräteslot mehr verfügbar.</text>
+		<text lang="ITA">Non vi sono altri slot disponibili per l'unità logica NDAS.</text>
+		<text lang="ESN">No más slot del aparato lógico NDAS están disponibles.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x047" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_UNSUPPORTED_LOGICALDEVICE_TYPE">
+		<text lang="NEU">Unsupported NDAS logical device type.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Type de disque logique NDAS non supporté.</text>
+		<text lang="DEU">Nicht unterstützter logischer NDAS-Gerätetyp.</text>
+		<text lang="ITA">Tipo unità logica NDAS non supportato.</text>
+		<text lang="ESN">Tipo de aparato lógico NDAS no soportado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x048" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_INVALID_BIND_INFORMATION">
+		<text lang="NEU">The bind information in NDAS device is invalid.</text>
+		<text lang="KOR">NDAS 디바이스의 결합 정보가 올바르지 않습니다..</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Les informations de liaison pour ce disque NDAS sont incorrecte.</text>
+		<text lang="DEU">Ungültige Bindungsinformation für das NDAS-Gerät.</text>
+		<text lang="ITA">L'informazione di binding per l'unità NDAS non è valida.</text>
+		<text lang="ESN">La información bind en el aparato NDAS es inválida.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x049" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_MODIFIED_BIND_INFORMATION">
+		<text lang="NEU">The bind information in NDAS device is changed.</text>
+		<text lang="KOR">NDAS 디바이스의 결합 정보가 변경되었습니다..</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Les informations de liaison pour ce disque NDAS ont changé.</text>
+		<text lang="DEU">Die Bindungsinformationen für das NDAS-Gerät wurden geändert.</text>
+		<text lang="ITA">L'informazione di binding per l'unità NDAS è stata modificata.</text>
+		<text lang="ESN">La información bind en el aparato NDAS está cambiada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x050" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+		<text lang="NEU">Granted access for the NDAS logical device is insufficent to complete the operation.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">L'accès garantie au disque logique NDAS n'est pas suffisant pour completer cette opération.</text>
+		<text lang="DEU">Der gewährte Zugriff für das logische NDAS-Gerät ist nicht ausreichend, den Vorgang zu beenden.</text>
+		<text lang="ITA">L'accesso concesso per l'unità logica NDAS non è sufficiente per completare l'operazione.</text>
+		<text lang="ESN">El acceso garantizado para el aparato lógico NDAS es insuficiente para completar la operación.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x051" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+		<text lang="NEU">Requested access to the NDAS logical device is failed.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">L'accès au disque logique NDAS demandé a échoué.</text>
+		<text lang="DEU">Der geforderte Zugang zum logischen NDAS Gerät wurde nicht gestattet.</text>
+		<text lang="ITA">L'accesso richiesto per l'unità logica NDAS è interrotto.</text>
+		<text lang="ESN">El acceso solicitado para el aparato lógico NDAS ha fallado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x052" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_NOT_UNMOUNTED">
+		<text lang="NEU">NDAS logical device is not in a mountable status.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le disque logique NDAS n'a pas le statut pour être ajouté.</text>
+		<text lang="DEU">Das logische NDAS-Gerät ist in einem nicht zu mountenden Zustand.</text>
+		<text lang="ITA">L'unità logica NDAS non è installabile nello stato corrente.</text>
+		<text lang="ESN">El aparato lógico NDAS no está en un estatus de instalable.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x061" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_HOST_INFO_NOT_FOUND">
+		<text lang="NEU">NDAS Host Information cannot be found.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Les informations de l'hôte NDAS sont introuvable.</text>
+		<text lang="DEU">NDAS-Hostinformationen können nicht gefunden werden.</text>
+		<text lang="ITA">Impossibile trovare le informazioni sull'Host NDAS.</text>
+		<text lang="ESN">No se puede hallar la Información del Anfitrión NDAS.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x062" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_DEVICE_COMMUNICATION_FAILURE">
+		<text lang="NEU">Communication to the NDAS Device has failed.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La communication avec le disque NDAS a échouée.</text>
+		<text lang="DEU">Die Kommunikation zum NDAS-Gerät ist gescheitert.</text>
+		<text lang="ITA">La comunicazione con l'unità logica NDAS è interrotta.</text>
+		<text lang="ESN">La comunicación en el Aparato NDAS ha fallado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x063" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_MULTIPLE_WRITE_ACCESS_NOT_ALLOWED">
+		<text lang="NEU">Multiple Write Access is not allowed for the specified NDAS unit device.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">L'accès écriture multiple n'est pas permit pour l'unitée de disque NDAS spécifié.</text>
+		<text lang="DEU">Der Multiwrite-Zugriff ist für das angegebene NDAS-Gerät nicht erlaubt.</text>
+		<text lang="ITA">L'unità logica NDAS specificata non dispone dell'accesso in multiscrittura.</text>
+		<text lang="ESN">El acceso Multiple Write no está permitido para el aparato de unidad NDAS especificado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x064" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_INCOMPATIBLE_HOSTS_FOR_MULTIPLE_WRITE_ACCESS">
+		<text lang="NEU">Incompatible NDAS hosts for multiple write-access are found for the specified NDAS unit device.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Des hôtes NDAS incompatible pour l'accès écriture multiple ont été trouvé pour l'unitée de disque NDAS spécifié.</text>
+		<text lang="DEU">Es wurden inkompatible NDAS hosts für den Multiwrite-Zugriff für das angegebene NDAS-Gerät angefunden.</text>
+		<text lang="ITA">Rilevati host NDAS incompatibili con l'accesso in multi scrittura per l'unità logica NDAS specificata.</text>
+		<text lang="ESN">Se hallaron anfitriones NDAS para múltiple write-access incompatibles para el aparato de la unidad NDAS especificada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x065" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NO_MORE_DVD_WRITE_ACCESS_INSTANCE_ALLOWED">
+		<text lang="NEU">No more than constrained instances of DVD Drives as Read/Write mode is allowed.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Plus d'instances obligées en mode lecture /écriture sont permitpour les lecteures DVD.</text>
+		<text lang="DEU">Es sind nur eingeschränkte Instanzen von DVD-laufwerken im Lese-/Schreibzugriff erlaubt.</text>
+		<text lang="ITA">L'accesso è consentito unicamente a unità DVD vincolate in modo Lettura/scrittura.</text>
+		<text lang="ESN">Sólo se permiten instances obligadas de Unidades de DVD como modo Leer/Escribir.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x066" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_CORRUPTED_BIND_INFORMATION">
+		<text lang="NEU">The NDAS device is corrupted and need to be recovered before mounting.</text>
+		<text lang="KOR">NDAS 디바이스를 사용하기 전에 복구 작업이 필요합니다.</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le disque NDAS est corompu et doit être réparé avant de l'activer.</text>		
+		<text lang="DEU">Das NDAS Gerät ist fehlerhaft und muss vor dem Mounten wiederhergestellt werden.</text>
+		<text lang="ITA">L'unità NDAS è danneggiata e deve essere riparata prima della nuova installazione.</text>
+		<text lang="ESN">El aparato NDAS está defectuoso y necesita ser recuperado antes de instalar.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x0E0" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+		<text lang="NEU">Command version is unsupported.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La version de commande n'est pas supportée.</text>
+		<text lang="DEU">Die Befehlsversion wird nicht unterstützt.</text>
+		<text lang="ITA">Versione del comando non supportata.</text>
+		<text lang="ESN">La versión de comando no está soportada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x0E1" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NOT_IMPLEMENTED">
+		<text lang="NEU">Requested feature is not supported.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La fonction demandée n'est pas supportée.</text>
+		<text lang="DEU">Die angeforderte Funktion wird nicht unterstützt.</text>
+		<text lang="ITA">La funzionalità richiesta non è supportata.</text>
+		<text lang="ESN">La característica solicitada no está soportada.</text>
+		<text lang="PTG">-</text>z
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x0C0" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+		<text lang="NEU">Unsupported Read-only filter version.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Version de filtre uniquement lecture incorrecte.</text>
+		<text lang="DEU">Nicht unterstützte Version des Read-Only Filters.</text>
+		<text lang="ITA">Versione del filtro di Solo lettura non supportata.</text>
+		<text lang="ESN">La versión de filtro de Sólo Lectura no está soportada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x0D0" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_INVALID_SERVICE_PARAMETER">
+		<text lang="NEU">Invalid service parameter.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Parametre du service incorrecte.</text>
+		<text lang="DEU">Ungültiger Serviceparameter.</text>
+		<text lang="ITA">Parametro di servizio non valido.</text>
+		<text lang="ESN">Parámetro de servicio inválido.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<!-- NDASUSER -->
+	<message id="0x01" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+		<text lang="NEU">Communication to the NDAS service failed.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La communnication avec le service NDAS a échouée.</text>
+		<text lang="DEU">Die Kommunikation mit dem NDAS-Service ist gescheitert.</text>
+		<text lang="ITA">Comunicazione con il servizio NDAS interrotta.</text>
+		<text lang="ESN">La comunicación al servicio NDAS falló.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x02" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+		<text lang="NEU">NDAS Device ID or Key is invalid.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">L'ID ou la clé di disque NDAS est incorrecte.</text>
+		<text lang="DEU">Die NDAS-Geräte-ID oder-Schlüssel ist ungültig.</text>
+		<text lang="ITA">L'ID o la Key dell'unità NDAS non sono validi.</text>
+		<text lang="ESN">El ID o el Key del aparato NDAS es inválido.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x03" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+		<text lang="NEU">NDAS Device ID is invalid.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">L'ID di disque NDAS est incorrecte.</text>
+		<text lang="DEU">Die NDAS-Geräte-ID ist ungültig.</text>
+		<text lang="ITA">L'ID dell'unità NDAS non è valido.</text>
+		<text lang="ESN">El ID del aparato NDAS es inválido.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x04" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+		<text lang="NEU">NDAS Device Key is invalid.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La clé de disque NDAS est incorrecte.</text>
+		<text lang="DEU">Der NDAS-Geräteschlüssel ist invalid.</text>
+		<text lang="ITA">La chiave dell'unità NDAS non è valida.</text>
+		<text lang="ESN">El Key del Aparato NDAS es inválido.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0xFF" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_PARAMETER">
+		<text lang="NEU">Invalid parameter.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Parametre incorrecte.</text>
+		<text lang="DEU">Ungültiger Parameter.</text>
+		<text lang="ITA">Parametro non valido.</text>
+		<text lang="ESN">Parámetro inválido.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x50" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+		<text lang="NEU">NDAS Logical device access denied.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">L'accès au disque logique refusé.</text>
+		<text lang="DEU">Der Zugriff auf das logische NDAS-Gerät wurde verweigert.</text>
+		<text lang="ITA"> Accesso all'unità logica NDAS negato.</text>
+		<text lang="ESN">Acceso negado al aparato lógico NDAS.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x101" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+		<text lang="NEU">NDAS Service does not support the requested operation.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le service NDAS ne supporte pas l'opération demandeée.</text>
+		<text lang="DEU">Die angeforderte Operation wird von dem NDAS-Service nicht unterstützt.</text>
+		<text lang="ITA">Il servizio NDAS non supporta l'operazione richiesta.</text>
+		<text lang="ESN">El servicio NDAS no soporta la operación solicitada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x102" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+		<text lang="NEU">Operation is invalid to the NDAS service.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">L'opération pour le service NDAS n'est pas correcte.</text>
+		<text lang="DEU">Die Operation ist für den NDAS-Service ungültig.</text>
+		<text lang="ITA">Per il servizio NDAS, l'operazione non è valida.</text>
+		<text lang="ESN">La operación es inválida en el servicio NDAS.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x103" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+		<text lang="NEU">NDAS Service is terminating.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le service NDAS est terminé.</text>
+		<text lang="DEU">Der NDAS-Service wird beendet.</text>
+		<text lang="ITA">Chiusura del servizio NDAS in corso.</text>
+		<text lang="ESN">El servicio NDAS se está terminando.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x104" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+		<text lang="NEU">Unsupported NDAS service version.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Version de service NDAS non supportée.</text>
+		<text lang="DEU">Nicht unterstützte NDAS-Service-Version</text>
+		<text lang="ITA">Versione del servizio NDAS non supportata.</text>
+		<text lang="ESN">La versión del servicio NDAS no está soportado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x200" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+		<text lang="NEU">Unsupport NDAS service event version.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Version de service NDAS event non supportée.</text>
+		<text lang="DEU">Nicht unterstützte NDAS-Service Event-Version</text>
+		<text lang="ITA">Versione evento del servizio NDAS non supportata.</text>
+		<text lang="ESN">La versión del evento del servicio NDAS no está soportado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x201" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+		<text lang="NEU">No more NDAS event callback is available.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Plus de NDAS event callback disponible.</text>
+		<text lang="DEU">Kein NDAS-Event Callback mehr verfügbar.</text>
+		<text lang="ITA">Non vi sono più richiamate di evento NDAS disponibili.</text>
+		<text lang="ESN">No más callback de eventos NDAS están disponibles.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x202" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+		<text lang="NEU">Invalid NDAS event callback handle.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">NDAS event callback handle incorrecte.</text>
+		<text lang="DEU">Kein NDAS-Event callback handle.</text>
+		<text lang="ITA">Gestione callback di evento NDAS non valida.</text>
+		<text lang="ESN">Manejo inválido de callback de evento NDAS.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x0E1" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_NOT_IMPLEMENTED">
+		<text lang="NEU">Requested feature is not supported.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La fonction demandée n'est pas supportée.</text>
+		<text lang="DEU">Die angeforderte Funktion wird nicht unterstützt.</text>
+		<text lang="ITA">La funzionalità richiesta non è supportata.</text>
+		<text lang="ESN">La característica solicitada no está soportada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<!-- NDASCOMM API -->
+	<message id="0x0000" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_INTERNAL">
+		<text lang="NEU">Internal error.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne.</text>
+		<text lang="DEU">Interner Fehler.</text>
+		<text lang="ITA">Errore interno.</text>
+		<text lang="ESN">Error interno.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0001" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_NOT_IMPLEMENTED">
+		<text lang="NEU">Requested feature is not supported.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La fonction demandée n'est pas supportée.</text>
+		<text lang="DEU">Die angeforderte Funktion wird nicht unterstützt.</text>
+		<text lang="ITA">La funzionalità richiesta non è supportata.</text>
+		<text lang="ESN">La característica solicitada no está soportada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0002" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_INVALID_PARAMETER">
+		<text lang="NEU">Invalid parameter.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Parametre incorrecte.</text>
+		<text lang="DEU">Ungültiger Parameter.</text>
+		<text lang="ITA">Parametro non valido.</text>
+		<text lang="ESN">Parámetro inválido.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0003" severity="Warning" facility="NDASCOMM"
+		symbolicName="NDASCOMM_WARNING_CONNECTION_FAIL">
+		<text lang="NEU">Connection failed to the NDAS device.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La connexion vers le disque NDAS a échouée.</text>
+		<text lang="DEU">Die Verbindung zum NDAS-Gerät scheiterte.</text>
+		<text lang="ITA">Connessione alla periferica NDAS non riuscita.</text>
+		<text lang="ESN">La conexión falló en el aparato NDAS</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0004" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_LOGIN_COMMUNICATION">
+		<text lang="NEU">Communication error during login process.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure de communication pendant l'identification</text>
+		<text lang="DEU">Kommunikationsfehler während des Anmeldeprozesses.</text>
+		<text lang="ITA">Errore di comunicazione all'apertura della sessione.</text>
+		<text lang="ESN">Error de comunicación durante el proceso de login.</text>	
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0005" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_RI_NOT_EXIST">
+		<text lang="NEU">Internal error : NDASCOMM_ERROR_RI_NOT_EXIST.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne: NDASCOMM_ERROR_RI_NOT_EXIST.</text>
+		<text lang="DEU">Interner Fehler : NDASCOMM_ERROR_RI_NOT_EXIST.</text>
+		<text lang="ITA">Errore interno : NDASCOMM_ERROR_RI_NOT_EXIST.</text>
+		<text lang="ESN">Error Interno : NDASCOMM_ERROR_RI_NOT_EXIST.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0006" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_RI_BAD_COMMAND">
+		<text lang="NEU">Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne: NDASCOMM_ERROR_RI_BAD_COMMAND.</text>
+		<text lang="DEU">Interner Fehler : NDASCOMM_ERROR_RI_BAD_COMMAND.</text>
+		<text lang="ITA">Errore interno : NDASCOMM_ERROR_RI_BAD_COMMAND.</text>
+		<text lang="ESN">Error interno : NDASCOMM_ERROR_RI_BAD_COMMAND.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0007" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+		<text lang="NEU">Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne: NDASCOMM_ERROR_RI_COMMAND_FAILED.</text>
+		<text lang="DEU">Interner Fehler : NDASCOMM_ERROR_RI_COMMAND_FAILED.</text>
+		<text lang="ITA">Errore interno: NDASCOMM_ERROR_RI_COMMAND_FAILED.</text>
+		<text lang="ESN">Error interno : NDASCOMM_ERROR_RI_COMMAND_FAILED.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0008" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+		<text lang="NEU">Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne: NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</text>
+		<text lang="DEU">Interner Fehler : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</text>
+		<text lang="ITA">Errore interno : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</text>
+		<text lang="ESN">Error interno : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0009" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_T_NOT_EXIST">
+		<text lang="NEU">Internal error : NDASCOMM_ERROR_T_NOT_EXIST.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne: NDASCOMM_ERROR_T_NOT_EXIST.</text>
+		<text lang="DEU">Interner Fehler : NDASCOMM_ERROR_T_NOT_EXIST.</text>
+		<text lang="ITA">Errore interno : NDASCOMM_ERROR_T_NOT_EXIST.</text>
+		<text lang="ESN">Error interno : NDASCOMM_ERROR_T_NOT_EXIST.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x000A" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_T_BAD_COMMAND">
+		<text lang="NEU">Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne: NDASCOMM_ERROR_T_BAD_COMMAND.</text>
+		<text lang="DEU">Interner Fehler : NDASCOMM_ERROR_T_BAD_COMMAND.</text>
+		<text lang="ITA">Errore interno : NDASCOMM_ERROR_T_BAD_COMMAND.</text>
+		<text lang="ESN">Error interno : NDASCOMM_ERROR_T_BAD_COMMAND.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x000B" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_T_COMMAND_FAILED">
+		<text lang="NEU">Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne: NDASCOMM_ERROR_T_COMMAND_FAILED.</text>
+		<text lang="DEU">Interner Fehler : NDASCOMM_ERROR_T_COMMAND_FAILED.</text>
+		<text lang="ITA">Errore interno : NDASCOMM_ERROR_T_COMMAND_FAILED.</text>
+		<text lang="ESN">Error interno : NDASCOMM_ERROR_T_COMMAND_FAILED.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x000C" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_T_BROKEN_DATA">
+		<text lang="NEU">Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne: NDASCOMM_ERROR_T_BROKEN_DATA.</text>
+		<text lang="DEU">Interner Fehler : NDASCOMM_ERROR_T_BROKEN_DATA.</text>
+		<text lang="ITA">Errore interno : NDASCOMM_ERROR_T_BROKEN_DATA.</text>
+		<text lang="ESN">Error interno : NDASCOMM_ERROR_T_BROKEN_DATA.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x000D" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_RI_AUTH_FAILED">
+		<text lang="NEU">Internal error : NDASCOMM_ERROR_RI_AUTH_FAILE.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure interne: NDASCOMM_ERROR_RI_AUTH_FAILE.</text>
+		<text lang="DEU">Interner Fehler : NDASCOMM_ERROR_RI_AUTH_FAILED.</text>
+		<text lang="ITA">Errore interno : NDASCOMM_ERROR_RI_AUTH_FAILE.</text>
+		<text lang="ESN">Error interno : NDASCOMM_ERROR_RI_AUTH_FAILE.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x000E" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+		<text lang="NEU">Unknown error for login process.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure inconnue pendant l'identification.</text>
+		<text lang="DEU">Unbekannter Fehler beim Anmeldeprozess.</text>
+		<text lang="ITA">Errore sconosciuto nella procedura di inzio sessione.</text>
+		<text lang="ESN">Error desconocido en el proceso de login.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x000F" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_RW_USER_EXIST">
+		<text lang="NEU">The NDAS device is being used by another process(es) or host(s) with read-write access privilege.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le disque NDAS est utilisé par un autre logiciel ou hôte avec l'accès lecture/écriture.</text>
+		<text lang="DEU">Das NDAS-Gerät wird bereits von anderen Prozessen mit Lese-/Schreizugriff benutzt.</text>
+		<text lang="ITA">L'unità NDAS è correntemente utilizzata da un altro/i processo/i o host con privilegio d'accesso in lettura/scrittura. 	</text>
+		<text lang="ESN">El aparato NDAS está siendo usado por otro(s) proceso(s) o anfitrión(es) con el privilegio de acceso leer-escribir.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message id="0x0010" severity="Error" facility="NDASCOMM"
+		symbolicName="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+		<text lang="NEU">Not enough memory to complete job.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Mémoire insuffisante pour completer le job.</text>
+		<text lang="DEU">Nicht genug Speicher, umd den Vorgang durchzuführen.</text>
+		<text lang="ITA">Memoria insufficiente a completare il lavoro.</text>
+		<text lang="ESN">No hay memoria suficiente para completar la tarea.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	
+	<!-- NDASOP API -->
+	<message id="0x0001" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_NOT_IMPLEMENTED">
+		<text lang="NEU">Requested feature is not supported.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La fonction demandée n'est pas supportée.</text>
+		<text lang="DEU">Die angeforderte Funktion wird nicht unterstützt.</text>
+		<text lang="ITA">La funzionalità richiesta non è supportata.</text>
+		<text lang="ESN">La característica solicitada no está soportada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x0002" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_DEVICE_FAIL">
+		<text lang="NEU">Accessing to the device is failed.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">L'accès au disque a échoué.</text>
+		<text lang="DEU">Der Zugriff auf das Gerät ist gescheitert.</text>
+		<text lang="ITA">Impossibile accedere all'unità.</text>
+		<text lang="ESN">El acceso al aparato ha fallado.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x0003" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_NOT_SINGLE_DISK">
+		<text lang="NEU">The NDAS device must be a single disk to operate this job.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le disque n'est pas un disque simple.</text>
+		<text lang="DEU">Das NDAS-Gerät muss eine einzige Platte sein, um diese Operation durchzuführen.</text>
+		<text lang="ITA">Per eseguire questo lavoro, l'unità NDAS deve essere un disco unico.</text>
+		<text lang="ESN">El aparato no es un disco único.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+		
+	<message id="0x0004" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+		<text lang="NEU">The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.</text>
+		<text lang="KOR">-</text>
+		<text lang="FRA">Le disque n'est pas supporté.</text>
+		<text lang="JPN">-</text>
+		<text lang="DEU">Das NDAS-Gerät wird nicht unterstützt. Falls es sich um eine Festplatte handelt, versuchen Sie, das Gerät in eine Single Disk zu konvertierte.</text>
+		<text lang="ITA">L'unità NDAS non è supportata. Se l'unità è un disco rigido, convertire l'unità in un disco unico prima di eseguire questo lavoro.</text>
+		<text lang="ESN">El aparato NDAS no está soportado. Si el aparato es un HDD, convierta el aparato a un disco único antes de hacer la tarea.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x0005" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_NOT_BOUND_DISK">
+		<text lang="NEU">The NDAS device must be a bound disk to operate this job.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le disque n'est pas un disque lié.</text>
+		<text lang="DEU">Das NDAS-Gerät muss ein gebundenes Laufwerk sein, um diese Operation durchzuführen.</text>
+		<text lang="ITA">L'unità NDAS deve essere un disco collegato (bound) per eseguire questo lavoro.</text>
+		<text lang="ESN">El aparato NDAS debe ser un disco bound para operar esta tarea.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x0006" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_INVALID_PARAMETER">
+		<text lang="NEU">Invalid parameter.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Faux Parametre.</text>
+		<text lang="DEU">Ungültiger Parameter.</text>
+		<text lang="ITA">Parametro non valido.</text>
+		<text lang="ESN">Parámetro inválido.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x0007" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+		<text lang="NEU">Not enough memory to complete job.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Mémoire insuffisante pour completer le job.</text>
+		<text lang="DEU">Nicht genug Speicher, um die Operation durchzuführen.</text>
+		<text lang="ITA">Memoria insufficiente a completare il lavoro.</text>
+		<text lang="ESN">No hay suficiente memoria para completar la tarea.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x0008" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_INVALID_DISK_COUNT">
+		<text lang="NEU">Incorrect disk count to bind disks.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le Nombre de disque pour la liaison est inexacte.</text>
+		<text lang="DEU">Ungültiger Laufwerks-Count, um die Laufwerke zu binden.</text>
+		<text lang="ITA">Conteggio disco errato per il binding dei dischi.</text>
+		<text lang="ESN">Conteo incorrecto en los discos bind.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x0009" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_ALREADY_USED">
+		<text lang="NEU">The NDAS device is being used by another process(es) or host(s).</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Le disque NDAS est utilisé par un autre logiciel ou hôte.</text>
+		<text lang="DEU">Das NDAS-Gerät wird bereits von anderen Prozessen oder Host(s) benutzt.</text>
+		<text lang="ITA">L'unità NDAS è correntemnte utilizzata da un altro processo/i o host.</text>
+		<text lang="ESN">El aparato NDAS está siendo usado por otro(s) proceso(s) o anfitrión(es).</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message id="0x000A" severity="Error" facility="NDASOP"
+		symbolicName="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+		<text lang="NEU">The NDAS device has invalid bind information to migrate.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Les informations du disque NDAS ne sont pas correcte pour la migration.</text>
+		<text lang="DEU">Das NDAS-Gerät hat ungültige Bindungsinformationen zur Migration.</text>
+		<text lang="ITA">L'unità NDAS dispone di informazioni non valide di binding per la migrazione.</text>
+		<text lang="ESN">El aparato NDAS tiene información bind inválida para migrar.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<!-- NDASPATCH LIB -->
+	<message id="0x0B1" severity="Error" facility="NDASPATCH"
+		symbolicName="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+		<text lang="NEU">Requested feature is not supported.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">La fonction demandée n'est pas supportée.</text>
+		<text lang="DEU">Die angeforderte Funktion wird nicht unterstützt.</text>
+		<text lang="ITA">La funzionalità richiesta non è supportata.</text>
+		<text lang="ESN">La característica solicitada no está soportada.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<!-- NDASDM - Drive Match Library -->
+	<message id="0x100" severity="Error" facility="NDASDM"
+		symbolicName="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+		<text lang="NEU">Non-SCSI type device is found.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Un disque du type Non-SCSI a été trouvé.</text>
+		<text lang="DEU">Kein SCSI-Gerät gefunden.</text>
+		<text lang="ITA">Rilevata unità non SCSI.</text>
+		<text lang="ESN">Se halló un aparato tipo No-SCSI.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	<message id="0x102" severity="Error" facility="NDASDM"
+		symbolicName="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+		<text lang="NEU">SRB IO CONTROL Error</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">Erreure SRB IO Control</text>
+		<text lang="DEU">SRB IO CONTROL Error</text>
+		<text lang="ITA">Errore CONTROLLO IO SRB.</text>
+		<text lang="ESN">Error SRB IO CONTROL.</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+	
+	<message facility="EVT_NDASSVC" severity="Error" id="0x101"
+		symbolicName="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+		<text lang="NEU">Failed to retrieve System Key.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">-</text>
+		<text lang="DEU">-</text>
+		<text lang="ITA">-</text>
+		<text lang="ESN">-</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message facility="EVT_NDASSVC" severity="Error" id="0x102"
+		symbolicName="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+		<text lang="NEU">System Key does not match with the disk key.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">-</text>
+		<text lang="DEU">-</text>
+		<text lang="ITA">-</text>
+		<text lang="ESN">-</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message facility="EVT_NDASSVC" severity="Error" id="0x103"
+		symbolicName="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+		<text lang="NEU">Invalid CEB CRC.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">-</text>
+		<text lang="DEU">-</text>
+		<text lang="ITA">-</text>
+		<text lang="ESN">-</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message facility="EVT_NDASSVC" severity="Error" id="0x104"
+		symbolicName="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+		<text lang="NEU">Unsupported CEB Revision.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">-</text>
+		<text lang="DEU">-</text>
+		<text lang="ITA">-</text>
+		<text lang="ESN">-</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message facility="EVT_NDASSVC" severity="Error" id="0x105"
+		symbolicName="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+		<text lang="NEU">CEB Key Length is invalid.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">-</text>
+		<text lang="DEU">-</text>
+		<text lang="ITA">-</text>
+		<text lang="ESN">-</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message facility="EVT_NDASSVC" severity="Error" id="0x106"
+		symbolicName="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+		<text lang="NEU">Failed to read CEB.</text>
+		<text lang="KOR">-</text>
+		<text lang="JPN">-</text>
+		<text lang="FRA">-</text>
+		<text lang="DEU">-</text>
+		<text lang="ITA">-</text>
+		<text lang="ESN">-</text>
+		<text lang="PTG">-</text>
+		<text lang="CHS">-</text>
+	</message>
+
+	<message facility="EVT_NDASSVC" severity="Error" id="0x107"
+		symbolicName="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+		<text lang="NEU">CE key generation failed.</text>
+		<text lang="KOR"></text>
+		<text lang="JPN"></text>
+		<text lang="FRA"></text>
+		<text lang="DEU"></text>
+		<text lang="ITA"></text>
+		<text lang="ESN"></text>
+		<text lang="PTG"></text>
+		<text lang="CHS" />
+	</message>
+
+	<message facility="EVT_NDASSVC" severity="Informational" id="0x108"
+		symbolicName="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+		<text lang="NEU">A new NDAS Device is found from the network and is being registered.</text>
+		<text lang="KOR"></text>
+		<text lang="JPN"></text>
+		<text lang="FRA"></text>
+		<text lang="DEU"></text>
+		<text lang="ITA"></text>
+		<text lang="ESN"></text>
+		<text lang="PTG"></text>
+		<text lang="CHS" />
+	</message>
+
+	<message facility="EVT_NDASSVC" severity="Informational" id="0x109"
+		symbolicName="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+		<text lang="NEU">Unsupported hardware version (%2) detected from the NDAS Device (%1).</text>
+		<text lang="KOR"></text>
+		<text lang="JPN"></text>
+		<text lang="FRA"></text>
+		<text lang="DEU"></text>
+		<text lang="ITA"></text>
+		<text lang="ESN"></text>
+		<text lang="PTG"></text>
+		<text lang="CHS" />
+	</message>
+
+
+<!--
+
+You can specify the following escape sequences for formatting message 
+text for use by the event viewer or your application. The percent sign 
+character (%) begins all escape sequences. Any other character following 
+a percent sign is displayed without the percent sign.
+
+%n[!format_specifier!] 
+Describes an insert. Each insert is an entry in the Arguments array in 
+the FormatMessage function. The value of n can be a number between 1 and 99. 
+The format specifier is optional. If no value is specified, the default 
+is !s!. For more information, see wsprintf. The format specifier can use * 
+for either the precision or the width. When specified, they consume inserts 
+numbered n+1 and n+2.
+
+%0 
+Terminates a message text line without a trailing newline character. 
+This can be used to build a long line or terminate a prompt message 
+without a trailing newline character. 
+%. 
+Generates a single period. This can be used to display a period at the 
+beginning of a line, which would otherwise terminate the message text. 
+%! 
+Generates a single exclamation point. This can be used to specify an 
+exclamation point immediately after an insert. 
+%% 
+Generates a single percent sign. 
+%\ 
+Generates a hard line break when it occurs at the end of a line. This 
+can be used with FormatMessage to ensure that the message fits a certain width. 
+%b 
+Generates a space character. This can be used to ensure an appropriate 
+number of trailing spaces on a line. 
+%r 
+Generates a hard carriage return without a trailing newline character.
+
+-->
+
+</messages>

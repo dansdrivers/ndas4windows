@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment Id="NDASMSM_InstallUISequence">
+		<InstallUISequence>
+
+			<Custom Action="NcCheck_LSMP_Instance_SP" After="LaunchConditions">
+				NOT NDASMSM_NO_INSTANCE_CHECK
+			</Custom>
+			<Custom Action="NcCheck_LSMP_Instance_XC" After="NcCheck_LSMP_Instance_SP">
+				NOT NDASMSM_NO_INSTANCE_CHECK
+			</Custom>
+			<Custom Action="NcCheck_NDASSCSI_Inst_SP" After="NcCheck_LSMP_Instance_XC">
+				NOT NDASMSM_NO_INSTANCE_CHECK
+			</Custom>
+			<Custom Action="NcCheck_NDASSCSI_Inst_XC" After="NcCheck_NDASSCSI_Inst_SP">
+				NOT NDASMSM_NO_INSTANCE_CHECK
+			</Custom>
+			
+		</InstallUISequence>
+	</Fragment>
+</Wix>

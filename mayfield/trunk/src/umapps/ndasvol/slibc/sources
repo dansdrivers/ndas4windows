@@ -1,0 +1,11 @@
+TARGETNAME=libndasvol_c
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=libndasvol_c
+
+USE_LIBC=1
+
+SOURCES_USED=..\sources.inc
+!include ..\sources.inc
+

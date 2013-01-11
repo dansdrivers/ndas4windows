@@ -1,0 +1,719 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "ndasbind.ico"
+IDI_DEVICE_BASIC        ICON                    "ndasbind_res_device_normal.ico"
+IDI_DEVICE_FAIL         ICON                    "ndasbind_res_device_fail.ico"
+IDI_DEVICE_BOUND        ICON                    "ndasbind_res_device_bound.ico"
+IDI_DEVICE_WARN         ICON                    "ndasbind_res_device_warn.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F1,          IDM_HELP_ABOUT,         VIRTKEY, NOINVERT
+    VK_F5,          IDM_TOOL_REFRESH,       VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  32, 32
+BEGIN
+    BUTTON      IDM_TOOL_BIND
+    BUTTON      IDM_TOOL_UNBIND
+    BUTTON      IDM_TOOL_REFRESH
+END
+
+IDR_EMPTY_TOOLBAR TOOLBAR  32, 32
+BEGIN
+    BUTTON      IDM_TOOL_BIND
+    BUTTON      IDM_TOOL_UNBIND
+    BUTTON      IDM_TOOL_REFRESH
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "ndasbind_res_toolbar.bmp"
+IDR_EMPTY_TOOLBAR       BITMAP                  "ndasbind_res_toolbar_empty.bmp"
+IDB_WATERMARK256        BITMAP                  "ndasbind_res_wizard_watermark.bmp"
+IDB_BANNER256           BITMAP                  "ndasbind_res_wizard_banner.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// IMAGE
+//
+
+IDB_ABOUT_HEADER        IMAGE                   "ndasbind_res_info_header.jpg"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""ndasbind_ver.rc""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Tool"
+    BEGIN
+        MENUITEM "&Refresh",                    IDM_TOOL_REFRESH
+        MENUITEM "&Bind Disks",                 IDM_TOOL_BIND
+        MENUITEM "Add &Mirror",                 IDM_TOOL_ADDMIRROR
+        MENUITEM "R&eset bind information",     IDM_TOOL_RESET_BIND_INFO
+        MENUITEM "&Unbind",                     IDM_TOOL_UNBIND
+        MENUITEM "Mi&grate",                    IDM_TOOL_MIGRATE
+        MENUITEM "A&ppend a Disk",              IDM_TOOL_APPEND
+        MENUITEM "Add &Spare Disk",             IDM_TOOL_SPAREADD
+        MENUITEM "Replace &Device",             IDM_TOOL_REPLACE_DEVICE
+        MENUITEM "Use as a RAID &member",       IDM_TOOL_USE_AS_MEMBER
+        MENUITEM "&Clear defective mark",       IDM_TOOL_CLEAR_DEFECTIVE
+        MENUITEM "&Fix RAID state",             IDM_TOOL_FIX_RAID_STATE
+        MENUITEM "Con&figure RAID without this disk", IDM_TOOL_REMOVE_FROM_RAID
+        MENUITEM "Convert to a basic &disk",    IDM_TOOL_USE_AS_BASIC
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About NDAS Software",        IDM_HELP_ABOUT
+    END
+END
+
+IDR_MAINPOPUP MENU 
+BEGIN
+    POPUP "{SingleDiskOps}"
+    BEGIN
+        MENUITEM "&Bind Disks",                 IDM_TOOL_BIND
+        MENUITEM "Add &Mirror",                 IDM_TOOL_ADDMIRROR
+        MENUITEM "A&ppend a Disk",              IDM_TOOL_APPEND
+        MENUITEM "&Reset bind information",     IDM_TOOL_RESET_BIND_INFO
+    END
+    POPUP "{RaidLogicalDiskOps}"
+    BEGIN
+        MENUITEM "&Unbind",                     IDM_TOOL_UNBIND
+        MENUITEM "&Migrate",                    IDM_TOOL_MIGRATE
+        MENUITEM "A&ppend a Disk",              IDM_TOOL_APPEND
+        MENUITEM "Add &Spare Disk",             IDM_TOOL_SPAREADD
+        MENUITEM "&Fix RAID state",             IDM_TOOL_FIX_RAID_STATE
+    END
+    POPUP "{RaidUnitDiskOps}"
+    BEGIN
+        MENUITEM "Replace &Device",             IDM_TOOL_REPLACE_DEVICE
+        MENUITEM "Use as a RAID &member",       IDM_TOOL_USE_AS_MEMBER
+        MENUITEM "&Clear defective mark",       IDM_TOOL_CLEAR_DEFECTIVE
+        MENUITEM "Con&figure RAID without this disk", IDM_TOOL_REMOVE_FROM_RAID
+        MENUITEM "Convert to a &basic disk",    IDM_TOOL_USE_AS_BASIC
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ERROR DIALOGEX 0, 0, 304, 120
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NDAS Bind Management Error"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,247,100,50,14
+    LTEXT           "{Error Message}",IDC_ERROR_MESSAGE,37,11,260,33
+    EDITTEXT        IDC_ERROR_DESCRIPTION,37,48,260,47,ES_MULTILINE | ES_READONLY | NOT WS_BORDER
+    ICON            "",IDC_ERROR_ICON,7,11,21,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,38,44,260,1
+END
+
+IDD_DEVICE_LIST DIALOGEX 0, 0, 200, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "{Caption}"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "{Message}",IDC_STATIC_MESSAGE,7,7,177,24
+    DEFPUSHBUTTON   "OK",IDOK,48,181,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,181,50,14
+    CONTROL         "",IDC_LIST_DEVICE,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,33,184,143
+END
+
+IDD_REPAIR DIALOGEX 0, 0, 267, 156
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Repair fault tolerant disks"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Select one of the NDAS Device listed below. It will be used as a replacement for the broken NDAS Device",IDC_STATIC,7,7,253,19
+    LTEXT           "&Devices:",IDC_STATIC,7,30,253,10
+    CONTROL         "List1",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,41,253,85
+    PUSHBUTTON      "OK",IDOK,156,135,50,14
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,210,135,50,14
+END
+
+IDD_RECOVER DIALOGEX 0, 0, 230, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Synchronize disks"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Bind Type:",IDC_STATIC,15,17,65,8
+    LTEXT           "Type",IDC_TEXT_BIND_TYPE,84,17,100,8
+    LTEXT           "Target:",IDC_STATIC,15,30,61,8
+    LTEXT           "Name",IDC_TEXT_DEST,84,30,100,8
+    GROUPBOX        "",IDC_STATIC,7,7,215,37
+    LTEXT           "{Phase}",IDC_TEXT_PHASE,15,52,183,8
+    LTEXT           "Time Remaining:",IDC_STATIC,15,61,53,8
+    RTEXT           "MB/s",IDC_STATIC,190,61,19,8
+    PUSHBUTTON      "Start",IDOK,117,93,50,14
+    PUSHBUTTON      "Close",IDCLOSE,172,93,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,182,83,50,14
+    GROUPBOX        "",IDC_STATIC,7,41,215,47
+    LTEXT           "00:00:00",IDC_TEXT_LEFTTIME,68,61,30,8
+    CONTROL         "",IDC_PROGBAR,"msctls_progress32",WS_BORDER,15,71,199,13
+    RTEXT           "0.0",IDC_TEXT_RATE,153,61,40,8
+END
+
+IDD_BIND_WIZARD_INTRO DIALOG  0, 0, 317, 186
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Disk Bind Wizard"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "This wizard helps you create bound disks.",IDC_STATIC,114,40,203,21
+    LTEXT           "You can bind disks of NDAS Devices to build a new disk with faster speed, larger capacity and fault tolerance. Many bind types are given to fit your needs.",IDC_STATIC,114,61,192,47
+    LTEXT           "Welcome to the Disk Bind Wizard",IDC_BIG_BOLD_TITLE,114,8,203,26
+    LTEXT           "To continue, click Next.",IDC_STATIC,114,114,192,20
+END
+
+IDD_BIND_WIZARD_TYPE DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Disk Bind Wizard"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Select the bind type you want to create:",IDC_STATIC,24,4,214,11,NOT WS_GROUP
+    CONTROL         "Aggregation",IDC_BIND_TYPE_AGGR,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,31,18,100,10
+    CONTROL         "Stripe (RAID 0)",IDC_BIND_TYPE_RAID0,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,166,20,100,10
+    CONTROL         "Mirror (RAID 1)",IDC_BIND_TYPE_RAID1,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,31,32,100,10
+    CONTROL         "RAID 4",IDC_BIND_TYPE_RAID4,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,166,33,100,10
+    CONTROL         "RAID 5",IDC_BIND_TYPE_RAID5,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,31,47,100,10
+    LTEXT           "Number of disks:",IDC_STATIC,24,61,92,11
+    COMBOBOX        IDC_COMBO_DISKCOUNT,118,61,52,14,CBS_DROPDOWNLIST | CBS_SORT | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP,WS_EX_NOPARENTNOTIFY
+    GROUPBOX        "Description",IDC_STATIC,21,81,275,60,WS_GROUP
+    LTEXT           "",IDC_BIND_TYPE_DESCRIPTION,31,94,258,38
+END
+
+IDD_BIND_WIZARD_SELECT_DISK DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Disk Bind Wizard"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Available:",IDC_BIND_WIZ_AVAILABLE,21,4,101,8,SS_NOTIFY
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,21,15,96,59
+    PUSHBUTTON      "&Add >",IDC_BTN_ADD,126,18,63,14
+    PUSHBUTTON      "< &Remove",IDC_BTN_REMOVE,126,36,63,14
+    PUSHBUTTON      "< Re&move All",IDC_BTN_REMOVE_ALL,126,54,63,14
+    LTEXT           "Selected:",IDC_BIND_WIZ_SELECTED,200,4,96,8
+    CONTROL         "",IDC_LIST_BIND,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,200,15,96,59
+    RTEXT           "Total number of disks required:",IDC_STATIC,15,80,219,10
+    EDITTEXT        IDC_BIND_WIZ_COUNT,244,80,52,10,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | WS_GROUP,WS_EX_RIGHT
+    RTEXT           "Total disk size in gigabytes (GB):",IDC_STATIC,19,96,215,10
+    EDITTEXT        IDC_BIND_WIZ_SIZE,244,96,52,10,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | WS_GROUP,WS_EX_RIGHT
+    LTEXT           "Note: The data on the disks will be deleted once binding is completed.",IDC_STATIC,21,108,282,10
+END
+
+IDD_BIND_WIZARD_COMPLETE DIALOG  0, 0, 317, 186
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Disk Bind Wizard"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Completing the Disk Bind Wizard",IDC_BIG_BOLD_TITLE,115,8,191,26
+    LTEXT           "{Bind Wizard Result}",IDC_BIND_RESULT,115,40,191,52
+    LTEXT           "The binding results are followings:",IDC_STATIC,115,93,191,10
+    EDITTEXT        IDC_EDIT_BIND_SETTING,115,104,191,67,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_HSCROLL | NOT WS_TABSTOP
+    LTEXT           "To close this wizard, click Finish.",IDC_STATIC,115,175,191,18
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NDAS Software"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,208,178,50,14
+    LTEXT           "NDAS Software",IDC_APPNAME,7,48,251,14
+    LTEXT           "Version %1!s!",IDC_APPVER,7,60,251,8
+    LTEXT           "http://www.ximeta.com",IDC_LINK,7,71,251,8,WS_TABSTOP
+    LTEXT           "Copyright (c)2002-2007 XIMETA, Inc.\r\nAll rights reserved.",IDC_COPYWRITE,7,85,251,20
+    GROUPBOX        "Components",IDC_STATIC,7,106,251,67
+    CONTROL         "",IDC_COMPVER,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,119,236,47
+    CONTROL         "",IDC_IMAGE,"Static",SS_BLACKRECT,0,0,265,43
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,43,265,1
+END
+
+IDD_UNBIND_MIRROR DIALOGEX 0, 0, 191, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Unbind"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDOK,44,145,50,14
+    DEFPUSHBUTTON   "&No",IDCANCEL,97,145,50,14
+    CONTROL         "",IDC_LIST_UNBIND,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,33,177,104
+    LTEXT           "The following disks will be unbound.\nAre you sure you want to unbind them?",IDC_STATIC,7,7,177,24
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_RECOVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_UNBIND_MIRROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDM_EXIT                "Quit application\nExit"
+    IDM_TOOL_BIND           "Bind disks\nBind"
+    IDM_TOOL_UNBIND         "Unbind aggregated/mirrored disks into basic disks\nUnbind"
+    IDM_TOOL_SINGLE         "Convert the selected disk to a basic disk"
+    IDM_TOOL_SYNCHRONIZE    "Resynchronize an outdated bound disk.\nResynchronize"
+    IDM_HELP_ABOUT          "Displays program information, version number and copyright\nAbout NDAS Software"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RECOVERDLG_PHASE_READY "Press the start button to continue."
+    IDS_RECOVERDLG_PHASE_SYNC "Synchronizing devices..."
+    IDS_RECOVERDLG_PHASE_DONE "Synchronization completed."
+    IDS_RECOVERDLG_FAIL     "Failed to synchronize devices."
+    IDS_RECOVERDLG_TASK_ADD_MIRROR "Add mirror disk"
+    IDM_TOOL_APPEND         "Append a disk to span disk volume.\nAppend a Disk"
+    IDM_TOOL_SPAREADD       "Adds a spare disk to the fault tolerant RAID disk group.\nAdd Spare Disk"
+    IDM_TOOL_SPAREREMOVE    "Removes a spare disk from the fault tolerant RAID disk group.\nRemove Spare Disk"
+    IDM_TOOL_FIX_RAID_STATE "Adjust state of selected RAID disk group to mount it correctly."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SPARE_APPEND_DLG_CAPTION "Select a disk to append"
+    IDS_SPARE_APPEND_DLG_MESSAGE 
+                            "Select a disk to be added to aggregated disks"
+    IDS_SPARE_ADD_DLG_CAPTION "Select a spare disk"
+    IDS_SPARE_ADD_DLG_MESSAGE 
+                            "Select a disk to be used as a spare disk for the RAID"
+    IDS_SPARE_ADD_DLG_SIZE_FAIL 
+                            "The disk is too small to be used as a spare disk."
+    IDS_MIRROR_ADD_DLG_CAPTION "Select a mirror disk"
+    IDS_MIRROR_ADD_DLG_MESSAGE "Select a backup disk to make a mirror."
+    IDS_UNBIND_DLG_CAPTION  "Unbind"
+    IDS_UNBIND_DLG_MESSAGE  "Data on the following disks will be deleted.\nAre you sure you want to unbind them?"
+    IDM_TOOL_REPLACE_DEVICE "Replace the selected device in RAID with another one."
+    IDM_TOOL_USE_AS_MEMBER  "Use this device as RAID member."
+    IDS_OPERATION_FAIL      "The requested operation has not succeeded."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REPLACE_UNIT_DEVICE_DLG_CAPTION "Replace a hard drive"
+    IDS_REPLACE_UNIT_DEVICE_DLG_MESSAGE 
+                            "Press OK if you want to replace a missing drive with new one."
+    IDS_MIGRATE_DLG_CAPTION "Migrate"
+    IDS_MIGRATE_DLG_MESSAGE "Previous version of NDAS software may not be able to use these devices after migration.\nAre you sure you want to migrate them?"
+    IDM_TOOL_RESET_BIND_INFO 
+                            "Reset bind information to remove unrecognized bind information."
+    IDM_TOOL_CLEAR_DEFECTIVE "Clear defective flag from the disk."
+    IDM_TOOL_REMOVE_FROM_RAID 
+                            "Remove disk from RAID set. Disk type is not changed."
+    IDM_TOOL_USE_AS_BASIC   "Remove disk from RAID set and convert it to basic disk."
+    IDS_RAID_MEMBER_UNREPLACEABLE 
+                            "Cannot replace the selected disk. \nReplacement will break RAID."
+    IDS_WARNING_MISSING_MEMBER 
+                            "Not all member disks are accessible.\nChanging RAID configuration with missing member can make RAID fail.\nDo you want to continue?"
+    IDS_RAID_MEMBER_UNREPLACEABLE_SMALL_SIZE 
+                            "The disk is too small to be used as this RAID member."
+    IDS_WARNING_DATA_LOST_AFTER_USE_AS_MEMBER 
+                            "The data of this disk will be lost and if this disk is a member of another RAID, it may be broken.Do you want to continue?"
+    IDS_WARNING_RAID_BROKEN "RAID containing this disk may be broken after this operation. Do you want to continue?"
+    IDS_RAID_MEMBER_UNREMOVALBLE 
+                            "Cannot remove the selected disk.\nIt will break RAID."
+    IDS_ERROR_MISSING_MEMBER "Not all member disks are accessible."
+    IDS_RAID_STATUS_CORRUPTED_INFO "Corrupted RAID information"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RAID_STATUS_DIB_CONFLICT "Inconsistent bind information"
+    IDS_RAID_COMMENT_DIB_CONFLICT_FMT 
+                            "Bind information on the disk is inconsistent or unrecognizable.\nUse ""%1!s!"" menu to use as a single disk."
+    IDS_RAID_STATUS_REPLACED_BY_SPARE "Replaced by spare"
+    IDS_RAID_COMMENT_REPLACED_BY_SPARE_FMT 
+                            "This disk's role is replaced by the spare disk. Reconfigure the RAID using \n""%1!s!"" or ""%2!s!"" or ""%3!s!"" menu."
+    IDS_RAID_STATUS_IRRECONCILABLE_FROM_DEGRADED_USE "Used in degraded mode"
+    IDS_RAID_COMMENT_IRRECONCILABLE_FROM_DEGRADED_USE_FMT 
+                            "This disk is used in degraded mode and may have different data.\nUse ""%1!s!"" menu to retain the data in this disk."
+    IDS_WARNING_RESET_BIND_INFO 
+                            "This operation will reset all configuration information which may be used by a higher version of NDAS software. Do you want to continue?"
+    IDS_ERROR_RAID_BROKEN   "RAID is in broken status. Requested operation cannot be processed."
+    IDS_ERROR_CANNOT_CLEAR_DEFECT 
+                            "Cannot clear defect mark because no valid copy of data exists.\nPlease unbind RAID and try to recover data from each disk\n"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BNZ_DESC_RAID5      "A RAID-4 disk stores data in stripes on three or more disks. It provides a way of recovering data if part of the data is lost."
+    IDS_MAINFRAME_MIGRATE_FAIL "Failed to migrate."
+    IDS_MAINFRAME_FIX_RAID_STATE_FAIL "Failed to fix raid state."
+    IDS_ERROR_NOT_IN_OPERATABLE_STATE 
+                            "Requested operation cannot be processed while the NDAS device is offline or in use in other hosts."
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_TOOL_ADDMIRROR      "Adds a mirrored disk to a basic disk\nAdd Mirror"
+    IDM_TOOL_REFRESH        "Refresh the NDAS device list\nRefresh"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_TOOL_MIGRATE        "Migrates mirrored disks to recoverable disks\nMigrate"
+    IDS_STATUS_DISABLED     "Disabled"
+    IDS_WARNING_UNBIND_MIR  "Do you want to unbind the following disks?"
+    IDS_WARNING_UNBIND_AFTER_MIR "Selected disks are successfully unbound."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_APPLICATION         "NDAS Bind Management"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LOGDEV_TYPE         "Bind type"
+    IDS_LOGDEV_TYPE_DISK_RAID0 "Striped Disk (RAID-0)"
+    IDS_LOGDEV_TYPE_DISK_RAID1 "Mirrored Disk (RAID-1) (Deprecated)"
+    IDS_LOGDEV_TYPE_DISK_RAID2 "RAID-2 Disk"
+    IDS_LOGDEV_TYPE_DISK_RAID3 "RAID-3 Disk"
+    IDS_LOGDEV_TYPE_DISK_RAID4 "RAID-4 Disk (Deprecated)"
+    IDS_LOGDEV_TYPE_DISK_RAID5 "RAID-5 Disk"
+    IDS_LOGDEV_TYPE_AGGREGATED_DISK "Aggregated Disk"
+    IDS_LOGDEV_TYPE_CF_DRIVE "Compact Flash Drive"
+    IDS_LOGDEV_TYPE_DVD_DRIVE "DVD Drive"
+    IDS_LOGDEV_TYPE_MIRRORED_DISK "Mirrored Disk"
+    IDS_LOGDEV_TYPE_MO_DRIVE "MO Drive"
+    IDS_LOGDEV_TYPE_SINGLE_DISK "Basic Disk"
+    IDS_LOGDEV_TYPE_UNKNOWN_FMT "Unknown Type (0x%1!08X!)"
+    IDS_LOGDEV_TYPE_VIRTUAL_DVD_DRIVE "Virtual DVD Drive"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BNZ_COMPLETE_SUCCESS 
+                            "You have successfully completed the Disk Bind Wizard. You must first mount and then format the bound disks before using them."
+    IDS_BNZ_COMPLETE_FAIL   "You have failed to bind disks."
+    IDS_BNZ_COMPLETE_RESULT_TYPE_FMT "Bind Type: %1!s!"
+    IDS_BNZ_COMPLETE_RESULT_DISKS "Disks selected:"
+    IDS_BNZ_COMPLETE_RESULT_SIZE_FMT "Disks size: %1!s!"
+    IDS_BNZ_COMPLETE_RESULT_FAILED_ON_FMT "Failed device: %1!s!"
+    IDS_BNZ_DESC_AGGREGATION 
+                            "An aggregated disk is made up of more than one disks. Create an aggregated disk if you need a disk that is too large for a basic disk."
+    IDS_BNZ_DESC_RAID0      "A striped disk (RAID-0) stores data in stripes on two or more disks. A striped disk gives you faster access to your data than a basic or aggregated volume."
+    IDS_BNZ_DESC_RAID1      "A mirrored disk (RAID-1) duplicates your data on two disks. Create a mirrored disk if you want to keep two separate copies of all your information to prevent data loss."
+    IDS_BNZ_DESC_RAID4      "A RAID-4 disk stores data in stripes on three or more disks. It provides a way of recovering data if part of the data is lost."
+    IDS_LOGDEV_TYPE_DISK_RAID1R2 "Mirrored Disk (RAID-1) (Deprecated)"
+    IDS_LOGDEV_TYPE_DISK_RAID4R2 "RAID-4 Disk (Deprecated)"
+    IDS_LOGDEV_TYPE_DISK_RAID1R3 "Mirrored Disk (RAID-1)"
+    IDS_LOGDEV_TYPE_DISK_RAID4R3 "RAID-4 Disk"
+    IDS_DEV_NAME_NOT_REGISTERED "Not registered"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RAID_STATUS_ANOTHER_RAID_MEMBER "Member of another RAID"
+	IDS_RAID_STATUS_DEGRADE_MODE_CONFLICT "The selected RAID should be fixed before mounting"
+    IDS_RAID_STATUS_READ_FAILURE "Read failure"
+    IDS_RAID_STATUS_NOT_A_MEMBER "Not a RAID member"
+    IDS_RAID_STATUS_BAD_DISK "Bad disk"
+    IDS_RAID_STATUS_BAD_SECTOR "Bad sector found"
+    IDS_RAID_STATUS_UNKNOWN_DEFECT "Unknown defect"
+    IDS_RAID_STATUS_OUT_OF_SYNC "Out-of-sync"
+    IDS_RAID_STATUS_SPARE   "Spare disk"
+    IDS_RAID_COMMENT_RMD_CORRUPTED_FMT 
+                            "RAID information on this disk is corrupted. \nTry ""%1!s!"" menu."
+    IDS_RAID_COMMENT_IO_FAILURE 
+                            "Cannot read. Replace disk or remove from RAID"
+    IDS_RAID_COMMENT_DIB_MISMATCH "Reconfigure RAID members."
+    IDS_RAID_COMMENT_DEFECTIVE_FMT 
+                            "Replace bad disk with new one and run ""%1!s!"" menu\n or use ""%2!s!"" menu to ignore defect and retry"
+    IDS_RAID_COMMENT_OUT_OF_SYNC 
+                            "Data of this disk is out of sync with another RAID member's data."
+    IDS_RAID_COMMENT_SPARE  "This disk will be used as active RAID member when any of other member fails."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RAID_COMMENT_UNKNOWN_TYPE_FMT 
+                            "This disk may be configured by higher version of NDAS software.\n Use ""%1!s!"" menu to convert to a single disk"
+    IDS_RAID_STATUS_MIGRATION_REQUIRED "Migration required"
+    IDS_RAID_STATUS_UNSUPPORTED "Unsupported RAID"
+    IDS_RAID_STATUS_IRRECONCILABLE "Irreconcilable state"
+    IDS_RAID_STATUS_UNMOUTABLE_BY_RMD_CORRUPTION 
+                            "Non-mountable\nRAID information is corrupted"
+    IDS_RAID_STATUS_MISSING_MEMBER "Missing member"
+    IDS_RAID_STATUS_MIGRATION_REQ "Migration required"
+    IDS_RAID_STATUS_DEFECTIVE_DISK "Defective disk"
+    IDS_STATUS_UNMOUNTABLE  "Non-mountable"
+    IDS_RAID_STATUS_DEGRADED "Degraded mode"
+    IDS_RAID_STATUS_NEED_RESYNC_PROGRESS 
+                            "Need resynchronizing\n%1!d!%% in sync"
+    IDS_RAID_STATUS_NEED_RESYNC "Need resynchronizing"
+    IDS_RAID_STATUS_HEALTHY "Healthy"
+    IDS_RAID_COMMENT_MIGRATE_MIRROR_FMT 
+                            "Connect all member devices and use ""%1!s!"" menu.\nIf any of the disk is missing, unbind RAID and create it again"
+    IDS_RAID_COMMENT_MIGRATE_RAID4_FMT 
+                            "Connect all member devices and use ""%1!s!"" menu.\nYou cannot migrate with missing member"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RAID_COMMENT_HIGHER_VER 
+                            "This RAID is created by higher version of software. Please update NDAS software"
+    IDS_RAID_COMMENT_IRRECONCILABLE 
+                            "Each member has been used in degraded mode separately.\nYou need to convert one member to basic disk or unbind RAID."
+    IDS_RAID_COMMENT_RECONF_RMD_CORRUPTED 
+                            "Reconfigure the corrupted member disk."
+    IDS_RAID_COMMENT_NO_FAULT_TOLERANT 
+                            "Non fault-tolerant RAID.\nAll members should be available to mount this RAID set."
+    IDS_RAID_COMMENT_NOT_ENOUGH_MEMBER 
+                            "The number of valid members is not enough to mount."
+    IDS_RAID_COMMENT_MIGRATION_REQ 
+                            "This RAID is created by older version of NDAS software.\nOnce migrated, this RAID cannot be used by older version of NDAS software"
+    IDS_RAID_COMMENT_DEFECTIVE_RAID 
+                            "Disk has defects. Replace the defective disk."
+    IDS_RAID_COMMENT_DEGRADED 
+                            "RAID will work without fault-tolerant feature due to missing member(s)."
+    IDS_RAID_COMMENT_RESYNC_OUT_OF_SYNC_RAID 
+                            "Resynchronizing will be started when RAID is mounted in Read/Write mode."
+    IDS_RAID_STATUS_HAS_INVALID_MEMBER "Invalid member"
+    IDS_RAID_COMMENT_HAS_UNREGISTERED_MEMBER 
+                            "RAID can be mounted only when all members are registered"
+    IDS_RAID_COMMENT_HAS_DISABLED_MEMBER 
+                            "RAID can be mounted only when all members are enabled"
+    IDS_STATUS_NOT_REGISTERED "Not registered"
+    IDS_RAID_STATUS_SPARE_USED "Spare used"
+    IDS_RAID_COMMENT_SPARE_USED 
+                            "After spare disk is used, RAID needs reconfiguration."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UNIDEV_TYPE_DISK_EMPTY "Device not found"
+    IDS_LISTVIEW_COL_STATUS "Status"
+    IDS_LISTVIEW_COL_RAID_STATUS "RAID status"
+    IDS_LISTVIEW_COL_COMMENT "Comment"
+    IDS_FT_FAULT_TOLERANT   "Yes"
+    IDS_FT_NOT_FAULT_TOLERANT "No"
+    IDS_FT_MISSING          "Missing Member"
+    IDS_FT_DIRTY            "Yes (Need Resynchronizing)"
+    IDS_STATUS_NOT_CONNECTED "Offline"
+    IDS_STATUS_IN_USE       "In use"
+    IDS_STATUS_READ_ONLY    "No Write Key"
+    IDS_STATUS_FINE         "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SPARE_REMOVE_DLG_CAPTION "Removing a spare disk"
+    IDS_SPARE_REMOVE_DLG_MESSAGE 
+                            "Are you sure you want to remove the selected spare disk?"
+    IDS_SINGLE_DLG_CAPTION  "Convert to the Basic Disk"
+    IDS_SINGLE_DLG_MESSAGE  "All of the data will be lost once the disk is reset to a basic disk. Would you like to continue?"
+    IDS_REPLACE_DEVICE_DLG_CAPTION "Select a replace disk"
+    IDS_REPLACE_DEVICE_DLG_MESSAGE 
+                            "Select a disk to be used as a replacement."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_NOT_REGISTERD_WRITE_FMT 
+                            "%1!s! does not have Write access privilege. The NDAS device's Write Key is required to be registered to gain Write access."
+    IDS_WARNING_UNBIND      "All of the data will be lost once the disks are unbound. Are you sure you want to unbind the disks?"
+    IDS_WARNING_UNBIND_AFTER 
+                            "Selected disks are successfully unbound. You must first mount and then format each of the unbound disks before using them."
+    IDS_BIND_FAIL_AT_SINGLE_NDAS_FMT 
+                            "A problem occurred while operating on the NDAS device '%1!s!'."
+    IDS_BIND_FAIL           "A problem occurred while operating on the NDAS devices."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_TITLE         "NDAS Bind Error"
+    IDS_MAINFRAME_SINGLE_ACCESS_FAIL 
+                            "Failed to convert the selected disk to a basic disk."
+    IDS_ERROR_NOT_IMPLEMENTED "This feature is not implemented yet."
+    IDS_ERROR_NDAS_DESCRIPTION_FMT 
+                            "Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!"
+    IDS_ERROR_SYSTEM_DESCRIPTION_FMT "Error Code: %1!u! (0x%1!04X!)\r\n%2!s!"
+    IDS_WARNING_BIND        "All of the data will be lost once the disks are bound. Are you sure you want to bind the disks?"
+    IDS_WARNING_BIND_SIZE   "Some version of Windows cannot access a disk larger than 2 TBytes and the size of bound disks is larger than the limit. Do you want to continue?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DISK_SIZE_IN_GB     "%1!3d!.%2!02d! GB"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SELECTMIRDLG_SMALLER_DISK 
+                            "A disk cannot be mirrored by the smaller disk in size."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTDLG_PRODUCT_NAME "NDAS Bind Management"
+    IDS_ABOUTDLG_COL_COMPONENT "Component"
+    IDS_ABOUTDLG_COL_VERSION "Version"
+    IDS_LISTVIEW_COL_NAME   "Name"
+    IDS_LISTVIEW_COL_ID     "NDAS ID"
+    IDS_LISTVIEW_COL_SIZE   "Capacity"
+    IDS_LISTVIEW_COL_EMPTY  "Number"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BNZ_TITLE           "NDAS Bind Wizard"
+    IDS_BNZ_BIND_TYPE_HEADER_TITLE "Select Bind Type"
+    IDS_BNZ_BIND_TYPE_HEADER_SUBTITLE "You can select the bind type."
+    IDS_BNZ_SELECT_DISK_HEADER_TITLE "Select Disk"
+    IDS_BNZ_SELECT_DISK_HEADER_SUBTITLE 
+                            "You can select the disks to be bound."
+    IDS_BIG_BOLD_FONT_NAME  "Verdana"
+    IDS_BIG_BOLD_FONT_SIZE  "12"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_INVALID_NDASUSER 
+                            "Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software."
+    IDS_ERROR_INVALID_NDASCOMM 
+                            "Incompatible NDASCOMM.DLL is installed.\r\nPlease check the installation of the software."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FT_DEFECT_CHILD     "Defective"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "ndasbind_ver.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

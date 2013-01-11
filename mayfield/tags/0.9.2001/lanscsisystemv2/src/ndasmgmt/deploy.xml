@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<deploy default-config="chk">
+    <file-set config="fre">
+        <file src="objfre_w2k_x86\i386\ndasmgmt.exe" />
+        <file src="objfre_w2k_x86\i386\ndasmgmt.pdb" />
+    </file-set>
+    <file-set config="chk">
+        <file src="objchk_w2k_x86\i386\ndasmgmt.exe" />
+        <file src="objchk_w2k_x86\i386\ndasmgmt.pdb" />
+    </file-set>
+</deploy>

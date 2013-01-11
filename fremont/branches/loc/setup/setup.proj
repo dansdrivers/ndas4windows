@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="Rebuild;Publish" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<OfficialCodeSign Condition="''=='$(OfficialCodeSign)'">false</OfficialCodeSign>
+	</PropertyGroup>
+		
+	<PropertyGroup>
+		<BuildDependsOn>ReadProductVersion;ExecChildBuild;CodeSign</BuildDependsOn>
+		<SKU Condition="''=='$(SKU)'">ndasport</SKU>
+		<ChildTargets>Build</ChildTargets>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<!-- ProductVersion is added from the SetExecChildBuildProperties task -->
+		<!-- <ChildProperties Condition="'$(ProductVersion)'!=''">$(ChildProperties);ProductVersion=$(ProductVersion)</ChildProperties> -->
+		<ChildProperties Condition="'$(ProductRevision)'!=''">$(ChildProperties);ProductRevision=$(ProductRevision)</ChildProperties>
+		<ChildProperties Condition="'$(Configuration)'!=''">$(ChildProperties);Configuration=$(Configuration)</ChildProperties>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<Platforms Include="i386;amd64" Condition="'all'=='$(Platform)' or ''=='$(Platform)'"/>
+		<Platforms Include="$(Platform)" Condition="'all'!='$(Platform)' and ''!='$(Platform)'"/>
+		<SKU Include="ndasport" Condition="''=='$(SKU)'" />
+		<SKU Include="$(SKU)" Condition="''!='$(SKU)'" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<PublishDir Condition="''=='$(PublishDir)'">publish</PublishDir>
+	</PropertyGroup>
+
+	<Target Name="Build" Outputs="@(BuildOutputs)"
+			DependsOnTargets="$(BuildDependsOn)" />
+
+	<Target Name="Rebuild" Outputs="@(BuildOutputs)"
+			DependsOnTargets="SetRebuildProperties;$(BuildDependsOn)" />
+
+	<Target Name="Clean"
+			DependsOnTargets="SetCleanProperties;$(BuildDependsOn)" />
+
+	<Target Name="Publish" Outputs="@(PublishedFiles)">
+		<Copy SourceFiles="@(BuildOutputs)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="true">
+			<Output TaskParameter="CopiedFiles" ItemName="PublishedFiles" />
+		</Copy>
+	</Target>
+
+	<Target Name="SetRebuildProperties">
+		<CreateProperty Value="Clean;Build">
+			<Output TaskParameter="Value" PropertyName="ChildTargets" />
+		</CreateProperty>
+	</Target>
+	
+	<Target Name="SetCleanProperties">
+		<CreateProperty Value="Clean">
+			<Output TaskParameter="Value" PropertyName="ChildTargets" />
+		</CreateProperty>
+	</Target>
+
+	<Target Name="ExecChildBuild" Outputs="@(BuildOutputs)"
+			DependsOnTargets="SetExecChildBuildProperties">
+		<!-- ndasport build for i386 and amd64 -->
+		<MSBuild Projects="wixsrc\sku\$(SKU)\build.proj" 
+				 Properties="$(ChildProperties);Platform=%(Platforms.Identity)"
+				 Targets="$(ChildTargets)">
+			<Output TaskParameter="TargetOutputs" ItemName="ChildBuildOutputs" />
+		</MSBuild>
+		<!-- Adjust the output items to the path relative to the
+			 current project as the child output items are relative to
+			 the project path. -->
+		<CreateItem Include="wixsrc\sku\$(SKU)\%(ChildBuildOutputs.Identity)">
+			<Output TaskParameter="Include" ItemName="BuildOutputs" />
+		</CreateItem>
+	</Target>
+
+	<Target Name="SetExecChildBuildProperties">
+		<CreateProperty Value="$(ChildProperties);ProductVersion=$(ProductVersion)">
+			<Output TaskParameter="ValueSetByTask" PropertyName="ChildProperties" />
+		</CreateProperty>
+	</Target>
+
+	<!-- code sign output MSI files -->
+
+	<PropertyGroup>
+		<!--<CertificateName>XIMETA, Inc.</CertificateName>-->
+		<!-- SHA1 hash value should be extracted the most recent ximeta.cer file -->
+		<!-- this value is valid until September 2008 -->
+		<!-- *** Also update the SHA1 hash value in ..\bin\signcode_ximeta.cmd as well *** -->
+		<CertificateSHA1>0d038ccdb4eae7b7e724a42fbf1cc6b3ccb7b7d7</CertificateSHA1>
+		<TimestampURL>http://timestamp.verisign.com/scripts/timestamp.dll</TimestampURL>
+		<SignTool>tools\signtool.exe</SignTool>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<SignToolFlags Condition="''!='$(CertificateName)'">$(SignToolFlags) -c $(CertificateName)</SignToolFlags>
+		<SignToolFlags Condition="''!='$(CertificateSHA1)'">$(SignToolFlags) -sha1 $(CertificateSHA1)</SignToolFlags>
+		<SignToolFlags Condition="''!='$(TimestampURL)'">$(SignToolFlags) -t $(TimestampURL)</SignToolFlags>
+	</PropertyGroup>
+
+	<Target Name="CodeSign" Condition="$(OfficialCodeSign)"
+			Inputs="%(BuildOutputs.Identity)"
+			Outputs="%(BuildOutputs.Identity).signed">
+		<Message Text="Signing..." />
+		<Exec Command="$(SignTool) sign $(SignToolFlags) @(BuildOutputs->'%(Identity)', ' ')"/>
+		<WriteLinesToFile File="%(BuildOutputs.Identity).signed" Lines="signed" Overwrite="true" />
+	</Target>
+
+	<Target Name="ReadProductVersion" Condition="''=='$(ProductVersion)'">
+		<ReadLinesFromFile File="..\productver.txt">
+			<Output TaskParameter="Lines" PropertyName="ProductVersion" />
+		</ReadLinesFromFile>
+	</Target>
+
+</Project>

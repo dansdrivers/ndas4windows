@@ -1,0 +1,1503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="ndasmgmt" version="3.20.1519" lang="cht" oem="generic" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/126/05">
+    <base>NDAS Software is configured to reject suspend/hibernation request when devices are mounted.\r\nYou can change this behavior from Options - Advanced.</base>
+    <translation>當進行配置時，NDAS 軟體不允許暫停/休眠請求。\r\n您可以在選項裏的進階裏設定。</translation>
+  </string>
+  <string id="/STR/126/06">
+    <base>Mount (&amp;Read-only)</base>
+    <translation>裝配 (唯讀)</translation>
+  </string>
+  <string id="/STR/126/07">
+    <base>Mount (Read/&amp;Write)</base>
+    <translation>裝配 (讀和寫)</translation>
+  </string>
+  <string id="/STR/126/08">
+    <base><![CDATA[Dismo&unt]]></base>
+    <translation>卸下</translation>
+  </string>
+  <string id="/STR/126/09">
+    <base><![CDATA[General]]></base>
+    <translation>通用</translation>
+  </string>
+  <string id="/STR/126/10">
+    <base><![CDATA[An NDAS device with the name you specified is already registered.\r\nSpecify a different NDAS device name.]]></base>
+    <translation>您注冊的NDAS裝置名字已經在用。\n請選用其他名字。</translation>
+  </string>
+  <string id="/STR/126/11">
+    <base>An error occurred while checking duplicate NDAS device name.</base>
+    <translation>檢查重復 NDAS 裝置名稱時出錯。</translation>
+  </string>
+  <string id="/STR/126/12">
+    <base><![CDATA[[%1!d!] %2!s!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/126/13">
+    <base>NDAS Device Management</base>
+    <translation>NDAS 裝置管理</translation>
+  </string>
+  <string id="/STR/126/14">
+    <base><![CDATA[Dismount &All]]></base>
+    <translation>全部卸下</translation>
+  </string>
+  <string id="/STR/126/15">
+    <base><![CDATA[MAC Address]]></base>
+    <translation>以太網地址</translation>
+  </string>
+  <string id="/STR/127/00">
+    <base>This application requires administrative privileges.\r\nLog on as a user in Administrators Group and run this application again.</base>
+    <translation>程式需要管理員許可權。\r\n請用管理員帳號登入，然後重起程式。</translation>
+  </string>
+  <string id="/STR/127/01">
+    <base>Loading NDASUSER.DLL failed.\r\nPlease check the installation of the software.</base>
+    <translation>安裝的 NDASUSER.DLL 無效。\r\n請檢查安裝的軟體。</translation>
+  </string>
+  <string id="/STR/127/02">
+    <base>Window creation failed. Possibly system is running out of memory.\r\nClose other applications and try again.</base>
+    <translation>視窗創建失敗，可能系統的記憶體不夠。\r\n請關閉一些程式，然後再試。</translation>
+  </string>
+  <string id="/STR/127/03">
+    <base>Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.</base>
+    <translation>安裝的 NDASUSER.DLL 無效。\r\n請檢查安裝的軟體。</translation>
+  </string>
+  <string id="/STR/127/04">
+    <base><![CDATA[Unknown]]></base>
+    <translation>不知名</translation>
+  </string>
+  <string id="/STR/127/05">
+    <base><![CDATA[KB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/06">
+    <base><![CDATA[MB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/07">
+    <base><![CDATA[GB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/08">
+    <base><![CDATA[TB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/09">
+    <base><![CDATA[Not Available]]></base>
+    <translation>不可用</translation>
+  </string>
+  <string id="/STR/127/10">
+    <base><![CDATA[Not Available]]></base>
+    <translation>不可用</translation>
+  </string>
+  <string id="/STR/127/11">
+    <base>NDAS Registration Files (*.ndas)</base>
+    <translation>NetDisk 註冊文件 (*.ndas)</translation>
+  </string>
+  <string id="/STR/127/12">
+    <base>Encrypted Disk with %1!s! (%2!d! bits) R%3!X!.%4!X!</base>
+    <translation>加密盤使用 %1!s! (%2!d! bits) R%3!X!.%4!X!</translation>
+  </string>
+  <string id="/STR/127/13">
+    <base><![CDATA[AES]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/14">
+    <base><![CDATA[Simple]]></base>
+    <translation>簡化</translation>
+  </string>
+  <string id="/STR/127/15">
+    <base>None</base>
+    <translation>没有</translation>
+  </string>
+  <string id="/STR/128/00">
+    <base>Unknown Encryption (%1!04X!)</base>
+    <translation>不知名加密 (%1!04X!)</translation>
+  </string>
+  <string id="/STR/128/01">
+    <base>NDAS Registration Files (*.nda)</base>
+    <translation>NetDisk 註冊文件 (*.nda)</translation>
+  </string>
+  <string id="/STR/128/02">
+    <base>All Files (*.*)</base>
+    <translation>所有文件 (*.*)</translation>
+  </string>
+  <string id="/STR/128/03">
+    <base><![CDATA[*.ndas]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/04">
+    <base><![CDATA[*.nda]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/05">
+    <base><![CDATA[*.*]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/06">
+    <base>An error occurred during saving the registration.</base>
+    <translation>存儲註冊文件時發生錯誤。</translation>
+  </string>
+  <string id="/STR/128/07">
+    <base><![CDATA[,\_]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/08">
+    <base>The NDAS device is already registered.</base>
+    <translation>NDAS 裝置已經註冊過了。</translation>
+  </string>
+  <string id="/STR/128/09">
+    <base>'%1!s!' is registered successfully.\r\nClick the taskbar icon to use the registered NDAS device.</base>
+    <translation>'%1!s!' 註冊已經完成，現在裝置可以應用。</translation>
+  </string>
+  <string id="/STR/128/10">
+    <base>Registered</base>
+    <translation>已註冊</translation>
+  </string>
+  <string id="/STR/128/11">
+    <base><![CDATA[Invalid]]></base>
+    <translation>無效</translation>
+  </string>
+  <string id="/STR/128/12">
+    <base>New</base>
+    <translation>新建</translation>
+  </string>
+  <string id="/STR/128/13">
+    <base><![CDATA[Device ID: %1!s!-%2!s!-%3!s!-%4!s!\r\nWrite Key: %5!s!\r\n%6!s!]]></base>
+    <translation>裝置碼: %1!s!-%2!s!-%3!s!-%4!s!\r\n寫鑰: %5!s!\r\n%6!s!</translation>
+  </string>
+  <string id="/STR/128/14">
+    <base><![CDATA[Name]]></base>
+    <translation>名稱</translation>
+  </string>
+  <string id="/STR/128/15">
+    <base>Status</base>
+    <translation>狀態</translation>
+  </string>
+  <string id="/STR/129/00">
+    <base><![CDATA[Error (Code: %1!d!)]]></base>
+    <translation>錯誤 (代號: %1!d!)</translation>
+  </string>
+  <string id="/STR/129/01">
+    <base>An error occurred while reading the file '%1!s!'.</base>
+    <translation>讀取文件時出現錯誤 '%1!s!'.</translation>
+  </string>
+  <string id="/STR/129/02">
+    <base><![CDATA[RW]]></base>
+    <translation>讀寫</translation>
+  </string>
+  <string id="/STR/129/03">
+    <base><![CDATA[RO]]></base>
+    <translation>唯讀</translation>
+  </string>
+  <string id="/STR/129/04">
+    <base><![CDATA[PIO]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/05">
+    <base><![CDATA[DMA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/06">
+    <base><![CDATA[UDMA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/07">
+    <base><![CDATA[LBA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/08">
+    <base><![CDATA[LBA48]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/09">
+    <base><![CDATA[Shared RW]]></base>
+    <translation>共享讀寫</translation>
+  </string>
+  <string id="/STR/129/10">
+    <base><![CDATA[Shared RW *]]></base>
+    <translation>共享讀寫*</translation>
+  </string>
+  <string id="/STR/129/11">
+    <base><![CDATA[Exclusive RW]]></base>
+    <translation>專屬讀寫</translation>
+  </string>
+  <string id="/STR/129/12">
+    <base><![CDATA[Dismounting the NDAS device failed because a program is still using it. Close any programs that might be using it, and then try again.]]></base>
+    <translation>由於還有程式佔用NDAS設備，卸下失敗。把可能佔用的程式關掉。</translation>
+  </string>
+  <string id="/STR/129/13">
+    <base><![CDATA[Dismount devices asynchronously]]></base>
+    <translation>異步卸下設備</translation>
+  </string>
+  <string id="/STR/129/14">
+    <base><![CDATA[Status]]></base>
+    <translation>狀態</translation>
+  </string>
+  <string id="/STR/129/15">
+    <base><![CDATA[Logical Unit]]></base>
+    <translation>邏輯單位</translation>
+  </string>
+  <string id="/STR/130/00">
+    <base><![CDATA[Mounting (RO)]]></base>
+    <translation>正加載 (隻讀)</translation>
+  </string>
+  <string id="/STR/130/01">
+    <base><![CDATA[Mounting (RW)]]></base>
+    <translation>正加載 (讀寫)</translation>
+  </string>
+  <string id="/STR/130/02">
+    <base><![CDATA[Dismounting (RO)]]></base>
+    <translation>正在卸下（唯讀）</translation>
+  </string>
+  <string id="/STR/130/03">
+    <base><![CDATA[Dismounting (RW)]]></base>
+    <translation>正在卸下（讀寫）</translation>
+  </string>
+  <string id="/STR/130/04">
+    <base><![CDATA[Failed]]></base>
+    <translation>失敗</translation>
+  </string>
+  <string id="/STR/130/05">
+    <base><![CDATA[Dismounted]]></base>
+    <translation>卸下</translation>
+  </string>
+  <string id="/STR/130/06">
+    <base><![CDATA[Revision]]></base>
+    <translation>版本</translation>
+  </string>
+  <string id="/STR/188/09">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&amp;</translation>
+  </string>
+  <string id="/STR/188/10">
+    <base>&amp;Add</base>
+    <translation>增加</translation>
+  </string>
+  <string id="/STR/188/11">
+    <base>The host (%1!s!) is requesting the Write Access of "%2!s!'s".\r\nDo you want to accept the request and dismount the NDAS device?</base>
+    <translation>用戶 (%1!s!) 請求寫權 ""%2!s!'s""。\r\n是否接受請求和移除裝配 NDAS 裝置﹖</translation>
+  </string>
+  <string id="/STR/188/12">
+    <base><![CDATA[Verdana]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/188/13">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/188/14">
+    <base><![CDATA[Connection to the following NDAS devices has been lost.\r\n%1!s!]]></base>
+    <translation>以下 NDAS 裝置已失去了連接。\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/188/15">
+    <base>NDAS Device Disconnected</base>
+    <translation>NDAS 裝置已斷開連接</translation>
+  </string>
+  <string id="/STR/189/00">
+    <base><![CDATA[Connection to the following NDAS devices are restored.\r\n%1!s!]]></base>
+    <translation>以下 NDAS 裝置已重新連接。\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/189/02">
+    <base>Connection to the following devices are unstable.\r\nThe system is reconnecting to the devices...\r\n%1!s!</base>
+    <translation>以下的裝置不穩定。\r\n系統正在重新連接...\r\n%s</translation>
+  </string>
+  <string id="/STR/189/04">
+    <base><![CDATA[Are you sure you want to exit from NDAS Device Management?]]></base>
+    <translation>退出NDAS裝置管理嗎？</translation>
+  </string>
+  <string id="/STR/189/05">
+    <base>Are you sure you want to dismount the NDAS device?\r\nThe dismounting may fail if some applications are accessing the NDAS device.</base>
+    <translation>想移除裝配 NDAS 裝置嗎﹖\r\n如果其他程式正在使用 NDAS 裝置，將不能完成移除。</translation>
+  </string>
+  <string id="/STR/189/06">
+    <base>Are you sure you want to dismount all NDAS devices?\r\nThe dismounting may fail if some applications are accessing the NDAS device.</base>
+    <translation>確定要移除所有 NDAS 裝置裝配嗎﹖\r\n如果有其他程式在使用 NDAS 裝置，將不能裝配。</translation>
+  </string>
+  <string id="/STR/189/07">
+    <base>Are you sure you want to dismount %1!s!?\r\nThe dismounting may fail if some applications are accessing the NDAS device.</base>
+    <translation>想移除裝配 %1!s! 嗎﹖\r\n如果有其他程式在使用 NDAS 裝置，將不能移除。</translation>
+  </string>
+  <string id="/STR/189/08">
+    <base><![CDATA[Are you sure you want to remove the %1!s!?]]></base>
+    <translation>想移除註冊 %1!s! 嗎﹖</translation>
+  </string>
+  <string id="/STR/189/09">
+    <base><![CDATA[Are you sure you want to deregister "%1!s!"?]]></base>
+    <translation>想移除註冊 %1!s! 嗎﹖</translation>
+  </string>
+  <string id="/STR/189/10">
+    <base><![CDATA[This RAID will run in degraded mode due to a missing/defective member and this can cause irreconcilable RAID status. Do you want to continue? (Use NDAS Bind management for more information)]]></base>
+    <translation>由於盤組組員不齊或損壞，RAID在下降狀況進行，可造成無法修復的情況，您要繼續嗎？(愈知詳情，使用合並管理。）</translation>
+  </string>
+  <string id="/STR/189/11">
+    <base>%1!s! Properties</base>
+    <translation>%1!s! 屬性</translation>
+  </string>
+  <string id="/STR/189/12">
+    <base><![CDATA[Online]]></base>
+    <translation>聯機</translation>
+  </string>
+  <string id="/STR/189/13">
+    <base><![CDATA[Online *]]></base>
+    <translation>聯機*</translation>
+  </string>
+  <string id="/STR/189/14">
+    <base><![CDATA[Deactivated]]></base>
+    <translation>停止</translation>
+  </string>
+  <string id="/STR/189/15">
+    <base><![CDATA[Offline]]></base>
+    <translation>脫機</translation>
+  </string>
+  <string id="/STR/190/00">
+    <base><![CDATA[Error]]></base>
+    <translation>錯誤</translation>
+  </string>
+  <string id="/STR/190/01">
+    <base><![CDATA[Mounted (RO)]]></base>
+    <translation>已加載 (隻讀)</translation>
+  </string>
+  <string id="/STR/190/02">
+    <base><![CDATA[Mounted (RW)]]></base>
+    <translation>已加載 (讀寫)</translation>
+  </string>
+  <string id="/STR/190/03">
+    <base><![CDATA[Unknown]]></base>
+    <translation>不知名</translation>
+  </string>
+  <string id="/STR/190/04">
+    <base>Hardware</base>
+    <translation>硬體</translation>
+  </string>
+  <string id="/STR/190/05">
+    <base><![CDATA[Max LUs]]></base>
+    <translation>最大 LUs</translation>
+  </string>
+  <string id="/STR/190/06">
+    <base>Max Transfer Blocks</base>
+    <translation>最大傳送</translation>
+  </string>
+  <string id="/STR/190/07">
+    <base>Max Unit Devices</base>
+    <translation>最大裝置數</translation>
+  </string>
+  <string id="/STR/190/08">
+    <base>Command Processing Slots</base>
+    <translation>處理指令</translation>
+  </string>
+  <string id="/STR/190/10">
+    <base><![CDATA[Version]]></base>
+    <translation>版本</translation>
+  </string>
+  <string id="/STR/190/11">
+    <base><![CDATA[Device Type]]></base>
+    <translation>裝置種類</translation>
+  </string>
+  <string id="/STR/190/12">
+    <base><![CDATA[Firmware Revision]]></base>
+    <translation>固件版本</translation>
+  </string>
+  <string id="/STR/190/13">
+    <base><![CDATA[LBA Mode]]></base>
+    <translation>LBA 模式</translation>
+  </string>
+  <string id="/STR/190/14">
+    <base>Model</base>
+    <translation>型號</translation>
+  </string>
+  <string id="/STR/190/15">
+    <base><![CDATA[Serial Number]]></base>
+    <translation>序號</translation>
+  </string>
+  <string id="/STR/191/00">
+    <base>Unit Device %1!d!</base>
+    <translation>裝置 %1!d!</translation>
+  </string>
+  <string id="/STR/191/01">
+    <base>Transfer Mode</base>
+    <translation>傳輸模式</translation>
+  </string>
+  <string id="/STR/191/02">
+    <base>Registration is finished successfully and the device is now ready to use.</base>
+    <translation>註冊已經完成，現在裝置可以應用。</translation>
+  </string>
+  <string id="/STR/191/03">
+    <base>Please wait while checking the NDAS device status...</base>
+    <translation>正在檢查 NDAS 裝置狀態，請等候...</translation>
+  </string>
+  <string id="/STR/191/04">
+    <base><![CDATA[&Disable]]></base>
+    <translation>停止</translation>
+  </string>
+  <string id="/STR/191/05">
+    <base>Enter the NDAS device ID to register.</base>
+    <translation>要註冊請鍵入 NDAS 裝置碼。</translation>
+  </string>
+  <string id="/STR/191/06">
+    <base>NDAS device ID</base>
+    <translation>NDAS 裝置碼</translation>
+  </string>
+  <string id="/STR/191/07">
+    <base>Specify the name for the NDAS device.</base>
+    <translation>請指定一個 NDAS 裝置名稱。</translation>
+  </string>
+  <string id="/STR/191/08">
+    <base>NDAS Device Name</base>
+    <translation>NDAS 裝置名稱</translation>
+  </string>
+  <string id="/STR/191/09">
+    <base>The Wizard will guide you through the NADS device registration. Before continuing to the next step, please do the following:\r\n\r\n- Connect the NDAS device to the network.\r\n- Turn on the NDAS device.\r\n\r\nTo continue, click "Next".</base>
+    <translation>NDAS 裝置註冊精靈會引導您完成註冊。按下一步之前，請︰\r\n\r\n- 連接 NDAS 到網路。\r\n- 打開 NDAS 裝置開關。\r\n\r\n繼續，按 ""下一步""。</translation>
+  </string>
+  <string id="/STR/191/10">
+    <base>NDAS Device Registration Wizard</base>
+    <translation>NDAS 裝置註冊精靈</translation>
+  </string>
+  <string id="/STR/191/11">
+    <base>Do you want to mount this NDAS device now?</base>
+    <translation>現在需要裝配 NDAS 裝置嗎﹖</translation>
+  </string>
+  <string id="/STR/191/12">
+    <base>Mount NDAS Device</base>
+    <translation>裝配 NDAS 裝置</translation>
+  </string>
+  <string id="/STR/191/13">
+    <base><![CDATA[NDAS Device Registration Wizard]]></base>
+    <translation>NDAS 裝置註冊精靈</translation>
+  </string>
+  <string id="/STR/191/15">
+    <base>An error has occurred while setting up a Write Key.</base>
+    <translation>設定寫鑰時出錯。</translation>
+  </string>
+  <string id="/STR/192/00">
+    <base>An error occurred while disabling an NDAS device.</base>
+    <translation>停止 NDAS 裝置時出錯。</translation>
+  </string>
+  <string id="/STR/192/01">
+    <base>An error occurred while enabling an NDAS device.</base>
+    <translation>啓動 NDAS 裝置時出錯。</translation>
+  </string>
+  <string id="/STR/192/02">
+    <base>An error occurred while mounting an NDAS device as Read-Only Mode.</base>
+    <translation>裝配 NDAS 裝置成唯讀時出錯。</translation>
+  </string>
+  <string id="/STR/192/03">
+    <base>An error occurred while mounting an NDAS device as Read/Write Mode.</base>
+    <translation>裝配 NDAS 裝置成讀寫時出錯。</translation>
+  </string>
+  <string id="/STR/192/04">
+    <base>Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!</base>
+    <translation>設備︰NDAS 0x%1!04X!\r\n錯誤碼︰%2!u! (0x%2!04X!)\r\n%3!s!</translation>
+  </string>
+  <string id="/STR/192/05">
+    <base>An error occurred during registration.</base>
+    <translation>註冊時出錯。</translation>
+  </string>
+  <string id="/STR/192/06">
+    <base>An error occurred while removing a Write Key.</base>
+    <translation>移除寫鑰時出錯。</translation>
+  </string>
+  <string id="/STR/192/07">
+    <base>An error occurred while renaming an NDAS device.</base>
+    <translation>重命名 NDAS 裝置時出錯。</translation>
+  </string>
+  <string id="/STR/192/08">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation>錯誤碼: %1!u! (0x%1!04X!)\r\n%2!s!</translation>
+  </string>
+  <string id="/STR/192/09">
+    <base>NDAS Device Management Error</base>
+    <translation>NDAS 裝置管理出錯</translation>
+  </string>
+  <string id="/STR/192/10">
+    <base>An error occurred while dismounting an NDAS device.</base>
+    <translation>移除裝配 NDAS 裝置時出錯。</translation>
+  </string>
+  <string id="/STR/192/11">
+    <base><![CDATA[An error occurred while deregistering an NDAS device.]]></base>
+    <translation>刪除 NDAS注冊時出錯。</translation>
+  </string>
+  <string id="/STR/192/12">
+    <base>An error occurred while updating an NDAS device list.</base>
+    <translation>更新 NDAS 裝置列表時出錯。</translation>
+  </string>
+  <string id="/STR/192/13">
+    <base>NDAS device ID is 20 characters long and it is composed of alphanumeric characters!\r\n</base>
+    <translation>NDAS 裝置碼有20個字母, 而寫鑰有5個字母. 當中有字母和數位﹗\r\n</translation>
+  </string>
+  <string id="/STR/192/14">
+    <base>Invalid Device ID!</base>
+    <translation>無效的裝置碼或者寫鑰﹗</translation>
+  </string>
+  <string id="/STR/192/15">
+    <base>Unknown Host</base>
+    <translation>不知名用戶</translation>
+  </string>
+  <string id="/STR/193/00">
+    <base>Automatic</base>
+    <translation>默認</translation>
+  </string>
+  <string id="/STR/193/01">
+    <base>Changing the user interface language requires application restart. Do you want to restart the application now?</base>
+    <translation>更改用戶語言需要重起程式。現在重起程式嗎﹖</translation>
+  </string>
+  <string id="/STR/193/11">
+    <base><![CDATA[Unavailable]]></base>
+    <translation>不可用</translation>
+  </string>
+  <string id="/STR/193/14">
+    <base><![CDATA[Mounted in Read-only mode]]></base>
+    <translation>已加載成唯讀模式</translation>
+  </string>
+  <string id="/STR/193/15">
+    <base><![CDATA[Mounted in Read/Write mode]]></base>
+    <translation>已加載成讀和寫模式</translation>
+  </string>
+  <string id="/STR/194/00">
+    <base><![CDATA[Mounting]]></base>
+    <translation>正加載</translation>
+  </string>
+  <string id="/STR/194/01">
+    <base>Not Mountable</base>
+    <translation>不能裝配</translation>
+  </string>
+  <string id="/STR/194/02">
+    <base>Unknown Status (0x%1!08X!)</base>
+    <translation>不知名將態 (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/194/03">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation>沒有裝配</translation>
+  </string>
+  <string id="/STR/194/04">
+    <base><![CDATA[Dismounting]]></base>
+    <translation>正在卸下</translation>
+  </string>
+  <string id="/STR/194/05">
+    <base>Aggregated Disk</base>
+    <translation>集成盤</translation>
+  </string>
+  <string id="/STR/194/06">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Compact Flash 盤</translation>
+  </string>
+  <string id="/STR/194/08">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation>DVD 盤</translation>
+  </string>
+  <string id="/STR/194/09">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation>鏡像盤</translation>
+  </string>
+  <string id="/STR/194/10">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO 盤</translation>
+  </string>
+  <string id="/STR/194/11">
+    <base>Basic Disk</base>
+    <translation>基本盤</translation>
+  </string>
+  <string id="/STR/194/12">
+    <base>Unknown Type (0x%1!08X!)</base>
+    <translation>不知名種類 (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/194/13">
+    <base>Virtual DVD Drive</base>
+    <translation>虛擬 DVD 盤</translation>
+  </string>
+  <string id="/STR/194/14">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS 裝置管理</translation>
+  </string>
+  <string id="/STR/194/15">
+    <base><![CDATA[Online]]></base>
+    <translation>聯機</translation>
+  </string>
+  <string id="/STR/195/00">
+    <base><![CDATA[Deactivated]]></base>
+    <translation>停止</translation>
+  </string>
+  <string id="/STR/195/01">
+    <base><![CDATA[Offline]]></base>
+    <translation>脫機</translation>
+  </string>
+  <string id="/STR/195/02">
+    <base><![CDATA[Unknown]]></base>
+    <translation>不知名</translation>
+  </string>
+  <string id="/STR/195/03">
+    <base>NDAS Device %1!d!</base>
+    <translation>NDAS 裝置 %1!d!</translation>
+  </string>
+  <string id="/STR/195/04">
+    <base><![CDATA[(No NDAS Device)]]></base>
+    <translation>(沒有 NDAS 裝置)</translation>
+  </string>
+  <string id="/STR/195/05">
+    <base>Do not show the confirmation dialog on exit</base>
+    <translation>當退出時不要顯示確認</translation>
+  </string>
+  <string id="/STR/195/06">
+    <base>Show NDAS Device Status text</base>
+    <translation>顯示 NDAS 裝置狀態文字</translation>
+  </string>
+  <string id="/STR/195/07">
+    <base>Show Dismount All command</base>
+    <translation>顯示移除所有裝配</translation>
+  </string>
+  <string id="/STR/195/08">
+    <base><![CDATA[Options]]></base>
+    <translation>選項</translation>
+  </string>
+  <string id="/STR/195/09">
+    <base><![CDATA[Confirmation]]></base>
+    <translation>確認</translation>
+  </string>
+  <string id="/STR/195/10">
+    <base><![CDATA[Menu]]></base>
+    <translation>功能表</translation>
+  </string>
+  <string id="/STR/195/11">
+    <base>You have successfully completed the NDAS device Registration Wizard.\r\n\r\nTo close this wizard, click Finish.</base>
+    <translation>NDAS 裝置註冊成功。\r\n\r\n關閉註冊精靈，點擊完成。</translation>
+  </string>
+  <string id="/STR/195/12">
+    <base>You have successfully registered the NDAS device. \r\n\r\nHowever, the NDAS device is not found and cannot be connected at this time. Please check the NDAS device connection.\r\n\r\nTo close this wizard, click Finish.</base>
+    <translation>NDAS 裝置安裝完成。\r\n\r\n但是，NDAS 裝置並不成創立。請檢查 NDAS 裝置連接。\r\n\r\n關閉註冊精靈，點擊完成。</translation>
+  </string>
+  <string id="/STR/195/13">
+    <base>You have successfully registered and the NDAS device is connected. \r\n\r\nHowever, there is no mountable NDAS device found at this time. Please check the status from the task bar icon menu.\r\n\r\nTo close this wizard, click Finish.</base>
+    <translation>NDAS 裝置安裝完成。\r\n\r\n但是，NDAS 裝置並不成創立。請檢查 NDAS 裝置連接。\r\n\r\n關閉註冊精靈，點擊完成。</translation>
+  </string>
+  <string id="/STR/195/14">
+    <base>Remo&amp;ve</base>
+    <translation>移除</translation>
+  </string>
+  <string id="/STR/195/15">
+    <base><![CDATA[Are you sure you want to remove the Write Key?\r\nYou cannot mount this device as Read/Write anymore without the Write Key.]]></base>
+    <translation>想要移除寫鑰嗎﹖\r\n如果，沒有寫鑰不能裝配成讀寫模式。</translation>
+  </string>
+  <string id="/STR/196/00">
+    <base>Remove Write Key</base>
+    <translation>移除寫鑰</translation>
+  </string>
+  <string id="/STR/196/01">
+    <base>This NDAS device is being used by another host who has the Read/Write access to the NDAS device. And shared-write mode cannot be used at this time.\r\nWould you like to request the Read/Write access of the NDAS device?</base>
+    <translation>有另一個用戶正在使用 NetDisk 裝置，而且擁有 NDAS 裝置讀寫許可權。\r\n想要求讀寫許可權嗎﹖</translation>
+  </string>
+  <string id="/STR/196/02">
+    <base><![CDATA[&Properties...]]></base>
+    <translation>屬性...</translation>
+  </string>
+  <string id="/STR/196/03">
+    <base>Please wait while connecting to the host...</base>
+    <translation>正在連接主機，請等候...</translation>
+  </string>
+  <string id="/STR/196/04">
+    <base>Waiting for a response...</base>
+    <translation>正在等候回應...</translation>
+  </string>
+  <string id="/STR/196/05">
+    <base>Unit Device information is not available</base>
+    <translation>裝置資訊不可以用</translation>
+  </string>
+  <string id="/STR/196/06">
+    <base><![CDATA[Other]]></base>
+    <translation>其他</translation>
+  </string>
+  <string id="/STR/196/07">
+    <base><![CDATA[Mounted]]></base>
+    <translation>已加載</translation>
+  </string>
+  <string id="/STR/196/08">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation>沒有裝配</translation>
+  </string>
+  <string id="/STR/196/10">
+    <base><![CDATA[Unknown (%1!d!)]]></base>
+    <translation>不知名 (%1!d!)</translation>
+  </string>
+  <string id="/STR/196/11">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation>CD/DVD 盤</translation>
+  </string>
+  <string id="/STR/196/12">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Compact Flash 盤</translation>
+  </string>
+  <string id="/STR/196/13">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>硬碟</translation>
+  </string>
+  <string id="/STR/196/14">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO 盤</translation>
+  </string>
+  <string id="/STR/196/15">
+    <base>Unknown Type (%1!08X!)</base>
+    <translation>不知名種類 (%1!08X!)</translation>
+  </string>
+  <string id="/STR/197/00">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation>CD/DVD 盤</translation>
+  </string>
+  <string id="/STR/197/01">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>硬碟</translation>
+  </string>
+  <string id="/STR/197/02">
+    <base>Member of Aggregated Disk</base>
+    <translation>硬碟 (集成)</translation>
+  </string>
+  <string id="/STR/197/03">
+    <base><![CDATA[Member of Mirrored Disk (Primary)]]></base>
+    <translation>鏡像硬碟(主要)</translation>
+  </string>
+  <string id="/STR/197/04">
+    <base><![CDATA[Member of Mirrored Disk (Secondary)]]></base>
+    <translation>鏡像硬碟(次級)</translation>
+  </string>
+  <string id="/STR/197/05">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>硬碟</translation>
+  </string>
+  <string id="/STR/197/06">
+    <base>Disk Drive (Unrecognized Type %1!04X!)</base>
+    <translation>硬碟 (不認可種類 %1!04X!)</translation>
+  </string>
+  <string id="/STR/197/07">
+    <base>Unknown Type (0x%1!04X!)</base>
+    <translation>不知名種類 (0x%1!04X!)</translation>
+  </string>
+  <string id="/STR/197/08">
+    <base>Unknown Unit Device Type</base>
+    <translation>不知名裝置種類</translation>
+  </string>
+  <string id="/STR/197/09">
+    <base><![CDATA[&Deregister]]></base>
+    <translation>刪除注冊</translation>
+  </string>
+  <string id="/STR/197/10">
+    <base><![CDATA[None]]></base>
+    <translation>没有</translation>
+  </string>
+  <string id="/STR/197/11">
+    <base><![CDATA[Present]]></base>
+    <translation>擁有</translation>
+  </string>
+  <string id="/STR/197/12">
+    <base>Do not show a confirmation dialog on removing the Write Key</base>
+    <translation>移除寫鑰時不要顯示確認</translation>
+  </string>
+  <string id="/STR/197/13">
+    <base>Do not show a confirmation dialog on deregistering an NDAS device</base>
+    <translation>移除 NDAS 裝置註冊時不要顯示確認</translation>
+  </string>
+  <string id="/STR/197/14">
+    <base>Do not show a confirmation dialog on dismounting an NDAS device</base>
+    <translation>移除裝配 NDAS 裝置時不要顯示確認</translation>
+  </string>
+  <string id="/STR/197/15">
+    <base>Do not show a confirmation dialog on dismounting all of the NDAS devices</base>
+    <translation>移除 NDAS 裝置所有裝配時不要顯示確認</translation>
+  </string>
+  <string id="/STR/198/00">
+    <base>Use Wizard for Registration</base>
+    <translation>用註冊精靈註冊</translation>
+  </string>
+  <string id="/STR/198/01">
+    <base>NDAS Device Management is running now.\r\nClick here to register a new NDAS Device to your system.</base>
+    <translation>NDAS 裝置管理正在運行。\r\n點擊註冊一個新的 NDAS 裝置到系統。</translation>
+  </string>
+  <string id="/STR/198/02">
+    <base>NDAS Device Management is running</base>
+    <translation>NDAS 裝置管理正在運行</translation>
+  </string>
+  <string id="/STR/198/03">
+    <base>NDAS Device Management is already running.\r\nClick the task bar icon to show the menu such that you can access the features.</base>
+    <translation>NDAS 裝置已經啓動。\r\n點擊 NDAS 圖示查看功能功能表。</translation>
+  </string>
+  <string id="/STR/198/04">
+    <base>NDAS Device Management is already running</base>
+    <translation>NDAS 裝置管理已經啓動</translation>
+  </string>
+  <string id="/STR/198/05">
+    <base><![CDATA[Access]]></base>
+    <translation>許可權</translation>
+  </string>
+  <string id="/STR/198/06">
+    <base><![CDATA[Hostname]]></base>
+    <translation>用戶名</translation>
+  </string>
+  <string id="/STR/198/07">
+    <base>Network Address</base>
+    <translation>網路位址</translation>
+  </string>
+  <string id="/STR/198/08">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/09">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Not registered)]]></base>
+    <translation>[%1!d!] %2!s!:%3!d! (沒有註冊)</translation>
+  </string>
+  <string id="/STR/198/10">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Unavailable)]]></base>
+    <translation>[%1!d!] %2!s!:%3!d! (不可用)</translation>
+  </string>
+  <string id="/STR/198/11">
+    <base>Please wait while mounting a requested NDAS device...</base>
+    <translation>正在裝配 NDAS 裝置，請等候...</translation>
+  </string>
+  <string id="/STR/198/12">
+    <base>Please wait while dismounting a requested NDAS device...</base>
+    <translation>正在移除裝配 NDAS 裝置，請等候...</translation>
+  </string>
+  <string id="/STR/198/13">
+    <base>The new user interface language will be applied when you restart the application.</base>
+    <translation>當程式重起時，會應用新的用戶介面語言。</translation>
+  </string>
+  <string id="/STR/198/14">
+    <base>Suspend/Hibernation Support</base>
+    <translation>支援暫停/休眠</translation>
+  </string>
+  <string id="/STR/198/15">
+    <base>Allow suspend/hibernation</base>
+    <translation>允許暫停/休眠</translation>
+  </string>
+  <string id="/STR/199/00">
+    <base>NDAS Device Management is running now.\r\nClick the task bar icon to show the menu such that you can access the features.</base>
+    <translation>NDAS 裝置正在運行。\r\n點擊 NDAS 圖示查看功能功能表。</translation>
+  </string>
+  <string id="/STR/199/01">
+    <base>Deny suspend/hibernation if there are mounted devices</base>
+    <translation>禁止暫停/休眠如果有裝配裝置</translation>
+  </string>
+  <string id="/STR/199/02">
+    <base>Allowing suspend/hibernation may cause a data corruption and the device may not be available on resuming in multi-write mode.\r\nAre you sure you want to enable this feature?</base>
+    <translation>允許暫停/休眠可能會導致資料損失，還有裝置可能不允許多寫模式。\r\n想要啓動嗎﹖</translation>
+  </string>
+  <string id="/STR/199/03">
+    <base>&amp;Activate</base>
+    <translation>啓動</translation>
+  </string>
+  <string id="/STR/199/04">
+    <base><![CDATA[[%1!d!] %2!s! (Unavailable)]]></base>
+    <translation>[%1!d!] %2!s! (不可用)</translation>
+  </string>
+  <string id="/STR/199/05">
+    <base>Are you sure you want to deactivate this NDAS device?\r\nAfter deactivating, you can reactivate this device from the menu</base>
+    <translation>想要停止 NDAS 裝置嗎﹖\r\n當停止以後，可以在功能表中點啓動。</translation>
+  </string>
+  <string id="/STR/199/06">
+    <base><![CDATA[Are you sure you want to reset the connection to this NDAS device?]]></base>
+    <translation>想要重置 NDAS 裝置連接嗎﹖</translation>
+  </string>
+  <string id="/STR/199/07">
+    <base><![CDATA[A member of RAID is inaccessible or not configured correctly. RAID system will be running in degraded mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation>無法訪問RAID組員或配置不正確。RAID會在下降模式下進行。請使用合並管理查看詳情。\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/08">
+    <base>The NDAS Device is running in degraded mode</base>
+    <translation>NDAS 裝置正在錯誤模式運行當中</translation>
+  </string>
+  <string id="/STR/199/09">
+    <base><![CDATA[Component]]></base>
+    <translation>元件</translation>
+  </string>
+  <string id="/STR/199/10">
+    <base><![CDATA[Version]]></base>
+    <translation>版本</translation>
+  </string>
+  <string id="/STR/199/11">
+    <base>NDAS Device status</base>
+    <translation>NDAS 裝置狀態</translation>
+  </string>
+  <string id="/STR/199/12">
+    <base>NDAS Device is running in normal status\r\n%1!s!</base>
+    <translation>NDAS 裝置在正常運行狀態中\r\n%s</translation>
+  </string>
+  <string id="/STR/199/13">
+    <base><![CDATA[The RAID is now running in recovery mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation>RAID在恢復狀態。愈知詳情，使用合並管理。\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/14">
+    <base>Connection(s) to one or more NDAS device(s) has been recovered.\r\n%1!s!</base>
+    <translation>連接到一個或者多個 NDAS 裝置已經被恢復。\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/15">
+    <base>The RAID is now fully recovered.\r\n%1!s!</base>
+    <translation>現在恢復 RAID。\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/200/00">
+    <base><![CDATA[[%1!d!] %2!s! (Not registered)]]></base>
+    <translation>[%1!d!] %2!s! (沒有註冊)</translation>
+  </string>
+  <string id="/STR/200/01">
+    <base><![CDATA[Re&set]]></base>
+    <translation>復位</translation>
+  </string>
+  <string id="/STR/200/02">
+    <base><![CDATA[The RAID is in failure state. Use NDAS Bind Management tool for more information\r\n%1!s!]]></base>
+    <translation>RAID在失靈狀態。愈知詳情，使用合並管理\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/251/02">
+    <base>NDAS Device Management\r\nNDAS Service is not available.</base>
+    <translation>NetDisk 裝置管理\r\nNDAS 服務不可用</translation>
+  </string>
+  <string id="/STR/251/12">
+    <base>Connecting</base>
+    <translation>連接中</translation>
+  </string>
+  <string id="/STR/257/04">
+    <base><![CDATA[Disk (RAID-0)]]></base>
+    <translation>盤 (RAID 0)</translation>
+  </string>
+  <string id="/STR/257/05">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation>鏡像碟(RAID-1) Rev.1</translation>
+  </string>
+  <string id="/STR/257/08">
+    <base><![CDATA[Disk (RAID-4) Rev.1]]></base>
+    <translation>盤 (RAID 4) Rev.1</translation>
+  </string>
+  <string id="/STR/257/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation>鏡像碟(RAID-1) Rev.2</translation>
+  </string>
+  <string id="/STR/257/11">
+    <base><![CDATA[Disk (RAID-4) Rev.2]]></base>
+    <translation>盤 (RAID 4) Rev.2</translation>
+  </string>
+  <string id="/STR/257/14">
+    <base><![CDATA[Member of Striped Disk (RAID-0)]]></base>
+    <translation>條帶化硬碟 (RAID 0)</translation>
+  </string>
+  <string id="/STR/257/15">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation>鏡像硬碟(RAID1) Rev. 1</translation>
+  </string>
+  <string id="/STR/258/02">
+    <base><![CDATA[Member of RAID-4 Disk Rev. 1]]></base>
+    <translation>RAID 4 硬碟 Rev.1</translation>
+  </string>
+  <string id="/STR/258/04">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation>鏡像硬碟(RAID1) Rev. 2</translation>
+  </string>
+  <string id="/STR/258/05">
+    <base><![CDATA[Member of RAID-4 Disk Rev.2]]></base>
+    <translation>RAID 4 硬碟 Rev.2</translation>
+  </string>
+  <string id="/STR/258/08">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation>鏡像硬碟(RAID1) Rev. 3</translation>
+  </string>
+  <string id="/STR/258/09">
+    <base><![CDATA[Member of RAID-4 Disk Rev.3]]></base>
+    <translation>RAID 4 硬碟 Rev.3</translation>
+  </string>
+  <string id="/STR/258/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation>鏡像碟(RAID-1) Rev.3</translation>
+  </string>
+  <string id="/STR/258/11">
+    <base><![CDATA[Disk (RAID-4) Rev.3]]></base>
+    <translation>盤 (RAID 4) Rev.3</translation>
+  </string>
+  <string id="/STR/258/12">
+    <base><![CDATA[Missing member]]></base>
+    <translation>組員缺失</translation>
+  </string>
+  <string id="/STR/258/13">
+    <base><![CDATA[Migration is required. Use NDAS Bind management to migrate.]]></base>
+    <translation>需要移植。使用NDAS合並管理進行移植。</translation>
+  </string>
+  <string id="/STR/258/14">
+    <base><![CDATA[Conflicting RAID information. Use NDAS Bind management to resolve conflicts.]]></base>
+    <translation>RAID信息沖突。用NDAS裝置管理解除沖突。</translation>
+  </string>
+  <string id="/STR/258/15">
+    <base><![CDATA[Mountable in degraded mode]]></base>
+    <translation>下降模式仍可加載</translation>
+  </string>
+  <string id="/STR/259/00">
+    <base><![CDATA[Do not show a warning dialog when mounting RAID in degraded mode]]></base>
+    <translation>RAID在下降狀況下加載時不會出現警告對話</translation>
+  </string>
+  <string id="/STR/307/05">
+    <base>Please wait while checking for a software update...</base>
+    <translation>正在檢查軟體更新，請等候...</translation>
+  </string>
+  <string id="/STR/307/06">
+    <base>An error occurred while checking a software update.</base>
+    <translation>檢查軟體更新時出錯。</translation>
+  </string>
+  <string id="/STR/625/15">
+    <base><![CDATA[English]]></base>
+    <translation>繁體中文</translation>
+  </string>
+  <string id="/DLG/301">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation>關於</translation>
+  </string>
+  <string id="/DLG/301/00">
+    <base><![CDATA[OK]]></base>
+    <translation>確定</translation>
+  </string>
+  <string id="/DLG/301/01">
+    <base>NDAS Software</base>
+    <translation>NDAS 軟體</translation>
+  </string>
+  <string id="/DLG/301/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation>版本 %1!s!</translation>
+  </string>
+  <string id="/DLG/301/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&amp;</translation>
+  </string>
+  <string id="/DLG/301/04">
+    <base><![CDATA[Copyright © 2002-2007 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+    <translation>版權所有 © 2002-2007 XIMETA, Inc.\r\nAll rights reserved.</translation>
+  </string>
+  <string id="/DLG/301/05">
+    <base><![CDATA[Components]]></base>
+    <translation>元件</translation>
+  </string>
+  <string id="/DLG/301/07">
+    <base>Check for &amp;Updates</base>
+    <translation>檢查更新</translation>
+  </string>
+  <string id="/DLG/302">
+    <base>Enter the Write Key</base>
+    <translation>鍵入寫鑰</translation>
+  </string>
+  <string id="/DLG/302/01">
+    <base><![CDATA[OK]]></base>
+    <translation>確定</translation>
+  </string>
+  <string id="/DLG/302/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>取消</translation>
+  </string>
+  <string id="/DLG/302/05">
+    <base><![CDATA[Device Name:]]></base>
+    <translation>裝置名:</translation>
+  </string>
+  <string id="/DLG/302/06">
+    <base><![CDATA[Device ID:]]></base>
+    <translation>裝置碼:</translation>
+  </string>
+  <string id="/DLG/302/07">
+    <base><![CDATA[Write Key:]]></base>
+    <translation>寫鑰:</translation>
+  </string>
+  <string id="/DLG/303/00">
+    <base><![CDATA[&Yes]]></base>
+    <translation>是</translation>
+  </string>
+  <string id="/DLG/303/01">
+    <base><![CDATA[&No]]></base>
+    <translation>否</translation>
+  </string>
+  <string id="/DLG/303/04">
+    <base>In the future, do not show me this dialog box.</base>
+    <translation>將來不再顯此示此對話方塊</translation>
+  </string>
+  <string id="/DLG/306">
+    <base><![CDATA[General]]></base>
+    <translation>通用</translation>
+  </string>
+  <string id="/DLG/306/00">
+    <base><![CDATA[Device Name:]]></base>
+    <translation>裝置名:</translation>
+  </string>
+  <string id="/DLG/306/02">
+    <base><![CDATA[&Rename]]></base>
+    <translation>重命名</translation>
+  </string>
+  <string id="/DLG/306/03">
+    <base><![CDATA[Device ID:]]></base>
+    <translation>裝置碼:</translation>
+  </string>
+  <string id="/DLG/306/05">
+    <base><![CDATA[Write Key:]]></base>
+    <translation>寫鑰:</translation>
+  </string>
+  <string id="/DLG/306/07">
+    <base><![CDATA[&Add]]></base>
+    <translation>增加</translation>
+  </string>
+  <string id="/DLG/306/08">
+    <base><![CDATA[Status:]]></base>
+    <translation>狀態:</translation>
+  </string>
+  <string id="/DLG/306/10">
+    <base>Unit Device Information</base>
+    <translation>裝置資訊</translation>
+  </string>
+  <string id="/DLG/306/14">
+    <base><![CDATA[Status]]></base>
+    <translation>狀態</translation>
+  </string>
+  <string id="/DLG/306/16">
+    <base><![CDATA[Capacity]]></base>
+    <translation>容量</translation>
+  </string>
+  <string id="/DLG/306/18">
+    <base>Read-Only Access</base>
+    <translation>唯讀模式</translation>
+  </string>
+  <string id="/DLG/306/20">
+    <base>Read/Write Access</base>
+    <translation>讀和寫模式</translation>
+  </string>
+  <string id="/DLG/306/22">
+    <base>Logical Device Information:</base>
+    <translation>這個裝置成爲以下的邏輯裝置:</translation>
+  </string>
+  <string id="/DLG/307">
+    <base><![CDATA[Hosts]]></base>
+    <translation>用戶</translation>
+  </string>
+  <string id="/DLG/307/01">
+    <base>The following hosts are using this NDAS device.\r\nSome information may not be available.</base>
+    <translation>以下用戶正在使用 NetDisk 裝置。\r\n有些資料可能不能顯示。</translation>
+  </string>
+  <string id="/DLG/307/02">
+    <base>Click here to refresh the list.</base>
+    <translation>點擊這裏刷新列表。</translation>
+  </string>
+  <string id="/DLG/308">
+    <base><![CDATA[Hardware]]></base>
+    <translation>硬體</translation>
+  </string>
+  <string id="/DLG/308/00">
+    <base>Hardware Information about your NDAS device</base>
+    <translation>NDAS 裝置的硬體資料</translation>
+  </string>
+  <string id="/DLG/310/00">
+    <base>Completing the NDAS Device Registration Wizard</base>
+    <translation>正在完成 NDAS 裝置註冊</translation>
+  </string>
+  <string id="/DLG/310/02">
+    <base>Click here to save as a file.</base>
+    <translation>點擊這裏保存檔案。</translation>
+  </string>
+  <string id="/DLG/310/03">
+    <base><![CDATA[Optionally, you can save the registration to the file for registering from other computers.]]></base>
+    <translation>可選擇，您可以保存注冊文件用於另一台電腦的注冊。</translation>
+  </string>
+  <string id="/DLG/311/00">
+    <base>To register the NDAS device, please enter the NDAS device ID. The ID and Write Key are located on the bottom of the NDAS device.\r\n\r\nNDAS device ID is composed of 20 characters.</base>
+    <translation>要註冊 NDAS 裝置，請鍵入裝置碼和寫鑰，這些可以在裝置的底下找到。\r\n\r\n注意︰ NDAS 裝置碼有20個字母。</translation>
+  </string>
+  <string id="/DLG/311/01">
+    <base>Please enter the NDAS device ID.</base>
+    <translation>請鍵入 NDAS 裝置碼。</translation>
+  </string>
+  <string id="/DLG/311/06">
+    <base>Write Key is needed for Read/Write mode. It is composed of 5 characters.</base>
+    <translation>寫鑰是針對讀和寫的模式，它有5個字母。</translation>
+  </string>
+  <string id="/DLG/311/08">
+    <base>Click Next when you finish.\r\nIf the NDAS device ID and/or the Write Key is invalid, Next will not be enabled.</base>
+    <translation>完成，請按""下一步""\n如果裝置碼和寫鑰不對， ""下一步""不會啓動。</translation>
+  </string>
+  <string id="/DLG/311/09">
+    <base>Please enter the Write Key. (Optional)</base>
+    <translation>請鍵入寫鑰。 (可選)</translation>
+  </string>
+  <string id="/DLG/313/00">
+    <base>Please choose a name for the NDAS device. This name will be used to identify the NDAS device in your system only.</base>
+    <translation>請選擇一個 NDAS 裝置名稱顯示在您的系統上。</translation>
+  </string>
+  <string id="/DLG/313/01">
+    <base>The name can be up to 30 characters long.</base>
+    <translation>名稱不可以多於30個字母。</translation>
+  </string>
+  <string id="/DLG/313/02">
+    <base>Please enter the name.</base>
+    <translation>請鍵入名稱。</translation>
+  </string>
+  <string id="/DLG/313/04">
+    <base>Click Next when you finish.</base>
+    <translation>當完成請按""下一步""。</translation>
+  </string>
+  <string id="/DLG/314/00">
+    <base>Welcome to the NDAS Device Registration Wizard</base>
+    <translation>歡迎註冊 NDAS 裝置</translation>
+  </string>
+  <string id="/DLG/315/01">
+    <base>Do you want to mount the NDAS device to your system now?</base>
+    <translation>是否裝配裝置到系統上﹖</translation>
+  </string>
+  <string id="/DLG/315/02">
+    <base>While mounting the NDAS device, a security warning dialog may appear. You must click "Continue" to successfully mount the NDAS device. Otherwise, it will not be mounted.</base>
+    <translation>當裝配途中， 安全警報會觸動, 請點""繼續""，不然裝配不能完成。</translation>
+  </string>
+  <string id="/DLG/315/03">
+    <base>Yes, I want to mount this NDAS device as Read/Write Mode.</base>
+    <translation>是，我要裝配成讀和寫的模式。</translation>
+  </string>
+  <string id="/DLG/315/04">
+    <base>Yes, I want to mount this NDAS device as Read-Only Mode.</base>
+    <translation>是，我要裝配成唯讀模式。</translation>
+  </string>
+  <string id="/DLG/315/05">
+    <base><![CDATA[No, I don't want to mount this NDAS device now.]]></base>
+    <translation>不，我暫時不想裝配裝置。</translation>
+  </string>
+  <string id="/DLG/317">
+    <base><![CDATA[Export Registration]]></base>
+    <translation>導出註冊</translation>
+  </string>
+  <string id="/DLG/317/02">
+    <base>Select a &amp;NDAS Device to export:</base>
+    <translation>遺擇要導出的 NDAS 裝置:</translation>
+  </string>
+  <string id="/DLG/317/04">
+    <base>You need to complete the following information to export the registration data.</base>
+    <translation>您必需要完成以下的資料才可以成功導出</translation>
+  </string>
+  <string id="/DLG/317/05">
+    <base><![CDATA[Device &ID:]]></base>
+    <translation>裝置碼:</translation>
+  </string>
+  <string id="/DLG/317/10">
+    <base><![CDATA[&Write Key:]]></base>
+    <translation>寫鑰:</translation>
+  </string>
+  <string id="/DLG/317/12">
+    <base>Do not export the Write Key.</base>
+    <translation>不要導出寫鑰。</translation>
+  </string>
+  <string id="/DLG/317/13">
+    <base><![CDATA[Des&cription:]]></base>
+    <translation>說明:</translation>
+  </string>
+  <string id="/DLG/317/15">
+    <base><![CDATA[&Save]]></base>
+    <translation>保存</translation>
+  </string>
+  <string id="/DLG/317/16">
+    <base><![CDATA[Cancel]]></base>
+    <translation>取消</translation>
+  </string>
+  <string id="/DLG/318">
+    <base><![CDATA[NDAS Device Management Error]]></base>
+    <translation>NDAS 裝置管理出錯</translation>
+  </string>
+  <string id="/DLG/318/00">
+    <base><![CDATA[OK]]></base>
+    <translation>確定</translation>
+  </string>
+  <string id="/DLG/319">
+    <base><![CDATA[Advanced]]></base>
+    <translation>進階</translation>
+  </string>
+  <string id="/DLG/319/01">
+    <base>Advanced settings:</base>
+    <translation>進階設定:</translation>
+  </string>
+  <string id="/DLG/322">
+    <base>Rename</base>
+    <translation>重命名</translation>
+  </string>
+  <string id="/DLG/322/01">
+    <base><![CDATA[OK]]></base>
+    <translation>確定</translation>
+  </string>
+  <string id="/DLG/322/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>取消</translation>
+  </string>
+  <string id="/DLG/322/03">
+    <base>&amp;New name:</base>
+    <translation>新名稱:</translation>
+  </string>
+  <string id="/DLG/2009">
+    <base><![CDATA[General]]></base>
+    <translation>通用</translation>
+  </string>
+  <string id="/DLG/2009/00">
+    <base>User Interface</base>
+    <translation>用戶介面</translation>
+  </string>
+  <string id="/DLG/2009/01">
+    <base>Display menus and dialogs in the following language:</base>
+    <translation>顯示以下的文字語言:</translation>
+  </string>
+  <string id="/DLG/2009/03">
+    <base><![CDATA[Alerts]]></base>
+    <translation>警告</translation>
+  </string>
+  <string id="/DLG/2009/05">
+    <base>Display an alert when connection to an NDAS device is lost.</base>
+    <translation>顯示警告當 NDAS 裝置斷開。</translation>
+  </string>
+  <string id="/DLG/2009/06">
+    <base>Display an alert when connection to an NDAS device is unstable.</base>
+    <translation>顯示警告當 NDAS 裝置不穩定。</translation>
+  </string>
+  <string id="/DLG/2009/08">
+    <base><![CDATA[Auto Play Configuration]]></base>
+    <translation>自動播放配置</translation>
+  </string>
+  <string id="/DLG/2009/09">
+    <base><![CDATA[Disable Auto Play for all fixed hard drives.]]></base>
+    <translation>所有固定硬盤禁用自動播放</translation>
+  </string>
+  <string id="/DLG/4001">
+    <base>NDAS Device Available</base>
+    <translation>可用 NDAS 裝置</translation>
+  </string>
+  <string id="/DLG/4001/00">
+    <base><![CDATA[OK]]></base>
+    <translation>確定</translation>
+  </string>
+  <string id="/DLG/4001/01">
+    <base>Yes, I want to mount this device as Read/Write access mode.</base>
+    <translation>是，我要裝配成讀和寫的模式。</translation>
+  </string>
+  <string id="/DLG/4001/02">
+    <base>%1!s! is now available to mount.\r\nDo you want to mount the device to your system now?</base>
+    <translation>%1!s! 允許裝配。\r\n希望裝配裝置到系統嗎﹖</translation>
+  </string>
+  <string id="/DLG/4001/03">
+    <base>Yes, I want to mount this device as Read-Only access mode.</base>
+    <translation>是，我要裝配成唯讀模式。</translation>
+  </string>
+  <string id="/DLG/4001/04">
+    <base>No, I don't want to mount this device now.</base>
+    <translation>不，我暫時不想裝配裝置。</translation>
+  </string>
+  <string id="/DLG/4002">
+    <base><![CDATA[Advanced]]></base>
+    <translation>進階</translation>
+  </string>
+  <string id="/DLG/4002/00">
+    <base>Deactivate NDAS device</base>
+    <translation>停止 NDAS 裝置</translation>
+  </string>
+  <string id="/DLG/4002/02">
+    <base>Deactivation of the NDAS device will end communication between your system and the device. However, the device is still registered on your system. This allows the device to be activated without re-registration.</base>
+    <translation>停止會終止裝置的連接，可是不會刪除註冊，當啓動後裝置可以繼續使用。</translation>
+  </string>
+  <string id="/DLG/4002/03">
+    <base><![CDATA[&Deactivate]]></base>
+    <translation>停止</translation>
+  </string>
+  <string id="/DLG/4002/04">
+    <base>Reset NDAS Device Connection</base>
+    <translation>重置 NDAS 裝置連接</translation>
+  </string>
+  <string id="/DLG/4002/06">
+    <base>You can reset the connection to the NDAS device.</base>
+    <translation>您可以重置 NDAS 裝置的連接。</translation>
+  </string>
+  <string id="/DLG/4002/07">
+    <base><![CDATA[&Reset]]></base>
+    <translation>重置</translation>
+  </string>
+  <string id="/DLG/4002/08">
+    <base><![CDATA[Export]]></base>
+    <translation>導出</translation>
+  </string>
+  <string id="/DLG/4002/10">
+    <base>You can save the registration to the file and import it from other computers.</base>
+    <translation>您可以導出註冊，然後在另一台電腦導入。</translation>
+  </string>
+  <string id="/DLG/4002/11">
+    <base><![CDATA[E&xport]]></base>
+    <translation>導出</translation>
+  </string>
+  <string id="/DLG/4003">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS 裝置管理</translation>
+  </string>
+  <string id="/DLG/4003/00">
+    <base><![CDATA[&Close]]></base>
+    <translation>關閉</translation>
+  </string>
+  <string id="/DLG/4003/01">
+    <base>Mounting the requested NDAS device, please wait...</base>
+    <translation>正在裝配 NDAS 裝置請求，請等候...</translation>
+  </string>
+  <string id="/DLG/4004">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS 裝置管理</translation>
+  </string>
+  <string id="/DLG/4004/01">
+    <base><![CDATA[Dismounting the requested NDAS device, please wait...]]></base>
+    <translation>正卸下NDAS設備，請稍候…</translation>
+  </string>
+  <string id="/DLG/4004/03">
+    <base><![CDATA[&Retry]]></base>
+    <translation>重試</translation>
+  </string>
+  <string id="/DLG/4004/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>取消</translation>
+  </string>
+  <string id="/DLG/4008">
+    <base>Import Registration</base>
+    <translation>導入註冊</translation>
+  </string>
+  <string id="/DLG/4008/02">
+    <base><![CDATA[Select &NDAS Devices to register:]]></base>
+    <translation>選擇一個要注冊的 NDAS 裝置:</translation>
+  </string>
+  <string id="/DLG/4008/04">
+    <base><![CDATA[Des&cription:]]></base>
+    <translation>說明:</translation>
+  </string>
+  <string id="/DLG/4008/06">
+    <base><![CDATA[&Register]]></base>
+    <translation>註冊</translation>
+  </string>
+  <string id="/DLG/4008/07">
+    <base><![CDATA[Close]]></base>
+    <translation>關閉</translation>
+  </string>
+  <string id="/DLG/4009">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS 裝置管理</translation>
+  </string>
+  <string id="/DLG/4009/01">
+    <base><![CDATA[Dismounting NDAS devices, please wait...]]></base>
+    <translation>正卸下NDAS設備，請稍候…</translation>
+  </string>
+  <string id="/DLG/4009/03">
+    <base><![CDATA[&Retry]]></base>
+    <translation>重試</translation>
+  </string>
+  <string id="/DLG/4009/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>取消</translation>
+  </string>
+  <string id="/MNU/2013/00/01">
+    <base>Register a &amp;New Device...</base>
+    <translation>註冊一個新的裝置...</translation>
+  </string>
+  <string id="/MNU/2013/00/02">
+    <base><![CDATA[Dismo&unt All]]></base>
+    <translation>全部卸下</translation>
+  </string>
+  <string id="/MNU/2013/00/03">
+    <base>&amp;Refresh Status</base>
+    <translation>刷新狀態</translation>
+  </string>
+  <string id="/MNU/2013/00/05">
+    <base><![CDATA[&About NDAS Software...]]></base>
+    <translation>關於...</translation>
+  </string>
+  <string id="/MNU/2013/00/06">
+    <base><![CDATA[&Options...]]></base>
+    <translation>選項...</translation>
+  </string>
+  <string id="/MNU/2013/00/08">
+    <base><![CDATA[E&xit]]></base>
+    <translation>退出</translation>
+  </string>
+</localization>

@@ -1,0 +1,24 @@
+NDAS_SDK_INC_PATH=..\inc
+MSXSL=msxsl
+MC=mc
+MC_OPTIONS=-suc
+LINK=link /nologo
+CC=cl /nologo 
+
+all: ndasmsg.dll 
+
+clean:
+	;
+
+ndasmsg.dll: ndasmsg.obj _ndasmsg.res 
+	if not exist dll mkdir dll
+	$(LINK) /out:dll/$@ /dll $**
+
+_ndasmsg.res: _ndasmsg1033.bin
+
+_ndasmsg1033.bin: _ndasmsg.mc
+	$(MC) $(MC_OPTIONS) $**
+
+_ndasmsg.mc: ndasmsg.xml string2mc.xsl
+	$(MSXSL) -o $@ $**
+

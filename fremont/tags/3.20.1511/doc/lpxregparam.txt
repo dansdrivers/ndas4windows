@@ -1,0 +1,30 @@
+Key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lpx\Parameters
+
+Create DWORD value in lpx key(folder)
+
+Value: ConnectionTimeout
+Data: Timeout when connecting (default: 2000ms)
+
+Value: SmpTimeout
+Data: Set time-interval that checks retransmission & all timeouts (default: 50ms)
+
+Value: WaitInterval
+Data: Time to wait after TIME_WAIT state(default: 1000ms)
+
+Value: AliveInterval
+Data: Interval to check alive(default: 1000ms)
+
+Value: RetransmitDelay
+Data: Retransmis packet again if ACK is not received for this time.(default: 200ms)
+
+Value: MaxRetransmitDelay
+Data: RetransmitDelay is doubled after each retransmit, but is limited by this value.(default: 1000ms)
+
+Value: MaxAliveCount
+Data: Disconnect after MaxAliveCount's alive-packet miss. So connection time-out is MaxAliveCount * AliveInterval. (default: 8)
+
+Value: MaxRetransmitTime
+Data: Try retransmit for this time and it still fails, discoonect. (default: 8000ms)
+
+Value: MTU
+Data: Maximum transfer unit including LPX header and LPX data payload.(default:1500, Value over 1500 will be ignored until jumbo packet is supported.)

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+	<Fragment>
+		<?ifdef Include.NDASIOMG?>
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.SetupFileSource)">
+			<Component Id="ndasiomg.dll" Guid="$(var.NDAS_NDASOP_DLL_GUID)"
+								 SharedDllRefCount="yes" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasiomg.dll" Name="ndasiomg.dll" KeyPath="yes" Checksum="yes" >
+					<CopyFile Id="ndasiomsg.dll_sys" DestinationDirectory="SystemFolder" />
+					<?ifdef Win64Build?>
+					<CopyFile Id="ndasiomsg.dll_sys64" DestinationDirectory="System64Folder" />
+					<?endif?>
+				</File>
+			</Component>
+		</DirectoryRef>
+		<?endif?>
+	</Fragment>
+</Wix>

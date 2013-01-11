@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="7.10" Name="ndasmgmt_inc" ProjectGUID="{784F3A13-42AB-4F4A-8E7A-766621397B9B}" RootNamespace="ndasmgmt_inc" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug (x64)|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release (x64)|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+  <File RelativePath=".\atlctrlxp.h" /><File RelativePath=".\atlctrlxp2.h" /><File RelativePath=".\atldib.h" /><File RelativePath=".\atldibfilters.h" /><File RelativePath=".\editchainpaste.h" /><File RelativePath=".\pix.h" /><File RelativePath=".\propertyitem.h" /><File RelativePath=".\propertyitemeditors.h" /><File RelativePath=".\propertyitemimpl.h" /><File RelativePath=".\propertylist.h" /><File RelativePath=".\propertytree.h" /><File RelativePath=".\taskbaricon.h" /><File RelativePath=".\_project.xml" /></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

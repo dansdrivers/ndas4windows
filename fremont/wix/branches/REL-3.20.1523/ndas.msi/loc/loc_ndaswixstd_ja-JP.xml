@@ -1,0 +1,1904 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="ActionText.CostInitialize">
+    <base>Computing space requirements</base>
+    <translation>必要な領域を計算しています</translation>
+  </string>
+  <string id="ActionText.AppSearch">
+    <base>Searching for installed applications</base>
+    <translation>インストールされているアプリケーションを検索しています</translation>
+  </string>
+  <string id="ActionText.AppSearch.Template">
+    <base>Property: [1], Signature: [2]</base>
+    <translation>プロパティ : [1], 署名 : [2]</translation>
+  </string>
+  <string id="ActionText.BindImage">
+    <base>Binding executables</base>
+    <translation>実行ファイルをバィンディングしています</translation>
+  </string>
+  <string id="ActionText.BindImage.Template">
+    <base>File: [1]</base>
+    <translation>ファイル : [1]</translation>
+  </string>
+  <string id="ActionText.CCPSearch">
+    <base>Unregistering modules</base>
+    <translation>モジュールの登録を解除しています</translation>
+  </string>
+  <string id="ActionText.CostFinalize">
+    <base>Computing space requirements</base>
+    <translation>必要な領域を計算しています</translation>
+  </string>
+  <string id="ActionText.FileCost">
+    <base>Computing space requirements</base>
+    <translation>必要な領域を計算しています</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage">
+    <base>Copying files to the network</base>
+    <translation>ネットワーク インストール ファイルをコピーしています</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage.Template">
+    <base>File: [1], Directory: [9], Size: [6]</base>
+    <translation>ファイル : [1], ディレクトリ : [9], サイズ : [6]</translation>
+  </string>
+  <string id="ActionText.InstallFiles">
+    <base>Copying new files</base>
+    <translation>新しいファイルをコピーしています</translation>
+  </string>
+  <string id="ActionText.InstallFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>ファイル : [1],  ディレクトリ : [9],  サイズ : [6]</translation>
+  </string>
+  <string id="ActionText.InstallValidate">
+    <base>Validating install</base>
+    <translation>インストールを検証しています</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts">
+    <base>Creating shortcuts</base>
+    <translation>ショートカットを作成しています</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>ショートカット : [1]</translation>
+  </string>
+  <string id="ActionText.PublishComponents">
+    <base>Publishing qualified components</base>
+    <translation>正規のコンポーネントを発行しています</translation>
+  </string>
+  <string id="ActionText.PublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>コンポーネント ID : [1], Qualifier : [2]</translation>
+  </string>
+  <string id="ActionText.PublishFeatures">
+    <base>Publishing product features</base>
+    <translation>製品機能を発行しています</translation>
+  </string>
+  <string id="ActionText.PublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>機能 : [1]</translation>
+  </string>
+  <string id="ActionText.PublishProduct">
+    <base>Publishing product information</base>
+    <translation>製品情報を発行しています</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo">
+    <base>Registering class servers</base>
+    <translation>クラス サーバーを登録しています</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Class Id: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo">
+    <base>Registering extension servers</base>
+    <translation>エクステンション サーバーを登録しています</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>エクステンション : [1]</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo">
+    <base>Registering MIME info</base>
+    <translation>MIME 情報を登録しています</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>MIME コンテント タイプ : [1], エクステンション : [2]</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo">
+    <base>Registering program identifiers</base>
+    <translation>プログラム識別子の登録を解除しています</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>ProgId: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries">
+    <base>Registering type libraries</base>
+    <translation>タイプ ライブラリを登録しています</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>LibID: [1]</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace">
+    <base>Allocating registry space</base>
+    <translation>レジストリ領域を割り振っています</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace.Template">
+    <base>Free space: [1]</base>
+    <translation>空き領域 : [1]</translation>
+  </string>
+  <string id="ActionText.CreateFolders">
+    <base>Creating folders</base>
+    <translation>フォルダを作成しています</translation>
+  </string>
+  <string id="ActionText.CreateFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>フォルダ : [1]</translation>
+  </string>
+  <string id="ActionText.DeleteServices">
+    <base>Deleting services</base>
+    <translation>サービスを削除しています</translation>
+  </string>
+  <string id="ActionText.DeleteServices.Template">
+    <base>Service: [1]</base>
+    <translation>サービス : [1]</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles">
+    <base>Creating duplicate files</base>
+    <translation>ファイルの複製を作成しています</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>ファイル : [1],  ディレクトリ : [9],  サイズ : [6]</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts">
+    <base>Searching for related applications</base>
+    <translation>関連のアプリケーションを検索しています</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts.Template">
+    <base>Found application: [1]</base>
+    <translation>見つかったアプリケーション : [1]</translation>
+  </string>
+  <string id="ActionText.InstallODBC">
+    <base>Installing ODBC components</base>
+    <translation>ODBC コンポーネントをインストールしています</translation>
+  </string>
+  <string id="ActionText.InstallServices">
+    <base>Installing new services</base>
+    <translation>新しいサービスをインストールしています</translation>
+  </string>
+  <string id="ActionText.InstallServices.Template">
+    <base>Service: [2]</base>
+    <translation>サービス : [2]</translation>
+  </string>
+  <string id="ActionText.LaunchConditions">
+    <base>Evaluating launch conditions</base>
+    <translation>起動状態を検証しています</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates">
+    <base>Migrating feature states from related applications</base>
+    <translation>関連のアプリケーションから機能の状態を移行しています</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates.Template">
+    <base>Application: [1]</base>
+    <translation>アプリケーション : [1]</translation>
+  </string>
+  <string id="ActionText.MoveFiles">
+    <base>Moving files</base>
+    <translation>ファイルを移動しています</translation>
+  </string>
+  <string id="ActionText.MoveFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>ファイル : [1],  ディレクトリ : [9],  サイズ : [6]</translation>
+  </string>
+  <string id="ActionText.PatchFiles">
+    <base>Patching files</base>
+    <translation>ファイルを修正しています</translation>
+  </string>
+  <string id="ActionText.PatchFiles.Template">
+    <base>File: [1],  Directory: [2],  Size: [3]</base>
+    <translation>ファイル : [1],  ディレクトリ : [2],  サイズ : [3]</translation>
+  </string>
+  <string id="ActionText.ProcessComponents">
+    <base>Updating component registration</base>
+    <translation>コンポーネントの登録を更新しています</translation>
+  </string>
+  <string id="ActionText.RMCCPSearch">
+    <base>Searching for qualifying products</base>
+    <translation>正規の製品を検索しています</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus">
+    <base>Registering COM+ Applications and Components</base>
+    <translation>COM+ アプリケーションとコンポーネントを登録しています</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2], Users: [3], RSN: [4]}}</base>
+    <translation>AppId : [1]{{, AppType : [2], Users : [3], RSN : [4]}}</translation>
+  </string>
+  <string id="ActionText.RegisterFonts">
+    <base>Registering fonts</base>
+    <translation>フォントを登録しています</translation>
+  </string>
+  <string id="ActionText.RegisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>フォント : [1]</translation>
+  </string>
+  <string id="ActionText.RegisterProduct">
+    <base>Registering product</base>
+    <translation>製品を登録しています</translation>
+  </string>
+  <string id="ActionText.RegisterProduct.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RegisterUser">
+    <base>Registering user</base>
+    <translation>ユーザーを登録しています</translation>
+  </string>
+  <string id="ActionText.RegisterUser.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles">
+    <base>Removing duplicated files</base>
+    <translation>重複しているファイルを削除しています</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>ファイル : [1], ディレクトリ : [9]</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>環境ストリングを更新しています</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>名前 : [1], 値 : [2], アクション [3]</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts">
+    <base>Removing applications</base>
+    <translation>アプリケーションを削除しています</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts.Template">
+    <base>Application: [1], Command line: [2]</base>
+    <translation>アプリケーション : [1], コマンド ライン : [2]</translation>
+  </string>
+  <string id="ActionText.RemoveFiles">
+    <base>Removing files</base>
+    <translation>ファイルを削除しています</translation>
+  </string>
+  <string id="ActionText.RemoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>ファイル : [1], ディレクトリ : [9]</translation>
+  </string>
+  <string id="ActionText.RemoveFolders">
+    <base>Removing folders</base>
+    <translation>フォルダを削除しています</translation>
+  </string>
+  <string id="ActionText.RemoveFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>フォルダ : [1]</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues">
+    <base>Removing INI file entries</base>
+    <translation>INI ファイルのエントリを削除しています</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>ファイル : [1],  セクション : [2],  キー : [3], 値 : [4]</translation>
+  </string>
+  <string id="ActionText.RemoveODBC">
+    <base>Removing ODBC components</base>
+    <translation>ODBC コンポーネントを削除しています</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues">
+    <base>Removing system registry values</base>
+    <translation>システム レジストリの値を削除しています</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues.Template">
+    <base>Key: [1], Name: [2]</base>
+    <translation>キー : [1], 名前 : [2]</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts">
+    <base>Removing shortcuts</base>
+    <translation>ショートカットを削除しています</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>ショートカット : [1]</translation>
+  </string>
+  <string id="ActionText.SelfRegModules">
+    <base>Registering modules</base>
+    <translation>モジュールを削除しています</translation>
+  </string>
+  <string id="ActionText.SelfRegModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>ファイル : [1], フォルダ : [2]</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules">
+    <base>Unregistering modules</base>
+    <translation>モジュールの登録を解除しています</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>ファイル : [1], フォルダ : [2]</translation>
+  </string>
+  <string id="ActionText.SetODBCFolders">
+    <base>Initializing ODBC directories</base>
+    <translation>ODBC ディレクトリを初期化しています</translation>
+  </string>
+  <string id="ActionText.StartServices">
+    <base>Starting services</base>
+    <translation>サービスを開始しています</translation>
+  </string>
+  <string id="ActionText.StartServices.Template">
+    <base>Service: [1]</base>
+    <translation>サービス : [1]</translation>
+  </string>
+  <string id="ActionText.StopServices">
+    <base>Stopping services</base>
+    <translation>サービスを停止しています</translation>
+  </string>
+  <string id="ActionText.StopServices.Template">
+    <base>Service: [1]</base>
+    <translation>サービス : [1]</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents">
+    <base>Unpublishing Qualified Components</base>
+    <translation>正規のコンポーネントの発行を停止しています</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>コンポーネント ID : [1], Qualifier : [2]</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures">
+    <base>Unpublishing product features</base>
+    <translation>製品機能の発行を停止しています</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>機能 : [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo">
+    <base>Unregister class servers</base>
+    <translation>クラス サーバーの登録を解除しています</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Class Id: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus">
+    <base>Unregistering COM+ Applications and Components</base>
+    <translation>COM+ アプリケーションとコンポーネントの登録を解除しています</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2]}}</base>
+    <translation>AppId : [1]{{, AppType : [2]}}</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo">
+    <base>Unregistering extension servers</base>
+    <translation>エクステンション サーバーの登録を解除しています</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>エクステンション : [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts">
+    <base>Unregistering fonts</base>
+    <translation>フォントの登録を解除しています</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>フォント : [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo">
+    <base>Unregistering MIME info</base>
+    <translation>MIME 情報の登録を解除しています</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>MIME コンテント タイプ : [1], エクステンション : [2]</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo">
+    <base>Unregistering program identifiers</base>
+    <translation>プログラム識別子の登録を解除しています</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>ProgId: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries">
+    <base>Unregistering type libraries</base>
+    <translation>タイプライブラリの登録を解除しています</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>LibID: [1]</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>環境ストリングを更新しています</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>名前 : [1], 値 : [2], アクション [3]</translation>
+  </string>
+  <string id="ActionText.WriteIniValues">
+    <base>Writing INI file values</base>
+    <translation>INI ファイルに値を書き込んでいます</translation>
+  </string>
+  <string id="ActionText.WriteIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>ファイル : [1],  セクション : [2],  キー : [3], 値 : [4]</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues">
+    <base>Writing system registry values</base>
+    <translation>システム レジストリの値を書き込んでいます</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues.Template">
+    <base>Key: [1], Name: [2], Value: [3]</base>
+    <translation>キー : [1], 名前 : [2], 値 : [3]</translation>
+  </string>
+  <string id="ActionText.Advertise">
+    <base>Advertising application</base>
+    <translation>後で使用するためにアプリケーションを設定しています</translation>
+  </string>
+  <string id="ActionText.GenerateScript">
+    <base>Generating script operations for action:</base>
+    <translation>アクションに対するスクリプト オペレーションを生成しています :</translation>
+  </string>
+  <string id="ActionText.GenerateScript.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile">
+    <base>Installing system catalog</base>
+    <translation>ｲﾝｽﾄｰﾙするｼｽﾃﾑ ｶﾀﾛｸﾞ</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile.Template">
+    <base>File: [1],  Dependencies: [2]</base>
+    <translation>ﾌｧｲﾙ: [1]、依存ﾌｧｲﾙ: [2]</translation>
+  </string>
+  <string id="ActionText.Rollback">
+    <base>Rolling back action:</base>
+    <translation>アクションを元に戻しています :</translation>
+  </string>
+  <string id="ActionText.Rollback.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup">
+    <base>Removing backup files</base>
+    <translation>バックアップ ファイルを削除しています</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup.Template">
+    <base>File: [1]</base>
+    <translation>ファイル : [1]</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles">
+    <base>Removing moved files</base>
+    <translation>移動したファイルを削除しています</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>ファイル : [1], ディレクトリ : [9]</translation>
+  </string>
+  <string id="ActionText.UnpublishProduct">
+    <base>Unpublishing product information</base>
+    <translation>製品情報の発行を停止しています</translation>
+  </string>
+  <string id="ActionText.caCreateVRoots">
+    <base>Creating IIS Virtual Roots...</base>
+    <translation>IIS Virtual Roots を作成しています...</translation>
+  </string>
+  <string id="ActionText.caRemoveVRoots">
+    <base>Removing IIS Virtual Roots...</base>
+    <translation>IIS Virtual Roots を削除しています...</translation>
+  </string>
+  <string id="Text.Title">
+    <base>[ProductName] Setup</base>
+    <translation>[ProductName] Setup</translation>
+  </string>
+  <string id="Text.ErrorTitle">
+    <base>[ProductName] Installer Information</base>
+    <translation>[ProductName] Installer Information</translation>
+  </string>
+  <string id="Text.PatchTitle">
+    <base>[ProductName] Patch Setup</base>
+    <translation>[ProductName] Patch Setup</translation>
+  </string>
+  <string id="Text.OK">
+    <base>OK</base>
+    <translation>{&amp;MSGothic9}OK</translation>
+  </string>
+  <string id="Text.Cancel">
+    <base>Cancel</base>
+    <translation>{&amp;MSGothic9}キャンセル</translation>
+  </string>
+  <string id="Text.Next">
+    <base>&amp;Next &gt;</base>
+    <translation>{&amp;MSGothic9}次へ(&amp;N) &gt;</translation>
+  </string>
+  <string id="Text.Back">
+    <base>&lt; &amp;Back</base>
+    <translation>{&amp;MSGothic9}&lt; 戻る(&amp;B)</translation>
+  </string>
+  <string id="Text.Y">
+    <base>&amp;Yes</base>
+    <translation>{&amp;MSGothic9}はい(&amp;Y)</translation>
+  </string>
+  <string id="Text.N">
+    <base>&amp;No</base>
+    <translation>{&amp;MSGothic9}いいえ(&amp;N)</translation>
+  </string>
+  <string id="Text.A">
+    <base>&amp;Abort</base>
+    <translation>{&amp;MSGothic9}中止(&amp;A)</translation>
+  </string>
+  <string id="Text.C">
+    <base>&amp;Cancel</base>
+    <translation>{&amp;MSGothic9}キャンセル</translation>
+  </string>
+  <string id="Text.I">
+    <base>&amp;Ignore</base>
+    <translation>{&amp;MSGothic9}無視(&amp;I)</translation>
+  </string>
+  <string id="Text.O">
+    <base>&amp;OK</base>
+    <translation>{&amp;MSGothic9}&amp;OK</translation>
+  </string>
+  <string id="Text.R">
+    <base>&amp;Retry</base>
+    <translation>{&amp;MSGothic9}再試行(&amp;R)</translation>
+  </string>
+  <string id="Text.Install">
+    <base>&amp;Install</base>
+    <translation>{&amp;MSGothic9}インストール(&amp;I)</translation>
+  </string>
+  <string id="Text.Exit">
+    <base>&amp;Exit</base>
+    <translation>{&amp;MSGothic9}終了(&amp;E)</translation>
+  </string>
+  <string id="Text.Remove">
+    <base>&amp;Remove</base>
+    <translation>{&amp;MSGothic9}削除(&amp;R)</translation>
+  </string>
+  <string id="Text.Change">
+    <base>&amp;Change...</base>
+    <translation>{&amp;MSGothic9}変更(&amp;C)...</translation>
+  </string>
+  <string id="Text.Finish">
+    <base>&amp;Finish</base>
+    <translation>{&amp;MSGothic9}完了(&amp;F)</translation>
+  </string>
+  <string id="Text.FolderName">
+    <base>&amp;Folder name:</base>
+    <translation>{&amp;MSGothic9}フォルダ名(&amp;F):</translation>
+  </string>
+  <string id="Text.Help">
+    <base>&amp;Help</base>
+    <translation>{&amp;MSGothic9}ヘルプ(&amp;H)</translation>
+  </string>
+  <string id="Text.LookIn">
+    <base>&amp;Look in:</base>
+    <translation>{&amp;MSGothic9}探す場所(&amp;L):</translation>
+  </string>
+  <string id="Text.NetworkLocation">
+    <base>&amp;Network location:</base>
+    <translation>{&amp;MSGothic9}ネットワーク ロケーション(&amp;N):</translation>
+  </string>
+  <string id="Text.Space">
+    <base>&amp;Space</base>
+    <translation>{&amp;MSGothic9}ディスク(&amp;U)</translation>
+  </string>
+  <string id="Text.Update">
+    <base>&amp;Update &gt;</base>
+    <translation>更新(&amp;U) &gt;</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;MSGothic9}インストール先フォルダを参照してください。</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSGothic9}インストール先フォルダの変更</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgDesc">
+    <base>Specify a network location for the server image of the product.</base>
+    <translation>{&amp;MSGothic9}製品のサーバーイメージに対するネットワーク ロケーションを指定してください。</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgTitle">
+    <base>{&amp;MSSansBold8}Network Location</base>
+    <translation>{&amp;MSGothic9}ネットワーク ロケーション</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgText">
+    <base>Enter the network location or click Change to browse to a location.  Click Install to create a server image of [ProductName] at the specified network location or click Cancel to exit the wizard.</base>
+    <translation>{&amp;MSGothic9}ネットワーク ロケーションを入力するか、あるいは「変更」をクリックしてロケーションを参照してください。「インストール」をクリックすると、指定したネットワーク ロケーションに [ProductName] のサーバーイメージを作成します。「キャンセル」をクリックすると、ウィザードを終了します。</translation>
+  </string>
+  <string id="AdminWelcome.TextLine2">
+    <base>The Setup Wizard will create a server image of [ProductName] at a specified network location. To continue, click Next.</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードは、指定したネットワーク ロケーションに [ProductName] のサーバーイメージを作成します。続行するには、「次へ」をクリックしてください。</translation>
+  </string>
+  <string id="AdminWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;MSGothic9}[ProductName]用のSetup ウィザードへようこそ</translation>
+  </string>
+  <string id="CancelSetup.Text">
+    <base>Are you sure you want to cancel [ProductName] installation?</base>
+    <translation>{&amp;MSGothic9}[ProductName] のインストールを中断してもよろしいですか ?</translation>
+  </string>
+  <string id="CustomSetup.DlgDesc">
+    <base>Select the program features you want installed.</base>
+    <translation>{&amp;MSGothic9}インストールするプログラムの機能を選択してください。</translation>
+  </string>
+  <string id="CustomSetup.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup</base>
+    <translation>{&amp;MSGothic9}カスタム セットアップ</translation>
+  </string>
+  <string id="CustomSetup.DlgText">
+    <base>Click on an icon in the list below to change how a feature is installed.</base>
+    <translation>{&amp;MSGothic9}下のリストにあるアイコンをクリックして、機能のインストール方法を変更してください。</translation>
+  </string>
+  <string id="CustomSetup.ItemDescription">
+    <base>Multiline description of the currently selected item</base>
+    <translation>{&amp;MSGothic9}選択しているアイテムの説明</translation>
+  </string>
+  <string id="CustomSetup.Size">
+    <base>Feature size</base>
+    <translation>{&amp;MSGothic9}機能のサイズ</translation>
+  </string>
+  <string id="CustomSetup.InstallLabel">
+    <base>Install to:</base>
+    <translation>{&amp;MSGothic9}インストール先:</translation>
+  </string>
+  <string id="CustomSetup.Location">
+    <base>&lt;selected feature path&gt;</base>
+    <translation>{&amp;MSGothic9}&lt;selected feature path&gt;</translation>
+  </string>
+  <string id="CustomSetup.FeatureGroup">
+    <base>Feature Description</base>
+    <translation>{&amp;MSGothic9}機能の説明</translation>
+  </string>
+  <string id="CustomSetupTips.DlgDesc">
+    <base>Custom Setup allows you to selectively install program features.</base>
+    <translation>{&amp;MSGothic9}カスタム セットアップを選択すると、必要なプログラム機能のみをインストールすることができます。</translation>
+  </string>
+  <string id="CustomSetupTips.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup Tips</base>
+    <translation>{&amp;MSGothic9}カスタム セットアップ ティップ</translation>
+  </string>
+  <string id="CustomSetupTips.DontInstallText">
+    <base>Will not be installed.</base>
+    <translation>{&amp;MSGothic9}インストールしません。</translation>
+  </string>
+  <string id="CustomSetupTips.FirstInstallText">
+    <base>Will be installed on first use. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;MSGothic9}最初の使用時にインストールします。(機能がこのオプションをサポートする場合のみ有効です)</translation>
+  </string>
+  <string id="CustomSetupTips.InstallStateText">
+    <base>This install state means the feature...</base>
+    <translation>{&amp;MSGothic9}各アイコンは、次のインストール状態を示します...</translation>
+  </string>
+  <string id="CustomSetupTips.InstallText">
+    <base>Will be completely installed to the local hard drive.</base>
+    <translation>{&amp;MSGothic9}ローカルのハードディスク ドライブにすべての機能をインストールします。</translation>
+  </string>
+  <string id="CustomSetupTips.MenuText">
+    <base>The icon next to the feature name indicates the install state of the feature. Click the icon to drop down the install state menu for each feature.</base>
+    <translation>{&amp;MSGothic9}機能名の隣にあるアイコンは、機能のインストール状態を示しています。アイコンをクリックして、各機能の「インストール状態」メニューをドロップダウンしてください。</translation>
+  </string>
+  <string id="CustomSetupTips.NetworkInstallText">
+    <base>Will be installed to run from the network. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;MSGothic9}ネットワークから実行するようにインストールします。(機能がこのオプションをサポートする場合のみ有効です)</translation>
+  </string>
+  <string id="CustomSetupTips.PartialText">
+    <base>Will have some subfeatures installed to the local hard drive. (Available only if the feature has subfeatures.)</base>
+    <translation>{&amp;MSGothic9}ローカルのハードディスク ドライブにサブ機能をインストールします。(機能に、サブ機能が含まれる場合のみ有効です)</translation>
+  </string>
+  <string id="DestinationFolder.DlgDesc">
+    <base>Click Next to install to this folder, or click Change to install to a different folder.</base>
+    <translation>{&amp;MSGothic9}このフォルダにインストールする場合は、「次へ」をクリックしてください。 別のフォルダにインストールする場合は、「変更」をクリックします。</translation>
+  </string>
+  <string id="DestinationFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Destination Folder</base>
+    <translation>{&amp;MSGothic9}インストール先のフォルダ</translation>
+  </string>
+  <string id="DestinationFolder.LocLabel">
+    <base>Install [ProductName] to:</base>
+    <translation>{&amp;MSGothic9}[ProductName] のインストール先:</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgDesc">
+    <base>The disk space required for the installation of the selected features.</base>
+    <translation>{&amp;MSGothic9}選択している機能をインストールするために必要なディスク空き領域です。</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgTitle">
+    <base>{&amp;MSSansBold8}Disk Space Requirements</base>
+    <translation>{&amp;MSGothic9}必要なディスク空き領域</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;MSGothic9}現在のボリュームには、選択している機能をインストールするために十分なディスク空き領域がありません。現在のボリュームからファイルを削除してディスク領域を確保するか、ローカル ディスクにインストールする機能を削減してください。あるいは、別のドライブを選択してください。</translation>
+  </string>
+  <string id="DiskSpaceRequirements.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;MSGothic9}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="FilesInUse.DlgDesc">
+    <base>Some files that need to be updated are currently in use.</base>
+    <translation>{&amp;MSGothic9}更新する必要のあるファイルが使用中です。</translation>
+  </string>
+  <string id="FilesInUse.DlgTitle">
+    <base>{&amp;MSSansBold8}Files in Use</base>
+    <translation>{&amp;MSGothic9}使用中のファイル</translation>
+  </string>
+  <string id="FilesInUse.DlgText">
+    <base>The following applications are using files that need to be updated by this setup. Close these applications and click Retry to continue.</base>
+    <translation>{&amp;MSGothic9}次のアプリケーションが、このセットアップで更新する必要のあるファイルを使用しています。これらのアプリケーションを閉じてから、「再試行」をクリックして続行してください。</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;MSGothic9}インストール先フォルダを参照してください。</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSGothic9}インストール先フォルダの変更</translation>
+  </string>
+  <string id="InstallWelcome.Copyright">
+    <base>WARNING: This program is protected by copyright law and international treaties.</base>
+    <translation>警告:  このプログラムは、著作権法および国際協定によって保護されています。</translation>
+  </string>
+  <string id="InstallWelcome.TextLine2">
+    <base>Setup will install [ProductName] on your computer. To continue, click Next.</base>
+    <translation>Setup will install [ProductName] on your computer. To continue, click Next.</translation>
+  </string>
+  <string id="InstallWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;MSGothic9}[ProductName]用のSetup ウィザードへようこそ</translation>
+  </string>
+  <string id="LicenseAgreement.DlgDesc">
+    <base>Please read the following license agreement carefully.</base>
+    <translation>{&amp;MSGothic9}次の使用許諾契約書を注意深くお読みください。</translation>
+  </string>
+  <string id="LicenseAgreement.DlgTitle">
+    <base>{&amp;MSSansBold8}License Agreement</base>
+    <translation>{&amp;MSGothic9}使用許諾契約</translation>
+  </string>
+  <string id="LicenseAgreement.DontAgree">
+    <base>I &amp;do not accept the terms in the license agreement</base>
+    <translation>{&amp;MSGothic9}使用許諾契約の条項に同意しません(&amp;D)</translation>
+  </string>
+  <string id="LicenseAgreement.Agree">
+    <base>I &amp;accept the terms in the license agreement</base>
+    <translation>{&amp;MSGothic9}使用許諾契約の条項に同意します(&amp;A)</translation>
+  </string>
+  <string id="MaintenanceType.DlgDesc">
+    <base>Modify, repair, or remove the program.</base>
+    <translation>{&amp;MSGothic9}プログラムを変更、修復、および削除します。</translation>
+  </string>
+  <string id="MaintenanceType.DlgTitle">
+    <base>{&amp;MSSansBold8}Program Maintenance</base>
+    <translation>{&amp;MSGothic9}プログラムの保守</translation>
+  </string>
+  <string id="MaintenanceType.Text1">
+    <base>Change which program features are installed. This option displays the Custom Selection dialog in which you can change the way features are installed.</base>
+    <translation>{&amp;MSGothic9}インストールするプログラム機能を変更します。このオプションでは、カスタム ダイアログを使ってインストールするプログラム機能を変更することができます。</translation>
+  </string>
+  <string id="MaintenanceType.Text2">
+    <base>Repair installation errors in the program. This option fixes missing or corrupt files, shortcuts, and registry entries.</base>
+    <translation>{&amp;MSGothic9}プログラム中のエラーを修復します。このオプションでは、失われたり壊れたりしたファイル、ショートカット、およびレジストリ エントリを修正することができます。</translation>
+  </string>
+  <string id="MaintenanceType.Text3">
+    <base>Remove [ProductName] from your computer.</base>
+    <translation>{&amp;MSGothic9}コンピュータから [ProductName] を削除します。</translation>
+  </string>
+  <string id="MaintenanceType.Modify">
+    <base>{&amp;MSSansBold8}&amp;Modify</base>
+    <translation>{&amp;MSGothic9}変更(&amp;M)</translation>
+  </string>
+  <string id="MaintenanceType.Repair">
+    <base>{&amp;MSSansBold8}Re&amp;pair</base>
+    <translation>{&amp;MSGothic9}修復(&amp;P)</translation>
+  </string>
+  <string id="MaintenanceType.Remove">
+    <base>{&amp;MSSansBold8}&amp;Remove</base>
+    <translation>{&amp;MSGothic9}削除(&amp;R)</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine2">
+    <base>The Setup Wizard will allow you to modify, repair, or remove [ProductName]. To continue, click Next.</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードを使うと、[ProductName] を変更、修正、および削除することができます。 続行するには、「次へ」をクリックしてください。</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;MSGothic9}[ProductName]用のSetup ウィザードへようこそ</translation>
+  </string>
+  <string id="OutOfSpace.DlgDesc">
+    <base>Disk space required for the installation exceeds available disk space.</base>
+    <translation>{&amp;MSGothic9}インストールには、現在使用可能なディスク領域よりも多くのディスク空き領域が必要です。</translation>
+  </string>
+  <string id="OutOfSpace.DlgTitle">
+    <base>{&amp;MSSansBold8}Out of Disk Space</base>
+    <translation>{&amp;MSGothic9}ディスク空き領域の不足</translation>
+  </string>
+  <string id="OutOfSpace.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;MSGothic9}現在のボリュームには、選択している機能をインストールするために十分なディスク空き領域がありません。現在のボリュームからファイルを削除してディスク領域を確保するか、ローカル ディスクにインストールする機能を削減してください。あるいは、別のドライブを選択してください。</translation>
+  </string>
+  <string id="OutOfSpace.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;MSGothic9}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="PatchWelcome.TextLine2">
+    <base>The Setup Wizard will install the Patch for [ProductName] on your computer.  To continue, click Update.</base>
+    <translation>Setup Wizard は、ご利用のコンピュータに [ProductName]用のパッチをインストールします。作業を続行するには、「更新」をクリックしてください。</translation>
+  </string>
+  <string id="PatchWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Patch for [ProductName]</base>
+    <translation>{&amp;MSGothic9}[ProductName]のパッチへようこそ</translation>
+  </string>
+  <string id="ReadyToInstall.DlgDesc">
+    <base>The wizard is ready to begin installation.</base>
+    <translation>{&amp;MSGothic9}ウィザードは、インストールを開始する準備ができました。</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle">
+    <base>{&amp;MSSansBold8}Ready to Modify the Program</base>
+    <translation>{&amp;MSGothic9}プログラムを変更する準備ができました</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText">
+    <base>Click Install to begin the installation.</base>
+    <translation>{&amp;MSGothic9}「インストール」をクリックして、インストールを開始してください。</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle2">
+    <base>{&amp;MSSansBold8}Ready to Repair the Program</base>
+    <translation>{&amp;MSGothic9}プログラムを修復する準備ができました</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle3">
+    <base>{&amp;MSSansBold8}Ready to Install the Program</base>
+    <translation>{&amp;MSGothic9}プログラムをインストールする準備ができました</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText1">
+    <base>If you want to review or change any of your installation settings, click Back. Click Cancel to exit the wizard.</base>
+    <translation>{&amp;MSGothic9}インストールの設定を参照したり変更する場合は、「戻る」をクリックしてください。「キャンセル」をクリックすると、ウィザードを終了します。</translation>
+  </string>
+  <string id="ReadyToRemove.DlgDesc">
+    <base>You have chosen to remove the program from your system.</base>
+    <translation>{&amp;MSGothic9}ご使用のシステムからプログラムを削除するオプションを選択しました。</translation>
+  </string>
+  <string id="ReadyToRemove.DlgTitle">
+    <base>{&amp;MSSansBold8}Remove the Program</base>
+    <translation>{&amp;MSGothic9}プログラムの削除</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText">
+    <base>Click Remove to remove [ProductName] from your computer. After removal, this program will no longer be available for use.</base>
+    <translation>{&amp;MSGothic9}「削除」をクリックして、コンピュータから [ProductName] を削除してください。削除を実行すると、このプログラムは、使用できなくなります。</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText1">
+    <base>If you want to review or change any settings, click Back.</base>
+    <translation>{&amp;MSGothic9}設定を参照したり変更する場合は、「戻る」をクリックします。</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText1">
+    <base>Your system has not been modified. To complete installation at another time, please run setup again.</base>
+    <translation>{&amp;MSGothic9}システムの状態は変更されていません。改めてインストールする場合は、再度セットアップを実行してください。</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;MSGothic9}「完了」をクリックして、ウィザードを終了してください。</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;MSGothic9}インストールしたコンポーネントをシステムに保存して後でこのインストールを続行するか、あるいはインストールを実行する前の状態に復元することができます。</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;MSGothic9}「復元」、または「後で継続」をクリックして、インストールを終了してください。</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;MSGothic9}ウィザードは、[ProductName] のインストールを完了する前に中断されました。</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードを完了しました</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine2">
+    <base>The Setup Wizard has successfully installed [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードは、[ProductName] を正常にインストールしました。「完了」をクリックして、ウィザードを終了してください。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckForUpdatesText">
+    <base>&amp;Yes, check for program updates (Recommended) after the setup completes.</base>
+    <translation>はい。ｾｯﾄｱｯﾌﾟの完了後、ﾌﾟﾛｸﾞﾗﾑのｱｯﾌﾟﾃﾞｰﾄを確認します (推奨)。(&amp;Y)</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine3">
+    <base>The Setup Wizard has successfully uninstalled [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードは、[ProductName] を正常にアンインストールしました。「完了」をクリックして、ウィザードを終了してください。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine1">
+    <base>Setup has finished installing [ProductName].</base>
+    <translation>[ProductName] のｲﾝｽﾄｰﾙを完了しました。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine2">
+    <base>Some program files might have been updated since you purchased your copy of [ProductName].</base>
+    <translation>[ProductName] の購入以降にｱｯﾌﾟﾃﾞｰﾄされているﾌﾟﾛｸﾞﾗﾑ ﾌｧｲﾙがある可能性があります。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine3">
+    <base>Your Internet connection can be used to make sure that you have the latest updates.</base>
+    <translation>ｲﾝﾀｰﾈｯﾄに接続すると、最新のｱｯﾌﾟﾃﾞｰﾄを確認できます。</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードを完了しました</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchProgramText">
+    <base>Launch [ProductName]</base>
+    <translation>Launch [ProductName]</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchReadmeText">
+    <base>Show the readme file</base>
+    <translation>{&amp;MSGothic9}Readme ファイルを表示する</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckBoxUpdates">
+    <base>CheckBox1</base>
+    <translation>CheckBox1</translation>
+  </string>
+  <string id="SetupError.ErrorText">
+    <base>&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</base>
+    <translation>{&amp;MSGothic9}&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</translation>
+  </string>
+  <string id="SetupInitialization.TextLine2">
+    <base>[ProductName] Setup is preparing the Setup Wizard which will guide you through the program setup process.  Please wait.</base>
+    <translation>{&amp;MSGothic9}[ProductName]セットアップは、プログラムセットアップの手順をご案内する Setup ウィザードを準備中です。しばらくお待ちください。</translation>
+  </string>
+  <string id="SetupInitialization.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;MSGothic9}[ProductName]用のSetup ウィザードへようこそ</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText1">
+    <base>Your system has not been modified. To install this program at a later time, please run the installation again.</base>
+    <translation>{&amp;MSGothic9}システムの状態は変更されていません。改めてインストールする場合は、再度セットアップを実行してください。</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;MSGothic9}「完了」をクリックして、ウィザードを終了してください。</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;MSGothic9}インストールしたコンポーネントをシステムに保存して後でこのインストールを続行するか、あるいはインストールを実行する前の状態に復元することができます。</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;MSGothic9}「復元」、または「後で続行」をクリックしてウィザードを終了してください。</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;MSGothic9}ウィザードは、[ProductName] のインストールを完了する前に中断されました。</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードを完了しました</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc">
+    <base>The program features you selected are being installed.</base>
+    <translation>{&amp;MSGothic9}選択したプログラム機能をインストールしています。</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle">
+    <base>{&amp;MSSansBold8}Installing [ProductName]</base>
+    <translation>{&amp;MSGothic9}[ProductName] をインストールしています</translation>
+  </string>
+  <string id="SetupProgress.DlgText">
+    <base>Please wait while the Setup Wizard installs [ProductName]. This may take several minutes.</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードは、[ProductName] をインストールしています。しばらくお待ちください。</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle2">
+    <base>{&amp;MSSansBold8}Uninstalling [ProductName]</base>
+    <translation>{&amp;MSGothic9}[ProductName] をアンインストールしています</translation>
+  </string>
+  <string id="SetupProgress.DlgText2">
+    <base>Please wait while the Setup Wizard uninstalls [ProductName]. This may take several minutes.</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードは、[ProductName] をアンインストールしています。しばらくお待ちください。</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc2">
+    <base>The program features you selected are being uninstalled.</base>
+    <translation>{&amp;MSGothic9}選択したプログラム機能をアンインストールしています。</translation>
+  </string>
+  <string id="SetupProgress.TextTime">
+    <base>)Hidden for now)Estimated time remaining:</base>
+    <translation>{&amp;MSGothic9}推測の残り時間:</translation>
+  </string>
+  <string id="SetupProgress.LbStatus">
+    <base>Status:</base>
+    <translation>{&amp;MSGothic9}ステータス:</translation>
+  </string>
+  <string id="SetupProgress.LbSec">
+    <base>(Hidden for now)Sec.</base>
+    <translation>{&amp;MSGothic9}秒</translation>
+  </string>
+  <string id="SetupProgress.ShowTime">
+    <base>(Hidden for now)</base>
+    <translation>{&amp;MSGothic9}</translation>
+  </string>
+  <string id="SetupProgress.ActionProgress95">
+    <base>Progress done</base>
+    <translation>{&amp;MSGothic9}プログレスの完了</translation>
+  </string>
+  <string id="SetupResume.PreselectedText">
+    <base>The Setup Wizard will complete the installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードは、ご使用のコンピュータへの [ProductName] のインストールを完了します。「次へ」をクリックして、続行してください。</translation>
+  </string>
+  <string id="SetupResume.ResumeText">
+    <base>The Setup Wizard will complete the suspended installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>{&amp;MSGothic9}Setup ウィザードは、中断していた [ProductName] のインストールを完了しました。「次へ」をクリックして、続行してください。</translation>
+  </string>
+  <string id="SetupResume.TextLine1">
+    <base>{&amp;TahomaBold10}Resuming the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;MSGothic9}[ProductName]用のSetup ウィザードを続行しています</translation>
+  </string>
+  <string id="SetupType.DlgDesc">
+    <base>Choose the setup type that best suits your needs.</base>
+    <translation>{&amp;MSGothic9}ご利用方法に合わせて最適なセットアップ タイプを選択してください。</translation>
+  </string>
+  <string id="SetupType.DlgTitle">
+    <base>{&amp;MSSansBold8}Setup Type</base>
+    <translation>{&amp;MSGothic9}セットアップ タイプ</translation>
+  </string>
+  <string id="SetupType.DlgText">
+    <base>Please select a setup type.</base>
+    <translation>{&amp;MSGothic9}セットアップ タイプを選択してください。</translation>
+  </string>
+  <string id="SetupType.CompText">
+    <base>All program features will be installed. (Requires the most disk space.)</base>
+    <translation>{&amp;MSGothic9}すべてのプログラム機能をインストールします。 (最大のディスク容量を必要とします)</translation>
+  </string>
+  <string id="SetupType.CustText">
+    <base>Choose which program features you want installed and where they will be installed. Recommended for advanced users.</base>
+    <translation>{&amp;MSGothic9}インストールするプログラム機能、およびインストール先を選択することができます。製品をよくご存知のユーザにお勧めします。</translation>
+  </string>
+  <string id="SetupType.Complete">
+    <base>{&amp;MSSansBold8}&amp;Complete</base>
+    <translation>{&amp;MSGothic9}すべて(&amp;C)</translation>
+  </string>
+  <string id="SetupType.Custom">
+    <base>{&amp;MSSansBold8}Cu&amp;stom</base>
+    <translation>{&amp;MSGothic9}カスタム(&amp;S)</translation>
+  </string>
+  <string id="Error.0">
+    <base>{{Fatal error: }}</base>
+    <translation>{{致命的なエラー : }}</translation>
+  </string>
+  <string id="Error.1">
+    <base>Error [1].</base>
+    <translation>{{エラー [1]。  }}</translation>
+  </string>
+  <string id="Error.2">
+    <base>Warning [1].</base>
+    <translation>警告 [1]。 </translation>
+  </string>
+  <string id="Error.4">
+    <base>Info [1].</base>
+    <translation>情報 [1]。 </translation>
+  </string>
+  <string id="Error.5">
+    <base>Internal Error [1]. [2]{, [3]}{, [4]}</base>
+    <translation>内部エラー [1]。 [2]{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.7">
+    <base>{{Disk full: }}</base>
+    <translation>{{ディスクがいっぱいです : }}</translation>
+  </string>
+  <string id="Error.8">
+    <base>Action [Time]: [1]. [2]</base>
+    <translation>アクション [Time]: [1]。 [2]</translation>
+  </string>
+  <string id="Error.9">
+    <base>[ProductName]</base>
+    <translation>[ProductName]</translation>
+  </string>
+  <string id="Error.10">
+    <base>{[2]}{, [3]}{, [4]}</base>
+    <translation>{[2]}{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.11">
+    <base>Message type: [1], Argument: [2]</base>
+    <translation>メッセージの種類 : [1], 引数 : [2]</translation>
+  </string>
+  <string id="Error.12">
+    <base>=== Logging started: [Date]  [Time] ===</base>
+    <translation>=== ログ開始 : [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.13">
+    <base>=== Logging stopped: [Date]  [Time] ===</base>
+    <translation>=== ログ終了 : [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.14">
+    <base>Action start [Time]: [1].</base>
+    <translation>アクション開始 [Time] : [1]。</translation>
+  </string>
+  <string id="Error.15">
+    <base>Action ended [Time]: [1]. Return value [2].</base>
+    <translation>アクション終了 [Time] : [1]。 戻り値 [2]。</translation>
+  </string>
+  <string id="Error.16">
+    <base>Time remaining: {[1] minutes }{[2] seconds}</base>
+    <translation>残り時間 : {[1] 分 }{[2] 秒}</translation>
+  </string>
+  <string id="Error.17">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>メモリ不足です。他のアプリケーションを閉じてから、再度実行してください。</translation>
+  </string>
+  <string id="Error.18">
+    <base>Installer is no longer responding.</base>
+    <translation>インストール プログラムから応答がありません。</translation>
+  </string>
+  <string id="Error.19">
+    <base>Installer terminated prematurely.</base>
+    <translation>インストール プログラムは完了前に中断されました。</translation>
+  </string>
+  <string id="Error.20">
+    <base>Please wait while Windows configures [ProductName]</base>
+    <translation>Windows に [ProductName] を設定しています。しばらくお待ちください。</translation>
+  </string>
+  <string id="Error.21">
+    <base>Gathering required information...</base>
+    <translation>必要な情報を集めています...</translation>
+  </string>
+  <string id="Error.22">
+    <base>Removing older versions of this application</base>
+    <translation>このアプリケーションの古いバージョンを削除しています...</translation>
+  </string>
+  <string id="Error.23">
+    <base>Preparing to remove older versions of this application</base>
+    <translation>このアプリケーションの古いバージョンを削除する準備をしています...</translation>
+  </string>
+  <string id="Error.32">
+    <base>{[ProductName] }Setup completed successfully.</base>
+    <translation>{[ProductName] }のセットアップが正常終了しました。</translation>
+  </string>
+  <string id="Error.33">
+    <base>{[ProductName] }Setup failed.</base>
+    <translation>{[ProductName] }のセットアップに失敗しました。</translation>
+  </string>
+  <string id="Error.1101">
+    <base>Error reading from file: [2]. {{ System error [3].}}  Verify that the file exists and that you can access it.</base>
+    <translation>ファイル [2] の読み込みに失敗しました。{{ システム エラー [3]。}}このファイルが存在するかどうか、およびこのファイルへのアクセス権があるかどうかを確認してください。</translation>
+  </string>
+  <string id="Error.1301">
+    <base>Cannot create the file [3].  A directory with this name already exists.  Cancel the installation and try installing to a different location.</base>
+    <translation>ファイル '[2]' を作成できません。この名前を持つディレクトリはすでに存在しています。インストールをキャンセルして、別の場所にインストールしてみてください。</translation>
+  </string>
+  <string id="Error.1302">
+    <base>Please insert the disk: [2]</base>
+    <translation>ディスク [2] を挿入してください。</translation>
+  </string>
+  <string id="Error.1303">
+    <base>The installer has insufficient privileges to access this directory: [2].  The installation cannot continue.  Log on as an administrator or contact your system administrator.</base>
+    <translation>インストール プログラムにはディレクトリ [2] にアクセスする権限がありません。インストールを継続できません。管理者としてログインするか、またはシステム管理者にお問い合わせください。</translation>
+  </string>
+  <string id="Error.1304">
+    <base>Error writing to file [2].  Verify that you have access to that directory.</base>
+    <translation>ファイル [2] への書き込みに失敗しました。このディレクトリへのアクセス権があるかどうかを確認してください。</translation>
+  </string>
+  <string id="Error.1305">
+    <base>Error reading from file [2].  Verify that the file exists and that you can access it.</base>
+    <translation>ファイル [2] の読み込みに失敗しました。{{ システム エラー [3]。}} ファイルが存在しアクセス権があることを確認してください。</translation>
+  </string>
+  <string id="Error.1306">
+    <base>Another application has exclusive access to the file [2].  Please shut down all other applications, then click Retry.</base>
+    <translation>ファイル '[2]' は他のアプリケーションで使用されています。開いているアプリケーションをすべて閉じてから、「再試行」をクリックしてください。</translation>
+  </string>
+  <string id="Error.1307">
+    <base>There is not enough disk space to install the file [2].  Free some disk space and click Retry, or click Cancel to exit.</base>
+    <translation>ファイル [2] をインストールするために、十分なディスク領域がありません。ディスク領域を開放してから、「再試行」をクリックしてください。終了する場合は、「中止」をクリックします。</translation>
+  </string>
+  <string id="Error.1308">
+    <base>Source file not found: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>ソース ファイル [2] が見つかりません。ファイルが存在するかどうか、およびこのファイルへのアクセス権があるかどうかを確認してください。</translation>
+  </string>
+  <string id="Error.1309">
+    <base>Error reading from file: [3]. {{ System error [2].}}  Verify that the file exists and that you can access it.</base>
+    <translation>ファイル [3] からの読み込みに失敗しました。{{ システム エラー [2]。}} ファイルが存在するかどうか、およびこのファイルへのアクセス権があるかどうかを確認してください。</translation>
+  </string>
+  <string id="Error.1310">
+    <base>Error writing to file: [3]. {{ System error [2].}}  Verify that you have access to that directory.</base>
+    <translation>ファイル [3] への書き込みに失敗しました。{{ システム エラー[2]。}} このディレクトリへのアクセス権があることを確認してください。</translation>
+  </string>
+  <string id="Error.1311">
+    <base>Source file not found{{(cabinet)}}: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>ソース ファイルが見つかりません。{{(cabinet)}} : [2]。 ファイルが存在するかどうか、およびこのファイルへのアクセス権があるかどうかを確認してください。</translation>
+  </string>
+  <string id="Error.1312">
+    <base>Cannot create the directory [2].  A file with this name already exists.  Please rename or remove the file and click Retry, or click Cancel to exit.</base>
+    <translation>ディレクトリ '[2]' を作成できません。この名前を持つファイルがすでに存在しています。ファイルの名前を変更するか、削除してから、「再試行」をクリックしてください。または「キャンセル」をクリックして、終了してください。</translation>
+  </string>
+  <string id="Error.1313">
+    <base>The volume [2] is currently unavailable.  Please select another.</base>
+    <translation>ボリューム [2] は現在使用できません。別のボリュームを選択してください。</translation>
+  </string>
+  <string id="Error.1314">
+    <base>The specified path [2] is unavailable.</base>
+    <translation>指定されたパス '[2]' は使用できません。</translation>
+  </string>
+  <string id="Error.1315">
+    <base>Unable to write to the specified folder [2].</base>
+    <translation>指定されたフォルダに書き込めません :  '[2]'。</translation>
+  </string>
+  <string id="Error.1316">
+    <base>A network error occurred while attempting to read from the file [2]</base>
+    <translation>次のファイルを読み込み中に、ネットワーク エラーが発生しました : [2]</translation>
+  </string>
+  <string id="Error.1317">
+    <base>An error occurred while attempting to create the directory [2]</base>
+    <translation>ディレクトリ [2] を作成中に、エラーが発生しました。</translation>
+  </string>
+  <string id="Error.1318">
+    <base>A network error occurred while attempting to create the directory [2]</base>
+    <translation>ディレクトリ [2] を作成中に、ネットワーク エラーが発生しました。</translation>
+  </string>
+  <string id="Error.1319">
+    <base>A network error occurred while attempting to open the source file cabinet [2].</base>
+    <translation>ソース ファイル キャビネット [2] を開いている途中で、ネットワーク エラーが発生しました。</translation>
+  </string>
+  <string id="Error.1320">
+    <base>The specified path is too long [2].</base>
+    <translation>指定されたパスは長すぎます : [2]</translation>
+  </string>
+  <string id="Error.1321">
+    <base>The Installer has insufficient privileges to modify the file [2].</base>
+    <translation>インストール プログラムには、ファイル [2] を修正する権限がありません。</translation>
+  </string>
+  <string id="Error.1322">
+    <base>A portion of the path [2] exceeds the length allowed by the system.</base>
+    <translation>フォルダ パス '[2]' の一部が不正です。パスが空であるかまたは長すぎるので、このシステムでは指定できません。</translation>
+  </string>
+  <string id="Error.1323">
+    <base>The path [2] contains words that are not valid in folders.</base>
+    <translation>フォルダ パス '[2]' に使用されている単語の中に、フォルダ パスでは使用できないものが含まれています。</translation>
+  </string>
+  <string id="Error.1324">
+    <base>The path [2] contains an invalid character.</base>
+    <translation>フォルダ パス '[2]' に使用できない文字が含まれています。</translation>
+  </string>
+  <string id="Error.1325">
+    <base>[2] is not a valid short file name.</base>
+    <translation>[2]' はショート ファイル名としては正しくありません。</translation>
+  </string>
+  <string id="Error.1326">
+    <base>Error getting file security: [3] GetLastError: [2]</base>
+    <translation>ファイル セキュリティの取得に失敗しました : [3] GetLastError: [2]。</translation>
+  </string>
+  <string id="Error.1327">
+    <base>Invalid Drive: [2]</base>
+    <translation>ドライブが正しくありません : [2]</translation>
+  </string>
+  <string id="Error.1328">
+    <base>Error applying patch to file [2].  It has probably been updated by other means, and can no longer be modified by this patch.  For more information contact your patch vendor.  {{System Error: [3]}}</base>
+    <translation>ファイル [2] にパッチを適用する時にエラーが発生しました。おそらく別の方法によってアップデートされたためです。このパッチで変更することはできません。詳細は、このパッチのベンダーにお問い合わせください。 {{システム エラー : [3]}}</translation>
+  </string>
+  <string id="Error.1401">
+    <base>Could not create key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>キー [2] を作成できません。{{ システム エラー [3]。}} そのキーへの十分なアクセス権を持っているかどうかを確認するか、またはサポート担当者へお問い合わせください。 </translation>
+  </string>
+  <string id="Error.1402">
+    <base>Could not open key: [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>キー [2] を開くことができません。{{ システム エラー [3]。}} そのキーへの十分なアクセス権を持っているかどうかを確認するか、またはサポート担当者へお問い合わせください。 </translation>
+  </string>
+  <string id="Error.1403">
+    <base>Could not delete value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>キー [3] から 値 [2] を削除できません。{{ システム エラー [4]。}}  そのキーへの十分なアクセス権を持っているかどうかを確認するか、またはサポート担当者へお問い合わせください。 </translation>
+  </string>
+  <string id="Error.1404">
+    <base>Could not delete key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>キー [2] を削除できません。{{ システム エラー [3]。}} そのキーへの十分なアクセス権を持っているかどうかを確認するか、またはサポート担当者へお問い合わせください。</translation>
+  </string>
+  <string id="Error.1405">
+    <base>Could not read value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>キー [3] から 値 [2] を読み込めません。{{ システム エラー [4]。}}  そのキーへの十分なアクセス権を持っているかどうかを確認するか、またはサポート担当者へお問い合わせください。 </translation>
+  </string>
+  <string id="Error.1406">
+    <base>Could not write value [2] to key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>値 [2] をキー [3] に書き込めません。{{ システム エラー [4]。}}  そのキーへの十分なアクセス権を持っているかどうかを確認するか、またはサポート担当者へお問い合わせください。</translation>
+  </string>
+  <string id="Error.1407">
+    <base>Could not get value names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>キー [2] に対する値の名前を得ることができません。 {{ システム エラー [3]。}}  そのキーへの十分なアクセス権を持っているかどうかを確認するか、またはサポート担当者へお問い合わせください。</translation>
+  </string>
+  <string id="Error.1408">
+    <base>Could not get sub key names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>キー [2] に対するサブ キー名を得ることができません。 {{ システム エラー [3]。}}  そのキーへの十分なアクセス権を持っているかどうかを確認するか、またはサポート担当者へお問い合わせください。</translation>
+  </string>
+  <string id="Error.1409">
+    <base>Could not read security information for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>キー [2] に対するセキュリティ情報が読めません。{{ システム エラー [3]。}}  そのキーへの十分なアクセス権を持っているかどうかを確認するか、またはサポート担当者へお問い合わせください。</translation>
+  </string>
+  <string id="Error.1410">
+    <base>Could not increase the available registry space. [2] KB of free registry space is required for the installation of this application.</base>
+    <translation>使用可能なレジストリ領域を増やすことはできません。このアプリケーションをインストールするには、[2] KB のレジストリ領域が必要です。</translation>
+  </string>
+  <string id="Error.1500">
+    <base>Another installation is in progress. You must complete that installation before continuing this one.</base>
+    <translation>別のインストールが現在行われています。このインストールが完了しなければ、新たにインストールを行うことはできません。</translation>
+  </string>
+  <string id="Error.1501">
+    <base>Error accessing secured data. Please make sure the Windows Installer is configured properly and try the installation again.</base>
+    <translation>保護されているデータへのアクセスでエラーが発生しました。Windows Installer が正しく設定�ation>{&amp;MSSansBold8}현재 대상 폴더 변경</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgDesc">
+    <base>Specify a network location for the server image of the product.</base>
+    <translation>{&amp;Tahoma8}제품의 서버 이미지를 위한 네트워크 위치를 지정합니다.</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgTitle">
+    <base>{&amp;MSSansBold8}Network Location</base>
+    <translation>{&amp;MSSansBold8}네트워크 위치</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgText">
+    <base>Enter the network location or click Change to browse to a location.  Click Install to create a server image of [ProductName] at the specified network location or click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}네트워크 위치를 입력하거나 "변경" 단추를 눌러 위치를 찾으십시오. 네트워크 위치를 입력하거나 "변경" 단추를 눌러 위치를 찾으십시오. 지정한 네트워크 위치에 [ProductName]의 서버 이미지를 작성하려면 "설치" 단추를 누르고, 설치 마법사를 종료하려면 "취소" 단추를 누르십시오.</translation>
+  </string>
+  <string id="AdminWelcome.TextLine2">
+    <base>The Setup Wizard will create a server image of [ProductName] at a specified network location. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}설치 마법사는 지정된 네트워크 위치에 [ProductName]의 서버 이미지를 작성합니다. 계속하려면 "다음" 단추를 누르십시오.</translation>
+  </string>
+  <string id="AdminWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}[ProductName] - 설치 마법사를 시작합니다</translation>
+  </string>
+  <string id="CancelSetup.Text">
+    <base>Are you sure you want to cancel [ProductName] installation?</base>
+    <translation>{&amp;Tahoma8}[ProductName] - 설치 마법사를 취소하시겠습니까?</translation>
+  </string>
+  <string id="CustomSetup.DlgDesc">
+    <base>Select the program features you want installed.</base>
+    <translation>{&amp;Tahoma8}설치하려는 프로그램 구성요소를 선택하십시오.</translation>
+  </string>
+  <string id="CustomSetup.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup</base>
+    <translation>{&amp;MSSansBold8}사용자 정의 설치</translation>
+  </string>
+  <string id="CustomSetup.DlgText">
+    <base>Click on an icon in the list below to change how a feature is installed.</base>
+    <translation>{&amp;Tahoma8}구성요소의 설치 방법을 변경하려면 아래 목록에 있는 아이콘을 누르십시오.</translation>
+  </string>
+  <string id="CustomSetup.ItemDescription">
+    <base>Multiline description of the currently selected item</base>
+    <translation>{&amp;Tahoma8}현재 선택한 항목을 여러 행으로 설명합니다</translation>
+  </string>
+  <string id="CustomSetup.Size">
+    <base>Feature size</base>
+    <translation>{&amp;Tahoma8}구성요소 크기</translation>
+  </string>
+  <string id="CustomSetup.InstallLabel">
+    <base>Install to:</base>
+    <translation>{&amp;Tahoma8}설치 위치:</translation>
+  </string>
+  <string id="CustomSetup.Location">
+    <base>&lt;selected feature path&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;selected feature path&gt;  </translation>
+  </string>
+  <string id="CustomSetup.FeatureGroup">
+    <base>Feature Description</base>
+    <translation>{&amp;Tahoma8}구성요소 설명</translation>
+  </string>
+  <string id="CustomSetupTips.DlgDesc">
+    <base>Custom Setup allows you to selectively install program features.</base>
+    <translation>{&amp;Tahoma8}사용자 정의 설치는 프로그램 구성요소를 선택하여 설치할 수 있도록 해줍니다.</translation>
+  </string>
+  <string id="CustomSetupTips.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup Tips</base>
+    <translation>{&amp;MSSansBold8}사용자 정의 설치 참고</translation>
+  </string>
+  <string id="CustomSetupTips.DontInstallText">
+    <base>Will not be installed.</base>
+    <translation>{&amp;Tahoma8}구성요소가 설치되지 않습니다.</translation>
+  </string>
+  <string id="CustomSetupTips.FirstInstallText">
+    <base>Will be installed on first use. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}처음 사용 시 구성요소가 설치됩니다 (해당 구성요소가 이 옵션을 지원하는 경우에만 적용됨).</translation>
+  </string>
+  <string id="CustomSetupTips.InstallStateText">
+    <base>This install state means the feature...</base>
+    <translation>{&amp;Tahoma8}설치 상태는 각각 다음을 의미합니다.</translation>
+  </string>
+  <string id="CustomSetupTips.InstallText">
+    <base>Will be completely installed to the local hard drive.</base>
+    <translation>{&amp;Tahoma8}로컬 하드 드라이브에 전체 구성요소가 설치됩니다.</translation>
+  </string>
+  <string id="CustomSetupTips.MenuText">
+    <base>The icon next to the feature name indicates the install state of the feature. Click the icon to drop down the install state menu for each feature.</base>
+    <translation>{&amp;Tahoma8}구성요소 이름 옆의 아이콘은 해당 구성요소의 설치 상태를 나타냅니다. 아이콘을 눌러 각 구성요소의 설치 상태 메뉴를 드롭다운하십시오.</translation>
+  </string>
+  <string id="CustomSetupTips.NetworkInstallText">
+    <base>Will be installed to run from the network. (Available only if the feature supports this option.)</base>
+    <translation>{&amp;Tahoma8}네트워크로부터 구성요소를 실행하도록 설치합니다 (해당 구성요소가 이 옵션을 지원하는 경우에만 적용됨).</translation>
+  </string>
+  <string id="CustomSetupTips.PartialText">
+    <base>Will have some subfeatures installed to the local hard drive. (Available only if the feature has subfeatures.)</base>
+    <translation>{&amp;Tahoma8}로컬 하드 드라이브에 일부 하위 구성요소가 설치됩니다. (해당 구성요소에 하위 구성요소가 있는 경우에만 적용됨).</translation>
+  </string>
+  <string id="DestinationFolder.DlgDesc">
+    <base>Click Next to install to this folder, or click Change to install to a different folder.</base>
+    <translation>{&amp;Tahoma8}이 폴더에 설치하려면 "다음" 단추를 누르고, 다른 위치에 설치하려면 "변경" 단추를 누르십시오.</translation>
+  </string>
+  <string id="DestinationFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Destination Folder</base>
+    <translation>{&amp;MSSansBold8}대상 폴더</translation>
+  </string>
+  <string id="DestinationFolder.LocLabel">
+    <base>Install [ProductName] to:</base>
+    <translation>{&amp;Tahoma8}[ProductName] 설치 위치:</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgDesc">
+    <base>The disk space required for the installation of the selected features.</base>
+    <translation>{&amp;Tahoma8}선택한 구성요소를 설치하기 위한 디스크 공간.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgTitle">
+    <base>{&amp;MSSansBold8}Disk Space Requirements</base>
+    <translation>{&amp;MSSansBold8}디스크 공간 요구 사항</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}강조 표시된 드라이브는 현재 선택한 구성요소 설치에 필요한 디스크 공간이 부족합니다. 강조 표시된 드라이브에서 파일을 제거하거나, 구성요소를 적게 선택하여 설치하거나, 다른 대상 드라이브를 선택하십시오.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="FilesInUse.DlgDesc">
+    <base>Some files that need to be updated are currently in use.</base>
+    <translation>{&amp;Tahoma8}업데이트해야 할 일부 파일이 현재 사용 중입니다.</translation>
+  </string>
+  <string id="FilesInUse.DlgTitle">
+    <base>{&amp;MSSansBold8}Files in Use</base>
+    <translation>{&amp;MSSansBold8}사용 중인 파일</translation>
+  </string>
+  <string id="FilesInUse.DlgText">
+    <base>The following applications are using files that need to be updated by this setup. Close these applications and click Retry to continue.</base>
+    <translation>{&amp;Tahoma8}이 프로그램 설치시 업데이트해야 할 파일을 다음의 응용 프로그램에서 사용하고 있습니다. 계속하려면 해당 응용 프로그램을 닫은 후 "재시도" 단추를 누르십시오.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>{&amp;Tahoma8}대상 폴더를 찾습니다.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}현재 대상 폴더 변경</translation>
+  </string>
+  <string id="InstallWelcome.Copyright">
+    <base>WARNING: This program is protected by copyright law and international treaties.</base>
+    <translation>경고: 이 프로그램은 저작권법과 국제 협약에 의해 보호되고 있습니다.</translation>
+  </string>
+  <string id="InstallWelcome.TextLine2">
+    <base>Setup will install [ProductName] on your computer. To continue, click Next.</base>
+    <translation>설치 프로그램은 [ProductName]를 컴퓨터에 설치할 것입니다. 계속하기 위해서는 다음을 누르십시오.</translation>
+  </string>
+  <string id="InstallWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}[ProductName] 설치 마법사를 시작합니다</translation>
+  </string>
+  <string id="LicenseAgreement.DlgDesc">
+    <base>Please read the following license agreement carefully.</base>
+    <translation>{&amp;Tahoma8}다음의 사용권 계약서를 자세히 읽으십시오.</translation>
+  </string>
+  <string id="LicenseAgreement.DlgTitle">
+    <base>{&amp;MSSansBold8}License Agreement</base>
+    <translation>{&amp;MSSansBold8}사용권 계약서</translation>
+  </string>
+  <string id="LicenseAgreement.DontAgree">
+    <base>I &amp;do not accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}사용권 계약서의 조건에 동의하지 않음(&amp;D)</translation>
+  </string>
+  <string id="LicenseAgreement.Agree">
+    <base>I &amp;accept the terms in the license agreement</base>
+    <translation>{&amp;Tahoma8}사용권 계약서의 조건에 동의함(&amp;A)</translation>
+  </string>
+  <string id="MaintenanceType.DlgDesc">
+    <base>Modify, repair, or remove the program.</base>
+    <translation>{&amp;Tahoma8}프로그램을 변경, 복구 또는 제거합니다.</translation>
+  </string>
+  <string id="MaintenanceType.DlgTitle">
+    <base>{&amp;MSSansBold8}Program Maintenance</base>
+    <translation>{&amp;MSSansBold8}프로그램 유지 보수</translation>
+  </string>
+  <string id="MaintenanceType.Text1">
+    <base>Change which program features are installed. This option displays the Custom Selection dialog in which you can change the way features are installed.</base>
+    <translation>{&amp;Tahoma8}설치할 프로그램 구성요소를 변경합니다. 이 옵션을 선택하면 구성요소 설치 방법을 변경할 수 있는 사용자 선택 대화 상자가 나타납니다.</translation>
+  </string>
+  <string id="MaintenanceType.Text2">
+    <base>Repair installation errors in the program. This option fixes missing or corrupt files, shortcuts, and registry entries.</base>
+    <translation>{&amp;Tahoma8}프로그램의 오류를 복구합니다. 이 옵션을 선택하면 누락되거나 손상된 파일, 바로 가기 및 레지스트리 항목을 수정합니다.</translation>
+  </string>
+  <string id="MaintenanceType.Text3">
+    <base>Remove [ProductName] from your computer.</base>
+    <translation>{&amp;Tahoma8}컴퓨터에서 [ProductName]을(를) 제거합니다.</translation>
+  </string>
+  <string id="MaintenanceType.Modify">
+    <base>{&amp;MSSansBold8}&amp;Modify</base>
+    <translation>{&amp;MSSansBold8}변경(&amp;M)</translation>
+  </string>
+  <string id="MaintenanceType.Repair">
+    <base>{&amp;MSSansBold8}Re&amp;pair</base>
+    <translation>{&amp;MSSansBold8}복구(&amp;P)</translation>
+  </string>
+  <string id="MaintenanceType.Remove">
+    <base>{&amp;MSSansBold8}&amp;Remove</base>
+    <translation>{&amp;MSSansBold8}제거(&amp;R)</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine2">
+    <base>The Setup Wizard will allow you to modify, repair, or remove [ProductName]. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}설치 마법사가 [ProductName]의 변경, 복구 또는 제거를 도와줍니다. 계속하려면 "다음" 단추를 누르십시오.</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}[ProductName] - 설치 마법사를 시작합니다</translation>
+  </string>
+  <string id="OutOfSpace.DlgDesc">
+    <base>Disk space required for the installation exceeds available disk space.</base>
+    <translation>{&amp;Tahoma8}설치에 필요한 디스크 공간이 사용 가능한 디스크 공간을 초과합니다.</translation>
+  </string>
+  <string id="OutOfSpace.DlgTitle">
+    <base>{&amp;MSSansBold8}Out of Disk Space</base>
+    <translation>{&amp;MSSansBold8}디스크 공간 부족</translation>
+  </string>
+  <string id="OutOfSpace.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>{&amp;Tahoma8}강조 표시된 드라이브는 현재 선택한 구성요소 설치에 필요한 디스크 공간이 부족합니다. 강조 표시된 드라이브에서 파일을 제거하거나, 구성요소를 적게 선택하여 설치하거나, 다른 대상 드라이브를 선택하십시오.</translation>
+  </string>
+  <string id="OutOfSpace.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{&amp;Tahoma8}{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="PatchWelcome.TextLine2">
+    <base>The Setup Wizard will install the Patch for [ProductName] on your computer.  To continue, click Update.</base>
+    <translation>설치 마법사는 사용자의 컴퓨터에 [ProductName]를 위한 패치를 설치합니다.계속하려면 업데이트를 클릭하십시오.</translation>
+  </string>
+  <string id="PatchWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Patch for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}[ProductName]의 패치에 오신 것을 환영합니다</translation>
+  </string>
+  <string id="ReadyToInstall.DlgDesc">
+    <base>The wizard is ready to begin installation.</base>
+    <translation>{&amp;Tahoma8}설치 마법사는 설치를 시작할 준비가 되었습니다.</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle">
+    <base>{&amp;MSSansBold8}Ready to Modify the Program</base>
+    <translation>{&amp;MSSansBold8}프로그램 변경 준비 완료</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText">
+    <base>Click Install to begin the installation.</base>
+    <translation>{&amp;Tahoma8}설치를 시작하려면 "설치" 단추를 누르십시오.</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle2">
+    <base>{&amp;MSSansBold8}Ready to Repair the Program</base>
+    <translation>{&amp;MSSansBold8}프로그램 복구 준비 완료</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle3">
+    <base>{&amp;MSSansBold8}Ready to Install the Program</base>
+    <translation>{&amp;MSSansBold8}프로그램 설치 준비 완료</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText1">
+    <base>If you want to review or change any of your installation settings, click Back. Click Cancel to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}설치 설정 사항을 검토하거나 변경하려면 "뒤로" 단추를 누르십시오. 마법사를 종료하려면 "취소" 단추를 누르십시오.  </translation>
+  </string>
+  <string id="ReadyToRemove.DlgDesc">
+    <base>You have chosen to remove the program from your system.</base>
+    <translation>{&amp;Tahoma8}사용자 시스템에서 프로그램을 제거하도록 선택했습니다.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgTitle">
+    <base>{&amp;MSSansBold8}Remove the Program</base>
+    <translation>{&amp;MSSansBold8}프로그램 제거</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText">
+    <base>Click Remove to remove [ProductName] from your computer. After removal, this program will no longer be available for use.</base>
+    <translation>{&amp;Tahoma8}컴퓨터에서 '[ProductName]'을(를) 제거하려면 "제거" 단추를 누르십시오. 제거 후에는 더 이상 이 프로그램을 사용할 수 없습니다.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText1">
+    <base>If you want to review or change any settings, click Back.</base>
+    <translation>{&amp;Tahoma8}설정 사항을 검토하거나 변경하려면 "뒤로" 단추를 누르십시오.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText1">
+    <base>Your system has not been modified. To complete installation at another time, please run setup again.</base>
+    <translation>{&amp;Tahoma8}시스템이 변경되지 않았습니다. 다음에 설치를 완료하려면 설치 프로그램을 다시 실행하십시오.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}마법사를 종료하려면 "마침" 단추를 누르십시오.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}시스템에 설치된 기존 요소를 보관하여 다음에 설치를 계속하거나, 설치 이전의 원래 상태로 시스템을 복원할 수 있습니다.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}마법사를 종료하려면 "복원" 또는 "다음에 계속" 단추를 누르십시오.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}[ProductName] - 설치가 완료되기 전에 설치 마법사가 중단되었습니다.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;TahomaBold10}[ProductName] - 설치 마법사를 완료했습니다.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine2">
+    <base>The Setup Wizard has successfully installed [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}설치 마법사가 [ProductName]을(를) 성공적으로 설치했습니다. 마법사를 종료하려면 "마침" 단추를 누르십시오.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckForUpdatesText">
+    <base>&amp;Yes, check for program updates (Recommended) after the setup completes.</base>
+    <translation>예, 설치가 완료된 후 프로그램 갱신 내용을 확인합니다(권장사항)(&amp;Y).</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine3">
+    <base>The Setup Wizard has successfully uninstalled [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}설치 마법사가 [ProductName]을(를) 성공적으로 제거했습니다. 마법사를 종료하려면 "마침" 단추를 누르십시오.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine1">
+    <base>Setup has finished installing [ProductName].</base>
+    <translation>설치 프로그램은 [ProductName] 설치를 완료하였습니다.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine2">
+    <base>Some program files might have been updated since you purchased your copy of [ProductName].</base>
+    <translation>일부 프로그램 파일은 [ProductName] 사본을 구입한 후 갱신되었을 수 있습니다.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine3">
+    <base>Your Internet connection can be used to make sure that you have the latest updates.</base>
+    <translation>인터넷 접속은 최신 갱신본이 있는지 확인하는데 사용될 수 있습니다.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;TahomaBold10}설치 완료</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchProgramText">
+    <base>Launch [ProductName]</base>
+    <translation>[ProductName] 실행</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchReadmeText">
+    <base>Show the readme file</base>
+    <translation>readme 파일을 표시합니다.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckBoxUpdates">
+    <base>CheckBox1</base>
+    <translation>CheckBox1</translation>
+  </string>
+  <string id="SetupError.ErrorText">
+    <base>&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</base>
+    <translation>{&amp;Tahoma8}&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</translation>
+  </string>
+  <string id="SetupInitialization.TextLine2">
+    <base>[ProductName] Setup is preparing the Setup Wizard which will guide you through the program setup process.  Please wait.</base>
+    <translation>{&amp;Tahoma8}설치 마법사가 설치 과정으로 귀하를 안내할 준비를 하는 동안 잠시 기다려 주십시오.</translation>
+  </string>
+  <string id="SetupInitialization.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}[ProductName] 설치 마법사를 시작합니다</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText1">
+    <base>Your system has not been modified. To install this program at a later time, please run the installation again.</base>
+    <translation>{&amp;Tahoma8}시스템이 변경되지 않았습니다. 나중에 이 프로그램을 설치하려면 설치 프로그램을 다시 실행하십시오.</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}마법사를 종료하려면 "마침" 단추를 누르십시오.</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>{&amp;Tahoma8}시스템에 설치된 기존 요소를 보관하여 다음에 설치를 계속하거나, 설치 이전의 원래 상태로 시스템을 복원할 수 있습니다.</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>{&amp;Tahoma8}마법사를 종료하려면 "복원" 또는 "다음에 계속" 단추를 누르십시오.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>{&amp;Tahoma8}[ProductName] - 설치가 완료되기 전에 설치 마법사가 중단되었습니다.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>{&amp;TahomaBold10}설치 마법사를 완료했습니다.</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc">
+    <base>The program features you selected are being installed.</base>
+    <translation>{&amp;Tahoma8}선택한 프로그램 구성요소가 설치됩니다.</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle">
+    <base>{&amp;MSSansBold8}Installing [ProductName]</base>
+    <translation>{&amp;MSSansBold8}[ProductName]을(를) 설치합니다.  </translation>
+  </string>
+  <string id="SetupProgress.DlgText">
+    <base>Please wait while the Setup Wizard installs [ProductName]. This may take several minutes.</base>
+    <translation>{&amp;Tahoma8}설치 마법사가 [ProductName]을(를) 설치하는 동안 잠시 기다려 주십시오. 이 작업은 몇 분 정도 걸립니다.</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle2">
+    <base>{&amp;MSSansBold8}Uninstalling [ProductName]</base>
+    <translation>{&amp;MSSansBold8}[ProductName]을(를) 삭제합니다.</translation>
+  </string>
+  <string id="SetupProgress.DlgText2">
+    <base>Please wait while the Setup Wizard uninstalls [ProductName]. This may take several minutes.</base>
+    <translation>{&amp;Tahoma8}설치 마법사가 [ProductName]을(를) 제거하는 동안 잠시 기다려 주십시오. 이 작업은 몇 분 정도 걸립니다.</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc2">
+    <base>The program features you selected are being uninstalled.</base>
+    <translation>{&amp;Tahoma8}선택한 프로그램 구성요소가 제거됩니다.</translation>
+  </string>
+  <string id="SetupProgress.TextTime">
+    <base>)Hidden for now)Estimated time remaining:</base>
+    <translation>{&amp;Tahoma8})Hidden for now) 예상 남은 시간:</translation>
+  </string>
+  <string id="SetupProgress.LbStatus">
+    <base>Status:</base>
+    <translation>{&amp;Tahoma8}상태:</translation>
+  </string>
+  <string id="SetupProgress.LbSec">
+    <base>(Hidden for now)Sec.</base>
+    <translation>{&amp;Tahoma8}(Hidden for now)초</translation>
+  </string>
+  <string id="SetupProgress.ShowTime">
+    <base>(Hidden for now)</base>
+    <translation>{&amp;Tahoma8}(Hidden for now)</translation>
+  </string>
+  <string id="SetupProgress.ActionProgress95">
+    <base>Progress done</base>
+    <translation> 진행률</translation>
+  </string>
+  <string id="SetupResume.PreselectedText">
+    <base>The Setup Wizard will complete the installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}설치 마법사가 귀하의 컴퓨터에 [ProductName]을(를) 설치했습니다. 계속하려면 "다음" 단추를 누르십시오.</translation>
+  </string>
+  <string id="SetupResume.ResumeText">
+    <base>The Setup Wizard will complete the suspended installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>{&amp;Tahoma8}설치 마법사가 귀하의 컴퓨터에 중단된 [ProductName] - 설치 마법사를 완료합니다. 계속하려면 "다음" 단추를 누르십시오.</translation>
+  </string>
+  <string id="SetupResume.TextLine1">
+    <base>{&amp;TahomaBold10}Resuming the Setup Wizard for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}[ProductName] - 설치 마법사를 다시 시작합니다</translation>
+  </string>
+  <string id="SetupType.DlgDesc">
+    <base>Choose the setup type that best suits your needs.</base>
+    <translation>{&amp;Tahoma8}사용자의 필요에 가장 적합한 설치 유형을 선택하십시오.</translation>
+  </string>
+  <string id="SetupType.DlgTitle">
+    <base>{&amp;MSSansBold8}Setup Type</base>
+    <translation>{&amp;MSSansBold8}설치 유형</translation>
+  </string>
+  <string id="SetupType.DlgText">
+    <base>Please select a setup type.</base>
+    <translation>{&amp;Tahoma8}설치 유형을 선택하십시오.</translation>
+  </string>
+  <string id="SetupType.CompText">
+    <base>All program features will be installed. (Requires the most disk space.)</base>
+    <translation>{&amp;Tahoma8}모든 프로그램 구성요소를 설치합니다. (디스크 공간을 가장 많이 필요로 함).</translation>
+  </string>
+  <string id="SetupType.CustText">
+    <base>Choose which program features you want installed and where they will be installed. Recommended for advanced users.</base>
+    <translation>{&amp;Tahoma8}설치하려는 프로그램 구성요소 및 설치할 위치를 선택하십시오. 고급 사용자일 경우에 권장합니다.</translation>
+  </string>
+  <string id="SetupType.Complete">
+    <base>{&amp;MSSansBold8}&amp;Complete</base>
+    <translation>{&amp;MSSansBold8}전체 설치(&amp;C)</translation>
+  </string>
+  <string id="SetupType.Custom">
+    <base>{&amp;MSSansBold8}Cu&amp;stom</base>
+    <translation>{&amp;MSSansBold8}사용자 정의 설치(&amp;S)</translation>
+  </string>
+  <string id="Error.0">
+    <base>{{Fatal error: }}</base>
+    <translation>{{심각한 오류: }}</translation>
+  </string>
+  <string id="Error.1">
+    <base>Error [1].</base>
+    <translation>{{오류 [1]. }}</translation>
+  </string>
+  <string id="Error.2">
+    <base>Warning [1].</base>
+    <translation>경고 [1]. </translation>
+  </string>
+  <string id="Error.4">
+    <base>Info [1].</base>
+    <translation>Info [1]. </translation>
+  </string>
+  <string id="Error.5">
+    <base>Internal Error [1]. [2]{, [3]}{, [4]}</base>
+    <translation>내부 오류 [1]. [2]{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.7">
+    <base>{{Disk full: }}</base>
+    <translation>{{디스크 꽉 참: }}</translation>
+  </string>
+  <string id="Error.8">
+    <base>Action [Time]: [1]. [2]</base>
+    <translation>수행 [Time]: [1]. [2]</translation>
+  </string>
+  <string id="Error.9">
+    <base>[ProductName]</base>
+    <translation>[ProductName]</translation>
+  </string>
+  <string id="Error.10">
+    <base>{[2]}{, [3]}{, [4]}</base>
+    <translation>{[2]}{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.11">
+    <base>Message type: [1], Argument: [2]</base>
+    <translation>메시지 유형: [1], 인수: [2]</translation>
+  </string>
+  <string id="Error.12">
+    <base>=== Logging started: [Date]  [Time] ===</base>
+    <translation>=== 기록 시작: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.13">
+    <base>=== Logging stopped: [Date]  [Time] ===</base>
+    <translation>=== 기록 시작: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.14">
+    <base>Action start [Time]: [1].</base>
+    <translation>수행 시작 [Time]: [1].</translation>
+  </string>
+  <string id="Error.15">
+    <base>Action ended [Time]: [1]. Return value [2].</base>
+    <translation>수행 끝 [Time]: [1]. 리턴 값 [2].</translation>
+  </string>
+  <string id="Error.16">
+    <base>Time remaining: {[1] minutes }{[2] seconds}</base>
+    <translation>남은 시간: {[1] 분 }{[2] 초}</translation>
+  </string>
+  <string id="Error.17">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>메모리가 부족합니다. 다른 응용 프로그램을 종료한 후 다시 시도하십시오.</translation>
+  </string>
+  <string id="Error.18">
+    <base>Installer is no longer responding.</base>
+    <translation>Windows Installer가 더 이상 응답하지 않습니다.</translation>
+  </string>
+  <string id="Error.19">
+    <base>Installer terminated prematurely.</base>
+    <translation>Windows Installer가 완전히 중지되었습니다.</translation>
+  </string>
+  <string id="Error.20">
+    <base>Please wait while Windows configures [ProductName]</base>
+    <translation>[ProductName]을(를) 구성하고 있습니다. 기다리십시오.</translation>
+  </string>
+  <string id="Error.21">
+    <base>Gathering required information...</base>
+    <translation>필요한 정보를 모으는 중...</translation>
+  </string>
+  <string id="Error.22">
+    <base>Removing older versions of this application</base>
+    <translation>이 응용 프로그램의 이전 버전을 제거하는 중...</translation>
+  </string>
+  <string id="Error.23">
+    <base>Preparing to remove older versions of this application</base>
+    <translation>이 응용 프로그램의 이전 버전을 제거하기 위해 준비하는 중...</translation>
+  </string>
+  <string id="Error.32">
+    <base>{[ProductName] }Setup completed successfully.</base>
+    <translation>{[ProductName] }설치가 성공적으로 완료되었습니다.</translation>
+  </string>
+  <string id="Error.33">
+    <base>{[ProductName] }Setup failed.</base>
+    <translation>{[ProductName] }설치를 실패했습니다.</translation>
+  </string>
+  <string id="Error.1101">
+    <base>Error reading from file: [2]. {{ System error [3].}}  Verify that the file exists and that you can access it.</base>
+    <translation>파일 읽기 오류: [2]. {{ 시스템 오류 [3].}}  파일이 실제로 있는지, 그리고 그 파일에 액세스할 수 있는지 확인하십시오.</translation>
+  </string>
+  <string id="Error.1301">
+    <base>Cannot create the file [3].  A directory with this name already exists.  Cancel the installation and try installing to a different location.</base>
+    <translation>'[2]' 파일을 만들 수 없습니다. 이 이름을 가진 디렉터리가 이미 있습니다. 설치를 취소하고 다른 위치에 다시 설치해 보십시오.</translation>
+  </string>
+  <string id="Error.1302">
+    <base>Please insert the disk: [2]</base>
+    <translation>다음 디스크를 넣으십시오: [2]</translation>
+  </string>
+  <string id="Error.1303">
+    <base>The installer has insufficient privileges to access this directory: [2].  The installation cannot continue.  Log on as an administrator or contact your system administrator.</base>
+    <translation>이 디렉터리에 액세스할 수 있는 권한이 충분하지 않습니다:[2]. 설치를 계속할 수 없습니다. 관리자 권한으로 로그온하거나 시스템 관리자에게 문의하십시오.</translation>
+  </string>
+  <string id="Error.1304">
+    <base>Error writing to file [2].  Verify that you have access to that directory.</base>
+    <translation>파일 쓰기 오류: [2]. 그 디렉터리에 액세스할 수 있는지 확인하십시오.</translation>
+  </string>
+  <string id="Error.1305">
+    <base>Error reading from file [2].  Verify that the file exists and that you can access it.</base>
+    <translation>[2] 파일을 읽다가 오류가 생겼습니다. {{ 시스템 오류 [3].}} 파일이 실제로 있는지, 그리고 그 파일에 액세스할 수 있는지 확인하십시오.</translation>
+  </string>
+  <string id="Error.1306">
+    <base>Another application has exclusive access to the file [2].  Please shut down all other applications, then click Retry.</base>
+    <translation>'[2]' 파일을 단독으로 액세스할 수 있는 권한을 다른 응용 프로그램에서 갖고 있습니다. 다른 응용 프로그램을 모두 닫은 후 "다시 시도"를 눌러 다시 시도하십시오.</translation>
+  </string>
+  <string id="Error.1307">
+    <base>There is not enough disk s

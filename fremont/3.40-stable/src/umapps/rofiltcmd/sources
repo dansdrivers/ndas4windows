@@ -1,0 +1,41 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+COMPILER_WARNINGS=
+NDAS_SDK_INC_PATH=..\..\..\inc
+NDAS_SDK_BIN_PATH=..\..\..\..\bin
+
+TARGETNAME=rofiltcmd
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+MSC_OPTIMIZATION=/Ox
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+C_DEFINES=/DUNICODE /D_UNICODE
+INCLUDES=$(NDAS_INC_PATH);$(NDAS_INC_PATH)\ndas;$(PSDK_INC_PATH)
+RCOPTIONS=/i $(NDAS_SDK_INC_PATH) 
+USE_STL=1
+UMENTRY=wmain
+UMTYPE=console
+
+BUILD_CONSUMES=librofiltctl
+
+TARGETLIBS= \
+	$(NDAS_LIB_PATH)\librofiltctl.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib 
+
+SOURCES= \
+	rofiltcmd.cpp
+

@@ -1,0 +1,464 @@
+/*++
+
+  NDAS USER API Type Definitions
+
+  Copyright (C) 2002-2004 XIMETA, Inc.
+  All rights reserved.
+
+  Remarks:
+
+  This header contains the structures for using NDAS USER API.
+
+--*/
+
+#ifndef _NDAS_TYPE_H_
+#define _NDAS_TYPE_H_
+
+typedef unsigned short      UINT16, *PUINT16;
+
+#pragma once
+
+/* All structures in this header are unaligned. */
+#include <pshpack1.h>
+
+/* Constants */
+
+#define NDAS_DEVICE_ID_KEY_LEN         20
+#define NDAS_DEVICE_WRITE_KEY_LEN      5
+
+#define NDAS_DEVICE_STRING_ID_PART_LEN 5
+#define NDAS_DEVICE_STRING_ID_PARTS    4
+#define NDAS_DEVICE_STRING_ID_LEN \
+	(NDAS_DEVICE_STRING_ID_PART_LEN * NDAS_DEVICE_STRING_ID_PARTS)
+
+#define NDAS_DEVICE_STRING_KEY_LEN     5
+#define MAX_NDAS_DEVICE_NAME_LEN       31 // excluding NULL character
+#define MAX_NDAS_REGISTRATION_DATA     252
+
+#define NDAS_BLOCK_SIZE					512
+
+/* NDAS Unit Device Type */
+
+typedef WORD NDAS_UNITDEVICE_TYPE;
+
+#define NDAS_UNITDEVICE_TYPE_UNKNOWN        0x00
+#define NDAS_UNITDEVICE_TYPE_DISK           0x01
+#define NDAS_UNITDEVICE_TYPE_COMPACT_BLOCK  0x02
+#define NDAS_UNITDEVICE_TYPE_CDROM          0x10
+#define NDAS_UNITDEVICE_TYPE_OPTICAL_MEMORY 0x11
+
+/* NDAs Unit Disk Device Type */
+
+typedef WORD NDAS_UNITDEVICE_DISK_TYPE;
+
+#define NDAS_UNITDEVICE_DISK_TYPE_UNKNOWN		0x0000
+#define NDAS_UNITDEVICE_DISK_TYPE_SINGLE		0x1000
+#define NDAS_UNITDEVICE_DISK_TYPE_AOD			0x2000
+#define NDAS_UNITDEVICE_DISK_TYPE_VIRTUAL_DVD	0x8000
+#define NDAS_UNITDEVICE_DISK_TYPE_AGGREGATED	0xA000
+#define NDAS_UNITDEVICE_DISK_TYPE_MIRROR_MASTER 0xB000
+#define NDAS_UNITDEVICE_DISK_TYPE_MIRROR_SLAVE	0xB100
+#define NDAS_UNITDEVICE_DISK_TYPE_RAID0			0xC000
+#define NDAS_UNITDEVICE_DISK_TYPE_RAID1			0xC001
+#define NDAS_UNITDEVICE_DISK_TYPE_RAID4			0xC004
+
+/* NDAS Unit CDROM Device Type */
+
+typedef WORD NDAS_UNITDEVICE_CDROM_TYPE;
+
+#define NDAS_UNITDEVICE_CDROM_TYPE_UNKNOWN 0x0000
+#define NDAS_UNITDEVICE_CDROM_TYPE_CD      0x0100
+#define NDAS_UNITDEVICE_CDROM_TYPE_DVD     0x0200
+
+/* NDAS Unit Optical Memory Device */
+/* e.g. MO */
+
+typedef WORD NDAS_UNITDEVICE_OPTICAL_MEMORY_TYPE;
+
+#define NDAS_UNITDEVICE_OPTICAL_MEMORY_TYPE_UNKNOWN 0x0000
+#define NDAS_UNITDEVICE_OPTICAL_MEMORY_TYPE_MO		0x0001
+
+/* NDAS Compact Block Device */
+/* e.g. Flash Card */
+
+typedef WORD NDAS_UNITDEVICE_COMPACT_BLOCK_TYPE;
+
+#define NDAS_UNITDEVICE_COMPACT_BLOCK_TYPE_UNKNOWN		0x0000
+#define NDAS_UNITDEVICE_COMPACT_BLOCK_TYPE_FLASHCARD	0x0001
+
+/* NDAS Unit Device Sub Type */
+
+typedef struct _NDAS_UNITDEVICE_SUBTYPE {
+	union {
+		NDAS_UNITDEVICE_DISK_TYPE DiskDeviceType;
+		NDAS_UNITDEVICE_CDROM_TYPE CDROMDeviceType;
+		NDAS_UNITDEVICE_OPTICAL_MEMORY_TYPE OptMemDevType;
+		NDAS_UNITDEVICE_COMPACT_BLOCK_TYPE CompactDevType;
+	};
+
+} NDAS_UNITDEVICE_SUBTYPE, *PNDAS_UNITDEVICE_SUBTYPE;
+
+__inline 
+NDAS_UNITDEVICE_SUBTYPE 
+CreateNdasUnitDeviceSubType(WORD t)
+{
+	NDAS_UNITDEVICE_SUBTYPE subType = {t};
+	return subType;
+}
+
+/* NDAS Device Status */
+
+typedef DWORD NDAS_DEVICE_STATUS;
+
+//const NDAS_DEVICE_STATUS NDAS_DEVICE_STATUS_ERROR = 0xFF00;
+#define NDAS_DEVICE_STATUS_UNKNOWN 0x0000
+#define NDAS_DEVICE_STATUS_DISABLED 0x0010
+#define NDAS_DEVICE_STATUS_DISCONNECTED 0x0020
+#define NDAS_DEVICE_STATUS_CONNECTED 0x0030
+
+#define NDAS_DEVICE_ALARM_STATUSFLAG_RECONNECT_PENDING  0x00000100
+#define NDAS_DEVICE_ALARM_STATUSFLAG_MEMBER_FAULT       0x00000800
+#define NDAS_DEVICE_ALARM_STATUSFLAG_RECOVERING         0x00001000
+
+/* NDAS Device Error */
+
+typedef DWORD NDAS_DEVICE_ERROR;
+
+#define NDAS_DEVICE_ERROR_NONE 0x0000
+#define NDAS_DEVICE_ERROR_UNSUPPORTED_VERSION 0xFF10
+#define NDAS_DEVICE_ERROR_LPX_SOCKET_FAILED 0xFF12
+#define NDAS_DEVICE_ERROR_DISCOVER_FAILED 0xFF13
+#define NDAS_DEVICE_ERROR_DISCOVER_TOO_MANY_FAILURE 0xFF14
+#define NDAS_DEVICE_ERROR_FROM_SYSTEM 0xFF15
+#define NDAS_DEVICE_ERROR_LOGIN_FAILED 0xFF16
+
+/* NDAS Unit Device Status */
+
+typedef DWORD NDAS_UNITDEVICE_STATUS;
+
+#define NDAS_UNITDEVICE_STATUS_UNKNOWN     0x0000
+#define NDAS_UNITDEVICE_STATUS_NOT_MOUNTED 0x0020
+#define NDAS_UNITDEVICE_STATUS_MOUNTED     0x0030
+
+/* NDAS Unit Device Error */
+
+typedef DWORD NDAS_UNITDEVICE_ERROR;
+
+#define NDAS_UNITDEVICE_ERROR_NONE 0x0000
+
+/* NDAS Content Encryption Options */
+
+/*
+#define	NDAS_CONTENT_ENCRYPT_MAX_KEY_LENGTH		64		// 64 bytes. 512bits.
+#define	NDAS_CONTENT_ENCRYPT_METHOD_NONE		0
+#define	NDAS_CONTENT_ENCRYPT_METHOD_SIMPLE	1
+
+typedef UNALIGNED struct _NDAS_CONTENT_ENCRYPT {
+	UCHAR Method;
+	UCHAR KeyLength;
+	UCHAR Key[NDAS_CONTENT_ENCRYPT_MAX_KEY_LENGTH];
+} NDAS_CONTENT_ENCRYPT, *PNDAS_CONTENT_ENCRYPT;
+*/
+
+/* NDAS Logical Device ID */
+
+//typedef struct _NDAS_LOGICALDEVICE_ID {
+//	DWORD SlotNo;
+//} NDAS_LOGICALDEVICE_ID, *PNDAS_LOGICALDEVICE_ID;
+
+typedef DWORD NDAS_LOGICALDEVICE_ID, *PNDAS_LOGICALDEVICE_ID;
+
+static CONST NDAS_LOGICALDEVICE_ID INVALID_NDAS_LOGICALDEVICE_ID = 0;
+
+/* NULL value check function for NDAS Logical Device ID */
+
+typedef struct _NDAS_SCSI_LOCATION {
+	DWORD SlotNo;
+	DWORD TargetID;
+	DWORD LUN;
+} NDAS_SCSI_LOCATION, *PNDAS_SCSI_LOCATION;
+
+#ifdef __cplusplus
+__inline BOOL IsInvalidNdasScsiLocation(CONST NDAS_SCSI_LOCATION& loc)
+#else
+__inline BOOL IsInvalidNdasScsiLocation(NDAS_SCSI_LOCATION loc)
+#endif
+{ return (loc.SlotNo == 0); }
+
+/* NDAS Logical Device Status */
+
+typedef DWORD NDAS_LOGICALDEVICE_STATUS;
+
+#define NDAS_LOGICALDEVICE_STATUS_UNKNOWN         0x0000
+#define NDAS_LOGICALDEVICE_STATUS_UNMOUNTED       0x0001
+#define NDAS_LOGICALDEVICE_STATUS_MOUNT_PENDING   0x0002
+#define NDAS_LOGICALDEVICE_STATUS_MOUNTED         0x0003
+#define NDAS_LOGICALDEVICE_STATUS_UNMOUNT_PENDING 0x0004
+#define NDAS_LOGICALDEVICE_STATUS_NOT_MOUNTABLE   0x00FF
+#define NDAS_LOGICALDEVICE_STATUS_NOT_INITIALIZED 0xFFFF
+// #define NDAS_LOGICALDEVICE_STATUS_ADAPTER_ERROR 0xFF00
+
+/* NDAS Logical Device Error */
+
+typedef DWORD NDAS_LOGICALDEVICE_ERROR;
+
+#define NDAS_LOGICALDEVICE_ERROR_NONE           0x0000
+#define NDAS_LOGICALDEVICE_ERROR_FROM_DRIVER    0xFF20
+#define NDAS_LOGICALDEVICE_ERROR_MISSING_MEMBER 0xFF30
+#define NDAS_LOGICALDEVICE_ERROR_INVALID_MEMBER 0xFF40
+
+/* NDAS Logical Device Type */
+
+typedef DWORD NDAS_LOGICALDEVICE_TYPE;
+
+#define NDAS_LOGICALDEVICE_TYPE_UNKNOWN			0x0000
+// #define NDAS_LOGICALDEVICE_TYPE_DISK            0x0010
+#define NDAS_LOGICALDEVICE_TYPE_DISK_SINGLE     0x0011
+#define NDAS_LOGICALDEVICE_TYPE_DISK_MIRRORED   0x0012
+#define NDAS_LOGICALDEVICE_TYPE_DISK_AGGREGATED 0x0013
+#define NDAS_LOGICALDEVICE_TYPE_DISK_RAID0     0x0014
+#define NDAS_LOGICALDEVICE_TYPE_DISK_RAID1     0x0015
+#define NDAS_LOGICALDEVICE_TYPE_DISK_RAID4     0x0016
+#define NDAS_LOGICALDEVICE_TYPE_DISK_AOD		0x0017
+
+#define IS_NDAS_LOGICALDEVICE_TYPE_DISK_GROUP(x) \
+	(0x0010 <= (x) && (x) <= 0x0019)
+
+#define NDAS_LOGICALDEVICE_TYPE_DVD             0x0020
+#define NDAS_LOGICALDEVICE_TYPE_VIRTUAL_DVD     0x002F
+
+#define IS_NDAS_LOGICALDEVICE_TYPE_DVD_GROUP(x) \
+	((NDAS_LOGICALDEVICE_TYPE_DVD & (x)) == NDAS_LOGICALDEVICE_TYPE_DVD)
+
+#define NDAS_LOGICALDEVICE_TYPE_MO              0x0030
+#define NDAS_LOGICALDEVICE_TYPE_FLASHCARD       0x0040
+
+/* NDAS Logical Device Params */
+
+typedef struct _NDAS_LOGICALDEVICE_PARAMS {
+	union {
+		struct {
+			DWORD CurrentMaxRequestBlocks;
+		};
+		UCHAR Reserved[64];
+	};
+} NDAS_LOGICALDEVICE_PARAMS, *PNDAS_LOGICALDEVICE_PARAMS;
+
+/* NDAS Device Hardware Information */
+
+#define NDHI_NONE	 0x0000
+#define NDHI_TYPE	 0x0001
+#define NDHI_VERSION 0x0002
+#define NDHI_EXT	 0x0004
+#define NDHI_ALL	 0xFFFF
+
+typedef struct _NDAS_DEVICE_HW_INFORMATION
+{
+	DWORD fMask;
+	DWORD dwHwType;
+	DWORD dwHwVersion;
+	DWORD nSlots;
+	DWORD nTargets;
+	DWORD nMaxTargets;
+	DWORD nMaxLUs;
+	DWORD nMaxRequestBlocks;
+	struct {
+		WORD IsSet;
+		BYTE Node[6];
+	} MACAddress;
+	LPBYTE Reserved[64 - 4 * 8 - 8];
+} NDAS_DEVICE_HW_INFORMATION, *PNDAS_DEVICE_HW_INFORMATION;
+
+#ifdef STRICT
+typedef void *HANDLE;
+#define DECLARE_HANDLE(name) struct name##__ { int unused; }; typedef struct name##__ *name
+#else
+typedef PVOID HANDLE;
+#define DECLARE_HANDLE(name) typedef HANDLE name
+#endif
+
+DECLARE_HANDLE(HNDAS);
+
+#define NDAS_CONNECTION_INFO_TYPE_MAC_ADDRESS			0 // 6 bytes
+#define NDAS_CONNECTION_INFO_TYPE_IDW					1 // (20 + 5) * sizeof(WCHAR)
+#define NDAS_CONNECTION_INFO_TYPE_IDA					2 // (20 + 5) * sizeof(CHAR)
+#define NDAS_CONNECTION_INFO_TYPE_IP_ADDRESS			3 // 4 bytes, not supported yet
+
+typedef DWORD NDAS_CONNECTION_INFO_TYPE;
+
+typedef struct _NDAS_CONNECTION_INFO
+{
+	NDAS_CONNECTION_INFO_TYPE type;
+	DWORD	UnitNo;							// Number of Unit which is attached to NDAS device
+	BOOL	bWriteAccess;					// non-zero to connect with read-write mode
+	UINT64	ui64OEMCode;
+	DWORD	protocol;
+	union	{
+		BYTE	MacAddress[6];
+		struct {
+			WCHAR	wszDeviceStringId[20];
+			WCHAR	wszDeviceStringKey[5];
+		};
+		struct{
+			CHAR	szDeviceStringId[20];
+			CHAR	szDeviceStringKey[5];
+		};
+		BYTE	IP[4];
+	};
+} NDAS_CONNECTION_INFO, *PNDAS_CONNECTION_INFO;
+
+typedef struct _NDAS_DEVICE_INFO
+{
+	BYTE			HWType;
+	BYTE			HWVersion;
+	BYTE			HWProtoType;
+	BYTE			HWProtoVersion;
+	UINT32			iNumberofSlot;
+	UINT32			iMaxBlocks;
+	UINT32			iMaxTargets;
+	UINT32			iMaxLUs;
+	UINT16			iHeaderEncryptAlgo;
+	UINT16			iDataEncryptAlgo;
+} NDAS_DEVICE_INFO, *PNDAS_DEVICE_INFO;
+
+typedef struct _NDAS_UNIT_DEVICE_INFO
+{
+	UINT64			SectorCount;
+	BOOL			bLBA;
+	BOOL			bLBA48;
+	BOOL			bPIO;
+	BOOL			bDma;
+	BOOL			bUDma;
+	BYTE			Model[40];
+	BYTE			FwRev[8];
+	BYTE			SerialNo[20];
+	WORD			MediaType;
+} NDAS_UNIT_DEVICE_INFO, *PNDAS_UNIT_DEVICE_INFO;
+
+typedef struct _NDAS_UNIT_DEVICE_DYN_INFO
+{
+	UINT32			iNRTargets;
+	BOOL			bPresent;
+	UINT32			NRRWHost;
+	UINT32			NRROHost;
+	UINT64			TargetData;
+} NDAS_UNIT_DEVICE_DYN_INFO, *PNDAS_UNIT_DEVICE_DYN_INFO;
+
+//
+// If you are to change the following structure fields,
+// you should modify the following function:
+//
+// BOOL ConvertWideToAnsi(
+//	const PNDAS_UNITDEVICE_HW_INFORMATIONW pDataW, 
+//	PNDAS_UNITDEVICE_HW_INFORMATIONA pDataA)
+//
+
+/* NDAS Unit Device Hardware Information */
+
+#define NDUHI_NONE	0x0000
+#define NDUHI_ALL	0xFFFF
+
+#define NDAS_UNITDEVICE_MEDIA_TYPE_UNKNOWN_DEVICE		0 // Unknown(not supported)
+#define NDAS_UNITDEVICE_MEDIA_TYPE_BLOCK_DEVICE			1 // Non-packet mass-storage device (HDD)
+#define NDAS_UNITDEVICE_MEDIA_TYPE_COMPACT_BLOCK_DEVICE 2 // Non-packet compact storage device (Flash card)
+#define NDAS_UNITDEVICE_MEDIA_TYPE_CDROM_DEVICE			3 // CD-ROM device (CD/DVD)
+#define NDAS_UNITDEVICE_MEDIA_TYPE_OPMEM_DEVICE			4 // Optical memory device (MO)
+
+typedef WORD NDAS_UNITDEVICE_MEDIA_TYPE;
+
+typedef struct _NDAS_UNITDEVICE_HW_INFORMATIONA
+{
+	DWORD fMask;
+	BOOL bLBA;
+	BOOL bLBA48;
+	BOOL bPIO;
+	BOOL bDMA;
+	BOOL bUDMA;
+	NDAS_UNITDEVICE_MEDIA_TYPE MediaType;
+	DWORD nROHosts;
+	DWORD nRWHosts;
+	CHAR szModel[40 + 1];
+	CHAR szFwRev[8 + 1];
+	CHAR szSerialNo[40 + 1];
+	DWORD SectorCountLowPart;
+	DWORD SectorCountHighPart;
+} NDAS_UNITDEVICE_HW_INFORMATIONA, *PNDAS_UNITDEVICE_HW_INFORMATIONA;
+
+typedef struct _NDAS_UNITDEVICE_HW_INFORMATIONW
+{
+	BOOL bLBA;
+	BOOL bLBA48;
+	BOOL bPIO;
+	BOOL bDMA;
+	BOOL bUDMA;
+	NDAS_UNITDEVICE_MEDIA_TYPE MediaType;
+	DWORD nROHosts;
+	DWORD nRWHosts;
+	WCHAR szModel[40 + 1];
+	WCHAR szFwRev[8 + 1];
+	WCHAR szSerialNo[40 + 1];
+	DWORD SectorCountLowPart;
+	DWORD SectorCountHighPart;
+} NDAS_UNITDEVICE_HW_INFORMATIONW, *PNDAS_UNITDEVICE_HW_INFORMATIONW;
+
+#ifdef UNICODE
+#define NDAS_UNITDEVICE_HW_INFORMATION NDAS_UNITDEVICE_HW_INFORMATIONW
+#define PNDAS_UNITDEVICE_HW_INFORMATION PNDAS_UNITDEVICE_HW_INFORMATIONW
+#else
+#define NDAS_UNITDEVICE_HW_INFORMATION NDAS_UNITDEVICE_HW_INFORMATIONA
+#define PNDAS_UNITDEVICE_HW_INFORMATION PNDAS_UNITDEVICE_HW_INFORMATIONA
+#endif
+
+/* NDAS Device Parameters */
+
+/* Backport from 3.11 */
+#define NDAS_DEVICE_REG_FLAG_NONE            0x00000000
+#define NDAS_DEVICE_REG_FLAG_VOLATILE        0x00000001 /* 3.11 */
+#define NDAS_DEVICE_REG_FLAG_HIDDEN          0x00000002 /* 3.11 */
+#define NDAS_DEVICE_REG_FLAG_AUTO_REGISTERED 0x00010000 /* 3.10 */
+
+typedef struct _NDAS_DEVICE_PARAMS
+{
+	union {
+		struct {
+			DWORD RegFlags; /* 3.11 already have this flag */
+		};
+		UCHAR Reserved[64];
+	};
+
+} NDAS_DEVICE_PARAMS, *PNDAS_DEVICE_PARAMS;
+
+/* NDAS Unit Device Parameters */
+
+/* Flags for Ndas Unit Device Parameters
+* Each field of NDAS_DEVICE_PARAMS is valid only if the corresponding
+* flag is set. This is due to the backward compatibility support.
+*/
+
+#define NDAS_UDPF_NONE 0x00000000
+
+typedef struct _NDAS_UNITDEVICE_PARAMS
+{
+	union {
+		struct {
+			DWORD Flags;
+		};
+		UCHAR Reserved[64];
+	};
+
+} NDAS_UNITDEVICE_PARAMS, *PNDAS_UNITDEVICE_PARAMS;
+
+//////////////////////////////////////////////////////////////////////////
+//
+//	Append only disk parameters
+//
+typedef struct _NDAS_AOD_DIBPARAMS {
+	UINT64	NadSblockLoc;
+	UINT32	NadSblockLen;
+}	NDAS_AOD_DIBPARAMS, *PNDAS_AOD_DIBPARAMS;
+
+#endif /* _NDAS_TYPE_H_ */
+
+/* End of packing */
+#include <poppack.h>
+

@@ -1,0 +1,34 @@
+TARGETNAME=filespy
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+USE_MAPSYM=1
+
+TARGETLIBS=\
+    ..\lib\$(O)\filespyLib.lib
+
+INCLUDES=..\LfsFiltLib
+
+SOURCES=filespy.c  \
+        fspyLib.c  \
+        fspyCtx.c  \
+        fspyHash.c \
+        filespy.rc
+
+TARGETNAME=PurgeFilter
+TARGETPATH=..\sysNexe\$(BUILD_ALT_DIR)
+
+C_DEFINES=$(C_DEFINES) -D__LSFILTER__
+
+TARGETLIBS=\
+    ..\..\lib\$(BUILD_ALT_DIR)\*\LfsFiltLib.lib			\
+	..\..\lib\chk_w2k_x86\*\W2kFatLib.lib				\
+	..\..\lib\chk_wxp_x86\*\WxpFatLib.lib				\
+	..\..\lib\chk_wnet_x86\*\WnetFatLib.lib				\
+	..\..\lib\chk_w2k_x86\*\W2kNtfsLib.lib				\
+	..\..\lib\chk_wxp_x86\*\WxpNtfsLib.lib
+
+INCLUDES=$(INCLUDES);..\WxpNtfsLib;..\WxpFatLib;..\W2kFatLib;..\W2kNtfsLib;..\WnetFatLib
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n

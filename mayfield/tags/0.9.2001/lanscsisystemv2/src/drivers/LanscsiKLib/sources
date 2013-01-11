@@ -1,0 +1,42 @@
+TARGETNAME=lanscsiklib
+TARGETTYPE=DRIVER_LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=lanscsiklib
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+!IF	"$(DDKBUILDENV)"=="chk"
+
+#TARGETLIBS=..\..\lib\$(BUILD_ALT_DIR)\*\LpxTdi.lib;..\..\lib\Debug\Hash.lib
+
+!ELSE
+
+#TARGETLIBS=..\..\lib\$(BUILD_ALT_DIR)\*\LpxTdi.lib;..\..\lib\Release\Hash.lib
+
+!ENDIF
+
+#C_DEFINES = -D__NDASCHIP20_ALPHA_SUPPORT__ $(C_DEFINES) 
+#C_DEFINES = -D__SPINLOCK_DEBUG__ $(C_DEFINES) 
+#C_DEFINES = -D__DETECT_CABLE80__ $(C_DEFINES) 
+C_DEFINES = -D__BSRECORDER_HACK__ $(C_DEFINES)
+#C_DEFINES = -D__DVD_ENCRYPT_CONTENT__ $(C_DEFINES)
+
+# include drivers.mak right before SOURCES
+!INCLUDE "..\inc\drivers.mak"
+
+INCLUDES=..\inc;..\inc\kernel
+
+SOURCES= LSCcb.c \
+		LSLurn.c \
+		LSLurnAssoc.c \
+		LSLurnIde.c \
+		LSProto.c \
+		LSProtoIde.c \
+		LSTransport.c \
+		KDebug.c
+
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_DRIVER_LIB_PATH)\$(TARGETNAME).lib}

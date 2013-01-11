@@ -1,0 +1,30 @@
+TARGETNAME=ndasportwmi
+TARGETPATH=obj
+TARGETTYPE=PROGRAM
+
+UMTYPE=console
+UMENTRY=wmain
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Ox
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+INCLUDES=..\inc;$(DDK_INC_PATH);$(NDAS_DRIVER_INC_PATH);$(NDAS_INC_PATH)
+
+SOURCES=\
+	ndasportwmieventconsumer.cpp \
+	ndasportwmieventsink.cpp 
+
+TARGETLIBS=$(TARGETLIBS) \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\uuid.lib \
+	$(PSDK_LIB_PATH)\wbemuuid.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	
+!INCLUDE $(ATL_SOURCES_INC)
+

@@ -1,0 +1,1075 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="ndasbind" version="3.20.1519" lang="chs" oem="digilandint" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/13/09">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>安装的NDASUSER.DLL不相容。\r\n请检查软件安装。</translation>
+  </string>
+  <string id="/STR/13/10">
+    <base><![CDATA[Incompatible NDASCOMM.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>安装的NDASCOMM.DLL不相容。\r\n请检查软件安装。</translation>
+  </string>
+  <string id="/STR/18/14">
+    <base><![CDATA[%1!3d!.%2!02d! GB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/19/02">
+    <base>A disk cannot be mirrored by the smaller disk in size.</base>
+    <translation>镜像盘的容量不可以不同。</translation>
+  </string>
+  <string id="/STR/20/05">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation>NDAS 合并管理</translation>
+  </string>
+  <string id="/STR/20/07">
+    <base><![CDATA[Component]]></base>
+    <translation>组件</translation>
+  </string>
+  <string id="/STR/20/08">
+    <base><![CDATA[Version]]></base>
+    <translation>版本</translation>
+  </string>
+  <string id="/STR/20/11">
+    <base><![CDATA[Name]]></base>
+    <translation>名称</translation>
+  </string>
+  <string id="/STR/20/12">
+    <base><![CDATA[NDAS ID]]></base>
+    <translation>NDAS装置码</translation>
+  </string>
+  <string id="/STR/20/13">
+    <base><![CDATA[Capacity]]></base>
+    <translation>容量</translation>
+  </string>
+  <string id="/STR/20/14">
+    <base><![CDATA[Number]]></base>
+    <translation>号码</translation>
+  </string>
+  <string id="/STR/21/06">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation>NDAS 合并管理</translation>
+  </string>
+  <string id="/STR/22/02">
+    <base><![CDATA[NDAS Bind Error]]></base>
+    <translation>NDAS 合并错误</translation>
+  </string>
+  <string id="/STR/22/03">
+    <base>Failed to convert the selected disk to a basic disk.</base>
+    <translation>对选择的盘转成单一盘失败。</translation>
+  </string>
+  <string id="/STR/22/09">
+    <base>Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!</base>
+    <translation>设备︰ NDAS 0x%1!04X!\r\n错误码︰%2!u! (0x%2!04X!)\r\n%3!s!</translation>
+  </string>
+  <string id="/STR/22/10">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation>错误码︰ %1!u! (0x%1!04X!)\r\n%2!s!</translation>
+  </string>
+  <string id="/STR/22/11">
+    <base><![CDATA[All of the data will be lost once the disks are bound. Are you sure you want to bind the disks?]]></base>
+    <translation>当合并后所有的数据将会失去。想要合并吗﹖</translation>
+  </string>
+  <string id="/STR/22/12">
+    <base><![CDATA[Some version of Windows cannot access a disk larger than 2 TBytes and the size of bound disks is larger than the limit. Do you want to continue?]]></base>
+    <translation>有些版本的Windows不能跨越2TB硬盘容量，无法访问</translation>
+  </string>
+  <string id="/STR/23/00">
+    <base>%1!s! does not have Write access privilege. The NDAS device's Write Key is required to be registered to gain Write access.</base>
+    <translation>%1!s! 没有写权。NDAS 需要注册写钥才有写权。</translation>
+  </string>
+  <string id="/STR/23/05">
+    <base><![CDATA[All of the data will be lost once the disks are unbound. Are you sure you want to unbind the disks?]]></base>
+    <translation>当解除合并后所有的数据将会失去。想要解除合并吗﹖</translation>
+  </string>
+  <string id="/STR/23/06">
+    <base>Selected disks are successfully unbound. You must first mount and then format each of the unbound disks before using them.</base>
+    <translation>选择的盘已成功取消合并。必需要重新装配和格式化才能再用。</translation>
+  </string>
+  <string id="/STR/23/08">
+    <base>A problem occurred while operating on the NDAS device '%1!s!'.</base>
+    <translation>操作 NDAS 装置 '%1!s!' 时出现问题。</translation>
+  </string>
+  <string id="/STR/23/09">
+    <base>A problem occurred while operating on the NDAS devices.</base>
+    <translation>操作 NDAS 装置时出现问题。</translation>
+  </string>
+  <string id="/STR/24/00">
+    <base>Bind type</base>
+    <translation>合并种类</translation>
+  </string>
+  <string id="/STR/24/01">
+    <base><![CDATA[Striped Disk (RAID-0)]]></base>
+    <translation>条带化硬磁盘(RAID 0)</translation>
+  </string>
+  <string id="/STR/24/02">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation>镜像硬盘(RAID-1) （淘汰）</translation>
+  </string>
+  <string id="/STR/24/03">
+    <base><![CDATA[RAID-2 Disk]]></base>
+    <translation>RAID 2 硬盘</translation>
+  </string>
+  <string id="/STR/24/04">
+    <base><![CDATA[RAID-3 Disk]]></base>
+    <translation>RAID 3 硬盘</translation>
+  </string>
+  <string id="/STR/24/05">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation>RAID 4 硬盘（淘汰）</translation>
+  </string>
+  <string id="/STR/24/06">
+    <base><![CDATA[RAID-5 Disk]]></base>
+    <translation>RAID 5 硬盘</translation>
+  </string>
+  <string id="/STR/24/07">
+    <base>Aggregated Disk</base>
+    <translation>集成盘</translation>
+  </string>
+  <string id="/STR/24/08">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Compact Flash 盘</translation>
+  </string>
+  <string id="/STR/24/09">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation>DVD 盘</translation>
+  </string>
+  <string id="/STR/24/10">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation>镜像硬盘</translation>
+  </string>
+  <string id="/STR/24/11">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>磁光盘</translation>
+  </string>
+  <string id="/STR/24/12">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation>基本盘 (单一)</translation>
+  </string>
+  <string id="/STR/24/13">
+    <base>Unknown Type (0x%1!08X!)</base>
+    <translation>不知名种类 (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/24/14">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation>虚拟 DVD 盘</translation>
+  </string>
+  <string id="/STR/25/02">
+    <base><![CDATA[Device not found]]></base>
+    <translation>找不到装置</translation>
+  </string>
+  <string id="/STR/25/03">
+    <base><![CDATA[Status]]></base>
+    <translation>状态</translation>
+  </string>
+  <string id="/STR/25/04">
+    <base><![CDATA[RAID status]]></base>
+    <translation>RAID 状态</translation>
+  </string>
+  <string id="/STR/25/05">
+    <base><![CDATA[Comment]]></base>
+    <translation>评论</translation>
+  </string>
+  <string id="/STR/25/07">
+    <base><![CDATA[Yes]]></base>
+    <translation>是</translation>
+  </string>
+  <string id="/STR/25/08">
+    <base><![CDATA[No]]></base>
+    <translation>否</translation>
+  </string>
+  <string id="/STR/25/09">
+    <base><![CDATA[Missing Member]]></base>
+    <translation>盘组组员不在</translation>
+  </string>
+  <string id="/STR/25/10">
+    <base>Yes (Need Resynchronizing)</base>
+    <translation>是 (需要重同步)</translation>
+  </string>
+  <string id="/STR/25/12">
+    <base><![CDATA[Offline]]></base>
+    <translation>离线</translation>
+  </string>
+  <string id="/STR/25/13">
+    <base><![CDATA[In use]]></base>
+    <translation>在使用中</translation>
+  </string>
+  <string id="/STR/25/14">
+    <base><![CDATA[No Write Key]]></base>
+    <translation>没有写锁</translation>
+  </string>
+  <string id="/STR/25/15">
+    <base><![CDATA[Ready]]></base>
+    <translation>就绪</translation>
+  </string>
+  <string id="/STR/26/00">
+    <base><![CDATA[Migrates mirrored disks to recoverable disks\nMigrate]]></base>
+    <translation>移植镜像硬盘到另一个进行修复\n移植</translation>
+  </string>
+  <string id="/STR/26/01">
+    <base><![CDATA[Disabled]]></base>
+    <translation>禁用</translation>
+  </string>
+  <string id="/STR/26/02">
+    <base><![CDATA[Do you want to unbind the following disks?]]></base>
+    <translation>解除合并吗？</translation>
+  </string>
+  <string id="/STR/26/03">
+    <base>Selected disks are successfully unbound.</base>
+    <translation>被选择的盘已经成功取消合并。</translation>
+  </string>
+  <string id="/STR/27/06">
+    <base><![CDATA[NDAS Bind Wizard]]></base>
+    <translation>NDAS合并向导</translation>
+  </string>
+  <string id="/STR/27/07">
+    <base>Select Bind Type</base>
+    <translation>选择合并种类</translation>
+  </string>
+  <string id="/STR/27/08">
+    <base>You can select the bind type.</base>
+    <translation>您可以选择合并种类。</translation>
+  </string>
+  <string id="/STR/27/09">
+    <base>Select Disk</base>
+    <translation>选择盘</translation>
+  </string>
+  <string id="/STR/27/10">
+    <base>You can select the disks to be bound.</base>
+    <translation>您可以选择需要进行合并的盘。</translation>
+  </string>
+  <string id="/STR/27/13">
+    <base><![CDATA[Verdana]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/27/14">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/28/01">
+    <base>You have successfully completed the Disk Bind Wizard. You must first mount and then format the bound disks before using them.</base>
+    <translation>您已成功完成盘的合并，您必需要装配和格式化已合并的盘才能使用。</translation>
+  </string>
+  <string id="/STR/28/02">
+    <base>You have failed to bind disks.</base>
+    <translation>盘合并失败。</translation>
+  </string>
+  <string id="/STR/28/03">
+    <base><![CDATA[Bind Type: %1!s!]]></base>
+    <translation>合并种类: %1!s!</translation>
+  </string>
+  <string id="/STR/28/04">
+    <base><![CDATA[Disks selected:]]></base>
+    <translation>选择的盘:</translation>
+  </string>
+  <string id="/STR/28/05">
+    <base><![CDATA[Disks size: %1!s!]]></base>
+    <translation>盘容量: %1!s!</translation>
+  </string>
+  <string id="/STR/28/06">
+    <base>Failed device: %1!s!</base>
+    <translation>装置失败: %1!s!</translation>
+  </string>
+  <string id="/STR/28/07">
+    <base>An aggregated disk is made up of more than one disks. Create an aggregated disk if you need a disk that is too large for a basic disk.</base>
+    <translation>一个集成盘由多于一个盘所组成，您可以创建集成盘，如果需要更大的容量。</translation>
+  </string>
+  <string id="/STR/28/08">
+    <base>A striped disk (RAID-0) stores data in stripes on two or more disks. A striped disk gives you faster access to your data than a basic or aggregated volume.</base>
+    <translation>一个 striped 盘 (RAID-0) 存储在2个或者以上的盘数，一个 striped 盘的存储速度可以比基本盘和集成盘更快。</translation>
+  </string>
+  <string id="/STR/28/09">
+    <base>A mirrored disk (RAID-1) duplicates your data on two disks. Create a mirrored disk if you want to keep two separate copies of all your information to prevent data loss.</base>
+    <translation>一个镜像盘 (RAID-1) 复製资料在2个盘上。如果您想要保护您的资料，可创建镜像。</translation>
+  </string>
+  <string id="/STR/28/10">
+    <base>A RAID-4 disk stores data in stripes on three or more disks. It provides a way of recovering data if part of the data is lost.</base>
+    <translation>一个 RAID-4 盘可以存储资料在3个或者以的盘数，它可以提供一个资料恢復。</translation>
+  </string>
+  <string id="/STR/28/11">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation>镜像硬盘(RAID-1) （淘汰）</translation>
+  </string>
+  <string id="/STR/28/12">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation>RAID 4 硬盘（淘汰）</translation>
+  </string>
+  <string id="/STR/28/13">
+    <base><![CDATA[Mirrored Disk (RAID-1)]]></base>
+    <translation>镜像硬盘(RAID-1) </translation>
+  </string>
+  <string id="/STR/28/14">
+    <base><![CDATA[RAID-4 Disk]]></base>
+    <translation>RAID 4 硬盘 </translation>
+  </string>
+  <string id="/STR/28/15">
+    <base><![CDATA[Not registered]]></base>
+    <translation>未注册</translation>
+  </string>
+  <string id="/STR/29/01">
+    <base><![CDATA[Failed to migrate.]]></base>
+    <translation>移植失败。</translation>
+  </string>
+  <string id="/STR/29/02">
+    <base><![CDATA[Requested operation cannot be processed while the NDAS device is offline or in use in other hosts.]]></base>
+    <translation>由于NDAS设备不在。任务无法执行。</translation>
+  </string>
+  <string id="/STR/68/06">
+    <base><![CDATA[Press the start button to continue.]]></base>
+    <translation>按开始以继续。</translation>
+  </string>
+  <string id="/STR/68/07">
+    <base>Synchronizing devices...</base>
+    <translation>装置同步化中...</translation>
+  </string>
+  <string id="/STR/68/08">
+    <base>Synchronization completed.</base>
+    <translation>同步化已完成。</translation>
+  </string>
+  <string id="/STR/68/09">
+    <base><![CDATA[Failed to synchronize devices.]]></base>
+    <translation>无法同步</translation>
+  </string>
+  <string id="/STR/68/10">
+    <base>Add mirror disk</base>
+    <translation>增加镜像盘</translation>
+  </string>
+  <string id="/STR/68/13">
+    <base>Adds a spare disk to the fault tolerant RAID disk group.\nAdd Spare Disk</base>
+    <translation>增加一个备用盘到容错 RAID 盘组。\n增加备用盘</translation>
+  </string>
+  <string id="/STR/68/14">
+    <base><![CDATA[Removes a spare disk from the fault tolerant RAID disk group.\nRemove Spare Disk]]></base>
+    <translation>从容错 RAID 盘组中移除一个备用盘。\n移除备用盘</translation>
+  </string>
+  <string id="/STR/69/05">
+    <base>Select a spare disk</base>
+    <translation>选择一个备用盘</translation>
+  </string>
+  <string id="/STR/69/06">
+    <base>Select a disk to be used as a spare disk for the RAID</base>
+    <translation>选择的盘将会成为一个备用盘给 RAID</translation>
+  </string>
+  <string id="/STR/69/08">
+    <base>The disk is too small to be used as a spare disk.</base>
+    <translation>盘的容量太小，不能成为备用盘。</translation>
+  </string>
+  <string id="/STR/69/09">
+    <base>Select a mirror disk</base>
+    <translation>选择一个镜像盘</translation>
+  </string>
+  <string id="/STR/69/10">
+    <base>Select a backup disk to make a mirror.</base>
+    <translation>选择一个备份盘来製作镜像。</translation>
+  </string>
+  <string id="/STR/69/11">
+    <base><![CDATA[Unbind]]></base>
+    <translation>取消合并</translation>
+  </string>
+  <string id="/STR/69/12">
+    <base><![CDATA[Data on the following disks will be deleted.\nAre you sure you want to unbind them?]]></base>
+    <translation>以下盘的资料将会被删除。\n您确定想要解除合并吗﹖</translation>
+  </string>
+  <string id="/STR/69/13">
+    <base>Replace the selected device in RAID with another one.</base>
+    <translation>对选择的装置的 RAID 用另一个来替换。</translation>
+  </string>
+  <string id="/STR/69/14">
+    <base><![CDATA[Use this device as RAID member.]]></base>
+    <translation>成为RAID组员</translation>
+  </string>
+  <string id="/STR/69/15">
+    <base>The requested operation has not succeeded.</base>
+    <translation>需求的操作没有成功。</translation>
+  </string>
+  <string id="/STR/70/00">
+    <base>Removing a spare disk</base>
+    <translation>备用盘移除当中</translation>
+  </string>
+  <string id="/STR/70/01">
+    <base>Are you sure you want to remove the selected spare disk?</base>
+    <translation>您确定需要移除被选择的备用盘吗﹖</translation>
+  </string>
+  <string id="/STR/70/02">
+    <base><![CDATA[Convert to the Basic Disk]]></base>
+    <translation>转成基本盘</translation>
+  </string>
+  <string id="/STR/70/03">
+    <base>All of the data will be lost once the disk is reset to a basic disk. Would you like to continue?</base>
+    <translation>所有资料将会失去，如果重置为基本盘。需要继续吗﹖</translation>
+  </string>
+  <string id="/STR/70/14">
+    <base>Select a replace disk</base>
+    <translation>选择一个替换盘</translation>
+  </string>
+  <string id="/STR/70/15">
+    <base><![CDATA[Select a disk to be used as a replacement.]]></base>
+    <translation>选择一个用于替换的盘</translation>
+  </string>
+  <string id="/STR/71/00">
+    <base>Replace a hard drive</base>
+    <translation>替换一个硬盘</translation>
+  </string>
+  <string id="/STR/71/01">
+    <base><![CDATA[Press OK if you want to replace a missing drive with new one.]]></base>
+    <translation>按确定以替换新盘</translation>
+  </string>
+  <string id="/STR/71/02">
+    <base><![CDATA[Migrate]]></base>
+    <translation>移植</translation>
+  </string>
+  <string id="/STR/71/03">
+    <base><![CDATA[Previous version of NDAS software may not be able to use these devices after migration.\nAre you sure you want to migrate them?]]></base>
+    <translation>移植后旧版本的NDAS软件将不能使用。\n确定要移植吗？</translation>
+  </string>
+  <string id="/STR/71/04">
+    <base><![CDATA[Reset bind information to remove unrecognized bind information.]]></base>
+    <translation>合并信息复位。</translation>
+  </string>
+  <string id="/STR/71/05">
+    <base><![CDATA[Clear defective flag from the disk.]]></base>
+    <translation>去除故障的标记</translation>
+  </string>
+  <string id="/STR/71/06">
+    <base><![CDATA[Remove disk from RAID set. Disk type is not changed.]]></base>
+    <translation>将盘从盘组中取出，盘种没变。</translation>
+  </string>
+  <string id="/STR/71/07">
+    <base><![CDATA[Remove disk from RAID set and convert it to basic disk.]]></base>
+    <translation>将盘从盘组中取出，后转换成基本盘。</translation>
+  </string>
+  <string id="/STR/71/08">
+    <base><![CDATA[Cannot replace the selected disk. \nReplacement will break RAID.]]></base>
+    <translation>无法更换该盘。\n这会破坏盘组。</translation>
+  </string>
+  <string id="/STR/71/09">
+    <base><![CDATA[Not all member disks are accessible.\nChanging RAID configuration with missing member can make RAID fail.\nDo you want to continue?]]></base>
+    <translation>无法访问所有盘组组员\n更改RAID设置会令它损坏。您要继续吗？</translation>
+  </string>
+  <string id="/STR/71/10">
+    <base><![CDATA[The disk is too small to be used as this RAID member.]]></base>
+    <translation>盘的容量太小，不能用在这RAID上。</translation>
+  </string>
+  <string id="/STR/71/11">
+    <base><![CDATA[The data of this disk will be lost and if this disk is a member of another RAID, it may be broken.Do you want to continue?]]></base>
+    <translation>此盘的数据将会失去；如果是属于另一个RAID的话，RAID可能遭损坏。您要继续吗？</translation>
+  </string>
+  <string id="/STR/71/12">
+    <base><![CDATA[RAID containing this disk may be broken after this operation. Do you want to continue?]]></base>
+    <translation>此盘加入之后，可能导致RAID损坏。您要继续吗？</translation>
+  </string>
+  <string id="/STR/71/13">
+    <base><![CDATA[Cannot remove the selected disk.\nIt will break RAID.]]></base>
+    <translation>无法除去该盘。\n这会破坏盘组。</translation>
+  </string>
+  <string id="/STR/71/14">
+    <base><![CDATA[Not all member disks are accessible.]]></base>
+    <translation>无法访问所有盘组组员</translation>
+  </string>
+  <string id="/STR/71/15">
+    <base><![CDATA[Corrupted RAID information]]></base>
+    <translation>RAID信息毁坏</translation>
+  </string>
+  <string id="/STR/72/00">
+    <base><![CDATA[Member of another RAID]]></base>
+    <translation>另一个盘组组员</translation>
+  </string>
+  <string id="/STR/72/02">
+    <base><![CDATA[Read failure]]></base>
+    <translation>阅读失败</translation>
+  </string>
+  <string id="/STR/72/03">
+    <base><![CDATA[Not a RAID member]]></base>
+    <translation>非RAID组员</translation>
+  </string>
+  <string id="/STR/72/04">
+    <base><![CDATA[Bad disk]]></base>
+    <translation>故障硬盘</translation>
+  </string>
+  <string id="/STR/72/05">
+    <base><![CDATA[Bad sector found]]></base>
+    <translation>找到不良扇区</translation>
+  </string>
+  <string id="/STR/72/06">
+    <base><![CDATA[Unknown defect]]></base>
+    <translation>不名故障</translation>
+  </string>
+  <string id="/STR/72/07">
+    <base><![CDATA[Out-of-sync]]></base>
+    <translation>不同步</translation>
+  </string>
+  <string id="/STR/72/08">
+    <base><![CDATA[Spare disk]]></base>
+    <translation>备用盘</translation>
+  </string>
+  <string id="/STR/72/09">
+    <base><![CDATA[RAID information on this disk is corrupted. \nTry "%1!s!" menu.]]></base>
+    <translation>RAID信息损坏。\n式看 "%1!s!" 菜单。</translation>
+  </string>
+  <string id="/STR/72/11">
+    <base><![CDATA[Cannot read. Replace disk or remove from RAID]]></base>
+    <translation>无法正常访问。将硬盘更换或除去</translation>
+  </string>
+  <string id="/STR/72/12">
+    <base><![CDATA[Reconfigure RAID members.]]></base>
+    <translation>重新配置RAID组员。</translation>
+  </string>
+  <string id="/STR/72/13">
+    <base><![CDATA[Replace bad disk with new one and run "%1!s!" menu\n or use "%2!s!" menu to ignore defect and retry]]></base>
+    <translation>替换一个硬盘然后执行 "%1!s!" 菜单\n 或用 "%2!s!" 来忽略故障，然后重试</translation>
+  </string>
+  <string id="/STR/72/14">
+    <base><![CDATA[Data of this disk is out of sync with another RAID member's data.]]></base>
+    <translation>此盘的数据与另一个RAID组员非同步。</translation>
+  </string>
+  <string id="/STR/72/15">
+    <base><![CDATA[This disk will be used as active RAID member when any of other member fails.]]></base>
+    <translation>任何一个RAID组员失灵的话，此盘将会成为活跃硬盘。</translation>
+  </string>
+  <string id="/STR/73/00">
+    <base><![CDATA[This disk may be configured by higher version of NDAS software.\n Use "%1!s!" menu to convert to a single disk]]></base>
+    <translation>此盘曾被较高版本的NDAS软件配置过。\n用 "%1!s!" 菜单改用为单独硬盘。 </translation>
+  </string>
+  <string id="/STR/73/01">
+    <base><![CDATA[Migration required]]></base>
+    <translation>需要移植</translation>
+  </string>
+  <string id="/STR/73/02">
+    <base><![CDATA[Unsupported RAID]]></base>
+    <translation>不被支持的RAID</translation>
+  </string>
+  <string id="/STR/73/04">
+    <base><![CDATA[Irreconcilable state]]></base>
+    <translation>不可调和阶段</translation>
+  </string>
+  <string id="/STR/73/05">
+    <base><![CDATA[Non-mountable\nRAID information is corrupted]]></base>
+    <translation>无法加载\nRAID信息损坏</translation>
+  </string>
+  <string id="/STR/73/06">
+    <base><![CDATA[Missing member]]></base>
+    <translation>盘组组员不在</translation>
+  </string>
+  <string id="/STR/73/07">
+    <base><![CDATA[Migration required]]></base>
+    <translation>需要移植</translation>
+  </string>
+  <string id="/STR/73/08">
+    <base><![CDATA[Defective disk]]></base>
+    <translation>盘故障</translation>
+  </string>
+  <string id="/STR/73/09">
+    <base><![CDATA[Non-mountable]]></base>
+    <translation>无法加载</translation>
+  </string>
+  <string id="/STR/73/10">
+    <base><![CDATA[Degraded mode]]></base>
+    <translation>降低状态</translation>
+  </string>
+  <string id="/STR/73/11">
+    <base><![CDATA[Need resynchronizing\n%1!d!%% in sync]]></base>
+    <translation>需要重新同步\n%1!d!%% 同步</translation>
+  </string>
+  <string id="/STR/73/12">
+    <base><![CDATA[Need resynchronizing]]></base>
+    <translation>需要重新同步</translation>
+  </string>
+  <string id="/STR/73/13">
+    <base><![CDATA[Healthy]]></base>
+    <translation>健康</translation>
+  </string>
+  <string id="/STR/73/14">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nIf any of the disk is missing, unbind RAID and create it again]]></base>
+    <translation>将所有盘组内的硬盘连接，执行"%1!s!" 菜单。\n如有硬盘不见，取消合并，再重新合并</translation>
+  </string>
+  <string id="/STR/73/15">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nYou cannot migrate with missing member]]></base>
+    <translation>将所有盘组内的硬盘连接，执行"%1!s!" 菜单。\n盘组不齐全，无法移植</translation>
+  </string>
+  <string id="/STR/74/00">
+    <base><![CDATA[This RAID is created by higher version of software. Please update NDAS software]]></base>
+    <translation>此RAID曾被较高版本的NDAS软件配置过。请更新NDAS软件。</translation>
+  </string>
+  <string id="/STR/74/01">
+    <base><![CDATA[Each member has been used in degraded mode separately.\nYou need to convert one member to basic disk or unbind RAID.]]></base>
+    <translation>盘组组员都在下降模式下操作。\n你必须解除合并或改为基本盘。</translation>
+  </string>
+  <string id="/STR/74/02">
+    <base><![CDATA[Reconfigure the corrupted member disk.]]></base>
+    <translation>重新配置RAID的毁坏的组员。</translation>
+  </string>
+  <string id="/STR/74/03">
+    <base><![CDATA[Non fault-tolerant RAID.\nAll members should be available to mount this RAID set.]]></base>
+    <translation>非错容盘组。\n要加载，所有盘组组员必需存在</translation>
+  </string>
+  <string id="/STR/74/04">
+    <base><![CDATA[The number of valid members is not enough to mount.]]></base>
+    <translation>由于盘组组员不齐，因此无法加载。</translation>
+  </string>
+  <string id="/STR/74/05">
+    <base><![CDATA[This RAID is created by older version of NDAS software.\nOnce migrated, this RAID cannot be used by older version of NDAS software]]></base>
+    <translation>此RAID曾被较旧版本的NDAS软件配置过。\n一但移植后，不能使用旧版本的NDAS软件。</translation>
+  </string>
+  <string id="/STR/74/06">
+    <base><![CDATA[Disk has defects. Replace the defective disk.]]></base>
+    <translation>硬盘故障。更换硬盘。</translation>
+  </string>
+  <string id="/STR/74/07">
+    <base><![CDATA[RAID will work without fault-tolerant feature due to missing member(s).]]></base>
+    <translation>由于盘组组员不齐，RAID在没有错容情况下操作。</translation>
+  </string>
+  <string id="/STR/74/08">
+    <base><![CDATA[Resynchronizing will be started when RAID is mounted in Read/Write mode.]]></base>
+    <translation>RAID进入读/写式载后就会开始同步化。</translation>
+  </string>
+  <string id="/STR/74/09">
+    <base><![CDATA[Invalid member]]></base>
+    <translation>组员不正确</translation>
+  </string>
+  <string id="/STR/74/11">
+    <base><![CDATA[RAID can be mounted only when all members are registered]]></base>
+    <translation>唯有盘组所有组员都被注册才能加载</translation>
+  </string>
+  <string id="/STR/74/12">
+    <base><![CDATA[RAID can be mounted only when all members are enabled]]></base>
+    <translation>唯有盘组所有组员都被许可才能加载</translation>
+  </string>
+  <string id="/STR/74/13">
+    <base><![CDATA[Not registered]]></base>
+    <translation>未注册</translation>
+  </string>
+  <string id="/STR/74/14">
+    <base><![CDATA[Spare used]]></base>
+    <translation>备用盘已使用</translation>
+  </string>
+  <string id="/STR/74/15">
+    <base><![CDATA[After spare disk is used, RAID needs reconfiguration.]]></base>
+    <translation>加入一个备用盘后，容错盘组需重新设置。</translation>
+  </string>
+  <string id="/STR/75/00">
+    <base><![CDATA[Inconsistent bind information]]></base>
+    <translation>合并信息不一致</translation>
+  </string>
+  <string id="/STR/75/01">
+    <base><![CDATA[Bind information on the disk is inconsistent or unrecognizable.\nUse "%1!s!" menu to use as a single disk.]]></base>
+    <translation>硬盘里的合并信息不一致或无法辨认。\n从 "%1!s!"菜单改用为单独硬盘 </translation>
+  </string>
+  <string id="/STR/75/02">
+    <base><![CDATA[Replaced by spare]]></base>
+    <translation>被备用盘替换</translation>
+  </string>
+  <string id="/STR/75/03">
+    <base><![CDATA[This disk's role is replaced by the spare disk. Reconfigure the RAID using \n"%1!s!" or "%2!s!" or "%3!s!" menu.]]></base>
+    <translation>此盘已被备用硬盘取代。 使用 \n"%1!s!" 或 "%2!s!" or "%3!s!" 菜单来配置RAID.</translation>
+  </string>
+  <string id="/STR/75/04">
+    <base><![CDATA[Used in degraded mode]]></base>
+    <translation>下降状态使用</translation>
+  </string>
+  <string id="/STR/75/05">
+    <base><![CDATA[This disk is used in degraded mode and may have different data.\nUse "%1!s!" menu to retain the data in this disk.]]></base>
+    <translation>盘组组员都在下降模式下操作，数据有可能不相同。\n使用 "%1!s!" 菜单以保留盘内数据。</translation>
+  </string>
+  <string id="/STR/75/06">
+    <base><![CDATA[This operation will reset all configuration information which may be used by a higher version of NDAS software. Do you want to continue?]]></base>
+    <translation>这操作会使配置信息复位，而这信息有可能被较高版本的NDAS软件使用，您要继续吗？</translation>
+  </string>
+  <string id="/STR/75/07">
+    <base><![CDATA[RAID is in broken status. Requested operation cannot be processed.]]></base>
+    <translation>RAID在损坏状态。任务无法执行。</translation>
+  </string>
+  <string id="/STR/76/00">
+    <base><![CDATA[Defective]]></base>
+    <translation>故障</translation>
+  </string>
+  <string id="/STR/2049/05">
+    <base><![CDATA[Quit application\nExit]]></base>
+    <translation>退出程式\n退出</translation>
+  </string>
+  <string id="/STR/2049/06">
+    <base>Bind disks\nBind</base>
+    <translation>合并盘\n合并</translation>
+  </string>
+  <string id="/STR/2049/08">
+    <base>Unbind aggregated/mirrored disks into basic disks\nUnbind</base>
+    <translation>取消合并的集成盘/镜像盘为基本盘\n取消合并</translation>
+  </string>
+  <string id="/STR/2049/09">
+    <base>Convert the selected disk to a basic disk</base>
+    <translation>对选择的盘转换成基本盘</translation>
+  </string>
+  <string id="/STR/2049/11">
+    <base>Resynchronize an outdated bound disk.\nResynchronize</base>
+    <translation>同步化一个旧的已合并的盘。\n同步化</translation>
+  </string>
+  <string id="/STR/2049/14">
+    <base>Displays program information, version number and copyright\nAbout NDAS Software</base>
+    <translation>显示程序信息，版本号和版权\n关于</translation>
+  </string>
+  <string id="/STR/2050/07">
+    <base>Adds a mirrored disk to a basic disk\nAdd Mirror</base>
+    <translation>增加一个镜像盘为基本盘\n增加镜像</translation>
+  </string>
+  <string id="/STR/2050/08">
+    <base><![CDATA[Refresh the NDAS device list\nRefresh]]></base>
+    <translation>刷新NDAS设备\n刷新</translation>
+  </string>
+  <string id="/DLG/100">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation>关于</translation>
+  </string>
+  <string id="/DLG/100/00">
+    <base><![CDATA[OK]]></base>
+    <translation>确定</translation>
+  </string>
+  <string id="/DLG/100/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation>NDAS 软件</translation>
+  </string>
+  <string id="/DLG/100/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation>版本 %1!s!</translation>
+  </string>
+  <string id="/DLG/100/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>http://www.digiland.com.sg</translation>
+  </string>
+  <string id="/DLG/100/04">
+    <base><![CDATA[Copyright © 2002-2007 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+    <translation>版权所有 © 2002-2007 XIMETA, Inc.\r\n</translation>
+  </string>
+  <string id="/DLG/100/05">
+    <base><![CDATA[Components]]></base>
+    <translation>组件</translation>
+  </string>
+  <string id="/DLG/242">
+    <base><![CDATA[Unbind]]></base>
+    <translation>取消合并</translation>
+  </string>
+  <string id="/DLG/242/00">
+    <base><![CDATA[&Yes]]></base>
+    <translation>是</translation>
+  </string>
+  <string id="/DLG/242/01">
+    <base><![CDATA[&No]]></base>
+    <translation>否</translation>
+  </string>
+  <string id="/DLG/242/03">
+    <base>The following disks will be unbound.\nAre you sure you want to unbind them?</base>
+    <translation>以下的盘将会取消合并。\n您确定需要取消合并吗﹖</translation>
+  </string>
+  <string id="/DLG/249">
+    <base>Synchronize disks</base>
+    <translation>同步化盘</translation>
+  </string>
+  <string id="/DLG/249/00">
+    <base><![CDATA[Bind Type:]]></base>
+    <translation>合并种类:</translation>
+  </string>
+  <string id="/DLG/249/01">
+    <base>Type</base>
+    <translation>种类</translation>
+  </string>
+  <string id="/DLG/249/02">
+    <base>Target:</base>
+    <translation>目标:</translation>
+  </string>
+  <string id="/DLG/249/03">
+    <base><![CDATA[Name]]></base>
+    <translation>名称</translation>
+  </string>
+  <string id="/DLG/249/06">
+    <base>Time Remaining:</base>
+    <translation>剩餘时间:</translation>
+  </string>
+  <string id="/DLG/249/07">
+    <base><![CDATA[MB/s]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/08">
+    <base><![CDATA[Start]]></base>
+    <translation>开始</translation>
+  </string>
+  <string id="/DLG/249/09">
+    <base><![CDATA[Close]]></base>
+    <translation>关闭</translation>
+  </string>
+  <string id="/DLG/249/10">
+    <base><![CDATA[Cancel]]></base>
+    <translation>取消</translation>
+  </string>
+  <string id="/DLG/249/12">
+    <base><![CDATA[00:00:00]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/14">
+    <base><![CDATA[0.0]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/340">
+    <base>NDAS Bind Management Error</base>
+    <translation>NDAS 合并管理出错</translation>
+  </string>
+  <string id="/DLG/340/00">
+    <base><![CDATA[OK]]></base>
+    <translation>确定</translation>
+  </string>
+  <string id="/DLG/406">
+    <base>Repair fault tolerant disks</base>
+    <translation>修復错误盘</translation>
+  </string>
+  <string id="/DLG/406/00">
+    <base>Select one of the NDAS Device listed below. It will be used as a replacement for the broken NDAS Device</base>
+    <translation>请选择一个 NDAS 装置，它将会用来替换一个断开的 NDAS 装置。</translation>
+  </string>
+  <string id="/DLG/406/01">
+    <base>&amp;Devices:</base>
+    <translation>装置:</translation>
+  </string>
+  <string id="/DLG/406/02">
+    <base><![CDATA[List1]]></base>
+    <translation>名单1</translation>
+  </string>
+  <string id="/DLG/406/03">
+    <base><![CDATA[OK]]></base>
+    <translation>确定</translation>
+  </string>
+  <string id="/DLG/406/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>取消</translation>
+  </string>
+  <string id="/DLG/411">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>盘合并向导</translation>
+  </string>
+  <string id="/DLG/411/00">
+    <base><![CDATA[This wizard helps you create bound disks.]]></base>
+    <translation>这向导将帮助您配置合并硬盘。</translation>
+  </string>
+  <string id="/DLG/411/01">
+    <base><![CDATA[You can bind disks of NDAS Devices to build a new disk with faster speed, larger capacity and fault tolerance. Many bind types are given to fit your needs.]]></base>
+    <translation>您可以将几个NDAS设备合并，以取得更快的速度，更大的容量，和错容。有几种合并模式来配合您的需要。</translation>
+  </string>
+  <string id="/DLG/411/02">
+    <base><![CDATA[Welcome to the Disk Bind Wizard]]></base>
+    <translation>欢迎使用合并向导</translation>
+  </string>
+  <string id="/DLG/411/03">
+    <base><![CDATA[To continue, click Next.]]></base>
+    <translation>按“下一步”继续</translation>
+  </string>
+  <string id="/DLG/413">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>盘合并向导</translation>
+  </string>
+  <string id="/DLG/413/00">
+    <base>Select the bind type you want to create:</base>
+    <translation>选择您想创建的合并种类:</translation>
+  </string>
+  <string id="/DLG/413/01">
+    <base>Aggregation</base>
+    <translation>集成</translation>
+  </string>
+  <string id="/DLG/413/02">
+    <base><![CDATA[Stripe (RAID 0)]]></base>
+    <translation>条带化(RAID 0)</translation>
+  </string>
+  <string id="/DLG/413/03">
+    <base><![CDATA[Mirror (RAID 1)]]></base>
+    <translation>镜像 (RAID 1)</translation>
+  </string>
+  <string id="/DLG/413/04">
+    <base><![CDATA[RAID 4]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/413/05">
+    <base><![CDATA[Number of disks:]]></base>
+    <translation>盘数:</translation>
+  </string>
+  <string id="/DLG/413/07">
+    <base><![CDATA[Description]]></base>
+    <translation>说明</translation>
+  </string>
+  <string id="/DLG/415">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>盘合并向导</translation>
+  </string>
+  <string id="/DLG/415/00">
+    <base><![CDATA[Available:]]></base>
+    <translation>可用:</translation>
+  </string>
+  <string id="/DLG/415/02">
+    <base><![CDATA[&Add >]]></base>
+    <translation>增加&gt;</translation>
+  </string>
+  <string id="/DLG/415/03">
+    <base><![CDATA[< &Remove]]></base>
+    <translation>&lt; 移除</translation>
+  </string>
+  <string id="/DLG/415/04">
+    <base><![CDATA[< Re&move All]]></base>
+    <translation>&lt; 移除所有</translation>
+  </string>
+  <string id="/DLG/415/05">
+    <base>Selected:</base>
+    <translation>被选的:</translation>
+  </string>
+  <string id="/DLG/415/07">
+    <base>Total number of disks required:</base>
+    <translation>需求的盘数:</translation>
+  </string>
+  <string id="/DLG/415/09">
+    <base><![CDATA[Total disk size in gigabytes (GB):]]></base>
+    <translation>盘总容量 (GB):</translation>
+  </string>
+  <string id="/DLG/415/11">
+    <base>Note: The data on the disks will be deleted once binding is completed.</base>
+    <translation>注意: 当 完成后硬盘资料将会被删除，请在做合并前做好硬盘资料备份。</translation>
+  </string>
+  <string id="/DLG/420">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation>盘合并向导</translation>
+  </string>
+  <string id="/DLG/420/00">
+    <base><![CDATA[Completing the Disk Bind Wizard]]></base>
+    <translation>合并向导将要完成</translation>
+  </string>
+  <string id="/DLG/420/02">
+    <base><![CDATA[The binding results are followings:]]></base>
+    <translation>合并结果如下：</translation>
+  </string>
+  <string id="/DLG/420/04">
+    <base><![CDATA[To close this wizard, click Finish.]]></base>
+    <translation>按“完成”以关闭此向导</translation>
+  </string>
+  <string id="/DLG/1091/01">
+    <base><![CDATA[OK]]></base>
+    <translation>确定</translation>
+  </string>
+  <string id="/DLG/1091/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>取消</translation>
+  </string>
+  <string id="/MNU/128/00">
+    <base>&amp;File</base>
+    <translation>档案</translation>
+  </string>
+  <string id="/MNU/128/00/00">
+    <base><![CDATA[E&xit]]></base>
+    <translation>退出</translation>
+  </string>
+  <string id="/MNU/128/01">
+    <base><![CDATA[&Tool]]></base>
+    <translation>工具</translation>
+  </string>
+  <string id="/MNU/128/01/00">
+    <base><![CDATA[&Refresh]]></base>
+    <translation>刷新</translation>
+  </string>
+  <string id="/MNU/128/01/01">
+    <base>&amp;Bind Disks</base>
+    <translation>合并盘</translation>
+  </string>
+  <string id="/MNU/128/01/02">
+    <base>Add &amp;Mirror</base>
+    <translation>增加镜像</translation>
+  </string>
+  <string id="/MNU/128/01/03">
+    <base><![CDATA[R&eset bind information]]></base>
+    <translation>复位合并信息</translation>
+  </string>
+  <string id="/MNU/128/01/04">
+    <base><![CDATA[&Unbind]]></base>
+    <translation>解除合并</translation>
+  </string>
+  <string id="/MNU/128/01/05">
+    <base><![CDATA[Mi&grate]]></base>
+    <translation>移植</translation>
+  </string>
+  <string id="/MNU/128/01/06">
+    <base>Add &amp;Spare Disk</base>
+    <translation>增加备用盘</translation>
+  </string>
+  <string id="/MNU/128/01/07">
+    <base>Replace &amp;Device</base>
+    <translation>替换装置</translation>
+  </string>
+  <string id="/MNU/128/01/08">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation>成为RAID组员</translation>
+  </string>
+  <string id="/MNU/128/01/09">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation>去除故障的标记</translation>
+  </string>
+  <string id="/MNU/128/01/10">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation>此盘不在，继续设置RAID</translation>
+  </string>
+  <string id="/MNU/128/01/11">
+    <base><![CDATA[Convert to a basic &disk]]></base>
+    <translation>转成基本盘</translation>
+  </string>
+  <string id="/MNU/128/02">
+    <base>&amp;Help</base>
+    <translation>帮助</translation>
+  </string>
+  <string id="/MNU/128/02/00">
+    <base>&amp;About NDAS Software</base>
+    <translation>关于</translation>
+  </string>
+  <string id="/MNU/448/00">
+    <base><![CDATA[{SingleDiskOps}]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="/MNU/448/00/00">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation>合并盘</translation>
+  </string>
+  <string id="/MNU/448/00/01">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation>增加镜像</translation>
+  </string>
+  <string id="/MNU/448/00/02">
+    <base><![CDATA[&Reset bind information]]></base>
+    <translation>复位合并信息</translation>
+  </string>
+  <string id="/MNU/448/01">
+    <base><![CDATA[{RaidLogicalDiskOps}]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="/MNU/448/01/00">
+    <base><![CDATA[&Unbind]]></base>
+    <translation>解除合并</translation>
+  </string>
+  <string id="/MNU/448/01/01">
+    <base><![CDATA[&Migrate]]></base>
+    <translation>引进</translation>
+  </string>
+  <string id="/MNU/448/01/02">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation>增加备用盘</translation>
+  </string>
+  <string id="/MNU/448/02">
+    <base><![CDATA[{RaidUnitDiskOps}]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="/MNU/448/02/00">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation>替换装置</translation>
+  </string>
+  <string id="/MNU/448/02/01">
+    <base><![CDATA[Use as a RAID &member]]></base>
+    <translation>成为RAID组员</translation>
+  </string>
+  <string id="/MNU/448/02/02">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation>去除故障的标记</translation>
+  </string>
+  <string id="/MNU/448/02/03">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation>此盘不在，继续设置RAID</translation>
+  </string>
+  <string id="/MNU/448/02/04">
+    <base>Convert to a &amp;basic disk</base>
+    <translation>转成基本盘</translation>
+  </string>
+</localization>

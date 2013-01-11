@@ -1,0 +1,22 @@
+!INCLUDE ..\sources.inc
+
+TARGETNAME=libndasbootdevice
+TARGETTYPE=DRIVER_LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=libndasbootdevice
+
+#
+# Enable interrupt IO.
+#
+
+#INTERRUPT=interrupt
+
+!IFDEF INTERRUPT
+C_DEFINES = -D__INTERRUPT__ $(C_DEFINES)
+!ENDIF
+
+SOURCES_USED=..\sources.inc
+SOURCES=$(SOURCES)
+	
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_DRIVER_LIB_PATH)\$(TARGETNAME).lib}

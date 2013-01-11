@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<projectDefinition>
+  <solution>
+    <name>ndas_drivers</name>
+    <include recursive="true">.</include>
+    <include recursive="true">..\inc</include>
+  </solution>
+</projectDefinition>

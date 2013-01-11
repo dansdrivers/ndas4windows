@@ -1,0 +1,1471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="" version="" lang="nld" oem="base" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/09/00">
+    <base><![CDATA[ndasmgmt]]></base>
+    <translation>ndasmgmt</translation>
+  </string>
+  <string id="/STR/126/05">
+    <base><![CDATA[NDAS Software is configured to reject suspend/hibernation request when devices are mounted.\r\nYou can change this behavior from Options - Advanced.]]></base>
+    <translation>NDAS-software is geconfigureerd om suspend/hibernation vraag te weigeren als apparaten gemonteerd zijn.\r\nU kunt deze instelling wijzigen bij Opties - Geavanceerd.</translation>
+  </string>
+  <string id="/STR/126/06">
+    <base><![CDATA[Mount (&Read-only)]]></base>
+    <translation>Monteer (&amp;Alleen lezen)</translation>
+  </string>
+  <string id="/STR/126/07">
+    <base><![CDATA[Mount (Read/&Write)]]></base>
+    <translation>Monteer (Lezen/&amp;schrijven)</translation>
+  </string>
+  <string id="/STR/126/08">
+    <base><![CDATA[Dismo&unt]]></base>
+    <translation>Demonteer  </translation>
+  </string>
+  <string id="/STR/126/09">
+    <base><![CDATA[General]]></base>
+    <translation>Algemeen</translation>
+  </string>
+  <string id="/STR/126/10">
+    <base><![CDATA[An NDAS device with the name you specified is already registered.\r\nSpecify a different NDAS device name.]]></base>
+    <translation>Een NDAS-apparaat met de naam die u opgaf, is reeds geregistreerd.\r\nGeef een andere NDAS-apparaatnaam in.</translation>
+  </string>
+  <string id="/STR/126/11">
+    <base><![CDATA[An error occurred while checking duplicate NDAS device name.]]></base>
+    <translation>Er is een fout opgetreden tijdens het controleren of de NDAS-apparaatnaam reeds bestaat.</translation>
+  </string>
+  <string id="/STR/126/12">
+    <base><![CDATA[[%1!d!] %2!s!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/126/13">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS-apparaatmanagement</translation>
+  </string>
+  <string id="/STR/126/14">
+    <base><![CDATA[Dismount &All]]></base>
+    <translation>Demonteer &amp;alles</translation>
+  </string>
+  <string id="/STR/126/15">
+    <base><![CDATA[MAC Address]]></base>
+    <translation>MAC-adres</translation>
+  </string>
+  <string id="/STR/127/00">
+    <base><![CDATA[This application requires administrative privileges.\r\nLog on as a user in Administrators Group and run this application again.]]></base>
+    <translation>Voor deze toepassing zijn administratorrechten vereist.\r\nLog in als gebruiker in de Administratorgroep en start de toepassing opnieuw.</translation>
+  </string>
+  <string id="/STR/127/01">
+    <base><![CDATA[Loading NDASUSER.DLL failed.\r\nPlease check the installation of the software.]]></base>
+    <translation>NDASUSER.DLL laden mislukt.\r\nControleer de installatie van de software.</translation>
+  </string>
+  <string id="/STR/127/02">
+    <base><![CDATA[Window creation failed. Possibly system is running out of memory.\r\nClose other applications and try again.]]></base>
+    <translation>Venster maken mislukt. Het systeem heeft mogelijk te weinig geheugen.\r\nSluit andere toepassingen en probeer opnieuw.</translation>
+  </string>
+  <string id="/STR/127/03">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>Incompatibele NDASUSER.DLL is geïnstalleerd.\r\nControleer de installatie van de software.</translation>
+  </string>
+  <string id="/STR/127/04">
+    <base><![CDATA[Unknown]]></base>
+    <translation>Onbekend</translation>
+  </string>
+  <string id="/STR/127/05">
+    <base><![CDATA[KB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/06">
+    <base><![CDATA[MB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/07">
+    <base><![CDATA[GB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/08">
+    <base><![CDATA[TB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/09">
+    <base><![CDATA[Not Available]]></base>
+    <translation>Niet beschikbaar</translation>
+  </string>
+  <string id="/STR/127/10">
+    <base><![CDATA[Not Available]]></base>
+    <translation>Niet beschikbaar</translation>
+  </string>
+  <string id="/STR/127/11">
+    <base><![CDATA[NDAS Registration Files (*.ndas)]]></base>
+    <translation>NDAS-registratiebestanden (*.ndas)</translation>
+  </string>
+  <string id="/STR/127/12">
+    <base><![CDATA[Encrypted Disk with %1!s! (%2!d! bits) R%3!X!.%4!X!]]></base>
+    <translation>Gecodeerde schijf met %1!s! (%2!d! bits) R%3!X!.%4!X!</translation>
+  </string>
+  <string id="/STR/127/13">
+    <base><![CDATA[AES]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/14">
+    <base><![CDATA[Simple]]></base>
+    <translation>Enkelvoudig</translation>
+  </string>
+  <string id="/STR/127/15">
+    <base><![CDATA[None]]></base>
+    <translation>Geen</translation>
+  </string>
+  <string id="/STR/128/00">
+    <base><![CDATA[Unknown Encryption (%1!04X!)]]></base>
+    <translation>Onbekende codering (%1!04X!)</translation>
+  </string>
+  <string id="/STR/128/01">
+    <base><![CDATA[NDAS Registration Files (*.nda)]]></base>
+    <translation>NDAS-registratiebestanden (*.nda)</translation>
+  </string>
+  <string id="/STR/128/02">
+    <base><![CDATA[All Files (*.*)]]></base>
+    <translation>Alle bestanden (*.*)</translation>
+  </string>
+  <string id="/STR/128/03">
+    <base><![CDATA[*.ndas]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/04">
+    <base><![CDATA[*.nda]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/05">
+    <base><![CDATA[*.*]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/06">
+    <base><![CDATA[An error occurred during saving the registration.]]></base>
+    <translation>Er is een fout opgetreden tijdens het opslaan van de registratie.</translation>
+  </string>
+  <string id="/STR/128/07">
+    <base><![CDATA[,\_]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/08">
+    <base><![CDATA[The NDAS device is already registered.]]></base>
+    <translation>Het NDAS-apparaat is al geregistreerd.</translation>
+  </string>
+  <string id="/STR/128/09">
+    <base><![CDATA['%1!s!' is registered successfully.\r\nClick the taskbar icon to use the registered NDAS device.]]></base>
+    <translation>'%1!s!' is geregistreerd.\r\nKlik op de knop in de taakbalk om het geregistreerde NDAS-apparaat te gebruiken.</translation>
+  </string>
+  <string id="/STR/128/10">
+    <base><![CDATA[Registered]]></base>
+    <translation>Geregistreerd</translation>
+  </string>
+  <string id="/STR/128/11">
+    <base><![CDATA[Invalid]]></base>
+    <translation>Ongeldig</translation>
+  </string>
+  <string id="/STR/128/12">
+    <base><![CDATA[New]]></base>
+    <translation>Nieuw</translation>
+  </string>
+  <string id="/STR/128/13">
+    <base><![CDATA[Device ID: %1!s!-%2!s!-%3!s!-%4!s!\r\nWrite Key: %5!s!\r\n%6!s!]]></base>
+    <translation>Apparaat ID: %1!s!-%2!s!-%3!s!-%4!s!\r\nWrite key: %5!s!\r\n%6!s!</translation>
+  </string>
+  <string id="/STR/128/14">
+    <base><![CDATA[Name]]></base>
+    <translation>Naam</translation>
+  </string>
+  <string id="/STR/128/15">
+    <base><![CDATA[Status]]></base>
+    <translation>Status</translation>
+  </string>
+  <string id="/STR/129/00">
+    <base><![CDATA[Error (Code: %1!d!)]]></base>
+    <translation>Fout (code: %1!d!)</translation>
+  </string>
+  <string id="/STR/129/01">
+    <base><![CDATA[An error occurred while reading the file '%1!s!'.]]></base>
+    <translation>Er is een fout opgetreden tijdens het lezen van het bestand '%1!s!'.</translation>
+  </string>
+  <string id="/STR/129/02">
+    <base><![CDATA[RW]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/03">
+    <base><![CDATA[RO]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/04">
+    <base><![CDATA[PIO]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/05">
+    <base><![CDATA[DMA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/06">
+    <base><![CDATA[UDMA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/07">
+    <base><![CDATA[LBA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/08">
+    <base><![CDATA[LBA48]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/09">
+    <base><![CDATA[Shared RW]]></base>
+    <translation>Gedeelde RW</translation>
+  </string>
+  <string id="/STR/129/10">
+    <base><![CDATA[Shared RW *]]></base>
+    <translation>Gedeelde RW*</translation>
+  </string>
+  <string id="/STR/129/11">
+    <base><![CDATA[Exclusive RW]]></base>
+    <translation>Exclusieve RW</translation>
+  </string>
+  <string id="/STR/129/12">
+    <base><![CDATA[Dismounting the NDAS device failed because a program is still using it. Close any programs that might be using it, and then try again.]]></base>
+    <translation>Het NDAS-apparaat demonteren is mislukt omdat het nog gebruikt wordt door een programma. Sluit alle programma's die het mogelijk gebruiken en probeer opnieuw.</translation>
+  </string>
+  <string id="/STR/129/13">
+    <base><![CDATA[Dismount devices asynchronously]]></base>
+    <translation>Demonteer apparaten asynchroon</translation>
+  </string>
+  <string id="/STR/129/14">
+    <base><![CDATA[Status]]></base>
+    <translation>Status</translation>
+  </string>
+  <string id="/STR/129/15">
+    <base><![CDATA[Logical Unit]]></base>
+    <translation>Logische eenheid</translation>
+  </string>
+  <string id="/STR/130/00">
+    <base><![CDATA[Mounting (RO)]]></base>
+    <translation>Monteren (RO)</translation>
+  </string>
+  <string id="/STR/130/01">
+    <base><![CDATA[Mounting (RW)]]></base>
+    <translation>Monteren (RW)</translation>
+  </string>
+  <string id="/STR/130/02">
+    <base><![CDATA[Dismounting (RO)]]></base>
+    <translation>Demonteren (RO)</translation>
+  </string>
+  <string id="/STR/130/03">
+    <base><![CDATA[Dismounting (RW)]]></base>
+    <translation>Demonteren (RW)</translation>
+  </string>
+  <string id="/STR/130/04">
+    <base><![CDATA[Failed]]></base>
+    <translation>Mislukt</translation>
+  </string>
+  <string id="/STR/130/05">
+    <base><![CDATA[Dismounted]]></base>
+    <translation>Gedemonteerd</translation>
+  </string>
+  <string id="/STR/130/06">
+    <base><![CDATA[Revision]]></base>
+    <translation>Revisie</translation>
+  </string>
+  <string id="/STR/188/09">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&amp;</translation>
+  </string>
+  <string id="/STR/188/10">
+    <base><![CDATA[&Add]]></base>
+    <translation>&amp;toevoegen</translation>
+  </string>
+  <string id="/STR/188/11">
+    <base><![CDATA[The host (%1!s!) is requesting the Write Access of "%2!s!'s".\r\nDo you want to accept the request and dismount the NDAS device?]]></base>
+    <translation>De host (%1!s!) vraagt schrijftoegang voor "%2!s!'s".\r\nWilt u het verzoek aanvaarden en het NDAS-apparaat demonteren?</translation>
+  </string>
+  <string id="/STR/188/12">
+    <base><![CDATA[Verdana]]></base>
+    <translation>Verdana</translation>
+  </string>
+  <string id="/STR/188/13">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/188/14">
+    <base><![CDATA[Connection to the following NDAS devices has been lost.\r\n%1!s!]]></base>
+    <translation>Verbinding met de volgende NDAS-apparaten is verbroken.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/188/15">
+    <base><![CDATA[NDAS Device Disconnected]]></base>
+    <translation>NDAS-apparaat niet verbonden</translation>
+  </string>
+  <string id="/STR/189/00">
+    <base><![CDATA[Connection to the following NDAS devices are restored.\r\n%1!s!]]></base>
+    <translation>Verbinding met de volgende NDAS-apparaten is hersteld.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/189/02">
+    <base><![CDATA[Connection to the following devices are unstable.\r\nThe system is reconnecting to the devices...\r\n%1!s!]]></base>
+    <translation>Verbinding met de volgende apparaten is onstabiel.\r\nHet systeem maakt een nieuwe verbinding met de apparaten...\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/189/04">
+    <base><![CDATA[Are you sure you want to exit from NDAS Device Management?]]></base>
+    <translation>Bent u zeker dat u NDAS-apparaatmanagement wilt verlaten?</translation>
+  </string>
+  <string id="/STR/189/05">
+    <base><![CDATA[Are you sure you want to dismount the NDAS device?\r\nThe dismounting may fail if some applications are accessing the NDAS device.]]></base>
+    <translation>Bent u zeker dat u het NDAS-apparaat wilt demonteren?\r\nHet demonteren kan mislukken als bepaalde toepassingen toegang hebben tot het NDAS-apparaat.</translation>
+  </string>
+  <string id="/STR/189/06">
+    <base><![CDATA[Are you sure you want to dismount all NDAS devices?\r\nThe dismounting may fail if some applications are accessing the NDAS device.]]></base>
+    <translation>Bent u zeker dat u alle NDAS-apparaten wilt demonteren?\r\nHet demonteren kan mislukken als bepaalde toepassingen toegang hebben tot de NDAS-apparaten.</translation>
+  </string>
+  <string id="/STR/189/07">
+    <base><![CDATA[Are you sure you want to dismount %1!s!?\r\nThe dismounting may fail if some applications are accessing the NDAS device.]]></base>
+    <translation>Bent u zeker dat u %1!s! wil demonteren?\r\nHet demonteren kan mislukken als bepaalde toepassingen toegang hebben tot het NDAS-apparaat.</translation>
+  </string>
+  <string id="/STR/189/08">
+    <base><![CDATA[Are you sure you want to remove the %1!s!?]]></base>
+    <translation>Bent u zeker dat u %1!s! wilt verplaatsen?</translation>
+  </string>
+  <string id="/STR/189/09">
+    <base><![CDATA[Are you sure you want to deregister "%1!s!"?]]></base>
+    <translation>Bent u zeker dat u "%1!s!" wilt deregistreren?</translation>
+  </string>
+  <string id="/STR/189/10">
+    <base><![CDATA[This RAID will run in degraded mode due to a missing/defective member and this can cause irreconcilable RAID status. Do you want to continue? (Use NDAS Bind management for more information)]]></base>
+    <translation>Deze RAID </translation>
+  </string>
+  <string id="/STR/189/11">
+    <base><![CDATA[%1!s! Properties]]></base>
+    <translation>%1!s! Eigenschappen</translation>
+  </string>
+  <string id="/STR/189/12">
+    <base><![CDATA[Online]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/189/13">
+    <base><![CDATA[Online *]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/189/14">
+    <base><![CDATA[Deactivated]]></base>
+    <translation>Gedeactiveerd</translation>
+  </string>
+  <string id="/STR/189/15">
+    <base><![CDATA[Offline]]></base>
+    <translation>Offline</translation>
+  </string>
+  <string id="/STR/190/00">
+    <base><![CDATA[Error]]></base>
+    <translation>Fout</translation>
+  </string>
+  <string id="/STR/190/01">
+    <base><![CDATA[Mounted (RO)]]></base>
+    <translation>Gemonteerd (RO)</translation>
+  </string>
+  <string id="/STR/190/02">
+    <base><![CDATA[Mounted (RW)]]></base>
+    <translation>Gemonteerd (RW)</translation>
+  </string>
+  <string id="/STR/190/03">
+    <base><![CDATA[Unknown]]></base>
+    <translation>Onbekend</translation>
+  </string>
+  <string id="/STR/190/04">
+    <base><![CDATA[Hardware]]></base>
+    <translation>Hardware</translation>
+  </string>
+  <string id="/STR/190/05">
+    <base><![CDATA[Max LUs]]></base>
+    <translation>Max LU's</translation>
+  </string>
+  <string id="/STR/190/06">
+    <base><![CDATA[Max Transfer Blocks]]></base>
+    <translation>Max transferblokken</translation>
+  </string>
+  <string id="/STR/190/07">
+    <base><![CDATA[Max Unit Devices]]></base>
+    <translation>Max eenheidapparaten</translation>
+  </string>
+  <string id="/STR/190/08">
+    <base><![CDATA[Command Processing Slots]]></base>
+    <translation>Opdrachtverwerkingslots</translation>
+  </string>
+  <string id="/STR/190/10">
+    <base><![CDATA[Version]]></base>
+    <translation>Versie</translation>
+  </string>
+  <string id="/STR/190/11">
+    <base><![CDATA[Device Type]]></base>
+    <translation>Apparaattype</translation>
+  </string>
+  <string id="/STR/190/12">
+    <base><![CDATA[Firmware Revision]]></base>
+    <translation>Firmware revisie</translation>
+  </string>
+  <string id="/STR/190/13">
+    <base><![CDATA[LBA Mode]]></base>
+    <translation>LBA-modus</translation>
+  </string>
+  <string id="/STR/190/14">
+    <base><![CDATA[Model]]></base>
+    <translation>Model</translation>
+  </string>
+  <string id="/STR/190/15">
+    <base><![CDATA[Serial Number]]></base>
+    <translation>Serienummer</translation>
+  </string>
+  <string id="/STR/191/00">
+    <base><![CDATA[Unit Device %1!d!]]></base>
+    <translation>Eenheidapparaat %1!d!</translation>
+  </string>
+  <string id="/STR/191/01">
+    <base><![CDATA[Transfer Mode]]></base>
+    <translation>Transfermodus</translation>
+  </string>
+  <string id="/STR/191/02">
+    <base><![CDATA[Registration is finished successfully and the device is now ready to use.]]></base>
+    <translation>Registratie is gelukt en het apparaat kan nu gebruikt worden.</translation>
+  </string>
+  <string id="/STR/191/03">
+    <base><![CDATA[Please wait while checking the NDAS device status...]]></base>
+    <translation>De NDAS-apparaatstatus wordt gecontroleerd. Even geduld a.u.b.</translation>
+  </string>
+  <string id="/STR/191/04">
+    <base><![CDATA[&Disable]]></base>
+    <translation>&amp;Uitschakelen</translation>
+  </string>
+  <string id="/STR/191/05">
+    <base><![CDATA[Enter the NDAS device ID to register.]]></base>
+    <translation>Voer de NDAS-apparaat ID in om te registreren.</translation>
+  </string>
+  <string id="/STR/191/06">
+    <base><![CDATA[NDAS device ID]]></base>
+    <translation>NDAS-apparaat ID</translation>
+  </string>
+  <string id="/STR/191/07">
+    <base><![CDATA[Specify the name for the NDAS device.]]></base>
+    <translation>Specificeer de naam voor het NDAS-apparaat.</translation>
+  </string>
+  <string id="/STR/191/08">
+    <base><![CDATA[NDAS Device Name]]></base>
+    <translation>NDAS-apparaatnaam</translation>
+  </string>
+  <string id="/STR/191/09">
+    <base><![CDATA[The Wizard will guide you through the NADS device registration. Before continuing to the next step, please do the following:\r\n\r\n- Connect the NDAS device to the network.\r\n- Turn on the NDAS device.\r\n\r\nTo continue, click "Next".]]></base>
+    <translation>De wizard begeleidt u bij de registratie van het NDAS-apparaat. Voor u naar de volgende stap gaat, doet u het volgende:\r\n\r\n- Verbind het NDAS-apparaat met het netwerk.\r\n- Zet het NDAS-apparaat aan.\r\n\r\nOm verder te gaan, klikt u op "Volgende".</translation>
+  </string>
+  <string id="/STR/191/10">
+    <base><![CDATA[NDAS Device Registration Wizard]]></base>
+    <translation>NDAS-apparaat registratiewizard</translation>
+  </string>
+  <string id="/STR/191/11">
+    <base><![CDATA[Do you want to mount this NDAS device now?]]></base>
+    <translation>Wilt u nu het NDAS-apparaat monteren?</translation>
+  </string>
+  <string id="/STR/191/12">
+    <base><![CDATA[Mount NDAS Device]]></base>
+    <translation>Monteer NDAS-apparaat</translation>
+  </string>
+  <string id="/STR/191/13">
+    <base><![CDATA[NDAS Device Registration Wizard]]></base>
+    <translation>NDAS-apparaat registratiewizard</translation>
+  </string>
+  <string id="/STR/191/15">
+    <base><![CDATA[An error has occurred while setting up a Write Key.]]></base>
+    <translation>Er is een fout opgetreden bij het opstellen van een write key.</translation>
+  </string>
+  <string id="/STR/192/00">
+    <base><![CDATA[An error occurred while disabling an NDAS device.]]></base>
+    <translation>Er is een fout opgetreden bij het uitschakelen van een NDAS-apparaat.</translation>
+  </string>
+  <string id="/STR/192/01">
+    <base><![CDATA[An error occurred while enabling an NDAS device.]]></base>
+    <translation>Er is een fout opgetreden bij het inschakelen van een NDAS-apparaat.</translation>
+  </string>
+  <string id="/STR/192/02">
+    <base><![CDATA[An error occurred while mounting an NDAS device as Read-Only Mode.]]></base>
+    <translation>Er is een fout opgetreden bij het monteren van een NDAS-apparaat als alleen-lezenmodus.</translation>
+  </string>
+  <string id="/STR/192/03">
+    <base><![CDATA[An error occurred while mounting an NDAS device as Read/Write Mode.]]></base>
+    <translation>Er is een fout opgetreden bij het monteren van een NDAS-apparaat als lees/schrijfmodus.</translation>
+  </string>
+  <string id="/STR/192/04">
+    <base><![CDATA[Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!]]></base>
+    <translation>Faciliteit: NDAS 0x%1!04X!\r\nFoutcode: %2!u! (0x%2!04X!)\r\n%3!s!</translation>
+  </string>
+  <string id="/STR/192/05">
+    <base><![CDATA[An error occurred during registration.]]></base>
+    <translation>Er is een fout opgetreden tijdens de registratie.</translation>
+  </string>
+  <string id="/STR/192/06">
+    <base><![CDATA[An error occurred while removing a Write Key.]]></base>
+    <translation>Er is een fout opgetreden bij het verwijderen van een write key.</translation>
+  </string>
+  <string id="/STR/192/07">
+    <base><![CDATA[An error occurred while renaming an NDAS device.]]></base>
+    <translation>Er is een fout opgetreden bij het herbenoemen van een NDAS-apparaat.</translation>
+  </string>
+  <string id="/STR/192/08">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation>Foutcode: %1!u! (0x%1!04X!)\r\n%2!s!</translation>
+  </string>
+  <string id="/STR/192/09">
+    <base><![CDATA[NDAS Device Management Error]]></base>
+    <translation>NDAS-apparaat managementfout</translation>
+  </string>
+  <string id="/STR/192/10">
+    <base><![CDATA[An error occurred while dismounting an NDAS device.]]></base>
+    <translation>Er is een fout opgetreden bij het demonteren van een NDAS-apparaat.</translation>
+  </string>
+  <string id="/STR/192/11">
+    <base><![CDATA[An error occurred while deregistering an NDAS device.]]></base>
+    <translation>Er is een fout opgetreden bij het deregistreren van een NDAS-apparaat.</translation>
+  </string>
+  <string id="/STR/192/12">
+    <base><![CDATA[An error occurred while updating an NDAS device list.]]></base>
+    <translation>Er is een fout opgetreden bij het updaten van een NDAS-apparaatlijst.</translation>
+  </string>
+  <string id="/STR/192/13">
+    <base><![CDATA[NDAS device ID is 20 characters long and it is composed of alphanumeric characters!\r\n]]></base>
+    <translation>NDAS-apparaat ID telt 20 karakters en bestaat uit alfanumerieke karakters!\r\n</translation>
+  </string>
+  <string id="/STR/192/14">
+    <base><![CDATA[Invalid Device ID!]]></base>
+    <translation>Ongeldige apparaat ID!</translation>
+  </string>
+  <string id="/STR/192/15">
+    <base><![CDATA[Unknown Host]]></base>
+    <translation>Onbekende host</translation>
+  </string>
+  <string id="/STR/193/00">
+    <base><![CDATA[Automatic]]></base>
+    <translation>Automatisch</translation>
+  </string>
+  <string id="/STR/193/01">
+    <base><![CDATA[Changing the user interface language requires application restart. Do you want to restart the application now?]]></base>
+    <translation>Om de taal van de gebruikerinterface te wijzigen, moet u de toepassing opnieuw opstarten. Wilt u de toepassing nu opnieuw opstarten?</translation>
+  </string>
+  <string id="/STR/193/11">
+    <base><![CDATA[Unavailable]]></base>
+    <translation>Niet beschikbaar</translation>
+  </string>
+  <string id="/STR/193/14">
+    <base><![CDATA[Mounted in Read-only mode]]></base>
+    <translation>Gemonteerd in alleen-lezen modus</translation>
+  </string>
+  <string id="/STR/193/15">
+    <base><![CDATA[Mounted in Read/Write mode]]></base>
+    <translation>Gemonteerd in lees/schrijfmodus</translation>
+  </string>
+  <string id="/STR/194/00">
+    <base><![CDATA[Mounting]]></base>
+    <translation>Monteren  </translation>
+  </string>
+  <string id="/STR/194/01">
+    <base><![CDATA[Not Mountable]]></base>
+    <translation>Niet monteerbaar</translation>
+  </string>
+  <string id="/STR/194/02">
+    <base><![CDATA[Unknown Status (0x%1!08X!)]]></base>
+    <translation>Onbekende status (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/194/03">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation>Niet gemonteerd</translation>
+  </string>
+  <string id="/STR/194/04">
+    <base><![CDATA[Dismounting]]></base>
+    <translation>Demonteren</translation>
+  </string>
+  <string id="/STR/194/05">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation>Samengestelde schijf</translation>
+  </string>
+  <string id="/STR/194/06">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Compacte flash drive</translation>
+  </string>
+  <string id="/STR/194/08">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation>DVD-drive</translation>
+  </string>
+  <string id="/STR/194/09">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation>Gespiegelde schijf</translation>
+  </string>
+  <string id="/STR/194/10">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO-drive</translation>
+  </string>
+  <string id="/STR/194/11">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation>Basisschijf</translation>
+  </string>
+  <string id="/STR/194/12">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation>Onbekend type (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/194/13">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation>Virtuele dvd-drive</translation>
+  </string>
+  <string id="/STR/194/14">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS-apparaatmanagement</translation>
+  </string>
+  <string id="/STR/194/15">
+    <base><![CDATA[Online]]></base>
+    <translation>Online</translation>
+  </string>
+  <string id="/STR/195/00">
+    <base><![CDATA[Deactivated]]></base>
+    <translation>Gedeactiveerd</translation>
+  </string>
+  <string id="/STR/195/01">
+    <base><![CDATA[Offline]]></base>
+    <translation>Offline</translation>
+  </string>
+  <string id="/STR/195/02">
+    <base><![CDATA[Unknown]]></base>
+    <translation>Onbekend</translation>
+  </string>
+  <string id="/STR/195/03">
+    <base><![CDATA[NDAS Device %1!d!]]></base>
+    <translation>NDAS-apparaat %1!d!</translation>
+  </string>
+  <string id="/STR/195/04">
+    <base><![CDATA[(No NDAS Device)]]></base>
+    <translation>(Geen NDAS-apparaat)</translation>
+  </string>
+  <string id="/STR/195/05">
+    <base><![CDATA[Do not show the confirmation dialog on exit]]></base>
+    <translation>Toon het bevestigingsdialoogvenster niet bij exit</translation>
+  </string>
+  <string id="/STR/195/06">
+    <base><![CDATA[Show NDAS Device Status text]]></base>
+    <translation>Toon NDAS-apparaat statustekst</translation>
+  </string>
+  <string id="/STR/195/07">
+    <base><![CDATA[Show Dismount All command]]></base>
+    <translation>Toon Demonteer alle commando</translation>
+  </string>
+  <string id="/STR/195/08">
+    <base><![CDATA[Options]]></base>
+    <translation>Opties</translation>
+  </string>
+  <string id="/STR/195/09">
+    <base><![CDATA[Confirmation]]></base>
+    <translation>Bevestiging</translation>
+  </string>
+  <string id="/STR/195/10">
+    <base><![CDATA[Menu]]></base>
+    <translation>Menu</translation>
+  </string>
+  <string id="/STR/195/11">
+    <base><![CDATA[You have successfully completed the NDAS device Registration Wizard.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation>U hebt de NDAS-apparaat registratiewizard succesvol beëindigd.\r\n\r\nOm deze wizard te sluiten, klikt u op Voltooien.</translation>
+  </string>
+  <string id="/STR/195/12">
+    <base><![CDATA[You have successfully registered the NDAS device. \r\n\r\nHowever, the NDAS device is not found and cannot be connected at this time. Please check the NDAS device connection.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation>U hebt het NDAS-apparaat succesvol geregistreerd. \r\n\r\nHet NDAS-apparaat werd echter niet gevonden en kan momenteel niet verbonden worden. Controleer de NDAS-apparaatverbinding.\r\n\r\nOm deze wizard te sluiten, klikt u op Voltooien.</translation>
+  </string>
+  <string id="/STR/195/13">
+    <base><![CDATA[You have successfully registered and the NDAS device is connected. \r\n\r\nHowever, there is no mountable NDAS device found at this time. Please check the status from the task bar icon menu.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation>U hebt succesvol geregistreerd en het NDAS-apparaat is verbonden. \r\n\r\nEr werd momenteel echter geen monteerbaar NDAS-apparaat gevonden. Controleer de status via het menu in de taakbalk.\r\n\r\nOm deze wizard te sluiten, klikt u op Voltooien.</translation>
+  </string>
+  <string id="/STR/195/14">
+    <base><![CDATA[Remo&ve]]></base>
+    <translation>Verwijderen</translation>
+  </string>
+  <string id="/STR/195/15">
+    <base><![CDATA[Are you sure you want to remove the Write Key?\r\nYou cannot mount this device as Read/Write anymore without the Write Key.]]></base>
+    <translation>Bent u zeker dat u de write key wilt verwijderen?\r\nU kunt dit apparaat niet meer monteren als Lezen/schrijven zonder de write key.</translation>
+  </string>
+  <string id="/STR/196/00">
+    <base><![CDATA[Remove Write Key]]></base>
+    <translation>Verwijder write key</translation>
+  </string>
+  <string id="/STR/196/01">
+    <base><![CDATA[This NDAS device is being used by another host who has the Read/Write access to the NDAS device. And shared-write mode cannot be used at this time.\r\nWould you like to request the Read/Write access of the NDAS device?]]></base>
+    <translation>Dit NDAS-apparaat wordt gebruikt door een andere host met lees/schrijftoegang tot het NDAS-apparaat. Gedeelde schrijfmodus kan momenteel niet gebruikt worden.\r\nWilt u de lees/schrijftoegang tot het NDAS-apparaat aanvragen?</translation>
+  </string>
+  <string id="/STR/196/02">
+    <base><![CDATA[&Properties...]]></base>
+    <translation>&amp;Eigenschappen</translation>
+  </string>
+  <string id="/STR/196/03">
+    <base><![CDATA[Please wait while connecting to the host...]]></base>
+    <translation>Aan het verbinden met de host. Even geduld a.u.b.</translation>
+  </string>
+  <string id="/STR/196/04">
+    <base><![CDATA[Waiting for a response...]]></base>
+    <translation>Wacht op een reactie…</translation>
+  </string>
+  <string id="/STR/196/05">
+    <base><![CDATA[Unit Device information is not available]]></base>
+    <translation>Eenheidapparaat informatie is niet beschikbaar</translation>
+  </string>
+  <string id="/STR/196/06">
+    <base><![CDATA[Other]]></base>
+    <translation>Andere</translation>
+  </string>
+  <string id="/STR/196/07">
+    <base><![CDATA[Mounted]]></base>
+    <translation>Gemonteerd</translation>
+  </string>
+  <string id="/STR/196/08">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation>Niet gemonteerd</translation>
+  </string>
+  <string id="/STR/196/10">
+    <base><![CDATA[Unknown (%1!d!)]]></base>
+    <translation>Onbekend (%1!d!)</translation>
+  </string>
+  <string id="/STR/196/11">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation>CD/DVD-drive</translation>
+  </string>
+  <string id="/STR/196/12">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>Compacte flash drive</translation>
+  </string>
+  <string id="/STR/196/13">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>Schijfeenheid</translation>
+  </string>
+  <string id="/STR/196/14">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO-drive</translation>
+  </string>
+  <string id="/STR/196/15">
+    <base><![CDATA[Unknown Type (%1!08X!)]]></base>
+    <translation>Onbekend type (%1!08X!)</translation>
+  </string>
+  <string id="/STR/197/00">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation>CD/DVD-drive</translation>
+  </string>
+  <string id="/STR/197/01">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>Schijfeenheid</translation>
+  </string>
+  <string id="/STR/197/02">
+    <base><![CDATA[Member of Aggregated Disk]]></base>
+    <translation>Lid van samengestelde schijf</translation>
+  </string>
+  <string id="/STR/197/03">
+    <base><![CDATA[Member of Mirrored Disk (Primary)]]></base>
+    <translation>Lid van gespiegelde schijf (primair)</translation>
+  </string>
+  <string id="/STR/197/04">
+    <base><![CDATA[Member of Mirrored Disk (Secondary)]]></base>
+    <translation>Lid van gespiegelde schijf (secundair)</translation>
+  </string>
+  <string id="/STR/197/05">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>Schijfeenheid</translation>
+  </string>
+  <string id="/STR/197/06">
+    <base><![CDATA[Disk Drive (Unrecognized Type %1!04X!)]]></base>
+    <translation>Schijfeenheid (Niet-herkend type %1!04X!)</translation>
+  </string>
+  <string id="/STR/197/07">
+    <base><![CDATA[Unknown Type (0x%1!04X!)]]></base>
+    <translation>Onbekend type (0x%1!04X!)</translation>
+  </string>
+  <string id="/STR/197/08">
+    <base><![CDATA[Unknown Unit Device Type]]></base>
+    <translation>Onbekend eenheidapparaattype</translation>
+  </string>
+  <string id="/STR/197/09">
+    <base><![CDATA[&Deregister]]></base>
+    <translation>&amp;Deregistreren</translation>
+  </string>
+  <string id="/STR/197/10">
+    <base><![CDATA[None]]></base>
+    <translation>Geen</translation>
+  </string>
+  <string id="/STR/197/11">
+    <base><![CDATA[Present]]></base>
+    <translation>Aanwezig</translation>
+  </string>
+  <string id="/STR/197/12">
+    <base><![CDATA[Do not show a confirmation dialog on removing the Write Key]]></base>
+    <translation>Toon geen bevestigingsdialoogvenster bij het verwijderen van de write key</translation>
+  </string>
+  <string id="/STR/197/13">
+    <base><![CDATA[Do not show a confirmation dialog on deregistering an NDAS device]]></base>
+    <translation>Toon geen bevestigingsdialoogvenster bij het deregistreren van een NDAS-apparaat</translation>
+  </string>
+  <string id="/STR/197/14">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting an NDAS device]]></base>
+    <translation>Toon geen bevestigingsdialoogvenster bij het demonteren van een NDAS-apparaat</translation>
+  </string>
+  <string id="/STR/197/15">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting all of the NDAS devices]]></base>
+    <translation>Toon geen bevestigingsdialoogvenster bij het demonteren van alle NDAS-apparaten</translation>
+  </string>
+  <string id="/STR/198/00">
+    <base><![CDATA[Use Wizard for Registration]]></base>
+    <translation>Gebruik wizard voor registratie</translation>
+  </string>
+  <string id="/STR/198/01">
+    <base><![CDATA[NDAS Device Management is running now.\r\nClick here to register a new NDAS Device to your system.]]></base>
+    <translation>NDAS-apparaatmanagement is nu in werking.\r\nKlik hier om een nieuw NDAS-apparaat bij uw systeem te registreren.</translation>
+  </string>
+  <string id="/STR/198/02">
+    <base><![CDATA[NDAS Device Management is running]]></base>
+    <translation>NDAS-apparaatmanagement is in werking</translation>
+  </string>
+  <string id="/STR/198/03">
+    <base><![CDATA[NDAS Device Management is already running.\r\nClick the task bar icon to show the menu such that you can access the features.]]></base>
+    <translation>NDAS-apparaatmanagement is al in werking.\r\nKlik op de knop in de taakbalk om het menu te tonen zodat u toegang krijgt tot de kenmerken.</translation>
+  </string>
+  <string id="/STR/198/04">
+    <base><![CDATA[NDAS Device Management is already running]]></base>
+    <translation>NDAS-apparaatmanagement is al in werking </translation>
+  </string>
+  <string id="/STR/198/05">
+    <base><![CDATA[Access]]></base>
+    <translation>Toegang</translation>
+  </string>
+  <string id="/STR/198/06">
+    <base><![CDATA[Hostname]]></base>
+    <translation>Hostnaam</translation>
+  </string>
+  <string id="/STR/198/07">
+    <base><![CDATA[Network Address]]></base>
+    <translation>Netwerkadres</translation>
+  </string>
+  <string id="/STR/198/08">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/09">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Not registered)]]></base>
+    <translation>[%1!d!] %2!s!:%3!d! (Niet geregistreerd)</translation>
+  </string>
+  <string id="/STR/198/10">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Unavailable)]]></base>
+    <translation>[%1!d!] %2!s!:%3!d! (Niet beschikbaar)</translation>
+  </string>
+  <string id="/STR/198/11">
+    <base><![CDATA[Please wait while mounting a requested NDAS device...]]></base>
+    <translation>Gelieve even te wachten tijdens het monteren van een gevraagd NDAS-apparaat…</translation>
+  </string>
+  <string id="/STR/198/12">
+    <base><![CDATA[Please wait while dismounting a requested NDAS device...]]></base>
+    <translation>Gelieve even te wachten tijdens het demonteren van een gevraagd NDAS-apparaat…</translation>
+  </string>
+  <string id="/STR/198/13">
+    <base><![CDATA[The new user interface language will be applied when you restart the application.]]></base>
+    <translation>De nieuwe taal van de gebruikerinterface zal toegepast worden als u de toepassing herstart.</translation>
+  </string>
+  <string id="/STR/198/14">
+    <base><![CDATA[Suspend/Hibernation Support]]></base>
+    <translation>Suspend/hibernation support</translation>
+  </string>
+  <string id="/STR/198/15">
+    <base><![CDATA[Allow suspend/hibernation]]></base>
+    <translation>Suspend/hibernation toelaten</translation>
+  </string>
+  <string id="/STR/199/00">
+    <base><![CDATA[NDAS Device Management is running now.\r\nClick the task bar icon to show the menu such that you can access the features.]]></base>
+    <translation>NDAS-apparaatmanagement is momenteel in werking.\r\nKlik op de knop in de taakbalk om het menu te tonen zodat u toegang krijgt tot de kenmerken.</translation>
+  </string>
+  <string id="/STR/199/01">
+    <base><![CDATA[Deny suspend/hibernation if there are mounted devices]]></base>
+    <translation>Negeer suspend/hibernation als er gemonteerde apparaten zijn</translation>
+  </string>
+  <string id="/STR/199/02">
+    <base><![CDATA[Allowing suspend/hibernation may cause a data corruption and the device may not be available on resuming in multi-write mode.\r\nAre you sure you want to enable this feature?]]></base>
+    <translation>Suspend/hibernation toestaan kan een verminking van gegevens veroorzaken en het apparaat is mogelijk niet beschikbaar bij het verdergaan in multischrijfmodus.\r\nBent u zeker dat u dit kenmerk wilt activeren?</translation>
+  </string>
+  <string id="/STR/199/03">
+    <base><![CDATA[&Activate]]></base>
+    <translation>&amp;Activeren</translation>
+  </string>
+  <string id="/STR/199/04">
+    <base><![CDATA[[%1!d!] %2!s! (Unavailable)]]></base>
+    <translation>[%1!d!] %2!s! (Niet beschikbaar)</translation>
+  </string>
+  <string id="/STR/199/05">
+    <base><![CDATA[Are you sure you want to deactivate this NDAS device?\r\nAfter deactivating, you can reactivate this device from the menu]]></base>
+    <translation>Bent u zeker dat u dit NDAS-apparaat wilt deactiveren?\r\nNa het deactiveren kunt u dit apparaat heractiveren via het menu</translation>
+  </string>
+  <string id="/STR/199/06">
+    <base><![CDATA[Are you sure you want to reset the connection to this NDAS device?]]></base>
+    <translation>Bent u zeker dat u de verbinding naar dit NDAS-apparaat wilt resetten?</translation>
+  </string>
+  <string id="/STR/199/07">
+    <base><![CDATA[A member of RAID is inaccessible or not configured correctly. RAID system will be running in degraded mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation>Een RAID-lid is niet toegankelijk of niet juist geconfigureerd. RAID-systeem zal werken in gedegradeerde modus. Gebruik NDAS-verbindingsmanagementtool voor meer informatie.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/08">
+    <base><![CDATA[The NDAS Device is running in degraded mode]]></base>
+    <translation>Het NDAS-apparaat werkt in gedegradeerde modus</translation>
+  </string>
+  <string id="/STR/199/09">
+    <base><![CDATA[Component]]></base>
+    <translation>Component </translation>
+  </string>
+  <string id="/STR/199/10">
+    <base><![CDATA[Version]]></base>
+    <translation>Versie</translation>
+  </string>
+  <string id="/STR/199/11">
+    <base><![CDATA[NDAS Device status]]></base>
+    <translation>NDAS-apparaatstatus</translation>
+  </string>
+  <string id="/STR/199/12">
+    <base><![CDATA[NDAS Device is running in normal status\r\n%1!s!]]></base>
+    <translation>NDAS-apparaat werkt in normale status\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/13">
+    <base><![CDATA[The RAID is now running in recovery mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation>De RAID werkt nu in herstelmodus. Gebruik NDAS-verbindingsmanagementtool voor meer informatie.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/14">
+    <base><![CDATA[Connection(s) to one or more NDAS device(s) has been recovered.\r\n%1!s!]]></base>
+    <translation>Verbinding(en) naar één of meer NDAS-apparaten is hersteld.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/15">
+    <base><![CDATA[The RAID is now fully recovered.\r\n%1!s!]]></base>
+    <translation>De RAID is nu volledig hersteld.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/200/00">
+    <base><![CDATA[[%1!d!] %2!s! (Not registered)]]></base>
+    <translation>[%1!d!] %2!s! (Niet geregistreerd)</translation>
+  </string>
+  <string id="/STR/200/01">
+    <base><![CDATA[Re&set]]></base>
+    <translation>Resetten</translation>
+  </string>
+  <string id="/STR/200/02">
+    <base><![CDATA[The RAID is in failure state. Use NDAS Bind Management tool for more information\r\n%1!s!]]></base>
+    <translation>De RAID is in storingstoestand. Gebruik NDAS-verbindingsmanagementtool voor meer informatie.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/251/02">
+    <base><![CDATA[NDAS Device Management\r\nNDAS Service is not available.]]></base>
+    <translation>NDAS-apparaatmanagement\r\nNDAS-service is niet beschikbaar.</translation>
+  </string>
+  <string id="/STR/251/12">
+    <base><![CDATA[Connecting]]></base>
+    <translation>Verbinden</translation>
+  </string>
+  <string id="/STR/257/04">
+    <base><![CDATA[Disk (RAID-0)]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/05">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/08">
+    <base><![CDATA[Disk (RAID-4) Rev.1]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/11">
+    <base><![CDATA[Disk (RAID-4) Rev.2]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/257/14">
+    <base><![CDATA[Member of Striped Disk (RAID-0)]]></base>
+    <translation>Lid van Striped Disk (RAID-0)</translation>
+  </string>
+  <string id="/STR/257/15">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation>Lid van Mirrored Disk (RAID-1) Rev.1</translation>
+  </string>
+  <string id="/STR/258/02">
+    <base><![CDATA[Member of RAID-4 Disk Rev. 1]]></base>
+    <translation>Lid van RAID-4 Disk Rev. 1</translation>
+  </string>
+  <string id="/STR/258/04">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation>Lid van Mirrored Disk (RAID-1) Rev.2</translation>
+  </string>
+  <string id="/STR/258/05">
+    <base><![CDATA[Member of RAID-4 Disk Rev.2]]></base>
+    <translation>Lid van RAID-4 Disk Rev.2</translation>
+  </string>
+  <string id="/STR/258/08">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation>Lid van Mirrored Disk (RAID-1) Rev.3</translation>
+  </string>
+  <string id="/STR/258/09">
+    <base><![CDATA[Member of RAID-4 Disk Rev.3]]></base>
+    <translation>Lid vanRAID-4 Disk Rev.3</translation>
+  </string>
+  <string id="/STR/258/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/258/11">
+    <base><![CDATA[Disk (RAID-4) Rev.3]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/258/12">
+    <base><![CDATA[Missing member]]></base>
+    <translation>Ontbrekend lid</translation>
+  </string>
+  <string id="/STR/258/13">
+    <base><![CDATA[Migration is required. Use NDAS Bind management to migrate.]]></base>
+    <translation>Migratie is vereist. Gebruik NDAS-verbindingsmanagement om te migreren.</translation>
+  </string>
+  <string id="/STR/258/14">
+    <base><![CDATA[Conflicting RAID information. Use NDAS Bind management to resolve conflicts.]]></base>
+    <translation>Tegenstrijdige RAID-informatie. Gebruik NDAS-verbindingsmanagement om conflicten op te lossen.</translation>
+  </string>
+  <string id="/STR/258/15">
+    <base><![CDATA[Mountable in degraded mode]]></base>
+    <translation>Monteerbaar in gedegradeerde modus</translation>
+  </string>
+  <string id="/STR/259/00">
+    <base><![CDATA[Do not show a warning dialog when mounting RAID in degraded mode]]></base>
+    <translation>Toon geen waarschuwingsdialoogvenster bij monteren van RAID in gedegradeerde modus</translation>
+  </string>
+  <string id="/STR/307/05">
+    <base><![CDATA[Please wait while checking for a software update...]]></base>
+    <translation>Bezig met zoeken naar een software-update. Even geduld a.u.b.</translation>
+  </string>
+  <string id="/STR/307/06">
+    <base><![CDATA[An error occurred while checking a software update.]]></base>
+    <translation>Er is een fout opgetreden bij het zoeken naar een software-update.</translation>
+  </string>
+  <string id="/STR/625/15">
+    <base><![CDATA[English]]></base>
+    <translation><![CDATA[Nederlands (Dutch)]]></translation>
+  </string>
+  <string id="/DLG/301">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation>Over NDAS-software</translation>
+  </string>
+  <string id="/DLG/301/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/301/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/301/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/301/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&amp;</translation>
+  </string>
+  <string id="/DLG/301/04">
+    <base><![CDATA[Copyright © 2002-2007 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+		<translation><![CDATA[-]]></translation>
+	</string>
+  <string id="/DLG/301/05">
+    <base><![CDATA[Components]]></base>
+    <translation>Componenten</translation>
+  </string>
+  <string id="/DLG/301/07">
+    <base><![CDATA[Check for &Updates]]></base>
+    <translation>Controleer op &amp;updates</translation>
+  </string>
+  <string id="/DLG/302">
+    <base><![CDATA[Enter the Write Key]]></base>
+    <translation>Geef write key in</translation>
+  </string>
+  <string id="/DLG/302/01">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/302/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Annuleren</translation>
+  </string>
+  <string id="/DLG/302/05">
+    <base><![CDATA[Device Name:]]></base>
+    <translation>Apparaatnaam:</translD.</translation>
+  </string>
+  <string id="/STR/71/09">
+    <base><![CDATA[Not all member disks are accessible.\nChanging RAID configuration with missing member can make RAID fail.\nDo you want to continue?]]></base>
+    <translation>Ikke alle medlemsdisker kan fås tilgang til.\nEndring av RAID konfigurasjon med manglende medlem kan få RAID til å mislykkes.\nØnsker du å fortsette?</translation>
+  </string>
+  <string id="/STR/71/10">
+    <base><![CDATA[The disk is too small to be used as this RAID member.]]></base>
+    <translation>Disken er for liten til å brukes som RAID medlem.</translation>
+  </string>
+  <string id="/STR/71/11">
+    <base><![CDATA[The data of this disk will be lost and if this disk is a member of another RAID, it may be broken.Do you want to continue?]]></base>
+    <translation>Dataene på denne disken kommer til å mistes og hvis denne disken er medlem av en annen RAID kan den ødelegges. Ønsker du å fortsette?</translation>
+  </string>
+  <string id="/STR/71/12">
+    <base><![CDATA[RAID containing this disk may be broken after this operation. Do you want to continue?]]></base>
+    <translation>RAID som har denne disken kan ødelegges etter denne utførelsen. Ønsker du å fortsette?</translation>
+  </string>
+  <string id="/STR/71/13">
+    <base><![CDATA[Cannot remove the selected disk.\nIt will break RAID.]]></base>
+    <translation>Kan ikke fjerne utvalgt disk.\nDet vil ødelegge RAID.</translation>
+  </string>
+  <string id="/STR/71/14">
+    <base><![CDATA[Not all member disks are accessible.]]></base>
+    <translation>Ikke alle medlemsdisker er tilgjengelige.</translation>
+  </string>
+  <string id="/STR/71/15">
+    <base><![CDATA[Corrupted RAID information]]></base>
+    <translation>Korrumpert RAID informasjon.</translation>
+  </string>
+  <string id="/STR/72/00">
+    <base><![CDATA[Member of another RAID]]></base>
+    <translation>Medlem av annen RAID</translation>
+  </string>
+  <string id="/STR/72/02">
+    <base><![CDATA[Read failure]]></base>
+    <translation>Les feil</translation>
+  </string>
+  <string id="/STR/72/03">
+    <base><![CDATA[Not a RAID member]]></base>
+    <translation>Ikke RAID medlem</translation>
+  </string>
+  <string id="/STR/72/04">
+    <base><![CDATA[Bad disk]]></base>
+    <translation>Dårlig disk</translation>
+  </string>
+  <string id="/STR/72/05">
+    <base><![CDATA[Bad sector found]]></base>
+    <translation>Dårlig sektor funnet</translation>
+  </string>
+  <string id="/STR/72/06">
+    <base><![CDATA[Unknown defect]]></base>
+    <translation>Ukjent defekt</translation>
+  </string>
+  <string id="/STR/72/07">
+    <base><![CDATA[Out-of-sync]]></base>
+    <translation>Synkroniseringsfeil</translation>
+  </string>
+  <string id="/STR/72/08">
+    <base><![CDATA[Spare disk]]></base>
+    <translation>Reservedisk</translation>
+  </string>
+  <string id="/STR/72/09">
+    <base><![CDATA[RAID information on this disk is corrupted. \nTry "%1!s!" menu.]]></base>
+    <translation>RAID informasjon på denne disken er korrumpert. \nForsøk "%1!s!" meny.</translation>
+  </string>
+  <string id="/STR/72/11">
+    <base><![CDATA[Cannot read. Replace disk or remove from RAID]]></base>
+    <translation>Kan ikke lese. Erstatt disk eller fjern fra RAID</translation>
+  </string>
+  <string id="/STR/72/12">
+    <base><![CDATA[Reconfigure RAID members.]]></base>
+    <translation>Rekonfigurering av RAID medlemmer.</translation>
+  </string>
+  <string id="/STR/72/13">
+    <base><![CDATA[Replace bad disk with new one and run "%1!s!" menu\n or use "%2!s!" menu to ignore defect and retry]]></base>
+    <translation>Erstatt dårlig disk med en ny og kjør "%1!s!" meny\n eller bruk "%2!s!" meny for å ignorere defekten og prøve på nytt</translation>
+  </string>
+  <string id="/STR/72/14">
+    <base><![CDATA[Data of this disk is out of sync with another RAID member's data.]]></base>
+    <translation>Data på denne disken har synkroniseringsfeil med en annen RAID medlems data.</translation>
+  </string>
+  <string id="/STR/72/15">
+    <base><![CDATA[This disk will be used as active RAID member when any of other member fails.]]></base>
+    <translation>Denne disken kommer til å brukes som aktiv RAID medlem når noen andre medlemmer faller bort.</translation>
+  </string>
+  <string id="/STR/73/00">
+    <base><![CDATA[This disk may be configured by higher version of NDAS software.\n Use "%1!s!" menu to convert to a single disk]]></base>
+    <translation>Denne disken kan konfigureres med en høyere versjon av NDAS programvare.\n Bruk "%1!s!" meny for konvertering til en  singel disk</translation>
+  </string>
+  <string id="/STR/73/01">
+    <base><![CDATA[Migration required]]></base>
+    <translation>Omstilling kreves</translation>
+  </string>
+  <string id="/STR/73/02">
+    <base><![CDATA[Unsupported RAID]]></base>
+    <translation>RAID støttes ikke</translation>
+  </string>
+  <string id="/STR/73/04">
+    <base><![CDATA[Irreconcilable state]]></base>
+    <translation>Ugjenkjennelig tilstand</translation>
+  </string>
+  <string id="/STR/73/05">
+    <base><![CDATA[Non-mountable\nRAID information is corrupted]]></base>
+    <translation>Kan ikke monteres\nRAID informasjon er korrumpert</translation>
+  </string>
+  <string id="/STR/73/06">
+    <base><![CDATA[Missing member]]></base>
+    <translation>Manglende medlem</translation>
+  </string>
+  <string id="/STR/73/07">
+    <base><![CDATA[Migration required]]></base>
+    <translation>Omstilling kreves</translation>
+  </string>
+  <string id="/STR/73/08">
+    <base>Defective disk</base>
+    <translation>Defekt disk</translation>
+  </string>
+  <string id="/STR/73/09">
+    <base><![CDATA[Non-mountable]]></base>
+    <translation>Kan ikke monteres</translation>
+  </string>
+  <string id="/STR/73/10">
+    <base><![CDATA[Degraded mode]]></base>
+    <translation>Degradert modus</translation>
+  </string>
+  <string id="/STR/73/11">
+    <base><![CDATA[Need resynchronizing\n%1!d!%% in sync]]></base>
+    <translation>Behøver resynkronisering\n%1!d!%% i sync</translation>
+  </string>
+  <string id="/STR/73/12">
+    <base><![CDATA[Need resynchronizing]]></base>
+    <translation>Behøver resynkronisering</translation>
+  </string>
+  <string id="/STR/73/13">
+    <base><![CDATA[Healthy]]></base>
+    <translation>Bra</translation>
+  </string>
+  <string id="/STR/73/14">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nIf any of the disk is missing, unbind RAID and create it again]]></base>
+    <translation>Forbind alle medlemsapparater og bruk "%1!s!" meny.\nHvis noen av diskene mangler må RAID frigjøres og opprettes på nytt</translation>
+  </string>
+  <string id="/STR/73/15">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nYou cannot migrate with missing member]]></base>
+    <translation>Forbind alle medlemsapparater og bruk "%1!s!" meny.\nDu kan ikke omstille med manglende medlem</translation>
+  </string>
+  <string id="/STR/74/00">
+    <base><![CDATA[This RAID is created by higher version of software. Please update NDAS software]]></base>
+    <translation>Denne RAID er skapt av en høyere programvareversjon. Vennligst oppdater NDAS programvare</translation>
+  </string>
+  <string id="/STR/74/01">
+    <base><![CDATA[Each member has been used in degraded mode separately.\nYou need to convert one member to basic disk or unbind RAID.]]></base>
+    <translation>Hvert medlem har blitt brukt separat i degradert modus.\nDu må konvertere et medlem til basisdisk eller frigjøre RAID.</translation>
+  </string>
+  <string id="/STR/74/02">
+    <base><![CDATA[Reconfigure the corrupted member disk.]]></base>
+    <translation>Rekonfigurering av korrumpert medlemsdisk.</translation>
+  </string>
+  <string id="/STR/74/03">
+    <base><![CDATA[Non fault-tolerant RAID.\nAll members should be available to mount this RAID set.]]></base>
+    <translation>Ingen feil-tolerant RAID.\nAlle medlemmer bør kunne montere dette RAID settet.</translation>
+  </string>
+  <string id="/STR/74/04">
+    <base><![CDATA[The number of valid members is not enough to mount.]]></base>
+    <translation>Antall gyldige medlemmer er ikke tilstrekkelig for montering.</translation>
+  </string>
+  <string id="/STR/74/05">
+    <base><![CDATA[This RAID is created by older version of NDAS software.\nOnce migrated, this RAID cannot be used by older version of NDAS software]]></base>
+    <translation>Dette RAID er skapt av en eldre NDAS programvareversjon.\nVed omstilling kan ikke RAID brukes med eldre NDAS programvareversjoner</translation>
+  </string>
+  <string id="/STR/74/06">
+    <base><![CDATA[Disk has defects. Replace the defective disk.]]></base>
+    <translation>Disken har defekter. Skift ut disken med defekter.</translation>
+  </string>
+  <string id="/STR/74/07">
+    <base><![CDATA[RAID will work without fault-tolerant feature due to missing member(s).]]></base>
+    <translation>RAID kommer til å arbeide uten feil-tolerant egenskap pga. Manglende medlem(mer).</translation>
+  </string>
+  <string id="/STR/74/08">
+    <base><![CDATA[Resynchronizing will be started when RAID is mounted in Read/Write mode.]]></base>
+    <translation>Resynkronisering starter når RAID monteres i lese/skrive modus.</translation>
+  </string>
+  <string id="/STR/74/09">
+    <base><![CDATA[Invalid member]]></base>
+    <translation>Ugyldig medlem</translation>
+  </string>
+  <string id="/STR/74/11">
+    <base><![CDATA[RAID can be mounted only when all members are registered]]></base>
+    <translation>RAID kan kun monteres når alle medlemmer er registrerte</translation>
+  </string>
+  <string id="/STR/74/12">
+    <base><![CDATA[RAID can be mounted only when all members are enabled]]></base>
+    <translation>RAID kan kun monteres når alle medlemmer er aktiverte</translation>
+  </string>
+  <string id="/STR/74/13">
+    <base><![CDATA[Not registered]]></base>
+    <translation>Ikke registrert</translation>
+  </string>
+  <string id="/STR/74/14">
+    <base><![CDATA[Spare used]]></base>
+    <translation>Reservebruk</translation>
+  </string>
+  <string id="/STR/74/15">
+    <base><![CDATA[After spare disk is used, RAID needs reconfiguration.]]></base>
+    <translation>Etter bruk av reservedisk må RAID rekonfigureres.</translation>
+  </string>
+  <string id="/STR/75/00">
+    <base><![CDATA[Inconsistent bind information]]></base>
+    <translation>Inkonsistent bindingsinformasjon</translation>
+  </string>
+  <string id="/STR/75/01">
+    <base><![CDATA[Bind information on the disk is inconsistent or unrecognizable.\nUse "%1!s!" menu to use as a single disk.]]></base>
+    <translation>Bindingsinformasjonen på disken er inkonsistent eller ugjenkjennelig.\nBruk"%1!s!" meny for å bruke som singel disk.</translation>
+  </string>
+  <string id="/STR/75/02">
+    <base><![CDATA[Replaced by spare]]></base>
+    <translation>Utskiftning av reserve</translation>
+  </string>
+  <string id="/STR/75/03">
+    <base><![CDATA[This disk's role is replaced by the spare disk. Reconfigure the RAID using \n"%1!s!" or "%2!s!" or "%3!s!" menu.]]></base>
+    <translation>Denne diskens rolle skiftes ut av reservedisken. Rekonfigurering av RAID ved bruk av \n"%1!s!" eller "%2!s!" eller "%3!s!" menyen.</translation>
+  </string>
+  <string id="/STR/75/04">
+    <base><![CDATA[Used in degraded mode]]></base>
+    <translation>Brukt i redusert modus</translation>
+  </string>
+  <string id="/STR/75/05">
+    <base><![CDATA[This disk is used in degraded mode and may have different data.\nUse "%1!s!" menu to retain the data in this disk.]]></base>
+    <translation>Denne disken brukes i redusert modus og kan ha forskjellig data.\nBruk"%1!s!" meny for å oppbevare data på denne disken.</translation>
+  </string>
+  <string id="/STR/75/06">
+    <base><![CDATA[This operation will reset all configuration information which may be used by a higher version of NDAS software. Do you want to continue?]]></base>
+    <translation>Denne utførelsen kommer til å tilbakestille all konfigurasjonsinformasjon som kan brukes ved en høyere NDAS programvareversjon. Ønsker du å fortsette?</translation>
+  </string>
+  <string id="/STR/75/07">
+    <base><![CDATA[RAID is in broken status. Requested operation cannot be processed.]]></base>
+    <translation>RAID er i ødelagt status. Krevd utførelse kan ikke fortsettes.</translation>
+  </string>
+  <string id="/STR/75/08">
+    <base><![CDATA[Cannot clear defect mark because no valid copy of data exists.\nPlease unbind RAID and try to recover data from each disk\n]]></base>
+    <translation>Kan ikke fjerne defekt pga. at det ikke eksisterer noen gyldig kopi av data.\nVennligst frigjør RAID og prøv å hente data fra hver disk\n</translation>
+  </string>
+  <string id="/STR/76/00">
+    <base><![CDATA[Defective]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/2049/05">
+    <base><![CDATA[Quit application\nExit]]></base>
+    <translation>Avslutt anvendelse\nAvslutt</translation>
+  </string>
+  <string id="/STR/2049/06">
+    <base><![CDATA[Bind disks\nBind]]></base>
+    <translation>Bindingsdisker\nBind</translation>
+  </string>
+  <string id="/STR/2049/08">
+    <base><![CDATA[Unbind aggregated/mirrored disks into basic disks\nUnbind]]></base>
+    <translation>Frigjør omstilte/speilte disker til basisdisker\nFrigjør</translation>
+  </string>
+  <string id="/STR/2049/09">
+    <base><![CDATA[Convert the selected disk to a basic disk]]></base>
+    <translation>Konverter utvalgt disk til en basisdisk</translation>
+  </string>
+  <string id="/STR/2049/11">
+    <base><![CDATA[Resynchronize an outdated bound disk.\nResynchronize]]></base>
+    <translation>Resynkroniser en utdatert bindingsdisk.\nResynkroniser</translation>
+  </string>
+  <string id="/STR/2049/14">
+    <base><![CDATA[Displays program information, version number and copyright\nAbout NDAS Software]]></base>
+    <translation>Viser programinformasjon, versjonsnummer og copyright\nOm NDAS programvare</translation>
+  </string>
+  <string id="/STR/2050/07">
+    <base><![CDATA[Adds a mirrored disk to a basic disk\nAdd Mirror]]></base>
+    <translation>Tilfører en speilet disk til en basisdisk\nTilfør speil</translation>
+  </string>
+  <string id="/STR/2050/08">
+    <base><![CDATA[Refresh the NDAS device list\nRefresh]]></base>
+    <translation>Oppdater NDAS apparat liste\nOppdater</translation>
+  </string>
+  <string id="/DLG/100">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation>Om NDAS programvare</translation>
+  </string>
+  <string id="/DLG/100/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/100/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation>NDAS programvare</translation>
+  </string>
+  <string id="/DLG/100/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation>Versjon %1!s!</translation>
+  </string>
+  <string id="/DLG/100/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation>&amp;</translation>
+  </string>
+  <string id="/DLG/100/04">
+    <base><![CDATA[Copyright © 2002-2007 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+		<translation><![CDATA[-]]></translation>
+	</string>
+  <string id="/DLG/100/05">
+    <base><![CDATA[Components]]></base>
+    <translation>Komponenter</translation>
+  </string>
+  <string id="/DLG/242">
+    <base><![CDATA[Unbind]]></base>
+    <translation>Frigjøre</translation>
+  </string>
+  <string id="/DLG/242/00">
+    <base><![CDATA[&Yes]]></base>
+    <translation>Ja</translation>
+  </string>
+  <string id="/DLG/242/01">
+    <base><![CDATA[&No]]></base>
+    <translation>Nei</translation>
+  </string>
+  <string id="/DLG/242/03">
+    <base><![CDATA[The following disks will be unbound.\nAre you sure you want to unbind them?]]></base>
+    <translation>Følgende disker kommer til å frigjøres.\nEr du sikker på at du ønsker å frigjøre dem?</translation>
+  </string>
+  <string id="/DLG/249">
+    <base><![CDATA[Synchronize disks]]></base>
+    <translation>Synkronisere disker</translation>
+  </string>
+  <string id="/DLG/249/00">
+    <base><![CDATA[Bind Type:]]></base>
+    <translation>Bindtype:</translation>
+  </string>
+  <string id="/DLG/249/01">
+    <base><![CDATA[Type]]></base>
+    <translation>Type</translation>
+  </string>
+  <string id="/DLG/249/02">
+    <base><![CDATA[Target:]]></base>
+    <translation>Mål:</translation>
+  </string>
+  <string id="/DLG/249/03">
+    <base><![CDATA[Name]]></base>
+    <translation>Navn</translation>
+  </string>
+  <string id="/DLG/249/06">
+    <base><![CDATA[Time Remaining:]]></base>
+    <translation>Navn</translation>
+  </string>
+  <string id="/DLG/249/07">
+    <base><![CDATA[MB/s]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/08">
+    <base><![CDATA[Start]]></base>
+    <translation>Start</translation>
+  </string>
+  <string id="/DLG/249/09">
+    <base><![CDATA[Close]]></base>
+    <translation>Lukk</translation>
+  </string>
+  <string id="/DLG/249/10">
+    <base><![CDATA[Cancel]]></base>
+    <translation>Avbryt</translation>
+  </string>
+  <string id="/DLG/249/12">
+    <base><![CDATA[00:00:00]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/249/14">
+    <base><![CDATA[0.0]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/340">
+    <base><![CDATA[NDAS Bind Management Error]]></base>
+    <translation>NDAS bindmanagement feil</translation>
+  </string>
+  <string id="/DLG/340/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/406">
+    <base><![CDATA[Repair fault tolerant disks]]></base>
+    <translation>Reparere feil toleransedisker</translation>
+  </string>
+  <string id="/DLG

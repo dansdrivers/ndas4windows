@@ -1,0 +1,42 @@
+TARGETNAME=NDNetComp
+#TARGETPATH=..\..\sys\$(DDKBUILDENV)
+TARGETPATH=..\..\lib\$(BUILD_ALT_DIR)
+TARGETTYPE=LIBRARY
+
+INCLUDES=..\inc
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+TARGETLIBS=\
+    $(SDK_LIB_PATH)\advapi32.lib    \
+    $(SDK_LIB_PATH)\comctl32.lib    \
+    $(SDK_LIB_PATH)\kernel32.lib    \
+    $(SDK_LIB_PATH)\ole32.lib       \
+    $(SDK_LIB_PATH)\oleaut32.lib    \
+    $(SDK_LIB_PATH)\user32.lib      \
+    $(SDK_LIB_PATH)\uuid.lib        \
+    $(SDK_LIB_PATH)\setupapi.lib
+
+#
+# Consult build.hlp for the following.  Generally, these
+# should be left alone.
+#
+#C_DEFINES= -DMBCS -D_MBCS
+C_DEFINES= -DUNICODE -D_UNICODE
+MSC_WARNING_LEVEL=/W3 /WX
+# PRECOMPILED_CXX=1
+# PRECOMPILED_INCLUDE=pch.h
+RCOPTIONS=-N
+USE_STATIC_ATL=1
+USE_MSVCRT=1
+USE_NATIVE_EH=1
+USE_RTTI=1
+
+UMTYPE=windows
+#UMENTRY=wmain
+
+SOURCES=\
+    NDNetComp.cpp    \
+    snetcfg.cpp \
+    implinc.cpp 

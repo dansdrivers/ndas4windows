@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="7.10" Name="_inc_ndas_setup" ProjectGUID="{D92CF5C0-BD2A-47CE-A6AE-E4A67959B186}" RootNamespace="_inc_ndas_setup" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug (x64)|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release (x64)|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+  <File RelativePath=".\netcomp.h" /><File RelativePath=".\pnpdevinst.h" /><File RelativePath=".\svcinst.h" /><File RelativePath=".\_project.xml" /></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

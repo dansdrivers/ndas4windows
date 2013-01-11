@@ -1,0 +1,108 @@
+
+                   ==================================
+                     Programming Tips & Conventions
+                   ==================================
+
+                     Chesong Lee <cslee@ximeta.com>
+
+---------------------------------------------------------------------------
+Using Auto Resources (Smart Pointer types)
+---------------------------------------------------------------------------
+
+For alleviating managing resource, there are template classes, AutoResourceT
+and AutoResourceConfigT in "autores.h", which is much like smart-pointers.
+It supports multiple types, especially HANDLE values for Files, Objects, etc.
+
+ - AutoFileHandle
+ - AutoObjectHandle
+ - AutoSCHandle
+ - AutoHKey
+ - AutoSocket
+
+These types are automatic resource which release the resource when it goes
+out of scope. If you returns the handle to the caller, do not use this
+type or use Detach member function before returning a handle:
+
+ MyHandle myHandle = myAutoHandle.Detach();
+ return myHandle;
+
+If you need, more types, use can just make a base AutoResourceConfig class
+for more types, and define types as:
+
+ typedef AutoResourceT<MYHANDLE, MyHandleConfig> AutoMyHandle;
+
+This implementation is based on [Boris03].
+
+---------------------------------------------------------------------------
+INVALID_HANDLE_VALUE or NULL for HANDLES
+---------------------------------------------------------------------------
+
+There are type invalid types for HANDLE opaque values, 
+INVALID_HANDLE_VALUE or NULL. These are mistakenly used for testing 
+invalid values.
+
+INVALID_HANDLE_VALUE is a invalid return value of a file handles,
+which is returned by some file-related functions including device files,
+such as "CreateFile", "SetupDiGetClassDevs".
+
+NULL is for other object handles other than file handles. 
+Such as CreateEvent, CreateMutex, etc.
+
+Do not mix the invalid values for handles.
+For the exact values of invalid handles, 
+refer to the documents of the function.
+
+For your convenience, there are AutoResource handlers in "autores.h".
+
+ - AutoFileHandle
+ - AutoObjectHandle
+
+Use AutoFileHandle for file handles and other objects for AutoObjectHandle.
+
+For example,
+
+ AutoObjectHandle hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
+ AutoFileHandle hFile = CreateFile(...);
+
+AutoFileHandle or AutoObjectHandle will close the handle automatically,
+when the variable goes out of scope. - 
+Don't use this for returning handles. :-)
+
+---------------------------------------------------------------------------
+Flow of controls
+---------------------------------------------------------------------------
+
+Function is a unit of operation and it should provide basic, strong and
+nofail (nothrow) gurantees [Sutter04]. For functions making use of 
+operating system APIs, it is not easy to provide nofail gurantee,
+however, it should at least basic gurantee.
+
+---------------------------------------------------------------------------
+Dynamic Disk Problems
+---------------------------------------------------------------------------
+
+Currently Dynamic disks may be offline when mounted.
+The reason is not yet discovered and there is no known API or IOCTL
+for making it online.
+The only workaround for this is to use "diskpart" which is a system
+component of Windows XP. The use of diskpart is in batch mode is:
+
+  > diskpart /s myscript
+
+Where myscript is a script file containing the following commands:
+
+  select disk 1
+  online
+
+(*) disk number (e.g. 1) should be replaced with the appropriate value.
+
+---------------------------------------------------------------------------
+References
+---------------------------------------------------------------------------
+
+[Boris03] Gigi Sayfan, "The AutoResourceT Template" (Windows Developer Network,
+Tech Tips, December 2003) (Available online at 
+http://www.windevnet.com/documents/s=9060/win0312e/0312e.htm )
+
+[Sutter04] Herb Sutter. "When and How to Use Exceptions" (C/C++ Users 
+Journal, 47(5), August 2004)

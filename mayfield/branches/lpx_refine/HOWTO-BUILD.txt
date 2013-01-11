@@ -1,0 +1,123 @@
+
+NetDisk Build Procedure
+
+Revision:
+
+2005-03-29 patria
+	
+  Setup project has been removed from the project source tree.
+
+2004-11-18 patria
+
+  Revised for the new build environment.
+
+2004-08-24 patria
+	   
+  Now the whole project is made from build.exe (in DDK).  And the
+  prerequisites are changed.
+	   
+2004-05-14 patria
+
+  As of 3.03.1020.0, InstallShield is upgraded to the version 9.0
+  SP1.  Some pre-requisites are changed.
+
+2004-03-08 hootch
+
+  WINHDR.zip is added to the prerequisite components.
+
+2003 patria
+
+  Initial documents
+
+=====================================================================
+PREREQUISITE
+=====================================================================
+
+You need the following component to build the product.
+
+ o Microsoft Platform SDK 2003 February or later
+
+ o Microsoft Windows Server 2003 IFS
+     * Install \\liah\public\devel\ndasbuild\winddk_libc_60_pdb_setup.msi for "libcpmtd.pdb" missing warning.
+Preconfiguration:
+
+ o Builder Environment Variable
+
+   WNETBASE : IFS Installation Path (default: C:\WINDDK\3790)
+
+ o Build Variables
+
+   The following variables can be either environment variables or
+   variables that is set in "<ndasroot>\src\config.inc".  To use
+   "config.inc", copy "config.in" to "config.inc" and edit it.
+
+   PSDK_INC_PATH : Platform SDK include path (default: short path of
+                    %ProgramFiles%\Microsoft SDK\include)
+
+   PSDK_LIB_PATH : Platform SDK library path (default: short path of
+                    %ProgramFiles%\Microsoft SDK\lib)
+
+   XM_VENDOR_PATH : Path to external headers and libraries (ATL71,
+                    WTL71, etc: Use \\liah\public\devel\AtlWtl.zip)
+                    (default: none, usually c:\Development\xmvendor)
+
+   XM_NTOS_INC_PATH : Path to Windows OS headers (default: none,
+                      usually c:\Development\ntosinc. Use
+                      \\liah\public\devel\ndasbuild\ntosinc.zip)
+
+   * All variables MUST NOT contain spaces. For example, if you should
+     set PSDK_INC_PATH to "C:\Program Files\Microsoft SDK", run
+     <ndasroot>\bin\shrtpath.exe and get the short name of the path
+     and use it.
+
+     e.g. c:\src>bin\shrtpath.exe "C:\Program Files\Microsoft SDK"
+          c:\PROGRA~1\MICROS~1
+          
+          c:\src>SETX PSDK_INC_PATH c:\PROGRA~1\MICROS~1\include
+          c:\src>SETX PSDK_LIB_PATH c:\PROGRA~1\MICROS~1\lib
+          
+=====================================================================
+BUILD
+=====================================================================
+
+  * Run 'build_publish.cmd' to rebuild the entire project.
+  	Binary files will be placed in publish\{chk,fre}\i386
+
+  * After publishing files are built, run 'publish\mkcat.cmd' to
+    create driver INF CAT (catalog files).
+	This command will also digital-sign the output driver files such
+    as ndasbus.sys, ndasscsi.sys and lpx.sys with corresponding INF
+    files only if %XM_SIGNCODE_CMD% is set.
+	Official build machine has this environment variable set. For
+    private build machines, you can use this variable to test digital
+    signing process.
+
+=====================================================================
+POST BUILD PROCESSES
+=====================================================================
+
+Previous project contains the setup project in this tree. Since RXXXX,
+NDAS Setup project is separated into
+
+http://svn/repos/netdisk/mayfield/setup/{trunk,branches,tags} 
+
+Each NDAS software project is linked to the branch in this NDAS Setup
+Project. 
+
+NDAS 3.10.1228 through 3.10.1230 use the following branch:
+
+http://svn/repos/netdisk/mayfield/setup/branches/R1003
+
+NDAS 3.10.1231 use the following branch:
+
+http://svn/repos/netdisk/mayfield/setup/branches/R1003a
+
+NDAS 3.11.1301, 1302, 1310 use the following branch:
+
+http://svn/repos/netdisk/mayfield/setup/branches/R1004
+
+Put the output (fre) from the NDAS Software Project into the Setup
+Project Data directory (ndas-3.XX.XXXX) and run 'createism' and
+'buildsetup' to build the final MSI output file.
+
+

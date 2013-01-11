@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+	<Fragment>
+
+		<?ifdef NdasSetupFlags_UseUninstallShortcut ?>
+		<DirectoryRef Id="INSTALLLOCATION">
+			<Icon Id="$(var.iconid.uninst)" src="$(var.SetupDataDir.Icon)\uninst.ico" />
+			<Component Id="uninstall" Guid="$(var.uninstall_GUID)" Win64="$(var.Win64.YesNo)">
+				<Condition>USE_UNINSTALL_SHORTCUT=1</Condition>
+				<CreateFolder />
+				<RemoveFolder Id="NdasProgramMenuFolder" Directory="NdasProgramMenuFolder" On="uninstall" />
+				<RemoveFolder Id="NdasProgramMenuCompanyFolder" Directory="NdasProgramMenuCompanyFolder" On="uninstall" />
+				<Shortcut Id="Uninstall" Directory="NdasProgramMenuFolder"
+									Name="UNINST" LongName="$(loc.Uninstall.LongName)"
+									Target="[SystemFolder]msiexec.exe"
+									Description="$(loc.Uninstall.Description)"
+									Arguments="/x [ProductCode]"
+									Icon="$(var.iconid.uninst)" IconIndex="0"
+									Show="normal" />
+				<Registry Root="HKCU" Key="SOFTWARE\NDAS\Components\uninstall" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+				<?endif?>
+
+		<DirectoryRef Id="INSTALLLOCATION">
+
+			<Component Id="InstallInfo" Guid="$(var.InstallInfo_GUID)" Win64="$(var.Win64.YesNo)">
+				<Registry Root="HKLM" Key="Software\NDAS">
+					<Registry Name="ProductVersion" Type="string" Value="[ProductVersion]" />
+					<Registry Key="Install">
+						<Registry Name="InstallDir" Type="string" Value="[INSTALLDIR]" />
+						<Registry Name="ProductVersion" Type="string" Value="[ProductVersion]" />
+					</Registry>
+				</Registry>
+			</Component>
+			
+			<Component Id="CustomInstallInfo" Guid="$(var.CustomInstallInfo_GUID)" Win64="$(var.Win64.YesNo)">
+				<Condition>ProductReleaseTag</Condition>
+				<Registry Root="HKLM" Key="Software\NDAS\Install" Name="ProductReleaseTag" Type="string" Value="[ProductReleaseTag]" />
+			</Component>
+
+			<Component Id="SetupLanguageInfo" Guid="$(var.SetupLanguageInfo_GUID)" Win64="$(var.Win64.YesNo)">
+				<Registry Root="HKMU" Key="Software\NDAS\ndasmgmt" Name="Language" Type="integer" Value="[ProductLanguage]" />
+			</Component>
+
+			<?ifdef NdasSetupFlags_UseMRE?>
+			<!-- Enable Mount-on-ready feature only for encrypted disks -->
+			<Component Id="ExtraMRE" Guid="$(var.ExtraMRE_GUID)" Win64="$(var.Win64.YesNo)">
+				<Registry Root="HKLM" Key="SOFTWARE\NDAS\ndassvc" Name="MountOnReadyForEncryptedOnly" Type="integer" Value="1" />
+			</Component>
+			<?endif?>
+
+			<?ifdef NdasSetupFlags_UseExtraDeviceProp?>
+			<!-- Export MAC Address in NDAS Device Properties -->
+			<Component Id="ExtraDeviceProp" Guid="$(var.ExtraDeviceProp_GUID)" Win64="$(var.Win64.YesNo)">
+				<Registry Root="HKLM" Key="SOFTWARE\NDAS\ndassvc" Name="DevicePropFlags" Type="integer" Value="524288" />
+				<!-- 0x00080000 -->
+			</Component>
+			<?endif?>
+
+			<?ifdef NdasSetupFlags_LowDisconnectThreshold?>
+			<Component Id="ExtraLowDisconnectThreshold" Guid="$(var.ExtraLowDisconnectThreshold_GUID)" Win64="$(var.Win64.YesNo)">
+				<Registry Root="HKLM" Key="SOFTWARE\NDAS\ndassvc" Name="OverrideLogDevReconnect" Type="integer" Value="1" />
+				<Registry Root="HKLM" Key="SOFTWARE\NDAS\ndassvc" Name="LogDevReconnect" Type="integer" Value="3" />
+			</Component>
+			<?endif?>
+
+			<?ifdef NdasSetupFlags_DisableVerifiedWrite?>
+			<Component Id="NDAS20DisableVW" Guid="$(var.NDAS20DisableVW_GUID)" Win64="$(var.Win64.YesNo)">
+				<!-- LUROPTION_OFF_NDAS_2_0_WRITE_CHECK -->
+				<Registry Root="HKLM" Key="SOFTWARE\NDAS\ndassvc" Name="LurOptions" Type="integer" Value="32" />
+			</Component>
+			<?endif?>
+
+		</DirectoryRef>
+		</Fragment>
+</Wix>

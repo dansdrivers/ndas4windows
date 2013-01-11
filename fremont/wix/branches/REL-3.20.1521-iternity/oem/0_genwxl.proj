@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(GenWxlPropertyFile)" />
+
+  <Target Name="GenerateWxl"
+		  DependsOnTargets="CreateLocDir"
+		  Inputs=""
+		  Outputs="@(GeneratedWxl)">
+    <!--<CallTarget Targets="GenerateWxlFromBaseOemLoc;GenerateWxlFromBaseLoc;CopyWxlFromBaseWxl">
+      <Output TaskParameter="TargetOutputs" ItemName="TargetOutputs" />
+    </CallTarget>-->
+    <CallTarget Targets="GenerateWxlFromBaseOemLoc" 
+                Condition="exists('$(BaseOemLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml')">
+      <Output TaskParameter="TargetOutputs" ItemName="GeneratedWxl" />
+    </CallTarget>
+    <CallTarget Targets="GenerateWxlFromBaseLoc"
+                Condition="!exists('$(BaseOemLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml') and exists('$(BaseLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml')">
+      <Output TaskParameter="TargetOutputs" ItemName="GeneratedWxl" />
+    </CallTarget>
+    <CallTarget Targets="CopyWxlFromBaseWxl"
+                Condition="!exists('$(BaseOemLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml') and !exists('$(BaseLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml')">
+      <Output TaskParameter="TargetOutputs" ItemName="GeneratedWxl" />
+    </CallTarget>
+    <!-- <Message Text="GeneratedWxl:" /> -->
+    <!-- <Message Text="  %(GeneratedWxl.identity)" /> -->
+  </Target>
+
+  <Target Name="CreateLocDir">
+	<MakeDir Directories="$(OemLocDir)" />
+  </Target>
+
+  <Target Name="GenerateWxlFromBaseOemLoc"
+		  Inputs="%(BaseWxlFile.identity);$(BaseOemLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml"
+		  Outputs="$(OemLocDir)\%(BaseWxlFile.filename)%(BaseWxlFile.extension)">
+
+	<CreateProperty Value="$(BaseOemLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml">
+	  <Output TaskParameter="Value" PropertyName="_BaseOemLocFile" />
+	</CreateProperty>
+
+	<CreateProperty Value="$(OemLocDir)\%(BaseWxlFile.filename)%(BaseWxlFile.extension)">
+	  <Output TaskParameter="Value" PropertyName="_WxlOutputFile" />
+	</CreateProperty>
+
+	<Exec Command="..\bin\genwxl.exe %(BaseWxlFile.identity) $(BaseOemLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml $(_WxlOutputFile)"
+		  Outputs="$(OemLocDir)\%(BaseWxlFile.filename)%(BaseWxlFile.extension)"
+		  Condition="exists('$(_BaseOemLocFile)')">
+	</Exec>
+
+  </Target>
+
+  <Target Name="GenerateWxlFromBaseLoc"
+		  Inputs="%(BaseWxlFile.identity);$(BaseLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml"
+		  Outputs="$(OemLocDir)\%(BaseWxlFile.filename)%(BaseWxlFile.extension)">
+
+	<CreateProperty Value="$(BaseOemLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml">
+	  <Output TaskParameter="Value" PropertyName="_BaseOemLocFile" />
+	</CreateProperty>
+
+	<CreateProperty Value="$(BaseLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml">
+	  <Output TaskParameter="Value" PropertyName="_BaseLocFile" />
+	</CreateProperty>
+
+	<CreateProperty Value="$(OemLocDir)\%(BaseWxlFile.filename)%(BaseWxlFile.extension)">
+	  <Output TaskParameter="Value" PropertyName="_WxlOutputFile" />
+	</CreateProperty>
+
+	<Exec Command="..\bin\genwxl.exe %(BaseWxlFile.identity) $(_BaseLocFile) $(_WxlOutputFile)"
+		  Outputs="$(_WxlOtuputFile)" 
+		  Condition="!exists('$(_BaseOemLocFile') and exists('$(_BaseLocFile)')" />
+
+  </Target>
+
+  <Target Name="CopyWxlFromBaseWxl"
+		  Inputs="%(BaseWxlFile.identity)"
+		  Outputs="$(OemLocDir)\%(BaseWxlFile.filename)%(BaseWxlFile.extension)" >
+
+	<CreateProperty Value="$(BaseOemLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml">
+	  <Output TaskParameter="Value" PropertyName="_BaseOemLocFile" />
+	</CreateProperty>
+
+    <CreateProperty Value="$(BaseLocDir)\loc_%(BaseWxlFile.LocName)_$(WxlLanguage).xml">
+      <Output TaskParameter="Value" PropertyName="_BaseLocFile" />
+    </CreateProperty>
+
+    <CreateProperty Value="$(OemLocDir)\%(BaseWxlFile.filename)%(BaseWxlFile.extension)">
+	  <Output TaskParameter="Value" PropertyName="_WxlOutputFile" />
+	</CreateProperty>
+
+	<Copy SourceFiles="%(BaseWxlFile.identity)"
+		  DestinationFiles="$(_WxlOutputFile)"
+		  Condition="!exists('$(_BaseOemLocFile') and !exists('$(_BaseLocFile)')" />
+
+  </Target>
+
+  <Target Name="Clean">
+	<Delete Files="$(OemLocDir)\%(BaseWxlFile.filename)%(BaseWxlFile.extension)" />
+  </Target>
+
+</Project>
+

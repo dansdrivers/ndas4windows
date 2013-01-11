@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!-- MSI Properties -->
+	<PropertyGroup>
+		<ProductCode></ProductCode>
+		<ProductVersion Condition="'$(ProductVersion)'==''">3.30.1601</ProductVersion>
+		<ProductDisplayVersion Condition="'$(ProductDisplayVersion)'==''">$(ProductVersion)</ProductDisplayVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<WixToolPath>..\..\..\bin\wix-2.0.4820.0</WixToolPath>
+		<OutputName>xixfs</OutputName>
+		<OutputType>package</OutputType>
+		<ToolPath>$(WixToolPath)</ToolPath>
+
+		<!-- normalize platform strings: i386, amd64, ia64 -->
+		<Platform Condition=" '$(Platform)' == '' ">i386</Platform>
+		<Platform Condition=" '$(Platform)' == 'x86' ">i386</Platform>
+		<Platform Condition=" '$(Platform)' == 'x64' ">amd64</Platform>
+
+		<!-- configuration -->
+		<Configuration Condition=" '$(Configuration)' == '' ">fre</Configuration>
+		<ConfigurationSuffix Condition=" '$(Configuration)'=='chk' ">d</ConfigurationSuffix>
+
+		<OutputPath Condition=" '$(OutputPath)' == '' ">obj$(ConfigurationSuffix)\bin\$(Platform)\</OutputPath>
+		<IntermediateOutputPath Condition=" '$(IntermediateOutputPath)' == '' ">obj$(ConfigurationSuffix)\$(Platform)\</IntermediateOutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<BinPubConfig Condition=" '$(BinPubConfig)' == '' ">$(Configuration)</BinPubConfig>
+		<SetupFileSource Condition="'$(SetupFileSource)'==''">$(WixProjectRoot)..\publish\$(Configuration)\$(Platform)\</SetupFileSource>
+		<CustomActionDllPath Condition="'$(CustomActionDllPath)'==''">$(SetupFileSource)setup</CustomActionDllPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DefineConstants Condition="'$(Platform)'=='amd64'">Win64Build=1</DefineConstants>
+		<DefineConstants>$(DefineConstants);NdasMsiVersion=$(ProductVersion)</DefineConstants>
+		<DefineConstants>$(DefineConstants);NdasMsiDisplayVersion=$(ProductDisplayVersion)</DefineConstants>
+		<DefineConstants>$(DefineConstants);ExternalMergeModulePath=..\..\supplements\msm</DefineConstants>
+		<DefineConstants>$(DefineConstants);BinPubConfig=$(BinPubConfig)</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupFileSource=setupfiles</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupDataDir.CustomActionDll=supplements</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="xixfs_sa.wxs" />
+		<Compile Include="..\..\xdi.wxs" />
+		<Compile Include="..\..\directories.wxs" />
+		<Compile Include="..\..\xixfs.wxs" />
+		<Compile Include="..\..\ndasuser.wxs" />
+		<Compile Include="..\..\ndasvol.wxs" />
+		<LocalizationFile Include="..\..\*.wxl" Exclude="..\..\oem.wxl" />
+		<LocalizationFile Include="xixfs.wxl" />
+		<IncludeSearchPath Include="..\.." />
+	</ItemGroup>
+
+	<!-- Wix Standard Library -->
+	<ItemGroup>
+		<WixLibrary Include="$(WixToolPath)\wixui.wixlib" />
+		<LocalizationFile Include="$(WixToolPath)\WixUI_en-US.wxl" />
+	</ItemGroup>
+	
+	<Import Project="..\..\..\bin\msbuild\wix2.targets" />
+
+	<Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+
+</Project>

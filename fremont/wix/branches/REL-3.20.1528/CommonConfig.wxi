@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Include xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+<?ifndef p.global?>
+<?define p.global=".."?>
+<?endif?>
+<?ifndef p.local?>
+<?define p.local=".."?>
+<?endif?>
+
+<?ifndef p.global.msm?>
+<?define p.global.msm="$(var.p.global)\supplements\msm"?>
+<?endif?>
+
+<?ifndef p.local.msm?>
+  <?ifdef Win64Build?>
+    <?define p.local.msm="$(var.p.local)\publish\x64"?>
+  <?else?>
+    <?define p.local.msm="$(var.p.local)\publish\x86"?>
+  <?endif?>
+<?endif?>
+
+<?ifdef Win64Build?>
+<?define NdasScMsmProductCode="274315A7-54C8-4CF4-9CB2-64C024569FDF"?>
+<?define NdasScMsmProductCodeTag=".274315A7_54C8_4CF4_9CB2_64C024569FDF"?>
+<?else?>
+<?define NdasScMsmProductCode="D790633D-974B-4B0F-A30A-2D4CE2B4F532"?>
+<?define NdasScMsmProductCodeTag=".D790633D_974B_4B0F_A30A_2D4CE2B4F532"?>
+<?endif?>
+
+<?define NdasScuiMsmProductCode="D7906330-974B-4B0F-A30A-2D4CE2B4F532"?>
+
+<!-- ENU English (US) 1033 -->
+<?define NdasScuiMsmProductCode_1033="$(var.NdasScuiMsmProductCode)"?>
+
+<!-- DEU German 1031 -->
+<?define NdasScuiMsmProductCode_1031="D7906333-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- FRA French 1036 -->
+<?define NdasScuiMsmProductCode_1036="D7906335-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- ITA Italian 1040 -->
+<?define NdasScuiMsmProductCode_1040="D7906336-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- JPN Japanese 1041, CP932 -->
+<?define NdasScuiMsmProductCode_1041="D7906331-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- KOR Korean 1042, CP949 -->
+<?define NdasScuiMsmProductCode_1042="D7906332-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- PTG Portuguese (Portugal) 2070 -->
+<?define NdasScuiMsmProductCode_2070="D7906337-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- ESN Spanish - Modern Sort (Spain) 3082 -->
+<?define NdasScuiMsmProductCode_3082="D7906334-974B-4B0F-A30A-2D4CE2B4F532"?>
+
+<!-- CHT Traditional Chinese 1028, CP950 -->
+<?define NdasScuiMsmProductCode_1028="D7906338-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- CHS Simplified Chinese 2052, CP936-->
+<?define NdasScuiMsmProductCode_2052="D7906339-974B-4B0F-A30A-2D4CE2B4F532"?>
+
+<!-- DAN Danish 1030 -->
+<?define NdasScuiMsmProductCode_1030="D790633A-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- FIN Finnish 1035 -->
+<?define NdasScuiMsmProductCode_1035="D790633B-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- NLD Dutch 1043 -->
+<?define NdasScuiMsmProductCode_1043="D790633C-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- NOR Norwegian 1044 -->
+<?define NdasScuiMsmProductCode_1044="D790633D-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- SVE Swedish 1053 -->
+<?define NdasScuiMsmProductCode_1053="D790633F-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- RUS Russian 1049 -->
+<?define NdasScuiMsmProductCode_1049="D790633F-974B-4B0F-A30A-2D4CE2B4F532"?>
+
+<!-- BGR Bulgarian (Bulgaria) 1026 -->
+<?define NdasScuiMsmProductCode_1026="29A8EA59-E074-45F2-82FF-0A1633AC0B5C"?>
+<!-- CAT Catalan (Catalan) 1027 -->
+<?define NdasScuiMsmProductCode_1027="651B894E-8FE3-4D2A-99C0-F8A2682284B9"?>
+<!-- CSY Czech (Czech Republic) 1029 -->
+<?define NdasScuiMsmProductCode_1029="2A358D39-31B7-40B7-A28D-2095B7B5DEB6"?>
+<!-- ELL Greek (Greece) 1032 -->
+<?define NdasScuiMsmProductCode_1032="97C606F3-9221-4EBB-82CD-AC12F6AA1D03"?>
+<!-- EUQ Basque (Basque) 1069 -->
+<?define NdasScuiMsmProductCode_1069="CC305925-B4FB-484F-AD98-9C89ED643D06"?>
+<!-- FRC French (Canada) 3084 -->
+<?define NdasScuiMsmProductCode_3084="809DEC52-CC3F-4617-B7C1-F1680364D41C"?>
+<!-- HRV Croatian (Croatia) 1050 -->
+<?define NdasScuiMsmProductCode_1050="6B7613BC-2299-4800-B295-5B9EB98092F5"?>
+<!-- HUN Hungarian (Hungary) 1038 -->
+<?define NdasScuiMsmProductCode_1038="A32D059C-40EE-46C2-BC28-BDA21F6F1D61"?>
+<!-- IND Indonesian (Indonesia) 1057 -->
+<?define NdasScuiMsmProductCode_1057="E42C6F17-4F5F-4955-90FD-C54A737B5520"?>
+<!-- PLK Polish (Poland) 1045 -->
+<?define NdasScuiMsmProductCode_1045="D790633E-974B-4B0F-A30A-2D4CE2B4F532"?>
+<!-- ROM Romanian (Romania) 1048 -->
+<?define NdasScuiMsmProductCode_1048="820EF0A7-8E90-4248-8FD9-B0A953BAEEE4"?>
+<!-- SKY Slovak (Slovakia) 1051 -->
+<?define NdasScuiMsmProductCode_1051="313E13F7-6102-4DED-951A-E49D55F56A15"?>
+<!-- SLV Slovenian (Slovenia) 1060 -->
+<?define NdasScuiMsmProductCode_1060="A19B606F-78EE-44F0-AFA7-EFD3DF8F0D39"?>
+<!-- SRB Serbian (Cyrillic, Serbia) 3098 -->
+<?define NdasScuiMsmProductCode_3098="8C2B8C64-1302-4A39-A6BA-4E4598EC24ED"?>
+<!-- THA Thai (Thailand) 1054 -->
+<?define NdasScuiMsmProductCode_1054="1C929FE9-6E9D-4BFB-A1A0-A6D960EC04FD"?>
+<!-- TRK Turkish (Turkey) 1055 -->
+<?define NdasScuiMsmProductCode_1055="A4E98EA0-EA93-42F6-A0A0-AFB030F6EFD7"?>
+
+<?ifndef NdasMsiProductCode?>
+<?define NdasMsiProductCode="A12A36D3-ACB7-11D9-8E75-000D614181EB"?>
+<?endif?>
+
+<?ifndef NdasMsiUpgradeCode?>
+<?define NdasMsiUpgradeCode="E86E86BB-051E-4F19-B111-0E5D15E7CDE4"?>
+<?endif?>
+
+<?ifndef NdasMsiVersion?>
+<?error "NdasMsiVersion is not set"?>
+<!--<?define NdasMsiVersion="3.11.9000.0"?>-->
+<?endif?>
+
+<?ifndef ProductVersionSuffix?>
+<?define ProductVersionSuffix="_$(var.NdasMsiVersion)" ?>
+<?endif?>
+
+<?ifndef NdasMsiDisplayVersion?>
+<?error "NdasMsiDisplayVersion is not set"?>
+<!--<?define NdasMsiDisplayVersion="3.11-dev"?>-->
+<?endif?>
+
+<?ifndef NdasScMsmVersion?>
+<?define NdasScMsmVersion="$(var.NdasMsiVersion)"?>
+<?endif?>
+
+<?ifndef NdasScMsmDisplayVersion?>
+<?define NdasScMsmDisplayVersion="$(var.NdasMsiDisplayVersion)"?>
+<?endif?>
+
+<?ifndef MergeModulePath?>
+<?define MergeModulePath="$(var.p.global.msm)"?>
+<?endif?>
+
+<?ifndef NdasMergeModulePath?>
+<?define NdasMergeModulePath="$(var.p.local.msm)"?>
+<?endif?>
+
+<?ifdef Win64Build?>
+<?define Win64YesNo="yes"?>
+<?define PlatformSuffix="_x64"?>
+<?else?>
+<?define Win64YesNo="no"?>
+<?define PlatformSuffix="_x86"?>
+<?endif?>
+
+<?ifndef NdasScMsm?>
+<?ifdef UseNdasScMsm_FS?>
+<?define NdasScMsm="ndassc-fs$(var.ProductVersionSuffix)$(var.PlatformSuffix).msm"?>
+<?else?>
+<!-- <?define NdasScMsm="ndassc_$(var.NdasMsiDisplayVersion)$(var.PlatformSuffix).msm"?> -->
+<?define NdasScMsm="ndassc$(var.ProductVersionSuffix)$(var.PlatformSuffix).msm"?>
+<?endif?>
+<?endif?>
+
+<!-- 3.10 does not have NDASIOMG.DLL -->
+<?if $(var.NdasMsiVersionValue) < 311 ?>
+<?define NdasSetupFlags_ExcludeNDASIOMGDLL ?>
+<?endif?>
+
+<?ifndef SetupLanguage?>
+<?define SetupLanguage="en-US"?>
+<?endif?>
+
+<!-- language name substitution -->
+  <?if $(var.SetupLanguage)="CHS"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="zh-CN"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="CHT"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="zh-TW"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="DEU"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="de-DE"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="ESN"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="es-ES"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="FRA"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="fr-FR"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="ITA"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="it-IT"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="JPN"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="ja-JP"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="KOR"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="ko-KR"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="PTG"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="pt-PT"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="DAN"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="da-DK"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="NLD"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="nl-NL"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="NOR"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="nb-NO"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="SVE"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="sv-SE"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="RUS"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="ru-RU"?>
+  <?endif?>
+
+  <?if $(var.SetupLanguage)="BGR"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="bg-BG"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="CAT"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="ca-ES"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="CSY"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="cs-CZ"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="ELL"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="el-GR"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="EUQ"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="eu-ES"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="FIN"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="fi-FI"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="FRC"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="fr-CA"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="HRV"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="hr-HR"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="HUN"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="hu-HU"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="IND"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="id-ID"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="PLK"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="pl-PL"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="ROM"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="ro-RO"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="SKY"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="sk-SK"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="SLV"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="sl-SI"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="SRB"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="sr-Cyrl-CS"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="THA"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="th-TH"?>
+  <?endif?>
+  <?if $(var.SetupLanguage)="TRK"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="tr-TR"?>
+  <?endif?>
+
+  <?if $(var.SetupLanguage)="NEU"?>
+  <?undef SetupLanguage?>
+  <?define SetupLanguage="0"?>
+  <?endif?>
+  
+<?if $(var.SetupLanguage)="0"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="0"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="0"?><?endif?>
+  <?ifndef SISCodepage?><?define SISCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="en-US"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1033"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+  
+<?if $(var.SetupLanguage)="zh-CN"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="2052"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="936"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="zh-TW"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1028"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="950"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="de-DE"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1031"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="es-ES"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="3082"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="fr-FR"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1036"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="it-IT"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1040"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="ja-JP"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1041"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="932"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="ko-KR"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1042"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="949"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="pt-PT"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="2070"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="da-DK"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1030"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="nl-NL"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1043"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="nb-NO"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1044"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="sv-SE"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1053"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="ru-RU"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1049"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1251"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="bg-BG"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1026"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1251"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="ca-ES"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1027"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="cs-CZ"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1029"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1250"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="el-GR"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1032"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1253"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="eu-ES"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1069"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="fi-FI"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1035"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="fr-CA"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="3084"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="hr-HR"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1050"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1250"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="hu-HU"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1038"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1250"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="id-ID"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1057"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1252"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="pl-PL"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1045"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1250"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="ro-RO"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1048"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1250"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="sk-SK"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1051"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1250"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="sl-SI"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1060"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1250"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="sr-Cyrl-CS"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="3098"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1251"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="th-TH"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1054"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="874"?><?endif?>
+<?endif?>
+<?if $(var.SetupLanguage)="tr-TR"?>
+  <?ifndef TargetLanguage?><?define TargetLanguage="1055"?><?endif?>
+  <?ifndef TargetCodepage?><?define TargetCodepage="1254"?><?endif?>
+<?endif?>
+
+<?if $(var.SetupLanguage)="0"?>
+<?define SetupLanguageSuffix=""?>
+<?endif?>
+
+<?if $(var.SetupLanguage)!="0"?>
+<?define SetupLanguageSuffix="_$(var.SetupLanguage)"?>
+<?endif?>
+
+<?ifndef NdasScuiMsm?>
+<?ifdef UseNdasScMsm_FS?>
+<?define NdasScuiMsm="ndasscui-fs$(var.ProductVersionSuffix)$(var.PlatformSuffix)$(var.SetupLanguageSuffix).msm"?>
+<?else?>
+<!-- <?define NdasScuiMsm="ndasscui_$(var.NdasMsiDisplayVersion)$(var.PlatformSuffix)$(var.SetupLanguageSuffix).msm"?> -->
+<?define NdasScuiMsm="ndasscui$(var.ProductVersionSuffix)$(var.PlatformSuffix)$(var.SetupLanguageSuffix).msm"?>
+<?endif?>
+<?endif?>
+
+<?ifndef SISPlatforms?>
+<?ifdef Win64Build?>
+<?define SISPlatforms="x64"?>
+<?else?>
+<?define SISPlatforms="Intel"?>
+<?endif?>
+<?endif?>
+
+<?ifndef SourceDir?>
+<?ifdef Win64Build?>
+<?define SourceDir="$(var.p.global)\SourceDir\amd64\"?>
+<?else?>
+<?define SourceDir="$(var.p.global)\SourceDir\i386"?>
+<?endif?>
+<?endif?>
+
+<?ifndef BinaryDir?>
+<?ifdef Win64Build?>
+<?define cadir="$(var.p.global)\supplements\ca\amd64\"?>
+<?else?>
+<?define cadir="$(var.p.global)\supplements\ca\"?>
+<?endif?>
+<?endif?>
+
+<!--
+<?ifndef NdasSetupFlags_HAVE_NDASNTFS?>
+<?define NdasSetupFlags_HAVE_NDASNTFS=1?>
+<?endif?>
+-->
+
+<?ifndef NdasSetupFlags_HAVE_NDASFAT?>
+<?define NdasSetupFlags_HAVE_NDASFAT=1?>
+<?endif?>
+
+</Include>

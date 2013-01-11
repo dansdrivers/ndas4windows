@@ -1,0 +1,1366 @@
+// ndasuser.cpp : Defines the entry point for the DLL application.
+//
+
+#include "stdafx.h"
+#include "ndaserror.h"
+
+#include "xdebug.h"
+
+#include "ndascmd.h"
+#include "ndasctype.h"
+#include "ndastype.h"
+
+#include "ndasid.h"
+#include "ndasuser.h"
+
+#include "ndasscc.h"
+#include "autores.h"
+
+
+NDASUSER_API
+DWORD
+NdasGetAPIVersion()
+{
+	return (DWORD)MAKELONG(
+		NDASUSER_API_VERSION_MAJOR, 
+		NDASUSER_API_VERSION_MINOR);
+}
+
+inline void SetErrorStatus(NDAS_CMD_STATUS status, NDAS_CMD_ERROR::REPLY* lpErrorReply)
+{
+	switch (status) {
+	case NDAS_CMD_STATUS_FAILED:
+		::SetLastError(lpErrorReply->dwErrorCode);
+		break;
+	case NDAS_CMD_STATUS_ERROR_NOT_IMPLEMENTED:
+		::SetLastError(NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED);
+		break;
+	case NDAS_CMD_STATUS_INVALID_REQUEST:
+		::SetLastError(NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST);
+		break;
+	case NDAS_CMD_STATUS_TERMINATION:
+		::SetLastError(NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION);
+		break;
+	case NDAS_CMD_STATUS_UNSUPPORTED_VERSION:
+		::SetLastError(NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION);
+	}
+	return;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+// MACROS for Connections
+//
+// Note:
+//
+// 
+//////////////////////////////////////////////////////////////////////////
+
+#define NDAS_DEFINE_TYPES(x,lpRequest,lpReply,lpErrorReply,scc) \
+	typedef x COMMAND; \
+	COMMAND::REQUEST buffer; \
+	COMMAND::REQUEST* lpRequest = &buffer; \
+	COMMAND::REPLY* lpReply; \
+	NDAS_CMD_ERROR::REPLY* lpErrorReply; \
+	CNdasServiceCommandClient<COMMAND> scc; // scc is a managed resource
+
+#define NDAS_CONNECT(scc) \
+	{ \
+	BOOL fSuccess = scc.Connect(); \
+	if (!fSuccess) \
+	{ \
+		::SetLastError(NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE); return FALSE; \
+	} \
+	}
+
+#define NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus) \
+	DWORD cbRequestExtra(0); \
+	DWORD cbReplyExtra, cbErrorExtra; \
+	DWORD dwCmdStatus; \
+	{ \
+	BOOL fSuccess = scc.Transact( \
+		lpRequest, cbRequestExtra, \
+		&lpReply, &cbReplyExtra, \
+		&lpErrorReply, &cbErrorExtra, \
+		&dwCmdStatus); \
+	DPInfo(_FT("Transact returned %d\n"), fSuccess); \
+	if (!fSuccess) return FALSE; \
+	NDAS_CMD_STATUS cmdStatus = (NDAS_CMD_STATUS)(dwCmdStatus); \
+	if (NDAS_CMD_STATUS_SUCCESS != cmdStatus) { \
+		DPError(_FT("Command failed!\n")); \
+		SetErrorStatus(cmdStatus, lpErrorReply); \
+		return FALSE; \
+	} \
+	}
+
+#define CHECK_STR_PTRW(ptr,len) \
+	{ if (::IsBadStringPtrW(ptr, len)) \
+	{ \
+		::SetLastError(NDASUSER_ERROR_INVALID_PARAMETER); \
+		return FALSE; \
+	} \
+	}
+
+#define CHECK_STR_PTRA(ptr,len) \
+	{ if (::IsBadStringPtrA(ptr, len)) \
+	{ \
+		::SetLastError(NDASUSER_ERROR_INVALID_PARAMETER); \
+		return FALSE; \
+	} \
+	}
+
+#define CHECK_STR_PTRW_NULLABLE(ptr,len) \
+	{ if (ptr != NULL && ::IsBadStringPtrW(ptr, len)) \
+	{ \
+		::SetLastError(NDASUSER_ERROR_INVALID_PARAMETER); \
+		return FALSE; \
+	} \
+	}
+
+#define CHECK_STR_PTRA_NULLABLE(ptr,len) \
+	{ if (ptr != NULL && ::IsBadStringPtrA(ptr, len)) \
+	{ \
+		::SetLastError(NDASUSER_ERROR_INVALID_PARAMETER); \
+		return FALSE; \
+	} \
+	}
+
+#define CHECK_WRITE_PTR(ptr,len) \
+	{ if (::IsBadWritePtr(ptr, len)) \
+	{ \
+		::SetLastError(NDASUSER_ERROR_INVALID_PARAMETER); \
+		return FALSE; \
+	} \
+	}
+
+#define CHECK_PROC_PTR(proc) \
+	{ if (::IsBadCodePtr(reinterpret_cast<FARPROC>(proc))) \
+	{ \
+		::SetLastError(NDASUSER_ERROR_INVALID_PARAMETER); \
+		return FALSE; \
+	} \
+	}
+
+#define NDAS_VALIDATE_DEVICE_STRING_ID(lpszDeviceStringId) \
+	{ \
+	BOOL fSuccess = ValidateStringIdKeyW(lpszDeviceStringId); \
+	if (!fSuccess) { \
+		::SetLastError(NDASUSER_ERROR_INVALID_DEVICE_STRING_ID); \
+		return FALSE; \
+	} \
+	}
+
+#define NDAS_VALIDATE_DEVICE_STRING_IDA(lpszDeviceStringId) \
+	{ \
+	BOOL fSuccess = ValidateStringIdKeyA(lpszDeviceStringId); \
+	if (!fSuccess) { \
+		::SetLastError(NDASUSER_ERROR_INVALID_DEVICE_STRING_ID); \
+		return FALSE; \
+	} \
+	}
+
+//#define NDAS_VALIDATE_STRING_ID_KEY(stringId, stringKey) \
+//	;
+
+#define NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is) \
+	NDAS_DEVICE_ID_OR_SLOT is; \
+	is.bUseSlotNo = TRUE; \
+	is.SlotNo = dwSlotNo;
+
+#define NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is) \
+	CHECK_STR_PTRW(lpszDeviceStringId, NDAS_DEVICE_STRING_ID_LEN) \
+	NDAS_VALIDATE_DEVICE_STRING_ID(lpszDeviceStringId) \
+	NDAS_DEVICE_ID_OR_SLOT is; \
+	is.bUseSlotNo = FALSE; \
+	BOOL fSuccess = ConvertStringIdToRealIdW(lpszDeviceStringId,&is.DeviceId); \
+	_ASSERT(fSuccess); // should not fail as we already did Validation 
+
+#define NDAS_FORWARD_DEVICE_STRING_IDA(lpszDeviceStringId, is) \
+	CHECK_STR_PTRA(lpszDeviceStringId, NDAS_DEVICE_STRING_ID_LEN) \
+	NDAS_VALIDATE_DEVICE_STRING_IDA(lpszDeviceStringId) \
+	NDAS_DEVICE_ID_OR_SLOT is; \
+	is.bUseSlotNo = FALSE; \
+	BOOL fSuccess = ConvertStringIdToRealIdA(lpszDeviceStringId,&is.DeviceId); \
+	_ASSERT(fSuccess); // should not fail as we already did Validation 
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Validate String Id and Key
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasValidateStringIdKeyW(
+	LPCWSTR lpszDeviceStringId, 
+	LPCWSTR lpszDeviceStringKey)
+{
+	//
+	// pointer validation check - ALWAYS DO THIS FOR API CALLS
+	// lpszDeviceStringKey can be NULL
+	//
+
+	CHECK_STR_PTRW(lpszDeviceStringId, NDAS_DEVICE_STRING_ID_LEN)
+	CHECK_STR_PTRW_NULLABLE(lpszDeviceStringKey, NDAS_DEVICE_STRING_KEY_LEN)
+
+	BOOL bWritable;
+	BOOL fSuccess = ValidateStringIdKeyW(
+		lpszDeviceStringId, 
+		lpszDeviceStringKey, 
+		&bWritable);
+
+	if (!fSuccess) {
+		if (ERROR_SUCCESS == ::GetLastError()) {
+			::SetLastError(NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY);
+			return FALSE;
+		}
+	}
+
+	return TRUE;
+
+}
+/*
+NDASUSER_API
+BOOL NdasValidateStringIdKeyA(
+	LPCSTR lpszDeviceStringId, 
+	LPCSTR lpszDeviceStringKey)
+{
+	//
+	// pointer validation check - ALWAYS DO THIS FOR API CALLS
+	// lpszDeviceStringKey can be NULL
+	//
+
+	CHECK_STR_PTRA(lpszDeviceStringId, NDAS_DEVICE_STRING_ID_LEN)
+	CHECK_STR_PTRA_NULLABLE(lpszDeviceStringKey, NDAS_DEVICE_STRING_KEY_LEN)
+
+	BOOL bWritable;
+	return ValidateStringIdKeyA(lpszDeviceStringId, lpszDeviceStringKey, &bWritable);
+
+}
+*/
+//////////////////////////////////////////////////////////////////////////
+//
+// Register Device
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API 
+DWORD
+WINAPI
+NdasRegisterDeviceW(
+	LPCWSTR lpszDeviceStringId, 
+	LPCWSTR lpszDeviceStringKey,
+	LPCWSTR lpszDeviceName)
+{
+	// ptr sanity check
+	CHECK_STR_PTRW(lpszDeviceStringId, NDAS_DEVICE_STRING_ID_LEN)
+	CHECK_STR_PTRW_NULLABLE(lpszDeviceStringKey, NDAS_DEVICE_STRING_KEY_LEN)
+	CHECK_STR_PTRW(lpszDeviceName, -1)
+
+	NDAS_CMD_REGISTER_DEVICE::REQUEST buffer; 
+	NDAS_CMD_REGISTER_DEVICE::REQUEST* lpRequest = &buffer; 
+	NDAS_CMD_REGISTER_DEVICE::REPLY* lpReply; 
+	NDAS_CMD_ERROR::REPLY* lpErrorReply; 
+
+	// check ndas id
+	BOOL bWritable;
+	BOOL fSuccess = ValidateStringIdKeyW(
+		lpszDeviceStringId, lpszDeviceStringKey, &bWritable);
+
+	if (!fSuccess) {
+		::SetLastError(NDASUSER_ERROR_INVALID_DEVICE_STRING_ID);
+		return 0;
+	}
+	// Prepare the parameters here
+	lpRequest->GrantingAccess = 
+		(bWritable) ? (GENERIC_READ | GENERIC_WRITE) : GENERIC_READ;
+
+	fSuccess = ConvertStringIdToRealIdW(
+		lpszDeviceStringId, 
+		&lpRequest->DeviceId);
+
+	_ASSERT(fSuccess); // must not fail as we already did Validation
+
+	HRESULT hr = ::StringCchCopyW(
+		lpRequest->wszDeviceName,
+		MAX_NDAS_DEVICE_NAME_LEN + 1,
+		lpszDeviceName);
+
+	if (!(SUCCEEDED(hr) || (FAILED(hr) && STRSAFE_E_INSUFFICIENT_BUFFER == hr)))
+	{
+		return 0;
+	}
+
+	// ready to connect
+	CNdasServiceCommandClient<NDAS_CMD_REGISTER_DEVICE> scc;
+
+	BOOL fConnected = scc.Connect();
+	if (!fConnected) {
+		XTRACE(TEXT("Service Connection Failure with error %d\n"), ::GetLastError());
+		::SetLastError(NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE); 
+		return 0; 
+	} 
+
+	DWORD cbRequestExtra(0); 
+	DWORD cbReplyExtra, cbErrorExtra; 
+	DWORD dwCmdStatus; 
+	{ 
+		BOOL fSuccess = scc.Transact(
+			lpRequest, 
+			cbRequestExtra, 
+			&lpReply, 
+			&cbReplyExtra, 
+			&lpErrorReply, 
+			&cbErrorExtra, 
+			&dwCmdStatus); 
+
+		_tprintf(TEXT("Transact returned %d\n"), fSuccess); 
+		if (!fSuccess) return FALSE; 
+		NDAS_CMD_STATUS cmdStatus = (NDAS_CMD_STATUS)(dwCmdStatus); 
+		if (NDAS_CMD_STATUS_SUCCESS != cmdStatus) { 
+			_tprintf(TEXT("Command failed!\n")); 
+			SetErrorStatus(cmdStatus, lpErrorReply); 
+			return 0; 
+		} 
+	}
+
+	// Process the result here
+	return lpReply->SlotNo;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Get Registration Data
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasGetRegistrationData(
+	 IN	DWORD dwSlotNo,
+	 OUT LPVOID lpBuffer,
+	 IN DWORD cbBuffer,
+	 OUT LPDWORD cbBufferUsed)
+{
+	::SetLastError(NDASUSER_ERROR_NOT_IMPLEMENTED);
+	return FALSE;
+}
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasGetRegistrationDataByIdW(
+	 IN LPCWSTR lpszDeviceStringId,
+	 OUT LPVOID lpBuffer,
+	 IN DWORD cbBuffer,
+	 OUT LPDWORD cbBufferUsed)
+{
+	::SetLastError(NDASUSER_ERROR_NOT_IMPLEMENTED);
+	return FALSE;
+}
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasGetRegistrationDataByIdA(
+	 IN LPCWSTR lpszDeviceStringId,
+	 OUT LPVOID lpBuffer,
+	 IN DWORD cbBuffer,
+	 OUT LPDWORD cbBufferUsed)
+{
+	::SetLastError(NDASUSER_ERROR_NOT_IMPLEMENTED);
+	return FALSE;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Set Registration Data
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasSetRegistrationData(
+	 IN	DWORD dwSlotNo,
+	 IN LPCVOID lpBuffer,
+	 IN DWORD cbBuffer)
+{
+	::SetLastError(NDASUSER_ERROR_NOT_IMPLEMENTED);
+	return FALSE;
+}
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasSetRegistrationDataByIdW(
+	 IN LPCWSTR lpszDeviceStringId,
+	 IN LPVOID lpBuffer,
+	 IN DWORD cbBuffer)
+{
+	::SetLastError(NDASUSER_ERROR_NOT_IMPLEMENTED);
+	return FALSE;
+}
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasSetRegistrationDataByIdA(
+	 IN LPCSTR lpszDeviceStringId,
+	 OUT LPCVOID lpBuffer,
+	 IN DWORD cbBuffer)
+{
+	::SetLastError(NDASUSER_ERROR_NOT_IMPLEMENTED);
+	return FALSE;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Unregister Device
+//
+//////////////////////////////////////////////////////////////////////////
+
+BOOL
+WINAPI
+NdasUnregisterDeviceImpl(NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot)
+{
+	NDAS_DEFINE_TYPES(NDAS_CMD_UNREGISTER_DEVICE,lpRequest,lpReply,lpErrorReply,scc)
+	NDAS_CONNECT(scc)
+
+	// Prepare the parameters here
+	lpRequest->DeviceIdOrSlot = DeviceIdOrSlot;
+
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	// Process the result here
+	// None
+
+	return TRUE;
+}
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasUnregisterDevice(DWORD dwSlotNo)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is)
+	return NdasUnregisterDeviceImpl(is);
+}
+
+NDASUSER_API 
+BOOL 
+WINAPI
+NdasUnregisterDeviceByIdW(LPCWSTR lpszDeviceStringId)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is)
+	return NdasUnregisterDeviceImpl(is);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Enumerate Devices
+//
+//////////////////////////////////////////////////////////////////////////
+
+//
+// lpFnumFunc:
+//	[in] Pointer to an application-defined EnumNdasDeviceProc callback function
+// lpContext:
+//  [in] Application-defined value to be passed to the callback function
+//
+
+NDASUSER_API 
+BOOL 
+WINAPI
+NdasEnumDevicesW(NDASDEVICEENUMPROCW lpEnumFunc, LPVOID lpContext)
+{
+	CHECK_PROC_PTR(lpEnumFunc)
+
+	NDAS_CMD_ENUMERATE_DEVICES::REQUEST buffer; 
+	NDAS_CMD_ENUMERATE_DEVICES::REQUEST* lpRequest = &buffer; 
+	NDAS_CMD_ENUMERATE_DEVICES::REPLY* lpReply; 
+	NDAS_CMD_ERROR::REPLY* lpErrorReply; 
+
+	CNdasServiceCommandClient<NDAS_CMD_ENUMERATE_DEVICES> scc;
+	BOOL fConnected = scc.Connect();
+	if (!fConnected) {
+		XTRACE(TEXT("Service Connection Failure with error %d\n"), ::GetLastError());
+		::SetLastError(NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE); 
+		return FALSE; 
+	} 
+	
+	DWORD cbRequestExtra(0); 
+	DWORD cbReplyExtra, cbErrorExtra; 
+	DWORD dwCmdStatus; 
+	
+	BOOL fSuccess = scc.Transact(lpRequest, cbRequestExtra, &lpReply, &cbReplyExtra, &lpErrorReply, &cbErrorExtra, &dwCmdStatus); 
+	if (!fSuccess) {
+		_tprintf(TEXT("Transact error %d\n"), ::GetLastError()); 
+		return FALSE; 
+	}
+
+	NDAS_CMD_STATUS cmdStatus = (NDAS_CMD_STATUS)(dwCmdStatus); 
+	if (NDAS_CMD_STATUS_SUCCESS != cmdStatus) { 
+		_tprintf(TEXT("Command failed!\n")); 
+		SetErrorStatus(cmdStatus, lpErrorReply); 
+		return FALSE; 
+	} 
+
+	// Process the result here
+
+	BOOL bCont(TRUE);
+	if (lpEnumFunc) {
+		for (DWORD i = 0; i < lpReply->nDeviceEntries && bCont; ++i) {
+			NDAS_CMD_ENUMERATE_DEVICES::ENUM_ENTRY* pDeviceEntry = &lpReply->DeviceEntry[i];
+			NDASUSER_DEVICE_ENUM_ENTRYW userEntry;
+			userEntry.GrantedAccess = pDeviceEntry->GrantedAccess;
+			userEntry.SlotNo = pDeviceEntry->SlotNo;
+			HRESULT hr = ::StringCchCopyNW(
+				userEntry.szDeviceName, MAX_NDAS_DEVICE_NAME_LEN + 1,
+				pDeviceEntry->wszDeviceName, MAX_NDAS_DEVICE_NAME_LEN);
+			_ASSERT(SUCCEEDED(hr));
+			BOOL fSuccess = ConvertRealIdToStringIdW(
+				&pDeviceEntry->DeviceId, userEntry.szDeviceStringId);
+			_ASSERT(fSuccess);
+			bCont = lpEnumFunc(&userEntry, lpContext);
+		}
+	}
+
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Enable Device
+//
+//////////////////////////////////////////////////////////////////////////
+
+BOOL 
+WINAPI
+NdasEnableDeviceImpl(NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot, BOOL bEnable)
+{
+	NDAS_DEFINE_TYPES(NDAS_CMD_SET_DEVICE_PARAM,lpRequest,lpReply,lpErrorReply,scc)
+	NDAS_CONNECT(scc)
+
+	// Prepare the parameters here
+	lpRequest->DeviceIdOrSlot = DeviceIdOrSlot;
+	lpRequest->Param.ParamType = NDAS_CMD_SET_DEVICE_PARAM_TYPE_ENABLE;
+	lpRequest->Param.bEnable = bEnable;
+
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	return TRUE;
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasEnableDevice(DWORD dwSlotNo, BOOL bEnable)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is)
+	return NdasEnableDeviceImpl(is, bEnable);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasEnableDeviceByIdW(LPCWSTR lpszDeviceStringId, BOOL bEnable)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is)
+	return NdasEnableDeviceImpl(is, bEnable);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Set Device Name
+//
+//////////////////////////////////////////////////////////////////////////
+
+BOOL 
+WINAPI
+NdasSetDeviceNameImplW(
+	NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot, 
+	LPCWSTR lpszDeviceName)
+{
+	CHECK_STR_PTRW(lpszDeviceName, -1)
+	NDAS_DEFINE_TYPES(NDAS_CMD_SET_DEVICE_PARAM,lpRequest,lpReply,lpErrorReply,scc)
+
+	// Prepare the parameters here
+	lpRequest->DeviceIdOrSlot = DeviceIdOrSlot;
+	lpRequest->Param.ParamType = NDAS_CMD_SET_DEVICE_PARAM_TYPE_NAME;
+	HRESULT hr = ::StringCchCopyNW(
+		lpRequest->Param.wszName, MAX_NDAS_DEVICE_NAME_LEN + 1, 
+		lpszDeviceName, MAX_NDAS_DEVICE_NAME_LEN);
+	_ASSERT(SUCCEEDED(hr));
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	return TRUE;
+}
+
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasSetDeviceNameW(
+	DWORD dwSlotNo, 
+	LPCWSTR lpszDeviceName)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is)
+	return NdasSetDeviceNameImplW(is, lpszDeviceName);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasSetDeviceNameByIdW(
+	LPCWSTR lpszDeviceStringId, 
+	LPCWSTR lpszDeviceName)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is)
+	return NdasSetDeviceNameImplW(is, lpszDeviceName);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Set Device Acces
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasSetDeviceAccessByIdW(
+	LPCWSTR lpszDeviceStringId, 
+	BOOL bWriteAccess, 
+	LPCWSTR lpszDeviceStringKey)
+{
+	CHECK_STR_PTRW(lpszDeviceStringId, NDAS_DEVICE_STRING_ID_LEN)
+	CHECK_STR_PTRW_NULLABLE(lpszDeviceStringKey, NDAS_DEVICE_STRING_KEY_LEN)
+	
+	NDAS_DEFINE_TYPES(NDAS_CMD_SET_DEVICE_PARAM,lpRequest,lpReply,lpErrorReply,scc)
+
+	if (bWriteAccess) {
+		// check ndas id
+		BOOL bWritable;
+		BOOL fSuccess = ValidateStringIdKeyW(
+			lpszDeviceStringId, lpszDeviceStringKey, &bWritable);
+		if (!fSuccess || !bWritable) {
+			::SetLastError(NDASUSER_ERROR_INVALID_DEVICE_STRING_ID);
+			return FALSE;
+		}
+	} else {
+		NDAS_VALIDATE_DEVICE_STRING_ID(lpszDeviceStringId)
+	}
+
+	NDAS_CONNECT(scc)
+
+	// Prepare the parameters here
+	lpRequest->DeviceIdOrSlot.bUseSlotNo = FALSE;
+	BOOL fSuccess = ConvertStringIdToRealIdW(lpszDeviceStringId,&lpRequest->DeviceIdOrSlot.DeviceId);
+	_ASSERT(fSuccess); // should not fail as we already did Validation
+
+	lpRequest->Param.ParamType = NDAS_CMD_SET_DEVICE_PARAM_TYPE_ACCESS;
+	lpRequest->Param.GrantingAccess = bWriteAccess ? 
+		(GENERIC_READ | GENERIC_WRITE) : (GENERIC_READ);
+
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Query Device Status
+//
+//////////////////////////////////////////////////////////////////////////
+
+BOOL 
+WINAPI
+NdasQueryDeviceStatusImpl(
+	NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot, 
+	NDAS_DEVICE_STATUS *pStatus,
+	NDAS_DEVICE_ERROR *pLastError)
+{
+	CHECK_WRITE_PTR(pStatus, sizeof(NDAS_DEVICE_STATUS))
+	CHECK_WRITE_PTR(pLastError, sizeof(NDAS_DEVICE_ERROR))
+	NDAS_DEFINE_TYPES(NDAS_CMD_QUERY_DEVICE_STATUS,lpRequest,lpReply,lpErrorReply,scc)
+
+	lpRequest->DeviceIdOrSlot = DeviceIdOrSlot;
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	// Process result here
+	*pStatus = lpReply->Status;
+	*pLastError = lpReply->LastError;
+
+	return TRUE;
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryDeviceStatus(
+	DWORD dwSlotNo, 
+	NDAS_DEVICE_STATUS *pStatus,
+	NDAS_DEVICE_ERROR* pLastError)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo, is)
+	return NdasQueryDeviceStatusImpl(is, pStatus, pLastError);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryDeviceStatusByIdW(
+	LPCWSTR lpszDeviceStringId, 
+	NDAS_DEVICE_STATUS* pStatus,
+	NDAS_DEVICE_ERROR* pLastError)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is)
+	return NdasQueryDeviceStatusImpl(is, pStatus, pLastError);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Query Device Information
+//
+//////////////////////////////////////////////////////////////////////////
+
+BOOL 
+WINAPI
+NdasQueryDeviceInformationImplW(
+	NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot, NDASUSER_DEVICE_INFORMATIONW* pDevInfo)
+{
+	CHECK_WRITE_PTR(pDevInfo, sizeof(NDASUSER_DEVICE_INFORMATIONW))
+	NDAS_DEFINE_TYPES(NDAS_CMD_QUERY_DEVICE_INFORMATION,lpRequest,lpReply,lpErrorReply,scc)
+
+	// Prepare the parameters here
+	lpRequest->DeviceIdOrSlot = DeviceIdOrSlot;
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	pDevInfo->GrantedAccess = lpReply->GrantedAccess;
+	HRESULT hr = ::StringCchCopy(
+		pDevInfo->szDeviceName, 
+		MAX_NDAS_DEVICE_NAME_LEN + 1, 
+		lpReply->wszDeviceName);
+	_ASSERT(SUCCEEDED(hr));
+
+	pDevInfo->SlotNo = lpReply->SlotNo;
+	BOOL fSuccess = ConvertRealIdToStringIdW(&lpReply->DeviceId,pDevInfo->szDeviceId);
+	_ASSERT(fSuccess);
+
+	::CopyMemory(
+		&pDevInfo->HardwareInfo, 
+		&lpReply->HardwareInfo, 
+		sizeof(NDAS_DEVICE_HW_INFORMATION));
+
+	return TRUE;
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryDeviceInformationW(
+	DWORD dwSlotNo, NDASUSER_DEVICE_INFORMATIONW* pDevInfo)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is)
+	return NdasQueryDeviceInformationImplW(is, pDevInfo);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryDeviceInformationByIdW(
+	LPCWSTR lpszDeviceStringId, NDASUSER_DEVICE_INFORMATIONW* pDevInfo)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is)
+	return NdasQueryDeviceInformationImplW(is, pDevInfo);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Enumerate Unit Device
+//
+//////////////////////////////////////////////////////////////////////////
+
+BOOL 
+WINAPI
+NdasEnumUnitDevicesImplW(
+	NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot, 
+	NDASUNITDEVICEENUMPROC lpEnumProc, LPVOID lpContext)
+{
+	CHECK_PROC_PTR(lpEnumProc)
+	NDAS_DEFINE_TYPES(NDAS_CMD_ENUMERATE_UNITDEVICES,lpRequest,lpReply,lpErrorReply,scc)
+
+	// Prepare the parameters here
+	lpRequest->DeviceIdOrSlot = DeviceIdOrSlot;
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	// Process the result here
+	BOOL bCont(TRUE);
+	if (lpEnumProc) {
+		for (DWORD i = 0; i < lpReply->nUnitDeviceEntries && bCont; ++i) {
+			NDASUSER_UNITDEVICE_ENUM_ENTRY userEntry;
+			userEntry.UnitNo = lpReply->UnitDeviceEntries[i].UnitNo;
+			userEntry.UnitDeviceType = lpReply->UnitDeviceEntries[i].UnitDeviceType;
+			bCont = lpEnumProc(&userEntry, lpContext);
+		}
+	}
+
+	return TRUE;
+}
+
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasEnumUnitDevices(
+	DWORD dwSlotNo, 
+	NDASUNITDEVICEENUMPROC lpEnumProc, LPVOID lpContext)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is)
+	return NdasEnumUnitDevicesImplW(is, lpEnumProc, lpContext);
+}
+
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasEnumUnitDevicesByIdW(
+	LPCWSTR lpszDeviceStringId, 
+	NDASUNITDEVICEENUMPROC lpEnumProc, LPVOID lpContext)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is)
+	return NdasEnumUnitDevicesImplW(is, lpEnumProc, lpContext);
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Query Unit Device Status
+//
+//////////////////////////////////////////////////////////////////////////
+
+BOOL 
+WINAPI
+NdasQueryUnitDeviceStatusImpl(
+	NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot, 
+	DWORD dwUnitNo, 
+	NDAS_UNITDEVICE_STATUS* pStatus,
+	NDAS_UNITDEVICE_ERROR* pLastError)
+{
+	CHECK_WRITE_PTR(pStatus, sizeof(NDAS_UNITDEVICE_STATUS))
+	NDAS_DEFINE_TYPES(NDAS_CMD_QUERY_UNITDEVICE_STATUS,lpRequest,lpReply,lpErrorReply,scc)
+
+	lpRequest->DeviceIdOrSlot = DeviceIdOrSlot;
+	lpRequest->UnitNo = dwUnitNo;
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	// Process result here
+	*pStatus = lpReply->Status;
+	*pLastError = lpReply->LastError;
+
+	return TRUE;
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryUnitDeviceStatus(
+	DWORD dwSlotNo, 
+	DWORD dwUnitNo, 
+	NDAS_UNITDEVICE_STATUS* pStatus,
+	NDAS_UNITDEVICE_STATUS* pLastError)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is)
+	return NdasQueryUnitDeviceStatusImpl(is, dwUnitNo, pStatus, pLastError);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryUnitDeviceStatusByIdW(
+	LPCWSTR lpszDeviceStringId, 
+	DWORD dwUnitNo, 
+	NDAS_UNITDEVICE_STATUS* pStatus,
+	NDAS_UNITDEVICE_ERROR* pLastError)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is)
+	return NdasQueryUnitDeviceStatusImpl(is, dwUnitNo, pStatus, pLastError);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Query Unit Device Information
+//
+//////////////////////////////////////////////////////////////////////////
+
+BOOL 
+WINAPI
+ConvertWideToAnsi(
+   const PNDAS_UNITDEVICE_HW_INFORMATIONW pDataW,
+   PNDAS_UNITDEVICE_HW_INFORMATIONA pDataA)
+{
+	pDataA->bLBA = pDataW->bLBA;
+	pDataA->bLBA48 = pDataW->bLBA48;
+	pDataA->nROHosts = pDataW->nROHosts;
+	pDataA->nRWHosts = pDataW->nRWHosts;
+	
+	pDataA->bPIO = pDataW->bPIO;
+	pDataA->bDMA = pDataW->bDMA;
+	pDataA->bUDMA = pDataW->bUDMA;
+	pDataA->MediaType = pDataW->MediaType;
+
+	int iConverted;
+	
+	iConverted = ::WideCharToMultiByte(
+		CP_ACP, 0, 
+		pDataW->szModel, 41, 
+		pDataA->szModel, 41, NULL, NULL);
+	_ASSERTE(iConverted == 41);
+
+	iConverted = ::WideCharToMultiByte(
+		CP_ACP, 0, 
+		pDataW->szFwRev, 9, 
+		pDataA->szFwRev, 9, NULL, NULL);
+	_ASSERTE(iConverted == 9);
+
+	iConverted = ::WideCharToMultiByte(
+		CP_ACP, 0, 
+		pDataW->szSerialNo, 41, 
+		pDataA->szSerialNo, 41, NULL, NULL);
+	_ASSERTE(iConverted == 41);
+
+	pDataA->SectorCountLowPart = pDataW->SectorCountLowPart;
+	pDataA->SectorCountHighPart = pDataW->SectorCountHighPart;
+
+	return TRUE;
+}
+
+BOOL 
+WINAPI
+NdasQueryUnitDeviceInformationImplW(
+	NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot, DWORD dwUnitNo, 
+	PNDASUSER_UNITDEVICE_INFORMATIONW pDevInfo)
+{
+	CHECK_WRITE_PTR(pDevInfo, sizeof(NDASUSER_UNITDEVICE_INFORMATIONW))
+	NDAS_DEFINE_TYPES(NDAS_CMD_QUERY_UNITDEVICE_INFORMATION,lpRequest,lpReply,lpErrorReply,scc)
+
+	lpRequest->DeviceIdOrSlot = DeviceIdOrSlot;
+	lpRequest->UnitNo = dwUnitNo;
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	// Process result here
+	pDevInfo->UnitDeviceType = lpReply->UnitDeviceType;
+	pDevInfo->UnitDeviceSubType = lpReply->UnitDeviceSubType;
+
+	::CopyMemory(
+		&pDevInfo->HardwareInfo, &lpReply->HardwareInfo,
+		sizeof(NDAS_UNITDEVICE_HW_INFORMATIONW));
+
+	::ZeroMemory(
+		&pDevInfo->UsageStats, 
+		sizeof(pDevInfo->UsageStats));
+
+	pDevInfo->UsageStats.nROHosts = lpReply->UsageStats.nROHosts;
+	pDevInfo->UsageStats.nRWHosts = lpReply->UsageStats.nRWHosts;
+
+	return TRUE;
+}
+
+BOOL 
+WINAPI
+NdasQueryUnitDeviceInformationImplA(
+	NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot, DWORD dwUnitNo, 
+	PNDASUSER_UNITDEVICE_INFORMATIONA pDevInfo)
+{
+	NDASUSER_UNITDEVICE_INFORMATIONW DevInfoW = {0};
+	BOOL fSuccess = NdasQueryUnitDeviceInformationImplW(DeviceIdOrSlot, dwUnitNo, &DevInfoW);
+	if (!fSuccess) {
+		return FALSE;
+	}
+
+	// Convert NDASUSER_UNITDEVICE_INFORMATIONW to
+	// NDASUSER_UNITDEVICE_INFORMATIONA
+	pDevInfo->UnitDeviceType = DevInfoW.UnitDeviceType;
+	pDevInfo->UnitDeviceSubType = DevInfoW.UnitDeviceSubType;
+	pDevInfo->UsageStats = DevInfoW.UsageStats;
+	ConvertWideToAnsi(&DevInfoW.HardwareInfo, &pDevInfo->HardwareInfo);
+
+	return TRUE;
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryUnitDeviceInformationW(
+	DWORD dwSlotNo, DWORD dwUnitNo, 
+	PNDASUSER_UNITDEVICE_INFORMATIONW pDevInfo)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is)
+	return NdasQueryUnitDeviceInformationImplW(is, dwUnitNo, pDevInfo);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryUnitDeviceInformationA(
+	DWORD dwSlotNo, DWORD dwUnitNo,
+	PNDASUSER_UNITDEVICE_INFORMATIONA pDevInfo)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is)
+	return NdasQueryUnitDeviceInformationImplA(is, dwUnitNo, pDevInfo);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryUnitDeviceInformationByIdW(
+	LPCWSTR lpszDeviceStringId, DWORD dwUnitNo, 
+	PNDASUSER_UNITDEVICE_INFORMATIONW pDevInfo)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is)
+	return NdasQueryUnitDeviceInformationImplW(is, dwUnitNo, pDevInfo);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasQueryUnitDeviceInformationByIdA(
+	LPCSTR lpszDeviceStringId, DWORD dwUnitNo, 
+	PNDASUSER_UNITDEVICE_INFORMATIONA pDevInfo)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDA(lpszDeviceStringId, is)
+	return NdasQueryUnitDeviceInformationImplA(is, dwUnitNo, pDevInfo);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Find Logical Device of Unit Device
+//
+//////////////////////////////////////////////////////////////////////////
+
+BOOL 
+WINAPI
+NdasFindLogicalDeviceOfUnitDeviceImpl(
+	NDAS_DEVICE_ID_OR_SLOT DeviceIdOrSlot, DWORD dwUnitNo,
+	PNDAS_LOGICALDEVICE_ID pLogicalDeviceId)
+{
+	CHECK_WRITE_PTR(pLogicalDeviceId, sizeof(NDAS_LOGICALDEVICE_ID))
+
+	NDAS_DEFINE_TYPES(NDAS_CMD_FIND_LOGICALDEVICE_OF_UNITDEVICE,lpRequest,lpReply,lpErrorReply,scc)
+
+	lpRequest->DeviceIdOrSlot = DeviceIdOrSlot;
+	lpRequest->UnitNo = dwUnitNo;
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	// Process result here
+	pLogicalDeviceId->SlotNo = lpReply->SlotNo;
+	pLogicalDeviceId->TargetId = lpReply->TargetId;
+	pLogicalDeviceId->LUN = lpReply->LUN;
+
+	return TRUE;
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasFindLogicalDeviceOfUnitDevice(
+	DWORD dwSlotNo, DWORD dwUnitNo,
+	PNDAS_LOGICALDEVICE_ID pLogicalDeviceId)
+{
+	NDAS_FORWARD_DEVICE_SLOT_NO(dwSlotNo,is)
+	return NdasFindLogicalDeviceOfUnitDeviceImpl(
+		is, 
+		dwUnitNo, 
+		pLogicalDeviceId);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasFindLogicalDeviceOfUnitDeviceByIdW(
+	LPCWSTR lpszDeviceStringId, DWORD dwUnitNo,
+	PNDAS_LOGICALDEVICE_ID pLogicalDeviceId)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDW(lpszDeviceStringId, is)
+	return NdasFindLogicalDeviceOfUnitDeviceImpl(
+		is, 
+		dwUnitNo, 
+		pLogicalDeviceId);
+}
+
+NDASUSER_API
+BOOL 
+WINAPI
+NdasFindLogicalDeviceOfUnitDeviceByIdA(
+	LPCSTR lpszDeviceStringId, DWORD dwUnitNo,
+	PNDAS_LOGICALDEVICE_ID pLogicalDeviceId)
+{
+	NDAS_FORWARD_DEVICE_STRING_IDA(lpszDeviceStringId, is)
+	return NdasFindLogicalDeviceOfUnitDeviceImpl(
+		is, 
+		dwUnitNo, 
+		pLogicalDeviceId);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Plug In Logical Device
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API 
+BOOL 
+WINAPI
+NdasPlugInLogicalDevice(
+	BOOL bWritable, 
+	NDAS_LOGICALDEVICE_ID logicalDeviceId)
+{
+	NDAS_DEFINE_TYPES(NDAS_CMD_PLUGIN_LOGICALDEVICE,lpRequest,lpReply,lpErrorReply,scc)
+
+	// Prepare the parameters here
+	lpRequest->LogicalDeviceId = logicalDeviceId;
+	lpRequest->Access = bWritable ? (GENERIC_READ | GENERIC_WRITE) : GENERIC_READ;
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+	
+	// Process the result here
+	// None.
+
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Eject Logical Device
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasEjectLogicalDevice(
+	NDAS_LOGICALDEVICE_ID logicalDeviceId)
+{
+	NDAS_DEFINE_TYPES(NDAS_CMD_EJECT_LOGICALDEVICE,lpRequest,lpReply,lpErrorReply,scc)
+
+	// Prepare the parameters here
+	lpRequest->LogicalDeviceId = logicalDeviceId;
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+	
+	// Process the result here
+	// None.
+
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Unplug Logical Device
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasUnplugLogicalDevice(
+	NDAS_LOGICALDEVICE_ID logicalDeviceId)
+{
+	NDAS_DEFINE_TYPES(NDAS_CMD_UNPLUG_LOGICALDEVICE,lpRequest,lpReply,lpErrorReply,scc)
+
+	// Prepare the parameters here
+	lpRequest->LogicalDeviceId = logicalDeviceId;
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+	// Process the result here
+	// None.
+
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Enumerate Logical Device
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API 
+BOOL 
+WINAPI
+NdasEnumLogicalDevices(
+	NDASLOGICALDEVICEENUMPROC lpEnumProc, 
+	LPVOID lpContext)
+{
+	CHECK_PROC_PTR(lpEnumProc)
+
+	NDAS_DEFINE_TYPES(NDAS_CMD_ENUMERATE_LOGICALDEVICES,lpRequest,lpReply,lpErrorReply,scc)
+
+	// Prepare the parameters here
+	// None.
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	// Process the result here
+	BOOL bCont(TRUE);
+	if (lpEnumProc) {
+		for (DWORD i = 0; i < lpReply->nLogicalDeviceEntries && bCont; ++i) {
+
+			NDASUSER_LOGICALDEVICE_ENUM_ENTRY userEntry;
+			NDAS_CMD_ENUMERATE_LOGICALDEVICES::ENUM_ENTRY* 
+				pCmdEntry = &lpReply->LogicalDeviceEntries[i];
+
+			userEntry.LogicalDeviceId = pCmdEntry->LogicalDeviceId;
+			userEntry.Type = pCmdEntry->LogicalDeviceType;
+
+			bCont = lpEnumProc(&userEntry, lpContext);
+		}
+	}
+
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Query Logical Device Status
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasQueryLogicalDeviceStatus(
+	NDAS_LOGICALDEVICE_ID logicalDeviceId,
+	NDAS_LOGICALDEVICE_STATUS* pStatus,
+	NDAS_LOGICALDEVICE_ERROR* pLastError)
+{
+	CHECK_WRITE_PTR(pStatus, sizeof(NDAS_LOGICALDEVICE_STATUS))
+	CHECK_WRITE_PTR(pLastError, sizeof(NDAS_LOGICALDEVICE_ERROR))
+	NDAS_DEFINE_TYPES(NDAS_CMD_QUERY_LOGICALDEVICE_STATUS,lpRequest,lpReply,lpErrorReply,scc)
+
+	lpRequest->LogicalDeviceId = logicalDeviceId;
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	// Process result here
+	*pStatus = lpReply->Status;
+	*pLastError = lpReply->LastError;
+
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Query Logical Device Information
+//
+//////////////////////////////////////////////////////////////////////////
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasQueryLogicalDeviceInformationW(
+	NDAS_LOGICALDEVICE_ID logicalDeviceId,
+	PNDASUSER_LOGICALDEVICE_INFORMATIONW pLogDevInfo)
+{
+	CHECK_WRITE_PTR(pLogDevInfo, sizeof(NDASUSER_LOGICALDEVICE_INFORMATIONW))
+	NDAS_DEFINE_TYPES(NDAS_CMD_QUERY_LOGICALDEVICE_INFORMATION,lpRequest,lpReply,lpErrorReply,scc)
+
+	lpRequest->LogicalDeviceId = logicalDeviceId;
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	// reply
+//	lpReply->LogicalDeviceType;
+//	lpReply->GrantedAccess;
+//	lpReply->MountedAccess;
+//	lpReply->nUnitDeviceEntries;
+//	lpReply->LogicalDiskInfo.Blocks;
+//	lpReply->LogicalDiskInfo.LogicalDiskType;
+
+	pLogDevInfo->LogicalDeviceType = lpReply->LogicalDeviceType;
+	pLogDevInfo->GrantedAccess = lpReply->GrantedAccess;
+	pLogDevInfo->MountedAccess = lpReply->MountedAccess;
+
+	if (IS_NDAS_LOGICALDEVICE_TYPE_DISK_GROUP(pLogDevInfo->LogicalDeviceType)) {
+		pLogDevInfo->LogicalDiskInformation.Blocks = 
+			lpReply->LogicalDiskInfo.Blocks;
+	} else if (IS_NDAS_LOGICALDEVICE_TYPE_DVD_GROUP(pLogDevInfo->LogicalDeviceType)) {
+	}
+
+	pLogDevInfo->nUnitDeviceEntries = lpReply->nUnitDeviceEntries;
+
+	if (pLogDevInfo->nUnitDeviceEntries > 0) {
+
+		pLogDevInfo->FirstUnitDevice.Index = 0;
+		pLogDevInfo->FirstUnitDevice.UnitNo = 
+			lpReply->UnitDeviceEntries[0].UnitNo;
+
+		BOOL fSuccess = ConvertRealIdToStringIdW(
+			&lpReply->UnitDeviceEntries[0].DeviceId, 
+			pLogDevInfo->FirstUnitDevice.szDeviceStringId);
+
+		_ASSERT(fSuccess);
+	}
+
+	return TRUE;
+}
+
+NDASUSER_API
+BOOL
+WINAPI
+NdasEnumLogicalDeviceMembersW(
+	NDAS_LOGICALDEVICE_ID logicalDeviceId,
+	NDASLOGICALDEVICEMEMBERENUMPROCW lpEnumProc,
+	LPVOID lpContext)
+{
+	CHECK_PROC_PTR(lpEnumProc)
+	NDAS_DEFINE_TYPES(NDAS_CMD_QUERY_LOGICALDEVICE_INFORMATION,lpRequest,lpReply,lpErrorReply,scc)
+
+	lpRequest->LogicalDeviceId = logicalDeviceId;
+
+	NDAS_CONNECT(scc)
+	NDAS_TRANSACT(cbRequestExtra,cbReplyExtra,dwCmdStatus)
+
+	for (DWORD i = 0; i < lpReply->nUnitDeviceEntries; ++i) {
+
+		NDASUSER_LOGICALDEVICE_MEMBER_ENTRYW userEntry = {0};
+
+		userEntry.Index = i;
+		
+		BOOL fSuccess = ConvertRealIdToStringIdW(
+			&lpReply->UnitDeviceEntries[i].DeviceId, 
+			userEntry.szDeviceStringId);
+
+		_ASSERT(fSuccess);
+
+		userEntry.UnitNo = lpReply->UnitDeviceEntries[i].UnitNo;
+
+		BOOL bCont = lpEnumProc(&userEntry, lpContext);
+		if (!bCont) {
+			break;
+		}
+
+	}
+
+	return TRUE;
+}
+

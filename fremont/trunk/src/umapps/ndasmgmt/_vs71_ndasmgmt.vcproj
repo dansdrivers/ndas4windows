@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ndasmgmt"
+	ProjectGUID="{6DB93794-1A5D-414E-BE70-A0DF6D0CB579}"
+	RootNamespace="ndasmgmt"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="objchk_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 chk . -c0i"
+				Output="objchk_w2k_x86\i386\ndasmgmt.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="objfre_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 fre . -c0i"
+				Output="objfre_w2k_x86\i386\ndasmgmt.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug (x64)|Win32"
+			OutputDirectory="objchk_wnet_amd64\amd64"
+			IntermediateDirectory="objchk_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="objchk_wnet_amd64\amd64\ndasmgmt.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release (x64)|Win32"
+			OutputDirectory="objfre_wnet_amd64\amd64"
+			IntermediateDirectory="objfre_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="objfre_wnet_amd64\amd64\ndasmgmt.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\aboutdlg.cpp" />
+			<File
+				RelativePath=".\adminprivs.cpp" />
+			<File
+				RelativePath=".\appconf.cpp" />
+			<File
+				RelativePath=".\apperrdlg.cpp" />
+			<File
+				RelativePath=".\argv.cpp" />
+			<File
+				RelativePath=".\confirmdlg.cpp" />
+			<File
+				RelativePath=".\devpropsh.cpp" />
+			<File
+				RelativePath=".\devregdlg.cpp" />
+			<File
+				RelativePath=".\devregwiz.cpp" />
+			<File
+				RelativePath=".\eventhandler.cpp" />
+			<File
+				RelativePath=".\mainframe.cpp" />
+			<File
+				RelativePath=".\menubitmap.cpp" />
+			<File
+				RelativePath=".\muisel.cpp" />
+			<File
+				RelativePath=".\ndascls.cpp" />
+			<File
+				RelativePath=".\ndasmgmt.cpp" />
+			<File
+				RelativePath=".\ndastypestr.cpp" />
+			<File
+				RelativePath=".\nmmenu.cpp" />
+			<File
+				RelativePath=".\optionpsh.cpp" />
+			<File
+				RelativePath=".\regconf.cpp" />
+			<File
+				RelativePath=".\singleinst.cpp" />
+			<File
+				RelativePath=".\stdafx.cpp" />
+			<File
+				RelativePath=".\syshelp.cpp" />
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\aboutdlg.h" />
+			<File
+				RelativePath=".\adminprivs.h" />
+			<File
+				RelativePath=".\appconf.h" />
+			<File
+				RelativePath=".\apperrdlg.h" />
+			<File
+				RelativePath=".\argv.h" />
+			<File
+				RelativePath=".\confirmdlg.h" />
+			<File
+				RelativePath=".\devpropsh.h" />
+			<File
+				RelativePath=".\devregdlg.h" />
+			<File
+				RelativePath=".\devregwiz.h" />
+			<File
+				RelativePath=".\eventhandler.h" />
+			<File
+				RelativePath=".\mainframe.h" />
+			<File
+				RelativePath=".\menubitmap.h" />
+			<File
+				RelativePath=".\muisel.h" />
+			<File
+				RelativePath=".\mytaskbaricon.h" />
+			<File
+				RelativePath=".\ndascls.h" />
+			<File
+				RelativePath=".\ndasdevice.h" />
+			<File
+				RelativePath=".\ndasmgmt.h" />
+			<File
+				RelativePath=".\ndasmgmt_appiniterr.h" />
+			<File
+				RelativePath=".\ndastypestr.h" />
+			<File
+				RelativePath=".\nmmenu.h" />
+			<File
+				RelativePath=".\observer.h" />
+			<File
+				RelativePath=".\optionpsh.h" />
+			<File
+				RelativePath=".\regconf.h" />
+			<File
+				RelativePath=".\singleinst.h" />
+			<File
+				RelativePath=".\stdafx.h" />
+			<File
+				RelativePath=".\syshelp.h" />
+			<File
+				RelativePath=".\taskbariconex.h" />
+			<File
+				RelativePath=".\waitdlg.h" />
+			<File
+				RelativePath=".\worker.h" />
+			<File
+				RelativePath=".\xguid.h" />
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\ndasmgmt.ico" />
+			<File
+				RelativePath=".\ndasmgmt_app.rc" />
+			<File
+				RelativePath=".\ndasmgmt_init.chs.rc" />
+			<File
+				RelativePath=".\ndasmgmt_init.deu.rc" />
+			<File
+				RelativePath=".\ndasmgmt_init.esn.rc" />
+			<File
+				RelativePath=".\ndasmgmt_init.fra.rc" />
+			<File
+				RelativePath=".\ndasmgmt_init.ita.rc" />
+			<File
+				RelativePath=".\ndasmgmt_init.jpn.rc" />
+			<File
+				RelativePath=".\ndasmgmt_init.kor.rc" />
+			<File
+				RelativePath=".\ndasmgmt_init.ptg.rc" />
+		</Filter>
+		<File
+			RelativePath=".\cmdline.txt" />
+		<File
+			RelativePath=".\makefile" />
+		<File
+			RelativePath=".\makefile.inc" />
+		<File
+			RelativePath=".\ndasmgmt.manifest" />
+		<File
+			RelativePath=".\ndasmgmt.ver" />
+		<File
+			RelativePath=".\sources" />
+		<File
+			RelativePath=".\xmatl.mk" />
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

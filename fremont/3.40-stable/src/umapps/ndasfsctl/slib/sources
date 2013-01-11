@@ -1,0 +1,9 @@
+TARGETNAME=libndasfsctl
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+BUILD_PRODUCES=libndasfsctl
+
+PASS0_PUBLISH={..\ndasfsctl.h=$(NDAS_INC_PATH)\ndas\ndasfsctl.h}
+
+!include ..\sources.inc

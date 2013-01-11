@@ -1,0 +1,119 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=ndasmgmt
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+INCLUDES=..\inc;..\resource;\
+$(NDAS_INC_PATH);\
+$(NDAS_INC_PATH)\ndas;\
+$(PSDK_INC_PATH)
+
+RCOPTIONS=/i $(NDAS_SDK_INC_PATH) 
+USECXX_FLAG=/Tp
+USER_C_FLAGS=/EHsc
+USE_STL=1
+UMENTRY=wwinmain
+UMTYPE=windows
+USER_CFLAGS=/Wp64 /GS
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+#
+# do not use USE_ATL, USE_ATL will dynamically link to atl.lib
+# which will only use SDK_LIB_PATH=atl.lib
+#
+# ADDITIONAL_ATL_LIBS= (do you have?)
+
+#NOT_LEAN_AND_MEAN=1
+
+#ATL_VER=30
+#ATL_INC_PATH=..\ext\atl30\inc
+#ATL_LIB_PATH=..\ext\atl30\lib
+
+
+#CRT_INC_PATH=..\ext\vc7\include
+#CRT_LIB_PATH=..\ext\vc7\lib
+#SDK_INC_PATH=$(PSDK_INC_PATH)
+#SDK_LIB_PATH=$(PSDK_LIB_PATH)
+#COMPILER_WARNINGS=
+#OAK_INC_PATH=
+
+BUILD_CONSUMES=ndasuser
+
+TARGETLIBS=\
+	$(NDAS_LIB_PATH)\ndasuser.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+    $(PSDK_LIB_PATH)\gdi32.lib \
+    $(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+    $(PSDK_LIB_PATH)\shell32.lib \
+    $(PSDK_LIB_PATH)\comctl32.lib \
+    $(PSDK_LIB_PATH)\ole32.lib \
+    $(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\uuid.lib \
+	$(PSDK_LIB_PATH)\crypt32.lib \
+	$(PSDK_LIB_PATH)\version.lib \
+	$(SDK_LIB_PATH)\cfgmgr32.lib
+	
+#DELAYLOAD_SUPPORTED=1
+#DELAYLOAD=ndasuser.dll
+#DELAYLOAD_UNLOAD_SUPPORT=1
+
+X_USE_WTL_71=1
+USE_STATIC_ATL=1
+#USE_ATL=1
+ATL_MIN_CRT=1
+# Be sure to include "xmatl.mk" after TAGETLIBS,
+# as xmatl.mk will provide more TAGETLIBS
+!INCLUDE "xmatl.mk"
+
+MSC_WARNING_LEVEL=-W3 -WX
+#MSC_OPTIMIZATION=/Oitb2
+#MSC_OPTIMIZATION=/Od /Oi
+
+PRECOMPILED_INCLUDE=stdafx.h
+PRECOMPILED_CXX=1
+
+SOURCES= ndasmgmt.cpp \
+    mainframe.cpp \
+    aboutdlg.cpp \
+    devpropsh.cpp \
+    devregdlg.cpp \
+    devregwiz.cpp \
+    eventhandler.cpp \
+    menubitmap.cpp \
+    ndascls.cpp \
+    optionpsh.cpp \
+    singleinst.cpp \
+    syshelp.cpp \
+	nmmenu.cpp \
+	apperrdlg.cpp \
+	regconf.cpp \
+	appconf.cpp \
+	confirmdlg.cpp \
+	muisel.cpp \
+	argv.cpp \
+	adminprivs.cpp \
+	ndasmgmt_app.rc \
+	ndasmgmt_init.chs.rc \
+	ndasmgmt_init.deu.rc \
+	ndasmgmt_init.esn.rc \
+	ndasmgmt_init.fra.rc \
+	ndasmgmt_init.ita.rc \
+	ndasmgmt_init.jpn.rc \
+	ndasmgmt_init.kor.rc \
+	ndasmgmt_init.ptg.rc

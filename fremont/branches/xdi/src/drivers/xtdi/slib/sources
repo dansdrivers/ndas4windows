@@ -1,0 +1,7 @@
+TARGETNAME=libxtdi
+TARGETPATH=obj
+TARGETTYPE=DRIVER_LIBRARY
+
+BUILD_PRODUCES=libxtdi
+
+!include ..\sources.inc

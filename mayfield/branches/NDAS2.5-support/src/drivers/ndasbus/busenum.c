@@ -1,0 +1,1585 @@
+/*++
+
+Copyright (c) 1990-2000    Microsoft Corporation All Rights Reserved
+
+Module Name:
+
+    BusPdo.c
+
+Abstract:
+
+    This module handles plug & play calls for the child PDO.
+
+Author:
+
+ Eliyas Yakub   Sep 15, 1998
+ 
+Environment:
+
+    kernel mode only
+
+Notes:
+
+
+Revision History:
+
+
+--*/
+
+#include <ntddk.h>
+
+#include "ndasbus.h"
+#include "ndasbusioctl.h"
+#include "busenum.h"
+#include "ndasbuspriv.h"
+#include "stdio.h"
+#include <wdmguid.h>
+
+#include <initguid.h>
+#include "driver.h"
+
+#ifdef __MODULE__
+#undef __MODULE__
+#endif // __MODULE__
+#define __MODULE__ "BusPDO"
+
+#define NDASSCSI_VENDORNAME L"NDAS "
+#define NDASSCSI_MODEL	L"SCSI Controller "
+   
+#ifdef ALLOC_PRAGMA
+#pragma alloc_text (PAGE, Bus_PDO_PnP)
+#pragma alloc_text (PAGE, Bus_PDO_QueryDeviceCaps)
+#pragma alloc_text (PAGE, Bus_PDO_QueryDeviceId)
+#pragma alloc_text (PAGE, Bus_PDO_QueryDeviceText)
+#pragma alloc_text (PAGE, Bus_PDO_QueryResources)
+#pragma alloc_text (PAGE, Bus_PDO_QueryResourceRequirements)
+#pragma alloc_text (PAGE, Bus_PDO_QueryDeviceRelations)
+#pragma alloc_text (PAGE, Bus_PDO_QueryBusInformation)
+#pragma alloc_text (PAGE, Bus_GetDeviceCapabilities)
+
+#endif
+
+NTSTATUS
+Bus_PDO_PnP (
+    IN PDEVICE_OBJECT       DeviceObject,
+    IN PIRP                 Irp,
+    IN PIO_STACK_LOCATION   IrpStack,
+    IN PPDO_DEVICE_DATA     DeviceData
+    )
+/*++
+Routine Description:
+    Handle requests from the Plug & Play system for the devices on the BUS
+
+--*/
+{
+    NTSTATUS                status;
+
+    PAGED_CODE ();
+
+
+    //
+    // NB: Because we are a bus enumerator, we have no one to whom we could
+    // defer these irps.  Therefore we do not pass them down but merely
+    // return them.
+    //
+
+    switch (IrpStack->MinorFunction) {
+
+    case IRP_MN_START_DEVICE:
+    
+        //            
+        // Here we do what ever initialization and ``turning on'' that is
+        // required to allow others to access this device.
+        // Power up the device.
+        //
+        DeviceData->DevicePowerState = PowerDeviceD0;
+        SET_NEW_PNP_STATE(DeviceData, Started);
+        status = STATUS_SUCCESS;
+        break;
+
+    case IRP_MN_STOP_DEVICE:
+    
+        //
+        // Here we shut down the device and give up and unmap any resources
+        // we acquired for the device.
+        //
+        
+        SET_NEW_PNP_STATE(DeviceData, Stopped);
+        status = STATUS_SUCCESS;
+        break;
+
+
+    case IRP_MN_QUERY_STOP_DEVICE:
+
+        //
+        // No reason here why we can't stop the device.
+        // If there were a reason we should speak now, because answering success
+        // here may result in a stop device irp.
+        //
+
+        SET_NEW_PNP_STATE(DeviceData, StopPending);
+        status = STATUS_SUCCESS;
+        break;
+
+    case IRP_MN_CANCEL_STOP_DEVICE:
+
+        //
+        // The stop was canceled.  Whatever state we set, or resources we put
+        // on hold in anticipation of the forthcoming STOP device IRP should be
+        // put back to normal.  Someone, in the long list of concerned parties,
+        // has failed the stop device query.
+        //
+
+        //
+        // First check to see whether you have received cancel-stop
+        // without first receiving a query-stop. This could happen if someone
+        // above us fails a query-stop and passes down the subsequent
+        // cancel-stop.
+        //
+        
+        if(StopPending == DeviceData->DevicePnPState)
+        {
+            //
+            // We did receive a query-stop, so restore.
+            //             
+            RESTORE_PREVIOUS_PNP_STATE(DeviceData);
+        }
+        status = STATUS_SUCCESS;// We must not fail this IRP.
+        break;
+
+    case IRP_MN_QUERY_REMOVE_DEVICE:
+    
+        //
+        // Check to see whether the device can be removed safely.
+        // If not fail this request. This is the last opportunity
+        // to do so.
+        //
+        if(DeviceData->ToasterInterfaceRefCount){
+            //
+            // Somebody is still using our interface. 
+            // We must fail remove.
+            //
+            status = STATUS_UNSUCCESSFUL;
+            break;
+        }
+
+        SET_NEW_PNP_STATE(DeviceData, RemovePending);
+        status = STATUS_SUCCESS;
+        break;
+
+    case IRP_MN_CANCEL_REMOVE_DEVICE:
+        
+        //
+        // Clean up a remove that did not go through.
+        //
+        
+        //
+        // First check to see whether you have received cancel-remove
+        // without first receiving a query-remove. This could happen if 
+        // someone above us fails a query-remove and passes down the 
+        // subsequent cancel-remove.
+        //
+        
+        if(RemovePending == DeviceData->DevicePnPState)
+        {
+            //
+            // We did receive a query-remove, so restore.
+            //             
+            RESTORE_PREVIOUS_PNP_STATE(DeviceData);
+        }
+        status = STATUS_SUCCESS; // We must not fail this IRP.
+        break;
+
+    case IRP_MN_SURPRISE_REMOVAL:
+
+        //
+        // We should stop all access to the device and relinquish all the
+        // resources. Let's just mark that it happened and we will do 
+        // the cleanup later in IRP_MN_REMOVE_DEVICE.
+        //
+
+        SET_NEW_PNP_STATE(DeviceData, SurpriseRemovePending);
+        status = STATUS_SUCCESS;
+        break;
+
+    case IRP_MN_REMOVE_DEVICE:
+
+		//
+        // Present is set to true when the pdo is exposed via PlugIn IOCTL.
+        // It is set to FALSE when a UnPlug IOCTL is received. 
+        // We will delete the PDO only after we have reported to the 
+        // Plug and Play manager that it's missing.
+        //
+        
+        if (DeviceData->ReportedMissing) {
+            PFDO_DEVICE_DATA fdoData;
+
+            SET_NEW_PNP_STATE(DeviceData, Deleted);
+            
+			//
+			//	Wait until LanscsiMiniport confirms STOP.
+			//
+			LSBus_WaitUntilLanscsiMiniportStop(
+				&DeviceData->LanscsiAdapterPDO
+			);
+
+            //
+            // Remove the PDO from the list and decrement the count of PDO.
+            // Don't forget to synchronize access to the FDO data.
+            // If the parent FDO is deleted before child PDOs, the ParentFdo
+            // pointer will be NULL. This could happen if the child PDO
+            // is in a SurpriseRemovePending state when the parent FDO
+            // is removed.
+            //
+
+            if(DeviceData->ParentFdo) {   
+
+                fdoData = FDO_FROM_PDO(DeviceData);
+                ExAcquireFastMutex (&fdoData->Mutex);
+
+                RemoveEntryList (&DeviceData->Link);
+                fdoData->NumPDOs--;
+                
+				ExReleaseFastMutex (&fdoData->Mutex);
+            }
+            //
+            // Free up resources associated with PDO and delete it.
+            //
+            status = Bus_DestroyPdo(DeviceObject, DeviceData);
+            break;
+
+        }
+        if (DeviceData->Present) {
+            //
+            // When the device is disabled, the PDO transitions from 
+            // RemovePending to NotStarted. We shouldn't delete
+            // the PDO because a) the device is still present on the bus,
+            // b) we haven't reported missing to the PnP manager.
+            //
+            
+            SET_NEW_PNP_STATE(DeviceData, NotStarted);
+            status = STATUS_SUCCESS;
+        } else {
+            ASSERT(DeviceData->Present);
+            status = STATUS_SUCCESS;
+        }
+        break;
+
+    case IRP_MN_QUERY_CAPABILITIES:
+
+        //
+        // Return the capabilities of a device, such as whether the device 
+        // can be locked or ejected..etc
+        //
+
+        status = Bus_PDO_QueryDeviceCaps(DeviceData, Irp);
+        
+        break;
+
+    case IRP_MN_QUERY_ID:
+
+        // Query the IDs of the device
+
+        Bus_KdPrint_Cont (DeviceData, BUS_DBG_PNP_TRACE,
+                ("\tQueryId Type: %s\n",
+                DbgDeviceIDString(IrpStack->Parameters.QueryId.IdType)));
+
+        st
+
+    KeEnterCriticalRegion();
+	ExAcquireFastMutex (&FdoData->Mutex);
+
+    for (entry = FdoData->ListOfPDOs.Flink;
+         entry != &FdoData->ListOfPDOs;
+         entry = entry->Flink) {
+
+			 pdoData = CONTAINING_RECORD (entry, PDO_DEVICE_DATA, Link);
+             if(pdoData->SlotNo == SystemIoBusNumber)
+				 break;
+			pdoData = NULL;
+		 }
+	 if(pdoData) {
+		 //
+		 //	increment the reference count to the PDO.
+		 //
+		 ObReferenceObject(pdoData->Self);
+	 }
+
+	ExReleaseFastMutex (&FdoData->Mutex);
+    KeLeaveCriticalRegion();
+
+	return pdoData;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+//	Worker to unplug NDAS devices at late time.
+//
+
+typedef struct _NDBUS_UNPLUGWORKER {
+
+	PIO_WORKITEM		IoWorkItem;
+	PFDO_DEVICE_DATA	FdoData;
+	ULONG				SlotNo;
+
+} NDBUS_UNPLUGWORKER, *PNDBUS_UNPLUGWORKER;
+
+
+//
+//	Unplugging worker function
+//
+
+VOID
+UnplugWorker(
+	IN PDEVICE_OBJECT	DeviceObject,
+	IN PVOID			Context
+){
+	NTSTATUS				status;
+	PNDBUS_UNPLUGWORKER		ctx = (PNDBUS_UNPLUGWORKER)Context;
+	BUSENUM_UNPLUG_HARDWARE	unplug;
+
+
+	UNREFERENCED_PARAMETER(DeviceObject);
+
+
+	//
+	//	IO_WORKITEM is rare resource, give it back to the system now.
+	//
+
+	IoFreeWorkItem(ctx->IoWorkItem);
+
+
+	//
+	//	Start unplug
+	//
+
+	unplug.Size = sizeof(unplug);
+	unplug.SlotNo = ctx->SlotNo;
+	status = Bus_UnPlugDevice(&unplug, ctx->FdoData);
+	ASSERT(NT_SUCCESS(status));
+
+	ExFreePool(Context);
+
+}
+
+
+//
+//	Queue a workitem to unplug a NDAS device.
+//
+
+#define NDBUS_POOLTAG_UNPLUGWORKITEM	'iwSL'
+
+NTSTATUS
+QueueUnplugWorker(
+		PFDO_DEVICE_DATA	FdoData,
+		ULONG				SlotNo
+	) {
+	NTSTATUS			status;
+	PNDBUS_UNPLUGWORKER	workItemCtx;
+
+	Bus_KdPrint_Def(BUS_DBG_SS_TRACE, ("entered.\n"));
+
+
+	//
+	//	Parameter check
+	//
+
+	if(!FdoData) {
+		Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("FdoData NULL!\n"));
+		return STATUS_INVALID_PARAMETER;
+	}
+
+
+	//
+	//	Allocate worker's context
+	//
+
+	workItemCtx = (PNDBUS_UNPLUGWORKER)ExAllocatePoolWithTag(
+								NonPagedPool,
+								sizeof(NDBUS_UNPLUGWORKER),
+								NDBUS_POOLTAG_UNPLUGWORKITEM);
+	if(!workItemCtx) {
+		return STATUS_INSUFFICIENT_RESOURCES;
+	}
+	workItemCtx->FdoData		= FdoData;
+	workItemCtx->SlotNo			= SlotNo;
+
+
+	//
+	//	Allocate IO work item for NDASBUS's Functional device object.
+	//
+
+	workItemCtx->IoWorkItem = IoAllocateWorkItem(FdoData->Self);
+	if(workItemCtx->IoWorkItem == NULL) {
+		status = STATUS_INSUFFICIENT_RESOURCES;
+		goto cleanup;
+	}
+
+
+	//
+	//	Queue the work item.
+	//
+
+	IoQueueWorkItem(
+		workItemCtx->IoWorkItem,
+		UnplugWorker,
+		DelayedWorkQueue,
+		workItemCtx
+		);
+
+	return STATUS_SUCCESS;
+
+cleanup:
+	if(workItemCtx) {
+		ExFreePool(workItemCtx);
+	}
+
+	return status;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+//	BUS IOCTL
+//
+
+#ifndef _WIN64
+
+//
+//	Dummy for 32bit Windows
+//	Disallow thunk by returning FALSE
+//
+
+__inline
+BOOLEAN
+IoIs32bitProcess(PIRP Irp) {
+	UNREFERENCED_PARAMETER(Irp);
+	return FALSE;
+}
+
+#endif
+
+NTSTATUS
+Bus_IoCtl (
+    IN  PDEVICE_OBJECT  DeviceObject,
+    IN  PIRP            Irp
+    )
+/*++
+Routine Description:
+
+    Handle user mode PlugIn, UnPlug and device Eject requests.
+
+Arguments:
+
+   DeviceObject - pointer to a device object.
+
+   Irp - pointer to an I/O Request Packet.
+
+Return Value:
+
+   NT status code
+
+--*/
+{
+    PIO_STACK_LOCATION      irpStack;
+    NTSTATUS                status;
+    ULONG                   inlen, outlen;
+    PFDO_DEVICE_DATA        fdoData;
+    PVOID                   buffer;
+
+    PAGED_CODE ();
+    
+    fdoData = (PFDO_DEVICE_DATA) DeviceObject->DeviceExtension;
+
+    //
+    // We only take Device Control requests for the FDO.
+    // That is the bus itself.
+    //
+
+    if (!fdoData->IsFDO) {
+    
+        //
+        // These commands are only allowed to go to the FDO.
+        //   
+        status = STATUS_INVALID_DEVICE_REQUEST;
+        Irp->IoStatus.Status = status;
+        IoCompleteRequest (Irp, IO_NO_INCREMENT);
+        return status;
+
+    }
+
+    //
+    // Check to see whether the bus is removed
+    //
+    
+    if (fdoData->DevicePnPState == Deleted) {
+        Irp->IoStatus.Status = status = STATUS_NO_SUCH_DEVICE;
+        IoCompleteRequest (Irp, IO_NO_INCREMENT);
+        return status;
+    }
+    
+    Bus_IncIoCount (fdoData);
+    
+    irpStack = IoGetCurrentIrpStackLocation (Irp);
+
+    buffer			= Irp->AssociatedIrp.SystemBuffer;  
+    inlen			= irpStack->Parameters.DeviceIoControl.InputBufferLength;
+    outlen			= irpStack->Parameters.DeviceIoControl.OutputBufferLength;
+
+    status = STATUS_INVALID_PARAMETER;
+
+	Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("%d called\n", irpStack->Parameters.DeviceIoControl.IoControlCode));
+    switch (irpStack->Parameters.DeviceIoControl.IoControlCode) 
+	{
+
+	case IOCTL_LANSCSI_ADD_TARGET:
+	{
+		PPDO_DEVICE_DATA	pdoData;
+
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("IOCTL_LANSCSI_ADD_TARGET inlen %d, outlen %d, sizeof(LANSCSI_ADD_TARGET_DATA) %d\n", inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+
+		if ((inlen == outlen) &&
+			(sizeof(LANSCSI_ADD_TARGET_DATA) <= inlen)) 
+		{
+			ULONG						ulSize;
+			PLANSCSI_ADD_TARGET_DATA	addTargetData = buffer;
+			
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("IOCTL_LANSCSI_ADD_TARGET called\n"));
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("IOCTL_LANSCSI_ADD_TARGET Target Type %d\n", addTargetData->ucTargetType));
+			
+			// Check Parameter.
+			status = STATUS_SUCCESS;
+			switch(addTargetData->ucTargetType) 
+			{
+			case NDASSCSI_TYPE_DISK_NORMAL: 
+			case NDASSCSI_TYPE_DVD: 
+			case NDASSCSI_TYPE_VDVD: 
+			case NDASSCSI_TYPE_MO:
+
+				ulSize = sizeof(LANSCSI_ADD_TARGET_DATA);
+				if(addTargetData->ulNumberOfUnitDiskList != 1)
+				{
+					ulSize = 0;	// Exit when Check if(ulSize != inlen)...
+				}
+
+				break;
+
+			case NDASSCSI_TYPE_DISK_MIRROR:
+
+				ulSize = sizeof(LANSCSI_ADD_TARGET_DATA) + sizeof(LSBUS_UNITDISK);
+					
+				if(2 != addTargetData->ulNumberOfUnitDiskList)
+				{
+					ulSize = 0;	// Exit when Check if(ulSize != inlen)...
+				}
+
+				break;
+
+			case NDASSCSI_TYPE_DISK_AGGREGATION:
+
+				ulSize = sizeof(LANSCSI_ADD_TARGET_DATA) + 
+					sizeof(LSBUS_UNITDISK) * (addTargetData->ulNumberOfUnitDiskList - 1);
+
+				if (addTargetData->ulNumberOfUnitDiskList < 2 || 
+					addTargetData->ulNumberOfUnitDiskList > MAX_NR_TC_PER_TARGET) 
+				{
+					ulSize = 0;	// Exit when Check if(ulSize != inlen)...
+				}
+				
+				break;
+
+			case NDASSCSI_TYPE_DISK_RAID0:
+				ulSize = sizeof(LANSCSI_ADD_TARGET_DATA) + 
+					sizeof(LSBUS_UNITDISK) * (addTargetData->ulNumberOfUnitDiskList - 1);
+				switch(addTargetData->ulNumberOfUnitDiskList)
+				{
+				case 2:
+				case 4:
+				case 8:
+					break;
+				default: // do not accept
+					ulSize = 0;
+					break;
+				}
+				break;
+			case NDASSCSI_TYPE_DISK_RAID1R:
+				{
+					ULONG						ulDiskCount;
+					ulDiskCount = addTargetData->ulNumberOfUnitDiskList - 
+						addTargetData->RAID_Info.nSpareDisk;
+				ulSize = sizeof(LANSCSI_ADD_TARGET_DATA) + 
+					sizeof(LSBUS_UNITDISK) * (addTargetData->ulNumberOfUnitDiskList - 1);
+					if (2 != ulDiskCount) 
+				{
+					ulSize = 0;	// Exit when Check if(ulSize != inlen)...
+				}
+				}
+				break;
+			case NDASSCSI_TYPE_DISK_RAID4R:
+				{
+					ULONG						ulDiskCount;
+					ulDiskCount = addTargetData->ulNumberOfUnitDiskList - 
+						addTargetData->RAID_Info.nSpareDisk;
+					ulSize = sizeof(LANSCSI_ADD_TARGET_DATA) + 
+						sizeof(LSBUS_UNITDISK) * (addTargetData->ulNumberOfUnitDiskList - 1);
+
+					switch(ulDiskCount)
+				{
+				case 3: // 2 + 1
+				case 5: // 4 + 1
+				case 9: // 8 + 1
+					break;
+				default: // do not accept
+					ulSize = 0;
+					break;
+				}
+				break;
+				}				
+			default:
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("ADD_TARGET: Bad Disk Type.\n"));
+				status = STATUS_UNSUCCESSFUL;
+				break;
+			}
+			if(!NT_SUCCESS(status)) {
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("ADD_TARGET: Invaild type.\n"));
+				status = STATUS_UNSUCCESSFUL;
+				break;
+			}
+						
+			// Check Size.
+			if(ulSize != inlen) 
+			{
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("ADD_TARGET: Size mismatch. Req %d, in %d\n", ulSize, inlen));
+				status = STATUS_UNSUCCESSFUL;
+				break;
+			}
+#if DBG
+			NDBusIoctlLogError(	fdoData->Self,
+				NDASBUS_IO_TRY_TO_ADDTARGET,
+				IOCTL_LANSCSI_ADD_TARGET,
+				addTargetData->ulSlotNo);
+#endif
+			// Find Pdo Data...
+			pdoData = LookupPdoData(fdoData, addTargetData->ulSlotNo);
+			if(pdoData == NULL) 
+			{
+				Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+					("no pdo\n"));
+				status = STATUS_UNSUCCESSFUL;
+				NDBusIoctlLogError(	fdoData->Self,
+									NDASBUS_IO_PDO_NOT_FOUND,
+									IOCTL_LANSCSI_ADD_TARGET,
+									addTargetData->ulSlotNo);
+				break;
+			}
+
+			pdoData->LanscsiAdapterPDO.AddDevInfo = ExAllocatePool(NonPagedPool, inlen);
+			
+			if(pdoData->LanscsiAdapterPDO.AddDevInfo == NULL) 
+			{
+				status = STATUS_INSUFFICIENT_RESOURCES;
+			}
+			else 
+			{
+				RtlCopyMemory(pdoData->LanscsiAdapterPDO.AddDevInfo, addTargetData, inlen);
+				status = STATUS_SUCCESS;
+			}
+
+			pdoData->LanscsiAdapterPDO.AddDevInfoLength = inlen;
+
+			//
+			//	Notify to LanscsiMiniport
+			//
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("IOCTL_LANSCSI_ADD_TARGET SetEvent AddTargetEvent!\n"));
+			KeSetEvent(&pdoData->LanscsiAdapterPDO.AddTargetEvent, IO_NO_INCREMENT, FALSE);
+
+			//
+			//	Register Target
+			//
+			if(pdoData->Persistent) {
+				status = LSBus_RegisterTarget(fdoData, addTargetData);
+				if(!NT_SUCCESS(status)) {
+					Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("ADD_TARGET: LSBus_RegisterTarget() failed. STATUS=%08lx\n", status));
+					status = STATUS_INTERNAL_DB_ERROR;
+					NDBusIoctlLogError(	fdoData->Self,
+										NDASBUS_IO_REGISTER_TARGET_FAIL,
+										IOCTL_LANSCSI_ADD_TARGET,
+										addTargetData->ulSlotNo);
+				} else {
+					Bus_KdPrint(fdoData, BUS_DBG_IOCTL_INFO, ("ADD_TARGET: Successfully registered.\n"));
+				}
+			}
+
+			ObDereferenceObject(pdoData->Self);
+
+			Irp->IoStatus.Information = outlen;
+		}        
+		else
+		{
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR,
+								("IOCTL_LANSCSI_ADD_TARGET length mismatch!!!"
+								" inlen %d, outlen %d, sizeof(LANSCSI_ADD_TARGET_DATA) %d\n",
+								inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+		}
+
+	}
+		break;
+
+	case IOCTL_LANSCSI_REMOVE_TARGET:
+	{
+	    PPDO_DEVICE_DATA	pdoData;
+		PLANSCSI_REMOVE_TARGET_DATA	removeTarget;
+
+        Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("IOCTL_LANSCSI_REMOVE_TARGET called\n"));
+
+        if (sizeof (LANSCSI_REMOVE_TARGET_DATA) != inlen)
+			break;
+
+		removeTarget = (PLANSCSI_REMOVE_TARGET_DATA)buffer;
+		pdoData = LookupPdoData(fdoData, removeTarget->ulSlotNo);
+		if(pdoData == NULL) {
+			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+						("no pdo\n"));
+			status = STATUS_UNSUCCESSFUL;
+			NDBusIoctlLogError(	fdoData->Self,
+				NDASBUS_IO_PDO_NOT_FOUND,
+				IOCTL_LANSCSI_ADD_TARGET,
+				removeTarget->ulSlotNo);
+			break;
+		}
+
+		//
+		//	redirect to the NDAS SCSI Device
+		//
+		status = LSBus_IoctlToLSMPDevice(
+				pdoData,
+				LANSCSIMINIPORT_IOCTL_REMOVE_TARGET,
+				buffer,
+				sizeof(LANSCSI_REMOVE_TARGET_DATA),
+				NULL,
+				0
+			);
+
+		if(NT_SUCCESS(status) && pdoData->Persistent) {
+
+			status = LSBus_UnregisterTarget(fdoData, removeTarget->ulSlotNo, removeTarget->ulTargetId);
+			if(!NT_SUCCESS(status)) {
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_INFO, (	"REMOVE_TARGET: Removed  Target instance,"
+															" but LSBus_UnregisterTarget() failed.\n"));
+				status = STATUS_INTERNAL_DB_ERROR;
+				NDBusIoctlLogError(	fdoData->Self,
+					NDASBUS_IO_UNREGISTER_TARGET_FAIL,
+					IOCTL_LANSCSI_REMOVE_TARGET,
+					removeTarget->ulSlotNo);
+			}
+#if DBG
+			else {
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_INFO, ("REMOVE_TARGET: LSBus_UnregisterTarget() succeeded.\n"));
+			}
+#endif
+		}
+
+		ObDereferenceObject(pdoData->Self);
+
+        Irp->IoStatus.Information = 0;
+		break;
+	}
+
+	case IOCTL_LANSCSI_STARTSTOP_REGISTRARENUM:{
+		PULONG	onOff = (PULONG)buffer;
+
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, (
+			"STARTSTOP_REGISTRARENUM: inlen %d, outlen %d OnOff %u\n", inlen, outlen, *onOff));
+
+		KeEnterCriticalRegion();
+		ExAcquireFastMutexUnsafe(&fdoData->RegMutex);
+
+		if(*onOff != 0) {
+
+			//
+			//	Save old state.
+			//	Activate the registrar's enumeration
+			//
+
+			*onOff = fdoData->StartStopRegistrarEnum;
+			fdoData->StartStopRegistrarEnum = TRUE;
+		} else {
+
+			//
+			//	Save old state.
+			//	Deactivate the registrar's enumeration
+			//
+
+			*onOff = fdoData->StartStopRegistrarEnum;
+			fdoData->StartStopRegistrarEnum = FALSE;
+		}
+
+		//
+		//	Clean up non-enumerated entries.
+		//
+		LSBus_CleanupNDASDeviceRegistryUnsafe(fdoData);
+
+		ExReleaseFastMutexUnsafe(&fdoData->RegMutex);
+		KeLeaveCriticalRegion();
+
+		Irp->IoStatus.Information = sizeof(ULONG);
+		status = STATUS_SUCCESS;
+
+		break;
+	}
+
+	case IOCTL_LANSCSI_REGISTER_DEVICE:
+	{
+
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, (
+							"REGISTER_DEVICE: inlen %d, outlen %d,"
+							" sizeof(LANSCSI_ADD_TARGET_DATA) %d\n",
+							inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+		if ((inlen == outlen)) {
+
+			PBUSENUM_PLUGIN_HARDWARE_EX2	PlugIn = buffer;
+
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("REGISTER_DEVICE: entered\n"));
+
+			status = LSBus_RegisterDevice(fdoData, PlugIn);
+
+			Irp->IoStatus.Information = 0;
+		}
+		else
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR,
+									("REGISTER_DEVICE: length mismatch!!!"
+									" inlen %d, outlen %d, sizeof(LANSCSI_ADD_TARGET_DATA) %d\n",
+									inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+
+	}
+		break;
+	case IOCTL_LANSCSI_REGISTER_TARGET:
+	{
+
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, (
+									"REGISTER_TARGET: inlen %d, outlen %d,"
+									" sizeof(LANSCSI_ADD_TARGET_DATA) %d\n",
+									inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+		if ((inlen == outlen)) {
+
+			PLANSCSI_ADD_TARGET_DATA	AddTargetData = buffer;
+
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("REGISTER_TARGET: entered\n"));
+
+			status = LSBus_RegisterTarget(fdoData, AddTargetData);
+
+			Irp->IoStatus.Information = 0;
+		}
+		else {
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, (
+									"REGISTER_TARGET: length mismatch!!!"
+									" inlen %d, outlen %d, sizeof(LANSCSI_ADD_TARGET_DATA) %d\n",
+									inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+		}
+
+	}
+		break;
+	case IOCTL_LANSCSI_UNREGISTER_DEVICE:
+	{
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, (
+									"UNREGISTER_DEVICE: inlen %d, outlen %d,"
+									" sizeof(LANSCSI_ADD_TARGET_DATA) %d\n",
+									inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+		if ((inlen == outlen)) {
+
+			PLANSCSI_UNREGISTER_NDASDEV	UnregDev = buffer;
+
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("UNREGISTER_DEVICE: entered\n"));
+
+			status = LSBus_UnregisterDevice(fdoData, UnregDev->SlotNo);
+
+			Irp->IoStatus.Information = 0;
+		}
+		else {
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, (
+									"UNREGISTER_DEVICE: length mismatch!!!"
+									" inlen %d, outlen %d, sizeof(LANSCSI_ADD_TARGET_DATA) %d\n",
+									inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+		}
+	}
+	break;
+	case IOCTL_LANSCSI_UNREGISTER_TARGET:
+	{
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, (
+									"UNREGISTER_TARGET: inlen %d, outlen %d,"
+									" sizeof(LANSCSI_ADD_TARGET_DATA) %d\n",
+									inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+		if ((inlen == outlen)) {
+
+			PLANSCSI_UNREGISTER_TARGET	UnregTarget = buffer;
+
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("UNREGISTER_TARGET: entered\n"));
+
+			status = LSBus_UnregisterTarget(fdoData, UnregTarget->SlotNo, UnregTarget->TargetId);
+
+			Irp->IoStatus.Information = 0;
+		}
+		else {
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, (
+									"UNREGISTER_TARGET: length mismatch!!!"
+									" inlen %d, outlen %d, sizeof(LANSCSI_ADD_TARGET_DATA) %d\n",
+									inlen, outlen, sizeof(LANSCSI_ADD_TARGET_DATA)));
+		}
+	}
+	break;
+	case IOCTL_LANSCSI_SETPDOINFO:
+		{
+	    PPDO_DEVICE_DATA	pdoData;
+		PBUSENUM_SETPDOINFO	SetPdoInfo;
+		KIRQL				oldIrql;
+		PVOID				sectionHandle;
+		BOOLEAN				acceptStatus;
+
+        Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("IOCTL_LANSCSI_SETPDOINFO called\n"));
+
+        if (sizeof (BUSENUM_SETPDOINFO) != inlen)
+			break;
+
+		acceptStatus = TRUE;
+		SetPdoInfo = (PBUSENUM_SETPDOINFO)buffer;
+		pdoData = LookupPdoData(fdoData, SetPdoInfo->SlotNo);
+		if(pdoData == NULL) {
+			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+						("no pdo\n"));
+			status = STATUS_UNSUCCESSFUL;
+			NDBusIoctlLogError(	fdoData->Self,
+				NDASBUS_IO_PDO_NOT_FOUND,
+				IOCTL_LANSCSI_ADD_TARGET,
+				SetPdoInfo->SlotNo);
+			break;
+		}
+
+		//
+		//	lock the code section of this function to acquire spinlock in raised IRQL.
+		//
+	    sectionHandle = MmLockPagableCodeSection(Bus_IoCtl);
+
+		KeAcquireSpinLock(&pdoData->LanscsiAdapterPDO.LSDevDataSpinLock, &oldIrql);
+
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("!!!!!!!!!!!!!!!!!!  SETPDOINFO: PDO %p: %08lx %08lx %08lx\n",
+										pdoData->Self, SetPdoInfo->AdapterStatus, SetPdoInfo->DesiredAccess, SetPdoInfo->GrantedAccess));
+
+
+		//
+		//	Set status values to the corresponding physical device object.
+		//
+
+		if(ADAPTERINFO_ISSTATUS(pdoData->LanscsiAdapterPDO.AdapterStatus, ADAPTERINFO_STATUS_STOPPED)) {
+
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("SETPDOINFO: 'An event occured after 'Stopped' event\n",
+					SetPdoInfo->AdapterStatus, SetPdoInfo->DesiredAccess, SetPdoInfo->GrantedAccess));
+
+				if(ADAPTERINFO_ISSTATUSFLAG(SetPdoInfo->AdapterStatus, ADAPTERINFO_STATUSFLAG_RESETSTATUS)) {
+					Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("SETPDOINFO: Reset-status event accepted.\n"));
+				} else {
+					acceptStatus = FALSE;
+				}
+
+		}
+
+		if(acceptStatus) {
+			pdoData->LanscsiAdapterPDO.AdapterStatus = SetPdoInfo->AdapterStatus;
+			pdoData->LanscsiAdapterPDO.DesiredAccess = SetPdoInfo->DesiredAccess;
+			pdoData->LanscsiAdapterPDO.GrantedAccess = SetPdoInfo->GrantedAccess;
+		}
+
+		//
+		//	Queue plugout worker if the NDAS SCSI stop abnormally.
+		//
+		if(ADAPTERINFO_ISSTATUS(SetPdoInfo->AdapterStatus, ADAPTERINFO_STATUS_STOPPED) &&
+			ADAPTERINFO_ISSTATUSFLAG(SetPdoInfo->AdapterStatus, ADAPTERINFO_STATUSFLAG_ABNORMAL_TERMINAT)) {
+
+			Bus_KdPrint(fdoData, BUS_DBG_IOCTL_ERROR, ("SETPDOINFO: Queueing Unplug worker!!!!!!!!\n",
+					SetPdoInfo->AdapterStatus, SetPdoInfo->DesiredAccess, SetPdoInfo->GrantedAccess));
+
+			status = QueueUnplugWorker(fdoData, SetPdoInfo->SlotNo);
+		}
+
+		KeReleaseSpinLock(&pdoData->LanscsiAdapterPDO.LSDevDataSpinLock, oldIrql);
+
+
+		//
+		//	Release the code section.
+		//
+
+	    MmUnlockPagableImageSection(sectionHandle);
+
+		status = STATUS_SUCCESS;
+		ObDereferenceObject(pdoData->Self);
+
+        Irp->IoStatus.Information = outlen;
+	}
+		break;
+
+	case IOCTL_BUSENUM_QUERY_NODE_ALIVE: 
+		{
+
+		PPDO_DEVICE_DATA		pdoData;
+		BOOLEAN					bAlive;
+		PBUSENUM_NODE_ALIVE_IN	pNodeAliveIn;
+		BUSENUM_NODE_ALIVE_OUT	nodeAliveOut;
+
+		// Check Parameter.
+		if(inlen != sizeof(BUSENUM_NODE_ALIVE_IN) || 
+			outlen != sizeof(BUSENUM_NODE_ALIVE_OUT)) {
+			status = STATUS_UNKNOWN_REVISION;
+			break;
+		}
+		
+		pNodeAliveIn = (PBUSENUM_NODE_ALIVE_IN)Irp->AssociatedIrp.SystemBuffer;  
+		
+		Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_NOISE,
+			("FDO: IOCTL_BUSENUM_QUERY_NODE_ALIVE SlotNumber = %d\n",
+			pNodeAliveIn->SlotNo));
+		
+		pdoData = LookupPdoData(fdoData, pNodeAliveIn->SlotNo);
+
+		if(pdoData == NULL) {
+//			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_TRACE,
+//				("[LanScsiBus]Bus_IoCtl: IOCTL_BUSENUM_QUERY_NODE_ALIVE No pdo\n"));
+			
+			bAlive = FALSE;
+		} else {
+			//
+			// Check this PDO would be removed...
+			//
+			if(pdoData->Present == TRUE) 
+				bAlive = TRUE;
+			else
+				bAlive = FALSE;
+		}
+
+		// For Result...
+		nodeAliveOut.SlotNo = pNodeAliveIn->SlotNo;
+		nodeAliveOut.bAlive = bAlive;
+		// Get Adapter Status.
+		if(bAlive == TRUE)
+		{
+			if(	ADAPTERINFO_ISSTATUS(pdoData->LanscsiAdapterPDO.AdapterStatus, ADAPTERINFO_STATUS_IN_ERROR) ||
+				ADAPTERINFO_ISSTATUS(pdoData->LanscsiAdapterPDO.AdapterStatus, ADAPTERINFO_STATUS_STOPPING) /*||
+				ADAPTERINFO_ISSTATUSFLAG(pdoData->LanscsiAdapterPDO.AdapterStatus, ADAPTERINFO_STATUSFLAG_MEMBER_FAULT) */
+				) {
+
+				nodeAliveOut.bHasError = TRUE;
+				Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+					("IOCTL_BUSENUM_QUERY_NODE_ALIVE Adapter has Error 0x%x\n", nodeAliveOut.bHasError));
+			} else {
+				nodeAliveOut.bHasError = FALSE;
+			}
+
+		}
+
+		if(pdoData)
+			ObDereferenceObject(pdoData->Self);
+
+		RtlCopyMemory(
+			Irp->AssociatedIrp.SystemBuffer,
+			&nodeAliveOut,
+			sizeof(BUSENUM_NODE_ALIVE_OUT)
+			);
+		
+		Irp->IoStatus.Information = sizeof(BUSENUM_NODE_ALIVE_OUT);
+		status = STATUS_SUCCESS;
+		}
+		break;
+
+	//
+	//	added by hootch 01172004
+	//
+	case IOCTL_LANSCSI_UPGRADETOWRITE:
+		{
+		PPDO_DEVICE_DATA				pdoData;
+
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("IOCTL_LANSCSI_UPGRADETOWRITE called\n"));
+		// Check Parameter.
+		if(inlen != sizeof(BUSENUM_UPGRADE_TO_WRITE)) {
+			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+				("IOCTL_LANSCSI_UPGRADETOWRITE: Invalid input buffer length\n"));
+			status = STATUS_UNKNOWN_REVISION;
+			break;
+		}
+
+		pdoData = LookupPdoData(fdoData, ((PBUSENUM_UPGRADE_TO_WRITE)buffer)->SlotNo);
+		if(pdoData == NULL) {
+			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+				("IOCTL_LANSCSI_UPGRADETOWRITE: No pdo for Slotno:%d\n", ((PBUSENUM_UPGRADE_TO_WRITE)buffer)->SlotNo));
+			status = STATUS_NO_SUCH_DEVICE;
+			NDBusIoctlLogError(	fdoData->Self,
+				NDASBUS_IO_PDO_NOT_FOUND,
+				IOCTL_LANSCSI_ADD_TARGET,
+				((PBUSENUM_UPGRADE_TO_WRITE)buffer)->SlotNo);
+		} else {
+			//
+			//	redirect to the LanscsiMiniport Device
+			//
+			status = LSBus_IoctlToLSMPDevice(
+					pdoData,
+					LANSCSIMINIPORT_IOCTL_UPGRADETOWRITE,
+					buffer,
+					inlen,
+					buffer,
+					outlen
+				);
+
+			ObDereferenceObject(pdoData->Self);
+		}
+		Irp->IoStatus.Information = 0;
+	}
+		break;
+
+	case IOCTL_LANSCSI_REDIRECT_NDASSCSI:
+		{
+		PPDO_DEVICE_DATA				pdoData;
+		PBUSENUM_REDIRECT_NDASSCSI		redirectIoctl;
+
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("IOCTL_LANSCSI_REDIRECT_NDASSCSI called\n"));
+		// Check Parameter.
+		if(inlen < sizeof(BUSENUM_REDIRECT_NDASSCSI)) {
+			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+				("IOCTL_LANSCSI_REDIRECT_NDASSCSI: Invalid input buffer length\n"));
+			status = STATUS_UNKNOWN_REVISION;
+			break;
+		}
+
+		redirectIoctl = (PBUSENUM_REDIRECT_NDASSCSI)buffer;
+
+		pdoData = LookupPdoData(fdoData, redirectIoctl->SlotNo);
+		if(pdoData == NULL) {
+			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+				("IOCTL_LANSCSI_REDIRECT_NDASSCSI: No pdo for Slotno:%d\n", redirectIoctl->SlotNo));
+			status = STATUS_NO_SUCH_DEVICE;
+		} else {
+			//
+			//	redirect to the LanscsiMiniport Device
+			//
+			status = LSBus_IoctlToLSMPDevice(
+					pdoData,
+					redirectIoctl->IoctlCode,
+					redirectIoctl->IoctlData,
+					redirectIoctl->IoctlDataSize,
+					redirectIoctl->IoctlData,
+					redirectIoctl->IoctlDataSize
+				);
+
+			ObDereferenceObject(pdoData->Self);
+		}
+		Irp->IoStatus.Information = 0;
+	}
+		break;
+
+	case IOCTL_LANSCSI_QUERY_LSMPINFORMATION:
+		{
+		PPDO_DEVICE_DATA				pdoData;
+
+		Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("IOCTL_LANSCSI_QUERY_LSMPINFORMATION called\n"));
+		// Check Parameter.
+		if(inlen < FIELD_OFFSET(LSMPIOCTL_QUERYINFO, QueryData) ) {
+			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+				("IOCTL_LANSCSI_QUERY_LSMPINFORMATION: Invalid input buffer length too small.\n"));
+			status = STATUS_UNKNOWN_REVISION;
+			break;
+		}
+		pdoData = LookupPdoData(fdoData, ((PLSMPIOCTL_QUERYINFO)buffer)->SlotNo);
+
+		if(pdoData == NULL) {
+			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+				("IOCTL_LANSCSI_QUERY_LSMPINFORMATION No pdo\n"));
+			status = STATUS_NO_SUCH_DEVICE;
+			NDBusIoctlLogError(	fdoData->Self,
+				NDASBUS_IO_PDO_NOT_FOUND,
+				IOCTL_LANSCSI_ADD_TARGET,
+				((PLSMPIOCTL_QUERYINFO)buffer)->SlotNo);
+		} else {
+			//
+			//	redirect to the LanscsiMiniport Device
+			//
+			status = LSBus_IoctlToLSMPDevice(
+					pdoData,
+					LANSCSIMINIPORT_IOCTL_QUERYINFO_EX,
+					buffer,
+					inlen,
+					buffer,
+					outlen
+				);
+
+			ObDereferenceObject(pdoData->Self);
+		}
+        Irp->IoStatus.Information = outlen;
+		}
+		break;
+
+	case IOCTL_BUSENUM_QUERY_INFORMATION:
+		{
+
+//		PPDO_DEVICE_DATA				pdoData;
+		BUSENUM_QUERY_INFORMATION		Query;
+		PBUSENUM_INFORMATION			Information;
+		LONG							BufferLenNeeded;
+
+		// Check Parameter.
+		if(	inlen < sizeof(BUSENUM_QUERY_INFORMATION) /*|| 
+			outlen < sizeof(BUSENUM_INFORMATION) */) {
+			status = STATUS_UNKNOWN_REVISION;
+			break;
+		}
+
+		RtlCopyMemory(&Query, buffer, sizeof(BUSENUM_QUERY_INFORMATION));
+		Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_TRACE,
+			("FDO: IOCTL_BUSENUM_QUERY_INFORMATION QueryType : %d  SlotNumber = %d\n",
+			Query.InfoClass, Query.SlotNo));
+
+		Information = (PBUSENUM_INFORMATION)buffer;
+		ASSERT(Information);
+		Information->InfoClass = Query.InfoClass;
+		status = LSBus_QueryInformation(fdoData, IoIs32bitProcess(Irp), &Query, Information, outlen, &BufferLenNeeded);
+		if(NT_SUCCESS(status)) {
+			Information->Size = BufferLenNeeded;
+			Irp->IoStatus.Information = BufferLenNeeded;
+		} else {
+			Irp->IoStatus.Information = BufferLenNeeded;
+		}
+		}
+		break;
+
+	case IOCTL_BUSENUM_PLUGIN_HARDWARE_EX2:
+		{
+			ULONG	structLen;		// Without variable length field
+			ULONG	wholeStructLen; // With variable length field
+			ULONG	inputWholeStructLen;
+
+			//
+			// Check 32 bit thunking request
+            //
+			if(IoIs32bitProcess(Irp)) {
+				structLen = FIELD_OFFSET(BUSENUM_PLUGIN_HARDWARE_EX2_32, HardwareIDs);
+				wholeStructLen = sizeof(BUSENUM_PLUGIN_HARDWARE_EX2_32);
+				inputWholeStructLen = ((PBUSENUM_PLUGIN_HARDWARE_EX2_32) buffer)->Size;
+			} else {
+				structLen = FIELD_OFFSET(BUSENUM_PLUGIN_HARDWARE_EX2, HardwareIDs);
+				wholeStructLen = sizeof(BUSENUM_PLUGIN_HARDWARE_EX2);
+				inputWholeStructLen = ((PBUSENUM_PLUGIN_HARDWARE_EX2) buffer)->Size;
+			}
+
+			if ((inlen == outlen) &&
+				//
+				// Make sure it has at least two nulls and the size 
+				// field is set to the declared size of the struct
+				//
+				((structLen + sizeof(UNICODE_NULL) * 2) <=
+				inlen) &&
+
+				//
+				// The size field should be set to the sizeof the struct as declared
+				// and *not* the size of the struct plus the multi_sz
+				//
+				(wholeStructLen == inputWholeStructLen)) {
+
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("PlugIn called\n"));
+
+				status= Bus_PlugInDeviceEx2((PBUSENUM_PLUGIN_HARDWARE_EX2)buffer,
+											inlen,
+											fdoData,
+											IoIs32bitProcess(Irp),
+											Irp->RequestorMode, FALSE);
+
+				Irp->IoStatus.Information = outlen;
+
+			}
+		}
+        break;
+
+	case IOCTL_LANSCSI_GETVERSION:
+		{
+			if (outlen >= sizeof(BUSENUM_GET_VERSION)) {
+				PBUSENUM_GET_VERSION version = (PBUSENUM_GET_VERSION)buffer;
+
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("IOCTL_LANSCSI_GETVERSION: called\n"));
+
+			try {
+				version->VersionMajor = VER_FILEMAJORVERSION;
+				version->VersionMinor = VER_FILEMINORVERSION;
+				version->VersionBuild = VER_FILEBUILD;
+				version->VersionPrivate = VER_FILEBUILD_QFE;
+
+					Irp->IoStatus.Information = sizeof(BUSENUM_GET_VERSION);
+					status = STATUS_SUCCESS;
+
+				} except (EXCEPTION_EXECUTE_HANDLER) {
+
+					status = GetExceptionCode();
+					Irp->IoStatus.Information = 0;
+				}
+
+			}
+		}			
+		break;
+
+    case IOCTL_BUSENUM_UNPLUG_HARDWARE:
+		{
+			if ((sizeof (BUSENUM_UNPLUG_HARDWARE) == inlen) &&
+				(inlen == outlen) &&
+				(((PBUSENUM_UNPLUG_HARDWARE)buffer)->Size == inlen)) {
+
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("UnPlug called\n"));
+
+				status= Bus_UnPlugDevice(
+						(PBUSENUM_UNPLUG_HARDWARE)buffer, fdoData);
+				Irp->IoStatus.Information = outlen;
+
+			}
+		}
+        break;
+
+    case IOCTL_BUSENUM_EJECT_HARDWARE:
+		{
+			if ((sizeof (BUSENUM_EJECT_HARDWARE) == inlen) &&
+				(inlen == outlen) &&
+				(((PBUSENUM_EJECT_HARDWARE)buffer)->Size == inlen)) {
+
+				Bus_KdPrint(fdoData, BUS_DBG_IOCTL_TRACE, ("Eject called\n"));
+
+				status= Bus_EjectDevice((PBUSENUM_EJECT_HARDWARE)buffer, fdoData);
+
+				Irp->IoStatus.Information = outlen;
+			}
+		}
+		break;
+
+	case IOCTL_DVD_GET_STATUS:
+		{
+			PPDO_DEVICE_DATA		pdoData;
+			PBUSENUM_DVD_STATUS		pDvdStatusData;
+
+
+			// Check Parameter.
+			if((inlen != outlen)
+				|| (sizeof(BUSENUM_DVD_STATUS) >  inlen))
+			{
+				status = STATUS_UNSUCCESSFUL ;
+				break;
+			}
+			
+			pDvdStatusData = (PBUSENUM_DVD_STATUS)Irp->AssociatedIrp.SystemBuffer;  
+			
+			Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+				("FDO: IOCTL_DVD_GET_STATUS SlotNumber = %d\n",
+				pDvdStatusData->SlotNo));	
+
+			pdoData = LookupPdoData(fdoData, pDvdStatusData->SlotNo);
+			
+			if(pdoData == NULL) {
+				Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+					("IOCTL_DVD_GET_STATUS No pdo\n"));
+				status = STATUS_UNSUCCESSFUL;
+				NDBusIoctlLogError(	fdoData->Self,
+					NDASBUS_IO_PDO_NOT_FOUND,
+					IOCTL_LANSCSI_ADD_TARGET,
+					pDvdStatusData->SlotNo);
+				break;	
+			} else {
+
+				if(pdoData->LanscsiAdapterPDO.Flags & LSDEVDATA_FLAG_LURDESC) {
+					//
+					//	A LUR descriptor is set.
+					//
+					if(((PLURELATION_DESC)pdoData->LanscsiAdapterPDO.AddDevInfo)->DevType != NDASSCSI_TYPE_DVD)
+				{
+					Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+						("IOCTL_DVD_GET_STATUS  No DVD Device\n"));
+					status = STATUS_UNSUCCESSFUL;
+					break;
+				}
+				} else {
+					//
+					//	ADD_TARGET_DATA is set.
+					//
+					if(((PLANSCSI_ADD_TARGET_DATA)pdoData->LanscsiAdapterPDO.AddDevInfo)->ucTargetType != NDASSCSI_TYPE_DVD)
+					{
+						Bus_KdPrint_Cont (fdoData, BUS_DBG_IOCTL_ERROR,
+							("IOCTL_DVD_GET_STATUS  No DVD Device\n"));
+						status = STATUS_UNSUCCESSFUL;
+						break;
+					}
+				}
+				//
+				//	redirect to the LanscsiMiniport Device
+				//
+				status = LSBus_IoctlToLSMPDevice(
+						pdoData,
+						LANSCSIMINIPORT_IOCTL_GET_DVD_STATUS,
+						buffer,
+						inlen,
+						buffer,
+						outlen
+					);
+
+				ObDereferenceObject(pdoData->Self);
+				status = STATUS_SUCCESS;
+				Irp->IoStatus.Information = outlen;
+			}					
+		}
+		break;
+    default:
+        break; // default status is STATUS_INVALID_PARAMETER
+    }
+
+	Irp->IoStatus.Status = status;
+	if(Irp->UserIosb)
+		*Irp->UserIosb = Irp->IoStatus;
+
+	IoCompleteRequest (Irp, IO_NO_INCREMENT);
+    Bus_DecIoCount (fdoData);
+    return status;
+}
+
+
+VOID
+Bus_DriverUnload (
+    IN PDRIVER_OBJECT DriverObject
+    )
+/*++
+Routine Description:
+    Clean up everything we did in driver entry.
+
+Arguments:
+
+   DriverObject - pointer to this driverObject.
+
+
+Return Value:
+
+--*/
+{
+    PAGED_CODE ();
+
+    Bus_KdPrint_Def (BUS_DBG_SS_TRACE, ("Unload\n"));
+    
+    //
+    // All the device objects should be gone.
+    //
+
+    ASSERT (NULL == DriverObject->DeviceObject);
+	UNREFERENCED_PARAMETER(DriverObject);
+
+    //
+    // Here we free all the resources allocated in the DriverEntry
+    //
+
+    if(Globals.RegistryPath.Buffer)
+        ExFreePool(Globals.RegistryPath.Buffer);   
+        
+    return;
+}
+
+VOID
+Bus_IncIoCount (
+    IN  PFDO_DEVICE_DATA   FdoData
+    )   
+
+/*++
+
+Routine Description:
+
+    This routine increments the number of requests the device receives
+    
+
+Arguments:
+
+    FdoData - pointer to the FDO device extension.
+    
+Return Value:
+
+    VOID
+
+--*/
+
+{
+
+    LONG            result;
+
+
+    result = InterlockedIncrement(&FdoData->OutstandingIO);
+
+    ASSERT(result > 0);
+    //
+    // Need to clear StopEvent (when OutstandingIO bumps from 1 to 2) 
+    //
+    if (result == 2) {
+        //
+        // We need to clear the event
+        //
+        KeClearEvent(&FdoData->StopEvent);
+    }
+
+    return;
+}
+
+VOID
+Bus_DecIoCount(
+    IN  PFDO_DEVICE_DATA  FdoData
+    )
+
+/*++
+
+Routine Description:
+
+    This routine decrements as it complete the request it receives
+
+Arguments:
+
+    FdoData - pointer to the FDO device extension.
+    
+Return Value:
+
+    VOID
+
+--*/
+{
+
+    LONG            result;
+    
+    result = InterlockedDecrement(&FdoData->OutstandingIO);
+
+    ASSERT(result >= 0);
+
+    if (result == 1) {
+        //
+        // Set the stop event. Note that when this happens
+        // (i.e. a transition from 2 to 1), the type of requests we 
+        // want to be processed are already held instead of being 
+        // passed away, so that we can't "miss" a request that
+        // will appear between the decrement and the moment when
+        // the value is actually used.
+        //
+ 
+        KeSetEvent (&FdoData->StopEvent, IO_NO_INCREMENT, FALSE);
+        
+    }
+    
+    if (result == 0) {
+
+        //
+        // The count is 1-biased, so it can be zero only if an 
+        // extra decrement is done when a remove Irp is received 
+        //
+
+        ASSERT(FdoData->DevicePnPState == Deleted);
+
+        //
+        // Set the remove event, so the device object can be deleted
+        //
+
+        KeSetEvent (&FdoData->RemoveEvent, IO_NO_INCREMENT, FALSE);
+        
+    }
+
+    return;
+}
+
+

@@ -1,0 +1,20 @@
+TARGETNAME=rofilt
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+#TARGETPATH=..\..\sys\$(BUILD_ALT_DIR)
+
+NETDISK_BINPLACE_TYPE=sys
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+INCLUDES=..\inc
+RCOPTIONS=/i ..\inc
+
+# include drivers.mak right before SOURCES
+!INCLUDE "..\inc\drivers.mak"
+
+SOURCES= ROFilter.c	\
+	 ROFilter.rc

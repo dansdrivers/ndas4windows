@@ -1,0 +1,65 @@
+TARGETNAME=lpx
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+LPX=lpx
+MINORCOMP=lpx
+NETDISK_BINPLACE_TYPE=sys
+
+AMD64_WARNING_LEVEL=/W3 /Wp64 -wd4296
+# -Wp64 will not work with ntddk.h for w2k,wxp headers
+386_WARNING_LEVEL=/W3
+
+INCLUDES=$(NDAS_DRIVER_INC_PATH);$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+PRECOMPILED_INCLUDE=precomp.h
+PRECOMPILED_PCH=precomp.pch
+PRECOMPILED_OBJ=precomp.obj
+
+C_DEFINES= -DNDIS40 -D_PNP_POWER_ -DNDIS_POOL_TAGGING=1 -DPKT_LOG=0
+
+
+SOURCES=\
+    address.c \
+    connect.c \
+    connobj.c \
+    devctx.c \
+    dlc.c \
+    event.c \
+    info.c \
+    lpx.rc \
+    lpxcnfg.c \
+    lpxdrvr.c \
+    lpxmac.c \
+    lpxndis.c \
+    lpxpnp.c    \
+    rcv.c \
+    request.c \
+    send.c \
+    sendeng.c \
+    spnlckdb.c \
+    timer.c \
+	socketlpx.c \
+	lpx.c		\
+	lpxpacket.c
+
+TARGETLIBS=\
+    $(DDK_LIB_PATH)\ndis.lib \
+    $(DDK_LIB_PATH)\tdi.lib		
+
+# Set INF File Version
+NTTARGETFILES=
+INFFILENAME=netlpx
+CDFFILENAME=$(INFFILENAME)
+
+INFSRCNAME=$(INFFILENAME)
+CDFSRCNAME=$(CDFFILENAME)
+!if exists($(INFFILENAME).$(TARGET_DIRECTORY).inf)
+INFSRCNAME=$(INFSRCNAME).$(TARGET_DIRECTORY)
+!endif
+!if exists($(INFFILENAME).$(TARGET_DIRECTORY).cdf)
+CDFSRCNAME=$(CDFSRCNAME).$(TARGET_DIRECTORY)
+!endif
+
+MISCFILES=$(O)\$(INFFILENAME).inf $(O)\$(CDFFILENAME).cdf

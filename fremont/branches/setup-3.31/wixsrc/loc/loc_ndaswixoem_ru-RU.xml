@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="SIS_MANUFACTURER">
+    <base>XIMETA, Inc.</base>
+    <translation>XIMETA, Inc.</translation>
+  </string>
+  <string id="SIS_KEYWORDS">
+    <base>Installer,MSI,Database,NDAS</base>
+    <translation>Установщик, MSI, База данных, NDAS</translation>
+  </string>
+  <string id="SIS_COMMENTS">
+    <base>NDAS Software and Device Drivers for NetDisks and other NDAS devices</base>
+    <translation>Программное обеспечение NDAS и драйверы устройств NetDISK и других NDAS устройств</translation>
+  </string>
+  <string id="ARPURLUPDATEINFO">
+    <base>http://www.ximeta.com</base>
+    <translation>http://www.ximeta.com</translation>
+  </string>
+  <string id="ARPHELPLINK">
+    <base>http://www.ximeta.com/support/</base>
+    <translation>http://www.ximeta.com/support/</translation>
+  </string>
+  <string id="ARPURLINFOABOUT">
+    <base>http://www.ximeta.com</base>
+    <translation>http://www.ximeta.com</translation>
+  </string>
+  <string id="ARPCONTACT">
+    <base>Customer Support</base>
+    <translation>Поддержка пользователей</translation>
+  </string>
+  <string id="ARPCOMMENTS">
+    <base>NDAS Software</base>
+    <translation>Программное обеспечение NDAS</translation>
+  </string>
+  <string id="ProductName">
+    <base>NDAS Software</base>
+    <translation>Программное обеспечение NDAS</translation>
+  </string>
+  <string id="PackageDescription">
+    <base>NDAS Software</base>
+    <translation>Программное обеспечение NDAS</translation>
+  </string>
+  <string id="Manufacturer">
+    <base>XIMETA, Inc.</base>
+    <translation>XIMETA, Inc.</translation>
+  </string>
+  <string id="DialogCaption">
+    <base>Windows Installer Setup</base>
+    <translation>Установщик Windows</translation>
+  </string>
+  <string id="Uninstall.LongName">
+    <base>Uninstall NDAS Software</base>
+    <translation>Удаление программного обеспечения NDAS</translation>
+  </string>
+  <string id="Uninstall.Description">
+    <base>Uninstalls NDAS Software</base>
+    <translation>Удаление программного обеспечения NDAS</translation>
+  </string>
+  <string id="Ndasmgmt.LongName">
+    <base>NDAS Device Management</base>
+    <translation>Менеджер управления NDAS устройствами</translation>
+  </string>
+  <string id="Ndasmgmt.Description">
+    <base>NDAS Device Management</base>
+    <translation>Менеджер управления NDAS устройствами</translation>
+  </string>
+  <string id="Ndasbind.LongName">
+    <base>NDAS Bind Management</base>
+    <translation>NDAS Bind Management</translation>
+  </string>
+  <string id="Ndasbind.Description">
+    <base>NDAS Device Binding Support Program</base>
+    <translation>Программа поддержки NDAS Device Binding</translation>
+  </string>
+  <string id="Ndasmgmt.Feature.Title">
+    <base>NDAS Device Management</base>
+    <translation>Менеджер управления NDAS устройствами</translation>
+  </string>
+  <string id="Ndasmgmt.Feature.Description">
+    <base>NDAS Device Management</base>
+    <translation>Менеджер управления NDAS устройствами</translation>
+  </string>
+  <string id="Ndasbind.Feature.Title">
+    <base>NDAS Bind Management</base>
+    <translation>NDAS Bind Management</translation>
+  </string>
+  <string id="Ndasbind.Feature.Description">
+    <base>NDAS Bind Management</base>
+    <translation>NDAS Bind Management</translation>
+  </string>
+  <string id="Ndascmd.Feature.Title">
+    <base>NDAS Command Line Interface</base>
+    <translation>Командная строка NDAS</translation>
+  </string>
+  <string id="Ndascmd.Feature.Description">
+    <base>NDAS Command Line Interface</base>
+    <translation>Командная строка NDAS</translation>
+  </string>
+  <string id="Main.Feature.Title">
+    <base>NDAS Software</base>
+    <translation>Программное обеспечение NDAS</translation>
+  </string>
+  <string id="Main.Feature.Description">
+    <base>NDAS Software</base>
+    <translation>Программное обеспечение NDAS</translation>
+  </string>
+  <string id="ProgramFilesCompanyFolder83">
+    <base>.</base>
+    <translation>.</translation>
+  </string>
+  <string id="ProgramFilesCompanyFolder">
+    <base>.</base>
+    <translation>.</translation>
+  </string>
+  <string id="ProgramFilesGroupFolder83">
+    <base>NDAS</base>
+    <translation>NDAS</translation>
+  </string>
+  <string id="ProgramFilesGroupFolder">
+    <base>NDAS</base>
+    <translation>NDAS</translation>
+  </string>
+  <string id="ProgramMenuCompanyFolder83">
+    <base>.</base>
+    <translation>.</translation>
+  </string>
+  <string id="ProgramMenuCompanyFolder">
+    <base>.</base>
+    <translation>.</translation>
+  </string>
+  <string id="ProgramMenuGroupFolder83">
+    <base>NDAS</base>
+    <translation>NDAS</translation>
+  </string>
+  <string id="ProgramMenuGroupFolder">
+    <base>NDAS Software</base>
+    <translation>Программное обеспечение NDAS</translation>
+  </string>
+</localization>

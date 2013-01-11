@@ -1,0 +1,78 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=xixfs
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\ntstrsafe.lib			\
+	$(NDAS_LIB_PATH)\libdes.lib				\
+	$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib	\
+	$(NDAS_LIB_PATH)\libxixcore.lib			\
+	$(NDAS_LIB_PATH)\libxcsys.lib
+
+XIXCORE_INC_PATH=..\xixcore\include
+INCLUDES=$(INCLUDES);$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH);$(XIXCORE_INC_PATH)
+
+SOURCES=\
+	..\xixfs_support.c\
+	..\xixfs_rawvolumedeviceIo.c\
+	..\xixfs_ndasdevicecontrol.c\
+	..\xixfs_callback.c\
+	..\xixfs_lotbitmapop.c\
+	..\xixfs_eventdgrampkt.c\
+	..\xixfs_eventmechanism.c\
+	..\xixfs_eventapi.c\
+	..\xixfs_fcbtlbmgr.c\
+	..\xixfs_allocmgr.c\
+	..\xixfs_filemisc.c\
+	..\xixfs_dispatcher.c\
+	..\xixfs_filepurge.c\
+	..\xixfs_filestub.c\
+	..\xixfs_filectrl.c\
+	..\xixfs_dirctrl.c\
+	..\xixfs_read.c\
+	..\xixfs_write.c\
+	..\xixfs_filefastio.c\
+	..\xixfs_volumectrl.c\
+	..\xixfs_filesystemctrl.c\
+	..\xixfs_creatclosestub.c\
+	..\xixfs_create.c\
+	..\xixfs_cleanup.c\
+	..\xixfs_close.c\
+	..\xixfs_eactrl.c\
+	..\xixfs_securityctrl.c\
+	..\xixfs_filelockctrl.c\
+	..\xixfs_flushCtrl.c\
+	..\xixfs_pnpctrl.c\
+	..\xixfs_devicectrl.c\
+	..\xixfs_init.c\
+	..\xixfs.rc		
+
+#XixFsdVolumeStub.c\
+#	XixFsTransAddr.c\
+#	XixFSAddressInfo.c\
+#	XixFsChangeEndian.c\
+#	XixFsSafeEndianOp.c\
+#	XixFsRawDiskAccessOp.c\
+#	XixFsLotInfo.c\
+#	XixFsRawDirStub.c\
+#	xixcore_LotLock.c\
+#	XixFsRawFileStub.c\
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_WIN2K_COMPAT_SLIST_USAGE 
+C_DEFINES = -D__XIXCORE_BYTEORDER_LITTLE__ $(C_DEFINES) # -D__XIXCORE_DEBUG__
+
+#
+# INF File Generation
+#
+!INCLUDE $(NDAS_TOOLS)\create_inf.inc
+
+MSC_OPTIMIZATION=
+

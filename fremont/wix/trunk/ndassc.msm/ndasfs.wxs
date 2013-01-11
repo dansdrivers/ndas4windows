@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<?include ComponentGuid.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="ndasfs_temp">
+
+    <?ifdef Win64Build?>
+    <DirectoryRef Id="System64Folder_">
+      <Directory Id="SystemDrivers" Name="DRIVERS" />
+    </DirectoryRef>
+    <?else?>
+    <DirectoryRef Id="SystemFolder_">
+      <Directory Id="SystemDrivers"  Name="DRIVERS" />
+    </DirectoryRef>
+    <?endif?>
+
+    <DirectoryRef Id="NdasDriverDir" src="$(var.SourceDir)">
+      <Component Id="NDAS_NDASFS_SYS_TEMP" Guid="$(var.NDAS_NDASFS_SYS_TEMP_GUID)" DiskId="1" Win64="$(var.Win64YesNo)">
+        <File Id="ndasfs.sys" Name="ndasfs.sys" KeyPath="yes">
+          <CopyFile Id="NDASFS_SYS_TEM_COPY" DestinationDirectory="SystemDrivers"/>
+        </File>
+        <File Id="ndasfs.inf" Name="ndasfs.inf"/>
+        <File Id="ndasfs.cat" Name="ndasfs.cat"/>
+      </Component>
+    </DirectoryRef>
+    
+  </Fragment>
+</Wix>

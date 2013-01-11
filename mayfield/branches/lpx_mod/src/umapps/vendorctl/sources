@@ -1,0 +1,48 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=vendorctl
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+INCLUDES=.\inc;$(NDAS_INC_PATH);$(NDAS_INC_PATH)\ndas;$(PSDK_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH) /i $(NDAS_INC_PATH)\ndas
+UMENTRY=wmain
+UMTYPE=console
+USER_C_FLAGS=/Wp64
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+BUILD_CONSUMES=hash
+BUILD_CONSUMES=des
+BUILD_CONSUMES=ndasidenc
+
+TARGETLIBS=\
+	$(NDAS_LIB_PATH)\hash.lib \
+	$(NDAS_LIB_PATH)\des.lib \
+	$(NDAS_LIB_PATH)\ndasidenc.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+    $(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+    $(PSDK_LIB_PATH)\shell32.lib
+
+MSC_WARNING_LEVEL=-W3 -WX
+#MSC_OPTIMIZATION=/Oitb2
+#MSC_OPTIMIZATION=/Od /Oi
+
+PRECOMPILED_INCLUDE=stdafx.h
+
+SOURCES= vendorctl.c

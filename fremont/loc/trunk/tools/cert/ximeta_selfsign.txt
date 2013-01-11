@@ -1,0 +1,43 @@
+
+ * XIMETA Engineering Test Signature
+
+ Following files are generated to support self-signed test signatures.
+
+ ximeta_selfsign_200608.pvk (Private Key)
+ ximeta_selfsign_200608.pfx (Personal Information Exchange File)
+ ximeta_selfsign_200608.cer (Test Signature Certificate)
+
+ [Creating a test certificate] section describes how these files are generated.
+
+ * Summary
+
+ ** For Developer
+
+ signtool.exe sign /f ximeta_selfsign_200608.pfx /p ximeta /v <myfile.exe>
+
+ ** Import the Test Certificate to a Test System
+
+ certmgr.exe -add ximeta_selfsign_200608.cer -s -r localMachine root 
+ certmgr.exe -add ximeta_selfsign_200608.cer -s -r localMachine trustedPublisher
+
+
+
+ ** Creating a test certificate
+
+ makecert.exe and pvk2pfx.exe are in WINDDK\{Build:5483}\bin\SelfSign directory in Vista WDK.
+
+ 1. Create a .cer and .pvk file 
+
+ makecert.exe -r -sv ximeta_selfsign_200608.pvk -m 60 -n "CN=XIMETA Self-signed Test Certificate 200608" ximeta_selfsign_200608.cer
+
+ 	* PVK password is 'ximeta' without quotes)
+	* Validity period is 60 months (5 years)
+
+ 2. Create a .pfx file
+
+ pvk2pfx -pvk ximeta_selfsign_200608.pvk -spc ximeta_selfsign_200608.cer -pfx ximeta_selfsign_200608.pfx -pi ximeta
+
+	(PFX password is also set as 'ximeta'.)
+
+
+ 

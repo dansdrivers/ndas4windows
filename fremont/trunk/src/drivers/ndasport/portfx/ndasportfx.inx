@@ -1,0 +1,92 @@
+;
+; This driver is a part of NDAS Software.
+;
+; Copyright (C) 2006-2007 XIMETA, Inc. All rights reserved
+;
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%PROVIDER%
+DriverVer=06/17/1999, 5.00.2064
+CatalogFile=ndasportfx.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+ndasportfx.sys  = 1,,
+
+[Manufacturer]
+%StdMfg%=Standard,NT$ARCH$
+
+; For Win2K because it cannot parse decorated sections
+[Standard]
+%ndasport.DeviceDesc%=ndasport_Device, root\ndasportfx
+
+; For XP and later
+[Standard.NT$ARCH$]
+%ndasport.DeviceDesc%=ndasport_Device, root\ndasportfx
+
+[ndasport_Device.NT]
+CopyFiles=Drivers_Dir
+
+[ndasport_Device.NT.HW]
+AddReg=ndasport_Device.NT.AddReg
+
+[ndasport_Device.NT.AddReg]                            
+HKR,,DeviceCharacteristics,0x10001,0x0100         ; Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)"      ; Allow generic-all access to Built-in administrators and Local system 
+
+[Drivers_Dir]
+ndasportfx.sys
+
+;-------------- Service installation
+[ndasport_Device.NT.Services]
+AddService = ndasportfx,%SPSVCINST_ASSOCSERVICE%, ndsaportfx_Service_Inst
+
+; -------------- ndasport driver install sections
+[ndasportfx_Service_Inst]
+DisplayName    = %ndasport.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\ndasport.sys
+LoadOrderGroup = Extended Base
+
+;
+;--- ndasport_Device Coinstaller installation ------
+;
+[DestinationDirs]
+ndasport_Device_CoInstaller_CopyFiles = 11
+
+[ndasport_Device.NT.CoInstallers]
+AddReg=ndasport_Device_CoInstaller_AddReg
+CopyFiles=ndasport_Device_CoInstaller_CopyFiles
+
+[ndasport_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01005.dll,WdfCoInstaller"
+
+[ndasport_Device_CoInstaller_CopyFiles]
+wdfcoinstaller01005.dll
+
+[SourceDisksFiles]
+wdfcoinstaller01005.dll=1 ; make sure the number matches with SourceDisksNames
+
+[ndasport_Device.NT.Wdf]
+KmdfService = ndasport, ndasport_wdfsect
+
+[ndasport_wdfsect]
+KmdfLibraryVersion = 1.5
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+PROVIDER = "XIMETA, Inc."
+StdMfg = "NDAS"
+DiskId1 = "NDAS Device Driver Installation Disk #1"
+ndasport.DeviceDesc = "NDAS Host Initiator"
+ndasport.SVCDESC = "ndasportfx"
+

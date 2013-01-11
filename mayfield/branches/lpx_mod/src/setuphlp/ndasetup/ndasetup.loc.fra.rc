@@ -1,0 +1,80 @@
+#ifndef APSTUDIO_INVOKED
+
+#include <windows.h>
+#include "resource.h"
+#pragma code_page(1252)
+
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+
+IDR_INSTALL_BUTTON_MENU MENU 
+BEGIN
+    POPUP "{Menu}"
+    BEGIN
+        MENUITEM "&Démarrer (Anglais)",	ID_INSTALL_ENU
+        MENUITEM "&Démarrer (Chinois PRC)", ID_INSTALL_CHS
+        MENUITEM "&Démarrer (Allemand)",		ID_INSTALL_DEU
+        MENUITEM "&Démarrer (Espagnole)",	ID_INSTALL_ESN
+        MENUITEM "&Démarrer (Francais)",		ID_INSTALL_FRA
+        MENUITEM "&Démarrer (Italien)",	ID_INSTALL_ITA
+        MENUITEM "&Démarrer (Japonais)",	ID_INSTALL_JPN
+        MENUITEM "&Démarrer (Coréen)",		ID_INSTALL_KOR
+        MENUITEM "&Démarrer (Portugais)",	ID_INSTALL_PTG
+    END
+END
+
+IDD_INIT_SETUP DIALOGEX 0, 0, 284, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Lanceur d’installation de logiciel NDAS"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Démarrer",IDOK,144,119,81,14
+    PUSHBUTTON      "Q&uitter",IDCANCEL,229,119,50,14
+    CONTROL         "Verifiez si des mises à jour sont disponible",IDC_CHECK_UPDATE,"Bouton",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,121,128,10
+    CONTROL         "",IDC_STATIC,"Statique",SS_ETCHEDHORZ,0,111,283,1
+    ICON            IDI_INSTALLER,IDC_STATIC,9,10,20,20
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,45,90,232,
+                    14
+    LTEXT           "Bienvenue au logiciel d'installation NDAS",IDC_BANNER_TEXT,
+                    45,15,217,46
+    LTEXT           "{Action Text Placeholder}",IDC_ACTION_TEXT,46,72,230,10
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ndasetup"
+    IDS_INITIALIZE          "Setup en initialisation..."
+    IDS_CANCEL              "Annul&er"
+    IDS_EXIT                "Q&uitter"
+    IDS_INSTALL             "&Démarrer"
+    IDS_ERR_LOADMSI         "Le chargement de l'API de l'installateur Windows a échoué."
+    IDS_ERR_FORMAT          "Erreure  0x%1!08X!\r\n%2!s!"
+    IDS_SETUP               "Setup logiciel NDAS"
+    IDS_UPDATE_AVAILABLE_FMT	"Une nouvelle version de logiciel %1!s! est disponible.\r\nEst-ce que vous voules la télécharger?"
+    IDS_UPDATE_URL          "http://updates.ximeta.com/update/"
+    IDS_ERR_CHECK_UPDATE    "La connexion avec le serveur de mise à jour a échouée."
+    IDS_BSC_BEGINDOWNLOADING "Téléchargement de donnée du serveur..."
+    IDS_BSC_CONNECTING      "Connexion avec le serveur..."
+    IDS_BSC_ENDDOWNLOADDATA "Téléchargement terminé."
+    IDS_ERR_DOWNLOAD_UPDATE "Téléchargement d'une mise à jour du serveur a échoué."
+    IDS_ERR_RUN_UPDATE      "Le démarrage d'un Setup actualisé a échoué."
+    IDS_ACTION_CHECK_UPDATE "Vérification d'une version mise à jour par le serveur..."
+    IDS_ERR_OUTOFMEM        "Mémoire insuffisante"
+    IDS_MSI_DATABASE        "ndas.msi"
+    IDS_EXE_FILES           "Fichiers executable"
+    IDS_ACTION_UPGRADE_MSI  "Mise à jour de l'installateur Windows..."
+    IDS_ACTION_START_MSI    "Démarrage de l'installateur Windows..."
+    IDS_NOUPDATE_FMT        "Setup ne trouve pas le fichier '%1!s!'."
+    IDS_INVALID_PATH_FMT    "Le chemin '%1' n'est pas vailde."
+    IDS_INCORRECT_UPDATE_FMT "Le paquet fournit '%1'  de mise à jour n'est pas vailde."
+    IDS_FAILED_TO_UPGRADE_MSI	"Setup n'a pas pu mettre à jour l'installateur Windows."
+    IDS_ACTION_CHECK_MSI	"Vérification de l'installateur Windows..."
+    IDS_ERR_CACHING_TO_SYSTEM_FMT	"La mise en mémoire cache des fichiers MSI à '%1' a échouée.\r\nAssurez vous que vous avez les permissions nécessaire pour copier les fichiers dans ce repertoire."
+    IDS_ACTION_CACHE_MSI    "Mise en mémoire cache des fichiers..."
+    IDS_ERR_CACHE_MSI_FAILED	"Mise en mémoire cache des fichiers MSI a échouée."
+	IDS_ERR_REQUIRES_WINDOWS2000	"Ce setup peut être installé sous Windows 2000 ou une version supérieure.\r\nVeuillez executer l'autre setup pour votre système d'esploitation."
+	IDS_ERR_REQUIRES_ADMIN_PRIV 	"Vous devez disposer de droits d’administrateur pour l’installation de ce logiciel.\r\nVeuillez vous enregistrer comme administrateur et redémarrer l’installation. "
+END
+
+
+#endif    // APSTUDIO_INVOKED

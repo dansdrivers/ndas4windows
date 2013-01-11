@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+	<Fragment>
+
+		<?ifdef Include.LPX?>
+
+		<?ifdef WixCustomTableLocBug?>
+		<?define ActionData.LPX      = "LPX Protocol" ?>
+		<?endif?>
+
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.SetupFileSource)">
+			<Component Id="lpx" Guid="$(var.LPX.GUID)" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+				<File Id="lpx.sys" Name="lpx.sys" KeyPath="yes" Checksum="yes" />
+				<File Id="wshlpx.dll" Name="wshlpx.dll" Checksum="yes" />
+				<?ifdef Win64Build?>
+				<File Id="wshlpx32.dll" Name="wshlpx32.dll" Checksum="yes" />
+				<?endif?>
+				<File Id="netlpx.inf" Name="netlpx.inf" Checksum="yes" />
+				<File Id="netlpx.cat" Name="netlpx.cat" Checksum="yes" />
+				<Registry Id="lpx" Root="HKLM" Key="SOFTWARE\NDAS\Install\OEMINF" Type="string" Name="LPX" />
+			</Component>
+		</DirectoryRef>
+
+		<CustomTable Id="xDriverInstall">
+			<Row>
+				<Data Column="Id">StopLPX</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LPX)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LPX)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">StopService</Data>
+				<Data Column="HardwareId">lpx</Data>
+				<Data Column="Sequence">$(var.Sequence.LPX.Stop)</Data>
+				<Data Column="Condition">(?lpx=3) AND ($lpx=2 OR $lpx=4)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">UninstallLPX</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LPX)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LPX)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">UninstallNetworkComponent</Data>
+				<Data Column="HardwareId">nkc_lpx</Data>
+				<Data Column="INF"></Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.LPX.Uninstall)</Data>
+				<Data Column="Condition">(?lpx=3) AND ($lpx=2 OR $lpx=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">lpx</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">CleanupInfLPX</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LPX)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LPX)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">CleanupOEMInf</Data>
+				<Data Column="HardwareId">nkc_lpx</Data>
+				<Data Column="INF"></Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.LPX.Cleanup)</Data>
+				<Data Column="Condition">(?lpx=3) AND ($lpx=2 OR $lpx=4)</Data>
+				<Data Column="Error">1</Data>
+				<Data Column="Registry_">lpx</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">InstallLPX</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LPX)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LPX)</Data>
+				<?endif?>
+				<Data Column="Phase">2</Data>
+				<Data Column="Type">InstallNetworkComponent</Data>
+				<Data Column="HardwareId">nkc_lpx</Data>
+				<Data Column="INF">[#netlpx.inf]</Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.LPX.Install)</Data>
+				<Data Column="Condition">($lpx=3)</Data>
+				<Data Column="Error">1</Data>
+				<Data Column="Registry_">lpx</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">StartLPX</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.LPX)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.LPX)</Data>
+				<?endif?>
+				<Data Column="Phase">4</Data>
+				<Data Column="Type">StartService</Data>
+				<Data Column="HardwareId">lpx</Data>
+				<Data Column="Sequence">$(var.Sequence.LPX.Start)</Data>
+				<Data Column="Condition">($lpx=3)</Data>
+				<Data Column="Error">28001</Data>
+			</Row>
+		</CustomTable>
+	</Fragment>
+
+	<?endif?>
+
+</Wix>

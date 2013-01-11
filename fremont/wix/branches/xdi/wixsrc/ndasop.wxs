@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+	<Fragment>
+		<DirectoryRef Id="NdasApplicationFolder" FileSource="$(var.SetupFileSource)">
+			<Component Id="ndasop.dll" Guid="$(var.NDAS_NDASOP_DLL_GUID)"
+								 SharedDllRefCount="yes" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasop.dll" Name="ndasop.dll" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+</Wix>

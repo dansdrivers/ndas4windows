@@ -1,0 +1,584 @@
+routine for the general purpose file system
+    filter driver.  This routine creates the device object that represents 
+    this driver in the system and registers it for watching all file systems 
+    that register or unregister themselves as active file systems.
+
+Arguments:
+
+    DriverObject - Pointer to driver object created by the system.
+
+Return Value:
+
+    The function value is the final status from the initialization operation.
+
+--*/
+{
+    UNICODE_STRING nameString;
+    NTSTATUS status;
+    PFAST_IO_DISPATCH fastIoDispatch;
+    ULONG i;
+    UNICODE_STRING linkString;
+    
+#if DBG
+
+	gFileSpyDebugLevel |= SPYDEBUG_ERROR;
+	gFileSpyDebugLevel |= SPYDEBUG_DISPLAY_ATTACHMENT_NAMES;
+
+#endif
+
+    //////////////////////////////////////////////////////////////////////
+    //
+    //  General setup for all filter drivers.  This sets up the filter
+    //  driver's DeviceObject and registers the callback routines for
+    //  the filter driver.
+    //
+    //////////////////////////////////////////////////////////////////////
+
+#if WINVER >= 0x0501
+    //
+    //  Try to load the dynamic functions that may be available for our use.
+    //
+
+    SpyLoadDynamicFunctions();
+
+    //
+    //  Now get the current OS version that we will use to determine what logic
+    //  paths to take when this driver is built to run on various OS version.
+    //
+
+    SpyGetCurrentVersion();
+#endif
+    
+    //
+    //  Read the custom parameters for FileSpy from the registry
+    //
+
+    SpyReadDriverParameters( RegistryPath );
+
+    if (FlagOn(gFileSpyDebugLevel,SPYDEBUG_BREAK_ON_DRIVER_ENTRY)) {
+
+        DbgBreakPoint();
+    }
+
+    //
+    //  Save our Driver Object.
+    //
+
+    gFileSpyDriverObject = DriverObject;
+
+#if DBG && WINVER >= 0x0501
+
+    //
+    //  MULTIVERSION NOTE:
+    //
+    //  We can only support unload for testing environments if we can enumerate
+    //  the outstanding device objects that our driver has.
+    //
+
+    //
+    //  Unload is useful for development purposes. It is not recommended for 
+    //  production versions. 
+    //
+
+    if (IS_WINDOWSXP_OR_LATER()) {
+
+        ASSERT( NULL != gSpyDynamicFunctions.EnumerateDeviceObjectList );
+        
+        gFileSpyDriverObject->DriverUnload = DriverUnload;
+    }
+#endif
+
+    //
+    // Create the device object that will represent the FileSpy device.
+    //
+
+    RtlInitUnicodeString( &nameString, FILESPY_FULLDEVICE_NAME1 );
+    
+    //
+    // Create the "control" device object.  Note that this device object does
+    // not have a device extension (set to NULL).  Most of the fast IO routines
+    // check for this condition to determine if the fast IO is directed at the
+    // control device.
+    //
+
+    status = IoCreateDevice( DriverObject,
+                             0,                 //  has no device extension
+                             &nameString,
+                             FILE_DEVICE_DISK_FILE_SYSTEM,
+                             FILE_DEVICE_SECURE_OPEN,
+                             FALSE,
+                             &gControlDeviceObject);
+
+    if (STATUS_OBJECT_PATH_NOT_FOUND == status) {
+
+        //
+        //  The "\FileSystem\Filter' path does not exist in the object name
+        //  space, so we must be dealing with an OS pre-Windows XP.  Try
+        //  the second name we have to see if we can create a device by that
+        //  name.
+        //
+
+        RtlInitUnicodeString( &nameString, FILESPY_FULLDEVICE_NAME2 );
+
+        status = IoCreateDevice( DriverObject,
+                                 0,             //  has no device extension
+                                 &nameString,
+                                 FILE_DEVICE_DISK_FILE_SYSTEM,
+                                 FILE_DEVICE_SECURE_OPEN,
+                                 FALSE,
+                                 &gControlDeviceObject);
+
+        if (!NT_SUCCESS( status )) {
+            
+            SPY_LOG_PRINT( SPYDEBUG_ERROR,
+                           ("FileSpy!DriverEntry: Error creating FileSpy control device \"%wZ\", error: %x\n",
+                           &nameString,
+                           status) );
+
+            return status;
+        }
+
+        //
+        //  We were able to successfully create the file spy control device
+        //  using this second name, so we will now fall through and create the 
+        //  symbolic link.
+        //
+        
+    } else if (!NT_SUCCESS( status )) {
+
+        SPY_LOG_PRINT( SPYDEBUG_ERROR,
+                       ("FileSpy!DriverEntry: Error creating FileSpy control device \"%wZ\", error: %x\n",
+                       &nameString,
+                       status) );
+
+        return status;
+
+    }
+
+    RtlInitUnicodeString( &linkString, FILESPY_DOSDEVICE_NAME );
+    status = IoCreateSymbolicLink( &linkString, &nameString );
+
+    if (!NT_SUCCESS(status)) {
+
+        //
+        //  Remove the existing symbol link and try and create it again.
+        //  If this fails then quit.
+        //
+
+        IoDeleteSymbolicLink( &linkString );
+        status = IoCreateSymbolicLink( &linkString, &nameString );
+
+        if (!NT_SUCCESS(status)) {
+
+            SPY_LOG_PRINT( SPYDEBUG_ERROR,
+                           ("FileSpy!DriverEntry: IoCreateSymbolicLink failed\n") );
+
+            IoDeleteDevice(gControlDeviceObject);
+            return status;
+        }
+    }
+
+    //
+    // Initialize the driver object with this device driver's entry points.
+    //
+
+    for (i = 0; i <= IRP_MJ_MAXIMUM_FUNCTION; i++) {
+
+        DriverObject->MajorFunction[i] = SpyDispatch;
+    }
+
+    DriverObject->MajorFunction[IRP_MJ_CREATE] = SpyCreate;
+    DriverObject->MajorFunction[IRP_MJ_CLOSE] = SpyClose;
+    DriverObject->MajorFunction[IRP_MJ_FILE_SYSTEM_CONTROL] = SpyFsControl;
+
+    //
+    // Allocate fast I/O data structure and fill it in.  This structure
+    // is used to register the callbacks for FileSpy in the fast I/O
+    // data paths.
+    //
+
+    fastIoDispatch = ExAllocatePoolWithTag( NonPagedPool, 
+                                            sizeof( FAST_IO_DISPATCH ),
+                                            FILESPY_POOL_TAG );
+
+    if (!fastIoDispatch) {
+
+        IoDeleteDevice( gControlDeviceObject );
+        return STATUS_INSUFFICIENT_RESOURCES;
+    }
+
+    RtlZeroMemory( fastIoDispatch, sizeof( FAST_IO_DISPATCH ) );
+    fastIoDispatch->SizeOfFastIoDispatch = sizeof( FAST_IO_DISPATCH );
+    fastIoDispatch->FastIoCheckIfPossible = SpyFastIoCheckIfPossible;
+    fastIoDispatch->FastIoRead = SpyFastIoRead;
+    fastIoDispatch->FastIoWrite = SpyFastIoWrite;
+    fastIoDispatch->FastIoQueryBasicInfo = SpyFastIoQueryBasicInfo;
+    fastIoDispatch->FastIoQueryStandardInfo = SpyFastIoQueryStandardInfo;
+    fastIoDispatch->FastIoLock = SpyFastIoLock;
+    fastIoDispatch->FastIoUnlockSingle = SpyFastIoUnlockSingle;
+    fastIoDispatch->FastIoUnlockAll = SpyFastIoUnlockAll;
+    fastIoDispatch->FastIoUnlockAllByKey = SpyFastIoUnlockAllByKey;
+    fastIoDispatch->FastIoDeviceControl = SpyFastIoDeviceControl;
+    fastIoDispatch->FastIoDetachDevice = SpyFastIoDetachDevice;
+    fastIoDispatch->FastIoQueryNetworkOpenInfo = SpyFastIoQueryNetworkOpenInfo;
+    fastIoDispatch->MdlRead = SpyFastIoMdlRead;
+    fastIoDispatch->MdlReadComplete = SpyFastIoMdlReadComplete;
+    fastIoDispatch->PrepareMdlWrite = SpyFastIoPrepareMdlWrite;
+    fastIoDispatch->MdlWriteComplete = SpyFastIoMdlWriteComplete;
+    fastIoDispatch->FastIoReadCompressed = SpyFastIoReadCompressed;
+    fastIoDispatch->FastIoWriteCompressed = SpyFastIoWriteCompressed;
+    fastIoDispatch->MdlReadCompleteCompressed = SpyFastIoMdlReadCompleteCompressed;
+    fastIoDispatch->MdlWriteCompleteCompressed = SpyFastIoMdlWriteCompleteCompressed;
+    fastIoDispatch->FastIoQueryOpen = SpyFastIoQueryOpen;
+
+    DriverObject->FastIoDispatch = fastIoDispatch;
+
+//
+//  VERSION NOTE:
+//
+//  There are 6 FastIO routines for which file system filters are bypassed as
+//  the requests are passed directly to the base file system.  These 6 routines
+//  are AcquireFileForNtCreateSection, ReleaseFileForNtCreateSection,
+//  AcquireForModWrite, ReleaseForModWrite, AcquireForCcFlush, and 
+//  ReleaseForCcFlush.
+//
+//  In Windows XP and later, the FsFilter callbacks were introduced to allow
+//  filters to safely hook these operations.  See the IFS Kit documentation for
+//  more details on how these new interfaces work.
+//
+//  MULTIVERSION NOTE:
+//  
+//  If built for Windows XP or later, this driver is built to run on 
+//  multiple versions.  When this is the case, we will test
+//  for the presence of FsFilter callbacks registration API.  If we have it,
+//  then we will register for those callbacks, otherwise, we will not.
+//
+
+#if WINVER >= 0x0501
+
+    {
+        FS_FILTER_CALLBACKS fsFilterCallbacks;
+
+        if (IS_WINDOWSXP_OR_LATER()) {
+
+            ASSERT( NULL != gSpyDynamicFunctions.RegisterFileSystemFilterCallbacks );
+            
+            //
+            //  This version of the OS exports FsRtlRegisterFileSystemFilterCallbacks,
+            //  therefore it must support the FsFilter callbacks interface.  We
+            //  will register to receive callbacks for these operations.
+            //
+        
+            //
+            //  Setup the callbacks for the operations we receive through
+            //  the FsFilter interface.
+            //
+
+#ifdef __LFS__
+
+            fsFilterCallbacks.SizeOfFsFilterCallbacks = sizeof( FS_FILTER_CALLBACKS );
+            fsFilterCallbacks.PreAcquireForSectionSynchronization = LfsPreAcquireForSectionSynchronization;
+            fsFilterCallbacks.PostAcquireForSectionSynchronization = LfsPostAcquireForSectionSynchronization;
+            fsFilterCallbacks.PreReleaseForSectionSynchronization = LfsPreReleaseForSectionSynchronization;
+            fsFilterCallbacks.PostReleaseForSectionSynchronization = LfsPostReleaseForSectionSynchronization;
+
+            fsFilterCallbacks.PreAcquireForCcFlush = LfsPreAcquireForCcFlush;
+            fsFilterCallbacks.PostAcquireForCcFlush = LfsPostAcquireForCcFlush;
+            fsFilterCallbacks.PreReleaseForCcFlush = LfsPreReleaseForCcFlush;
+            fsFilterCallbacks.PostReleaseForCcFlush = LfsPostReleaseForCcFlush;
+            
+			fsFilterCallbacks.PreAcquireForModifiedPageWriter = LfsPreAcquireForModifiedPageWriter;
+            fsFilterCallbacks.PostAcquireForModifiedPageWriter = LfsPostAcquireForModifiedPageWriter;
+            fsFilterCallbacks.PreReleaseForModifiedPageWriter = LfsPreReleaseForModifiedPageWriter;
+            fsFilterCallbacks.PostReleaseForModifiedPageWriter = LfsPostReleaseForModifiedPageWriter;
+
+#else
+
+            fsFilterCallbacks.SizeOfFsFilterCallbacks = sizeof( FS_FILTER_CALLBACKS );
+            fsFilterCallbacks.PreAcquireForSectionSynchronization = SpyPreFsFilterOperation;
+            fsFilterCallbacks.PostAcquireForSectionSynchronization = SpyPostFsFilterOperation;
+            fsFilterCallbacks.PreReleaseForSectionSynchronization = SpyPreFsFilterOperation;
+            fsFilterCallbacks.PostReleaseForSectionSynchronization = SpyPostFsFilterOperation;
+            fsFilterCallbacks.PreAcquireForCcFlush = SpyPreFsFilterOperation;
+            fsFilterCallbacks.PostAcquireForCcFlush = SpyPostFsFilterOperation;
+            fsFilterCallbacks.PreReleaseForCcFlush = SpyPreFsFilterOperation;
+            fsFilterCallbacks.PostReleaseForCcFlush = SpyPostFsFilterOperation;
+            fsFilterCallbacks.PreAcquireForModifiedPageWriter = SpyPreFsFilterOperation;
+            fsFilterCallbacks.PostAcquireForModifiedPageWriter = SpyPostFsFilterOperation;
+            fsFilterCallbacks.PreReleaseForModifiedPageWriter = SpyPreFsFilterOperation;
+            fsFilterCallbacks.PostReleaseForModifiedPageWriter = SpyPostFsFilterOperation;
+
+#endif
+
+            status = (gSpyDynamicFunctions.RegisterFileSystemFilterCallbacks)( DriverObject, 
+                                                                              &fsFilterCallbacks );
+
+            if (!NT_SUCCESS( status )) {
+
+                DriverObject->FastIoDispatch = NULL;
+                ExFreePoolWithTag( fastIoDispatch, FILESPY_POOL_TAG );
+                IoDeleteDevice( gControlDeviceObject );
+                return status;
+            }
+        }
+    }
+#endif
+
+    //////////////////////////////////////////////////////////////////////
+    //
+    //  Initialize global data structures that are used for FileSpy's
+    //  logging of I/O operations.
+    //
+    //////////////////////////////////////////////////////////////////////
+
+    //
+    //  A fast mutex was used in this case because the mutex is never acquired
+    //  at DPC level or above.  Spinlocks were chosen in other cases because
+    //  they are acquired at DPC level or above.  Another consideration is
+    //  that on an MP machine, a spin lock will literally spin trying to 
+    //  acquire the lock when the lock is already acquired.  Acquiring a
+    //  previously acquired fast mutex will suspend the thread, thus freeing
+    //  up the processor.
+    //
+    
+    ExInitializeFastMutex( &gSpyDeviceExtensionListLock );
+    InitializeListHead( &gSpyDeviceExtensionList );
+
+    KeInitializeSpinLock( &gControlDeviceStateLock );
+
+    InitializeListHead( &gOutputBufferList );
+
+    KeInitializeSpinLock( &gOutputBufferLock );
+    KeInitializeSpinLock( &gLogSequenceLock );
+
+    ExInitializeFastMutex( &gSpyAttachLock );
+
+#ifndef MEMORY_DBG
+
+    //
+    //  When we aren't debugging our memory usage, we want to allocate 
+    //  memory from a look-aside list for better performance.  Unfortunately,
+    //  we cannot benefit from the memory debugging help of the Driver 
+    //  Verifier if we allocate memory from a look-aside list.
+    //
+
+    ExInitializeNPagedLookasideList( &gFreeBufferList, 
+                                     NULL/*ExAllocatePoolWithTag*/, 
+                                     NULL/*ExFreePool*/, 
+                                     0, 
+                                     RECORD_SIZE, 
+                                     FILESPY_LOGRECORD_TAG, 
+                                     100 );
+#endif
+
+        
+    //
+    //  Initialize the naming environment
+    //
+
+    SpyInitNamingEnvironment();
+
+    //
+    //  Init internal strings
+    //
+
+    RtlInitUnicodeString(&gVolumeString, L"VOLUME");
+    RtlInitUnicodeString(&gOverrunString, L"......");
+    RtlInitUnicodeString(&gPagingIoString, L"Paging IO");
+
+    //
+    //  If we are supposed to attach to all devices, register a callback
+    //  with IoRegisterFsRegistrationChange so that we are called whenever a
+    //  file system registers with the IO Manager.
+    //
+    //  VERSION NOTE:
+    //
+    //  On Windows XP and later this will also enumerate all existing file
+    //  systems (except the RAW file systems).  On Windows 2000 this does not
+    //  enumerate the file systems that were loaded before this filter was
+    //  loaded.
+    //
+
+#ifdef __LFS__
+
+	LfsDriverEntry (
+		DriverObject,
+    	RegistryPath,
+		gControlDeviceObject
+		);
+
+#endif
+
+    if (gFileSpyAttachMode == FILESPY_ATTACH_ALL_VOLUMES) {
+    
+        status = IoRegisterFsRegistrationChange( DriverObject, SpyFsNotification );
+        
+        if (!NT_SUCCESS( status )) {
+
+            SPY_LOG_PRINT( SPYDEBUG_ERROR,
+                           ("FileSpy!DriverEntry: Error registering FS change notification, status=%08x\n", 
+                            status) );
+
+            DriverObject->FastIoDispatch = NULL;
+            ExFreePoolWithTag( fastIoDispatch, FILESPY_POOL_TAG );
+            IoDeleteDevice( gControlDeviceObject );
+            return status;
+        }
+    }
+
+    //
+    //  Clear the initializing flag on the control device object since we
+    //  have now successfully initialized everything.
+    //
+
+    ClearFlag( gControlDeviceObject->Flags, DO_DEVICE_INITIALIZING );
+
+#ifdef __LFS__
+	
+#if WINVER >= 0x0501
+	if(IS_WINDOWS2K())
+#endif
+	{
+		UNICODE_STRING		ntfsName;
+		PFILE_OBJECT		ntfsFileObject;
+		PDEVICE_OBJECT		ntfsDeviceObject;
+		NTSTATUS			ntfsStatus;
+
+		UNICODE_STRING		ftpName;
+		PFILE_OBJECT		ftpFileObject;
+		PDEVICE_OBJECT		ftpDeviceObject;
+		NTSTATUS			ftpStatus;
+
+		
+		RtlInitUnicodeString( &ntfsName, L"\\Ntfs" );
+
+		ntfsStatus = IoGetDeviceObjectPointer(
+						&ntfsName,
+						FILE_ALL_ACCESS,
+						&ntfsFileObject,
+						&ntfsDeviceObject
+						);
+
+		if(NT_SUCCESS(ntfsStatus))
+		{
+	        SpyAttachToFileSystemDevice( ntfsDeviceObject, &ntfsName );
+			ObDereferenceObject(ntfsFileObject);
+		}
+
+		SPY_LOG_PRINT( LFS_DEBUG_LFS_INFO,
+						("ntfsStatus = %x, ntfsDeviceObject = %p\n", 
+						ntfsStatus, ntfsDeviceObject));
+
+		
+		RtlInitUnicodeString( &ftpName, L"\\Fat" );
+
+		ftpStatus = IoGetDeviceObjectPointer(
+						&ftpName,
+						FILE_ALL_ACCESS,
+						&ftpFileObject,
+						&ftpDeviceObject
+						);
+
+		if(NT_SUCCESS(ftpStatus))
+		{
+	        SpyAttachToFileSystemDevice( ftpDeviceObject, &ftpName );
+			ObDereferenceObject(ftpFileObject);
+		}
+
+		SPY_LOG_PRINT( LFS_DEBUG_LFS_INFO,
+						("ftpStatus = %x, ftpDeviceObject = %p\n", 
+						ftpStatus, ftpDeviceObject));
+	}
+#endif
+    
+    return STATUS_SUCCESS;
+}
+
+#if DBG && WINVER >= 0x0501
+
+VOID
+DriverUnload (
+    IN PDRIVER_OBJECT DriverObject
+    )
+
+/*++
+
+Routine Description:
+
+    This routine is called when a driver can be unloaded.  This performs all of
+    the necessary cleanup for unloading the driver from memory.  Note that an
+    error can not be returned from this routine.
+    
+    When a request is made to unload a driver the IO System will cache that
+    information and not actually call this routine until the following states
+    have occurred:
+    - All device objects which belong to this filter are at the top of their
+      respective attachment chains.
+    - All handle counts for all device objects which belong to this filter have
+      gone to zero.
+
+    WARNING: Microsoft does not officially support the unloading of File
+             System Filter Drivers.  This is an example of how to unload
+             your driver if you would like to use it during development.
+             This should not be made available in production code.
+
+Arguments:
+
+    DriverObject - Driver object for this module
+
+Return Value:
+
+    None.
+
+--*/
+
+{
+    PFILESPY_DEVICE_EXTENSION devExt;
+    PFAST_IO_DISPATCH fastIoDispatch;
+    NTSTATUS status;
+    ULONG numDevices;
+    ULONG i;
+    LARGE_INTEGER interval;
+    UNICODE_STRING linkString;
+#   define DEVOBJ_LIST_SIZE 64
+    PDEVICE_OBJECT devList[DEVOBJ_LIST_SIZE];
+
+    ASSERT(DriverObject == gFileSpyDriverObject);
+
+    //
+    //  Log we are unloading
+    //
+
+    SPY_LOG_PRINT( SPYDEBUG_DISPLAY_ATTACHMENT_NAMES,
+                   ("FileSpy!DriverUnload:                        Unloading Driver (%p)\n",
+                    DriverObject) );
+    
+	//
+    //  Remove the symbolic link so no one else will be able to find it.
+    //
+
+    RtlInitUnicodeString( &linkString, FILESPY_DOSDEVICE_NAME );
+    IoDeleteSymbolicLink( &linkString );
+
+    //
+    //  Don't get anymore file system change notifications
+    //
+
+    IoUnregisterFsRegistrationChange( DriverObject, SpyFsNotification );
+
+    //
+    //  This is the loop that will go through all of the devices we are attached
+    //  to and detach from them.  Since we don't know how many there are and
+    //  we don't want to allocate memory (because we can't return an error)
+    //  we will free them in chunks using a local array on the stack.
+    //
+
+    for (;;) {
+
+        //
+        //  Get what device objects we can for this driver.  Quit if there
+        //  are not any more.  Note that this routine should always be defined
+        //  since this routine is only compiled for Windows XP and later.
+        //
+
+   

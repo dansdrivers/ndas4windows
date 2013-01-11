@@ -1,0 +1,14 @@
+TARGETNAME=libndashear
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=libndashear
+
+BUILD_NDASHEAR_LIB=1
+SOURCES_USED=..\sources.inc
+!INCLUDE ..\sources.inc
+SOURCES=$(SOURCES)
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME).lib}
+

@@ -1,0 +1,67 @@
+TARGETNAME=ndasdlu
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+AMD64_WARNING_LEVEL=/W3 /Wp64 -wd4296 /WX
+# -Wp64 will not work with ntddk.h for w2k,wxp headers
+386_WARNING_LEVEL=/W3 /WX
+
+MSC_OPTIMIZATION=
+
+#
+# __NDASDLU_USE_POOL_FOR_CCBALLOCATION__ must be defined with current
+# implementation.
+#
+C_DEFINES=$(C_DEFINES) -D__NDASDLU_USE_POOL_FOR_CCBALLOCATION__=1
+
+INCLUDES=..\inc;$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH);$(DDK_INC_PATH)
+
+SOURCES=\
+	ndasdlu.c \
+	ndasportext.c \
+	ndasdluioctl.c \
+	ndasdlucomp.c \
+	ndasportext.c \
+    ndaspext.rc
+
+TARGETLIBS=\
+    $(DDK_LIB_PATH)\tdi.lib     \
+	$(DDK_LIB_PATH)\ksecdd.lib \
+	$(DDK_LIB_PATH)\wdmsec.lib \
+    $(NDAS_LIB_PATH)\libhash.lib \
+    $(NDAS_LIB_PATH)\libaes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(NDAS_DRIVER_LIB_PATH)\ndasport.lib \
+    $(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib \
+    $(NDAS_DRIVER_LIB_PATH)\libndask.lib
+
+PASS0_PUBLISH=\
+	{ndasdluioctl.h=$(NDAS_INC_PATH)\ndas\ndasdluioctl.h} \
+	{ndasdluguid.h=$(NDAS_INC_PATH)\ndas\ndasdluguid.h}
+
+#
+# Additional libraries for Windows 2000
+#
+!IF $(_NT_TARGET_VERSION) <= 0x500
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\ntstrsafe.lib
+!ENDIF
+
+!IF 0
+#
+# WPP Settings
+#
+!IF $(_NT_TARGET_VERSION) <= 0x500
+WPP_TEMPLATE=km-w2k.tpl
+!ELSE
+WPP_TEMPLATE=km-default.tpl
+!ENDIF
+
+RUN_WPP=$(SOURCES) -km -gen:{$(WPP_TEMPLATE)}*.tmh -func:NdasPortTrace(FLAG,LEVEL,MSG,...)
+!ENDIF
+
+#
+# INF File Generation
+#
+INF_TEMPLATE_EXT=inx
+!include $(NDAS_TOOLS)\create_inf.inc

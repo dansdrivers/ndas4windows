@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="Features">
+    <Feature Id="MainFeature" 
+      Title="$(loc.Main.Feature.Title)"
+      Description="$(loc.Main.Feature.Description)" 
+      Display="expand" 
+      Level="1" 
+      ConfigurableDirectory="INSTALLDIR" 
+      AllowAdvertise="system">
+
+      <?ifndef NdasSetupFlags_ExcludeNdasMgmt?>
+      <FeatureRef Id="ndasmgmt" />
+      <?endif?>
+
+      <?ifndef NdasSetupFlags_ExcludeNdasBind?>
+      <FeatureRef Id="ndasbind" />
+      <?endif?>
+
+      <?ifndef NdasSetupFlags_ExcludeNdasCmd?>
+      <FeatureRef Id="ndascmd" />
+      <?endif?>
+
+	  <?ifdef NdasSetupFlags_UseUninstallShortcut?>
+      <ComponentRef Id="uninstall" />
+      <?endif?>
+
+      <?ifdef NdasSetupFlags_UseMRE?>
+      <ComponentRef Id="ExtraMRE"/>
+      <?endif?>
+
+      <?ifdef NdasSetupFlags_UseExtraDeviceProp?>
+      <ComponentRef Id="ExtraDeviceProp"/>
+      <?endif?>
+
+      <?ifdef NdasSetupFlags_LowDisconnectThreshold?>
+      <ComponentRef Id="ExtraLowDisconnectThreshold"/>
+      <?endif?>
+
+      <?ifdef NdasSetupFlags_DisableVerifiedWrite?>
+      <ComponentRef Id="NDAS20DisableVW"/>
+      <?endif?>
+
+      <!-- Merge Modules -->
+
+      <ComponentRef Id="InstallInfo" />
+      <ComponentRef Id="CustomInstallInfo" />
+
+      <?ifdef Win64Build?>
+      <!-- Win64Build does not use MSVCRTs -->
+      <?else?>
+      <MergeRef Id="MSVCP60" />
+      <MergeRef Id="MSVCRT" />
+      <?endif?>
+      <MergeRef Id="NdasSysComp" />
+      <MergeRef Id="NdasSysCompUI" />
+
+      <ComponentRef Id="NdasProgramMenuFolder" />
+      <?ifdef UseProgramMenuCompanyFolder?>
+      <ComponentRef Id="NdasProgramMenuCompanyFolder" />
+      <?endif?>
+      <ComponentRef Id="SetupLanguageInfo" />
+
+    </Feature>
+
+    <?ifndef NdasSetupFlags_ExcludeNdasMgmt?>
+    <Feature Id="ndasmgmt" 
+        Title="$(loc.Ndasmgmt.Feature.Title)" 
+        Description="$(loc.Ndasmgmt.Feature.Description)" 
+        Display="expand" 
+        Level="1" 
+        AllowAdvertise="system">
+      <ComponentRef Id="ndasmgmt.exe" />
+      <ComponentRef Id="ndasmgmt.enu.dll" />
+
+      <?ifdef res.zh-CN ?>
+      <ComponentRef Id="ndasmgmt.chs.dll" />
+      <?endif?>
+      <?ifdef res.zh-TW?>
+      <ComponentRef Id="ndasmgmt.cht.dll" />
+      <?endif?>
+      <?ifdef res.de-DE ?>
+      <ComponentRef Id="ndasmgmt.deu.dll" />
+      <?endif?>
+      <?ifdef res.es-ES ?>
+      <ComponentRef Id="ndasmgmt.esn.dll" />
+      <?endif?>
+      <?ifdef res.fr-FR ?>
+      <ComponentRef Id="ndasmgmt.fra.dll" />
+      <?endif?>
+      <?ifdef res.it-IT ?>
+      <ComponentRef Id="ndasmgmt.ita.dll" />
+      <?endif?>
+      <?ifdef res.ja-JP ?>
+      <ComponentRef Id="ndasmgmt.jpn.dll" />
+      <?endif?>
+      <?ifdef res.ko-KR ?>
+      <ComponentRef Id="ndasmgmt.kor.dll" />
+      <?endif?>
+      <?ifdef res.pt-PT ?>
+      <ComponentRef Id="ndasmgmt.ptg.dll" />
+      <?endif?>
+
+	  <?ifdef NdasSetupFlags_UseDesktopShortcut?>
+      <ComponentRef Id="NdasmgmtDesktopShortcut"/>
+	  <?endif?>
+
+	  <?ifndef NdasSetupFlags_NoShortcut?>
+      <ComponentRef Id="NdasmgmtStartupShortcut"/>
+      <?endif?>
+
+    </Feature>
+    <?endif?>
+
+    <?ifndef NdasSetupFlags_ExcludeNdasBind?>
+    <Feature Id="ndasbind" 
+        Title="$(loc.Ndasbind.Feature.Title)"
+        Description="$(loc.Ndasbind.Feature.Description)" 
+        Display="expand" 
+        Level="1" 
+        AllowAdvertise="system">
+      <ComponentRef Id="ndasbind.exe" />
+      <ComponentRef Id="ndasbind.enu.dll" />
+
+      <?ifdef res.zh-CN ?>
+      <ComponentRef Id="ndasbind.chs.dll" />
+      <?endif?>
+      <?ifdef res.zh-TW?>
+      <ComponentRef Id="ndasbind.cht.dll" />
+      <?endif?>
+      <?ifdef res.de-DE ?>
+      <ComponentRef Id="ndasbind.deu.dll" />
+      <?endif?>
+      <?ifdef res.es-ES ?>
+      <ComponentRef Id="ndasbind.esn.dll" />
+      <?endif?>
+      <?ifdef res.fr-FR ?>
+      <ComponentRef Id="ndasbind.fra.dll" />
+      <?endif?>
+      <?ifdef res.it-IT ?>
+      <ComponentRef Id="ndasbind.ita.dll" />
+      <?endif?>
+      <?ifdef res.ja-JP ?>
+      <ComponentRef Id="ndasbind.jpn.dll" />
+      <?endif?>
+      <?ifdef res.ko-KR ?>
+      <ComponentRef Id="ndasbind.kor.dll" />
+      <?endif?>
+      <?ifdef res.pt-PT ?>
+      <ComponentRef Id="ndasbind.ptg.dll" />
+      <?endif?>
+
+    </Feature>
+    <?endif?>
+
+    <?ifndef NdasSetupFlags_ExcludeNdasCmd?>
+    <Feature Id="ndascmd" 
+        Title="$(loc.Ndascmd.Feature.Title)" 
+        Description="$(loc.Ndascmd.Feature.Description)" 
+        Display="expand" 
+        Level="1" 
+        AllowAdvertise="system">
+      <ComponentRef Id="ndascmd.exe" />
+    </Feature>
+    <?endif?>
+
+  </Fragment>
+
+</Wix>

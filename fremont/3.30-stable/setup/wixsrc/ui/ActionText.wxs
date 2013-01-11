@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="ActionText">
+    <UI>
+      <ProgressText Action="CostInitialize">$(loc.ActionText.CostInitialize)</ProgressText>
+      <ProgressText Action="AppSearch" Template="$(loc.ActionText.AppSearch.Template)">$(loc.ActionText.AppSearch)</ProgressText>
+      <ProgressText Action="BindImage" Template="$(loc.ActionText.BindImage.Template)">$(loc.ActionText.BindImage)</ProgressText>
+      <ProgressText Action="CCPSearch">$(loc.ActionText.CCPSearch)</ProgressText>
+      <ProgressText Action="CostFinalize">$(loc.ActionText.CostFinalize)</ProgressText>
+      <ProgressText Action="FileCost">$(loc.ActionText.FileCost)</ProgressText>
+      <ProgressText Action="InstallAdminPackage" Template="$(loc.ActionText.InstallAdminPackage.Template)">$(loc.ActionText.InstallAdminPackage)</ProgressText>
+      <ProgressText Action="InstallFiles" Template="$(loc.ActionText.InstallFiles.Template)">$(loc.ActionText.InstallFiles)</ProgressText>
+      <ProgressText Action="InstallValidate">$(loc.ActionText.InstallValidate)</ProgressText>
+      <ProgressText Action="CreateShortcuts" Template="$(loc.ActionText.CreateShortcuts.Template)">$(loc.ActionText.CreateShortcuts)</ProgressText>
+      <ProgressText Action="PublishComponents" Template="$(loc.ActionText.PublishComponents.Template)">$(loc.ActionText.PublishComponents)</ProgressText>
+      <ProgressText Action="PublishFeatures" Template="$(loc.ActionText.PublishFeatures.Template)">$(loc.ActionText.PublishFeatures)</ProgressText>
+      <ProgressText Action="PublishProduct">$(loc.ActionText.PublishProduct)</ProgressText>
+      <ProgressText Action="RegisterClassInfo" Template="$(loc.ActionText.RegisterClassInfo.Template)">$(loc.ActionText.RegisterClassInfo)</ProgressText>
+      <ProgressText Action="RegisterExtensionInfo" Template="$(loc.ActionText.RegisterExtensionInfo.Template)">$(loc.ActionText.RegisterExtensionInfo)</ProgressText>
+      <ProgressText Action="RegisterMIMEInfo" Template="$(loc.ActionText.RegisterMIMEInfo.Template)">$(loc.ActionText.RegisterMIMEInfo)</ProgressText>
+      <ProgressText Action="RegisterProgIdInfo" Template="$(loc.ActionText.RegisterProgIdInfo.Template)">$(loc.ActionText.RegisterProgIdInfo)</ProgressText>
+      <ProgressText Action="RegisterTypeLibraries" Template="$(loc.ActionText.RegisterTypeLibraries.Template)">$(loc.ActionText.RegisterTypeLibraries)</ProgressText>
+      <ProgressText Action="AllocateRegistrySpace" Template="$(loc.ActionText.AllocateRegistrySpace.Template)">$(loc.ActionText.AllocateRegistrySpace)</ProgressText>
+      <ProgressText Action="CreateFolders" Template="$(loc.ActionText.CreateFolders.Template)">$(loc.ActionText.CreateFolders)</ProgressText>
+      <ProgressText Action="DeleteServices" Template="$(loc.ActionText.DeleteServices.Template)">$(loc.ActionText.DeleteServices)</ProgressText>
+      <ProgressText Action="DuplicateFiles" Template="$(loc.ActionText.DuplicateFiles.Template)">$(loc.ActionText.DuplicateFiles)</ProgressText>
+      <ProgressText Action="FindRelatedProducts" Template="$(loc.ActionText.FindRelatedProducts.Template)">$(loc.ActionText.FindRelatedProducts)</ProgressText>
+      <ProgressText Action="InstallODBC">$(loc.ActionText.InstallODBC)</ProgressText>
+      <ProgressText Action="InstallServices" Template="$(loc.ActionText.InstallServices.Template)">$(loc.ActionText.InstallServices)</ProgressText>
+      <ProgressText Action="LaunchConditions">$(loc.ActionText.LaunchConditions)</ProgressText>
+      <ProgressText Action="MigrateFeatureStates" Template="$(loc.ActionText.MigrateFeatureStates.Template)">$(loc.ActionText.MigrateFeatureStates)</ProgressText>
+      <ProgressText Action="MoveFiles" Template="$(loc.ActionText.MoveFiles.Template)">$(loc.ActionText.MoveFiles)</ProgressText>
+      <ProgressText Action="PatchFiles" Template="$(loc.ActionText.PatchFiles.Template)">$(loc.ActionText.PatchFiles)</ProgressText>
+      <ProgressText Action="ProcessComponents">$(loc.ActionText.ProcessComponents)</ProgressText>
+      <ProgressText Action="RMCCPSearch">$(loc.ActionText.RMCCPSearch)</ProgressText>
+      <ProgressText Action="RegisterComPlus" Template="$(loc.ActionText.RegisterComPlus.Template)">$(loc.ActionText.RegisterComPlus)</ProgressText>
+      <ProgressText Action="RegisterFonts" Template="$(loc.ActionText.RegisterFonts.Template)">$(loc.ActionText.RegisterFonts)</ProgressText>
+      <ProgressText Action="RegisterProduct" Template="$(loc.ActionText.RegisterProduct.Template)">$(loc.ActionText.RegisterProduct)</ProgressText>
+      <ProgressText Action="RegisterUser" Template="$(loc.ActionText.RegisterUser.Template)">$(loc.ActionText.RegisterUser)</ProgressText>
+      <ProgressText Action="RemoveDuplicateFiles" Template="$(loc.ActionText.RemoveDuplicateFiles.Template)">$(loc.ActionText.RemoveDuplicateFiles)</ProgressText>
+      <ProgressText Action="RemoveEnvironmentStrings" Template="$(loc.ActionText.RemoveEnvironmentStrings.Template)">$(loc.ActionText.RemoveEnvironmentStrings)</ProgressText>
+      <ProgressText Action="RemoveExistingProducts" Template="$(loc.ActionText.RemoveExistingProducts.Template)">$(loc.ActionText.RemoveExistingProducts)</ProgressText>
+      <ProgressText Action="RemoveFiles" Template="$(loc.ActionText.RemoveFiles.Template)">$(loc.ActionText.RemoveFiles)</ProgressText>
+      <ProgressText Action="RemoveFolders" Template="$(loc.ActionText.RemoveFolders.Template)">$(loc.ActionText.RemoveFolders)</ProgressText>
+      <ProgressText Action="RemoveIniValues" Template="$(loc.ActionText.RemoveIniValues.Template)">$(loc.ActionText.RemoveIniValues)</ProgressText>
+      <ProgressText Action="RemoveODBC">$(loc.ActionText.RemoveODBC)</ProgressText>
+      <ProgressText Action="RemoveRegistryValues" Template="$(loc.ActionText.RemoveRegistryValues.Template)">$(loc.ActionText.RemoveRegistryValues)</ProgressText>
+      <ProgressText Action="RemoveShortcuts" Template="$(loc.ActionText.RemoveShortcuts.Template)">$(loc.ActionText.RemoveShortcuts)</ProgressText>
+      <ProgressText Action="SelfRegModules" Template="$(loc.ActionText.SelfRegModules.Template)">$(loc.ActionText.SelfRegModules)</ProgressText>
+      <ProgressText Action="SelfUnregModules" Template="$(loc.ActionText.SelfUnregModules.Template)">$(loc.ActionText.SelfUnregModules)</ProgressText>
+      <ProgressText Action="SetODBCFolders">$(loc.ActionText.SetODBCFolders)</ProgressText>
+      <ProgressText Action="StartServices" Template="$(loc.ActionText.StartServices.Template)">$(loc.ActionText.StartServices)</ProgressText>
+      <ProgressText Action="StopServices" Template="$(loc.ActionText.StopServices.Template)">$(loc.ActionText.StopServices)</ProgressText>
+      <ProgressText Action="UnpublishComponents" Template="$(loc.ActionText.UnpublishComponents.Template)">$(loc.ActionText.UnpublishComponents)</ProgressText>
+      <ProgressText Action="UnpublishFeatures" Template="$(loc.ActionText.UnpublishFeatures.Template)">$(loc.ActionText.UnpublishFeatures)</ProgressText>
+      <ProgressText Action="UnregisterClassInfo" Template="$(loc.ActionText.UnregisterClassInfo.Template)">$(loc.ActionText.UnregisterClassInfo)</ProgressText>
+      <ProgressText Action="UnregisterComPlus" Template="$(loc.ActionText.UnregisterComPlus.Template)">$(loc.ActionText.UnregisterComPlus)</ProgressText>
+      <ProgressText Action="UnregisterExtensionInfo" Template="$(loc.ActionText.UnregisterExtensionInfo.Template)">$(loc.ActionText.UnregisterExtensionInfo)</ProgressText>
+      <ProgressText Action="UnregisterFonts" Template="$(loc.ActionText.UnregisterFonts.Template)">$(loc.ActionText.UnregisterFonts)</ProgressText>
+      <ProgressText Action="UnregisterMIMEInfo" Template="$(loc.ActionText.UnregisterMIMEInfo.Template)">$(loc.ActionText.UnregisterMIMEInfo)</ProgressText>
+      <ProgressText Action="UnregisterProgIdInfo" Template="$(loc.ActionText.UnregisterProgIdInfo.Template)">$(loc.ActionText.UnregisterProgIdInfo)</ProgressText>
+      <ProgressText Action="UnregisterTypeLibraries" Template="$(loc.ActionText.UnregisterTypeLibraries.Template)">$(loc.ActionText.UnregisterTypeLibraries)</ProgressText>
+      <ProgressText Action="WriteEnvironmentStrings" Template="$(loc.ActionText.WriteEnvironmentStrings.Template)">$(loc.ActionText.WriteEnvironmentStrings)</ProgressText>
+      <ProgressText Action="WriteIniValues" Template="$(loc.ActionText.WriteIniValues.Template)">$(loc.ActionText.WriteIniValues)</ProgressText>
+      <ProgressText Action="WriteRegistryValues" Template="$(loc.ActionText.WriteRegistryValues.Template)">$(loc.ActionText.WriteRegistryValues)</ProgressText>
+      <ProgressText Action="Advertise">$(loc.ActionText.Advertise)</ProgressText>
+      <ProgressText Action="GenerateScript" Template="$(loc.ActionText.GenerateScript.Template)">$(loc.ActionText.GenerateScript)</ProgressText>
+      <ProgressText Action="InstallSFPCatalogFile" Template="$(loc.ActionText.InstallSFPCatalogFile.Template)">$(loc.ActionText.InstallSFPCatalogFile)</ProgressText>
+      <ProgressText Action="Rollback" Template="$(loc.ActionText.Rollback.Template)">$(loc.ActionText.Rollback)</ProgressText>
+      <ProgressText Action="RollbackCleanup" Template="$(loc.ActionText.RollbackCleanup.Template)">$(loc.ActionText.RollbackCleanup)</ProgressText>
+      <ProgressText Action="UnmoveFiles" Template="$(loc.ActionText.UnmoveFiles.Template)">$(loc.ActionText.UnmoveFiles)</ProgressText>
+      <ProgressText Action="UnpublishProduct">$(loc.ActionText.UnpublishProduct)</ProgressText>
+      <ProgressText Action="caCreateVRoots">$(loc.ActionText.caCreateVRoots)</ProgressText>
+      <ProgressText Action="caRemoveVRoots">$(loc.ActionText.caRemoveVRoots)</ProgressText>
+    </UI>
+  </Fragment>
+</Wix>

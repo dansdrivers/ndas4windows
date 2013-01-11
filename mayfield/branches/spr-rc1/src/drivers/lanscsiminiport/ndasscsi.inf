@@ -1,0 +1,80 @@
+  return IoCallDriver(commonExtension->LowerDeviceObject, Irp);
+            break;
+        }
+
+        case IRP_MN_CANCEL_STOP_DEVICE: {
+
+            sendDown = TRUE;
+            Irp->IoStatus.Status = STATUS_SUCCESS;
+
+            if(commonExtension->CurrentPnpState == IRP_MN_QUERY_STOP_DEVICE) {
+                commonExtension->CurrentPnpState =
+                    commonExtension->PreviousPnpState;
+                commonExtension->PreviousPnpState = 0xff;
+            }
+            break;
+        }
+
+        case IRP_MN_CANCEL_REMOVE_DEVICE: {
+
+            sendDown = TRUE;
+            Irp->IoStatus.Status = STATUS_SUCCESS;
+
+            if(commonExtension->CurrentPnpState == IRP_MN_QUERY_REMOVE_DEVICE) {
+                commonExtension->CurrentPnpState =
+                    commonExtension->PreviousPnpState;
+                commonExtension->PreviousPnpState = 0xff;
+            }
+            break;
+        }
+
+        case IRP_MN_QUERY_STOP_DEVICE: {
+
+            if(adapter->DisableStop) {
+                status = STATUS_NOT_SUPPORTED;
+                sendDown = FALSE;
+                break;
+            }
+
+            //
+            // Fall through.
+            //
+        }
+
+        case IRP_MN_QUERY_REMOVE_DEVICE: {
+
+            //
+            // No problem with this request on our part.  Just send it down
+            // to the next driver.
+            //
+
+            if(SpAdapterStopRemoveSupported) {
+                if((adapter->IsPnp) &&
+                   SpIsAdapterControlTypeSupported(adapter,
+                                                   ScsiStopAdapter)) {
+                    Irp->IoStatus.Status = STATUS_SUCCESS;
+                    sendDown = TRUE;
+                } else {
+                    status = STATUS_UNSUCCESSFUL;
+                    sendDown = FALSE;
+                }
+
+                if(NT_SUCCESS(status)) {
+                    commonExtension->PreviousPnpState =
+                        commonExtension->CurrentPnpState;
+                    commonExtension->CurrentPnpState = irpStack->MinorFunction;
+                }
+            } else {
+                Irp->IoStatus.Status = STATUS_UNSUCCESSFUL;
+                status = STATUS_UNSUCCESSFUL;
+                sendDown = FALSE;
+            }
+
+            break;
+        }
+
+        case IRP_MN_SURPRISE_REMOVAL: {
+
+            PDEVICE_OBJECT lowerDevice = commonExtension->LowerDeviceObject;
+
+    

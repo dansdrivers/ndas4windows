@@ -1,0 +1,28 @@
+TARGETNAME=libndasata
+TARGETPATH=obj
+TARGETTYPE=DRIVER_LIBRARY
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Ox
+!ELSE
+!ENDIF
+
+INCLUDES=..\inc;$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH);$(DDK_INC_PATH)
+
+SOURCES=\
+	ndasdisk.c \
+	lspio.c \
+	lspconnect.c \
+	lspfastconnect.c \
+	lspiolight.c \
+	lsplockcleanup.c \
+	xtdiios.c \
+	ndasata.rc
+
+PASS0_PUBLISH=\
+	{ndasdiskioctl.h=$(NDAS_INC_PATH)\ndas\ndasdiskioctl.h} \
+	{ndasataguid.h=$(NDAS_INC_PATH)\ndas\ndasataguid.h} \
+	{$(O)\ndasata.wmi.h=$(NDAS_INC_PATH)\ndas\ndasata.wmi.h}
+
+TARGETMOFNAME=ndasata
+NTTARGETFILE0=mofcomp

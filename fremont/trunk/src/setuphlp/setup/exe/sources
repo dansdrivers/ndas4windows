@@ -1,0 +1,46 @@
+TARGETNAME=setup
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+USER_INCLUDES=$(NDAS_INC_PATH)
+INCLUDES=..;$(PSDK_INC_PATH)
+
+UMTYPE=windows
+UMENTRY=wmain
+
+C_DEFINES=$(C_DEFINES) /DUNICODE /D_UNICODE
+C_DEFINES=$(C_DEFINES) /D_ATL_MIN_CRT=1
+
+!IF $(FREEBUILD)
+USE_LIBCMT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+PRECOMPILED_INCLUDE=..\stdafx.h
+PRECOMPILED_CXX=1
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\comctl32.lib \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\urlmon.lib \
+	$(PSDK_LIB_PATH)\wininet.lib \
+	$(PSDK_LIB_PATH)\version.lib \
+	$(PSDK_LIB_PATH)\comdlg32.lib \
+	$(PSDK_LIB_PATH)\shell32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(PSDK_LIB_PATH)\Setupapi.lib
+
+SOURCES= \
+	..\main.cpp \
+	..\winutil.cpp \
+	..\setupconf.cpp \
+	..\argv.cpp \
+	..\sdf.cpp \
+	..\setup.rc
+
+!INCLUDE $(WTL_SOURCES_INC)

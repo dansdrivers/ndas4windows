@@ -1,0 +1,48 @@
+TARGETNAME=ndupdate
+TARGETPATH=obj
+TARGETTYPE=DYNLINK
+
+BUILD_PRODUCES=ndupdate
+
+!INCLUDE ..\sources.inc
+
+UMTYPE=windows
+DLLDEF=$(O)\$(TARGETNAME).def
+DLLENTRY=_DllMainCRTStartup
+
+C_DEFINES=$(C_DEFINES) /DNDUPDATE_DLL_EXPORTS
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\urlmon.lib \
+	$(PSDK_LIB_PATH)\wininet.lib \
+	$(PSDK_LIB_PATH)\comctl32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+    $(PSDK_LIB_PATH)\shell32.lib \
+    $(PSDK_LIB_PATH)\comctl32.lib \
+    $(PSDK_LIB_PATH)\ole32.lib \
+    $(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\uuid.lib
+
+PASS1_PUBLISH={$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME).lib}
+
+USE_STATIC_ATL=1
+ATL_MIN_CRT=1
+USE_WTL=1
+
+SOURCES=$(SOURCES) \
+	..\dllentry.cpp \
+	..\ndupdate_ver.rc \
+	..\ndupdate.rc \
+	..\ndupdate.loc.chs.rc \
+	..\ndupdate.loc.deu.rc \
+	..\ndupdate.loc.esn.rc \
+	..\ndupdate.loc.fra.rc \
+	..\ndupdate.loc.ita.rc \
+	..\ndupdate.loc.jpn.rc \
+	..\ndupdate.loc.kor.rc \
+	..\ndupdate.loc.ptg.rc
+
+

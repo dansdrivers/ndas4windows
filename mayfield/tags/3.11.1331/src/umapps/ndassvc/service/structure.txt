@@ -1,0 +1,44 @@
+
+CNdasDeviceRegistrar
+
+	Register(NDAS_DEVICE_ID);
+	Unregister(NDAS_DEVICE_ID);
+	Enumerate(); returns NDAS_DEVICE_ID's
+	Find(NDAS_DEVICE_ID);
+	GetNdasDevice(NDAS_DEVICE_ID);
+
+CNdasDevice
+
+	Enable();
+	Disable();
+	GetStatus();
+	EnumerateUnitDevices(DWORD dwSize, PDWORD pdwUnitNo); returns unit no
+
+CNdasUnitDevice
+
+	Enable();
+	Disable();
+	GetLogicalDevice();
+	GetStatus();
+
+CNdasLogicalDeviceManager
+
+	Enumerate();
+
+	BindUnitDevices();
+	UnbindUnitDevices();
+
+	Register(PNDAS_LOGICAL_DEVICE_ENTRY LogicalDeviceEntries);
+	Unregister(DWORD dwSlotNo);
+
+	Enumerate(); returns NDAS_LDEV_ID's
+	CreateLogicalDevice(NDAS_DEVICE_ID 
+
+CNdasLogicalDevice
+
+	GetType(); -> DISK, DVD, CDROM, LDISK_MIRRORED, LDISK_AGGREGATED
+	PlugIn();
+	Eject();
+	Unplug();
+	GetStatus();
+

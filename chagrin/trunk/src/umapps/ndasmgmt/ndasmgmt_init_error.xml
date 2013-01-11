@@ -1,0 +1,106 @@
+﻿<?xml encoding="utf-8"?>
+<Errors>
+  <Error Id="IDS_APP_INIT_ERROR_ADMIN_PRIV_REQUIRED">
+	<Language xml:lang="it">Questa applicazione richiede privilegi di amministratore.\r\nAccedere in qualità di utente in un gruppo di Amministratori ed eseguire nuovamente l'applicazione.</Language>
+	<Language xml:lang="fr">Ce logiciel nécessite les droits d'administrateur.\r\nVeuillez vous enregistrer comme administrateur et redémarrer ce logiciel.</Language>
+	<Language xml:lang="es">Esta aplicación requiere de los privilegios de un administrador.\r\nIngrese como un usuario del Grupo Administradores y corra esta aplicación de nuevo.</Language>
+	<Language xml:lang="de">Diese Anwendung benötigt Administratorrechte.\r\nMelden Sie sich als ein Administrator an und führen Sie diese Anwendung noch einmal aus.</Language>
+	<Language xml:lang="pt">Este aplicação necessita de privilégios administrativos.\r\nInicie a sessão como um utilizador no Grupo de administradores e execute novamente esta aplicação.</Language>
+	<Language xml:lang="jp">このアプリケーションを利用するためには管理者の権限が必要です。\r\n管理者権限でログオンして再びこのアプリケーションを起動してください。</Language>
+  </Error>
+  <Error Id="IDS_APP_INIT_ERROR_NO_NDASUSER">
+	<Language xml:lang="it">Caricamento di NDASUSER.DLL non riuscito.\r\nVerificare il software installato.</Language>
+	<Language xml:lang="fr">Le chargement de NDASUSER.DLL a échoué.\r\nVeuillez vérifier l'installation du logiciel.</Language>
+	<Language xml:lang="es">Fallo la carga de NDASUSER.DLL.\r\nPor favor revise la instalación del software.</Language>
+	<Language xml:lang="de">Das Laden der Datei NDASUSER.DLL ist fehlgeschlagen.\r\nBitte überprüfen Sie die Installation der Software.</Language>
+	<Language xml:lang="pt">Ocorreu uma falha ao carregar o NDASUSER.DLL.\r\nVerifique a instalação do software.</Language>
+	<Language xml:lang="jp">NDASUSER.DLL のロードに失敗しました。\r\nソフトウェアのインストールをチェックしてください。</Language>
+  </Error>
+  <Error Id="IDS_APP_INIT_ERROR_INVALID_NDASUSER">
+	<Language xml:lang="it">NDASUSER.DLL non valido installato.\r\nVerificare il software installato.</Language>
+	<Language xml:lang="fr">La version de NDASUSER.DLL n'est pas correcte.\r\nVeuillez vérifier l'installation du logiciel.</Language>
+	<Language xml:lang="es">Se instaló un NDASUSER.DLL inválido.\r\nPor favor revise la instalación del software.</Language>
+	<Language xml:lang="de">Die installierte Datei NDASUSER.DLL ist ungültig.\r\nPBitte überprüfen Sie die Installation der Software.</Language>
+	<Language xml:lang="pt">Está instalado um NDASUSER.DLL inválido.\r\nVerifique a instalação do software.</Language>
+	<Language xml:lang="jp">無効な NDASUSER.DLL がインストールされました。\r\nソフトウェアのインストールをチェックしてください。</Language>
+  </Error>
+  <Error Id="IDS_APP_INIT_ERROR_CREATE_WINDOW">
+	<Language xml:lang="it">Creazione di una finestra non riuscita. La memoria del sistema va esaurendosi.\r\nChiudere le altre applicazioni e riprovare.</Language>
+	<Language xml:lang="fr">La création de fenêtre a échoué. Il est possible que votre systeme est à court de mémoire.\r\nFermez d'autres logiciels et réssayez.</Language>
+	<Language xml:lang="es">Falló creando una Ventana. Posiblemente el sistema está operando sin memoria.\r\nCierre otras aplicaciones e intente de nuevo.</Language>
+	<Language xml:lang="de">Das Erstellen eines Fensters ist fehlgeschlagen.. Möglicherweise hat das System nicht mehr genug Speicher.\r\nSchließen Sie andere Anwendungen und versuchen Sie es noch einmal.</Language>
+	<Language xml:lang="pt">Ocorreu uma falha ao criar uma janela. Possivelmente o sistema está sem memória.\r\nFeche as outras aplicações e tente de novo.</Language>
+	<Language xml:lang="jp">ウィンドウが表示できません。システムのメモリ不足です。\r\n他のアプリケーションを全部閉じて再び動作してください。</Language>
+  </Error>
+</Errors>
+
+<!--
+
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+STRINGTABLE
+BEGIN
+	IDS_APP_INIT_ERROR_TITLE				"Initialisierungsfehler bei der Anwendung"
+	IDS_APP_INIT_ERROR_OUT_OF_MEMORY		"Die Anwendung kann wegen folgenden Gründen nicht gestartet werden.\r\nKein freier Speicher.\r\nSchließen Sie andere Anwendungen und versuchen Sie es noch einmal."
+	IDS_APP_INIT_ERROR_NO_RESOURCE			"Es sind keine kompatiblen Resourcen DLL verfügbar.\r\nBitte überprüfen Sie die Installation der Software."
+	IDS_APP_INIT_ERROR_RESOURCE_LOAD		"Die Resource DLL kann nicht geladen werden.\r\nBitte überprüfen Sie die Installation der Software."
+END
+
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
+STRINGTABLE
+BEGIN
+	IDS_APP_INIT_ERROR_TITLE				"Error en la Inicialización de la Aplicación"
+	IDS_APP_INIT_ERROR_OUT_OF_MEMORY		"La aplicación no puede iniciar debido a la siguiente razón.\r\nSin memoria.\r\nCierre otras aplicaciones e intente de nuevo."
+	IDS_APP_INIT_ERROR_NO_RESOURCE			"No hay disponibles recursos DLL's compatibles.\r\nPor favor revise la instalación del software."
+	IDS_APP_INIT_ERROR_RESOURCE_LOAD		"No se puede cargar el recurso DLL.\r\nPor favor revise la instalación del software."
+END
+
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+STRINGTABLE
+BEGIN
+	IDS_APP_INIT_ERROR_TITLE				"Erreure d'initialisation de logiciel"
+	IDS_APP_INIT_ERROR_OUT_OF_MEMORY		"Le logiciel ne peut pas démarrer pour les raisons suivantesp.\r\nMémoire insuffisante.\r\nFermez d'autres logiciels et réssayez."
+	IDS_APP_INIT_ERROR_NO_RESOURCE			"Aucune ressource de DLL's compatible sont disponible.\r\nVeuillez vérifier l'installation du logiciel."
+	IDS_APP_INIT_ERROR_RESOURCE_LOAD		"Impossible de charger le DLL de source.\r\nVeuillez vérifier l'installation du logiciel."
+END
+
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+STRINGTABLE
+BEGIN
+	IDS_APP_INIT_ERROR_TITLE				"Errore di inzializzazione applicazione"
+	IDS_APP_INIT_ERROR_OUT_OF_MEMORY		"L'applicazione non può avviarsi per il motivo seguente.\r\nMemoria insufficiente.\r\nChiudere le altre applicazioni e riprovare."
+	IDS_APP_INIT_ERROR_NO_RESOURCE			"Risorse DLL compatibili non disponibili.\r\nVerificare l'installazione del software."
+	IDS_APP_INIT_ERROR_RESOURCE_LOAD		"Impossibile caricare la risorsa DLL.\r\nVerificare l'installazione del software."
+END
+
+#pragma code_page(949)
+LANGUAGE LANG_KOREAN, SUBLANG_KOREAN
+STRINGTABLE
+BEGIN
+	IDS_APP_INIT_ERROR_TITLE				"응용 프로그램 초기화 오류"
+	IDS_APP_INIT_ERROR_OUT_OF_MEMORY		"시스템 메모리가 부족합니다. 일부 프로그램을 닫은 다음 다시 시도하십시오."
+	IDS_APP_INIT_ERROR_NO_RESOURCE			"사용 가능한 리소스 DLL 파일을 찾을 수 없습니다.\r\n소프트웨어가 정상적으로 설치되었는지 확인하십시오."
+	IDS_APP_INIT_ERROR_RESOURCE_LOAD		"리소스 DLL을 로드하지 못하였습니다.\r\n소프트웨어가 정상적으로 설치되었는지 확인하십시오."
+END
+
+#pragma code_page(932)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+STRINGTABLE
+BEGIN
+	IDS_APP_INIT_ERROR_TITLE				"アプリケーションインストールエラー"
+	IDS_APP_INIT_ERROR_OUT_OF_MEMORY		"次の理由でアプリケーションがスタートできません。\r\nメモリ不足。\r\n他のアプリケーションを閉じて再び起動してください。"
+	IDS_APP_INIT_ERROR_NO_RESOURCE			"必要なDLLリソースが不足しています。\r\nソフトウェアのインストーラをチェックしてください。"
+	IDS_APP_INIT_ERROR_RESOURCE_LOAD		"DLLリソースをロードすることができません。\r\nソフトウェアのインストーラをチェックしてください。"
+END
+
+#pragma code_page(1252)
+
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE
+STRINGTABLE
+BEGIN
+	IDS_APP_INIT_ERROR_TITLE				"Erro de inicialização da aplicação"
+	IDS_APP_INIT_ERROR_OUT_OF_MEMORY		"Não é possível iniciar a aplicação devido à seguinte razão.\r\nSem memória.\r\nFeche as outras aplicações e tente novamente."
+	IDS_APP_INIT_ERROR_NO_RESOURCE			"Não estão disponíveis quaisquer recursos DLL compatíveis.\r\nVerifique a instalação do software."
+	IDS_APP_INIT_ERROR_RESOURCE_LOAD		"Não é possível carregar o recurso DLL.\r\nVerifique a instalação do software."
+END
+
+-->

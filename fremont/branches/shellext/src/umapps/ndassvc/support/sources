@@ -1,0 +1,59 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=libndassvc_support
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=libndassvc_support
+
+C_DEFINES=/DUNICODE /D_UNICODE
+INCLUDES=.\inc;..\inc;$(NDAS_INC_PATH);$(PSDK_INC_PATH)
+RCOPTIONS=/i $(PSDK_INC_PATH)
+USE_NATIVE_EH=1
+USE_STL=1
+UMENTRY=wmain
+UMTYPE=console
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+MSC_OPTIMIZATION=/Oitb2
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+PRECOMPILED_INCLUDE=stdafx.h
+PRECOMPILED_CXX=1
+
+# to publish library
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=..\lib\$(DDKBUILDENV)\$(TARGET_DIRECTORY)\$(TARGETNAME).lib}
+
+SOURCES= \
+	transport.cpp \
+	syncobj.cpp \
+	confmgr.cpp
+
+SOURCES_OLD=\
+	svchelp.cpp \
+	pnpevent.cpp \
+	task.cpp
+
+!IF 0
+!IF $(FREEBUILD)
+!IF $(_NT_TARGET_VERSION) <= 0x500
+WPP_TEMPLATE=um-w2k.tpl
+!ELSE
+WPP_TEMPLATE=um-default.tpl
+!ENDIF
+
+RUN_WPP=$(SOURCES) -um -gen:{$(WPP_TEMPLATE)}*.tmh \
+	-func:XTLTRACE{FLAG=xtlTraceGeneric,LEVEL=TRACE_LEVEL_ERROR}(MSG,...) \
+	-func:XTLTRACE1{FLAG=xtlTraceGeneric}(LEVEL,MSG,...) \
+	-func:XTLTRACE2(FLAG,LEVEL,MSG,...)
+!ENDIF
+!ENDIF

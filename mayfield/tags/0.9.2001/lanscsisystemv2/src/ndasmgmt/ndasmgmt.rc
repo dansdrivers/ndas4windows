@@ -1,0 +1,754 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\ndasmgmt.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WATERMARK256        BITMAP                  "res\\water256.bmp"
+IDB_BANNER256           BITMAP                  "res\\banner256.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ndasmgmt...",          ID_APP_ABOUT
+    END
+END
+
+IDR_TASKBAR MENU 
+BEGIN
+    POPUP "TaskBar"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "&Register a New Device...",   ID_REGISTER_DEVICE
+        MENUITEM "&Refresh Status",             ID_REFRESH_STATUS
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_APP_ABOUT
+        MENUITEM "&Options...",                 ID_APP_OPTION
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ndasmgmt.ico"
+IDR_TASKBAR             ICON                    "res\\taskbar.ico"
+IDI_DISK_DRIVE          ICON                    "res\\diskdrive.ico"
+IDI_DVD_DRIVE           ICON                    "res\\dvddrive.ico"
+IDI_CD_DRIVE            ICON                    "res\\cddrive.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,208,178,50,14
+    LTEXT           "NDAS Device Management",IDC_APPNAME,7,48,251,14
+    LTEXT           "Version %s",IDC_APPVER,7,59,251,8
+    LTEXT           "http://www.ximeta.com",IDC_LINK,7,73,251,8,WS_TABSTOP
+    LTEXT           "Copyright © 2002-2004 XIMETA, Inc.\nAll rights reserved.",
+                    IDC_STATIC,7,85,251,20
+    GROUPBOX        "Components",IDC_STATIC,7,106,251,67
+    CONTROL         "",IDC_COMPVER,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,119,236,47
+END
+
+IDR_OPTION_GENERAL DIALOGEX 0, 0, 293, 191
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "User Interface",IDC_STATIC,7,7,279,43
+    GROUPBOX        "Alerts",IDC_STATIC,7,54,279,58
+    CONTROL         "Display alerts when a device connection is lost.",
+                    IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,66,
+                    231,10
+    ICON            "",IDC_STATIC,15,67,20,20
+    CONTROL         "Display alerts when a device connection is lost.",
+                    IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,80,
+                    231,10
+    COMBOBOX        IDC_UILANG,47,31,224,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Select languagefor User Interface Language",IDC_STATIC,
+                    47,18,143,8
+END
+
+IDD_REGISTER_DEVICE DIALOGEX 0, 0, 212, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Register a new NDAS Device"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DEV_NAME,17,23,179,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_1,17,67,40,14,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_2,63,67,40,14,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_3,109,67,40,14,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_4,155,67,40,14,ES_CENTER | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_KEY,17,99,40,14,ES_CENTER | ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "&Register",IDC_REGISTER,100,127,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,155,127,50,14
+    LTEXT           "Write Key",IDC_STATIC,19,86,107,8
+    LTEXT           "Write Key is required if you want to use the device as read-write access right.",
+                    IDC_STATIC,64,98,132,17
+    GROUPBOX        "NDAS Device Name",IDC_STATIC,7,7,197,40
+    GROUPBOX        "NDAS Device ID",IDC_STATIC,7,54,198,67
+END
+
+IDD_DEVPROP_GENERAL DIALOGEX 0, 0, 256, 227
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "General"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Device Name:",IDC_STATIC,7,13,54,8
+    EDITTEXT        DEVPROP_IDC_DEVICE_NAME,66,10,128,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&Rename",DEVPROP_IDC_RENAME,197,9,50,14
+    LTEXT           "Device ID:",IDC_STATIC,7,30,54,8
+    EDITTEXT        DEVPROP_IDC_DEVICE_ID,66,28,183,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Write Key:",IDC_STATIC,7,49,54,8
+    EDITTEXT        DEVPROP_IDC_DEVICE_WRITE_KEY,66,46,128,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&Add",DEVPROP_IDC_ADD_WRITE_KEY,197,46,50,14
+    LTEXT           "Status:",IDC_STATIC,7,67,54,8
+    EDITTEXT        DEVPROP_IDC_DEVICE_STATUS,66,64,183,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    ICON            IDI_DISK_DRIVE,IDC_UNITDEVICE_TYPE_ICON,18,100,21,20
+    LTEXT           "Status",IDC_STATIC,64,97,22,8
+    EDITTEXT        IDC_UNITDEVICE_STATUS,144,94,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Capacity",IDC_STATIC,64,114,29,8
+    EDITTEXT        IDC_UNITDEVICE_CAPACITY,144,111,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Read-Only Access",IDC_STATIC,64,131,59,8
+    EDITTEXT        IDC_UNITDEVICE_RO_HOSTS,144,128,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Read/Write Access",IDC_STATIC,64,148,62,8
+    EDITTEXT        IDC_UNITDEVICE_RW_HOSTS,144,145,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "{Unit Device Info Placeholder}",IDC_UNITDEVICE_TYPE,7,
+                    85,242,135
+    LTEXT           "This unit device is a part of the logical device:",
+                    IDC_STATIC,64,163,146,8
+    CONTROL         "",IDC_LOGDEV_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | WS_BORDER | WS_TABSTOP,64,173,176,42,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DEVPROP_HW DIALOGEX 0, 0, 246, 165
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Hardware Information"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Hardware Information about your NDAS Device",IDC_STATIC,
+                    15,14,152,8
+    CONTROL         "",IDC_HWINFO_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,17,31,211,115
+END
+
+IDD_RENAME DIALOGEX 0, 0, 243, 48
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Rename"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DEVICE_NAME,53,7,183,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,130,27,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,186,27,50,14
+    LTEXT           "&New name:",IDC_STATIC,7,10,37,8
+END
+
+IDD_DEVREG_WIZARD_WELCOME DIALOGEX 0, 0, 317, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Do not use this wizard for registraion next time.",
+                    IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,167,
+                    195,10
+    LTEXT           "Welcome to the NDAS Device Registration Wizard",
+                    IDC_BIG_BOLD_TITLE,115,8,195,24
+    LTEXT           "(intro1)",IDC_INTRO_1,115,40,195,78
+END
+
+IDD_DEVREG_WIZARD_COMPLETE DIALOGEX 0, 0, 317, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Completing the NDAS Device Registration Wizard",
+                    IDC_BIG_BOLD_TITLE,115,8,195,24
+    LTEXT           "You have successfully completed the NDAS Device Registration Wizard.\n\nTo close this wizard, click Finish.",
+                    IDC_INTRO_1,115,46,195,67
+END
+
+IDD_DEVREG_WIZARD_DEVICE_ID DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "To register the NDAS Device, making the device available to the system, you need a NDAS Device ID. If you want to use the device for writing files, you also need a Write Key. Both are found at the back of the NDAS device hardware exterior.",
+                    IDC_STATIC,21,1,275,40
+    LTEXT           "Device ID is composed of in 20 letters/numbers (4 parts in 5 characters).\nAnd Write Key is in 4 letters/numbers.",
+                    IDC_STATIC,21,30,275,21
+    LTEXT           "Enter the Device ID below.",IDC_STATIC,21,52,275,8
+    EDITTEXT        IDC_DEV_ID_1,21,65,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_2,65,65,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_3,109,65,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_4,153,65,40,14,ES_AUTOHSCROLL
+    LTEXT           "Enter the Write Key below. (Optional)",IDC_STATIC,21,88,
+                    275,8
+    EDITTEXT        IDC_DEV_KEY,21,100,40,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Click Next when you finish.\nIf ehtier Device ID or Write Key is invalid, Next will not be enabled.",
+                    IDC_STATIC,21,124,275,18
+END
+
+IDD_DEVREG_WIZARD_DEVICE_NAME DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "You can give the name of the device. You can identify each NDAS Device in your system by this name. However, this name is used only in your system.",
+                    -1,21,1,275,21
+    LTEXT           "You can enter the name up to 31 characters.",-1,21,30,
+                    275,21
+    LTEXT           "Enter the device name below.",-1,21,52,275,8
+    EDITTEXT        IDC_DEV_NAME,21,65,197,14,ES_AUTOHSCROLL
+    LTEXT           "Click Next when you finish, then the Device will be registered to the system.",
+                    -1,21,124,275,18
+END
+
+IDD_DEVREG_WIZARD_MOUNT DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Registration is done successfully and the device is discovered and ready to use.",
+                    -1,21,1,275,16
+    LTEXT           "Do you want to mount the device to your system now?",-1,
+                    21,20,275,15
+    LTEXT           "When mounting the device, you may see a security warning dialog. You must click ""Continue"" to successfully mount it. Otherwise, it will not be mounted.",
+                    -1,21,120,275,18
+    CONTROL         "Yes, I want to mount this device with Read/Write access privilege.",
+                    IDC_MOUNT_RW,"Button",BS_AUTORADIOBUTTON,21,33,275,12
+    CONTROL         "Yes, I want to mount this device with Read-Only access privilege.",
+                    IDC_MOUNT_RO,"Button",BS_AUTORADIOBUTTON,21,45,275,12
+    CONTROL         "No, I don't want to mount this device now.",
+                    IDC_DONT_MOUNT,"Button",BS_AUTORADIOBUTTON,21,57,275,12
+END
+
+IDD_ADD_WRITE_KEY DIALOGEX 0, 0, 201, 93
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Enter the Write Key"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DEVICE_WRITE_KEY,66,43,48,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,90,72,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,72,50,14
+    EDITTEXT        IDC_DEVICE_NAME,66,7,128,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    EDITTEXT        IDC_DEVICE_ID,66,25,128,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    LTEXT           "Device Name:",IDC_STATIC,7,10,54,8
+    LTEXT           "Device ID:",IDC_STATIC,7,28,54,8
+    LTEXT           "Write Key:",IDC_STATIC,7,46,54,8
+END
+
+IDD_DEVPROP_LOGDEV DIALOGEX 0, 0, 284, 177
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "(Unit Device XX)"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Logical Device Information",IDC_STATIC,39,109,85,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,83,151,180,1
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDR_OPTION_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_REGISTER_DEVICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_DEVPROP_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_DEVPROP_HW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_RENAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 41
+    END
+
+    IDD_DEVREG_WIZARD_WELCOME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_DEVREG_WIZARD_COMPLETE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 8
+    END
+
+    IDD_DEVREG_WIZARD_DEVICE_ID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 21
+        VERTGUIDE, 296
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_DEVREG_WIZARD_DEVICE_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 21
+        VERTGUIDE, 296
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_DEVREG_WIZARD_MOUNT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 21
+        VERTGUIDE, 296
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_ADD_WRITE_KEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_DEVPROP_LOGDEV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,10,0,0
+ PRODUCTVERSION 3,10,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "NDAS Management"
+            VALUE "FileVersion", "3, 10, 0, 0"
+            VALUE "InternalName", "ndasmgmt"
+            VALUE "LegalCopyright", "Copyright \\251 2002-2004 XIMETA, Inc."
+            VALUE "LegalTrademarks", "NetDisk \\255 is a registered trademark of XIMETA, Inc."
+            VALUE "OriginalFilename", "ndasmgmt.exe"
+            VALUE "ProductName", "NDAS Tools"
+            VALUE "ProductVersion", "3, 10, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// IMAGE
+//
+
+IDB_ABOUT_HEADER        IMAGE                   "res\\aboutheader.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDR_OPTION_GENERAL DLGINIT
+BEGIN
+    IDC_UILANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_UILANG, 0x403, 7, 0
+0x7246, 0x6e65, 0x6863, "\000" 
+    IDC_UILANG, 0x403, 7, 0
+0x6f4b, 0x6572, 0x6e61, "\000" 
+    IDC_UILANG, 0x403, 9, 0
+0x614a, 0x6170, 0x656e, 0x6573, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ndasmgmt"
+    IDS_NEW_DEVICE_NAME_TEMPLATE "NetDisk %d"
+    IDS_OPTIONDLG_TITLE     "Options"
+    IDS_NO_DEVICE           "(No NDAS Device)"
+    IDS_DISABLE_DEVICE      "&Disable"
+    ID_NDD_MOUNT_RO         "Mount (&Read-only)"
+    ID_NDD_MOUNT_RW         "Mount (Read/&Write)"
+    ID_NDD_UNMOUNT          "&Unmount"
+    IDS_DEVICE_PROP_TITLE   "%s Properties"
+    DEVPROP_IDS_ADD_WRITE_KEY "&Add"
+    DEVPROP_IDS_REMOVE_WRITE_KEY "&Remove"
+    DEVPROP_IDS_WRITE_KEY_PRESENT "Present"
+    DEVPROP_IDS_WRITE_KEY_NONE "None"
+    IDS_NDAS_DEVICE_STATUS_CONNECTED "Connected"
+    IDS_NDAS_DEVICE_STATUS_DISABLED "Disabled"
+    IDS_NDAS_DEVICE_STATUS_DISCONNECTED "Disconnected"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    ATL_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    ATL_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+    ATL_IDS_SCTASKLIST      "Activate Task List"
+    ATL_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_TASKBAR             "NDAS Device Management"
+    IDS_SHOW_DEVICE_PROPERTIES "&Properties..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_OPTION_GENERAL      "General"
+    IDS_UNITDEVICE_STATUS_UNKNOWN "Unknown"
+    IDS_ENABLE_DEVICE       "&Enable"
+    IDS_UNREGISTER_DEVICE   "&Unregister"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NDAS_DEVICE_STATUS_UNKNOWN "Unknown"
+    IDS_BIG_BOLD_FONT_NAME  "Verdana"
+    IDS_BIG_BOLD_FONT_SIZE  "12"
+    IDS_DRZ_INTRO_1         "The wizard helps you register a new NDAS device to the system.To set up your NDAS device so that you can use the NDAS device:\n\n- Turn on the NDAS device.\n- Plug the device to the network switch.\n- Give it a name.\n- Make Device ID and Write Key (optional) ready to you.\nTo continue, click Next."
+    IDS_DRZ_INTRO_TITLE     "NDAS Device Registration Wizard"
+    IDS_DRZ_DEVICE_NAME_HEADER_TITLE "NDAS Device Name"
+    IDS_DRZ_DEVICE_NAME_HEADER_SUBTITLE 
+                            "Specify the name for the NDAS Device."
+    IDS_DRZ_DEVICE_ID_HEADER_TITLE "NDAS Device ID"
+    IDS_DRZ_DEVICE_ID_HEADER_SUBTITLE "Enter the NDAS Device ID to register."
+    IDS_DRZ_TITLE           "NDAS Device Registration Wizard"
+    IDS_DRZ_MOUNT_HEADER_TITLE "Mount NDAS Device"
+    IDS_DRZ_MOUNT_HEADER_SUBTITLE 
+                            "Do you want to mount this device to the system now?"
+    IDS_BT_RECONNECTING_INFO 
+                            "Connection to some of the following NDAS Devices is unstable.\nTrying to reconnect...\n%s"
+    IDS_BT_RECONNECTING_INFO_TITLE "Reconnecting to the NDAS Device"
+    IDS_BT_DISCONNECTED_INFO 
+                            "Connection to the following NDAS Devices has been lost.\n%s"
+    IDS_BT_DISCONNECTED_INFO_TITLE "NDAS Device Disconnected"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BT_RECONNECTED_INFO "Connection to the following NDAS Devices is restored.\n%s"
+    IDS_BT_RECONNECTED_INFO_TITLE "NDAS Device Reconnected"
+    IDS_UNITDEVICE_NONE     "Not available"
+    IDS_UNKNOWN_UNITDEVICE_TYPE "Unknown Unit Device Type"
+    IDS_UNITDEVICE_STATUS_MOUNTED "Mounted"
+    IDS_UNITDEVICE_STATUS_NOT_MOUNTED "Not Mounted"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\ndasmgmt.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

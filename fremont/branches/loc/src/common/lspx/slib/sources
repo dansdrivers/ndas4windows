@@ -1,0 +1,25 @@
+TARGETNAME=liblspx
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=liblspx
+
+INCLUDES=..\..\inc\lspx;$(NDAS_INC_PATH)\lspx;$(NDAS_INC_PATH)
+
+!IF $(FREEBUILD)
+AMD64_OPTIMIZATION=/Ox
+!ELSE
+!ENDIF
+
+# publish lib files to the project root
+PASS1_PUBLISH=\
+	{$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME).lib}
+
+MSC_WARNING_LEVEL=-W4 -Wp64 -wd4214 -wd4201 -wd4127 -we4100 -we4189
+MSC_WARNING_LEVEL=$(MSC_WARNING_LEVEL) -wd4244
+
+SOURCES=\
+	..\lsp_hash.c \
+	..\lsp.c \
+	..\lsp_util.c
+

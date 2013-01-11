@@ -1,0 +1,135 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDLG DIALOGEX 0, 0, 378, 313
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NDAS Copy"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_DRIVES,17,18,343,114,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_NDAS,17,57,343,76,LBS_SORT | LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "(000000:00) 0/0GB, 0KBPS",IDC_STATIC_PROGRESS,17,217,343,8
+    EDITTEXT        IDC_EDIT_LOG,7,235,364,71,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "Start",IDC_BUTTON_START,17,177,75,14
+    PUSHBUTTON      "Reset list",IDC_BUTTON_RESET_LIST,17,139,75,14
+    GROUPBOX        "STEP 1 : Select source hard drive below",IDC_STATIC,7,7,364,34
+    GROUPBOX        "STEP 2 : Select NDAS hard drives below",IDC_STATIC,7,46,364,114
+    GROUPBOX        "STEP 3 : Click 'Start' button and wait",IDC_STATIC,7,164,364,67
+    CONTROL         "",IDC_PROGRESS_COPY,"msctls_progress32",WS_BORDER | 0x1,17,196,343,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 371
+        VERTGUIDE, 17
+        VERTGUIDE, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 306
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_NDASCOMM_NOT_AVAILABLE 
+                            "NDASCOMM.DLL is not available.\r\nPut this application into the directory where NDASCOMM.DLL is located.\r\nTypically it is located in C:\\Program Files\\NDAS\\System."
+    IDS_APP_ERROR_TITLE     "NDAS Device Standby Control Error"
+    IDS_STANDBY_NOT_SUPPORTED "Standby feature is not supported."
+    IDS_STANDBY_DISABLED    "Standby feature is disabled."
+    IDS_STANDBY_AFTER_FMT   "The hard disk is turned off after %1!d! minutes."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

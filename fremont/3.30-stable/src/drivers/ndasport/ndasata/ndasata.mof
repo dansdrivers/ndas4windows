@@ -1,0 +1,55 @@
+#pragma namespace("\\\\.\\root")
+
+instance of __Namespace
+{
+    Name = "WMI" ;
+} ;
+
+#pragma namespace("\\\\.\\root\\WMI")
+
+[
+	Dynamic, 
+	Provider("WMIProv"),
+	WMI,
+	Description("NDAS ATA device event"),
+	guid("{659A3F0D-D89E-478A-8F4C-2419929CB469}"),
+	locale("MS\\0x409")
+]
+
+class NdasAtaWmi_Connection_FlowControlEvent : WMIEvent
+{
+	[key, read] string InstanceName;
+	[read] boolean Active;
+
+	[
+		WmiDataId(1), read,
+		Description("EventType")
+	] 
+	uint32 EventType;
+};
+
+[
+	Dynamic, 
+	Provider("WMIProv"),
+	WMI,
+	Description("NDAS ATA device link event"),
+	guid("{C08269AE-6837-45E2-B185-AAAA9D276070}"),
+	locale("MS\\0x409")
+]
+
+class NdasAtaWmi_Connection_Link_Event : WMIEvent
+{
+	[key, read] string InstanceName;
+	[read] boolean Active;
+
+	[
+		WmiDataId(1), read,
+		Description("EventType"),
+		Values {
+			"Online", 
+			"Offline",
+			"Connecting"
+		}
+	] 
+	uint32 EventType;
+};

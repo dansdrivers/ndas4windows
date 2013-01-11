@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+
+  <!-- Conditions -->
+  <String Id="COND_X64_IS_NOT_SUPPORTED">This setup package is for 32-bit version of Windows. Please install the 64-bit version of this software.</String>
+  <String Id="COND_REQUIRE_WIN2000">[ProductName] requires that your computer is running Windows 2000, Windows XP or Windows 2003 Server.</String>
+  <String Id="COND_NOT_PRIVILEGED">You do not have sufficient privileges to complete this installation. Log on as an administrator and then retry this installation.</String>
+  <String Id="ProductName64Suffix"> (64-bit Windows)</String>
+  <!-- Additonal Dialogs -->
+  <String Id="Text.SetupVersion">[NdasSetupVersion]</String>
+  <String Id="ReadyToInstall.NoticeText2"><![CDATA[It is recommended that this product is used in 100Mbps wired LAN or 802.11g/a wireless LAN environment.]]></String>
+  <String Id="ReadyToInstall.NoticeText1"><![CDATA[If you are using this product in a wired 10Mbps LAN or wireless 802.11b LAN environment, there is a possiblity of data transmit error or unstable connection.]]></String>
+  <String Id="ReadyToInstall.NoticeGroupBox">Notice</String>
+  <String Id="SFWarning.SFWarnCheck">I &amp;acknowledge this warning message.</String>
+  <String Id="SFWarning.DlgDesc"><![CDATA[Setup detected a software.]]></String>
+  <String Id="SFWarning.DlgTitle"><![CDATA[{&MSSansBold8}Compatibility Warning]]></String>
+  <String Id="SFWarning.MemoLine1">{&amp;Arial8BoldBlue}Setup has found that StarForce Copy Protection software is installed in your system. Some old versions of this software may cause a system crash for using thirdy party storage device drivers.</String>
+  <String Id="SFWarning.MemoLine2">It is highly recommended to update the StarForce Copy Protection software before proceeding the installation. Check the web site of the Protection Technology (http://www.star-force.com) for the updates.</String>
+  <String Id="UpgradeConfirm.DlgDesc"><![CDATA[Setup has found a previous version of the software.]]></String>
+  <String Id="UpgradeConfirm.DlgTitle"><![CDATA[{&MSSansBold8}Upgrade Confirmation]]></String>
+  <String Id="UpgradeConfirm.MemoLine1">Setup has found a previous version of the software and will perform an upgrade. During an upgrade, you may have to reboot the system twice.</String>
+  <String Id="UpgradeConfirm.MemoLine2">To ensure proper operation, please do not interrupt the system reboot and follow the instructions until the setup is completed.</String>
+  <String Id="UpgradeConfirm.MemoLine3">Click Next to continue installation.</String>
+  <!-- Additional Errors -->
+  <String Id="Error.25900"><![CDATA[Newer version of the software is already installed. If you have to downgrade the software, uninstall the higher version software first.]]></String>
+  <String Id="Error.27500"><![CDATA[This setup requires Internet Information Server 4.0 or higher for configuring IIS Virtual Roots. Please make sure that you have IIS 4.0 or higher.]]></String>
+  <String Id="Error.27501"><![CDATA[This setup requires Administrator privileges for configuring IIS Virtual Roots.]]></String>
+
+</WixLocalization>

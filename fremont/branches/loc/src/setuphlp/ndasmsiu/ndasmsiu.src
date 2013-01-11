@@ -1,0 +1,5 @@
+LIBRARY ndasmsiu
+EXPORTS
+    NdasMsiStopNdasmgmt
+	NdasMsiDetectNdasLogicalUnitInstances
+	NdasMsiDetectNdasScsiInstances

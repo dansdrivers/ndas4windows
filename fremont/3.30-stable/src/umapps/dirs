@@ -1,0 +1,21 @@
+DIRS=\
+	lfsfiltctl \
+	xixfsctl \
+	rofiltctl \
+	ndasbusctl \
+	ndscctl \
+	ndashixnotify \
+	ndasmsg \
+	ndascomm \
+	ndasop \	
+	ndasuser \
+	ndasnif \
+	ndassvc \
+	ndasmgmt \
+	ndascmd \
+	ndasbind \
+	ndashear \
+	ndasvol \
+	ndasapcm \
+	xtaskdialog \
+	ndasfsctl

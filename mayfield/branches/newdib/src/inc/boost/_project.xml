@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<projectDefinition>
+  <project>
+    <name>_inc_boost</name>
+    <type>none</type>
+    <include recursive="true">*.*</include>
+  </project>
+</projectDefinition>

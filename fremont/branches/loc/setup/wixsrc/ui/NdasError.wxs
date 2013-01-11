@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment Id="NDASMSM_Error">
+		<UI>
+            <Error Id="28801">$(loc.Error.28801)</Error>
+            <Error Id="28802">$(loc.Error.28802)</Error>
+            <Error Id="28803">$(loc.Error.28803)</Error>
+            <Error Id="28804">$(loc.Error.28804)</Error>
+            <Error Id="28805">$(loc.Error.28805)</Error>
+            <Error Id="28806">$(loc.Error.28806)</Error>
+            <Error Id="28807">$(loc.Error.28807)</Error>
+            <Error Id="28808">$(loc.Error.28808)</Error>
+            <Error Id="28809">$(loc.Error.28809)</Error>
+            <Error Id="28810">$(loc.Error.28810)</Error>
+            <Error Id="28811">$(loc.Error.28811)</Error>
+            <Error Id="28812">$(loc.Error.28812)</Error>
+            <Error Id="28813">$(loc.Error.28813)</Error>
+            <Error Id="28814">$(loc.Error.28814)</Error>
+            <Error Id="28815">$(loc.Error.28815)</Error>
+			<Error Id="28816">$(loc.Error.28816)</Error>
+			<Error Id="28817">$(loc.Error.28817)</Error>
+			<Error Id="28818">$(loc.Error.28818)</Error>
+			<Error Id="28819">$(loc.Error.28819)</Error>
+			<Error Id="28820">$(loc.Error.28820)</Error>
+		</UI>
+	</Fragment>
+</Wix>

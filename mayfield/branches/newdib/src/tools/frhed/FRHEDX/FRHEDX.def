@@ -1,0 +1,10 @@
+LIBRARY		FRHEDX.DLL
+DESCRIPTION	'Add your description here'
+
+SECTIONS
+	.bss	READ WRITE
+	.data	READ WRITE
+	.sdata	READ WRITE SHARED
+
+EXPORTS
+	GetMemoryCodings

@@ -1,0 +1,24 @@
+#ifndef __XIXFS_FSCONTROL_H__
+#define __XIXFS_FSCONTROL_H__
+
+#define XIXFS_CONTROL_W32_DEVICE_NAME	TEXT("\\\\.\\XixfsControl")
+#define XIXFS_CONTROL_DEVICE_NAME		TEXT("\\Device\\XixfsControl")
+#define XIXFS_CONTROL_LINK_NAME			TEXT("\\DosDevices\\XixfsControl")	
+#define XIXFS_SERVICE_NAME				TEXT("xixfs")	
+
+#define NDAS_XIXFS_UNLOAD	CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 18, METHOD_NEITHER, FILE_READ_ACCESS | FILE_WRITE_ACCESS)
+#define NDAS_XIXFS_VERSION	CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 0x200, METHOD_BUFFERED, FILE_READ_ACCESS | FILE_WRITE_ACCESS)
+
+
+typedef struct _XIXFS_VER {
+	USHORT	VersionMajor;
+	USHORT	VersionMinor;
+	USHORT	VersionBuild;
+	USHORT	VersionPrivate;
+	USHORT	VersionNDFSMajor;
+	USHORT	VersionNDFSMinor;
+	UCHAR	Reserved[12];
+} XIXFS_VER, *PXIXFS_VER;
+
+
+#endif //#define __XIXFS_FSCONTROL_H__

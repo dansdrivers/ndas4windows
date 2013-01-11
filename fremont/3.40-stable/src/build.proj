@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<BuildpOpts Condition="''!='$(OfficialCodeSign)'">$(BuildpOpts) /signcode_ximeta</BuildpOpts>
+		<BuildOpts>-ewiIB -M 1</BuildOpts>
+		<RebuildOpts>-cegwMiIBZ</RebuildOpts>
+		<CleanBuildOpts>-c0 -Z</CleanBuildOpts>
+		<TargetArch Condition="''=='$(TargetArch)'">i386;amd64</TargetArch>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<TargetArch Include="$(TargetArch)" />
+	</ItemGroup>
+
+	<Target Name="Build" DependsOnTargets="CheckedBuild;FreeBuild" />
+	<Target Name="Rebuild" DependsOnTargets="DeleteOutputFiles;SetBuildOptsForRebuild;Build" />
+	<Target Name="Clean" DependsOnTargets="DeleteOutputFiles;SetBuildOptsForClean;Build" />
+
+	<Target Name="SetBuildOptsForRebuild">
+		<CreateProperty Value="$(RebuildOpts)">
+			<Output TaskParameter="Value" PropertyName="BuildOpts" />
+		</CreateProperty>
+	</Target>
+
+	<Target Name="SetBuildOptsForClean">
+		<CreateProperty Value="$(CleanBuildOpts)">
+			<Output TaskParameter="Value" PropertyName="BuildOpts" />
+		</CreateProperty>
+	</Target>
+
+	<Target Name="CheckedBuild" Outputs=".phony.%(TargetArch.Identity)">
+ 		<Exec Command="buildp.cmd $(BuildpOpts) -%(TargetArch.Identity) chk $(BuildOpts)" />
+		<CallTarget Targets="DumpWarnings" />
+		<OnError ExecuteTargets="DumpErrors" />
+	</Target>
+
+	<Target Name="FreeBuild" Outputs=".phony.%(TargetArch.Identity)">
+		<Exec Command="buildp.cmd $(BuildpOpts) -%(TargetArch.Identity) fre $(BuildOpts)" />
+		<CallTarget Targets="DumpWarnings" />
+		<OnError ExecuteTargets="DumpErrors" />
+	</Target>
+
+	<Target Name="DeleteOutputFiles" DependsOnTargets="DeleteLibs;DeletePublishedFiles" />
+
+	<Target Name="DeletePublishedFiles">
+		<RemoveDir Directories="..\publish\chk\;..\publish\fre\" />
+	</Target>
+
+	<Target Name="DeleteLibs">
+		<RemoveDir Directories="..\lib\chk\;..\lib\fre\;..\lib\public\" />
+	</Target>
+
+	<Target Name="DumpErrors">
+		<ReadLinesFromFile File="_build.err" Condition="Exists('_build.err')">
+			<Output TaskParameter="Lines" ItemName="ErrorLines" />
+		</ReadLinesFromFile>
+		<Message Importance="high" Text="%(ErrorLines.Identity)" />
+	</Target>
+
+	<Target Name="DumpWarnings">
+		<ReadLinesFromFile File="_build.wrn" Condition="Exists('_build.wrn')">
+			<Output TaskParameter="Lines" ItemName="WarningLines" />
+		</ReadLinesFromFile>
+		<Message Importance="high" Text="%(WarningLines.Identity)" />
+	</Target>
+
+</Project>

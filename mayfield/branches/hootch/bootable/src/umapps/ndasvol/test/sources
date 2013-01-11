@@ -1,0 +1,20 @@
+TARGETNAME=ndasvoltest
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+UMTYPE=console
+UMENTRY=main
+
+INCLUDES=..;$(NDAS_PUBLIC_INC_PATH);$(NDAS_INC_PATH)
+
+SOURCES=test.c
+
+TARGETLIBS=\
+	..\dll\$(O)\ndasvol.lib \
+	$(SDK_LIB_PATH)\kernel32.lib \
+	$(SDK_LIB_PATH)\shlwapi.lib
+
+# Copy dll from the root
+POST_BUILD_CMD=copy ..\dll\$(O)\ndasvol.dll $(O) /y
+
+MSC_WARNING_LEVEL=-W4 -Wp64

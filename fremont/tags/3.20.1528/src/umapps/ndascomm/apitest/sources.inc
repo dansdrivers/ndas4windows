@@ -1,0 +1,46 @@
+TARGETNAME=apitest
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=/DUNICODE /D_UNICODE
+!IF $(USE_NDASCOMM_DLL)
+!ELSE
+C_DEFINES=$(C_DEFINES) /DNDASCOMM_SLIB
+!ENDIF
+
+INCLUDES=$(PSDK_INC_PATH);$(NDAS_PUBLIC_INC_PATH)
+
+MSC_WARNING_LEVEL=-W3
+UMTYPE=console
+UMENTRY=wmain
+RC_OPTIONS=/i $(NDAS_INC_PATH)
+USER_C_FLAGS=/Wp64
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+!IF $(USE_NDASCOMM_DLL)
+TARGETLIBS= \
+	$(SDK_LIB_PATH)\user32.lib \
+	$(NDAS_PUBLIC_LIB_PATH)\ndascomm.lib
+!ELSE
+USE_STL=1
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib \
+	$(NDAS_LIB_PATH)\libndascomm.lib \
+	$(NDAS_LIB_PATH)\liblsp.lib \
+	$(NDAS_LIB_PATH)\libdes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(NDAS_LIB_PATH)\libndasid.lib \
+	$(NDAS_LIB_PATH)\libndasidenc.lib \
+	$(NDAS_LIB_PATH)\libndashixnotify.lib \
+	$(NDAS_LIB_PATH)\liblpxtrans.lib
+!ENDIF
+
+SOURCES=..\apitest.c

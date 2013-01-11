@@ -1,0 +1,1785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="ActionText.CostInitialize">
+    <base>Computing space requirements</base>
+    <translation>Kebutuhan ruang komputasi</translation>
+  </string>
+  <string id="ActionText.AppSearch">
+    <base>Searching for installed applications</base>
+    <translation>Mencari aplikasi-aplikasi yang diinstal</translation>
+  </string>
+  <string id="ActionText.AppSearch.Template">
+    <base>Property: [1], Signature: [2]</base>
+    <translation>Properti: [1], Tandatangan: [2]</translation>
+  </string>
+  <string id="ActionText.BindImage">
+    <base>Binding executables</base>
+    <translation>Binding executables</translation>
+  </string>
+  <string id="ActionText.BindImage.Template">
+    <base>File: [1]</base>
+    <translation>File: [1]</translation>
+  </string>
+  <string id="ActionText.CCPSearch">
+    <base>Unregistering modules</base>
+    <translation>Unregistrasi modul-modul</translation>
+  </string>
+  <string id="ActionText.CostFinalize">
+    <base>Computing space requirements</base>
+    <translation>Kebutuhan ruang komputasi</translation>
+  </string>
+  <string id="ActionText.FileCost">
+    <base>Computing space requirements</base>
+    <translation>Kebutuhan ruang komputasi</translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage">
+    <base>Copying files to the network</base>
+    <translation>Menyalin file-file ke jaringan </translation>
+  </string>
+  <string id="ActionText.InstallAdminPackage.Template">
+    <base>File: [1], Directory: [9], Size: [6]</base>
+    <translation>File: [1], Direktori: [9], Ukuran: [6]</translation>
+  </string>
+  <string id="ActionText.InstallFiles">
+    <base>Copying new files</base>
+    <translation>Menyalin file-file baru </translation>
+  </string>
+  <string id="ActionText.InstallFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>File: [1],  Direktori: [9],  Ukuran: [6]</translation>
+  </string>
+  <string id="ActionText.InstallValidate">
+    <base>Validating install</base>
+    <translation>Memvalidasi instalasi</translation>
+  </string>
+  <string id="ActionText.CreateShortcuts">
+    <base>Creating shortcuts</base>
+    <translation>Membuat shortcut </translation>
+  </string>
+  <string id="ActionText.CreateShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>Shortcut: [1]</translation>
+  </string>
+  <string id="ActionText.PublishComponents">
+    <base>Publishing qualified components</base>
+    <translation>Mempublikasikan Komponen-komponen Berkualifikasi</translation>
+  </string>
+  <string id="ActionText.PublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>Component ID: [1], Qualifier: [2]</translation>
+  </string>
+  <string id="ActionText.PublishFeatures">
+    <base>Publishing product features</base>
+    <translation>Mempublikasikan fitur-fitur produk </translation>
+  </string>
+  <string id="ActionText.PublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>Fitur: [1]</translation>
+  </string>
+  <string id="ActionText.PublishProduct">
+    <base>Publishing product information</base>
+    <translation>Mempublikasikan informasi produk </translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo">
+    <base>Registering class servers</base>
+    <translation>Registrasi class server</translation>
+  </string>
+  <string id="ActionText.RegisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Class ID: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo">
+    <base>Registering extension servers</base>
+    <translation>Registrasi server-server ekstensi</translation>
+  </string>
+  <string id="ActionText.RegisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>Ekstensi: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo">
+    <base>Registering MIME info</base>
+    <translation>Registrasi MIME info</translation>
+  </string>
+  <string id="ActionText.RegisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>Jenis Isi MIME: [1], Ekstensi: [2]</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo">
+    <base>Registering program identifiers</base>
+    <translation>Registrasi pengidentifikasi program</translation>
+  </string>
+  <string id="ActionText.RegisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>ProgID: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries">
+    <base>Registering type libraries</base>
+    <translation>Registrasi library jenis</translation>
+  </string>
+  <string id="ActionText.RegisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>LibID: [1]</translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace">
+    <base>Allocating registry space</base>
+    <translation>Mengalokasikan ruang registri </translation>
+  </string>
+  <string id="ActionText.AllocateRegistrySpace.Template">
+    <base>Free space: [1]</base>
+    <translation>Ruang kosong: [1]</translation>
+  </string>
+  <string id="ActionText.CreateFolders">
+    <base>Creating folders</base>
+    <translation>Membuat Folder</translation>
+  </string>
+  <string id="ActionText.CreateFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>Folder: [1]</translation>
+  </string>
+  <string id="ActionText.DeleteServices">
+    <base>Deleting services</base>
+    <translation>Menghapus servis </translation>
+  </string>
+  <string id="ActionText.DeleteServices.Template">
+    <base>Service: [1]</base>
+    <translation>Servis: [1]</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles">
+    <base>Creating duplicate files</base>
+    <translation>Membuat file-file duplikat</translation>
+  </string>
+  <string id="ActionText.DuplicateFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>File: [1],  Direktori: [9],  Ukuran: [6]</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts">
+    <base>Searching for related applications</base>
+    <translation>Mencari aplikasi-aplikasi yang terkait</translation>
+  </string>
+  <string id="ActionText.FindRelatedProducts.Template">
+    <base>Found application: [1]</base>
+    <translation>Aplikasi yang ditemukan: [1]</translation>
+  </string>
+  <string id="ActionText.InstallODBC">
+    <base>Installing ODBC components</base>
+    <translation>Menginstal Komponen-komponen ODBC</translation>
+  </string>
+  <string id="ActionText.InstallServices">
+    <base>Installing new services</base>
+    <translation>Menginstal servis baru </translation>
+  </string>
+  <string id="ActionText.InstallServices.Template">
+    <base>Service: [2]</base>
+    <translation>Servis: [2]</translation>
+  </string>
+  <string id="ActionText.LaunchConditions">
+    <base>Evaluating launch conditions</base>
+    <translation>Mengevaluasi kondisi peluncuran</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates">
+    <base>Migrating feature states from related applications</base>
+    <translation>Migrasi keadaan fitur-fitur dari aplikasi-aplikasi yang terkait</translation>
+  </string>
+  <string id="ActionText.MigrateFeatureStates.Template">
+    <base>Application: [1]</base>
+    <translation>Aplikasi: [1]</translation>
+  </string>
+  <string id="ActionText.MoveFiles">
+    <base>Moving files</base>
+    <translation>Memindahkan file-file</translation>
+  </string>
+  <string id="ActionText.MoveFiles.Template">
+    <base>File: [1],  Directory: [9],  Size: [6]</base>
+    <translation>File: [1],  Direktori: [9],  Ukuran: [6]</translation>
+  </string>
+  <string id="ActionText.PatchFiles">
+    <base>Patching files</base>
+    <translation>Menambal file-file</translation>
+  </string>
+  <string id="ActionText.PatchFiles.Template">
+    <base>File: [1],  Directory: [2],  Size: [3]</base>
+    <translation>File: [1],  Direktori: [2],  Ukuran: [3]</translation>
+  </string>
+  <string id="ActionText.ProcessComponents">
+    <base>Updating component registration</base>
+    <translation>Memperbaharui registrasi komponen</translation>
+  </string>
+  <string id="ActionText.RMCCPSearch">
+    <base>Searching for qualifying products</base>
+    <translation>Mencari produk-produk kualifikasi</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus">
+    <base>Registering COM+ Applications and Components</base>
+    <translation>Registrasi Aplikasi dan Komponen COM+</translation>
+  </string>
+  <string id="ActionText.RegisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2], Users: [3], RSN: [4]}}</base>
+    <translation>AppId: [1]{{, AppType: [2], Pengguna: [3], RSN: [4]}}</translation>
+  </string>
+  <string id="ActionText.RegisterFonts">
+    <base>Registering fonts</base>
+    <translation>Registrasi fonts</translation>
+  </string>
+  <string id="ActionText.RegisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>Font: [1]</translation>
+  </string>
+  <string id="ActionText.RegisterProduct">
+    <base>Registering product</base>
+    <translation>Registrasi produk </translation>
+  </string>
+  <string id="ActionText.RegisterProduct.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RegisterUser">
+    <base>Registering user</base>
+    <translation>Registrasi pengguna</translation>
+  </string>
+  <string id="ActionText.RegisterUser.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles">
+    <base>Removing duplicated files</base>
+    <translation>Mengeluarkan file-file duplikasi</translation>
+  </string>
+  <string id="ActionText.RemoveDuplicateFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>File: [1], Direktori: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>Memperbaharui string lingkungan</translation>
+  </string>
+  <string id="ActionText.RemoveEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>Nama: [1], Nilai: [2], Aksi [3]</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts">
+    <base>Removing applications</base>
+    <translation>Mengeluarkan aplikasi-aplikasi</translation>
+  </string>
+  <string id="ActionText.RemoveExistingProducts.Template">
+    <base>Application: [1], Command line: [2]</base>
+    <translation>Aplikasi: [1], Baris perintah: [2]</translation>
+  </string>
+  <string id="ActionText.RemoveFiles">
+    <base>Removing files</base>
+    <translation>Mengeluarkan file-file</translation>
+  </string>
+  <string id="ActionText.RemoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>File: [1], Direktori: [9]</translation>
+  </string>
+  <string id="ActionText.RemoveFolders">
+    <base>Removing folders</base>
+    <translation>Mengeluarkan folder</translation>
+  </string>
+  <string id="ActionText.RemoveFolders.Template">
+    <base>Folder: [1]</base>
+    <translation>Folder: [1]</translation>
+  </string>
+  <string id="ActionText.RemoveIniValues">
+    <base>Removing INI file entries</base>
+    <translation>Mengeluarkan entri INI file </translation>
+  </string>
+  <string id="ActionText.RemoveIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>File: [1],  Seksi: [2],  Kunci: [3], Nilai: [4]</translation>
+  </string>
+  <string id="ActionText.RemoveODBC">
+    <base>Removing ODBC components</base>
+    <translation>Mengeluarkan Komponen-komponen ODBC</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues">
+    <base>Removing system registry values</base>
+    <translation>Mengeluarkan nilai-nilai registri sistem</translation>
+  </string>
+  <string id="ActionText.RemoveRegistryValues.Template">
+    <base>Key: [1], Name: [2]</base>
+    <translation>Kunci: [1], Nama: [2]</translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts">
+    <base>Removing shortcuts</base>
+    <translation>Mengeluarkan shortcut </translation>
+  </string>
+  <string id="ActionText.RemoveShortcuts.Template">
+    <base>Shortcut: [1]</base>
+    <translation>Shortcut: [1]</translation>
+  </string>
+  <string id="ActionText.SelfRegModules">
+    <base>Registering modules</base>
+    <translation>Registrasi modul</translation>
+  </string>
+  <string id="ActionText.SelfRegModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>File: [1], Folder: [2]</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules">
+    <base>Unregistering modules</base>
+    <translation>Unregistrasi modul-modul</translation>
+  </string>
+  <string id="ActionText.SelfUnregModules.Template">
+    <base>File: [1], Folder: [2]</base>
+    <translation>File: [1], Folder: [2]</translation>
+  </string>
+  <string id="ActionText.SetODBCFolders">
+    <base>Initializing ODBC directories</base>
+    <translation>Inisialisasi Direktori-direktori ODBC</translation>
+  </string>
+  <string id="ActionText.StartServices">
+    <base>Starting services</base>
+    <translation>Memulai servis</translation>
+  </string>
+  <string id="ActionText.StartServices.Template">
+    <base>Service: [1]</base>
+    <translation>Servis: [1]</translation>
+  </string>
+  <string id="ActionText.StopServices">
+    <base>Stopping services</base>
+    <translation>Menghentikan servis</translation>
+  </string>
+  <string id="ActionText.StopServices.Template">
+    <base>Service: [1]</base>
+    <translation>Servis: [1]</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents">
+    <base>Unpublishing Qualified Components</base>
+    <translation>Merahasiakan Komponen-komponen Berkualifikasi</translation>
+  </string>
+  <string id="ActionText.UnpublishComponents.Template">
+    <base>Component ID: [1], Qualifier: [2]</base>
+    <translation>Component ID: [1], Qualifier: [2]</translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures">
+    <base>Unpublishing product features</base>
+    <translation>Merahasiakan fitur-fitur produk </translation>
+  </string>
+  <string id="ActionText.UnpublishFeatures.Template">
+    <base>Feature: [1]</base>
+    <translation>Fitur: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo">
+    <base>Unregister class servers</base>
+    <translation>Unregistrasi class server</translation>
+  </string>
+  <string id="ActionText.UnregisterClassInfo.Template">
+    <base>Class ID: [1]</base>
+    <translation>Class ID: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus">
+    <base>Unregistering COM+ Applications and Components</base>
+    <translation>Unregistrasi Aplikasi COM+ dan Komponen</translation>
+  </string>
+  <string id="ActionText.UnregisterComPlus.Template">
+    <base>AppId: [1]{{, AppType: [2]}}</base>
+    <translation>AppId: [1]{{, AppType: [2]}}</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo">
+    <base>Unregistering extension servers</base>
+    <translation>Unregistrasi server-server ekstensi</translation>
+  </string>
+  <string id="ActionText.UnregisterExtensionInfo.Template">
+    <base>Extension: [1]</base>
+    <translation>Ekstensi: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts">
+    <base>Unregistering fonts</base>
+    <translation>Unregistrasi font</translation>
+  </string>
+  <string id="ActionText.UnregisterFonts.Template">
+    <base>Font: [1]</base>
+    <translation>Font: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo">
+    <base>Unregistering MIME info</base>
+    <translation>Unregistrasi MIME info</translation>
+  </string>
+  <string id="ActionText.UnregisterMIMEInfo.Template">
+    <base>MIME Content Type: [1], Extension: [2]</base>
+    <translation>Jenis Isi MIME: [1], Ekstensi: [2]</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo">
+    <base>Unregistering program identifiers</base>
+    <translation>Unregistrasi pengidentifikasi program</translation>
+  </string>
+  <string id="ActionText.UnregisterProgIdInfo.Template">
+    <base>ProgID: [1]</base>
+    <translation>ProgID: [1]</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries">
+    <base>Unregistering type libraries</base>
+    <translation>Unregistrasi library jenis</translation>
+  </string>
+  <string id="ActionText.UnregisterTypeLibraries.Template">
+    <base>LibID: [1]</base>
+    <translation>LibID: [1]</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings">
+    <base>Updating environment strings</base>
+    <translation>Memperbaharui string lingkungan</translation>
+  </string>
+  <string id="ActionText.WriteEnvironmentStrings.Template">
+    <base>Name: [1], Value: [2], Action [3]</base>
+    <translation>Nama: [1], Nilai: [2], Aksi [3]</translation>
+  </string>
+  <string id="ActionText.WriteIniValues">
+    <base>Writing INI file values</base>
+    <translation>Menuliskan nilai-nilai INI file  </translation>
+  </string>
+  <string id="ActionText.WriteIniValues.Template">
+    <base>File: [1],  Section: [2],  Key: [3], Value: [4]</base>
+    <translation>File: [1],  Seksi: [2],  Kunci: [3], Nilai: [4]</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues">
+    <base>Writing system registry values</base>
+    <translation>Menuliskan nilai-nilai registri sistem</translation>
+  </string>
+  <string id="ActionText.WriteRegistryValues.Template">
+    <base>Key: [1], Name: [2], Value: [3]</base>
+    <translation>Kunci: [1], Nama: [2], Nilai: [3]</translation>
+  </string>
+  <string id="ActionText.Advertise">
+    <base>Advertising application</base>
+    <translation>Mengiklankan aplikasi</translation>
+  </string>
+  <string id="ActionText.GenerateScript">
+    <base>Generating script operations for action:</base>
+    <translation>Menghasilkan operasi-operasi skrip untuk aksi:</translation>
+  </string>
+  <string id="ActionText.GenerateScript.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile">
+    <base>Installing system catalog</base>
+    <translation>Menginstal katalog sistem</translation>
+  </string>
+  <string id="ActionText.InstallSFPCatalogFile.Template">
+    <base>File: [1],  Dependencies: [2]</base>
+    <translation>File: [1],  Dependensi: [2]</translation>
+  </string>
+  <string id="ActionText.Rollback">
+    <base>Rolling back action:</base>
+    <translation>Aksi mundur:</translation>
+  </string>
+  <string id="ActionText.Rollback.Template">
+    <base>[1]</base>
+    <translation>[1]</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup">
+    <base>Removing backup files</base>
+    <translation>Mengeluarkan file-file cadangan</translation>
+  </string>
+  <string id="ActionText.RollbackCleanup.Template">
+    <base>File: [1]</base>
+    <translation>File: [1]</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles">
+    <base>Removing moved files</base>
+    <translation>Mengeluarkan file-file yang dipindah</translation>
+  </string>
+  <string id="ActionText.UnmoveFiles.Template">
+    <base>File: [1], Directory: [9]</base>
+    <translation>File: [1], Direktori: [9]</translation>
+  </string>
+  <string id="ActionText.UnpublishProduct">
+    <base>Unpublishing product information</base>
+    <translation>Merahasiakan informasi produk </translation>
+  </string>
+  <string id="ActionText.caCreateVRoots">
+    <base>Creating IIS Virtual Roots...</base>
+    <translation>Mencipta IIS Virtual Roots...</translation>
+  </string>
+  <string id="ActionText.caRemoveVRoots">
+    <base>Removing IIS Virtual Roots...</base>
+    <translation>Menghapus IIS Virtual Roots...</translation>
+  </string>
+  <string id="Text.Title">
+    <base>[ProductName] Setup</base>
+    <translation>-</translation>
+  </string>
+  <string id="Text.ErrorTitle">
+    <base>[ProductName] Installer Information</base>
+    <translation>Informasi Penginstal [ProductName] </translation>
+  </string>
+  <string id="Text.PatchTitle">
+    <base>[ProductName] Patch Setup</base>
+    <translation>-</translation>
+  </string>
+  <string id="Text.OK">
+    <base>OK</base>
+    <translation>OK</translation>
+  </string>
+  <string id="Text.Cancel">
+    <base>Cancel</base>
+    <translation>Batalkan</translation>
+  </string>
+  <string id="Text.Next">
+    <base>&amp;Next &gt;</base>
+    <translation>&amp;Selanjutnya &gt;</translation>
+  </string>
+  <string id="Text.Back">
+    <base>&lt; &amp;Back</base>
+    <translation>&lt; &amp;Kembali</translation>
+  </string>
+  <string id="Text.Y">
+    <base>&amp;Yes</base>
+    <translation>&amp;Ya</translation>
+  </string>
+  <string id="Text.N">
+    <base>&amp;No</base>
+    <translation>&amp;Tidak</translation>
+  </string>
+  <string id="Text.A">
+    <base>&amp;Abort</base>
+    <translation>&amp;Gagalkan</translation>
+  </string>
+  <string id="Text.C">
+    <base>&amp;Cancel</base>
+    <translation>&amp;Batalkan</translation>
+  </string>
+  <string id="Text.I">
+    <base>&amp;Ignore</base>
+    <translation>&amp;Abaikan</translation>
+  </string>
+  <string id="Text.O">
+    <base>&amp;OK</base>
+    <translation>&amp;OK</translation>
+  </string>
+  <string id="Text.R">
+    <base>&amp;Retry</base>
+    <translation>&amp;Coba lagi</translation>
+  </string>
+  <string id="Text.Install">
+    <base>&amp;Install</base>
+    <translation>&amp;Instal</translation>
+  </string>
+  <string id="Text.Exit">
+    <base>&amp;Exit</base>
+    <translation>&amp;Keluar</translation>
+  </string>
+  <string id="Text.Remove">
+    <base>&amp;Remove</base>
+    <translation>&amp;Keluarkan</translation>
+  </string>
+  <string id="Text.Change">
+    <base>&amp;Change...</base>
+    <translation>&amp;Ubah.</translation>
+  </string>
+  <string id="Text.Finish">
+    <base>&amp;Finish</base>
+    <translation>&amp;Selesai</translation>
+  </string>
+  <string id="Text.FolderName">
+    <base>&amp;Folder name:</base>
+    <translation>Nama &amp;Folder:</translation>
+  </string>
+  <string id="Text.Help">
+    <base>&amp;Help</base>
+    <translation>&amp;Bantu</translation>
+  </string>
+  <string id="Text.LookIn">
+    <base>&amp;Look in:</base>
+    <translation>&amp;Periksa:</translation>
+  </string>
+  <string id="Text.NetworkLocation">
+    <base>&amp;Network location:</base>
+    <translation>Lokasi &amp;Jaringan:</translation>
+  </string>
+  <string id="Text.Space">
+    <base>&amp;Space</base>
+    <translation>&amp;Ruang</translation>
+  </string>
+  <string id="Text.Update">
+    <base>&amp;Update &gt;</base>
+    <translation>&amp;Update &gt;</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>Lihat-lihat ke Folder Tujuan.</translation>
+  </string>
+  <string id="AdminChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Ubah Folder Tujuan saat ini</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgDesc">
+    <base>Specify a network location for the server image of the product.</base>
+    <translation>Sebutkan lokasi jaringan untuk server image produk.</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgTitle">
+    <base>{&amp;MSSansBold8}Network Location</base>
+    <translation>{&amp;MSSansBold8}Lokasi jaringan</translation>
+  </string>
+  <string id="AdminNetworkLocation.DlgText">
+    <base>Enter the network location or click Change to browse to a location.  Click Install to create a server image of [ProductName] at the specified network location or click Cancel to exit the wizard.</base>
+    <translation>Masukkan lokasi jaringan atau klik Ubah untuk melihat-lihat ke lokasi.  Klik Instal untuk membuat server image dari [ProductName]  di lokasi jaringan yang ditentukan atau klik Batalkan untuk keluar dari wizard.</translation>
+  </string>
+  <string id="AdminWelcome.TextLine2">
+    <base>The Setup Wizard will create a server image of [ProductName] at a specified network location. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="AdminWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="CancelSetup.Text">
+    <base>Are you sure you want to cancel [ProductName] installation?</base>
+    <translation>Apakah Anda yakin mau membatalkan instalasi [ProductName] ?</translation>
+  </string>
+  <string id="CustomSetup.DlgDesc">
+    <base>Select the program features you want installed.</base>
+    <translation>Pilih fitur-fitur program yang hendak Anda instal.</translation>
+  </string>
+  <string id="CustomSetup.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup</base>
+    <translation>{&amp;MSSansBold8}Custom Setup</translation>
+  </string>
+  <string id="CustomSetup.DlgText">
+    <base>Click on an icon in the list below to change how a feature is installed.</base>
+    <translation>Klik icon di dalam daftar di bawah ini untuk mengubah cara menginstal fitur.</translation>
+  </string>
+  <string id="CustomSetup.ItemDescription">
+    <base>Multiline description of the currently selected item</base>
+    <translation>Deskripsi banyak baris dari objek yang dipilih saat ini</translation>
+  </string>
+  <string id="CustomSetup.Size">
+    <base>Feature size</base>
+    <translation>Ukuran Fitur</translation>
+  </string>
+  <string id="CustomSetup.InstallLabel">
+    <base>Install to:</base>
+    <translation>Instal ke:</translation>
+  </string>
+  <string id="CustomSetup.Location">
+    <base>&lt;selected feature path&gt;</base>
+    <translation>&lt;path fitur yang dipilih&gt;</translation>
+  </string>
+  <string id="CustomSetup.FeatureGroup">
+    <base>Feature Description</base>
+    <translation>Deskripsi Fitur</translation>
+  </string>
+  <string id="CustomSetupTips.DlgDesc">
+    <base>Custom Setup allows you to selectively install program features.</base>
+    <translation>Custom Setup memungkinkan Anda untuk menginstal fitur-fitur program secara selektif.</translation>
+  </string>
+  <string id="CustomSetupTips.DlgTitle">
+    <base>{&amp;MSSansBold8}Custom Setup Tips</base>
+    <translation>{&amp;MSSansBold8}Tip-tip Custom Setup</translation>
+  </string>
+  <string id="CustomSetupTips.DontInstallText">
+    <base>Will not be installed.</base>
+    <translation>Tidak dapat diinstal.</translation>
+  </string>
+  <string id="CustomSetupTips.FirstInstallText">
+    <base>Will be installed on first use. (Available only if the feature supports this option.)</base>
+    <translation>Akan diinstal pada penggunaan pertama. (Hanya tersedia jika fitur tersebut mendukung pilihan ini.)</translation>
+  </string>
+  <string id="CustomSetupTips.InstallStateText">
+    <base>This install state means the feature...</base>
+    <translation>Keadaan instalasi ini berarti fitur tersebut.</translation>
+  </string>
+  <string id="CustomSetupTips.InstallText">
+    <base>Will be completely installed to the local hard drive.</base>
+    <translation>Akan di instal secara lengkap ke hard drive lokal.</translation>
+  </string>
+  <string id="CustomSetupTips.MenuText">
+    <base>The icon next to the feature name indicates the install state of the feature. Click the icon to drop down the install state menu for each feature.</base>
+    <translation>Icon dekat nama fitur menunjukkan keadaan instalasi dari fitur tersebut. Klik icon tersebut menurunkan menu keadaan instalasi untuk masing-masing fitur.</translation>
+  </string>
+  <string id="CustomSetupTips.NetworkInstallText">
+    <base>Will be installed to run from the network. (Available only if the feature supports this option.)</base>
+    <translation>Akan diinstal untuk dijalankan dari jaringan. (Hanya tersedia jika fitur tersebut mendukung pilihan ini.)</translation>
+  </string>
+  <string id="CustomSetupTips.PartialText">
+    <base>Will have some subfeatures installed to the local hard drive. (Available only if the feature has subfeatures.)</base>
+    <translation>Akan menyebabkan beberapa subfitur diinstal ke hard drive lokal. (Hanya tersedia jika fitur tersebut memiliki subfitur.)</translation>
+  </string>
+  <string id="DestinationFolder.DlgDesc">
+    <base>Click Next to install to this folder, or click Change to install to a different folder.</base>
+    <translation>Klik Selanjutnya untuk menginstal ke folder ini, atau klik Ubah untuk menginstal ke folder lain.</translation>
+  </string>
+  <string id="DestinationFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Destination Folder</base>
+    <translation>{&amp;MSSansBold8}Folder Tujuan</translation>
+  </string>
+  <string id="DestinationFolder.LocLabel">
+    <base>Install [ProductName] to:</base>
+    <translation>Instal [ProductName]  ke:</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgDesc">
+    <base>The disk space required for the installation of the selected features.</base>
+    <translation>Kapasitas ruang disk yang diperlukan untuk instalasi fitur-fitur yang dipilih.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgTitle">
+    <base>{&amp;MSSansBold8}Disk Space Requirements</base>
+    <translation>{&amp;MSSansBold8}Kebutuhan kapasitas ruang disk </translation>
+  </string>
+  <string id="DiskSpaceRequirements.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>Volume-volume yang disorot tidak memiliki kapasitas ruang disk yang memadai bagi fitur-fitur yang dipilih saat ini. Anda dapat mengeluarkan file-file dari volume-volume yang disorot, pilih untuk menginstal lebih sedikit fitur ke drive lokal, atau pilih drive tujuan yang lain.</translation>
+  </string>
+  <string id="DiskSpaceRequirements.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="FilesInUse.DlgDesc">
+    <base>Some files that need to be updated are currently in use.</base>
+    <translation>Beberapa file yang perlu diperbaharui saat ini sedang digunakan.</translation>
+  </string>
+  <string id="FilesInUse.DlgTitle">
+    <base>{&amp;MSSansBold8}Files in Use</base>
+    <translation>{&amp;MSSansBold8}File-file sedang digunakan</translation>
+  </string>
+  <string id="FilesInUse.DlgText">
+    <base>The following applications are using files that need to be updated by this setup. Close these applications and click Retry to continue.</base>
+    <translation>Aplikasi-aplikasi berikut ini sedang menggunakan file-file yang perlu diperbaharui oleh setup ini. Tutup aplikasi-aplikasi ini dan klik Coba Lagi untuk melanjutkan.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgDesc">
+    <base>Browse to the destination folder.</base>
+    <translation>Lihat-lihat ke Folder Tujuan.</translation>
+  </string>
+  <string id="InstallChangeFolder.DlgTitle">
+    <base>{&amp;MSSansBold8}Change Current Destination Folder</base>
+    <translation>{&amp;MSSansBold8} Ubah Folder Tujuan saat ini</translation>
+  </string>
+  <string id="InstallWelcome.Copyright">
+    <base>WARNING: This program is protected by copyright law and international treaties.</base>
+    <translation>PERINGATAN: Program ini dilindungi oleh undang-undang hak cipta dan perjanjian internasional.</translation>
+  </string>
+  <string id="InstallWelcome.TextLine2">
+    <base>Setup will install [ProductName] on your computer. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="InstallWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="LicenseAgreement.DlgDesc">
+    <base>Please read the following license agreement carefully.</base>
+    <translation>Silahkan baca perjanjian lisensi berikut ini dengan seksama.</translation>
+  </string>
+  <string id="LicenseAgreement.DlgTitle">
+    <base>{&amp;MSSansBold8}License Agreement</base>
+    <translation>{&amp;MSSansBold8}Perjanjian Lisensi</translation>
+  </string>
+  <string id="LicenseAgreement.DontAgree">
+    <base>I &amp;do not accept the terms in the license agreement</base>
+    <translation>Saya &amp;tidak menerima ketentuan yang ada di dalam perjanjian lisensi</translation>
+  </string>
+  <string id="LicenseAgreement.Agree">
+    <base>I &amp;accept the terms in the license agreement</base>
+    <translation>Saya &amp;menerima ketentuan yang ada di dalam perjanjian lisensi </translation>
+  </string>
+  <string id="MaintenanceType.DlgDesc">
+    <base>Modify, repair, or remove the program.</base>
+    <translation>Memodifikasi, memperbaiki, atau mengeluarkan program.</translation>
+  </string>
+  <string id="MaintenanceType.DlgTitle">
+    <base>{&amp;MSSansBold8}Program Maintenance</base>
+    <translation>{&amp;MSSansBold8}Pemeliharaan Program</translation>
+  </string>
+  <string id="MaintenanceType.Text1">
+    <base>Change which program features are installed. This option displays the Custom Selection dialog in which you can change the way features are installed.</base>
+    <translation>Ubah fitur-fitur program mana saja yang diinstal. Pilihan ini akan menampilkan Dialog Pemilihan Custom di mana Anda dapat mengubah cara menginstal fitur-fitur.</translation>
+  </string>
+  <string id="MaintenanceType.Text2">
+    <base>Repair installation errors in the program. This option fixes missing or corrupt files, shortcuts, and registry entries.</base>
+    <translation>Memperbaiki kesalahan instalasi di dalam program. Pilihan ini akan memperbaiki file-file, shortcut, dan entri registri yang hilang atau rusak.</translation>
+  </string>
+  <string id="MaintenanceType.Text3">
+    <base>Remove [ProductName] from your computer.</base>
+    <translation>Keluarkan [ProductName]  dari komputer Anda.</translation>
+  </string>
+  <string id="MaintenanceType.Modify">
+    <base>{&amp;MSSansBold8}&amp;Modify</base>
+    <translation>{&amp;MSSansBold8}&amp;Modifikasi</translation>
+  </string>
+  <string id="MaintenanceType.Repair">
+    <base>{&amp;MSSansBold8}Re&amp;pair</base>
+    <translation>{&amp;MSSansBold8}&amp;Perbaiki</translation>
+  </string>
+  <string id="MaintenanceType.Remove">
+    <base>{&amp;MSSansBold8}&amp;Remove</base>
+    <translation>{&amp;MSSansBold8}&amp;Keluarkan</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine2">
+    <base>The Setup Wizard will allow you to modify, repair, or remove [ProductName]. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="MaintenanceWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="OutOfSpace.DlgDesc">
+    <base>Disk space required for the installation exceeds available disk space.</base>
+    <translation>Kapasitas ruang disk yang diperlukan untuk instalasi melebihi kapasitas ruang disk yang tersedia.</translation>
+  </string>
+  <string id="OutOfSpace.DlgTitle">
+    <base>{&amp;MSSansBold8}Out of Disk Space</base>
+    <translation>{&amp;MSSansBold8}Kapasitas ruang disk tidak memadai</translation>
+  </string>
+  <string id="OutOfSpace.DlgText">
+    <base>The highlighted volumes do not have enough disk space available for the currently selected features. You can remove files from the highlighted volumes, choose to install less features onto local drives, or select different destination drives.</base>
+    <translation>Volume-volume yang disorot tidak memiliki kapasitas ruang disk yang memadai bagi fitur-fitur yang dipilih saat ini. Anda dapat mengeluarkan file-file dari volume-volume yang disorot, pilih untuk menginstal lebih sedikit fitur ke drive lokal, atau pilih drive tujuan yang lain.</translation>
+  </string>
+  <string id="OutOfSpace.List">
+    <base>{120}{70}{70}{70}{70}</base>
+    <translation>{120}{70}{70}{70}{70}</translation>
+  </string>
+  <string id="PatchWelcome.TextLine2">
+    <base>The Setup Wizard will install the Patch for [ProductName] on your computer.  To continue, click Update.</base>
+    <translation>-</translation>
+  </string>
+  <string id="PatchWelcome.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Patch for [ProductName]</base>
+    <translation>{&amp;TahomaBold10}Selamat datang di Patch untuk [ProductName] </translation>
+  </string>
+  <string id="ReadyToInstall.DlgDesc">
+    <base>The wizard is ready to begin installation.</base>
+    <translation>Wizard siap untuk memulai instalasi.</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle">
+    <base>{&amp;MSSansBold8}Ready to Modify the Program</base>
+    <translation>{&amp;MSSansBold8}Siap untuk memodifikasi program</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText">
+    <base>Click Install to begin the installation.</base>
+    <translation>Klik Instal untuk memulai instalasi. </translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle2">
+    <base>{&amp;MSSansBold8}Ready to Repair the Program</base>
+    <translation>{&amp;MSSansBold8}Siap untuk memperbaiki program</translation>
+  </string>
+  <string id="ReadyToInstall.DlgTitle3">
+    <base>{&amp;MSSansBold8}Ready to Install the Program</base>
+    <translation>{&amp;MSSansBold8}Siap untuk menginstal program</translation>
+  </string>
+  <string id="ReadyToInstall.DlgText1">
+    <base>If you want to review or change any of your installation settings, click Back. Click Cancel to exit the wizard.</base>
+    <translation>Jika Anda mau memeriksa atau mengubah pengaturan instalasi Anda, klik Kembali. Klik Batalkan untuk keluar dari wizard.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgDesc">
+    <base>You have chosen to remove the program from your system.</base>
+    <translation>Anda telah memilih untuk mengeluarkan program dari sistem Anda.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgTitle">
+    <base>{&amp;MSSansBold8}Remove the Program</base>
+    <translation>{&amp;MSSansBold8}Mengeluarkan program</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText">
+    <base>Click Remove to remove [ProductName] from your computer. After removal, this program will no longer be available for use.</base>
+    <translation>Klik Keluarkan untuk mengeluarkan [ProductName]  dari komputer Anda. Setelah pengeluaran, program ini tidak dapat lagi digunakan.</translation>
+  </string>
+  <string id="ReadyToRemove.DlgText1">
+    <base>If you want to review or change any settings, click Back.</base>
+    <translation>Jika Anda mau memeriksa atau mengubah pengaturan, klik Kembali.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText1">
+    <base>Your system has not been modified. To complete installation at another time, please run setup again.</base>
+    <translation>Sistem Anda belum dimodifikasi. Untuk menyelesaikan instalasi di lain waktu, silahkan menjalankan setup lagi.</translation>
+  </string>
+  <string id="SetupCompleteError.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>Klik Selesai untuk keluar dari wizard.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>Anda dapat mempertahankan setiap elemen yang diinstal pada sistem Anda untuk melanjutkan instalasi ini di lain waktu atau Anda dapat mengembalikan sistem Anda ke keadaan semula sebelum instalasi.</translation>
+  </string>
+  <string id="SetupCompleteError.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>Klik Kembalikan ke Semula atau Lanjutkan Nanti untuk keluar dari wizard.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>Wizard terinterupsi sebelum [ProductName]  dapat diinstal secara lengkap.</translation>
+  </string>
+  <string id="SetupCompleteError.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine2">
+    <base>The Setup Wizard has successfully installed [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckForUpdatesText">
+    <base>&amp;Yes, check for program updates (Recommended) after the setup completes.</base>
+    <translation>&amp;Ya, cek untuk pembaharuan-pembaharuan program  (Direkomendasikan) setelah setup selesai. </translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine3">
+    <base>The Setup Wizard has successfully uninstalled [ProductName]. Click Finish to exit the wizard.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine1">
+    <base>Setup has finished installing [ProductName].</base>
+    <translation>Setup telah selesai menginstal [ProductName].</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine2">
+    <base>Some program files might have been updated since you purchased your copy of [ProductName].</base>
+    <translation>Beberapa file program kemungkinan telah diperbaharui sejak Anda membeli salinan [ProductName] Anda.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.UpdateTextLine3">
+    <base>Your Internet connection can be used to make sure that you have the latest updates.</base>
+    <translation>Jaringan Internet Anda dapat digunakan untuk memastikan bahwa Anda memiliki versi terkini.</translation>
+  </string>
+  <string id="SetupCompleteSuccess.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchProgramText">
+    <base>Launch [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupCompleteSuccess.LaunchReadmeText">
+    <base>Show the readme file</base>
+    <translation>Tunjukkan file readme</translation>
+  </string>
+  <string id="SetupCompleteSuccess.CheckBoxUpdates">
+    <base>CheckBox1</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupError.ErrorText">
+    <base>&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;&lt;error text goes here&gt;</base>
+    <translation>&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;&lt;teks kesalahan menuju ke sini&gt;</translation>
+  </string>
+  <string id="SetupInitialization.TextLine2">
+    <base>[ProductName] Setup is preparing the Setup Wizard which will guide you through the program setup process.  Please wait.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupInitialization.TextLine1">
+    <base>{&amp;TahomaBold10}Welcome to the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText1">
+    <base>Your system has not been modified. To install this program at a later time, please run the installation again.</base>
+    <translation>Sistem Anda belum diubah. Untuk menginstal program ini nanti, jalankanlah kembali program instalsi ini.</translation>
+  </string>
+  <string id="SetupInterrupted.FinishText2">
+    <base>Click Finish to exit the wizard.</base>
+    <translation>Klik Selesai untuk keluar dari wizard ini.</translation>
+  </string>
+  <string id="SetupInterrupted.RestContText1">
+    <base>You can either keep any existing installed elements on your system to continue this installation at a later time or you can restore your system to its original state prior to the installation.</base>
+    <translation>Anda bisa mengekalkan elemen-elemen terinstal di sistem Anda agar dapat diteruskan instalsinya nanti atau Anda bisa mengembalikan sistem Anda ke keadaan sebelum instalasi. </translation>
+  </string>
+  <string id="SetupInterrupted.RestContText2">
+    <base>Click Restore or Continue Later to exit the wizard.</base>
+    <translation>Klik Kembalikan Ke Semula atau Lanjutkan Nanti untuk keluar dari Wizard.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine2">
+    <base>The wizard was interrupted before [ProductName] could be completely installed.</base>
+    <translation>Wizard ini diinterupsi sebelum [ProductName] bisa diselesaikan.</translation>
+  </string>
+  <string id="SetupInterrupted.TextLine1">
+    <base>{&amp;TahomaBold10}Setup Wizard Completed</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc">
+    <base>The program features you selected are being installed.</base>
+    <translation>Fitur-fitur program Yang Anda pilih sedang diinstal.</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle">
+    <base>{&amp;MSSansBold8}Installing [ProductName]</base>
+    <translation>{&amp;MSSansBold8}Menginstal [ProductName] </translation>
+  </string>
+  <string id="SetupProgress.DlgText">
+    <base>Please wait while the Setup Wizard installs [ProductName]. This may take several minutes.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupProgress.DlgTitle2">
+    <base>{&amp;MSSansBold8}Uninstalling [ProductName]</base>
+    <translation>{&amp;MSSansBold8}Meng-uninstal [ProductName] </translation>
+  </string>
+  <string id="SetupProgress.DlgText2">
+    <base>Please wait while the Setup Wizard uninstalls [ProductName]. This may take several minutes.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupProgress.DlgDesc2">
+    <base>The program features you selected are being uninstalled.</base>
+    <translation>Fitur-fitur program yang Anda pilih sedang di-uninstal.</translation>
+  </string>
+  <string id="SetupProgress.TextTime">
+    <base>)Hidden for now)Estimated time remaining:</base>
+    <translation>)Disembunyikan untuk saat ini)Perkiraan Waktu yang tersisa:</translation>
+  </string>
+  <string id="SetupProgress.LbStatus">
+    <base>Status:</base>
+    <translation>Status:</translation>
+  </string>
+  <string id="SetupProgress.LbSec">
+    <base>(Hidden for now)Sec.</base>
+    <translation>(Disembunyikan untuk saat ini)Sec.</translation>
+  </string>
+  <string id="SetupProgress.ShowTime">
+    <base>(Hidden for now)</base>
+    <translation>(Disembunyikan untuk saat ini)</translation>
+  </string>
+  <string id="SetupProgress.ActionProgress95">
+    <base>Progress done</base>
+    <translation>Kemajuan sudah dilaksanakan</translation>
+  </string>
+  <string id="SetupResume.PreselectedText">
+    <base>The Setup Wizard will complete the installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupResume.ResumeText">
+    <base>The Setup Wizard will complete the suspended installation of [ProductName] on your computer. To continue, click Next.</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupResume.TextLine1">
+    <base>{&amp;TahomaBold10}Resuming the Setup Wizard for [ProductName]</base>
+    <translation>-</translation>
+  </string>
+  <string id="SetupType.DlgDesc">
+    <base>Choose the setup type that best suits your needs.</base>
+    <translation>Pilih jenis setup yang paling sesuai dengan keinginan Anda.</translation>
+  </string>
+  <string id="SetupType.DlgTitle">
+    <base>{&amp;MSSansBold8}Setup Type</base>
+    <translation>{&amp;MSSansBold8}Jenis Setup</translation>
+  </string>
+  <string id="SetupType.DlgText">
+    <base>Please select a setup type.</base>
+    <translation>Silahkan pilih jenis setup.</translation>
+  </string>
+  <string id="SetupType.CompText">
+    <base>All program features will be installed. (Requires the most disk space.)</base>
+    <translation>Semua fitur program akan diinstal. (Memerlukan sebagian besar ruang disk.)</translation>
+  </string>
+  <string id="SetupType.CustText">
+    <base>Choose which program features you want installed and where they will be installed. Recommended for advanced users.</base>
+    <translation>Pilih fitur-fitur program mana saja yang hendak Anda instal dan di mana mereka akan diinstal. Direkomendasikan untuk pengguna tingkat lanjut.</translation>
+  </string>
+  <string id="SetupType.Complete">
+    <base>{&amp;MSSansBold8}&amp;Complete</base>
+    <translation>{&amp;MSSansBold8}&amp;Selesaikan</translation>
+  </string>
+  <string id="SetupType.Custom">
+    <base>{&amp;MSSansBold8}Cu&amp;stom</base>
+    <translation>{&amp;MSSansBold8}Cu&amp;stom</translation>
+  </string>
+  <string id="Error.0">
+    <base>{{Fatal error: }}</base>
+    <translation>{{Kesalahan fatal: }}</translation>
+  </string>
+  <string id="Error.1">
+    <base>Error [1].</base>
+    <translation>Kasalahan [1].</translation>
+  </string>
+  <string id="Error.2">
+    <base>Warning [1].</base>
+    <translation>Peringatan [1].</translation>
+  </string>
+  <string id="Error.4">
+    <base>Info [1].</base>
+    <translation>Info [1].</translation>
+  </string>
+  <string id="Error.5">
+    <base>Internal Error [1]. [2]{, [3]}{, [4]}</base>
+    <translation>Kesalahan internal [1]. [2]{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.7">
+    <base>{{Disk full: }}</base>
+    <translation>{{Disk penuh: }}</translation>
+  </string>
+  <string id="Error.8">
+    <base>Action [Time]: [1]. [2]</base>
+    <translation>Aksi [Time]: [1]. [2]</translation>
+  </string>
+  <string id="Error.9">
+    <base>[ProductName]</base>
+    <translation>[ProductName] </translation>
+  </string>
+  <string id="Error.10">
+    <base>{[2]}{, [3]}{, [4]}</base>
+    <translation>{[2]}{, [3]}{, [4]}</translation>
+  </string>
+  <string id="Error.11">
+    <base>Message type: [1], Argument: [2]</base>
+    <translation>Jenis pesan: [1], Argumen: [2]</translation>
+  </string>
+  <string id="Error.12">
+    <base>=== Logging started: [Date]  [Time] ===</base>
+    <translation>=== Logging dimulai: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.13">
+    <base>=== Logging stopped: [Date]  [Time] ===</base>
+    <translation>=== Logging dihentikan: [Date]  [Time] ===</translation>
+  </string>
+  <string id="Error.14">
+    <base>Action start [Time]: [1].</base>
+    <translation>Aksi dimulai [Time]: [1].</translation>
+  </string>
+  <string id="Error.15">
+    <base>Action ended [Time]: [1]. Return value [2].</base>
+    <translation>Aksi berakhir [Time]: [1]. Nilai Kembali [2].</translation>
+  </string>
+  <string id="Error.16">
+    <base>Time remaining: {[1] minutes }{[2] seconds}</base>
+    <translation>Waktu yang tersisa: {[1] menit }{[2] detik}</translation>
+  </string>
+  <string id="Error.17">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>Memori tidak memadai. Tutup aplikasi-aplikasi lain sebelum mencoba lagi.</translation>
+  </string>
+  <string id="Error.18">
+    <base>Installer is no longer responding.</base>
+    <translation>Installer tidak merespon lagi.</translation>
+  </string>
+  <string id="Error.19">
+    <base>Installer terminated prematurely.</base>
+    <translation>Installer dihentikan sebelum waktunya.</translation>
+  </string>
+  <string id="Error.20">
+    <base>Please wait while Windows configures [ProductName]</base>
+    <translation>Silahkan menunggu sementara Windows mengkonfigurasi [ProductName] </translation>
+  </string>
+  <string id="Error.21">
+    <base>Gathering required information...</base>
+    <translation>Mengumpulkan informasi yang diperlukan.</translation>
+  </string>
+  <string id="Error.22">
+    <base>Removing older versions of this application</base>
+    <translation>Mengeluarkan versi lama dari aplikasi ini</translation>
+  </string>
+  <string id="Error.23">
+    <base>Preparing to remove older versions of this application</base>
+    <translation>Mempersiapkan diri untuk mengeluarkan versi lama dari aplikasi ini?</translation>
+  </string>
+  <string id="Error.32">
+    <base>{[ProductName] }Setup completed successfully.</base>
+    <translation>{[ProductName]  }Setup berhasil diselesaikan.</translation>
+  </string>
+  <string id="Error.33">
+    <base>{[ProductName] }Setup failed.</base>
+    <translation>{[ProductName]  }Setup tidak berhasil.</translation>
+  </string>
+  <string id="Error.1101">
+    <base>Error reading from file: [2]. {{ System error [3].}}  Verify that the file exists and that you can access it.</base>
+    <translation>Kesalahan pembacaan file: [2]. {{ Kesalahan sistem [3].}}  Verifikasi bahwa file tersebut ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1301">
+    <base>Cannot create the file [3].  A directory with this name already exists.  Cancel the installation and try installing to a different location.</base>
+    <translation>Tidak dapat membuat file [3].  Direktori dengan nama ini sudah ada.  Batalkan instalasi  dan coba untuk menginstal ke lokasi lain.</translation>
+  </string>
+  <string id="Error.1302">
+    <base>Please insert the disk: [2]</base>
+    <translation>Silahkan masukkan disk: [2]</translation>
+  </string>
+  <string id="Error.1303">
+    <base>The installer has insufficient privileges to access this directory: [2].  The installation cannot continue.  Log on as an administrator or contact your system administrator.</base>
+    <translation>Installer tidak memiliki hak yang memadai untuk mengakses Direktori ini: [2].  Instalasi  tidak dapat dilanjutkan.  Log on sebagai administrator atau hubungi administrator sistem Anda.</translation>
+  </string>
+  <string id="Error.1304">
+    <base>Error writing to file [2].  Verify that you have access to that directory.</base>
+    <translation>Kesalahan penulisan ke file [2].  Verifikasi bahwa Anda memiliki akses ke direktori itu.</translation>
+  </string>
+  <string id="Error.1305">
+    <base>Error reading from file [2].  Verify that the file exists and that you can access it.</base>
+    <translation>Kesalahan pembacaan dari file [2].  Verifikasi bahwa file tersebut ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1306">
+    <base>Another application has exclusive access to the file [2].  Please shut down all other applications, then click Retry.</base>
+    <translation>Aplikasi lain memiliki akses eksklusif ke file [2].  Silahkan tutup semua aplikasi lain, lalu klik Coba Lagi.</translation>
+  </string>
+  <string id="Error.1307">
+    <base>There is not enough disk space to install the file [2].  Free some disk space and click Retry, or click Cancel to exit.</base>
+    <translation>Tidak tersedia cukup ruang untuk menginstal file ini [2].  Kosongkan sejumlah ruang disk dan klik Coba Lagi, atau klik Batalkan untuk keluar.</translation>
+  </string>
+  <string id="Error.1308">
+    <base>Source file not found: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>File sumber tidak ditemukan: [2].  Verifikasi bahwa file tersebut ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1309">
+    <base>Error reading from file: [3]. {{ System error [2].}}  Verify that the file exists and that you can access it.</base>
+    <translation>Kesalahan pembacaan dari file: [3]. {{ Kesalahan sistem [2].}}  Verifikasi bahwa file tersebut ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1310">
+    <base>Error writing to file: [3]. {{ System error [2].}}  Verify that you have access to that directory.</base>
+    <translation>Kesalahan penulisan ke file: [3]. {{ Kesalahan sistem [2].}}  Verifikasi bahwa Anda memiliki akses ke direktori itu.</translation>
+  </string>
+  <string id="Error.1311">
+    <base>Source file not found{{(cabinet)}}: [2].  Verify that the file exists and that you can access it.</base>
+    <translation>File sumber tidak ditemukan {{(kabinet)}}: [2].  Verifikasi bahwa file tersebut ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1312">
+    <base>Cannot create the directory [2].  A file with this name already exists.  Please rename or remove the file and click Retry, or click Cancel to exit.</base>
+    <translation>Tidak dapat membuat direktori [2].  A file dengan nama ini sudah ada.  Silahkan ganti namanya atau keluarkan file tersebut dan klik Coba Lagi, atau klik Batalkan untuk keluar.</translation>
+  </string>
+  <string id="Error.1313">
+    <base>The volume [2] is currently unavailable.  Please select another.</base>
+    <translation>Volume tersebut [2] saat ini tidak ada.  Silahkan pilih yang lain.</translation>
+  </string>
+  <string id="Error.1314">
+    <base>The specified path [2] is unavailable.</base>
+    <translation>Path yang dimaksud [2] tidak ada.</translation>
+  </string>
+  <string id="Error.1315">
+    <base>Unable to write to the specified folder [2].</base>
+    <translation>Tidak menulis ke folder yang dimaksud [2].</translation>
+  </string>
+  <string id="Error.1316">
+    <base>A network error occurred while attempting to read from the file [2]</base>
+    <translation>Kesalahan jaringan muncul sewaktu berusaha untuk membaca dari file [2]</translation>
+  </string>
+  <string id="Error.1317">
+    <base>An error occurred while attempting to create the directory [2]</base>
+    <translation>Kesalahan muncul sewaktu berusaha untuk membuat direktori [2]</translation>
+  </string>
+  <string id="Error.1318">
+    <base>A network error occurred while attempting to create the directory [2]</base>
+    <translation>Kesalahan muncul sewaktu berusaha untuk membuat direktori [2]</translation>
+  </string>
+  <string id="Error.1319">
+    <base>A network error occurred while attempting to open the source file cabinet [2].</base>
+    <translation>Kesalahan muncul sewaktu berusaha untuk membuka kabinet file sumber [2].</translation>
+  </string>
+  <string id="Error.1320">
+    <base>The specified path is too long [2].</base>
+    <translation>Path yang dimaksud terlalu panjang [2].</translation>
+  </string>
+  <string id="Error.1321">
+    <base>The Installer has insufficient privileges to modify the file [2].</base>
+    <translation>Installer tidak memiliki hak yang memadai untuk memodifikasi file [2].</translation>
+  </string>
+  <string id="Error.1322">
+    <base>A portion of the path [2] exceeds the length allowed by the system.</base>
+    <translation>Sebagian dari path [2] melebihi panjang yang diperbolehkan oleh sistem.</translation>
+  </string>
+  <string id="Error.1323">
+    <base>The path [2] contains words that are not valid in folders.</base>
+    <translation>Path tersebut[2] mengandung kata-kata yang tidak sah di dalam folder.</translation>
+  </string>
+  <string id="Error.1324">
+    <base>The path [2] contains an invalid character.</base>
+    <translation>Path tersebut[2] mengandung huruf yang tidak sah.</translation>
+  </string>
+  <string id="Error.1325">
+    <base>[2] is not a valid short file name.</base>
+    <translation>[2] bukan nama file pendek yang sah.</translation>
+  </string>
+  <string id="Error.1326">
+    <base>Error getting file security: [3] GetLastError: [2]</base>
+    <translation>Kesalahan mendapatkan pengamanan file: [3] GetLastError: [2]</translation>
+  </string>
+  <string id="Error.1327">
+    <base>Invalid Drive: [2]</base>
+    <translation>Drive Tidak Sah: [2]</translation>
+  </string>
+  <string id="Error.1328">
+    <base>Error applying patch to file [2].  It has probably been updated by other means, and can no longer be modified by this patch.  For more information contact your patch vendor.  {{System Error: [3]}}</base>
+    <translation>Kesalahan dalam pengaplikasian Patch pada file [2].  Mungkin telah diperbaharui dengan media lain, dan tidak dapat lagi dimodifikasi oleh Patch ini.  Untuk informasi lebih lanjut hubungi penjual Patch Anda.  {{Kesalahan sistem: [3]}}</translation>
+  </string>
+  <string id="Error.1401">
+    <base>Could not create key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Tidak dapat membuat kunci [2]. {{ Kesalahan sistem [3].}}  Verifikasi bahwa Anda memiliki akses yang memadai ke kunci itu, atau hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1402">
+    <base>Could not open key: [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Tidak dapat membuka Kunci: [2]. {{ Kesalahan sistem [3].}}  Verifikasi bahwa Anda memiliki akses yang memadai ke kunci itu, atau hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1403">
+    <base>Could not delete value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Tidak dapat menghapus nilai [2] dari kunci [3]. {{ Kesalahan sistem [4].}}  Verifikasi bahwa Anda memiliki akses yang memadai ke kunci itu, atau hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1404">
+    <base>Could not delete key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Tidak dapat menghapus kunci [2]. {{ Kesalahan sistem [3].}}  Verifikasi bahwa Anda memiliki akses yang memadai ke kunci itu, atau hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1405">
+    <base>Could not read value [2] from key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Tidak dapat membaca nilai [2] dari kunci [3]. {{ Kesalahan sistem [4].}}  Verifikasi bahwa Anda memiliki akses yang memadai ke kunci itu, atau hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1406">
+    <base>Could not write value [2] to key [3]. {{ System error [4].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Tidak dapat menuliskan nilai [2] ke kunci [3]. {{ Kesalahan sistem [4].}}  Verifikasi bahwa Anda memiliki akses yang memadai ke kunci itu, atau hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1407">
+    <base>Could not get value names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Tidak dapat memperoleh nama-nama nilai untuk kunci [2]. {{ Kesalahan sistem [3].}}  Verifikasi bahwa Anda memiliki akses yang memadai ke kunci itu, atau hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1408">
+    <base>Could not get sub key names for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Tidak dapat memperoleh nama-nama sub kunci untuk kunci [2]. {{ Kesalahan sistem [3].}}  Verifikasi bahwa Anda memiliki akses yang memadai ke kunci itu, atau hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1409">
+    <base>Could not read security information for key [2]. {{ System error [3].}}  Verify that you have sufficient access to that key, or contact your support personnel.</base>
+    <translation>Tidak dapat membaca informasi pengamanan untuk kunci [2]. {{ Kesalahan sistem [3].}}  Verifikasi bahwa Anda memiliki akses yang memadai ke kunci itu, atau hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1410">
+    <base>Could not increase the available registry space. [2] KB of free registry space is required for the installation of this application.</base>
+    <translation>Tidak dapat menambah ruang registri yang tersedia. [2] KB dari ruang registri yang kosong diperlukan untuk menginstal aplikasi ini.</translation>
+  </string>
+  <string id="Error.1500">
+    <base>Another installation is in progress. You must complete that installation before continuing this one.</base>
+    <translation>Instalasi lain sedang berlangsung. Anda harus menyelesaikan instalasi itu sebelum melanjutkan yang satu ini.</translation>
+  </string>
+  <string id="Error.1501">
+    <base>Error accessing secured data. Please make sure the Windows Installer is configured properly and try the installation again.</base>
+    <translation>Kesalahan mengakses data yang dilindungi. Silahkan pastikan bahwa Windows Installer dikonfigurasi sebagaimana mestinya dan coba instalasi lagi.</translation>
+  </string>
+  <string id="Error.1502">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.  Your current installation will now continue.</base>
+    <translation>Pengguna [2] pernah melakukan instalasi untuk produk [3].  Pengguna tersebut akan perlu menjalankan instalasi itu lagi sebelum menggunakan produk itu.  Your current installation akan now continue.</translation>
+  </string>
+  <string id="Error.1503">
+    <base>User [2] has previously initiated an installation for product [3].  That user will need to run that installation again before using that product.</base>
+    <translation>Pengguna [2] pernah melakukan instalasi untuk produk [3].  Pengguna tersebut akan perlu menjalankan instalasi itu lagi sebelum menggunakan produk itu.</translation>
+  </string>
+  <string id="Error.1601">
+    <base>Out of disk space -- Volume: '[2]'; required space: [3] KB; available space: [4] KB.  Free some disk space and retry.</base>
+    <translation>Kapasitas ruang disk tidak memadai -- Volume: '[2]'; kapasitas ruang yang diperlukan: [3] KB;  kapasitas ruang yang tersedia: [4] KB.  Kosongkan sejumlah ruang disk dan coba lagi.</translation>
+  </string>
+  <string id="Error.1602">
+    <base>Are you sure you want to cancel?</base>
+    <translation>Apakah Anda yakin mau membatalkan?</translation>
+  </string>
+  <string id="Error.1603">
+    <base>The file [2][3] is being held in use{ by the following process: Name: [4], ID: [5], Window Title: [6]}.  Close that application and retry.</base>
+    <translation>File tersebut [2][3] dianggap sedang digunakan{ by the following process: Nama: [4], ID: [5], Window Title: [6]}. Tutup aplikasi itu dan coba lagi.</translation>
+  </string>
+  <string id="Error.1604">
+    <base>The product [2] is already installed, preventing the installation of this product.  The two products are incompatible.</base>
+    <translation>Produk tersebut [2] sudah diinstal, mencegah instalasi produk ini.  Kedua produk tersebut tidak sesuai.</translation>
+  </string>
+  <string id="Error.1605">
+    <base>Out of disk space -- Volume: [2]; required space: [3] KB; available space: [4] KB.  If rollback is disabled, enough space is available. Click Cancel to quit, Retry to check available disk space again, or Ignore to continue without rollback.</base>
+    <translation>Kapasitas ruang disk tidak memadai -- Volume: [2]; kapasitas ruang yang diperlukan: [3] KB;  kapasitas ruang yang tersedia: [4] KB.  Jika fungsi mundur tidak diaktifkan, tersedia cukup ruang. Klik Batalkan untuk berhenti, coba lagi untuk mengecek ulang kapasitas ruang disk yang tersedia, atau Ignore untuk melanjutkan tanpa mundur.</translation>
+  </string>
+  <string id="Error.1606">
+    <base>Could not access network location [2].</base>
+    <translation>Tidak dapat mengakses lokasi jaringan [2].</translation>
+  </string>
+  <string id="Error.1607">
+    <base>The following applications should be closed before continuing the installation:</base>
+    <translation>Aplikasi-aplikasi berikut ini harus ditutup sebelum melanjutkan instalasi :</translation>
+  </string>
+  <string id="Error.1608">
+    <base>Could not find any previously installed compliant products on the machine for installing this product.</base>
+    <translation>Tidak dapat menemukan produk terkait apapun yang telah diinstal sebelumnya pada komputer untuk menginstal produk ini.</translation>
+  </string>
+  <string id="Error.1701">
+    <base>The key [2] is not valid.  Verify that you entered the correct key.</base>
+    <translation>Kunci tersebut [2] tidak sah.  Verifikasi bahwa Anda memasukkan kunci yang benar.</translation>
+  </string>
+  <string id="Error.1702">
+    <base>The installer must restart your system before configuration of [2] can continue.  Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>Installer harus menjalankan ulang sistem Anda sebelum pengkonfigurasian [2] dapat dilanjutkan.  Klik Ya untuk menjalankan ulang sistem dari awal sekarang atau Tidak jika Anda berencana untuk melakukannya nanti.</translation>
+  </string>
+  <string id="Error.1703">
+    <base>You must restart your system for the configuration changes made to [2] to take effect. Click Yes to restart now or No if you plan to restart later.</base>
+    <translation>Anda harus menjalankan ulang sistem Anda dari awal agar perubahan konfigurasi [2] dapat berlaku. Klik Ya untuk menjalankan ulang sistem dari awal sekarang atau Tidak jika Anda berencana untuk melakukannya nanti.</translation>
+  </string>
+  <string id="Error.1704">
+    <base>An installation for [2] is currently suspended.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>Instalasi untuk [2] saat ini ditangguhkan.  Untuk melanjutkannya, Anda harus membatalkan (undo) perubahan yang dibuat oleh instalasi itu.  Apakah Anda mau membatalkan perubahan-perubahan itu?</translation>
+  </string>
+  <string id="Error.1705">
+    <base>A previous installation for this product is in progress.  You must undo the changes made by that installation to continue.  Do you want to undo those changes?</base>
+    <translation>Instalasi sebelumnya untuk produk ini sedang berlangsung. Untuk melanjutkannya, Anda harus membatalkan (undo) perubahan yang dibuat oleh instalasi itu.  Apakah Anda mau membatalkan perubahan-perubahan itu?</translation>
+  </string>
+  <string id="Error.1706">
+    <base>No valid source could be found for product [2].  The Windows Installer cannot continue.</base>
+    <translation>Sumber yang sah tidak dapat ditemukan untuk produk [2]. Windows Installer tidak dapat dilanjutkan.</translation>
+  </string>
+  <string id="Error.1707">
+    <base>Installation operation completed successfully.</base>
+    <translation>Operasi instalasi berhasil diselesaikan.</translation>
+  </string>
+  <string id="Error.1708">
+    <base>Installation operation failed.</base>
+    <translation>Operasi instalasi tidak berhasil.</translation>
+  </string>
+  <string id="Error.1709">
+    <base>Product: [2] -- [3]</base>
+    <translation>Produk:  [2] -- [3]</translation>
+  </string>
+  <string id="Error.1710">
+    <base>You may either restore your computer to its previous state or continue the installation later. Would you like to restore?</base>
+    <translation>Anda boleh mengembalikan komputer Anda ke keadaan sebelumnya atau melanjutkan instalasi nanti. Apakah Anda mau mengembalikannya ke keadaan semula?</translation>
+  </string>
+  <string id="Error.1711">
+    <base>An error occurred while writing installation information to disk.  Check to make sure enough disk space is available, and click Retry, or Cancel to end the installation.</base>
+    <translation>Kesalahan muncul sewaktu menuliskan informasi instalasi ke disk.  Cek untuk memastikan bahwa tersedia cukup ruang pada disk, dan klik Coba Lagi, atau Batalkan to mengakhiri instalasi. </translation>
+  </string>
+  <string id="Error.1712">
+    <base>One or more of the files required to restore your computer to its previous state could not be found.  Restoration will not be possible.</base>
+    <translation>Satu atau lebih dari file-file yang diperlukan untuk mengembalikan komputer Anda ke keadaan sebelumnya tidak dapat ditemukan.  Pengembalian ke keadaan semula tidak akan memungkinkan.</translation>
+  </string>
+  <string id="Error.1713">
+    <base>[2] cannot install one of its required products. Contact your technical support group.  {{System Error: [3].}}</base>
+    <translation>[2] tidak dapat menginstal salah satu dari produk yang diperlukan. Hubungi kelompok dukungan teknis Anda.  {{Kesalahan sistem: [3].}}</translation>
+  </string>
+  <string id="Error.1714">
+    <base>The older version of [2] cannot be removed.  Contact your technical support group.  {{System Error [3].}}</base>
+    <translation>Versi lama dari [2] tidak dapat dihapus.  Hubungi kelompok dukungan teknis Anda.  {{Kesalahan sistem [3].}}</translation>
+  </string>
+  <string id="Error.1801">
+    <base>The path [2] is not valid.  Please specify a valid path.</base>
+    <translation>Path [2] tidak sah.  Silahkan sebutkan path yang sah.</translation>
+  </string>
+  <string id="Error.1802">
+    <base>Out of memory. Shut down other applications before retrying.</base>
+    <translation>Memori tidak memadai. Tutup aplikasi-aplikasi lain sebelum mencoba lagi.</translation>
+  </string>
+  <string id="Error.1803">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to go back to the previously selected volume.</base>
+    <translation>Tidak ada disk di dalam drive [2]. Silahkan masukkan disk dan klik Coba Lagi, atau klik Batalkan to kembali ke Volume yang dipilih sebelumnya.</translation>
+  </string>
+  <string id="Error.1804">
+    <base>There is no disk in drive [2]. Please insert one and click Retry, or click Cancel to return to the browse dialog and select a different volume.</base>
+    <translation>Tidak ada disk di dalam drive [2]. Silahkan masukkan disk dan klik Coba Lagi, atau klik Batalkan to kembali ke Browse dialog dan pilih volume yang lain.</translation>
+  </string>
+  <string id="Error.1805">
+    <base>The folder [2] does not exist.  Please enter a path to an existing folder.</base>
+    <translation>Folder tersebut [2] tidak ada.  Silahkan ketikkan path ke folder yang ada.</translation>
+  </string>
+  <string id="Error.1806">
+    <base>You have insufficient privileges to read this folder.</base>
+    <translation>Anda tidak memiliki hak yang memadai untuk membaca folder ini.</translation>
+  </string>
+  <string id="Error.1807">
+    <base>A valid destination folder for the installation could not be determined.</base>
+    <translation>Folder tujuan yang sah untuk instalasi  tidak dapat ditentukan.</translation>
+  </string>
+  <string id="Error.1901">
+    <base>Error attempting to read from the source installation database: [2].</base>
+    <translation>Kesalahan dalam berusaha untuk membaca dari sumber database instalasi: [2].</translation>
+  </string>
+  <string id="Error.1902">
+    <base>Scheduling reboot operation: Renaming file [2] to [3]. Must reboot to complete operation.</base>
+    <translation>Penjadwalan operasi penyalaan ulang komputer: Penamaan ulang file [2] to [3]. harus dinyalakan ulang untuk menyelesaikan operasi.</translation>
+  </string>
+  <string id="Error.1903">
+    <base>Scheduling reboot operation: Deleting file [2]. Must reboot to complete operation.</base>
+    <translation>Penjadwalan operasi penyalaan ulang komputer: Menghapus file [2]. harus dinyalakan ulang untuk menyelesaikan operasi.</translation>
+  </string>
+  <string id="Error.1904">
+    <base>Module [2] failed to register.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>Modul [2] tidak dapat diregistrasi.  HRESULT [3].  Hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1905">
+    <base>Module [2] failed to unregister.  HRESULT [3].  Contact your support personnel.</base>
+    <translation>Modul [2] tidak dapat di-unregistrasi.  HRESULT [3].  Hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1906">
+    <base>Failed to cache package [2]. Error: [3]. Contact your support personnel.</base>
+    <translation>Gagal menyembunyikan paket [2]. Kesalahan: [3]. Hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1907">
+    <base>Could not register font [2].  Verify that you have sufficient permissions to install fonts, and that the system supports this font.</base>
+    <translation>Tidak dapat meregistrasi font [2].  Verifikasi bahwa Anda memiliki ijin yang memadai untuk menginstal font, dan sistem tersebut mendukung font ini.</translation>
+  </string>
+  <string id="Error.1908">
+    <base>Could not unregister font [2]. Verify that you have sufficient permissions to remove fonts.</base>
+    <translation>Tidak dapat meng-unregistrasi font [2]. Verifikasi bahwa Anda memiliki ijin yang memadai untuk mengeluarkan font.</translation>
+  </string>
+  <string id="Error.1909">
+    <base>Could not create shortcut [2]. Verify that the destination folder exists and that you can access it.</base>
+    <translation>Tidak dapat membuat shortcut [2]. Verifikasi bahwa folder tujuan ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1910">
+    <base>Could not remove shortcut [2]. Verify that the shortcut file exists and that you can access it.</base>
+    <translation>Tidak dapat mengeluarkan shortcut [2]. Verifikasi bahwa shortcut file ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1911">
+    <base>Could not register type library for file [2].  Contact your support personnel.</base>
+    <translation>Tidak dapat meregistrasi library jenis untuk file [2].  Hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1912">
+    <base>Could not unregister type library for file [2].  Contact your support personnel.</base>
+    <translation>Tidak dapat meng-unregistrasi library jenis untuk file [2].  Hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1913">
+    <base>Could not update the INI file [2][3].  Verify that the file exists and that you can access it.</base>
+    <translation>Tidak dapat memperbaharui INI file [2][3].  Verifikasi bahwa file tersebut ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1914">
+    <base>Could not schedule file [2] to replace file [3] on reboot.  Verify that you have write permissions to file [3].</base>
+    <translation>Tidak dapat menjadwalkan file [2] untuk mengganti file [3] pada waktu penyalaan ulang.  Verifikasi bahwa Anda memiliki ijin menulis ke file [3].</translation>
+  </string>
+  <string id="Error.1915">
+    <base>Error removing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>Kesalahan mengeluarkan ODBC driver manager, Kesalahan ODBC [2]: [3]. Hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1916">
+    <base>Error installing ODBC driver manager, ODBC error [2]: [3]. Contact your support personnel.</base>
+    <translation>Kesalahan menginstal ODBC driver manager, Kesalahan ODBC [2]: [3]. Hubungi personil pendukung Anda.</translation>
+  </string>
+  <string id="Error.1917">
+    <base>Error removing ODBC driver [4], ODBC error [2]: [3]. Verify that you have sufficient privileges to remove ODBC drivers.</base>
+    <translation>Kesalahan mengeluarkan ODBC driver [4], Kesalahan ODBC [2]: [3]. Verifikasi bahwa Anda memiliki hak yang memadai untuk mengeluarkan ODBC drivers.</translation>
+  </string>
+  <string id="Error.1918">
+    <base>Error installing ODBC driver [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>Kesalahan menginstal ODBC driver [4], Kesalahan ODBC [2]: [3]. Verifikasi bahwa file [4] ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1919">
+    <base>Error configuring ODBC data source [4], ODBC error [2]: [3]. Verify that the file [4] exists and that you can access it.</base>
+    <translation>Kesalahan mengkonfigurasi sumber data ODBC [4], Kesalahan ODBC [2]: [3]. Verifikasi bahwa file [4] ada dan Anda dapat mengaksesnya.</translation>
+  </string>
+  <string id="Error.1920">
+    <base>Service [2] ([3]) failed to start.  Verify that you have sufficient privileges to start system services.</base>
+    <translation>Servis [2] ([3]) tidak dapat dimulai.  Verifikasi bahwa Anda memiliki hak yang memadai untuk memulai sistem servis.</translation>
+  </string>
+  <string id="Error.1921">
+    <base>Service [2] ([3]) could not be stopped.  Verify that you have sufficient privileges to stop system services.</base>
+    <translation>Servis [2] ([3]) tidak dapat dihentikan.  Verifikasi bahwa Anda memiliki hak yang memadai untuk menghentikan sistem servis.</translation>
+  </string>
+  <string id="Error.1922">
+    <base>Service [2] ([3]) could not be deleted.  Verify that you have sufficient privileges to remove system services.</base>
+    <translation>Servis [2] ([3]) tidak dapat dihapus.  Verifikasi bahwa Anda memiliki hak yang memadai untuk mengeluarkan sistem servis.</translation>
+  </string>
+  <string id="Error.1923">
+    <base>Service [2] ([3]) could not be installed.  Verify that you have sufficient privileges to install system services.</base>
+    <translation>Servis [2] ([3]) tidak dapat diinstal.  Verifikasi bahwa Anda memiliki hak yang memadai untuk menginstal sistem servis.</translation>
+  </string>
+  <string id="Error.1924">
+    <base>Could not update environment variable [2].  Verify that you have sufficient privileges to modify environment variables.</base>
+    <translation>Tidak dapat memperbaharui variabel lingkungan [2].  Verifikasi bahwa Anda memiliki hak yang memadai untuk memodifikasi variabel-variabel lingkungan.</translation>
+  </string>
+  <string id="Error.1925">
+    <base>You do not have sufficient privileges to complete this installation for all users of the machine.  Log on as an administrator and then retry this installation.</base>
+    <translation>Anda tidak memiliki hak yang memadai untuk menyelesaikan instalasi ini untuk semua pengguna komputer.  Log on sebagai administrator dan kemudian coba lagi instalasi ini.</translation>
+  </string>
+  <string id="Error.1926">
+    <base>Could not set file security for file [3]. Error: [2].  Verify that you have sufficient privileges to modify the security permissions for this file.</base>
+    <translation>Tidak dapat menyiapkan pengamanan file untuk file [3]. Kesalahan: [2].  Verifikasi bahwa Anda memiliki hak yang memadai untuk memodifikasi ijin pengamanan untuk file ini.</translation>
+  </string>
+  <string id="Error.1927">
+    <base>Component Services (COM+ 1.0) are not installed on this computer.  This installation requires Component Services in order to complete successfully.  Component Services are available on Windows 2000.</base>
+    <translation>Component Services (COM+ 1.0) tidak diinstal pada komputer ini.  Instalasi ini memerlukan Component Services agar berhasil diselesaikan.  Component Services dapat diperoleh dari Windows 2000.</translation>
+  </string>
+  <string id="Error.1928">
+    <base>Error registering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>Kesalahan Registrasi Aplikasi COM+.  Hubungi personil pendukung Anda untuk informasi lebih lanjut.</translation>
+  </string>
+  <string id="Error.1929">
+    <base>Error unregistering COM+ application.  Contact your support personnel for more information.</base>
+    <translation>Kesalahan Unregistrasi Aplikasi COM+.  Hubungi personil pendukung Anda untuk informasi lebih lanjut.</translation>
+  </string>
+  <string id="Error.1930">
+    <base>The description for service '[2]' ([3]) could not be changed.</base>
+    <translation>Deskripsi untuk servis '[2]' ([3]) tidak dapat diubah.</translation>
+  </string>
+  <string id="Error.1931">
+    <base>The Windows Installer service cannot update the system file [2] because the file is protected by Windows.  You may need to update your operating system for this program to work correctly. {{Package version: [3], OS Protected version: [4]}}</base>
+    <translation>Windows Installer service tidak dapat memperbaharui sistem file [2] karena file dilindungi oleh Windows.  Anda mungkin perlu memperbaharui sistem operasi Anda agar program ini bekerja dengan benar. {{Versi Paket: [3], Versi yang Dilindungi OS: [4]}}</translation>
+  </string>
+  <string id="Error.1932">
+    <base>The Windows Installer service cannot update the protected Windows file [2]. {{Package version: [3], OS Protected version: [4], SFP Error: [5]}}</base>
+    <translation>Windows Installer service tidak dapat memperbaharui file Windows yang dilindungi [2]. {{Versi Paket: [3], Versi yang Dilindungi OS: [4], Kesalahan SFP: [5]}}</translation>
+  </string>
+  <string id="Error.1933">
+    <base>The Windows Installer service cannot update one or more protected Windows files. SFP Error: [2]. List of protected files: [3]</base>
+    <translation>Windows Installer service tidak dapat memperbaharui satu atau lebih Windows files yang diprotek. SFP Error: [2]. Daftar file yang diprotek: [3]</translation>
+  </string>
+  <string id="Error.1934">
+    <base>User installations are disabled via policy on the machine.</base>
+    <translation>User installations digagalkan via kebijakan pada mesin.</translation>
+  </string>
+  <string id="UIText.NewFolder">
+    <base>Fldr|New Folder</base>
+    <translation>Folder|Folder Baru</translation>
+  </string>
+  <string id="UIText.bytes">
+    <base>bytes</base>
+    <translation>byte</translation>
+  </string>
+  <string id="UIText.GB">
+    <base>GB</base>
+    <translation>GB</translation>
+  </string>
+  <string id="UIText.KB">
+    <base>KB</base>
+    <translation>KB</translation>
+  </string>
+  <string id="UIText.MB">
+    <base>MB</base>
+    <translation>MB</translation>
+  </string>
+  <string id="UIText.AbsentPath">
+    <base>
+    </base>
+    <translation>
+    </translation>
+  </string>
+  <string id="UIText.MenuAbsent">
+    <base>This feature will not be available.</base>
+    <translation>Fitur ini tidak akan tersedia.</translation>
+  </string>
+  <string id="UIText.MenuAdvertise">
+    <base>This feature will be installed when required.</base>
+    <translation>Fitur ini akan diinstal bila diperlukan.</translation>
+  </string>
+  <string id="UIText.MenuAllCD">
+    <base>This feature, and all subfeatures, will be installed to run from the CD.</base>
+    <translation>Fitur ini, dan semua subfitur, akan diinstal untuk dijalankan dari CD.</translation>
+  </string>
+  <string id="UIText.MenuAllLocal">
+    <base>This feature, and all subfeatures, will be installed on local hard drive.</base>
+    <translation>Fitur ini, dan semua subfitur, akan diinstal pada hard drive lokal.</translation>
+  </string>
+  <string id="UIText.MenuAllNetwork">
+    <base>This feature, and all subfeatures, will be installed to run from the network.</base>
+    <translation>Fitur ini, dan semua subfitur, akan diinstal untuk dijalankan dari jaringan.</translation>
+  </string>
+  <string id="UIText.MenuCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation>Fitur ini akan diinstal untuk dijalankan dari CD.</translation>
+  </string>
+  <string id="UIText.MenuLocal">
+    <base>This feature will be installed on local hard drive.</base>
+    <translation>Fitur ini akan diinstal pada hard drive lokal.</translation>
+  </string>
+  <string id="UIText.MenuNetwork">
+    <base>This feature will be installed to run from network.</base>
+    <translation>Fitur ini akan diinstal untuk dijalankan dari jaringan.</translation>
+  </string>
+  <string id="UIText.SelAbsentAbsent">
+    <base>GB</base>
+    <translation>GB</translation>
+  </string>
+  <string id="UIText.SelAbsentAdvertise">
+    <base>This feature will be set to be installed when required.</base>
+    <translation>Fitur ini akan disiapkan untuk diinstal bila diperlukan.</translation>
+  </string>
+  <string id="UIText.SelAbsentCD">
+    <base>This feature will be installed to run from CD.</base>
+    <translation>Fitur ini akan diinstal untuk dijalankan dari CD.</translation>
+  </string>
+  <string id="UIText.SelAbsentLocal">
+    <base>This feature will be installed on the local hard drive.</base>
+    <translation>Fitur ini akan diinstal pada hard drive lokal.</translation>
+  </string>
+  <string id="UIText.SelAbsentNetwork">
+    <base>This feature will be installed to run from the network.</base>
+    <translation>Fitur ini akan diinstal untuk dijalankan dari jaringan.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAbsent">
+    <base>This feature will become unavailable.</base>
+    <translation>Fitur ini akan menjadi tidak tersedia.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseAdvertise">
+    <base>Will be installed when required.</base>
+    <translation>Akan diinstal bila diperlukan.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseCD">
+    <base>This feature will be available to run from CD.</base>
+    <translation>Fitur ini akan tersedia untuk dijalankan dari CD.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseLocal">
+    <base>This feature will be installed on your local hard drive.</base>
+    <translation>Fitur ini akan diinstal pada hard drive lokal Anda.</translation>
+  </string>
+  <string id="UIText.SelAdvertiseNetwork">
+    <base>This feature will be available to run from the network.</base>
+    <translation>Fitur ini akan tersedia untuk dijalankan dari jaringan.</translation>
+  </string>
+  <string id="UIText.SelCDAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from CD.</base>
+    <translation>Fitur ini akan di-uninstal seluruhnya, dan Anda tidak akan dapat menjalankannya dari CD.</translation>
+  </string>
+  <string id="UIText.SelCDAdvertise">
+    <base>This feature was run from the CD but will be set to be installed when required.</base>
+    <translation>Fitur ini dijalankan dari CD tetapi akan disiapkan untuk diinstal bila diperlukan.</translation>
+  </string>
+  <string id="UIText.SelCDCD">
+    <base>This feature will continue to be run from the CD</base>
+    <translation>Fitur ini akan terus dijalankan dari CD</translation>
+  </string>
+  <string id="UIText.SelCDLocal">
+    <base>This feature was run from the CD but will be installed on the local hard drive.</base>
+    <translation>Fitur ini dijalankan dari CD tetapi akan diinstal pada hard drive lokal.</translation>
+  </string>
+  <string id="UIText.SelChildCostNeg">
+    <base>This feature frees up [1] on your hard drive.</base>
+    <translation>Fitur ini akan terbebas [1] pada hard drive Anda.</translation>
+  </string>
+  <string id="UIText.SelChildCostPos">
+    <base>This feature requires [1] on your hard drive.</base>
+    <translation>Fitur ini memerlukan [1] pada hard drive Anda.</translation>
+  </string>
+  <string id="UIText.SelCostPending">
+    <base>Compiling cost for this feature...</base>
+    <translation>Biaya kompilasi untuk fitur ini.</translation>
+  </string>
+  <string id="UIText.SelLocalAbsent">
+    <base>This feature will be completely removed.</base>
+    <translation>Fitur ini akan dikeluarkan seluruhnya.</translation>
+  </string>
+  <string id="UIText.SelLocalAdvertise">
+    <base>This feature will be removed from your local hard drive but will be set to be installed when required.</base>
+    <translation>Fitur ini akan dikeluarkan dari hard drive lokal Anda tetapi akan disiapkan untuk diinstal bila diperlukan.</translation>
+  </string>
+  <string id="UIText.SelLocalCD">
+    <base>This feature will be removed from your local hard drive but will still be available to run from CD.</base>
+    <translation>Fitur ini akan dikeluarkan dari hard drive lokal Anda tetapi akan tetap tersedia untuk dijalankan dari CD.</translation>
+  </string>
+  <string id="UIText.SelLocalLocal">
+    <base>This feature will remain on your local hard drive.</base>
+    <translation>Fitur ini akan tetap pada hard drive lokal Anda.</translation>
+  </string>
+  <string id="UIText.SelLocalNetwork">
+    <base>This feature will be removed from your local hard drive, but will be still available to run from the network.</base>
+    <translation>Fitur ini akan dikeluarkan dari hard drive lokal Anda, tetapi akan tetap tersedia untuk dijalankan dari jaringan.</translation>
+  </string>
+  <string id="UIText.SelNetworkAbsent">
+    <base>This feature will be uninstalled completely, and you won't be able to run it from the network.</base>
+    <translation>Fitur ini akan di-uninstal seluruhnya, dan Anda tidak akan dapat menjalankannya dari jaringan.</translation>
+  </string>
+  <string id="UIText.SelNetworkAdvertise">
+    <base>This feature was run from the network but will be installed when required.</base>
+    <translation>Fitur ini dijalankan dari jaringan tetapi akan diinstal bila diperlukan.</translation>
+  </string>
+  <string id="UIText.SelNetworkLocal">
+    <base>This feature was run from the network but will be installed on the local hard drive.</base>
+    <translation>Fitur ini dijalankan dari jaringan tetapi akan diinstal pada hard drive lokal.</translation>
+  </string>
+  <string id="UIText.SelNetworkNetwork">
+    <base>This feature will continue to be run from the network</base>
+    <translation>Fitur ini akan terus dijalankan dari jaringan</translation>
+  </string>
+  <string id="UIText.SelParentCostNegNeg">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation>Fitur ini akan terbebas [1] pada hard drive Anda.  Fitur ini memiliki  [2] dari [3] subfitur yang dipilih. Subfitur tersebut akan terbebas [4] pada hard drive Anda.</translation>
+  </string>
+  <string id="UIText.SelParentCostNegPos">
+    <base>This feature frees up [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation>Fitur ini akan terbebas [1] pada hard drive Anda.  Fitur ini memiliki  [2] dari [3] subfitur yang dipilih. Subfitur tersebut memerlukan [4] pada hard drive Anda.</translation>
+  </string>
+  <string id="UIText.SelParentCostPosNeg">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures free up [4] on your hard drive.</base>
+    <translation>Fitur ini memerlukan [1] pada hard drive Anda.  Fitur ini memiliki  [2] dari [3] subfitur yang dipilih. Subfitur tersebut akan terbebas [4] pada hard drive Anda.</translation>
+  </string>
+  <string id="UIText.SelParentCostPosPos">
+    <base>This feature requires [1] on your hard drive. It has [2] of [3] subfeatures selected. The subfeatures require [4] on your hard drive.</base>
+    <translation>Fitur ini memerlukan [1] pada hard drive Anda.  Fitur ini memiliki  [2] dari [3] subfitur yang dipilih. Subfitur tersebut memerlukan [4] pada hard drive Anda.</translation>
+  </string>
+  <string id="UIText.TimeRemaining">
+    <base>Time remaining: {[1] min }[2] sec</base>
+    <translation>Waktu yang tersisa: {[1] menit }[2] detik </translation>
+  </string>
+  <string id="UIText.VolumeCostAvailable">
+    <base>Available</base>
+    <translation>Tersedia</translation>
+  </string>
+  <string id="UIText.VolumeCostDifference">
+    <base>Differences</base>
+    <translation>Perbedaan</translation>
+  </string>
+  <string id="UIText.VolumeCostRequired">
+    <base>Required</base>
+    <translation>Diperlukan</translation>
+  </string>
+  <string id="UIText.VolumeCostSize">
+    <base>Disk Size</base>
+    <translation>Ukuran disk</translation>
+  </string>
+  <string id="UIText.VolumeCostVolume">
+    <base>Volume</base>
+    <translation>Volume</translation>
+  </string>
+</localization>

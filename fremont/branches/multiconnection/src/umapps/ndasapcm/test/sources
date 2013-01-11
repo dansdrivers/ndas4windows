@@ -1,0 +1,30 @@
+TARGETNAME=ndasapctest
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE
+
+UMTYPE=console
+UMENTRY=wmain
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+INCLUDES=..\inc
+
+SOURCES=\
+	ndasapctest.cpp
+
+TARGETLIBS=\
+	$(SDK_LIB_PATH)\user32.lib \
+	$(SDK_LIB_PATH)\shell32.lib \
+	$(SDK_LIB_PATH)\shlwapi.lib \
+	$(SDK_LIB_PATH)\ole32.lib \
+	$(SDK_LIB_PATH)\oleaut32.lib \
+	..\idl\slib\$(O)\libndasapcm_i.lib
+
+!INCLUDE $(ATL_SOURCES_INC)

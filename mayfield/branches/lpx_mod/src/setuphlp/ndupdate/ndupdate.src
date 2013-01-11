@@ -1,0 +1,6 @@
+LIBRARY	ndupdate
+
+EXPORTS
+	NdasUpdateGetAPIVersion
+	NdasUpdateGetUpdateInfo
+	NdasUpdateDoUpdate

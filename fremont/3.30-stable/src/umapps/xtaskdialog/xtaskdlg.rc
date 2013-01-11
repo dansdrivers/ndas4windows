@@ -1,0 +1,95 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "xtaskdlg_res.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_XTASKDIALOG_COMMANDLINK ICON                    "xtaskdlg_res_commandlink.ico"
+IDI_XTASKDIALOG_INFORMATION ICON                    "xtaskdlg_res_info.ico"
+IDI_XTASKDIALOG_WARNING ICON                    "xtaskdlg_res_warning.ico"
+IDI_XTASKDIALOG_ERROR   ICON                    "xtaskdlg_res_error.ico"
+IDI_XTASKDIALOG_SHIELD  ICON                    "xtaskdlg_res_shield.ico"
+IDI_XTASKDIALOG_HOT_COMMANDLINK ICON                    "xtaskdlg_res_commandlinkhot.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_XTASKDIALOG_BUTTON_CAPTION0 "OK"
+    IDS_XTASKDIALOG_BUTTON_CAPTION1 "&Yes"
+    IDS_XTASKDIALOG_BUTTON_CAPTION2 "&No"
+    IDS_XTASKDIALOG_BUTTON_CAPTION3 "&Retry"
+    IDS_XTASKDIALOG_BUTTON_CAPTION4 "Cancel"
+    IDS_XTASKDIALOG_BUTTON_CAPTION5 "&Close"
+	IDS_XTASKDIALOG_SHOW_DETAILS "See &details >>"
+	IDS_XTASKDIALOG_HIDE_DETAILS "Hide &details <<"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

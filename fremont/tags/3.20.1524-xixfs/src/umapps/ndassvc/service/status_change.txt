@@ -1,0 +1,58 @@
+
+
+  NDAS DEVICE
+
+     +----------------+    +------------+
+     |                |    |            |
+     V                |    V            |
+  DISABLED -----> DISCONNECTED ---> CONNECTING
+     ^                ^                 |
+     |                |                 |
+     |                |                 |
+     |                |                 |
+     +----------- CONNECTED  <----------+
+                                      
+                                      
+                                      							  
+                HEARTBEAT MONITOR     
+                                      
+     +----------------+    +----------------+
+     |               (D)   |                |
+     V                |    V                |      
+  DISABLED --(A)--> DISCONNECTED ------> CONNECTING
+     ^                ^                     |
+     |                |                     |
+     |                |                     |
+     |                |                     |
+     +-----(D)--- CONNECTED  <--------------+
+                                      
+                DEVICE EVENT MONITOR  
+                                      
+     +----------------+    +----------------+
+     |                |    |                |
+     |                |    |                |
+     V                |    V                |      
+  DISABLED -------> DISCONNECTED ------> CONNECTING
+     ^                ^                     |
+     |                |                     |
+     |               (D)                    |
+     |                |                     |
+     +-----(D)--- CONNECTED  <----(A)-------+
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      

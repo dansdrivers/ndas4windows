@@ -1,0 +1,82 @@
+TARGETNAME=ndasport
+TARGETPATH=obj
+TARGETTYPE=EXPORT_DRIVER
+
+#
+# Optimization Settings
+#
+!IF $(FREEBUILD)
+#
+# There are still some problems with inline expansion with DDK 3790.1830
+# (Unfortunately /Ob0 may be necessary)
+#
+MSC_OPTIMIZATION=/Ox
+!ELSE
+!ENDIF
+
+DLLDEF=$(O)\ndasport.def
+
+NTTARGETFILE0=mofcomp
+
+INCLUDES=..\inc;$(DDK_INC_PATH);$(NDAS_INC_PATH)
+
+SOURCES=\
+	init.c \
+	pnp.c  \
+	internal.c \
+	network.c \
+	power.c \
+	wmi.c \
+	utils.c \
+	pdo.c \
+	ndasport.rc \
+	ndasport.c \
+	ndasportwmi.c
+
+#USE_WPP=1
+#WPP_TAG=_wpp
+
+TARGETLIBS=\
+	$(NDAS_DRIVER_LIB_PATH)\libxtdi$(WPP_TAG).lib \
+	$(NDAS_LIB_PATH)\liblspx.lib \
+	$(DDK_LIB_PATH)\ksecdd.lib \
+	$(DDK_LIB_PATH)\tdi.lib \
+	$(DDK_LIB_PATH)\wdmsec.lib \
+	..\ndasata\$(O)\libndasata.lib \
+	..\ndasata\$(O)\ndasata.res
+
+#
+# Additional libraries for Windows 2000
+#
+!IF $(_NT_TARGET_VERSION) <= 0x500
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\ntstrsafe.lib \
+	$(DDK_LIB_PATH)\csq.lib
+!ENDIF
+
+
+!IFDEF USE_WPP
+#
+# WPP Settings
+#
+!IF $(_NT_TARGET_VERSION) <= 0x500
+WPP_TEMPLATE=km-w2k.tpl
+!ELSE
+WPP_TEMPLATE=km-default.tpl
+!ENDIF
+RUN_WPP=$(SOURCES) -km -gen:{$(WPP_TEMPLATE)}*.tmh -func:NdasPortTrace(FLAG,LEVEL,MSG,...)
+!ENDIF
+
+#
+# INF File Generation
+#
+INF_TEMPLATE_EXT=INX
+!INCLUDE $(NDAS_TOOLS)\create_inf.inc
+
+PASS0_PUBLISH=\
+	{ndasportioctl.h=$(NDAS_INC_PATH)\ndas\ndasportioctl.h} \
+	{ndasportguid.h=$(NDAS_INC_PATH)\ndas\ndasportguid.h} \
+	{$(O)\ndasport.wmi.h=$(NDAS_INC_PATH)\ndas\ndasport.wmi.h}
+
+PASS1_PUBLISH=\
+	{$(O)\$(TARGETNAME).lib=$(NDAS_DRIVER_LIB_PATH)\$(TARGETNAME).lib}

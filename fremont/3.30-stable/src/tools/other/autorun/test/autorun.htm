@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>AutoRun Test</title>
+
+    <script language="jscript">
+
+function msgbox()
+{
+    var ret = window.external.MessageBox(
+        "Do you see this message box?", "AutoRun HTML", 4 | 0x20);
+    document.all["idMsgBox"].innerText = "Message Box returns " + ret;
+}
+
+function readinf()
+{
+    var v = window.external.ReadINF("DATA", "TEXT", "none");
+    document.all["idText"].innerText = "INF Contains '"+ v + "'";
+}
+
+function shellexec()
+{
+    var v = window.external.ShellExec("open", "readme.txt");
+    document.all["idShellExec"].innerText = "ShellExecute returns " + v;
+}
+
+function systemprops()
+{
+    var output = 
+        "OS Version: " + window.external.OSVersion + "<br/>" +
+        "OS Platform: " + window.external.OSPlatform + "<br/>" +
+        "Processor Architecture: " + window.external.ProcessorArchitecture + "<br/>" +
+        "Default UI Language ID: " + window.external.DefaultLangID + "<br/>" +
+        "";
+
+    output +=
+        "LanguageName: " + window.external.GetLanguageName(1033) + "<br/>" +
+        "EnglishLanguageName: " + window.external.GetEnglishLanguageName(1033) + "<br/>" +
+        "NativeLanguageName: " + window.external.GetNativeLanguageName(1033) + "<br/>" +
+        "";
+    document.all.idSysInfo.innerHTML = output;
+}
+
+function settitle()
+{
+    window.external.Title = document.all.idTitle.value;
+}
+
+function closewindow()
+{
+    window.external.Close();
+}
+
+    </script>
+
+</head>
+<body>
+    <table width="100%" height="100%">
+        <tr>
+            <td>
+                <button onclick="msgbox()">
+                    Message Box Test</button>
+            </td>
+            <td>
+                <span id="idMsgBox"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="readinf()">
+                    Read INF Data</button>
+            </td>
+            <td>
+                <span id="idText" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="shellexec()">
+                    ShellExec Test</button>
+            </td>
+            <td>
+                <span id="idShellExec" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="systemprops()">
+                    System Information</button>
+            </td>
+            <td>
+                <span id="idSysInfo" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="settitle()">
+                    Set Window Title</button>
+            </td>
+            <td>
+                <input id="idTitle" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="closewindow()">
+                    Close Window</button>
+            </td>
+            <td>
+            &nbsp;
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Include xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+<?ifdef Win64Build?>
+
+<?define InstallInfo_GUID                 ="8A7A468D-F23E-400E-89C9-2CC0AA9FF104"?>
+<?define CustomInstallInfo_GUID           ="941371DD-FFEE-46F4-B60E-EFB5D90735FB"?>
+<?define uninstall_GUID                   ="8530E3E0-EBA6-4E0B-BB44-DCF2FD6EFD41"?>
+<?define ExtraMRE_GUID                    ="4B33150F-0A61-44E2-971C-DDB00F4A38FB"?>
+<?define ExtraDeviceProp_GUID             ="04AFDA7D-22DC-44A7-912A-8D140F9501C8"?>
+<?define ExtraLowDisconnectThreshold_GUID ="57B8BE06-C4DC-4177-80AD-5E98A433F9C9"?>
+<?define SetupLanguageInfo_GUID	          ="0622986A-C95D-4A80-A3EB-6D187514D98F"?>
+<?define NdasmgmtStartupShortcut_GUID     ="B67B8361-4193-41C4-8509-F0D1E676EDA1"?>
+<?define NdasmgmtDesktopShortcut_GUID     ="5BDDFA73-DF19-4513-9F95-0619EACB543F"?>
+<?define ndasmgmt.exe_GUID                ="A496F61C-551E-46E8-A913-FC44F0FF87C0"?>
+<?define ndasmgmt.enu.dll_GUID            ="532FF8FF-6934-42EA-B14F-8D2D59CECEB4"?>
+<?define ndasbind.exe_GUID                ="1CF757C8-2DBC-4B7A-B34D-83AB275C99DB"?>
+<?define ndasbind.enu.dll_GUID            ="0D5B4F8A-AB80-457E-B041-A26BA6D6B9CB"?>
+<?define ndascmd.exe_GUID                 ="F271F5E7-7F5C-42E8-8F1C-B5342ED8F42C"?>
+<?define ndasmgmt.chs.dll_GUID            ="FE801B50-14CF-44FA-ACF2-3AC7CF0AD289"?>
+<?define ndasmgmt.cht.dll_GUID            ="1147B791-DB4A-46B2-B4DB-844050945C4A"?>
+<?define ndasmgmt.deu.dll_GUID            ="BEF69D22-4F06-416B-9591-96E7F9839BC5"?>
+<?define ndasmgmt.esn.dll_GUID            ="D3ABDE01-0CD4-43B4-BE3E-CCFF8CF65C79"?>
+<?define ndasmgmt.fra.dll_GUID            ="33C26FD9-92B6-4ED2-9262-F75C64170D9C"?>
+<?define ndasmgmt.ita.dll_GUID            ="B3FB9179-E461-44DE-B96A-85849F59AF6D"?>
+<?define ndasmgmt.jpn.dll_GUID            ="46B6D754-63B2-4A81-BCA0-454E9D388B6C"?>
+<?define ndasmgmt.kor.dll_GUID            ="08A48AA8-EFEE-4282-81F9-80D08918B95D"?>
+<?define ndasmgmt.ptg.dll_GUID            ="69E8D85B-C250-4EF8-A477-D1136829285D"?>
+
+<?define ndasbind.chs.dll_GUID            ="8022DF2C-E977-44CC-A7DF-6BB6A85C706B"?>
+<?define ndasbind.cht.dll_GUID            ="ACC48F36-30DB-4C94-A933-AD2908132282"?>
+<?define ndasbind.deu.dll_GUID            ="2C62491D-B02B-43DA-81D5-1B02EB36A61F"?>
+<?define ndasbind.esn.dll_GUID            ="967880CB-616D-4B6F-B40C-BFBE392426BE"?>
+<?define ndasbind.fra.dll_GUID            ="E312644E-E525-480C-90ED-114A62484BEE"?>
+<?define ndasbind.ita.dll_GUID            ="4A6B2060-70F1-4AA3-9F72-17EBFA978F30"?>
+<?define ndasbind.jpn.dll_GUID            ="1CD8B247-8B0C-4A35-AC5D-BA515FC7A27A"?>
+<?define ndasbind.kor.dll_GUID            ="FFB483D2-16BA-4496-9455-13E7A61322DC"?>
+<?define ndasbind.ptg.dll_GUID            ="9E02B7E2-49B7-4B59-A21A-BEA3FA0D77ED"?>
+
+<?define NdasProgramMenuFolder_GUID       ="61814846-923F-424E-B31D-CD3062E3D5C6"?>
+<?define NdasProgramMenuCompanyFolder_GUID="2F4EA228-1FD7-4B88-A2D9-FAD330B772BC"?>
+
+<?else?>
+
+<?define InstallInfo_GUID                 ="496B4723-13FF-45FA-A7FF-68BF0EB9E8CC"?>
+<?define CustomInstallInfo_GUID           ="12CC3B40-4670-4310-871E-487BDE3681F6"?>
+<?define uninstall_GUID                   ="2028D2D6-3FE1-4A30-9748-977EC8493922"?>
+<?define ExtraMRE_GUID                    ="D295FA6B-B5C1-4F50-A5E7-11921E3EFF3A"?>
+<?define ExtraDeviceProp_GUID             ="42EDB19F-307C-479A-8696-B6D999854159"?>
+<?define ExtraLowDisconnectThreshold_GUID ="1A946162-49A6-4227-B3C6-FD157104CDDD"?>
+<?define SetupLanguageInfo_GUID	          ="13B999B4-C71E-4A2C-98E2-4412ACF03AF1"?>
+<?define NdasmgmtStartupShortcut_GUID     ="3A0E1327-6587-4117-883E-445D9A8E79C2"?>
+<?define NdasmgmtDesktopShortcut_GUID     ="EB21A098-EAED-4032-93E8-448C4DCDD480"?>
+<?define ndasmgmt.exe_GUID                ="DF049BED-6B75-475C-ACAF-591F69784F44"?>
+<?define ndasmgmt.enu.dll_GUID            ="E7C8F2C9-A180-4181-809C-28B1014A9050"?>
+<?define ndasbind.exe_GUID                ="0BFABA37-C686-4D28-B57C-5FAF191CAC6B"?>
+<?define ndasbind.enu.dll_GUID            ="871BAE82-C382-43A1-953B-CCAEE6632507"?>
+<?define ndascmd.exe_GUID                 ="43574E28-FBE7-4123-94D4-C9CC45B1F2CB"?>
+
+<?define ndasmgmt.chs.dll_GUID            ="688925FD-1886-4D98-897A-5FF29BDEA862"?>
+<?define ndasmgmt.cht.dll_GUID            ="9AAEDBBA-56B9-4E61-B082-EF2F57C326EA"?>
+<?define ndasmgmt.deu.dll_GUID            ="53ACC47A-30E4-4D6A-8AA4-497BEF9D1051"?>
+<?define ndasmgmt.esn.dll_GUID            ="63829B78-EB19-4ABC-B6FC-6BE70F388B47"?>
+<?define ndasmgmt.fra.dll_GUID            ="CC8B0786-2DE1-4C51-BF69-87520903D09C"?>
+<?define ndasmgmt.ita.dll_GUID            ="397C3419-ADE9-48F2-ABFD-366DAAC2502A"?>
+<?define ndasmgmt.jpn.dll_GUID            ="902B05EF-BE4C-47D4-BFD5-629050C83F1D"?>
+<?define ndasmgmt.kor.dll_GUID            ="0E9245F0-3475-486D-9553-C3BC826D6616"?>
+<?define ndasmgmt.ptg.dll_GUID            ="EB8C9F87-C6A7-4BE8-B7FF-5E68B8516602"?>
+
+<?define ndasbind.chs.dll_GUID            ="11328C46-FE20-4BF8-990A-F83CF425C9CA"?>
+<?define ndasbind.cht.dll_GUID            ="A0600D07-DB25-4B6C-8D76-ED293D6C766B"?>
+<?define ndasbind.deu.dll_GUID            ="883A23BD-E4C7-4356-AA13-9C49480159C0"?>
+<?define ndasbind.esn.dll_GUID            ="4E73DEE0-04AD-457A-BD45-0159A453E384"?>
+<?define ndasbind.fra.dll_GUID            ="ED1F81BD-06C7-4855-A2C5-A3E1E2103F14"?>
+<?define ndasbind.ita.dll_GUID            ="0618C033-217C-4B52-A20D-212036975C62"?>
+<?define ndasbind.jpn.dll_GUID            ="13B5AE83-F10E-443C-9754-374A8621F172"?>
+<?define ndasbind.kor.dll_GUID            ="C4BDAD5C-580D-44D8-AF26-4419DA84498A"?>
+<?define ndasbind.ptg.dll_GUID            ="55C6C07C-C054-451B-B3FB-D995F79EDBDC"?>
+
+<?define NdasProgramMenuFolder_GUID       ="B0B19F6D-3763-40F0-B11F-E3D46555D270"?>
+<?define NdasProgramMenuCompanyFolder_GUID="2FEA10A3-8171-49D0-8F14-F8F7A40BE33A"?>
+<?endif?>
+
+</Include>

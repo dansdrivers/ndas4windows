@@ -1,0 +1,75 @@
+!IF 0
+
+Copyright (c) 1989  Microsoft Corporation
+
+Module Name:
+
+    sources.
+
+Abstract:
+
+    This file specifies the target component being built and the list of
+    sources files needed to build that component.  Also specifies optional
+    compiler switches and libraries that are unique for the component being
+    built.
+
+
+Author:
+
+    Steve Wood (stevewo) 12-Apr-1990
+
+NOTE:   Commented description of this file is in \nt\bak\bin\sources.tpl
+
+!ENDIF
+
+NT_UP=0
+
+TARGETPATH=obj
+
+
+NO_SAFESEH=1
+
+!IF "$(_BUILDARCH)" == "AMD64"
+
+TARGETLIBS=\
+    ..\..\rofslfs\mp\$(O)\lfs.lib	\
+    ..\..\rofsefs\$(O)\efs.lib		\
+    ..\..\lib\amd64\rsa32k.lib		\
+    $(DDK_LIB_PATH)\ksecdd.lib	
+
+!ELSE
+
+TARGETLIBS=\
+    ..\..\rofslfs\mp\$(O)\lfs.lib	\
+    $(DDK_LIB_PATH)\ksecdd.lib	
+
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\ntstrsafe.lib
+
+!ENDIF
+
+!include ..\sources.inc
+
+
+#
+# Windows XP Rsa32k library for AMD64 has different section attributes of PAGER32R section
+# from WDK .rdata section.
+#
+!IFDEF USING_WDK
+!IF "$(_BUILDARCH)" == "AMD64"
+NO_MERGE_RSA32K_PAGER32R_SECTION_X64=1
+!ENDIF
+!ENDIF
+
+!if $(IA64)
+LINKER_FLAGS=$(LINKER_FLAGS) -MERGE:PAGER32D=.sdata -MERGE:PAGER32R=.rdata -MERGE:PAGER32C=.text
+!else
+!IFDEF NO_MERGE_RSA32K_PAGER32R_SECTION_X64
+LINKER_FLAGS=$(LINKER_FLAGS) -MERGE:PAGER32D=.data -MERGE:PAGER32C=.text
+!ELSE
+LINKER_FLAGS=$(LINKER_FLAGS) -MERGE:PAGER32D=.data -MERGE:PAGER32R=.rdata -MERGE:PAGER32C=.text
+!ENDIF
+!ENDIF
+
+NTTARGETFILES=
+MISCFILES=$(O)\ndasrofs.inf $(O)\ndasrofs.cdf

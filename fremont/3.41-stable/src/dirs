@@ -1,0 +1,4 @@
+DIRS = inc common umapps setuphlp
+
+OPTIONAL_DIRS= tools
+

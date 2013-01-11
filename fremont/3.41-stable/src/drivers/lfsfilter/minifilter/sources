@@ -1,0 +1,74 @@
+TARGETNAME=ndasfs
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+LINKER_FLAGS=/map
+
+AMD64_WARNING_LEVEL=/W3 /Wp64 -wd4296 /WX
+# -Wp64 will not work with ntddk.h for w2k,wxp headers
+386_WARNING_LEVEL=/W3 /WX
+
+MSC_WARNING_LEVEL=$(MSC_WARNING_LEVEL) /WX /W3
+
+NT_UP=0
+
+!include ..\sources.inc
+
+TARGETLIBS=\
+$(DDK_LIB_PATH)\ntstrsafe.lib			\
+$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib
+
+TARGETLIBS= $(TARGETLIBS) \
+$(IFSKIT_LIB_PATH)\fltMgr.lib
+
+
+INCLUDES=$(INCLUDES);$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_WDM_INCLUDED_
+C_DEFINES=$(C_DEFINES) -D_NDAS_FS_MINI_
+
+
+SOURCES=$(SOURCES)				\
+		..\minispy.c			\
+		..\mspyLib.c			\
+		..\RegistrationData.c
+
+SOURCES=$(SOURCES)				\
+		..\CtxInit.c			\
+		..\operations.c			\
+		..\context.c			\
+		..\support.c		
+
+SOURCES=$(SOURCES)				\
+		..\minindasfs.c			\
+		..\minisecondary.c		\
+		..\minisecondaryredirectirp.c
+
+# Set INF File Version
+NTTARGETFILES=
+INFFILENAME=$(TARGETNAME)
+INFSRCNAME=$(INFFILENAME)
+!if exists($(INFFILENAME).$(TARGET_DIRECTORY).inf)
+INFSRCNAME=$(INFSRCNAME).$(TARGET_DIRECTORY)
+!endif
+
+MISCFILES=$(O)\$(INFFILENAME).inf
+
+#
+# Use NDAS port as a NDAS device enumerator.
+#
+
+C_DEFINES=$(C_DEFINES) -DC_DEFINES=$(C_DEFINES) -D__LFSFILT_SUPPORT_NDASPORT__
+
+!IF 0
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Ox
+!ELSE
+!ENDIF
+
+!ELSE
+
+MSC_OPTIMIZATION=
+
+!ENDIF

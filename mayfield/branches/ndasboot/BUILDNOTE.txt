@@ -1,0 +1,284 @@
+3.10.1222
+	Build for customer support and full test in Korea.
+	Added first time driver installation detection to prevent double driver loading.
+
+3.10.1221
+	Build for internal test.
+	Fixed 'teamup.exe' DOS program issue.
+	Added optimization option to LanscsiMiniport and Hash library release version.
+
+3.10.1220
+	Build for RedDotNet release.
+	Fixed indirect memory leak due to non-closed event handle.
+
+3.10.1219
+	Added a workaround for handling delayed initalization of the IDE device
+	Added some parameters for Reconnection Timeout, etc.
+	Auto-registered entries are marked as volatile.
+	Updater now handles FullSetup and SmallSetup.
+
+3.10.1218
+	Fixed issues with automatic mounting feature on boot
+
+3.10.1217
+	Build RedDotNet
+
+3.06.1022
+	Release for IoData in Japan. Requested by Shinhwan Hwang.
+
+3.06.1021
+	Updated incorrect Moritani folder name to XIMETA.
+
+3.05.1019
+	Updated LfsFilt.
+
+3.04.1018
+	Updated UIStrings for Intl
+	Updated "IDS_FILE_IN_USE" in NDInst.rc
+
+3.04.1017
+	Updated Intl Tips & Guides text in NDInst.rc file
+	Changed Portuguese(Brazil) to Portuguese(Portuguese) in InstallShield
+
+3.04.1016
+	Internal build.
+	Build Note not available .
+
+3.04.1015
+	removed iomega oem
+	fixed all oem install shield projects
+	fixed UIStrings for all oems
+	from next build, portuguese will use protugal as default language
+	release for gennetworks
+
+
+3.03.1014
+	Wall street release
+	Fixed firstrun dialog size bug for windows xp
+
+3.03.1013
+	* LPX : fixed some bugs
+	* UI Resource
+	Modified texts, pictures, progresses.
+	Modified First run dialog.
+	At the moment, only english is valid, all languages else will be applied on next build.
+	* ND Inst
+	Modified Few tips and guides dialog
+	At the moment, only english is valid, all languages else will be applied on next build.
+
+3.02.1009
+	* LPX : fixed bugs
+		SNAP problem
+		PnP NIC removal problem
+
+	* LanscsiBus : fixed bugs		
+
+	* LDServ : Added followings
+		Blocking auto enable after system crash
+		Netdisk will not enable if any non-compatible netdisk software is running.
+
+	* NetDisk Administrator :
+		Added some parameters as following
+		/L Language ID : You can launch Administrator with chosen languange code.
+		/B : All messages which has only 'OK' button will be displayed in balloon tool tip.
+		/C : Administrator will accept WM_COPYDATA message. ndas_cmd application can control Administrator.
+
+		Netdisk Add Dialog supports copy & paste for full sized serial number.
+		After copy serial number(20 or 25) and click any edit box. Serial number will be copied automatically.
+
+	* LFS : ask ktkim@ximeta.com for details.
+
+	* Pulled out windows includes to c:\winhdr . repository will contain those files.
+
+3.0.1007
+	* Multi-write initiated version.
+	* Iomega
+
+2.3.1.519
+	* Added EULAs (Franch, Germany, Portugues, Italian, Spanish) international retail release.
+	* Fixed some texts in Germany application.
+	* Removed 'FALSE' of italian component condition from install shield(retail) project.
+
+2.3.1.517
+	* Added reconnect ability
+	Admin will notify user with balloon tip when netdisk has lost connection.
+
+	* Fixed many things for windows 98
+	Disabled aggregated or mirrored disks.
+	Added read only connection mode.
+	Removed CallLanscsiBus.cpp from XP/2K Build
+	Removed snmp.cpp from 98/ME Build
+
+	* Miscellaneous
+	Fixed syntex LDSERV_IDS_MIRROR_MASTER_DISCON
+	Fixed syntex of Gennetwork
+	Fixed Setup of Gennetwork
+	Changed copyrights from '2003' to '2003-2004'
+	Fixed NDInst.dll
+	Fixed Autorun. Autorun has suresaver install icon now.
+	Fixed lots of parts in every *.xml.
+
+2.3.0.516
+	* Corrected the following UI strings:
+
+	IDS_NOTMIRR
+        IDS_NOTREGISTER
+        IDS_REGISTERED_SAMEND 
+        IDS_NONETDISK_NETWORK
+        IDS_NONETDISK2
+
+	* "Read / Write" is replaced with "Read/Write" (no space)
+	* "Could not" is replaced with "Cannot"
+
+	IDS_NOTAGGR
+	IDS_NOTDISABLE
+	IDS_NOTEDIT
+	IDS_NOTENABLE
+	IDS_NOTUNBIND
+	IDS_TURN_READONLY
+
+	* 1033, 1041, and 1042 resources are only corrected. Others should be followed.
+	* Added Moritani (Eoseed) directory
+	
+	--- Bug fixes:
+
+	* "Remove" and "Disable" menu item is no longer displayed for the slave NetDisk of the aggregation.
+	* Updated to support the separate splash screen and install guide screen for Eoseed.
+	* Changed to asks the user to choose from "ABORT, RETRY or IGNORE" 
+	  when the setup fails to install device drivers.
+	* Added ND_CleanupDriverFiles custom action to every oem setup project.
+	
+2.3.0.515
+
+	Added Gennetworks OEM release
+
+---------------------------------------------------------------------------
+2.3.0 RELEASES
+---------------------------------------------------------------------------
+
+2.3.0.512	XiMeta NetDisk 2.3.0 US Release
+2.3.0.513	Iomega Network Hard Drive 2.3.0 US Release
+2.3.0.515	Gennetworks NetDisk 2.3.0 Korea Release
+2.3.0.???      	Moritani Eoseed 2.3.0 Japan Release
+2.3.0.???  	Logitec LHD-LU2 2.3.0 Japan Release
+
+---------------------------------------------------------------------------
+
+2.3.0.514 -- Iomega Network Hard Drive 2.3 US Release
+
+	Iomega International Relase is delayed. Only 2.3 US Release is distributed.
+	This build contains minor fixes and updated dialogs.
+
+	Next build will reflect the changes in this build to other releases.
+
+2.3.0.513 -- Iomega Network Hard Drive 2.3 International Release (discarded)
+          -- Logitec LHD-LU2 2.3 Japan Release
+
+	Base Revision 319
+
+	Basically this is the same build as 512 but for the completion of OEM branding
+        for Iomega and Logitec.
+	To support OEM branding and localization, there are slight changes
+	in the user interfaces - only adjustment of the size of controls
+
+	This build has only the follows as official releases:
+
+	- Iomega_NetHD_230_513_INTL
+	- Logitec_LHD-LU2_230_513_JAPAN
+
+2.3.0.512 --- XiMeta NetDisk US RELEASE for 2.3 
+
+	Base Revision 307
+
+	Drivers are quite stabilized and this is a first release of
+	NetDisk Software 2.3 for XiMeta NetDisk US Release.
+
+	* Fixed retransmission timeout values for bursty or wireless network.
+
+	This build has only the follows as official releases:
+
+	- XiMeta_NetDisk_230_512_US
+
+2.2.0.511 -- PRERELEASE for 2.2
+
+	Base Revision 282
+	
+	* Fixed LPX service stop handling
+	* Added OEM Support for Logitec (Japan)
+	* Enhanced localization and OEM branding support
+	* Enhanced suppport for the build-up
+	* Default buttons are changed in accordance with the application context
+	  (Not always the first button is the default one)
+
+2.2.0.510 -- PRERELEASE for 2.2 
+
+	Base Revision 275
+	Reflected recent 2.2 driver bugs
+	
+	* LPX and drivers are quite stablized.
+	* Release candidate for the 2.2 release
+
+2.2.0.509 -- INTERNAL BUILD
+
+	Base Revision 262
+	Source Tree Layout is completely changed.
+	OEM Build Support Test Release
+	Released to Iomega as PRERELEASE
+
+	* Driver fixes are not yet reflected and will be incorporated in the later build
+
+2.2.0.508 -- (PRE)RELEASE for 2.2 INTERNATIONAL RELEASE
+
+	Base Revision 256
+	Build for the release for making European CD.
+	Minor bugs may be fixed at the later build.
+	(This build note may be updated)	
+
+	* Fixed 2.2.0.504 bugs
+	* Not a stable version yet, this build is released temporarily at this time.	
+	* This version may be used as an official release,
+	  and is marked as RELEASE in the setup - No PRERELEASE tag in the SETUP.
+
+2.2.0.507 -- PRERELEASE for 2.2
+
+	Base Revision 212
+	Test build for fix 2.2 bugs
+
+	- fixed drive verifier/timer tick problem
+	- fixed lanscsiminiport completion roution deadlock
+	- fixed lanscsibus wmi/write-buffer/non-paged
+	- fixed lpx timer tick
+
+2.2.0.506 -- PRERELEASE for Proof-reading (International Release)
+
+	* 2.2.0.505 is obsolete at this time and will be updated after proof-reading.
+
+2.2.0.505 -- RELEASE AS 2.2 (International Release)
+
+	Built for the release for XiMeta 2.2 International Release CD
+
+	* Supported Languages: English, German, French, Spanish, Italian and Korean
+	* Setup and AUTORUN is somewhat internationalized now.
+	  (Not fully completed yet)
+        * OEM Build is still incomplete. Next build will support this.
+
+2.2.0.504 -- RELEASE AS 2.2 (US English only)
+
+	Build for the release for XiMeta 2.2 CD
+        
+	* Internationalization features are available for programs
+	* Setup and AUTORUN is not yet fully internationalized
+        * OEM Build is incomplete
+
+2.1.5.503 -- INTERNAL BULID 11-12-2003
+
+	Build test for the lastest lanscsibus, lpx "Enable/Disable Fix"
+	Build procedure reconcilation
+
+2.1.5.502 -- RELEASED AS 2.1.5
+
+	Build for the release for Moritani
+	RELEASE to 2.1.5 to Moritani
+
+2.1.5.501 -- INTERNAL BUILD
+

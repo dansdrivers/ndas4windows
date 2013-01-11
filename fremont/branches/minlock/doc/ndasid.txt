@@ -1,0 +1,68 @@
+
+NDAS ID
+
+Revision
+
+	August 2006, Chesong Lee <cslee@ximeta.com>
+
+NDAS ID is 20 alpha-numeric characters to allow registering a NDAS
+device at a NDAS host. When decrypted, a MAC Address of the NDAS device
+and 4 byte extension fields can be obtained from a NDAS ID. 4-byte
+extention fields contains Vendor ID (VID) and two reserved bytes
+(0xFF,0xFF) and a single random byte (0xCD). Currently, all
+in-production devices are using 0x01 as VID.  This allows that
+multiple NDAS IDs are mapped to a single MAC-address-based NDAS
+device. 
+
+NDAS Sofware for Windows 3.11.1329 or later would make use of multiple
+mappings to identify and impose different functions for select
+vendors. 
+
+For example, Seagate requests restricting use of Seagate NDAS
+enclosure only for Seagate hard drives. To fulfill the request, we
+would assign a different vendor ID and issue NDAS IDs based on that
+VID for Seagate. Also, we would use a different NDAS OEM CODE (aka NDAS
+User Login Password) to the default one.
+
+For this changes, NDAS software implementation for all platforms
+should be changed accordingly.
+
+1. NDAS software should discern each NDAS ID with different vendor
+   IDs. As each vendor ID may have different NDAS OEM CODE, only NDAS
+   ID with a known VID (or feature implemented) should be accepted.
+
+2. If a NDAS ID is valid but VID is unknown to the application, an
+   error message should be such to advise a user to upgrade the
+   software to use a new NDAS ID.
+
+3. It should be avoided to use MAC address for utility
+   applications. In cases that MAC addresses are used, an application
+   should provide a way to specify the vendor ID, either code-based or
+   name-based.
+
+4. Vendor ID specific features should be implemented when VID is
+   incorporated into the NDAS software.
+
+* Default (0x01)
+
+VID        : 0x01
+OEM CODE   : 0xBB 0xEA 0x30 0x15 0x73 0x50 0x4A 0x1F
+Restriction: None
+
+* Seagate (0x41) Implementation
+
+VID        : 0x41
+OEM CODE   : 0x52 0x41 0x27 0x46 0xBC 0x6E 0xA2 0x99
+Restriction: Allows only Seagate Hard Drive
+
+When this VID is used to register a NDAS device to a NDAS host, NDAS
+software must impose the restriction when mounting the device to the
+system. Use Model number field (Word 27-46) in ATA IDENTIFY data to
+identify Seagate products. Model number field starts with 'ST' in
+ASCII for all Seagate models.
+
+In cases that models from different vendors are used, alert a user
+with appropriate error codes or messages.
+
+ATAPI devices may not be used for Seagate models. (Subject to change)
+

@@ -1,0 +1,7 @@
+TARGETNAME=liblfsfiltctl
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+BUILD_PRODUCES=liblfsfiltctl
+
+!include ..\sources.inc

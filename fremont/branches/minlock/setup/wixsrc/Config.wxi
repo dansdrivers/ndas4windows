@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Include>
+
+	<?include ..\ndaswix.wxi?>
+
+	<?ifndef ProductNameTag?>
+	<?define ProductNameTag=""?>
+	<?endif?>
+	
+	<?ifndef NdasMsiProductCode?>
+	<?define NdasMsiProductCode="A12A36D3-ACB7-11D9-8E75-000D614181EB"?>
+	<?endif?>
+
+	<?ifndef NdasMsiUpgradeCode?>
+	<?define NdasMsiUpgradeCode="E86E86BB-051E-4F19-B111-0E5D15E7CDE4"?>
+	<?endif?>
+
+	<?ifndef NdasMsiVersion?>
+	<?error "NdasMsiVersion is not set"?>
+	<!--<?define NdasMsiVersion="3.11.9000.0"?>-->
+	<?endif?>
+
+	<?ifndef ProductVersionSuffix?>
+	<?define ProductVersionSuffix="_$(var.NdasMsiVersion)" ?>
+	<?endif?>
+
+	<?ifndef NdasMsiDisplayVersion?>
+	<?error "NdasMsiDisplayVersion is not set"?>
+	<!--<?define NdasMsiDisplayVersion="3.11-dev"?>-->
+	<?endif?>
+
+	<?ifdef Win64Build?>
+	<?define Win64YesNo="yes"?>
+	<?define PlatformSuffix="_x64"?>
+	<?else?>
+	<?define Win64YesNo="no"?>
+	<?define PlatformSuffix="_x86"?>
+	<?endif?>
+
+	<?ifndef SetupLanguage?>
+	<?define SetupLanguage="en-US"?>
+	<?endif?>
+
+	<!-- language name substitution -->
+	<?if $(var.SetupLanguage)="ENU"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="en-US"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="CHS"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="zh-CN"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="CHT"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="zh-TW"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="DEU"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="de-DE"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="ESN"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="es-ES"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="FRA"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="fr-FR"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="ITA"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="it-IT"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="JPN"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="ja-JP"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="KOR"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="ko-KR"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="PTG"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="pt-PT"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="NEU"?>
+	<?undef SetupLanguage?>
+	<?define SetupLanguage="0"?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="0"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="0"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="0"?>
+	<?endif?>
+	<?ifndef SISCodepage?>
+	<?define SISCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="en-US"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1033"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="zh-CN"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="2052"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="936"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="zh-TW"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1028"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="950"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="de-DE"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1031"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="es-ES"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="3082"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="fr-FR"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1036"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="it-IT"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1040"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="ja-JP"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1041"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="932"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="ko-KR"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1042"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="949"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="pt-PT"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="2070"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="da-DK"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1030"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="nl-NL"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1043"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="nb-NO"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1044"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="sv-SE"?>
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1053"?>
+	<?endif?>
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)="0"?>
+	<?define SetupLanguageSuffix=""?>
+	<?endif?>
+
+	<?if $(var.SetupLanguage)!="0"?>
+	<?define SetupLanguageSuffix="_$(var.SetupLanguage)"?>
+	<?endif?>
+
+	<?ifndef SISPlatforms?>
+	<?ifdef Win64Build?>
+	<?define SISPlatforms="x64"?>
+	<?else?>
+	<?define SISPlatforms="Intel"?>
+	<?endif?>
+	<?endif?>
+
+	<?ifndef TargetProductCode?>
+	<?define TargetProductCode="$(var.NdasMsiProductCode)"?>
+	<?endif?>
+
+	<?ifndef TargetUpgradeCode?>
+	<?define TargetUpgradeCode="$(var.NdasMsiUpgradeCode)"?>
+	<?endif?>
+
+	<?ifndef TargetLanguageName?>
+	<?define TargetLanguageName="English"?>
+	<?endif?>
+
+	<?ifndef TargetLanguage?>
+	<?define TargetLanguage="1033"?>
+	<?endif?>
+
+	<?ifndef TargetCodepage?>
+	<?define TargetCodepage="1252"?>
+	<?endif?>
+
+	<?ifndef SISPlatforms?>
+	<?ifdef Win64Build?>
+	<?define SISPlatforms="x64"?>
+	<?else?>
+	<?define SISPlatforms="Intel"?>
+	<?endif?>
+	<?endif?>
+
+	<?ifndef TargetVersion?>
+	<?define TargetVersion="$(var.NdasMsiVersion)"?>
+	<?endif?>
+
+	<?ifndef TargetDisplayVersion?>
+	<?define TargetDisplayVersion="$(var.NdasMsiDisplayVersion)"?>
+	<?endif?>
+
+	<?ifndef ProductNameSuffix?>
+	<?ifdef NdasMsiProductNameTag?>
+	<?define ProductNameSuffix=" $(var.TargetDisplayVersion) $(var.NdasMsiProductNameTag)"?>
+	<?else?>
+	<?define ProductNameSuffix=" $(var.TargetDisplayVersion)"?>
+	<?endif?>
+	<?endif?>
+
+	<?ifndef SISCodepage?>
+	<?define SISCodepage="$(var.TargetCodepage)"?>
+	<?endif?>
+
+	<?ifndef SISLanguages?>
+	<?define SISLanguages="0"?>
+	<?endif?>
+
+	<?ifndef CompressedPackage?>
+	<?define CompressedPackage="yes"?>
+	<?endif?>
+
+	<?ifndef ShortNames?>
+	<?define ShortNames="no"?>
+	<?endif?>
+
+	<?ifndef SetupDataDir.CustomActionDll?>
+	<?ifdef Win64Build?>
+	<?define SetupDataDir.CustomActionDll="..\..\supplements\ca\amd64"?>
+	<?else?>
+	<?define SetupDataDir.CustomActionDll="..\..\supplements\ca"?>
+	<?endif?>
+	<?endif?>
+
+	<?ifndef SetupDataDir.Ibd?>
+	<?define SetupDataDir.Ibd="..\ibd"?>
+	<?endif?>
+	
+	<?ifndef SetupDataDir.Icon?>
+	<?define SetupDataDir.Icon="..\ibd"?>
+	<?endif?>
+	
+	<?ifndef SetupDataDir.EULA?>
+	<?define SetupDataDir.EULA="..\eula"?>
+	<?endif?>
+
+	<?ifndef EULAFile ?>
+	<?if $(var.SetupLanguage)=0?>
+	<?define EULAFile="eula_en-US.rtf"?>
+	<?else?>
+	<?define EULAFile="eula_$(var.SetupLanguage).rtf"?>
+	<?endif?>
+	<?endif?>
+
+	<?ifndef Win64Build?>
+
+	<!-- i386 -->
+
+	<?define Win32Build = 1?>
+	<?define Win64.YesNo = "no"?>
+	<?define Package.Platforms = "Intel"?>
+	<?define BinPubArch="i386"?>
+
+	<?else?>
+
+	<!-- amd64 -->
+
+	<?ifdef Win32Build ?>
+	<?undef Win32Build ?>
+	<?endif?>
+
+	<?define Win64.YesNo = "yes"?>
+	<?define Package.Platforms = "x64"?>
+	<?define BinPubArch="amd64"?>
+
+	<?endif?>
+
+	<?ifndef BinPubConfig?>
+	<?define BinPubConfig="chk"?>
+	<?endif?>
+
+	<?ifndef SetupFileSource?>
+	<?define SetupFileSource="..\..\..\publish\$(var.BinPubConfig)\$(var.BinPubArch)"?>
+	<?endif?>
+
+	<?ifndef XixfsSetupFileSource?>
+	<?define XixfsSetupFileSource=$(var.SetupFileSource)\xixfs ?>
+	<?endif?>
+
+	<?define media.ndas = 1 ?>
+	<?define media.ndasapp = 2 ?>
+	<?define media.xixfs = 5 ?>
+	<?define media.uxixfs = 6 ?>
+	<?define media.msvcrt = 10 ?>
+	<?define media.msvcp60 = 11 ?>
+
+	<!-- nasty Wix bug that localized strings are not applied in CustomTable/Row/Data -->
+	<?define WixCustomTableLocBug = 1?>
+	
+	<?include ndasxdi.wxi?>
+	<?include componentguid.wxi?>
+	<?include icon.wxi?>
+
+</Include>

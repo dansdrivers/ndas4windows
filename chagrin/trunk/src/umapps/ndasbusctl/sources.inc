@@ -1,0 +1,17 @@
+TARGETNAME=libndasbusctl
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+
+INCLUDES=$(NDAS_INC_PATH)
+C_DEFINES=-DUNICODE -D_UNICODE
+
+!IF $(FREEBUILD)
+!ELSE
+DEBUG_CRTS=1
+!ENDIF
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME).lib}
+
+SOURCES=ndasbusctl.c

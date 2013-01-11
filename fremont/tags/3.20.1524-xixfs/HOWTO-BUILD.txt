@@ -1,0 +1,268 @@
+
+How to build NDAS Software 
+
+Last Updated: 2005-12-16 patria
+
+=====================================================================
+                        PREREQUISITE
+=====================================================================
+
+You need the following component to build the product.
+
+ o Microsoft Platform SDK for Windows Server 2003 SP1 (3790.1830)
+
+   (ISO Image)
+   http://www.microsoft.com/downloads/details.aspx?familyid=D8EECD75-1FC4-49E5-BC66-9DA2B03D9B92
+
+   (Full Version)
+   http://www.microsoft.com/downloads/details.aspx?familyid=EBA0128F-A770-45F1-86F3-7AB010B398A3
+
+   (Web Download)
+   http://www.microsoft.com/downloads/details.aspx?FamilyId=A55B6B43-E24F-4EA3-A93E-40C0EC4F68E5
+
+ o Microsoft Windows Server 2003 SP1 IFS (3790.1830)
+
+   (Not available for the download)
+
+  Following components are required only for the setup and the localization processors
+
+ o Microsoft .NET Framework 1.1
+
+   http://www.microsoft.com/downloads/details.aspx?FamilyId=262D25E3-F589-4842-8157-034D1E7CF3A3
+
+ o Microsoft .NET Framework 1.1 Service Pack 1
+
+   http://www.microsoft.com/downloads/details.aspx?familyid=A8F5654F-088E-40B2-BBDB-A83353618B38
+
+   (For Windows Server 2003)
+
+   http://www.microsoft.com/downloads/details.aspx?familyid=AE7EDEF7-2CB7-4864-8623-A1038563DF23
+
+
+Preconfiguration:
+
+ o Builder Environment Variable
+
+   WNETBASE : IFS Installation Path (e.g. C:\WINDDK\3790.1830)
+
+ o External headers and libraries
+   
+   Extract the external headers and libraries [+] to the
+   XM_VENDOR_PATH.
+
+                i386                      x64 (amd64)
+   ------------------------------------------------------
+   MSVCRT 7.1   crt71.zip                 crt71_amd64.zip
+   ATL 7.1      atl71.zip                 atl71_amd64.zip
+   WTL 7.1      wtl71.zip                 (n/a)   
+   boost 1.33.0 boost_1_33_0-includes.zip (n/a)
+   ------------------------------------------------------
+
+ o External DLLs
+
+   Copy "atlprov.dll" [+] to %WNETBASE%\bin\x86 
+
+ o Build Variables
+
+   The following variables can be either environment variables or
+   variables that is set in "<ndasroot>\src\config.inc".  To use
+   "config.inc", copy "config.in" to "config.inc" and edit it.
+
+   (required)
+
+   XM_VENDOR_PATH : Path to external headers and libraries
+                    (default: none, usually c:\winddk\supplement)
+
+   (optional)
+
+   XM_NTOS_INC_PATH : 
+
+    Path to Windows OS headers 
+    Default: %XM_VENDOR_PATH%\ntoskit
+    Source : \\liah\public\devel\ndasbuild\ntosinc.zip
+
+   PSDK_PATH: 
+
+    Path to Microsoft Platform SDK.
+    Default: %XM_VENDOR_PATH%\psdk
+
+
+   PSDK_INC_PATH: 
+
+    Default: %PSDK_PATH%\include
+
+   PSDK_LIB_PATH: %PSDK_PATH%\lib
+
+    Default: %PSDK_PATH%\lib
+
+   * Variables cannot contain spaces.
+
+     This means you cannot use "C:\Program Files\Microsoft Platform SDK"
+     in PSDK_PATH, PSDK_INC_PATH or PSDK_LIB_PATH. 
+
+     Workaround for this is to make a symbolic link of the actual path.
+     The old way of using a short path has problems with compiling 
+     with attributes (midl invoked by the linker always make use
+     of the actual long path without quotes)
+  
+     The following command will make a symbolic link of
+     %ProgramFiles%\Microsoft SDK at %XM_VENDOR_PATH%\psdk. [+]
+
+     c:\src>linkd.exe "%ProgramFiles%\Microsoft SDK" %XM_VENDOR_PATH%\psdk
+     c:\src>setx PSDK_INC_PATH %XM_VENDOR_PATH%\psdk\include
+     c:\src>setx PSDK_LIB_PATH %XM_VENDOR_PATH%\psdk\lib
+
+=====================================================================
+                           BUILD
+=====================================================================
+
+  * Run 'build_publish.cmd' to rebuild the entire project.
+    Binary files will be placed in publish\{chk,fre}\i386
+
+  * If %XM_SIGNCODE_CMD% is set, digital signatures will be generated
+    by 'mkcat.cmd' after the build is complete
+
+    Official build machine has this environment variable set. For
+    private build machines, you can use this variable to test digital
+    signing process.
+
+  * Run 'build_sdk.cmd' to build the NDAS Software SDK after build_publish
+    is done.
+
+  * "bin\zipbin.cmd" and "bin\zipsdk.cmd" will make zip files for the
+    output such as:
+
+        o dist\ndas-X.YY.ZZZZ-bin.zip
+        o dist\ndas-X.YY.ZZZZ-sdk.zip
+
+=====================================================================
+                    POST BUILD PROCESSES
+=====================================================================
+
+NDAS 3.11.1310 or later replaces old InstallShield-based MSI setup with
+WiX-based MSI setup using Wix toolset [#]. Wix Projects are hosted at
+http://svn.ximeta.local/netdisk/mayfield/wix/{trunk,tags,branches}
+
+For each build wix project is also tagged from from its own trunk.
+
+Refer the Wix Project documentation for more details.
+
+----
+
+Previous project contains the setup project in this tree. Since RXXXX,
+NDAS Setup project is separated into
+
+http://svn/repos/netdisk/mayfield/setup/{trunk,branches,tags} 
+
+Each NDAS software project is linked to the branch in this NDAS Setup
+Project. 
+
+NDAS 3.10.1228 through 3.10.1230 use the following branch:
+
+http://svn/repos/netdisk/mayfield/setup/branches/R1003
+
+NDAS 3.10.1231 use the following branch:
+
+http://svn/repos/netdisk/mayfield/setup/branches/R1003a
+
+NDAS 3.11.1301, 1302, 1310 use the following branch:
+
+http://svn/repos/netdisk/mayfield/setup/branches/R1004
+
+Put the output (fre) from the NDAS Software Project into the Setup
+Project Data directory (ndas-3.XX.XXXX) and run 'createism' and
+'buildsetup' to build the final MSI output file.
+
+[#] Visit http://wix.sourceforge.net for more information.
+
+=====================================================================
+                       BUILD MACHINE
+=====================================================================
+
+* Test Phase
+
+cd /d d:\server\devel\buildsrc\ndas\trunk
+svn update
+build_publish
+build_sdk
+
+cd ..\wix\trunk
+svn update
+del /q .\SourceDir\*.*
+robocopy ..\..\trunk\publish\fre\i386 .\SourceDir /xf *.pdb
+xbuild -cegPwi *
+
+rem Files are available at .\publish\ndas-3.XX.YYYY-x86.msi
+rem Test the output files!
+
+* Official Build
+
+cd /d d:\server\devel\buildsrc\ndas
+svn copy http://svn/repos/netdisk/mayfield/trunk \
+    http://svn/repos/netdisk/mayfield/tags/3.XX.YYYY \
+    -m "Tagged for 3.XX.YYYY"
+svn checkout http://svn/repos/netdisk/mayfield/tags/3.XX.YYYY
+cd 3.XX.YYYY
+build_publish
+build_sdk
+zipbin
+zipsdk
+
+cd ..\wix
+svn copy http://svn/repos/netdisk/mayfield/wix/trunk \
+    http://svn/repos/netdisk/mayfield/wix/tags/3.XX.YYYY
+    -m "Tagged for 3.XX.YYYY"
+svn checkout http://svn/repos/netdisk/mayfield/tags/3.XX.YYYY
+cd 3.XX.YYYY
+del /q .\SourceDir\*.*
+robocopy ..\..\3.XX.YYYY\publish\fre\i386 .\SourceDir /xf *.pdb
+xbuild -cegPwi *
+cd publish
+
+run d:\server\devel\buildsrc\ndas\sympub_ndas.cmd 3.XX.YYYY
+
+============================================================
+                         REVISIONS
+============================================================
+
+2005-12-16 patria
+
+  Updated prerequisites
+
+2005-11-14 patria
+
+  Boost is separated into the externals 
+  
+2005-11-10 hootch
+
+  Added atlprov.dll
+
+2005-11-10 patria
+
+  Added CRT71 headers and libraries
+
+2005-03-29 patria
+    
+  Setup project has been removed from the project source tree.
+
+2004-11-18 patria
+
+  Revised for the new build environment.
+
+2004-08-24 patria
+       
+  Now the whole project is made from build.exe (in DDK).  And the
+  prerequisites are changed.
+       
+2004-05-14 patria
+
+  As of 3.03.1020.0, InstallShield is upgraded to the version 9.0
+  SP1.  Some pre-requisites are changed.
+
+2004-03-08 hootch
+
+  WINHDR.zip is added to the prerequisite components.
+
+2003 patria
+
+  Initial documents

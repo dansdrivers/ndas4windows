@@ -1,0 +1,57 @@
+;
+; Copyright (C) 2006 XIMETA, Inc.
+;
+; ndasport.inf - NDASPORT
+;
+[Version]
+Signature="$Windows NT$"
+Class=System
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
+CatalogFile=ndasport.cat
+Provider=%PROVIDER%
+DriverVer=11/23/2005, 1.0.0.0
+DriverPackageType=PlugAndPlay
+DriverPackageDisplayName=%PackageDisplayName%
+
+[Manufacturer]
+%MANUFACTURER%=NdasPort,NT$ARCH$
+
+[NdasPort.NT$ARCH$]
+%NdasPort.Description%=NdasPort.DDI,root\ndasport
+
+[NdasPort.DDI.NT]
+CopyFiles=NdasPort.Files
+
+[NdasPort.DDI.NT.Services]
+AddService=ndasport,2,NdasPort.ServiceInstall
+
+[NdasPort.Files]
+ndasport.sys
+
+[NdasPort.ServiceInstall]
+DisplayName=%NdasPort.DisplayName%
+ServiceBinary=%12%\ndasport.sys
+ServiceType=1  ;SERVICE_KERNEL_DRIVER
+StartType=3    ;SERVICE_DEMAND_START
+ErrorControl=1 ;SERVICE_ERROR_NORMAL
+
+[DestinationDirs]
+NdasPort.Files=12 ; %SYSTEMROOT%\system32\drivers
+
+[SourceDisksNames]
+1=%DiskId1%
+
+[SourceDisksFiles]
+ndasport.sys=1
+
+[Strings]
+PROVIDER             = "XIMETA, Inc."
+PackageDisplayName   = "NDAS Storage Port Driver"
+MANUFACTURER         = "XIMETA, Inc."
+NdasPort.Description = "NDAS Host Initiator"
+NdasPort.DisplayName = "NDAS Storage Port Driver"
+DiskId1              = "NDAS Device Driver Installation Disk"
+
+;Alternative Class
+;Class=SCSIAdapter
+;ClassGuid={4d36e97b-e325-11ce-bfc1-08002be10318}

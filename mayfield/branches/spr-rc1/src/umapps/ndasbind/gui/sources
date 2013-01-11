@@ -1,0 +1,113 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=ndasbind
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+C_DEFINES=/DUNICODE /D_UNICODE
+# /D__NDASBIND_DISABLE_RAID4__
+
+INCLUDES=$(NDAS_INC_PATH);$(NDAS_PUBLIC_INC_PATH);$(PSDK_INC_PATH);..\common;..\resource;
+RCOPTIONS=/i $(NDAS_SDK_INC_PATH)
+USECXX_FLAG=/Tp
+USER_C_FLAGS=/EHsc /Wp64
+USE_RTTI=1
+USE_STL=1
+LINK_TIME_CODE_GENERATION=1
+
+UMENTRY=wwinmain
+UMTYPE=windows
+
+BUILD_CONSUMES=nbcommon
+BUILD_CONSUMES=hash
+BUILD_CONSUMES=des
+BUILD_CONSUMES=ndasuser
+BUILD_CONSUMES=ndasidenc
+BUILD_CONSUMES=ndasid
+BUILD_CONSUMES=ndasop
+BUILD_CONSUMES=lpxtrans
+BUILD_CONSUMES=nhixnotify
+BUILD_CONSUMES=scrc32
+BUILD_CONSUMES=ndascomm
+
+TARGETLIBS=\
+	$(NDAS_LIB_PATH)\hash.lib \
+	$(NDAS_LIB_PATH)\des.lib \
+	$(NDAS_LIB_PATH)\ndasuser.lib \
+	$(NDAS_LIB_PATH)\ndasid.lib \
+	$(NDAS_LIB_PATH)\ndasidenc.lib \
+	$(NDAS_LIB_PATH)\ndasop.lib \
+	$(NDAS_LIB_PATH)\lpxtrans.lib \
+	$(NDAS_LIB_PATH)\nhixnotify.lib \
+	$(NDAS_LIB_PATH)\scrc32.lib \
+	$(NDAS_PUBLIC_LIB_PATH)\ndasop_dll.lib \
+	$(NDAS_PUBLIC_LIB_PATH)\ndascomm_dll.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\gdi32.lib \
+	$(PSDK_LIB_PATH)\advapi32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(PSDK_LIB_PATH)\shell32.lib \
+	$(PSDK_LIB_PATH)\comctl32.lib \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\crypt32.lib \
+	$(PSDK_LIB_PATH)\version.lib \
+	$(PSDK_LIB_PATH)\uuid.lib
+
+#DELAYLOAD_SUPPORTED=1
+#DELAYLOAD=ndasuser.dll
+#DELAYLOAD_UNLOAD_SUPPORT=1
+
+X_USE_WTL_71=1
+USE_STATIC_ATL=1
+
+!INCLUDE "xmatl.mk"
+
+MSC_WARNING_LEVEL=-W3 -WX
+#MSC_OPTIMIZATION=/Oitb2
+#MSC_OPTIMIZATION=/Od /Oi
+
+PRECOMPILED_INCLUDE=stdafx.h
+PRECOMPILED_CXX=1
+
+SOURCES=\
+	ndasbind.rc \
+	nbdev.cpp \
+	muisel.cpp \
+	adminprivs.cpp \
+	regconf.cpp \
+	appconf.cpp \
+	argv.cpp \
+	nbaboutdlg.cpp \
+	nbbindwiz.cpp \
+	nblistviewctrl.cpp \
+	nbmainfrm.cpp \
+	nbdevicelistdlg.cpp \
+	nbtreeview.cpp \
+	apperrdlg.cpp \
+	ndasbind.cpp \
+	singleinst.cpp
+
+#	nblistview.cpp \
+#	nbpropertypages.cpp \
+#	nbpropertysheet.cpp \
+#	nbseldiskdlg.cpp \
+#	nbselremirdlg.cpp \
+#	nbtextprogbar.cpp \
+#	nbuihandler.cpp \
+#	nbunbinddlg.cpp \
+#	nbrecoverdlgs.cpp \

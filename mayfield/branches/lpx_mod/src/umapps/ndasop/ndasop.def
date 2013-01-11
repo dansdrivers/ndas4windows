@@ -1,0 +1,8 @@
+LIBRARY	ndasop
+
+EXPORTS
+  NdasOpGetAPIVersion
+  NdasOpBind
+  NdasOpReadDIB
+  NdasOpIsBitmapClean
+  NdasOpGetLastWrttenSectorInfo

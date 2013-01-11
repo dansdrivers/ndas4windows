@@ -1,0 +1,64 @@
+
+Key : HKLM\Software\NDAS\ndassvc
+
+
+--------------------------------------------------------------------------
+General
+--------------------------------------------------------------------------
+
+* Maximum NDAS Device Discover Command Tryout on failure
+
+  Value : MaxHeartbeatFailure (REG_DWORD)
+  Data  : 1 - 65535 (default: 10)
+
+*
+
+  Value : MaxUnitDeviceIdentifyFailure (REG_DWORD)
+  Data  : 1 - MAX (default: 4, 0 means to use default)
+
+*
+
+  Value : UnitDeviceIdentifyFailureRetryInterval (REG_DWORD)
+  Data  : 0 - 300000 (2500) (ms)
+
+*
+
+  Value : NoForceSafeRemoval (REG_DWORD as BOOL)
+  Data  : 0 or 1 (default: 0)
+ 
+--------------------------------------------------------------------------
+LFS Write Sharing Directive
+--------------------------------------------------------------------------
+
+* Do not use LFSFilter write sharing 
+
+  Value : NoPSWriteShare (REG_DWORD as BOOL)
+  Data  : 0 or 1 (default: 0)
+
+* Maximum NDFS Compatibility Check Tryout on failure
+
+  Value : MaxWriteAccessCheck (REG_DWORD)
+  Data  : 0 - 60 (default: 10)
+
+--------------------------------------------------------------------------
+Logical Device Reconnection
+--------------------------------------------------------------------------
+
+* Override Logical Device Reconnection Parameter
+
+  Value : OverrideLogDevReconnect (REG_DWORD as BOOL)
+  Data  : 0 or 1 (default: 0)
+
+  The following values are effective only if 
+  OverrideLogDevReconnect is set:
+
+* Maximum Reconnection Attempt Count
+
+  Value : LogDevReconnect (REG_DWORD)
+  Data  : 0 to 19 (default: 19)
+
+* Reconnection Attempt Interval 
+
+  Value : LogDevReconnectInterval (REG_DWORD)
+  Data  : 0 - 60000 (default: 3000) (ms)
+

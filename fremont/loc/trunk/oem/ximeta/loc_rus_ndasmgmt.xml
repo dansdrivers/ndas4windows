@@ -1,0 +1,1603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="ndasmgmt" version="3.41.1610" lang="rus" oem="ximeta" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/09/00">
+    <base><![CDATA[ndasmgmt]]></base>
+    <translation><![CDATA[ndasmgmt]]></translation>
+  </string>
+  <string id="/STR/64/14">
+    <base><![CDATA[In the future, do not show me this dialog box.]]></base>
+    <translation><![CDATA[Больше не показывать это диалоговое окно.]]></translation>
+  </string>
+  <string id="/STR/126/05">
+    <base><![CDATA[NDAS Software is configured to reject suspend/hibernation request when devices are mounted.\r\nYou can change this behavior from Options - Advanced.]]></base>
+    <translation><![CDATA[Текущая настройка программного обеспечения NDAS не позволяет переход в режим ожидания в случае, если в системе есть подключенные устройства NDAS.\r\nВы можете изменить эти настройки воспользовавшись меню Опции - Расширенные возможности.]]></translation>
+  </string>
+  <string id="/STR/126/06">
+    <base><![CDATA[Mount (&Read-only)]]></base>
+    <translation><![CDATA[Подключить (&Только чтение)]]></translation>
+  </string>
+  <string id="/STR/126/07">
+    <base><![CDATA[Mount (Read/&Write)]]></base>
+    <translation><![CDATA[Подключить (Чтение/запись)]]></translation>
+  </string>
+  <string id="/STR/126/08">
+    <base><![CDATA[Dismo&unt]]></base>
+    <translation><![CDATA[Отключить]]></translation>
+  </string>
+  <string id="/STR/126/09">
+    <base><![CDATA[General]]></base>
+    <translation><![CDATA[Общие]]></translation>
+  </string>
+  <string id="/STR/126/10">
+    <base><![CDATA[An NDAS device with the name you specified is already registered.\r\nSpecify a different NDAS device name.]]></base>
+    <translation><![CDATA[Устройство NDAS с таким именем уже зарегистрировано в системе.\r\nПожалуйста, выберите другое имя.]]></translation>
+  </string>
+  <string id="/STR/126/11">
+    <base><![CDATA[An error occurred while checking duplicate NDAS device name.]]></base>
+    <translation><![CDATA[Во время проверки имени устройства возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/126/12">
+    <base><![CDATA[[%1!d!] %2!s!]]></base>
+    <translation><![CDATA[%1!d!] %2!s!]]></translation>
+  </string>
+  <string id="/STR/126/13">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation><![CDATA[Менеджер управления NDAS устройствами]]></translation>
+  </string>
+  <string id="/STR/126/14">
+    <base><![CDATA[Dismount &All]]></base>
+    <translation><![CDATA[Отключить &все]]></translation>
+  </string>
+  <string id="/STR/126/15">
+    <base><![CDATA[MAC Address]]></base>
+    <translation><![CDATA[MAC адрес]]></translation>
+  </string>
+  <string id="/STR/127/00">
+    <base><![CDATA[This application requires administrative privileges.\r\nLog on as a user in Administrators Group and run this application again.]]></base>
+    <translation><![CDATA[Это приложение требует прав администратора.\r\nВойдите в систему как пользователь с правами администратора и запустите приложение еще раз.]]></translation>
+  </string>
+  <string id="/STR/127/01">
+    <base><![CDATA[Loading NDASUSER.DLL failed.\r\nPlease check the installation of the software.]]></base>
+    <translation><![CDATA[Загрузка файла NDASUSER.DLL невозможна.\r\nПожалуйста, проверьте установку программного обеспечения.]]></translation>
+  </string>
+  <string id="/STR/127/02">
+    <base><![CDATA[Window creation failed. Possibly system is running out of memory.\r\nClose other applications and try again.]]></base>
+    <translation><![CDATA[Открытие окна невозможно. Вероятная причина - отсутствие необходимого объема памяти.\r\nЗакройте приложения и попытайтесь запустить приложение снова.]]></translation>
+  </string>
+  <string id="/STR/127/03">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation><![CDATA[Установлена несовместимая версия файла NDASUSER.DLL.\r\nПожалуйста, проверьте установку программного обеспечения.]]></translation>
+  </string>
+  <string id="/STR/127/04">
+    <base><![CDATA[Unknown]]></base>
+    <translation><![CDATA[Неизвестен]]></translation>
+  </string>
+  <string id="/STR/127/05">
+    <base><![CDATA[KB]]></base>
+    <translation><![CDATA[Кб]]></translation>
+  </string>
+  <string id="/STR/127/06">
+    <base><![CDATA[MB]]></base>
+    <translation><![CDATA[Мб]]></translation>
+  </string>
+  <string id="/STR/127/07">
+    <base><![CDATA[GB]]></base>
+    <translation><![CDATA[Гб]]></translation>
+  </string>
+  <string id="/STR/127/08">
+    <base><![CDATA[TB]]></base>
+    <translation><![CDATA[Тб]]></translation>
+  </string>
+  <string id="/STR/127/09">
+    <base><![CDATA[Not Available]]></base>
+    <translation><![CDATA[Не доступен]]></translation>
+  </string>
+  <string id="/STR/127/10">
+    <base><![CDATA[Not Available]]></base>
+    <translation><![CDATA[Не доступен]]></translation>
+  </string>
+  <string id="/STR/127/11">
+    <base><![CDATA[NDAS Registration Files (*.ndas)]]></base>
+    <translation><![CDATA[Регистрационные файлы NDAS *.ndas]]></translation>
+  </string>
+  <string id="/STR/127/12">
+    <base><![CDATA[Encrypted Disk with %1!s! (%2!d! bits) R%3!X!.%4!X!]]></base>
+    <translation><![CDATA[Диск зашифрован %1!s! (%2!d! bits) R%3!X!.%4!X!]]></translation>
+  </string>
+  <string id="/STR/127/13">
+    <base><![CDATA[AES]]></base>
+    <translation><![CDATA[AES]]></translation>
+  </string>
+  <string id="/STR/127/14">
+    <base><![CDATA[Simple]]></base>
+    <translation><![CDATA[Просто]]></translation>
+  </string>
+  <string id="/STR/127/15">
+    <base><![CDATA[None]]></base>
+    <translation><![CDATA[Отсутствует]]></translation>
+  </string>
+  <string id="/STR/128/00">
+    <base><![CDATA[Unknown Encryption (%1!04X!)]]></base>
+    <translation><![CDATA[Неизвестный метод шифрования (%1!04X!)]]></translation>
+  </string>
+  <string id="/STR/128/01">
+    <base><![CDATA[NDAS Registration Files (*.nda)]]></base>
+    <translation><![CDATA[Регистрационные файлы NDAS *.nda]]></translation>
+  </string>
+  <string id="/STR/128/02">
+    <base><![CDATA[All Files (*.*)]]></base>
+    <translation><![CDATA[Все файлы (*.*)]]></translation>
+  </string>
+  <string id="/STR/128/03">
+    <base><![CDATA[*.ndas]]></base>
+    <translation><![CDATA[*.ndas]]></translation>
+  </string>
+  <string id="/STR/128/04">
+    <base><![CDATA[*.nda]]></base>
+    <translation><![CDATA[*.nda]]></translation>
+  </string>
+  <string id="/STR/128/05">
+    <base><![CDATA[*.*]]></base>
+    <translation><![CDATA[*.*]]></translation>
+  </string>
+  <string id="/STR/128/06">
+    <base><![CDATA[An error occurred during saving the registration.]]></base>
+    <translation><![CDATA[Во время сохранения данных регистрации возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/128/07">
+    <base><![CDATA[,\_]]></base>
+    <translation><![CDATA[,\_]]></translation>
+  </string>
+  <string id="/STR/128/08">
+    <base><![CDATA[The NDAS device is already registered.]]></base>
+    <translation><![CDATA[NDAS устройство уже зарегистрировано.]]></translation>
+  </string>
+  <string id="/STR/128/09">
+    <base><![CDATA['%1!s!' is registered successfully.\r\nClick the taskbar icon to use the registered NDAS device.]]></base>
+    <translation><![CDATA['%1!s!' успешно зарегистрировано.\r\nЩелкните по иконке в панели задач для того, чтобы начать использование зарегистрированного устройства.]]></translation>
+  </string>
+  <string id="/STR/128/10">
+    <base><![CDATA[Registered]]></base>
+    <translation><![CDATA[Зарегистрировано]]></translation>
+  </string>
+  <string id="/STR/128/11">
+    <base><![CDATA[Invalid]]></base>
+    <translation><![CDATA[Неисправно]]></translation>
+  </string>
+  <string id="/STR/128/12">
+    <base><![CDATA[New]]></base>
+    <translation><![CDATA[Новый]]></translation>
+  </string>
+  <string id="/STR/128/13">
+    <base><![CDATA[Device ID: %1!s!-%2!s!-%3!s!-%4!s!\r\nWrite Key: %5!s!\r\n%6!s!]]></base>
+    <translation><![CDATA[Идентификатор устройства: %1!s!-%2!s!-%3!s!-%4!s!\r\nКлюч записи: %5!s!\r\n%6!s!]]></translation>
+  </string>
+  <string id="/STR/128/14">
+    <base><![CDATA[Name]]></base>
+    <translation><![CDATA[Имя]]></translation>
+  </string>
+  <string id="/STR/128/15">
+    <base><![CDATA[Status]]></base>
+    <translation><![CDATA[Статус]]></translation>
+  </string>
+  <string id="/STR/129/00">
+    <base><![CDATA[Error (Code: %1!d!)]]></base>
+    <translation><![CDATA[Ошибка (Код: %1!d!)]]></translation>
+  </string>
+  <string id="/STR/129/01">
+    <base><![CDATA[An error occurred while reading the file '%1!s!'.]]></base>
+    <translation><![CDATA[Возникла ошибка во время чтения файла '%1!s!'.]]></translation>
+  </string>
+  <string id="/STR/129/02">
+    <base><![CDATA[RW]]></base>
+    <translation><![CDATA[Чтение/запись]]></translation>
+  </string>
+  <string id="/STR/129/03">
+    <base><![CDATA[RO]]></base>
+    <translation><![CDATA[Только чтение]]></translation>
+  </string>
+  <string id="/STR/129/04">
+    <base><![CDATA[PIO]]></base>
+    <translation><![CDATA[PIO]]></translation>
+  </string>
+  <string id="/STR/129/05">
+    <base><![CDATA[DMA]]></base>
+    <translation><![CDATA[DMA]]></translation>
+  </string>
+  <string id="/STR/129/06">
+    <base><![CDATA[UDMA]]></base>
+    <translation><![CDATA[UDMA]]></translation>
+  </string>
+  <string id="/STR/129/07">
+    <base><![CDATA[LBA]]></base>
+    <translation><![CDATA[LBA]]></translation>
+  </string>
+  <string id="/STR/129/08">
+    <base><![CDATA[LBA48]]></base>
+    <translation><![CDATA[LBA48]]></translation>
+  </string>
+  <string id="/STR/129/09">
+    <base><![CDATA[Shared RW]]></base>
+    <translation><![CDATA[Общий доступ на чтение/запись]]></translation>
+  </string>
+  <string id="/STR/129/10">
+    <base><![CDATA[Shared RW *]]></base>
+    <translation><![CDATA[Общий доступ на чтение/запись *]]></translation>
+  </string>
+  <string id="/STR/129/11">
+    <base><![CDATA[Exclusive RW]]></base>
+    <translation><![CDATA[Особое право на чтение/запись]]></translation>
+  </string>
+  <string id="/STR/129/12">
+    <base><![CDATA[Dismounting the NDAS device failed.]]></base>
+    <translation><![CDATA[Невозможно отключить NDAS устройство.]]></translation>
+  </string>
+  <string id="/STR/129/13">
+    <base><![CDATA[Dismount devices asynchronously]]></base>
+    <translation><![CDATA[Отключить устройства асинхронно]]></translation>
+  </string>
+  <string id="/STR/129/14">
+    <base><![CDATA[Status]]></base>
+    <translation><![CDATA[Статус]]></translation>
+  </string>
+  <string id="/STR/129/15">
+    <base><![CDATA[Logical Unit]]></base>
+    <translation><![CDATA[Logical Unit]]></translation>
+  </string>
+  <string id="/STR/130/00">
+    <base><![CDATA[Mounting (RO)]]></base>
+    <translation><![CDATA[Подключение (Только чтение)]]></translation>
+  </string>
+  <string id="/STR/130/01">
+    <base><![CDATA[Mounting (RW)]]></base>
+    <translation><![CDATA[Подключение (Чтение/запись)]]></translation>
+  </string>
+  <string id="/STR/130/02">
+    <base><![CDATA[Dismounting (RO)]]></base>
+    <translation><![CDATA[Отключение (Только чтение)]]></translation>
+  </string>
+  <string id="/STR/130/03">
+    <base><![CDATA[Dismounting (RW)]]></base>
+    <translation><![CDATA[Отключение (Чтение/запись)]]></translation>
+  </string>
+  <string id="/STR/130/04">
+    <base><![CDATA[Failed]]></base>
+    <translation><![CDATA[Сбой]]></translation>
+  </string>
+  <string id="/STR/130/05">
+    <base><![CDATA[Dismounted]]></base>
+    <translation><![CDATA[Отключено]]></translation>
+  </string>
+  <string id="/STR/130/06">
+    <base><![CDATA[Revision]]></base>
+    <translation><![CDATA[Пересмотр]]></translation>
+  </string>
+  <string id="/STR/130/07">
+    <base><![CDATA[The NDAS disk is successfully mounted, but no available partitions are detected on the disk. You have to run "Disk Management" to create or update partitions in order to use the disk.]]></base>
+    <translation><![CDATA[NDAS устройство успешно подключено, но на диске обнаружены недоступные разделы. Запустите "Управление дисками" для того, чтобы создать или изменить разделы и приступить к использованию устройства.]]></translation>
+  </string>
+  <string id="/STR/130/08">
+    <base><![CDATA[The NDAS disk is mounted.]]></base>
+    <translation><![CDATA[NDAS устройство подключено.]]></translation>
+  </string>
+  <string id="/STR/130/09">
+    <base><![CDATA[Launch Disk Management]]></base>
+    <translation><![CDATA[Запустить Менеджер управления NDAS устройствами]]></translation>
+  </string>
+  <string id="/STR/130/10">
+    <base><![CDATA[Applications are using the NDAS device. Close any programs that might be using it, and then try again.]]></base>
+    <translation><![CDATA[NDAS устройство используется другой программой, закройте все приложения, которые могут иметь доступ к устройству и повторите попытку.]]></translation>
+  </string>
+  <string id="/STR/188/09">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation><![CDATA[http://www.ximeta.com]]></translation>
+  </string>
+  <string id="/STR/188/10">
+    <base><![CDATA[&Add]]></base>
+    <translation><![CDATA[&Добавить]]></translation>
+  </string>
+  <string id="/STR/188/11">
+    <base><![CDATA[The host (%1!s!) is requesting the Write Access of "%2!s!'s".\r\nDo you want to accept the request and dismount the NDAS device?]]></base>
+    <translation><![CDATA[Хост (%1!s!) требует доступ на запись "%2!s!'s".\r\nВы хотите принять этот запрос и отключить устройство NDAS?]]></translation>
+  </string>
+  <string id="/STR/188/12">
+    <base><![CDATA[Verdana]]></base>
+    <translation><![CDATA[Verdana]]></translation>
+  </string>
+  <string id="/STR/188/13">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[12]]></translation>
+  </string>
+  <string id="/STR/188/14">
+    <base><![CDATA[Connection to the following NDAS devices has been lost.\r\n%1!s!]]></base>
+    <translation><![CDATA[Соединение с данным NDAS устройством потеряно.\r\n%1!s!]]></translation>
+  </string>
+  <string id="/STR/188/15">
+    <base><![CDATA[NDAS Device Disconnected]]></base>
+    <translation><![CDATA[Устройство NDAS отключено]]></translation>
+  </string>
+  <string id="/STR/189/00">
+    <base><![CDATA[Connection to the following NDAS devices are restored.\r\n%1!s!]]></base>
+    <translation><![CDATA[Соединение с данным NDAS устройством возобновлено.\r\n%1!s!]]></translation>
+  </string>
+  <string id="/STR/189/02">
+    <base><![CDATA[Connection to the following devices are unstable.\r\nThe system is reconnecting to the devices...\r\n%1!s!]]></base>
+    <translation><![CDATA[Соединение с данным устройством неустойчиво.\r\nСистема производит переподключение устройства...\r\n%1!s!]]></translation>
+  </string>
+  <string id="/STR/189/04">
+    <base><![CDATA[Are you sure you want to exit from NDAS Device Management?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите выйти из Менеджера управления NDAS устройствами?]]></translation>
+  </string>
+  <string id="/STR/189/05">
+    <base><![CDATA[Are you sure you want to dismount the NDAS device?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите отключить NDAS устройство?]]></translation>
+  </string>
+  <string id="/STR/189/06">
+    <base><![CDATA[Are you sure you want to dismount all NDAS devices?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите отключить все NDAS устройства?]]></translation>
+  </string>
+  <string id="/STR/189/07">
+    <base><![CDATA[Are you sure you want to dismount %1!s!?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите отключить %1!s!?]]></translation>
+  </string>
+  <string id="/STR/189/08">
+    <base><![CDATA[Are you sure you want to remove the %1!s!?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите удалить %1!s!?]]></translation>
+  </string>
+  <string id="/STR/189/09">
+    <base><![CDATA[Are you sure you want to deregister "%1!s!"?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите удалить регистрацию "%1!s!"?]]></translation>
+  </string>
+  <string id="/STR/189/10">
+    <base><![CDATA[Do you want to mount this device in degraded mode?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите подключить данное устройство в режиме с ограниченной функциональностью?]]></translation>
+  </string>
+  <string id="/STR/189/11">
+    <base><![CDATA[%1!s! Properties]]></base>
+    <translation><![CDATA[%1!s! Свойства]]></translation>
+  </string>
+  <string id="/STR/189/12">
+    <base><![CDATA[Online]]></base>
+    <translation><![CDATA[В сети]]></translation>
+  </string>
+  <string id="/STR/189/13">
+    <base><![CDATA[Online *]]></base>
+    <translation><![CDATA[В сети *]]></translation>
+  </string>
+  <string id="/STR/189/14">
+    <base><![CDATA[Deactivated]]></base>
+    <translation><![CDATA[Деактивирован]]></translation>
+  </string>
+  <string id="/STR/189/15">
+    <base><![CDATA[Offline]]></base>
+    <translation><![CDATA[Не в сети]]></translation>
+  </string>
+  <string id="/STR/190/00">
+    <base><![CDATA[Error]]></base>
+    <translation><![CDATA[Ошибка]]></translation>
+  </string>
+  <string id="/STR/190/01">
+    <base><![CDATA[Mounted (RO)]]></base>
+    <translation><![CDATA[Подключен (Только чтение)]]></translation>
+  </string>
+  <string id="/STR/190/02">
+    <base><![CDATA[Mounted (RW)]]></base>
+    <translation><![CDATA[Подключен (Чтение/запись)]]></translation>
+  </string>
+  <string id="/STR/190/03">
+    <base><![CDATA[Unknown]]></base>
+    <translation><![CDATA[Неизвестен]]></translation>
+  </string>
+  <string id="/STR/190/04">
+    <base><![CDATA[Hardware]]></base>
+    <translation><![CDATA[Аппаратное обеспечение]]></translation>
+  </string>
+  <string id="/STR/190/05">
+    <base><![CDATA[Max LUs]]></base>
+    <translation><![CDATA[Max LUs]]></translation>
+  </string>
+  <string id="/STR/190/06">
+    <base><![CDATA[Max Transfer Blocks]]></base>
+    <translation><![CDATA[Max Transfer Blocks]]></translation>
+  </string>
+  <string id="/STR/190/07">
+    <base><![CDATA[Max Unit Devices]]></base>
+    <translation><![CDATA[Max Unit Devices]]></translation>
+  </string>
+  <string id="/STR/190/08">
+    <base><![CDATA[Command Processing Slots]]></base>
+    <translation><![CDATA[Командно обрабатываемые слоты]]></translation>
+  </string>
+  <string id="/STR/190/09">
+    <base><![CDATA[The dismounting may fail if applications are accessing the NDAS device.]]></base>
+    <translation><![CDATA[Отключение NDAS устройства невозможно, если какие-либо приложения имеют к нему доступ.]]></translation>
+  </string>
+  <string id="/STR/190/10">
+    <base><![CDATA[Version]]></base>
+    <translation><![CDATA[Версия]]></translation>
+  </string>
+  <string id="/STR/190/11">
+    <base><![CDATA[Device Type]]></base>
+    <translation><![CDATA[Тип устройства]]></translation>
+  </string>
+  <string id="/STR/190/12">
+    <base><![CDATA[Firmware Revision]]></base>
+    <translation><![CDATA[Версия прошивки]]></translation>
+  </string>
+  <string id="/STR/190/13">
+    <base><![CDATA[LBA Mode]]></base>
+    <translation><![CDATA[Режим LBA]]></translation>
+  </string>
+  <string id="/STR/190/14">
+    <base><![CDATA[Model]]></base>
+    <translation><![CDATA[Модель]]></translation>
+  </string>
+  <string id="/STR/190/15">
+    <base><![CDATA[Serial Number]]></base>
+    <translation><![CDATA[Серийный номер]]></translation>
+  </string>
+  <string id="/STR/191/00">
+    <base><![CDATA[Unit Device %1!d!]]></base>
+    <translation><![CDATA[Устройство %1!d!]]></translation>
+  </string>
+  <string id="/STR/191/01">
+    <base><![CDATA[Transfer Mode]]></base>
+    <translation><![CDATA[Режим доступа]]></translation>
+  </string>
+  <string id="/STR/191/02">
+    <base><![CDATA[Registration is finished successfully and the device is now ready to use.]]></base>
+    <translation><![CDATA[Регистрация успешно завершена и устройство готово к использованию.]]></translation>
+  </string>
+  <string id="/STR/191/03">
+    <base><![CDATA[Please wait while checking the NDAS device status...]]></base>
+    <translation><![CDATA[Пожалуйста, подождите пока проверяется статус NDAS устройства...]]></translation>
+  </string>
+  <string id="/STR/191/04">
+    <base><![CDATA[&Disable]]></base>
+    <translation><![CDATA[&Отключить]]></translation>
+  </string>
+  <string id="/STR/191/05">
+    <base><![CDATA[Enter the NDAS device ID to register.]]></base>
+    <translation><![CDATA[Введите идентификационный номер устройства NDAS для регистрации.]]></translation>
+  </string>
+  <string id="/STR/191/06">
+    <base><![CDATA[NDAS device ID]]></base>
+    <translation><![CDATA[Введите идентификационный номер устройства NDAS для регистрации.]]></translation>
+  </string>
+  <string id="/STR/191/07">
+    <base><![CDATA[Specify the name for the NDAS device.]]></base>
+    <translation><![CDATA[Введите имя для устройства NDAS.]]></translation>
+  </string>
+  <string id="/STR/191/08">
+    <base><![CDATA[NDAS Device Name]]></base>
+    <translation><![CDATA[Имя устройства NDAS]]></translation>
+  </string>
+  <string id="/STR/191/09">
+    <base><![CDATA[The Wizard will guide you through the NADS device registration. Before continuing to the next step, please do the following:\r\n\r\n- Connect the NDAS device to the network.\r\n- Turn on the NDAS device.\r\n\r\nTo continue, click "Next".]]></base>
+    <translation><![CDATA[Мастер поможет Вам зарегистрировать NDAS устройство. Для перехода к следующему этапу, пожалуйста, сделайте следующее:\r\n\r\n- Присоедините устройство к сети.\r\n- Включите NDAS устройство.\r\n\r\nДля продолжения нажмите Далее.]]></translation>
+  </string>
+  <string id="/STR/191/10">
+    <base><![CDATA[NDAS Device Registration Wizard]]></base>
+    <translation><![CDATA[Мастер регистрации устройств NDAS]]></translation>
+  </string>
+  <string id="/STR/191/11">
+    <base><![CDATA[Do you want to mount this NDAS device now?]]></base>
+    <translation><![CDATA[Вы хотите подключить устройство прямо сейчас?]]></translation>
+  </string>
+  <string id="/STR/191/12">
+    <base><![CDATA[Mount NDAS Device]]></base>
+    <translation><![CDATA[Подключить устройство]]></translation>
+  </string>
+  <string id="/STR/191/13">
+    <base><![CDATA[NDAS Device Registration Wizard]]></base>
+    <translation><![CDATA[Мастер регистрации устройств NDAS]]></translation>
+  </string>
+  <string id="/STR/191/14">
+    <base><![CDATA[This RAID will run in degraded mode due to a missing/defective member and it may cause irreconcilable RAID status.\r\n(Use NDAS Bind management for more information)]]></base>
+    <translation><![CDATA[RAID массив запущен в режиме с ограниченной функциональностью из-за потерянного/неисправного элемента, это может быть причиной неверного статуса RAID.\r\n(Воспользуйтесь NDAS Bind Managment для получения полной информации)]]></translation>
+  </string>
+  <string id="/STR/191/15">
+    <base><![CDATA[An error has occurred while setting up a Write Key.]]></base>
+    <translation><![CDATA[Во время ввода ключа, позволяющего запись, возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/00">
+    <base><![CDATA[An error occurred while disabling an NDAS device.]]></base>
+    <translation><![CDATA[Во время отключения устройства возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/01">
+    <base><![CDATA[An error occurred while enabling an NDAS device.]]></base>
+    <translation><![CDATA[Во время включения устройства возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/02">
+    <base><![CDATA[An error occurred while mounting an NDAS device as Read-Only Mode.]]></base>
+    <translation><![CDATA[Во время подключения устройства в режиме чтения возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/03">
+    <base><![CDATA[An error occurred while mounting an NDAS device as Read/Write Mode.]]></base>
+    <translation><![CDATA[Во время подключения устройства в режиме чтения/записи возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/04">
+    <base><![CDATA[Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!]]></base>
+    <translation><![CDATA[Устройство: NDAS 0x%1!04X!\r\nКод ошибки: %2!u! (0x%2!04X!)\r\n%3!s!]]></translation>
+  </string>
+  <string id="/STR/192/05">
+    <base><![CDATA[An error occurred during registration.]]></base>
+    <translation><![CDATA[Во время регистрации возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/06">
+    <base><![CDATA[An error occurred while removing a Write Key.]]></base>
+    <translation><![CDATA[Во время удаления ключа, позволяющего запись, возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/07">
+    <base><![CDATA[An error occurred while renaming an NDAS device.]]></base>
+    <translation><![CDATA[Во время переименования NDAS устройства возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/08">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation><![CDATA[Код ошибки: %1!u! (0x%1!04X!)\r\n%2!s!]]></translation>
+  </string>
+  <string id="/STR/192/09">
+    <base><![CDATA[NDAS Device Management Error]]></base>
+    <translation><![CDATA[Ошибка в Менеджере управления NDAS устройствами]]></translation>
+  </string>
+  <string id="/STR/192/10">
+    <base><![CDATA[An error occurred while dismounting an NDAS device.]]></base>
+    <translation><![CDATA[Во время отключения устройства NDAS возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/11">
+    <base><![CDATA[An error occurred while deregistering an NDAS device.]]></base>
+    <translation><![CDATA[Во время удаления регистрации устройства NDAS возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/12">
+    <base><![CDATA[An error occurred while updating an NDAS device list.]]></base>
+    <translation><![CDATA[Во время обновления списка NDAS устройств возникла ошибка.]]></translation>
+  </string>
+  <string id="/STR/192/13">
+    <base><![CDATA[NDAS device ID is 20 characters long and it is composed of alphanumeric characters!\r\n]]></base>
+    <translation><![CDATA[Идентификационный номер NDAS устройства состоит из 20 буквенно-цифровых символов!\r\n]]></translation>
+  </string>
+  <string id="/STR/192/14">
+    <base><![CDATA[Invalid Device ID!]]></base>
+    <translation><![CDATA[Неверный идентификационный номер!]]></translation>
+  </string>
+  <string id="/STR/192/15">
+    <base><![CDATA[Unknown Host]]></base>
+    <translation><![CDATA[Неизвестный хост]]></translation>
+  </string>
+  <string id="/STR/193/00">
+    <base><![CDATA[Automatic]]></base>
+    <translation><![CDATA[Автоматически]]></translation>
+  </string>
+  <string id="/STR/193/01">
+    <base><![CDATA[Changing the user interface language requires application restart. Do you want to restart the application now?]]></base>
+    <translation><![CDATA[Изменение языка пользовательского интерфейса требует перезапуск приложения. Вы хотите перезапустить приложение сейчас?]]></translation>
+  </string>
+  <string id="/STR/193/02">
+    <base><![CDATA[An error occurred while resetting the NDAS device.]]></base>
+    <translation><![CDATA[Во время перезапуска NDAS устройства произошла ошибка]]></translation>
+  </string>
+  <string id="/STR/193/11">
+    <base><![CDATA[Unavailable]]></base>
+    <translation><![CDATA[Недоступен]]></translation>
+  </string>
+  <string id="/STR/193/14">
+    <base><![CDATA[Mounted in Read-only mode]]></base>
+    <translation><![CDATA[Подключен в режиме только чтение]]></translation>
+  </string>
+  <string id="/STR/193/15">
+    <base><![CDATA[Mounted in Read/Write mode]]></base>
+    <translation><![CDATA[Подключен в режиме чтение/запись]]></translation>
+  </string>
+  <string id="/STR/194/00">
+    <base><![CDATA[Mounting]]></base>
+    <translation><![CDATA[Подключение]]></translation>
+  </string>
+  <string id="/STR/194/01">
+    <base><![CDATA[Not Mountable]]></base>
+    <translation><![CDATA[Подключение невозможно]]></translation>
+  </string>
+  <string id="/STR/194/02">
+    <base><![CDATA[Unknown Status (0x%1!08X!)]]></base>
+    <translation><![CDATA[Статус не определен (0x%1!08X!)]]></translation>
+  </string>
+  <string id="/STR/194/03">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation><![CDATA[Не подключен]]></translation>
+  </string>
+  <string id="/STR/194/04">
+    <base><![CDATA[Dismounting]]></base>
+    <translation><![CDATA[Отключение]]></translation>
+  </string>
+  <string id="/STR/194/05">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation><![CDATA[Объединенные диски]]></translation>
+  </string>
+  <string id="/STR/194/06">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation><![CDATA[Флэш накопитель]]></translation>
+  </string>
+  <string id="/STR/194/08">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation><![CDATA[DVD привод]]></translation>
+  </string>
+  <string id="/STR/194/09">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation><![CDATA[Зеркальные диски]]></translation>
+  </string>
+  <string id="/STR/194/10">
+    <base><![CDATA[MO Drive]]></base>
+    <translation><![CDATA[МО привод]]></translation>
+  </string>
+  <string id="/STR/194/11">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation><![CDATA[Основной диск]]></translation>
+  </string>
+  <string id="/STR/194/12">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation><![CDATA[Неизвестный тип (0x%1!08X!)]]></translation>
+  </string>
+  <string id="/STR/194/13">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation><![CDATA[Виртуальный DVD привод]]></translation>
+  </string>
+  <string id="/STR/194/14">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation><![CDATA[Менеджер управления NDAS устройствами]]></translation>
+  </string>
+  <string id="/STR/194/15">
+    <base><![CDATA[Online]]></base>
+    <translation><![CDATA[В сети]]></translation>
+  </string>
+  <string id="/STR/195/00">
+    <base><![CDATA[Deactivated]]></base>
+    <translation><![CDATA[Деактивированный]]></translation>
+  </string>
+  <string id="/STR/195/01">
+    <base><![CDATA[Offline]]></base>
+    <translation><![CDATA[Не в сети]]></translation>
+  </string>
+  <string id="/STR/195/02">
+    <base><![CDATA[Unknown]]></base>
+    <translation><![CDATA[Неизвестно]]></translation>
+  </string>
+  <string id="/STR/195/03">
+    <base><![CDATA[NDAS Device %1!d!]]></base>
+    <translation><![CDATA[Устройство NDAS %1!d!]]></translation>
+  </string>
+  <string id="/STR/195/04">
+    <base><![CDATA[(No NDAS Device)]]></base>
+    <translation><![CDATA[(Устройство NDAS отсутствует)]]></translation>
+  </string>
+  <string id="/STR/195/05">
+    <base><![CDATA[Do not show the confirmation dialog on exit]]></base>
+    <translation><![CDATA[Не показывать окно подтверждения при выходе]]></translation>
+  </string>
+  <string id="/STR/195/06">
+    <base><![CDATA[Show NDAS Device Status text]]></base>
+    <translation><![CDATA[Показывать сообщения о состоянии NDAS устройства]]></translation>
+  </string>
+  <string id="/STR/195/07">
+    <base><![CDATA[Show Dismount All command]]></base>
+    <translation><![CDATA[Показывать команду Отключить все]]></translation>
+  </string>
+  <string id="/STR/195/08">
+    <base><![CDATA[Options]]></base>
+    <translation><![CDATA[Опции]]></translation>
+  </string>
+  <string id="/STR/195/09">
+    <base><![CDATA[Confirmation]]></base>
+    <translation><![CDATA[Подтверждение]]></translation>
+  </string>
+  <string id="/STR/195/10">
+    <base><![CDATA[Menu]]></base>
+    <translation><![CDATA[Меню]]></translation>
+  </string>
+  <string id="/STR/195/11">
+    <base><![CDATA[You have successfully completed the NDAS device Registration Wizard.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation><![CDATA[Вы успешно завершили регистрацию NDAS устройства.\r\n\r\nЧтобы закрыть это окно, нажмите Завершить.]]></translation>
+  </string>
+  <string id="/STR/195/12">
+    <base><![CDATA[You have successfully registered the NDAS device. \r\n\r\nHowever, the NDAS device is not found and cannot be connected at this time. Please check the NDAS device connection.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation><![CDATA[Вы успешно зарегистрировали NDAS устройство. \r\n\r\nОднако, устройство NDAS не обнаружено и не может быть подключено прямо сейчас. Пожалуйста, проверьте соединение с зарегистрированным NDAS устройством.\r\n\r\nЧтобы закрыть это окно нажмите Завершить.]]></translation>
+  </string>
+  <string id="/STR/195/13">
+    <base><![CDATA[You have successfully registered and the NDAS device is connected. \r\n\r\nHowever, there is no mountable NDAS device found at this time. Please check the status from the task bar icon menu.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation><![CDATA[Вы успешно завершили регистрацию подключенного NDAS устройства. \r\n\r\nОднако, на данный момент в системе нет подключаемого устройства. Пожалуйста, проверьте статус иконки на панели задач.\r\n\r\nЧтобы закрыть это окно нажмите Завершить.]]></translation>
+  </string>
+  <string id="/STR/195/14">
+    <base><![CDATA[Remo&ve]]></base>
+    <translation><![CDATA[Удалить]]></translation>
+  </string>
+  <string id="/STR/195/15">
+    <base><![CDATA[Are you sure you want to remove the Write Key?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите удалить ключ, позволяющий запись на устройство?]]></translation>
+  </string>
+  <string id="/STR/196/00">
+    <base><![CDATA[Remove Write Key]]></base>
+    <translation><![CDATA[Удалить ключ, позволяющий запись на устройство]]></translation>
+  </string>
+  <string id="/STR/196/01">
+    <base><![CDATA[Would you like to request the Read/Write access of the NDAS device from other hosts?]]></base>
+    <translation><![CDATA[Вы хотите запросить доступ на Чтение/Запись от других хостов?]]></translation>
+  </string>
+  <string id="/STR/196/02">
+    <base><![CDATA[&Properties...]]></base>
+    <translation><![CDATA[&Свойства...]]></translation>
+  </string>
+  <string id="/STR/196/03">
+    <base><![CDATA[Please wait while connecting to the host...]]></base>
+    <translation><![CDATA[Пожалуйста, подождите пока идет установление соединения...]]></translation>
+  </string>
+  <string id="/STR/196/04">
+    <base><![CDATA[Waiting for a response...]]></base>
+    <translation><![CDATA[Ожидание ответа...]]></translation>
+  </string>
+  <string id="/STR/196/05">
+    <base><![CDATA[Unit Device information is not available]]></base>
+    <translation><![CDATA[Информация об устройстве недоступна]]></translation>
+  </string>
+  <string id="/STR/196/06">
+    <base><![CDATA[Other]]></base>
+    <translation><![CDATA[Другое]]></translation>
+  </string>
+  <string id="/STR/196/07">
+    <base><![CDATA[Mounted]]></base>
+    <translation><![CDATA[Подключен]]></translation>
+  </string>
+  <string id="/STR/196/08">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation><![CDATA[Не подключен]]></translation>
+  </string>
+  <string id="/STR/196/09">
+    <base><![CDATA[You cannot mount this device as Read/Write anymore without the Write Key.]]></base>
+    <translation><![CDATA[Вы не можете подключить устройство в режиме Чтение/Запись без ключа, позволяющего запись на устройство.]]></translation>
+  </string>
+  <string id="/STR/196/10">
+    <base><![CDATA[Unknown (%1!d!)]]></base>
+    <translation><![CDATA[Неизвестен (%1!d!)]]></translation>
+  </string>
+  <string id="/STR/196/11">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation><![CDATA[CD/DVD привод]]></translation>
+  </string>
+  <string id="/STR/196/12">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation><![CDATA[Флэш накопитель]]></translation>
+  </string>
+  <string id="/STR/196/13">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation><![CDATA[Жесткий диск]]></translation>
+  </string>
+  <string id="/STR/196/14">
+    <base><![CDATA[MO Drive]]></base>
+    <translation><![CDATA[MO привод]]></translation>
+  </string>
+  <string id="/STR/196/15">
+    <base><![CDATA[Unknown Type (%1!08X!)]]></base>
+    <translation><![CDATA[Неизвестный тип(%1!08X!)]]></translation>
+  </string>
+  <string id="/STR/197/00">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation><![CDATA[CD/DVD привод]]></translation>
+  </string>
+  <string id="/STR/197/01">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation><![CDATA[Жесткий Диск]]></translation>
+  </string>
+  <string id="/STR/197/02">
+    <base><![CDATA[Member of Aggregated Disk]]></base>
+    <translation><![CDATA[Элемент объединенных дисков]]></translation>
+  </string>
+  <string id="/STR/197/03">
+    <base><![CDATA[Member of Mirrored Disk (Primary)]]></base>
+    <translation><![CDATA[Элемент зеркальных дисков (Первичный)]]></translation>
+  </string>
+  <string id="/STR/197/04">
+    <base><![CDATA[Member of Mirrored Disk (Secondary)]]></base>
+    <translation><![CDATA[Элемент зеркальных дисков (Вторичный)]]></translation>
+  </string>
+  <string id="/STR/197/05">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation><![CDATA[Жесткий диск]]></translation>
+  </string>
+  <string id="/STR/197/06">
+    <base><![CDATA[Disk Drive (Unrecognized Type %1!04X!)]]></base>
+    <translation><![CDATA[Жесткий Диск (Тип не определен %1!04X!)]]></translation>
+  </string>
+  <string id="/STR/197/07">
+    <base><![CDATA[Unknown Type (0x%1!04X!)]]></base>
+    <translation><![CDATA[Неизвестный тип (0x%1!04X!)]]></translation>
+  </string>
+  <string id="/STR/197/08">
+    <base><![CDATA[Unknown Unit Device Type]]></base>
+    <translation><![CDATA[Тип устройства не определен]]></translation>
+  </string>
+  <string id="/STR/197/09">
+    <base><![CDATA[&Deregister]]></base>
+    <translation><![CDATA[Удаление регистрации]]></translation>
+  </string>
+  <string id="/STR/197/10">
+    <base><![CDATA[None]]></base>
+    <translation><![CDATA[Отсутствует]]></translation>
+  </string>
+  <string id="/STR/197/11">
+    <base><![CDATA[Present]]></base>
+    <translation><![CDATA[Присутствует]]></translation>
+  </string>
+  <string id="/STR/197/12">
+    <base><![CDATA[Do not show a confirmation dialog on removing the Write Key]]></base>
+    <translation><![CDATA[Не показывать окно подтверждения при удалении ключа, разрешающего запись на устройство]]></translation>
+  </string>
+  <string id="/STR/197/13">
+    <base><![CDATA[Do not show a confirmation dialog on deregistering an NDAS device]]></base>
+    <translation><![CDATA[Не показывать окно подтверждения при удалении регистрации устройства]]></translation>
+  </string>
+  <string id="/STR/197/14">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting an NDAS device]]></base>
+    <translation><![CDATA[Не показывать окно подтверждения при отключении NDAS устройства]]></translation>
+  </string>
+  <string id="/STR/197/15">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting all of the NDAS devices]]></base>
+    <translation><![CDATA[Не показывать окно подтверждения при отключении всех NDAS устройств]]></translation>
+  </string>
+  <string id="/STR/198/00">
+    <base><![CDATA[Use Wizard for Registration]]></base>
+    <translation><![CDATA[Использование Мастера регистрации]]></translation>
+  </string>
+  <string id="/STR/198/01">
+    <base><![CDATA[NDAS Device Management is running now.\r\nClick here to register a new NDAS Device to your system.]]></base>
+    <translation><![CDATA[Управление устройствами NDAS запущено.\r\nНажмите здесь для регистрации нового устройства в системе.]]></translation>
+  </string>
+  <string id="/STR/198/02">
+    <base><![CDATA[NDAS Device Management is running]]></base>
+    <translation><![CDATA[Менеджер управления NDAS устройствами запущен]]></translation>
+  </string>
+  <string id="/STR/198/03">
+    <base><![CDATA[NDAS Device Management is already running.\r\nClick the task bar icon to show the menu such that you can access the features.]]></base>
+    <translation><![CDATA[Менеджер управления NDAS устройствами уже запущен.\r\nНажмите на иконку, расположенную на панели задач для того, чтобы воспользоваться доступными функциями.]]></translation>
+  </string>
+  <string id="/STR/198/04">
+    <base><![CDATA[NDAS Device Management is already running]]></base>
+    <translation><![CDATA[Менеджер управления NDAS устройствами уже запущен]]></translation>
+  </string>
+  <string id="/STR/198/05">
+    <base><![CDATA[Access]]></base>
+    <translation><![CDATA[Доступ]]></translation>
+  </string>
+  <string id="/STR/198/06">
+    <base><![CDATA[Hostname]]></base>
+    <translation><![CDATA[Имя соединения]]></translation>
+  </string>
+  <string id="/STR/198/07">
+    <base><![CDATA[Network Address]]></base>
+    <translation><![CDATA[Сетевой адрес]]></translation>
+  </string>
+  <string id="/STR/198/08">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d!]]></base>
+    <translation><![CDATA[[%1!d!] %2!s!:%3!d!]]]></translation>
+  </string>
+  <string id="/STR/198/09">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Not registered)]]></base>
+    <translation><![CDATA[[%1!d!] %2!s!:%3!d! (Не зарегистрирован)]]></translation>
+  </string>
+  <string id="/STR/198/10">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Unavailable)]]></base>
+    <translation><![CDATA[[%1!d!] %2!s!:%3!d! (Недоступен)]]></translation>
+  </string>
+  <string id="/STR/198/11">
+    <base><![CDATA[Please wait while mounting a requested NDAS device...]]></base>
+    <translation><![CDATA[Пожалуйста, подождите. Пока подключается необходимое NDAS устройство...]]></translation>
+  </string>
+  <string id="/STR/198/12">
+    <base><![CDATA[Please wait while dismounting a requested NDAS device...]]></base>
+    <translation><![CDATA[Пожалуйста, подождите. Отключается указанное NDAS устройство...]]></translation>
+  </string>
+  <string id="/STR/198/13">
+    <base><![CDATA[The new user interface language will be applied when you restart the application.]]></base>
+    <translation><![CDATA[Новый пользовательский интерфейс будет использован при следующем запуске приложения.]]></translation>
+  </string>
+  <string id="/STR/198/14">
+    <base><![CDATA[Suspend/Hibernation Support]]></base>
+    <translation><![CDATA[Поддержка режима ожидания]]></translation>
+  </string>
+  <string id="/STR/198/15">
+    <base><![CDATA[Allow suspend/hibernation]]></base>
+    <translation><![CDATA[Разрешить режим ожидания]]></translation>
+  </string>
+  <string id="/STR/199/00">
+    <base><![CDATA[NDAS Device Management is running now.\r\nClick the task bar icon to show the menu such that you can access the features.]]></base>
+    <translation><![CDATA[Управление NDAS устройствами теперь запущено.\r\nНажмите на иконку, расположенную на панели задач, чтобы воспользоваться доступными функциями.]]></translation>
+  </string>
+  <string id="/STR/199/01">
+    <base><![CDATA[Deny suspend/hibernation if there are mounted devices]]></base>
+    <translation><![CDATA[Запретить переход в режим ожидания, если к системе подключены NDAS устройства]]></translation>
+  </string>
+  <string id="/STR/199/02">
+    <base><![CDATA[Allowing suspend/hibernation may cause a data corruption and the device may not be available on resuming in multi-write mode.\r\nAre you sure you want to enable this feature?]]></base>
+    <translation><![CDATA[Разрешение режима ожидания может вызвать повреждение данных, а также невозможность использования устройства в режиме записи многими пользователями при выходе из режима ожидания.\r\nВы уверены, что хотите воспользоваться этим свойством?]]></translation>
+  </string>
+  <string id="/STR/199/03">
+    <base><![CDATA[&Activate]]></base>
+    <translation><![CDATA[&Активировать]]></translation>
+  </string>
+  <string id="/STR/199/04">
+    <base><![CDATA[[%1!d!] %2!s! (Unavailable)]]></base>
+    <translation><![CDATA[[%1!d!] %2!s! (Недоступен)]]></translation>
+  </string>
+  <string id="/STR/199/05">
+    <base><![CDATA[Are you sure you want to deactivate this NDAS device?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите деактивировать NDAS устройство?]]></translation>
+  </string>
+  <string id="/STR/199/06">
+    <base><![CDATA[Are you sure you want to reset the connection to this NDAS device?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите переустановить соединение с данным устройством?]]></translation>
+  </string>
+  <string id="/STR/199/07">
+    <base><![CDATA[A member of RAID is inaccessible or not configured correctly. RAID system will be running in degraded mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation><![CDATA[Элемент RAID массива недоступен или неправильно сконфигурирован. RAID массив будет работать в режиме с ограниченной функциональностью. Воспользуйтесь NDAS Bind Management для получения большей информации.\r\n%1!s!]]></translation>
+  </string>
+  <string id="/STR/199/08">
+    <base><![CDATA[The NDAS Device is running in degraded mode]]></base>
+    <translation><![CDATA[Устройство NDAS работает в режиме с ограниченной функциональностью]]></translation>
+  </string>
+  <string id="/STR/199/09">
+    <base><![CDATA[Component]]></base>
+    <translation><![CDATA[Компонент]]></translation>
+  </string>
+  <string id="/STR/199/10">
+    <base><![CDATA[Version]]></base>
+    <translation><![CDATA[Версия]]></translation>
+  </string>
+  <string id="/STR/199/11">
+    <base><![CDATA[NDAS Device status]]></base>
+    <translation><![CDATA[Статус NDAS устройства]]></translation>
+  </string>
+  <string id="/STR/199/12">
+    <base><![CDATA[NDAS Device is running in normal status\r\n%1!s!]]></base>
+    <translation><![CDATA[Устройство NDAS работает в нормальном режиме\r\n%1!s!]]></translation>
+  </string>
+  <string id="/STR/199/13">
+    <base><![CDATA[The RAID is now running in recovery mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation><![CDATA[RAID массив запущен в режиме восстановления. Воспользуйтесь NDAS Bind Management для получения большей информации.\r\n%1!s!]]></translation>
+  </string>
+  <string id="/STR/199/14">
+    <base><![CDATA[Connection(s) to one or more NDAS device(s) has been recovered.\r\n%1!s!]]></base>
+    <translation><![CDATA[Соединения с одним или несколькими NDAS устройствами были восстановлены.\r\n%1!s!]]></translation>
+  </string>
+  <string id="/STR/199/15">
+    <base><![CDATA[The RAID is now fully recovered.\r\n%1!s!]]></base>
+    <translation><![CDATA[RAID массив полностью восстановлен.\r\n%1!s!]]></translation>
+  </string>
+  <string id="/STR/200/00">
+    <base><![CDATA[[%1!d!] %2!s! (Not registered)]]></base>
+    <translation><![CDATA[[%1!d!] %2!s! (Не зарегистрирован)]]></translation>
+  </string>
+  <string id="/STR/200/01">
+    <base><![CDATA[Re&set]]></base>
+    <translation><![CDATA[Перезапустить]]></translation>
+  </string>
+  <string id="/STR/200/02">
+    <base><![CDATA[The RAID is in failure state. Use NDAS Bind Management tool for more information\r\n%1!s!]]></base>
+    <translation><![CDATA[RAID массив поврежден. Воспользуйтесь NDAS Bind Management для получения большей информации\r\n%1!s!]]></translation>
+  </string>
+  <string id="/STR/200/03">
+    <base><![CDATA[After deactivating, you can reactivate this device from the menu.]]></base>
+    <translation><![CDATA[После деактивации, Вы можете активировать устройство через меню.]]></translation>
+  </string>
+  <string id="/STR/200/04">
+    <base><![CDATA[Shared-write mode cannot be used at this time. There are another NDAS host using this device in a non-shared write mode or an incompatible shared-write mode.]]></base>
+    <translation><![CDATA[Совместный режим записи в настоящий момент не может быть задействован. В сети находятся компьютеры, которые используют NDAS устройство в режиме не позволяющем совместную запись.]]></translation>
+  </string>
+  <string id="/STR/200/05">
+    <base><![CDATA[An error occurred while mounting an NDAS device.\r\nDo you want to proceed mounting?]]></base>
+    <translation><![CDATA[Во время подключения NDAS устройства произошла ошибка.\r\nВы хотите продолжить процесс подключения?]]></translation>
+  </string>
+<string id="/STR/200/06">
+<base><![CDATA[Ndas Pnp Support]]></base>
+<translation><![CDATA[NDAS PNP поддержки]]></translation>
+</string>
+<string id="/STR/200/07">
+<base><![CDATA[Allow Ndas Pnp]]></base>
+<translation><![CDATA[Разрешить NDAS PNP]]></translation>
+</string>
+<string id="/STR/200/08">
+<base><![CDATA[Deny Ndas Pnp]]></base>
+<translation><![CDATA[Запретить NDAS PNP]]></translation>
+</string>
+  <string id="/STR/251/02">
+    <base><![CDATA[NDAS Device Management\r\nNDAS Service is not available.]]></base>
+    <translation><![CDATA[Менеджер управления NDAS устройствами\r\nNDAS сервис недоступен.]]></translation>
+  </string>
+  <string id="/STR/251/12">
+    <base><![CDATA[Connecting]]></base>
+    <translation><![CDATA[Соединение]]></translation>
+  </string>
+  <string id="/STR/257/04">
+    <base><![CDATA[Disk (RAID-0)]]></base>
+    <translation><![CDATA[Диск (RAID-0)]]></translation>
+  </string>
+  <string id="/STR/257/05">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation><![CDATA[Зеркальный диск (RAID-1) Rev.1]]></translation>
+  </string>
+  <string id="/STR/257/08">
+    <base><![CDATA[Disk (RAID-4) Rev.1]]></base>
+    <translation><![CDATA[Диск (RAID-4) Rev.1]]></translation>
+  </string>
+  <string id="/STR/257/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation><![CDATA[Зеркальный диск (RAID-1) Rev.2]]></translation>
+  </string>
+  <string id="/STR/257/11">
+    <base><![CDATA[Disk (RAID-4) Rev.2]]></base>
+    <translation><![CDATA[Диск (RAID-4) Rev.2]]></translation>
+  </string>
+  <string id="/STR/257/14">
+    <base><![CDATA[Member of Striped Disk (RAID-0)]]></base>
+    <translation><![CDATA[Элемент расщепленных дисков (RAID-0)]]></translation>
+  </string>
+  <string id="/STR/257/15">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation><![CDATA[Элемент зеркальных дисков (RAID-1) Rev.1]]></translation>
+  </string>
+  <string id="/STR/258/02">
+    <base><![CDATA[Member of RAID-4 Disk Rev. 1]]></base>
+    <translation><![CDATA[Элемент RAID-4 массива Rev. 1]]></translation>
+  </string>
+  <string id="/STR/258/04">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation><![CDATA[Элемент зеркального массива (RAID-1) Rev.2]]></translation>
+  </string>
+  <string id="/STR/258/05">
+    <base><![CDATA[Member of RAID-4 Disk Rev.2]]></base>
+    <translation><![CDATA[Элемент RAID-4 массива Rev.2]]></translation>
+  </string>
+  <string id="/STR/258/08">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation><![CDATA[Элемент зеркальных дисков (RAID-1) Rev.3]]></translation>
+  </string>
+  <string id="/STR/258/09">
+    <base><![CDATA[Member of RAID-4 Disk Rev.3]]></base>
+    <translation><![CDATA[Элемент RAID-4 массива Rev.3]]></translation>
+  </string>
+  <string id="/STR/258/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation><![CDATA[Зеркальный диск (RAID-1) Rev.3]]></translation>
+  </string>
+  <string id="/STR/258/11">
+    <base><![CDATA[Disk (RAID-4) Rev.3]]></base>
+    <translation><![CDATA[Диск (RAID-4) Rev.3]]></translation>
+  </string>
+  <string id="/STR/258/12">
+    <base><![CDATA[Missing member]]></base>
+    <translation><![CDATA[Отсутствующий элемент массива]]></translation>
+  </string>
+  <string id="/STR/258/13">
+    <base><![CDATA[Migration is required. Use NDAS Bind management to migrate.]]></base>
+    <translation><![CDATA[Необходим перенос. Воспользуйтесь NDAS Bind Management для внесения изменений.]]></translation>
+  </string>
+  <string id="/STR/258/14">
+    <base><![CDATA[Conflicting RAID information. Use NDAS Bind management to resolve conflicts.]]></base>
+    <translation><![CDATA[Конфликт с конфигураций RAID. Воспользуйтесь NDAS Bind Management чтобы решить его.]]></translation>
+  </string>
+  <string id="/STR/258/15">
+    <base><![CDATA[Mountable in degraded mode]]></base>
+    <translation><![CDATA[Возможно подключение в режиме с ограниченной функциональностью]]></translation>
+  </string>
+  <string id="/STR/259/00">
+    <base><![CDATA[Do not show a warning dialog when mounting RAID in degraded mode]]></base>
+    <translation><![CDATA[Не показывать окно с предупреждением при подключении устройств в режиме с ограниченной функциональностью]]></translation>
+  </string>
+  <string id="/STR/259/01">
+    <base><![CDATA[Member of RAID-5 Disk]]></base>
+    <translation><![CDATA[Элемент диска (RAID-5)]]></translation>
+  </string>
+  <string id="/STR/259/02">
+    <base><![CDATA[Disk (RAID-5)]]></base>
+    <translation><![CDATA[Диск (RAID-5)]]></translation>
+  </string>
+  <string id="/STR/307/05">
+    <base><![CDATA[Please wait while checking for a software update...]]></base>
+    <translation><![CDATA[Пожалуйста, подождите пока идет поиск обновлений программного обеспечения...]]></translation>
+  </string>
+  <string id="/STR/307/06">
+    <base><![CDATA[An error occurred while checking a software update.]]></base>
+    <translation><![CDATA[Во время проверки обновлений программного обеспечения произошла ошибка.]]></translation>
+  </string>
+  <string id="/STR/313/14">
+    <base><![CDATA[Mounting the NDAS device...]]></base>
+    <translation><![CDATA[Подключение NDAS устройства...]]></translation>
+  </string>
+  <string id="/STR/313/15">
+    <base><![CDATA[Dismounting the NDAS device...]]></base>
+    <translation><![CDATA[Отключение NDAS устройства...]]></translation>
+  </string>
+  <string id="/STR/625/15">
+    <base><![CDATA[English]]></base>
+    <translation><![CDATA[Русский]]></translation>
+  </string>
+  <string id="/STR/757/04">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[OK]]></translation>
+  </string>
+  <string id="/STR/757/05">
+    <base><![CDATA[&Yes]]></base>
+    <translation><![CDATA[&Да]]></translation>
+  </string>
+  <string id="/STR/757/06">
+    <base><![CDATA[&No]]></base>
+    <translation><![CDATA[&Нет]]></translation>
+  </string>
+  <string id="/STR/757/07">
+    <base><![CDATA[&Retry]]></base>
+    <translation><![CDATA[&Повторить]]></translation>
+  </string>
+  <string id="/STR/757/08">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[&Отменить]]></translation>
+  </string>
+  <string id="/STR/757/09">
+    <base><![CDATA[&Close]]></base>
+    <translation><![CDATA[&Закрыть]]></translation>
+  </string>
+  <string id="/STR/757/10">
+    <base><![CDATA[See &details >>]]></base>
+    <translation><![CDATA[Показать &подробности]]></translation>
+  </string>
+  <string id="/STR/757/11">
+    <base><![CDATA[Hide &details <<]]></base>
+    <translation><![CDATA[Скрыть &подробности]]></translation>
+  </string>
+  <string id="/DLG/301">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation><![CDATA[О программном обеспечении NDAS]]></translation>
+  </string>
+  <string id="/DLG/301/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[ОК]]></translation>
+  </string>
+  <string id="/DLG/301/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation><![CDATA[Программное обеспечение NDAS]]></translation>
+  </string>
+  <string id="/DLG/301/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation><![CDATA[Версия %1!s!]]></translation>
+  </string>
+  <string id="/DLG/301/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation><![CDATA[http://www.ximeta.com]]></translation>
+  </string>
+  <string id="/DLG/301/04">
+    <base><![CDATA[Copyright (c) 2002-2008 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+    <translation><![CDATA[Copyright © 2002-2008 XIMETA, Inc.\r\nВсе права защищены.]]></translation>
+  </string>
+  <string id="/DLG/301/06">
+    <base><![CDATA[Components]]></base>
+    <translation><![CDATA[Компоненты]]></translation>
+  </string>
+  <string id="/DLG/301/08">
+    <base><![CDATA[Check for &Updates]]></base>
+    <translation><![CDATA[&Обновить]]></translation>
+  </string>
+  <string id="/DLG/302">
+    <base><![CDATA[Enter the Write Key]]></base>
+    <translation><![CDATA[Введите ключ на запись]]></translation>
+  </string>
+  <string id="/DLG/302/01">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[ОК]]></translation>
+  </string>
+  <string id="/DLG/302/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Отменить]]></translation>
+  </string>
+  <string id="/DLG/302/05">
+    <base><![CDATA[Device Name:]]></base>
+    <translation><![CDATA[Имя устройства]]></translation>
+  </string>
+  <string id="/DLG/302/06">
+    <base><![CDATA[Device ID:]]></base>
+    <translation><![CDATA[Идентификатор:]]></translation>
+  </string>
+  <string id="/DLG/302/07">
+    <base><![CDATA[Write Key:]]></base>
+    <translation><![CDATA[Ключ на запись:]]></translation>
+  </string>
+  <string id="/DLG/306">
+    <base><![CDATA[General]]></base>
+    <translation><![CDATA[Общие]]></translation>
+  </string>
+  <string id="/DLG/306/00">
+    <base><![CDATA[Device Name:]]></base>
+    <translation><![CDATA[Имя устройства:]]></translation>
+  </string>
+  <string id="/DLG/306/02">
+    <base><![CDATA[&Rename]]></base>
+    <translation><![CDATA[Новое имя]]></translation>
+  </string>
+  <string id="/DLG/306/03">
+    <base><![CDATA[Device ID:]]></base>
+    <translation><![CDATA[Идентификатор:]]></translation>
+  </string>
+  <string id="/DLG/306/05">
+    <base><![CDATA[Write Key:]]></base>
+    <translation><![CDATA[Ключ на запись:]]></translation>
+  </string>
+  <string id="/DLG/306/07">
+    <base><![CDATA[&Add]]></base>
+    <translation><![CDATA[Добавить]]></translation>
+  </string>
+  <string id="/DLG/306/08">
+    <base><![CDATA[Status:]]></base>
+    <translation><![CDATA[Статус:]]></translation>
+  </string>
+  <string id="/DLG/306/10">
+    <base><![CDATA[Unit Device Information]]></base>
+    <translation><![CDATA[Информация об устройстве:]]></translation>
+  </string>
+  <string id="/DLG/306/14">
+    <base><![CDATA[Status]]></base>
+    <translation><![CDATA[Статус]]></translation>
+  </string>
+  <string id="/DLG/306/16">
+    <base><![CDATA[Capacity]]></base>
+    <translation><![CDATA[Емкость]]></translation>
+  </string>
+  <string id="/DLG/306/18">
+    <base><![CDATA[Read-Only Access]]></base>
+    <translation><![CDATA[Режим Только чтение]]></translation>
+  </string>
+  <string id="/DLG/306/20">
+    <base><![CDATA[Read/Write Access]]></base>
+    <translation><![CDATA[Режим Чтение/запись]]></translation>
+  </string>
+  <string id="/DLG/306/22">
+    <base><![CDATA[Logical Device Information:]]></base>
+    <translation><![CDATA[Информация о логическом устройстве]]></translation>
+  </string>
+  <string id="/DLG/307">
+    <base><![CDATA[Hosts]]></base>
+    <translation><![CDATA[Подключения]]></translation>
+  </string>
+  <string id="/DLG/307/01">
+    <base><![CDATA[The following hosts are using this NDAS device.\r\nSome information may not be available.]]></base>
+    <translation><![CDATA[Следующие хосты используют NDAS диск.\r\nНекоторая информация может быть недоступна.]]></translation>
+  </string>
+  <string id="/DLG/307/02">
+    <base><![CDATA[Click here to refresh the list.]]></base>
+    <translation><![CDATA[Нажмите здесь для обновления списка.]]></translation>
+  </string>
+  <string id="/DLG/308">
+    <base><![CDATA[Hardware]]></base>
+    <translation><![CDATA[Аппаратное обеспечение]]></translation>
+  </string>
+  <string id="/DLG/308/00">
+    <base><![CDATA[Hardware Information about your NDAS device]]></base>
+    <translation><![CDATA[Информация о техническом обеспечении NDAS устройства]]></translation>
+  </string>
+  <string id="/DLG/310/00">
+    <base><![CDATA[Completing the NDAS Device Registration Wizard]]></base>
+    <translation><![CDATA[Завершение работы Мастера регистрации NDAS устройств]]></translation>
+  </string>
+  <string id="/DLG/310/02">
+    <base><![CDATA[Click here to save as a file.]]></base>
+    <translation><![CDATA[Нажмите здесь, чтобы сохранить данные регистрации в файл.]]></translation>
+  </string>
+  <string id="/DLG/310/03">
+    <base><![CDATA[Optionally, you can save the registration to the file for registering from other computers.]]></base>
+    <translation><![CDATA[Вы можете сохранить данные регистрации в файл для упрощения процесса регистрации на других компьютерах.]]></translation>
+  </string>
+  <string id="/DLG/311/00">
+    <base><![CDATA[To register the NDAS device, please enter the NDAS device ID. The ID and Write Key are located on the bottom of the NDAS device.\r\n\r\nNDAS device ID is composed of 20 characters.]]></base>
+    <translation><![CDATA[Для регистрации NDAS устройства, пожалуйста, введите идентификационный номер. Идентификационный номер и ключ для доступа на запись находятся на нижней грани NDAS диска ]]></translation>
+  </string>
+  <string id="/DLG/311/01">
+    <base><![CDATA[Please enter the NDAS device ID.]]></base>
+    <translation><![CDATA[Пожалуйста, введите идентификационный номер.]]></translation>
+  </string>
+  <string id="/DLG/311/06">
+    <base><![CDATA[Write Key is needed for Read/Write mode. It is composed of 5 characters.]]></base>
+    <translation><![CDATA[Ключ на запись необходим для подключения устройства в режиме чтение/запись. Он состоит из 5 символов.]]></translation>
+  </string>
+  <string id="/DLG/311/08">
+    <base><![CDATA[Click Next when you finish.\r\nIf the NDAS device ID and/or the Write Key is invalid, Next will not be enabled.]]></base>
+    <translation><![CDATA[По окончании нажмите Далее.\r\nЕсли идентификационный номер или ключ на запись неверны, кнопка Далее будет неактивна.]]></translation>
+  </string>
+  <string id="/DLG/311/09">
+    <base><![CDATA[Please enter the Write Key. (Optional)]]></base>
+    <translation><![CDATA[Пожалуйста, введите ключ, разрешающий запись на диск. (Опционально)]]></translation>
+  </string>
+  <string id="/DLG/313/00">
+    <base><![CDATA[Please choose a name for the NDAS device. This name will be used to identify the NDAS device in your system only.]]></base>
+    <translation><![CDATA[Пожалуйста, введите имя для NDAS устройства. Это имя будет использовано для идентификации устройства только в вашей системе.]]></translation>
+  </string>
+  <string id="/DLG/313/01">
+    <base><![CDATA[The name can be up to 30 characters long.]]></base>
+    <translation><![CDATA[Длина имени не может превышать 30 символов.]]></translation>
+  </string>
+  <string id="/DLG/313/02">
+    <base><![CDATA[Please enter the name.]]></base>
+    <translation><![CDATA[Пожалуйста, введите имя]]></translation>
+  </string>
+  <string id="/DLG/313/04">
+    <base><![CDATA[Click Next when you finish.]]></base>
+    <translation><![CDATA[По окончании нажмите Далее.]]></translation>
+  </string>
+  <string id="/DLG/314/00">
+    <base><![CDATA[Welcome to the NDAS Device Registration Wizard]]></base>
+    <translation><![CDATA[Добро пожаловать в Мастер регистрации устройств NDAS]]></translation>
+  </string>
+<string id="/DLG/314/02">
+<base><![CDATA[Disable Ndas PNP]]></base>
+<translation><![CDATA[Отключить Ndas PNP]]></translation>
+</string>
+  <string id="/DLG/315/01">
+    <base><![CDATA[Do you want to mount the NDAS device to your system now?]]></base>
+    <translation><![CDATA[Вы хотите подключить устройство NDAS прямо сейчас?]]></translation>
+  </string>
+  <string id="/DLG/315/02">
+    <base><![CDATA[Yes, I want to mount this NDAS device as Read/Write Mode.]]></base>
+    <translation><![CDATA[Да, я хочу подключить это устройство в режиме чтение/запись.]]></translation>
+  </string>
+  <string id="/DLG/315/03">
+    <base><![CDATA[Yes, I want to mount this NDAS device as Read-Only Mode.]]></base>
+    <translation><![CDATA[Да, я хочу подключить это устройство в режиме только чтение.]]></translation>
+  </string>
+  <string id="/DLG/315/04">
+    <base><![CDATA[No, I don't want to mount this NDAS device now.]]></base>
+    <translation><![CDATA[Нет, я не хочу подключать устройство прямо сейчас.]]></translation>
+  </string>
+  <string id="/DLG/317">
+    <base><![CDATA[Export Registration]]></base>
+    <translation><![CDATA[Экспортировать данные регистрации]]></translation>
+  </string>
+  <string id="/DLG/317/02">
+    <base><![CDATA[Select a &NDAS Device to export:]]></base>
+    <translation><![CDATA[Выберите NDAS устройство для экспорта:]]></translation>
+  </string>
+  <string id="/DLG/317/04">
+    <base><![CDATA[You need to complete the following information to export the registration data.]]></base>
+    <translation><![CDATA[Вам необходимо заполнить данную информацию для экспортирования данных регистрации.]]></translation>
+  </string>
+  <string id="/DLG/317/05">
+    <base><![CDATA[Device &ID:]]></base>
+    <translation><![CDATA[Идентификатор:]]></translation>
+  </string>
+  <string id="/DLG/317/10">
+    <base><![CDATA[&Write Key:]]></base>
+    <translation><![CDATA[&Ключ, позволяющий запись на устройство:]]></translation>
+  </string>
+  <string id="/DLG/317/12">
+    <base><![CDATA[Do not export the Write Key.]]></base>
+    <translation><![CDATA[Не экспортировать ключ.]]></translation>
+  </string>
+  <string id="/DLG/317/13">
+    <base><![CDATA[Des&cription:]]></base>
+    <translation><![CDATA[Описание:]]></translation>
+  </string>
+  <string id="/DLG/317/15">
+    <base><![CDATA[&Save]]></base>
+    <translation><![CDATA[&Сохранить]]></translation>
+  </string>
+  <string id="/DLG/317/16">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Отменить]]></translation>
+  </string>
+  <string id="/DLG/318">
+    <base><![CDATA[NDAS Device Management Error]]></base>
+    <translation><![CDATA[Ошибка Менеджера управления NDAS устройствами]]></translation>
+  </string>
+  <string id="/DLG/318/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[ОК]]></translation>
+  </string>
+  <string id="/DLG/319">
+    <base><![CDATA[Advanced]]></base>
+    <translation><![CDATA[Расширенные возможности]]></translation>
+  </string>
+  <string id="/DLG/319/01">
+    <base><![CDATA[Advanced settings:]]></base>
+    <translation><![CDATA[Расширенные настройки:]]></translation>
+  </string>
+  <string id="/DLG/322">
+    <base><![CDATA[Rename]]></base>
+    <translation><![CDATA[Переименовать]]></translation>
+  </string>
+  <string id="/DLG/322/01">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[ОК]]></translation>
+  </string>
+  <string id="/DLG/322/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Отменить]]></translation>
+  </string>
+  <string id="/DLG/322/03">
+    <base><![CDATA[&New name:]]></base>
+    <translation><![CDATA[Новое имя:]]></translation>
+  </string>
+  <string id="/DLG/2009">
+    <base><![CDATA[General]]></base>
+    <translation><![CDATA[Общие]]></translation>
+  </string>
+  <string id="/DLG/2009/00">
+    <base><![CDATA[User Interface]]></base>
+    <translation><![CDATA[Пользовательский интерфейс]]></translation>
+  </string>
+  <string id="/DLG/2009/01">
+    <base><![CDATA[Display menus and dialogs in the following language:]]></base>
+    <translation><![CDATA[Показывать меню и диалоговые окна на следующем языке:]]></translation>
+  </string>
+  <string id="/DLG/2009/03">
+    <base><![CDATA[Alerts]]></base>
+    <translation><![CDATA[Оповещения]]></translation>
+  </string>
+  <string id="/DLG/2009/05">
+    <base><![CDATA[Display an alert when connection to an NDAS device is lost.]]></base>
+    <translation><![CDATA[Показывать сообщение, когда соединение с NDAS устройством потеряно.]]></translation>
+  </string>
+  <string id="/DLG/2009/06">
+    <base><![CDATA[Display an alert when connection to an NDAS device is unstable.]]></base>
+    <translation><![CDATA[Показывать сообщение, когда соединение с NDAS устройством нестабильно.]]></translation>
+  </string>
+  <string id="/DLG/2009/08">
+    <base><![CDATA[Auto Play Configuration]]></base>
+    <translation><![CDATA[Автоматический запуск]]></translation>
+  </string>
+  <string id="/DLG/2009/09">
+    <base><![CDATA[Disable Auto Play for all fixed hard drives.]]></base>
+    <translation><![CDATA[Отключить автоматическое использование для всех дисков.]]></translation>
+  </string>
+  <string id="/DLG/4001">
+    <base><![CDATA[NDAS Device Available]]></base>
+    <translation><![CDATA[NDAS устройство доступно]]></translation>
+  </string>
+  <string id="/DLG/4001/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[ОК]]></translation>
+  </string>
+  <string id="/DLG/4001/01">
+    <base><![CDATA[Yes, I want to mount this device as Read/Write access mode.]]></base>
+    <translation><![CDATA[Да, я хочу подключить это устройство в режиме чтения/записи.]]></translation>
+  </string>
+  <string id="/DLG/4001/02">
+    <base><![CDATA[%1!s! is now available to mount.\r\nDo you want to mount the device to your system now?]]></base>
+    <translation><![CDATA[%1!s! теперь доступен для подключения.\r\Вы хотите подключить это устройство прямо сейчас?]]></translation>
+  </string>
+  <string id="/DLG/4001/03">
+    <base><![CDATA[Yes, I want to mount this device as Read-Only access mode.]]></base>
+    <translation><![CDATA[Да, я хочу подключить это устройство в режиме только чтение.]]></translation>
+  </string>
+  <string id="/DLG/4001/04">
+    <base><![CDATA[No, I don't want to mount this device now.]]></base>
+    <translation><![CDATA[Нет, я не хочу подключать это устройство прямо сейчас.]]></translation>
+  </string>
+  <string id="/DLG/4002">
+    <base><![CDATA[Advanced]]></base>
+    <translation><![CDATA[Расширенные возможности]]></translation>
+  </string>
+  <string id="/DLG/4002/00">
+    <base><![CDATA[Deactivate NDAS device]]></base>
+    <translation><![CDATA[Деактивировать NDAS устройство]]></translation>
+  </string>
+  <string id="/DLG/4002/02">
+    <base><![CDATA[Deactivation of the NDAS device will end communication between your system and the device. However, the device is still registered on your system. This allows the device to be activated without re-registration.]]></base>
+    <translation><![CDATA[При деактивации устройства система прекратит взаимодействие с ним. Тем не менее, оно останется зарегистрированным. Разрешение деактивации этого устройства без перерегистрации.]]></translation>
+  </string>
+  <string id="/DLG/4002/03">
+    <base><![CDATA[&Deactivate]]></base>
+    <translation><![CDATA[Разрешить]]></translation>
+  </string>
+  <string id="/DLG/4002/04">
+    <base><![CDATA[Reset NDAS Device Connection]]></base>
+    <translation><![CDATA[Переустановить соединение с NDAS устройством]]></translation>
+  </string>
+  <string id="/DLG/4002/06">
+    <base><![CDATA[You can reset the connection to the NDAS device.]]></base>
+    <translation><![CDATA[Вы можете переустановить соединение с NDAS устройством.]]></translation>
+  </string>
+  <string id="/DLG/4002/07">
+    <base><![CDATA[&Reset]]></base>
+    <translation><![CDATA[Перезапуск]]></translation>
+  </string>
+  <string id="/DLG/4002/08">
+    <base><![CDATA[Export]]></base>
+    <translation><![CDATA[Экспорт]]></translation>
+  </string>
+  <string id="/DLG/4002/10">
+    <base><![CDATA[You can save the registration to the file and import it from other computers.]]></base>
+    <translation><![CDATA[Вы можете сохранить данные регистрации в файл и использовать его для регистрации на других компьютерах.]]></translation>
+  </string>
+  <string id="/DLG/4002/11">
+    <base><![CDATA[E&xport]]></base>
+    <translation><![CDATA[Экспорт]]></translation>
+  </string>
+  <string id="/DLG/4003">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation><![CDATA[Менеджер управления NDAS устройствами]]></translation>
+  </string>
+  <string id="/DLG/4003/00">
+    <base><![CDATA[&Close]]></base>
+    <translation><![CDATA[Закрыть]]></translation>
+  </string>
+  <string id="/DLG/4003/01">
+    <base><![CDATA[Mounting the requested NDAS device, please wait...]]></base>
+    <translation><![CDATA[Подключение NDAS устройства, пожалуйста подождите...]]></translation>
+  </string>
+  <string id="/DLG/4004">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation><![CDATA[Менеджер управления NDAS устройствами]]></translation>
+  </string>
+  <string id="/DLG/4004/01">
+    <base><![CDATA[Dismounting the requested NDAS device, please wait...]]></base>
+    <translation><![CDATA[Отключение NDAS устройства, пожалуйста подождите...]]></translation>
+  </string>
+  <string id="/DLG/4004/03">
+    <base><![CDATA[&Retry]]></base>
+    <translation><![CDATA[Повторить]]></translation>
+  </string>
+  <string id="/DLG/4004/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Отменить]]></translation>
+  </string>
+  <string id="/DLG/4008">
+    <base><![CDATA[Import Registration]]></base>
+    <translation><![CDATA[Импортировать данные регистрации]]></translation>
+  </string>
+  <string id="/DLG/4008/02">
+    <base><![CDATA[Select &NDAS Devices to register:]]></base>
+    <translation><![CDATA[Выберите NDAS устройство для регистрации:]]></translation>
+  </string>
+  <string id="/DLG/4008/04">
+    <base><![CDATA[Des&cription:]]></base>
+    <translation><![CDATA[Описание:]]></translation>
+  </string>
+  <string id="/DLG/4008/06">
+    <base><![CDATA[&Register]]></base>
+    <translation><![CDATA[Регистрация]]></translation>
+  </string>
+  <string id="/DLG/4008/07">
+    <base><![CDATA[Close]]></base>
+    <translation><![CDATA[Закрыть]]></translation>
+  </string>
+  <string id="/DLG/4009">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation><![CDATA[Менеджер управления NDAS устройствами]]></translation>
+  </string>
+  <string id="/DLG/4009/01">
+    <base><![CDATA[Dismounting NDAS devices, please wait...]]></base>
+    <translation><![CDATA[Отключение всех NDAS устройств, пожалуйста подождите...]]></translation>
+  </string>
+  <string id="/DLG/4009/03">
+    <base><![CDATA[&Retry]]></base>
+    <translation><![CDATA[Повторить]]></translation>
+  </string>
+  <string id="/DLG/4009/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Отменить]]></translation>
+  </string>
+  <string id="/MNU/2013/00/01">
+    <base><![CDATA[Register a &New Device...]]></base>
+    <translation><![CDATA[Зарегистрировать новое устройство...]]></translation>
+  </string>
+  <string id="/MNU/2013/00/02">
+    <base><![CDATA[Dismo&unt All]]></base>
+    <translation><![CDATA[Отключить все]]></translation>
+  </string>
+  <string id="/MNU/2013/00/03">
+    <base><![CDATA[&Refresh Status]]></base>
+    <translation><![CDATA[Обновить статус]]></translation>
+  </string>
+  <string id="/MNU/2013/00/05">
+    <base><![CDATA[&About NDAS Software...]]></base>
+    <translation><![CDATA[&О программном обеспечении NDAS...]]></translation>
+  </string>
+  <string id="/MNU/2013/00/06">
+    <base><![CDATA[&Options...]]></base>
+    <translation><![CDATA[&Опции...]]></translation>
+  </string>
+  <string id="/MNU/2013/00/08">
+    <base><![CDATA[E&xit]]></base>
+    <translation><![CDATA[Выход]]></translation>
+  </string>
+</localization>

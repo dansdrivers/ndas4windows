@@ -1,0 +1,80 @@
+/*
+Some of the attributes are here to make Mozilla behave like MS IE5 does. Mozilla implements too CSS much for its own good.
+*/
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: justify;
+	background-color: #e5ffe5;
+}
+
+
+h1, h2, h3, h4 {
+	border: 1px solid #f0f0ff;
+	background-color: #f0fff0;
+	color: green;
+	padding-left: 3pt;
+}
+
+/*Progressively darker colours*/
+h2 { border-color: #eaeaff; background-color: #eaffea; color: #007a00; }
+h3 { border-color: #e7e7ff; background-color: #e7ffe7; color: #007700; }
+h4 { border-color: #e3e3ff; background-color: #e3ffe3; color: #007300; }
+
+a {
+	font-weight: bold;
+	color: #003380;
+	text-decoration: none;
+}
+a:visited {
+	color: #006780;
+	text-decoration: none
+}
+a:hover {
+	color: white;
+	background-color: #003380;
+	text-decoration: none
+}
+
+/*I'm not sure what dfn does in HTML, but I've been using it as a way to apply a special style to the names of frhed commands - eg Edit/Cut*/
+dfn {
+	background-color: #eaffea;
+	color: #009000;
+	font-weight: bold;	
+}
+
+pre, code {
+	/*IE 5 doesn't support borders around inline content*/
+	border: 1px solid #cfdbe5;
+	background-color: #e9fbff;
+	color: #000070;
+}
+
+
+ul{ list-style: url(frhed.png); }
+
+hr {
+	border: 0px solid green;
+	background-color: green;
+	color: green;
+}
+
+img { border: 1px solid green; }
+
+table {
+	border: 1px solid green;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	table-layout: auto;
+/*Normally this would be >empty-cells: hide;<, but I can't figure out how to get Mozilla to give each cell a common border now each cell has a separate border and the table has one that goes around the outside. This gives the appearance of double thickness borders throughout the table. We want the borders to be single thickness throughout the table.*/
+	empty-cells: show;
+}
+
+td{ background-color: #f0fff0; }
+
+td, th {
+	vertical-align: middle;
+	border: 1px solid green;
+	border-spacing: 0px;
+	font-size: 80%;
+}

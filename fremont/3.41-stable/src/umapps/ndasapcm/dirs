@@ -1,0 +1,2 @@
+DIRS=idl dll
+OPTIONAL_DIRS=test

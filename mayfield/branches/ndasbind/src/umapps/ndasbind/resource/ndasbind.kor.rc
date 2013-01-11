@@ -1,0 +1,606 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_KOREAN
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include ""windows.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "새로 고침(&R)",             IDM_AGGR_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "끝내기(&X)",                       IDM_EXIT
+    END
+    POPUP "도구(&T)"
+    BEGIN
+        MENUITEM "결합(&B)",                       IDM_AGGR_BIND
+        MENUITEM "결합 해제(&U)",                     IDM_AGGR_UNBIND
+        MENUITEM "내용 보존 미러(&C)",                 IDM_AGGR_ADDMIRROR
+        MENUITEM "복구(&R)",                 IDM_AGGR_SYNCHRONIZE
+        MENUITEM "싱글로 변환(&S)",   IDM_AGGR_SINGLE
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "정보(&A)",                       IDM_HELP_ABOUT
+    END
+END
+
+IDR_CONTEXT_MENU MENU
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "등록 정보(&R)",                  IDM_AGGR_PROPERTY
+    END
+END
+
+IDR_MIRROR_MENU MENU
+BEGIN
+    POPUP "Mirror"
+    BEGIN
+        MENUITEM "내용 보존 미러(&C)",                 IDM_AGGR_ADDMIRROR
+        MENUITEM "복구(&R)",                 IDM_AGGR_SYNCHRONIZE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ndasbind.ico"
+IDI_NDAGGR_BROKEN       ICON                    "res\\aggr_tv_aggr_bad.ico"
+IDI_NDAGGR_OK           ICON                    "res\\aggr_tv_aggr_normal.ico"
+IDI_ND_SLAVE            ICON                    "res\\aggr_tv_mirror_slave.ico"
+IDI_ND_BADKEY           ICON                    "res\\aggr_tv_netdisk_badkey.ico"
+//IDI_ND_DISABLED         ICON                    "res\\aggr_tv_netdisk_disabled.ico"
+IDI_ND_INUSE            ICON                    "res\\aggr_tv_netdisk_inuse.ico"
+IDI_ND_NOEXIST          ICON                    "res\\aggr_tv_netdisk_noexist.ico"
+//IDI_ND_RO               ICON                    "res\\aggr_tv_netdisk_readonly.ico"
+//IDI_ND_RW               ICON                    "res\\aggr_tv_netdisk_readwrite.ico"
+IDI_NDMIRR_OK           ICON                    "res\\aggr_tv_mirror_normal.ico"
+IDI_NDMIRR_BROKEN       ICON                    "res\\aggr_tv_mirror_broken.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ERROR DIALOGEX 0, 0, 304, 120
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "NDAS 결합 관리자 에러"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,247,100,50,14
+    LTEXT           "{Error Message}",IDC_ERROR_MESSAGE,37,11,
+                    260,33
+    EDITTEXT        IDC_ERROR_DESCRIPTION,37,48,260,47,ES_MULTILINE |
+                    ES_READONLY | NOT WS_BORDER
+    ICON            "",IDC_ERROR_ICON,7,11,21,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,38,44,260,1
+END
+
+IDD_UNBIND DIALOGEX 0, 0, 191, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "결합 해제"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "예(&Y)",IDOK,40,145,50,14
+    PUSHBUTTON      "아니오(&N)",IDCANCEL,99,145,50,14
+    CONTROL         "",IDC_LIST_UNBIND,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    33,177,104,WS_EX_STATICEDGE
+    LTEXT           "디스크의 내용이 지워집니다\n결합을 해지하겠습니까?",
+                    IDC_STATIC,7,7,177,24
+END
+
+IDD_RECOVER DIALOGEX 0, 0, 230, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "Synchronize"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Bind Type:",IDC_STATIC,15,17,40,8
+    LTEXT           "이름",IDC_TEXT_BIND_TYPE,84,17,100,8
+    LTEXT           "Target:",IDC_STATIC,15,30,54,8
+    LTEXT           "이름",IDC_TEXT_DEST,84,30,100,8
+    GROUPBOX        "",IDC_STATIC,10,7,211,37
+    LTEXT           "Phase}",IDC_TEXT_PHASE,15,
+                    52,183,8
+    LTEXT           "남은 시간:",IDC_STATIC,15,61,53,8
+    RTEXT           "MB/s",IDC_STATIC,190,61,19,8
+    PUSHBUTTON      "시작",IDOK,117,93,50,14
+    PUSHBUTTON      "{&Cancel &Close}",IDCANCEL,172,93,50,14
+    GROUPBOX        "",IDC_STATIC,10,41,211,47
+    LTEXT           "00:00:00",IDC_TEXT_LEFTTIME,68,61,30,8
+    CONTROL         "",IDC_PROGBAR,"msctls_progress32",WS_BORDER,15,71,199,
+                    13
+    RTEXT           "0.0",IDC_TEXT_RATE,153,61,40,8
+END
+
+IDD_BIND_PAGE1 DIALOGEX 0, 0, 322, 238
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "에그리게이션",IDC_BIND_TYPE_AGGR, "Button",BS_AUTORADIOBUTTON | WS_GROUP,38,46,150,10
+    CONTROL         "Stripe(레이드 0)",IDC_BIND_TYPE_RAID0,"Button",BS_AUTORADIOBUTTON,38,58,150,10
+    CONTROL         "미러(레이드 1)",IDC_BIND_TYPE_RAID1,"Button",BS_AUTORADIOBUTTON,38,69,150,10
+    CONTROL         "레이드 4",IDC_BIND_TYPE_RAID4,"Button",BS_AUTORADIOBUTTON,38,80,150,10
+    LTEXT           "디스크 수 :",IDC_STATIC,181,133,59,8
+    COMBOBOX        IDC_COMBO_DISKCOUNT,241,130,52,14,CBS_DROPDOWNLIST | CBS_SORT |
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "결합 종류 디스크 수를 선택하십시오",
+                    IDC_STATIC,17,14,160,8
+    GROUPBOX        "결합 종류",IDC_STATIC,13,33,288,68
+    GROUPBOX        "결합 디스크 수",IDC_STATIC,13,110,288,54
+END
+
+IDD_BIND_PAGE2 DIALOGEX 0, 0, 322, 238
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT |
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER |
+                    WS_TABSTOP,7,114,132,98
+    CONTROL         "",IDC_DISKLIST,"Static",SS_BLACKRECT,30,7,254,84
+    LTEXT           "결합할 디스크를 선택하십시오.",IDC_STATIC,8,102,92,10
+    PUSHBUTTON      "",IDC_BTN_ADD,144,139,16,14
+    PUSHBUTTON      "",IDC_BTN_REMOVE,144,158,16,14
+    CONTROL         "",IDC_LIST_BIND,"SysListView32",LVS_REPORT |
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER |
+                    WS_BORDER | WS_TABSTOP,163,114,132,98
+//    PUSHBUTTON      "",IDC_BTN_UP,299,139,16,14
+//    PUSHBUTTON      "",IDC_BTN_DOWN,299,158,16,14
+    LTEXT           "주의 : 결합이 완료되면 디스크의 내용이 지워집니다.",
+                    IDC_STATIC,9,218,184,8
+END
+
+IDD_SELSOURCE DIALOGEX 0, 0, 191, 127
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "원본 디스크 선택"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,40,106,50,14
+    PUSHBUTTON      "취소",IDCANCEL,99,106,50,14
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    52,177,46,WS_EX_STATICEDGE
+    LTEXT           "복구 정보가 일치하지 않습니다.\n디스크를 선택하십시오.\n선택한 디스크에서 다른 디스크로 복사됩니다.",
+                    IDC_STATIC,7,7,177,40
+END
+
+IDD_PROPERTY_PAGE1 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "장치 이름:",IDC_STATIC,7,21,70,8
+    LTEXT           "장치 ID:",IDC_DEVICE_ID,7,39,70,8
+    LTEXT           "쓰기 키:",IDC_STATIC,7,57,70,8
+    EDITTEXT        IDC_EDIT_NAME,80,18,154,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_ID,80,36,154,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_WRITEKEY,80,54,154,14,ES_AUTOHSCROLL |
+                    ES_READONLY
+    LTEXT           "용량:",IDC_STATIC,7,75,70,8
+    EDITTEXT        IDC_EDIT_CAPACITY,80,72,154,14,ES_AUTOHSCROLL |
+                    ES_READONLY
+    GROUPBOX        "주의",IDC_ST_MIGRATE,7,92,227,66,NOT WS_VISIBLE
+    LTEXT           "디스크의 결합 정보는 이전 버전의 드라이버에 의해 작성되었습니다. 현재 버전의 정보로 변환하려면 '변환' 버튼을 누르십시오.",
+                    IDC_TEXT_MIGRATE,14,102,213,32,NOT WS_VISIBLE
+    PUSHBUTTON      "변환",IDC_BTN_MIGRATE,176,137,50,14,NOT WS_VISIBLE
+END
+
+IDD_PROPERTY_PAGE2 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_PROPERTY,"SysListView32",LVS_REPORT |
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,17,18,208,130
+END
+
+IDD_ADDMIR DIALOGEX 0, 0, 191, 161
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "내용 보존 미러"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,40,137,50,14
+    PUSHBUTTON      "취소",IDCANCEL,99,137,50,14
+    CONTROL         "",IDC_LIST_SINGLE,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    28,177,104,WS_EX_STATICEDGE
+    LTEXT           "미러로 추가할 디스크를 선택하십시오.",IDC_STATIC,7,7,
+                    177,16
+END
+
+IDD_PROPERTY_PAGE3 DIALOGEX 0, 0, 241, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "디스크의 결합 정보를 인식할 수 없습니다.",
+                    IDC_STATIC,22,52,190,16
+	LTEXT			"디스크를 사용하려면 '싱글로 변환' 명령을 이용하거나 새 버전의 드라이버를 설치하십시오.",
+                    IDC_STATIC,22,70,190,32
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "정보"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,208,178,50,14
+    LTEXT           "NDAS 장치 관리자",IDC_APPNAME,7,48,251,14
+    LTEXT           "버전 %s",IDC_APPVER,7,56,251,8
+    LTEXT           "http://www.ximeta.com",IDC_LINK,7,71,251,8,WS_TABSTOP
+    LTEXT           "All rights reserved.",IDC_STATIC,7,94,251,13
+    GROUPBOX        "Components",IDC_STATIC,7,106,251,67
+    CONTROL         "",IDC_COMPVER,"SysListView32",LVS_REPORT |
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,119,236,47
+    LTEXT           "Copyright \251 2002-2004 XIMETA, Inc.",IDC_COPYWRITE,7,85,
+                    251,9
+    CONTROL         "",IDC_IMAGE,"Static",SS_BLACKRECT,0,0,265,45
+END
+
+IDD_UNBIND_MIRROR DIALOGEX 0, 0, 191, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "결합 해제"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "네",IDOK,40,145,50,14
+    PUSHBUTTON      "아니오",IDCANCEL,99,145,50,14
+    CONTROL         "",IDC_LIST_UNBIND,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    33,177,104,WS_EX_STATICEDGE
+    LTEXT           "결합 정보가 지워집니다.\n결합을 해지하겠습니까?",
+                    IDC_STATIC,7,7,177,24
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_UNBIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_RECOVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_BIND_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_BIND_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_SELSOURCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_PROPERTY_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_PROPERTY_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_ADDMIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_PROPERTY_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_UNBIND_MIRROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    VK_F1,          IDM_HELP_ABOUT,         VIRTKEY, NOINVERT
+    VK_F5,          IDM_AGGR_REFRESH,         VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  32, 32
+BEGIN
+    BUTTON      IDM_AGGR_BIND
+    BUTTON      IDM_AGGR_UNBIND
+    BUTTON      IDM_AGGR_MIRROR
+    BUTTON      IDM_AGGR_REFRESH
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\ndasbind.bmp"
+IDB_MAINFRAME           BITMAP                  "res\\ndasbind.bmp"
+IDB_DRAG                BITMAP                  "res\\drag.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// IMAGE
+//
+
+IDB_ABOUT_HEADER        IMAGE                   "res\\aboutheader.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "프로그램 정보, 버전 번호, 저작권을 표시합니다.\n정보(&A)"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_EXIT                "프로그램을 종료합니다.\n끝내기(&C)"
+    IDM_AGGR_BIND           "디스크를 결합합니다.\n결합(&B)"
+    IDM_AGGR_UNBIND         "디스크 결합을 해지합니다.\n결합 해지(&U)"
+    IDM_AGGR_SINGLE         "선택한 디스크를 싱글 디스크로 변환합니다.\n싱글로 변환(&S)"
+    IDM_AGGR_SYNCHRONIZE    "복구 가능한 디스크를 복구합니다.\n복구(&R)"
+    IDM_AGGR_MIRROR         "도구(&T)"
+    IDM_AGGR_REFRESH        "디스크 내용을 새로 고칩니다.\n새로 고침(&R)"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_AGGR_ADDMIRROR      "디스크를 추가해서 미러 디스크로 결합합니다.\n내용 보존 미러"
+    IDS_APPLICATION         "NDAS 결합 관리자"
+END
+
+STRINGTABLE
+BEGIN
+	IDS_BINDPAGE_CAPTION "NDAS 장치 결합 마법사"
+	  IDS_LOGDEV_TYPE "결합 종류"
+    IDS_LOGDEV_TYPE_DISK_RAID0 "디스크 스트라이프(레이드 0)"
+    IDS_LOGDEV_TYPE_DISK_RAID1 "디스크 미러(레이드 1)"
+    IDS_LOGDEV_TYPE_DISK_RAID2 "디스크 (레이드 2)"
+    IDS_LOGDEV_TYPE_DISK_RAID3 "디스크 (레이드 3)"
+    IDS_LOGDEV_TYPE_DISK_RAID4 "디스크 (레이드 4)"
+    IDS_LOGDEV_TYPE_DISK_RAID5 "디스크 (레이드 5)"
+    IDS_LOGDEV_TYPE_AGGREGATED_DISK "에그리게이션"
+    IDS_LOGDEV_TYPE_CF_DRIVE "CF 드라이브"
+    IDS_LOGDEV_TYPE_DVD_DRIVE "DVD 드라이브"
+    IDS_LOGDEV_TYPE_MIRRORED_DISK "미러 디스크"
+    IDS_LOGDEV_TYPE_MO_DRIVE "MO 드라이브"
+    IDS_LOGDEV_TYPE_SINGLE_DISK "디스크 (싱글)"
+    IDS_LOGDEV_TYPE_UNKNOWN_FMT "알 수 없는 장치 (0x%1!08X!)"
+    IDS_LOGDEV_TYPE_VIRTUAL_DVD_DRIVE "가상 DVD 드라이브"
+    IDS_UNIDEV_TYPE_DISK_EMPTY "Device not found"
+	IDS_STATUS_REFRESH "NDAS 장치의 상태를 다시 고치고 있습니다. 잠시만 기다려 주십시오..."
+	IDS_BIND_FAIL_AT_SINGLE_NDAS_FMT "NDAS 장치 작업중 문제가 발생했습니다. '%1!s!'."
+	IDS_BIND_FAIL "NDAS 장치 작업중 문제가 발생했습니다."
+	IDS_MAINFRAME_SERVICE_FAIL_AT_START "서비스에서 장치 목록을 가져오지 못했습니다.\n프로그램을 시작할 수 없습니다."
+	IDS_MAINFRAME_NO_DISK_TO_MIRROR "There is no disk available to Mirror."
+	IDS_FAIL_TO_ACCESS_EXCLUSIVELY "A Ndas Device is not reachable or is being accessed by other programs/computers."
+	IDS_MAINFRAME_SINGLE_ACCESS_FAIL "디스크를 싱글 디스크로 변환하지 못했습니다."
+	IDS_MAINFRAME_OLD_VERSION "이전 버전으로 미러한 디스크는 미러 재구성 할 수 없습니다."
+	IDS_MAINFRAME_SERVICE_FAIL "서비스에서 장치 목록을 가져오지 못했습니다."
+	IDS_ERROR_TITLE "NDAS 결합 에러"
+	IDS_ERROR_NDAS_DESCRIPTION_FMT "기능: NDAS 0x%1!04X!\r\n오류 번호: %2!u! (0x%2!04X!)\r\n%3!s!"
+	IDS_ERROR_SYSTEM_DESCRIPTION_FMT "오류 번호: %1!u! (0x%1!04X!)\r\n%2!s!"
+	IDS_ERROR_NOT_REGISTERD_WRITE_FMT "%1!s!에 쓰기 권한이 없습니다. 쓰기 권한을 얻기 위해서는 NDAS 장치의 쓰기 키가 필요합니다."
+	IDS_WARNING_NOT_NEED_RECOVER "복구할 필요가 없습니다."
+	IDS_WARNING_BIND "디스크의 내용이 지워집니다. 결합을 하겠습니까?"
+	IDS_WARNING_BIND_AFTER "성공적으로 결합이 완료되었습니다. 마운트하고 사용하기 전에 포맷을 하십시오."
+	IDS_WARNING_UNBIND "디스크의 내용이 지워집니다. 결합을 해지하겠습니까?"
+	IDS_WARNING_UNBIND_AFTER "성공적으로 결합이 해지되었습니다. 마운트하고 사용하기 전에 포맷을 하십시오."
+	IDS_WARNING_SINGLE "디스크의 내용이 지워집니다. 싱글 디스크로 만들겠습니까?"
+	IDS_WARNING_SINGLE_AFTER "성공적으로 싱글 디스크로 변환되었습니다. 마운트하고 사용하기 전에 포맷을 하십시오."
+	IDS_WARNING_ADD_MIRROR "Data on the selected NDAS device will be lost.  Would you like to continue?"
+	IDS_RECOVER_BTN_CANCEL "Cancel"
+	IDS_RECOVER_BTN_CLOSE "Close"
+	IDS_RECOVERDLG_TASK_ADD_MIRROR "Synchronize mirrored devices"
+	IDS_RECOVERDLG_TASK_RECOVER "Recover bound devices"
+	IDS_RECOVERDLG_PHASE_READY "Press the start button to continue."
+	IDS_RECOVERDLG_PHASE_SYNC "Synchronizing devices..."
+	IDS_RECOVERDLG_PHASE_DONE "Synchronization complete."
+	IDS_RECOVERDLG_FAIL "Failed to synchronize devices."
+	IDS_DISKPROPERTYPAGE_CAPTION "디스크 정보"
+	IDS_DISKPROPERTYPAGE_MIGRATE_DISK_NOT_EXIST "이 디스크와 결합한 디스크가 모도 있어야 합니다."
+	IDS_DISKPROPERTYPAGE_MIGRATE_CONFIRM "복구 정보가 변환됩니다.\n이 작업을 실행하겠습니까?"
+	IDS_DISKPROPERTYPAGE_MIGRATE_FAIL "변환 실패"
+	IDS_DISKPROPERTYPAGE_MIGRATE_FAIL_AT_FMT "'%1!s!'의 변환 실패"
+	IDS_DISKPROPERTYPAGE_MIGRATE_SUCCESS "변환 완료"
+	IDS_DISKPROPERTYPAGE_WRITEKEY_PRESENT "있음"
+	IDS_DISKPROPERTYPAGE_WRITEKEY_NOT_PRESENT "없음"
+	IDS_DISKPROPERTYPAGE_LIST_COL_NAME "이름"
+	IDS_DISKPROPERTYPAGE_LIST_COL_VALUE "값"
+	IDS_DISKPROPERTYPAGE_SIZE_IN_GB "%1!3d!.%2!02d!GB"
+	IDS_SELECTMIRDLG_NO_DISK_SELECTED "선택된 디스크 없음"
+	IDS_SELECTMIRDLG_SMALLER_DISK "더 작은 크기긩 디스크와 미러로 만들 수 없습니다."
+	IDS_UIHANDLER_PROPERTY_NUM_BOUND_DISK "결합된 디스크 수"
+	IDS_UIHANDLER_PROPERTY_NUM_BOUND_DISK_TOOLTIP "결합된 디스크 수"
+	IDS_UIHANDLER_PROPERTY_DIRTY "복구"
+	IDS_UIHANDLER_PROPERTY_DIRTY_TRUE "필요"
+	IDS_UIHANDLER_PROPERTY_DIRTY_FALSE "필요 없음"
+	IDS_UIHANDLER_PROPERTY_DIRTY_TOOLTIP "복구 정보가 있을 경우 복구가 필요합니다."
+	IDS_UIHANDLER_PROPERTY_MODEL "모델"
+	IDS_UIHANDLER_PROPERTY_MODEL_TOOLTIP "제조사의 모델명"
+	IDS_UIHANDLER_PROPERTY_SERIALNO "시리얼 번호"
+	IDS_UIHANDLER_PROPERTY_SERIALNO_TOOLTIP "제조사의 시리얼 번호"
+	IDS_UIHANDLER_CLEARDIB_CONFIRM "결합 정보가 지워집니다.\n'%1!s!'의 정보를 지우겠습니까?"
+	IDS_UIHANDLER_CLEARDIB_FAIL		"디스크 초기화 실패"
+	IDS_UIHANDLER_CLEARDIB_SUCCESS  "디스크 초기화 완료"
+	IDS_DISKPROPERTYPAGE_GENERALTAB "일반"
+	IDS_DISKPROPERTYPAGE_HARDWARETAB "하드웨어"
+	IDS_ABOUTDLG_PRODUCT_NAME "NDAS 결합 관리자"
+	IDS_ABOUTDLG_PRODUCT_VER  "Version %1!d!.%2!d!.%3!d!.%4!d!"
+	IDS_ABOUTDLG_COL_COMPONENT "구성 요소"
+	IDS_ABOUTDLG_COL_VERSION "버전"
+	IDS_ABOUTDLG_COMPONENT_VER "%1!d!.%2!d!.%3!d!.%4!d!"
+	IDS_LISTVIEW_SIZE_IN_GB "%1!3d!.%2!02d!GB"
+	IDS_LISTVIEW_COL_NAME   "이름"
+	IDS_LISTVIEW_COL_ID		"아이디"
+	IDS_LISTVIEW_COL_SIZE	"크기"
+	IDS_LISTVIEW_COL_STATUS	"Status"
+	IDS_LISTVIEW_COL_TYPE	"Type"
+	IDS_LISTVIEW_COL_FAULT	"Fault tolerance"
+	IDS_LISTVIEW_COL_EMPTY	"번호"
+	IDS_FT_UNIT ""
+	IDS_FT_FAULT_TOLERANT "Yes"
+	IDS_FT_NOT_FAULT_TOLERANT "No"
+	IDS_FT_MISSING "Missing Member"
+	IDS_FT_DIRTY "Yes(Need Resync)"
+	IDS_FT_NEED_REPAIR "Yes(Need Repair)"
+	IDS_STATUS_NOT_CONNECTED "Not Connected"
+	IDS_STATUS_IN_USE "In use"
+	IDS_STATUS_READ_ONLY "No Write Key"
+	IDS_STATUS_FINE "Operatable"
+	IDS_COMMAND_BIND	"결합(&B)"
+	IDS_COMMAND_UNBIND	"결합 해제(&U)"
+	IDS_COMMAND_SINGLE	"싱글로 변환(&S)"
+	IDS_COMMAND_SYNCHRONIZE "복구(&S)"
+	IDS_COMMAND_ADDMIRROR	"내용 보존 결합"
+	IDS_COMMAND_CLEARDIB	"초기화(&I)"
+END
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

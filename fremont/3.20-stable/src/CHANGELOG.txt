@@ -1,0 +1,777 @@
+3.20.1528
+
+- FIX:10838 ndassvc crash
+- FIX:10837 ndassvc re-mounted a NDAS device after dismounting it(releated to rutter auto mount codes)
+
+3.20.1520
+
+- CHG:r8561:(ndask) Allow write cache enabling. (hootch)
+- FIX:r8560:(lpx) fixed double lock acquisition of device context's spinlock. (hootch)
+- FIX:r8560:(lpx) start offset subtracted twice in LpxReceiveIndication() (hootch)
+- ADD:r8560:(lpx) support ReceivePacketHandler() to remove extra copies of received packets. (hootch)
+- CHG:r8560:(lpx) fixed type LPX_DEVICE_CONTEXT_MIDIA_CONNECTED -> LPX_DEVICE_CONTEXT_MEDIA_CONNECTED (hootch)
+- CHG:r8560,r8624:(lpx) removed cancel lock acquisition. Refer to the OSR article "Setting A Cancel Routine" in IFS document. (hootch)
+- CHG:r8550:(lfsfilt) fixed misaligned datagram format, and removed unused reserved fields. need to re-install previous lfsfilt. (hootch)
+- FIX:r8549,r8548:(ndask) did not return error when identify fails with pdu error response. (hootch)
+
+3.20.1519 R8502 Jan 17, 2007
+- Build purpose: Fremont Public Beta release
+- Tag origin: fremont trunk
+
+- CHG:r8498:(ndask) removed lock leakage workaround for NDAS Hardware 2.0g. (hootch)
+- CHG:r8496,r8487:(lfsfilt) changed send traffic control to clear retransmit counter only when stable counter reaches maximum. (hootch)
+- CHG:r8495:(lfsfilt) increased minor version of NDFS datagram protocol. (hootch)
+- CHG:r8479:(ndask) did not accept request for unsupported features. Just ignore the request. (hootch)
+
+3.20.1518 R8475 Jan 15, 2007
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+- FIX:r8423:(lpx) extremely slow read from an NDAS to a host with Broadcom 5788 Giga NIC on Windows Vista.
+          added ReceiveComplete DPC. (hootch)
+- FIX:r8423:(lpx) extremely slow read between two host.
+          added forced acks even when delayed ack works. (hootch)
+
+
+3.20.1517 R8407 Jan 5, 2007
+- Build purpose: release Beta release
+- Tag origin: fremont trunk
+
+
+3.20.1516 R8384 Jan 3, 2007
+- Build purpose: release for German translation
+- Tag origin: fremont trunk
+
+- CHG:r8376,r8382: (ndasscsi) applied pagable flag to NDASSCSI FDO on all versions of Windows. (hootch)
+
+
+3.20.1515 R8357 Dec 29, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+- FIX:r8353: (ndask) missing parameter. (hootch)
+- FIX:r8350: (lpxtdi) Freed timeout structure after stop the timeout. (hootch)
+- CHG:r8347: (lfsfilt) increased thread base priority for secondary thread. (hootch)
+- FIX:r8345: (ndask) WaitAll returns STATUS_WAIT_OBJECTX on Win2K. (hootch)
+- FIX:r8334: (ndasbus)(ndasscsi) set POWER_PAGABLE for NDASSCSI device to stop earlier than Network layers. (hootch)
+- FIX:r8310: (lfsfilt) did not verify packet size. (hootch)
+- FIX:r8292: (ndask) missing wait for send completion. (hootch)
+- FIX:r8289: (ndask) could leave the IDE request function before event set. (hootch)
+- FIX:r8286: (ndask) LPX could complete the reply receive before the request and data send. (hootch)
+- FIX:r8283: (lpxtdi) might reference wrong IRP to be canceled. Introduced in LPXTDI timout. (hootch)
+- CHG:r8276: (ndasscsi) send NOOP ioctl IRP asynchronously. (hootch)
+- FIX:r8273: (ndask) reconnection allowed in non-running status. (hootch)
+- CHG:r8268: (lpxtdi) cancel the time-outed IRP instead of issuing disconnection IRP. (hootch)
+
+
+3.20.1514 R8259 Dec 18, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+
+3.20.1513 R8249 Dec 18, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+
+3.20.1512 R8236 Dec 15, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+- CHG:r8228: (lpxtdi) use built-in timeout. LPX timeout is not used any more. (hootch)
+- DEL:r8228: (lpx) removed receive timeout checking. (hootch)
+- CHG:r8228: (lpxtdi) removed use of Irp's DriverContext to pass transport statistics buffer and time-out. (hootch)
+
+
+3.20.1511 R8169 Dec 7, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+- CHG:r8166: (lfsfilt) did include xpfat library for amd64 platform. (hootch)
+- FIX:r8155: (ndasscsi) tried restarting adapter after abnormal stop due to power-saving mode. (hootch)
+- FIX:r8155: (ndask) did try reconnect with start/stop scsi command while entering power-saving mode. (hootch)
+- FIX:r8151: (ndasscsi) UpgradeToWrite ioctl was not completed. SCSIPort unload without waiting for outstanding IOs. Delays abnormal adapter stop to the timer routine. (hootch)
+- FIX:r8147: (ndasscsi) could not complete timer-pending SRB because of ScsiPortCompleteRequest(). (hootch)
+- FIX:r8117: (lfsfilt) did not get a reference of enabled NetDisk before dereferencing a partition which could free the enabled NetDisk. (hootch)
+- FIX:r8107: (ndask) did not use WIN2K_COMPAT_SLIST_USAGE flag for Lookaside memory allocation. (hootch)
+
+
+3.20.1510 R8102 Nov 28, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+- FIX:r8097: (ndask) did not process Stop request in the normal control path. (hootch)
+- FIX:r8062: (ndasbus)(ndasscsi)(ndassvc) After reboot or NDAS service restart, did not recognize the device mode when the NDASSCSI driver installation is not completed. (hootch)
+- ADD:r8048: (ndasscsi)(ndasbus)(ndasbusctl) added NDAS device event queue (hootch)
+- CHG:r8045: (ndassvc) will not unplug when discon event received because NDASBUS have done it instead. (hootch)
+- FIX:r8014: (ndask) stop request discarded in reconnection state. (hootch)
+- CHG: (ndasbind) Do not use FUA write when rebuilding 
+- FIX: (ndassvc) Didn't handle the case that RAID info is changed by kernel.
+- FIX: (ndasscsi) Failed to transit from secondary to primary if read is request while transition.
+- FIX: (raid) Ballon tooltip message didn't show correct status sometimes.
+- CHG: (draid) Do not determine multiple communication error as bad sector. 
+
+
+3.20.1509 R8000 Nov 15, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+- CHG: (ndasbind) UI and message changes.
+- FIX: (ndasop) Marked all disk as out-of-sync when replacing spare disk.
+- FIX: (ndasop) Some RAID operations were failed to run when RAID map is not in default configuration.
+- FIX: (ndasbind) Replaced member information was not relayed to ndassvc.
+- FIX: (ndassvc) Didn't handle the case that RAID becomes mountable when conflicting member is removed.
+- CHG: (raid) Do not use RMD information from spare disk and update in-sync disk's RMD first.
+- FIX: (ndasop) Migration didn't work when second disk is out-of-sync.
+
+ 
+3.20.1508 R7946 Nov 10, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+- CHG:r7901: default optimized for quick removal. (hootch)
+- CHG:r7901: do not allow write-cache control by Windows. (hootch)
+- CHG:r7901: do not notify adapter status change when a CCB completes with a stop status. (hootch)
+- FIX: (ndasop) OOS bitmap is not set when migrating RAID with defective disk.
+- FIX: (ndasop) Didn't migrate spare disk.
+- FIX: (ndasbind) NDAS for seagate was shown incorrectly when it is offline or not registered.
+- FIX: (ndassvc) Mountable status is not updated in some cases
+- FIX: (raid) Defective information is lost when mounted.
+- FIX: (raid) Didn't record fault when verify failed.
+- FIX: (raid) Had problem when mounting RAID1 in RO mode.
+- FIX: (raid) Didn't update access write of missing member when mounted in degraded mode.
+- FIX: (raid) Crashed when RAID has defective disk and transit from secondarty to primary
+- CHG: (raid) RAID flush 1.0 disk using verify command.
+- FIX: (raid) Recovery didn't work for disk larger than 2T.
+- CHG: (raid) Write metadata with FUA flag.
+- FIX: (raid) Removed invalid ballon tooltip messages.
+
+
+3.20.1507 R7885 Nov 2, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+- ADD:r7847 Merged DRAID.
+- FIX:r7863: (ndassvc) ndassvc may hang during stopping the service if one of the work items is stuck.
+- ADD:r7858: (ndasscsi) write log error message when disk power recycle gets detected during write operations.
+- FIX:r7851: (ndasbus) (ndasscsi) removed resource conflict on Windows VISTA RC1, RC2. (hootch)
+- CHG:r7847: (all) replaced RAID1 R2 to RAID1 R3 ( distributed RAID ). (sjcho)
+- ADD:r7799: (ndask)(ndasscsi) exported NDAS device general purpose lock interface. (hootch)
+- FIX:r7799: (ndask) MAXIMUM_CDB_SIZE was 12 when compiling in WNET AMD64 configuration. (hootch)
+- ADD:r7758: (ndask) added support for force unit access option by simulating ATA VERIFY command.
+- CHG:r7736: (ndasmgmt) Shows 'Re&set' command in menu of the NDAS device when the NDAS device OR the NDAS unit device is failed (aingoppa)
+- CHG:r7734: (ndask) v2.0 bug (the written data rarely broken) will be fixed workaround using read-back-verify. (aingoppa)
+- ADD:r7715: (ndask) disk power-recycle detection using SMART. (hootch)
+- CHG:r7715: (ndask)(ndasbus) Saperated max transfer length to send and receive of max transfer length. (hootch)
+- CHG:r7715: (ndask) revised to be ready for variable sector size. (hootch)
+- ADD:r7715: (ndask) S.M.A.R.T. support (hootch)
+- ADD:r7689: (ndask) support for Multiple NICs when initial connect and reconnect to an NDAS device. (hootch)
+- FIX:r7646: (lfsfilt) resolve memory violation 
+- FIX:r7589: (ndascomm) NdasCommImpConnectionInfoToDeviceID didn't set VID correctly.
+- FIX: (raid) Flush dirty-bits when received SCSIOP_START_STOP_UNIT 
+- FIX: (ndasbind) Showed RAID status as missing member when member disk is registered later.
+- FIX: (ndasscsi) Didn't adjust read split when verified-write.
+- CHG: (ndasbind, svc) Handle DIB information that is inconsistent with actual disk info.
+- CHG: (ndasscsi) 2.0 verified write is moved from NDAS feature to LURFLAG
+- ADD: (ndasscsi) Flow control can be turned off through registry setting.
+- FIX: (ndasscsi) Used verified-write for OOB access.
+- FIX: (ndassvc) Mounted disks on ready if disk is not removed from ndasmgmt.
+- CHG: (ndassvc) Added variable to support disconnect devices while debugger is attached.
+- FIX: (ndasscsi) Reconcilation didn't work correctly if Lurn is RAID.
+- FIX: (ndasscsi) Didn't use correct pooltag when freeing lurndesc.
+- ADD: (ndasscsi) RAID supports 16byte CDB
+- FIX: (ndassvc, ndasmgmt) Didn't support large disk
+- ADD: (ndasscsi) RAID support SCSIOP_MODE_SENSE and SCSIOP_MODE_SELECT's cache related command.
+- CHG: Added unit version information to DIB
+- CHG: (ndasscsi) Do not mount incomplete RAID at boot-up 
+
+3.20.1506 R7585 Sep 21, 2006
+- Build purpose: Fremont Beta release
+- Tag origin: fremont trunk
+
+- FIX: (ndasscsi) When BUS reset occur, SRB disappeared prior to NDAS disk IO completion. (hootch)
+- FIX: (ndask) Didn't close connection when returned error due to replaced disk.(sjcho)
+- FIX: (ndask) returned error with NDAS 1.0, 1.1 when write check disabled. (hootch)
+- FIX: (lfsfilt) solve windows 2000 secondary mount problem (ktkim)
+- ADD: (lpx) Added IOCTL to set/get RX/TX packet drop. Use ndascli to set/get drop rate.(SetPacketDrop rx nnn SetPacketDrop tx nnn, SetPacketDrop ?) (sjcho)
+- ADD: (ndasbuild) Code signing is enabled by default (Self-sign or XIMETA) (patria)
+- ADD: (all) Support multiple vendor ID. Support seagate VID 0x41. (patria, aingoppa)
+- CHG: (lslurn) restrict UDMA mode only if WRITE_CHECK flag is on. (hootch)
+- ADD: (ndasmgmt) Supports Vista (patria)
+- FIX: (lfsfilt) Resolved shadow copy problem (ktkim)
+- FIX: (lfsfilt) GPT access failure (ktkim)
+- ADD, DEL: (ndasfat) NDAS FAT applied, but removed due to some problems (ktkim)
+- ADD: (all) Block Access Control List : Set read/write access right to partitions or sectors. (hootch, aingoppa)
+- FIX: (lfsfilt) did return successful with IOCTL_MOUNTDEV_QUERY_DEVICE_NAME request to an invalid point point directory. (hootch)
+- FIX: (lsp) lsp packet command size is not hton'ed (patria)
+- CHG: (ndasscsi) Always set DMA mode when connecting (sjcho)
+- CHG: (ndasscsi) Do not execute 2.0 write bug-check for out-of-bound access. (sjcho)
+- FIX: (lfsfilt) did not dereference NetDisk partition in Primary-Passthrough module. (ktkim)
+- FIX: (lfsfilt) did not dereference NetDisk partition in EnabledNetdisk_ThisVolumeHasSecondary() (ktkim)
+- ADD: (lfsfilt) support NDASFat32 and NDASNtfs (ktkim)
+- ADD: (ndfat/ntfs) NDASFat32, NDASNtfs source code and project (ktkim)
+- FIX: (lfsfilt) Primary could not unmount when secondary is accessing files (sjcho)
+- FIX: (lfsfilt) Directory opened by secondary became invalid when primary changed (sjcho)
+- FIX: (lfsfilt) Secondary's directory query context was lost when primary changed (sjcho)
+- FIX: (lfsfilt) Primary did not restore secondary's open file offset when secondary reconnects. (sjcho)
+- CHG: (lfsfilt) Refactored DispatchWinXpRequest function (sjcho)
+- FIX: (lfsfilt) Suspended IO caused all secondary IO to block. (sjcho)
+- CHG: (lpx) replaced lpx with non-DPC lpx. (ktkim)
+- CHG: (lfsfilt) Removed splaytree use. (ktkim)
+- Including all fixes and changes of mayfield trunk.
+
+3.11.1331 R7471 Sep 5, 2006
+- Build purpose: Internal test
+- Tag origin: mayfield 3.11-stable
+
+- FIX: ndasop regards VID(0) as VID(1) when it is reading DIB_V2
+
+
+3.11.1330 R7457 Sep 5, 2006
+- Build purpose: Internal test
+- Tag origin: mayfield 3.11-stable
+
+FIX: (frhed) Not applied changed NdasCommGetDeviceID function signature (patria)
+FIX: (ndasbind) support extended VENDOR ID in NDAS ID. (aingoppa)
+
+
+3.11.1329 R7346 Aug 21, 2006
+- Build purpose: Internal test
+- Tag origin: mayfield 3.11-stable
+
+- FIX: improve setup helper for EUAL document.(patria)
+- ADD: support for multiple vendor ID. support for Seagate VID 0x41. (patria)
+
+
+3.11.1328 R6977 June 14, 2006
+- Build purpose: Internal test
+- Tag origin: mayfield 3.11-stable
+
+- ADD: (ndasscsi) find lowest hardware versions among assiciated NDAS devices for ioctl request (hootch)
+- FIX: (ndasbind) All bind commands are enabled initially even if there are no entries. (patria)
+- FIX: (ndasbind) Portion of the selected text is dim (patria)
+- FIX #93: (ndasmgmt) Task Bar icon shows an error if the NDAS service is started later than NDAS management. (patria)
+- FIX #94: (ndassvc) In some cases, NDAS devices are not automatically mounted again after reboot. (patria)
+- FIX: (ndasscsi) Set default PIO mode before setting DMA/UDMA mode for ODD (sjcho)
+- CHG: (ndasscsi) Allow UDMA mode for ODD (sjcho)
+- CHG: (ndasscsi) Always set DMA/UDMA for ODD (sjcho)
+- FIX: (ndasscsi) BSOD occured if lfs is used with ODD. (sjcho)
+- FIX: (lsp) didn't check IDENTIFY info's flag correctly. (sjcho)
+- FIX: (ndasscsi) memory reference error occurred at the bus reset in debug version (hootch)
+
+3.11.1327 R6491 March 20, 2006
+- Build purpose: Public release
+- Tag origin: mayfield trunk
+
+- FIX: LurnIdeDiskRead, LurnIdeDiskWrite continued even after failure. (sjcho)
+
+3.11.1326 R6458 March 09, 2006
+- Build purpose: Internal test
+
+- ADD: added more localizable resources (patria)
+       (RW,RO,PIO,DMA,UDMA,LBA,LBA48,etc)
+- FIX: Missed to limit UDMA mode to 4 for NDAS 2.0 in LSP library (sjcho)
+
+3.11.1325 R6382 Feb 27, 2006
+- Build purpose: Internal test
+
+- CHG: Limit UDMA mode to 4 for 2.0 chip. (sjcho)
+- ADD: Added option to check data is written correctly by 2.0 chip. (sjcho)
+- CHG: Removed "Device Registration Dialog" from ndasmgmt (patria)
+- CHG: Removed unused dialogs from the ndasmgmt resource (patria)
+- FIX: too large MaxRequestBlocks (hootch)
+- FIX: memory copy may fail when underlying NIC has a copy-look-ahead restriction (hootch)
+- FIX: ndupdate export function signatures were inconsistent between x86 and amd64 (patria)
+- FIX #68: Returning from 'Save As' dialog may take too long  (patria) (r6301)
+- FIX: did not set PDU DataTransferLength correctly in NDASSCSI. (hootch)
+
+3.11.1324 R6199 Jan 10, 2005 64-bit
+- Build purpose: Internal test
+
+- FIX: Primary agent sometimes failed to reflect Network address change.
+- FIX: Microsoft compiler did not do AMD64 optimization right. (gykim)
+      Currently, only LSP library seems to be affected by this issue.
+- FIX: NDAS bus support 32bit requests from 32bit application. (hootch)
+- FIX: LfsFilter driver did not generate 32bit file ID. (hootch)
+      32bit file ID limit is occured by WriteSharing protocol itself.
+- FIX: Timer value in LPX requests was overrided unknown driver. (sjcho)
+- ADD: 64 bit installation package is added. (patria)
+- ADD: modified build process for 64 bit Windows (patria)
+
+
+3.11.1323 R6134 Dec 27, 2005
+- Build purpose: Internal test
+
+- FIX: LFS was not recognized as primary if all partitions are FAT32.
+- CHG: lfsfilter gets shutdown notification itself, not depending on NDAS service.
+
+3.11.1322 R6124 Dec 22, 2005
+- Build purpose: Internal test
+
+- ADD: check lfs filter's running status before auto-plugin.
+       It is because lfs filter does not enumerate volumes which gets mounted before lfs filter gets started.
+- FIX: did not synchronize Enabled NetDisk creation. (hootch)
+       Secondary-mount volumes were not mounted on some fast-booting systems.
+- ADD: LFS_FILTER_READY ioctl for other drivers to check to see if lfs filter is running. (hootch)
+- FIX: Clear reserved field in LPX header. (sjcho)
+- ADD: supports 16 byte SCSI command for Single, Aggregation in NDASSCSI. (hootch)
+
+3.11.1321 R6106 Dec 20, 2005
+- Build purpose: Internal test
+- FIX: HIX Discover reply with no entry was not ignored. (patria)
+- FIX: CREATE IRP did wait forever for secondary thread disconnected from the primary. (hootch)
+
+3.11.1320 R6082 Dec 16, 2005
+- Build purpose: Internal test
+
+- FIX: Aggregation and RAID0/1/4 did not processes upgrade of access right properly (gykim)
+- FIX: LurnExecuteSyncRead did not read in read-only status (gykim)
+- FIX: bind wizard did not show correct size of the bind at select disk page (gykim)
+- FIX: ndasbind enabled 'replace device' and 'replace unit device' for non fault tolerant bind anymore (gykim)
+- FIX: secondary lost connections to NDAS devices after exit from power-saving mode. (hootch)
+
+3.11.1319 R6043 Dec 09, 2005
+- Build purpose: Internal test
+
+- FIX: wrong max request blocks was delivered to LURNs. (hootch)
+- FIX: Did not apply 2.0 chip padding bug when retransmit. (sjcho)
+- FIX: lpx primary device might not be initialized to NULL. (sjcho)
+- FIX: prevention of dead volume-lock. (hootch)
+       VMwareService.exe and explorer.exe cause dead volume-lock when LfsFilt try to become a primary.
+- FIX: LPX Irp completion may not called while reading. (sjcho)
+- FIX: NULL pointer reference when the NDAS volume is converted to basic disk from dynamic disk. (hootch)
+- FIX: LfsFilt did invalidate FastIoAcquireFileForModWrite() (ktkim)
+- CHG: disabled NTFS encryption feature when write-sharing. (hootch)
+- CHG: updated ddkbuild.bat with the 6.5 version. (hootch)
+- FIX: did not free Ioctl CCB when error in NDASSCSI. (hootch)
+- ADD: Ndasbind Migrates Mirror, RAID1 -> RAID1R, RAID4 -> RAID4R (gykim)
+- FIX: RAID supports share-write mode (gykim)
+- FIX: Bus-reset and IO error might occur because time out for reconnection and login was too long. (hootch)
+- FIX: Windows explorer did not refresh volume names. (hootch)
+- FIX: ndasscsi.sys did try to become secondary from primary after hibernation. (hootch)
+
+3.11.1318 R5956 Nov 22, 2005
+- Build purpose: Internal test
+
+- CHG: RAID1, RAID4, RAID1_R2, RAID4_R2 do not support Shared-Write mode. (gykim) (patria)
+- FIX: If the volume is locked in the shared-write mode, shared-write is disabled while the lock is active. (hootch) (patria)
+- ADD: New types are added to distinguish between 3.10 and 3.11 RAID
+
+  NDAS_UNITDEVICE_DISK_TYPE_RAID1_R2
+  NDAS_UNITDEVICE_DISK_TYPE_RAID4_R2
+
+  NDAS_LOGICALDEVICE_TYPE_DISK_RAID1_R2
+  NDAS_LOGICALDEVICE_TYPE_DISK_RAID4_R2
+
+  NDAS_LOGICALDEVICE_ERROR_REQUIRE_UPGRADE
+
+  NDAS_LOGICALDEVICE_STATUS_NOT_MOUNTABLE (resurrected)
+
+- ADD: Added Null Unit Device and Null Unit Disk Device to prevent stalls in NDASSVC (patria)
+- CHG: Removed ENABLE_RECYCLEBIN_PATCH routines  (hootch)
+- FIX: NDASBUS may not mount at boot time due to the late start of the network adapters (hootch)
+- ADD: NDASVOL is not implemented fully (patria)
+- CHG: boost is separated as an external header set (patria)
+- FIX: NDASUSER Event Subscription routine may leak the memory (patria)
+- FIX: NIF export failed on MSXSL 2.0 (Windows 2000 without MSXML 3.0 or later) (patria)
+
+3.11.1317 R5843 Nov 10, 2005
+- Build purpose: Internal and NewTech test
+
+- CHG: Lots of fixes in NDAS service 
+- CHG: Lots of enhancements in ndasmgmt
+- CHG: Unit device number is using 1-based index to the user. (Not internally)
+- CHG: Lots of icons are added or changed
+- ADD: NDAS Registration Import/Export Feature
+- FIX: Slow IO speed with certain NICs and network configuration - fixed by improving packet loss check method. (sjcho)
+- ADD: Added MTU configuration to LPX (sjcho)
+- ADD: Flow control between write sharing nodes. (hootch)
+- FIX: Write sharing driver did not allow chkdsk and format when a secondary becomes a primary node. (hootch)
+- FIX: Write sharing driver did allow chkdsk and format at a secondary node. (hootch)
+- FIX: Write sharing driver caused memory corruption when receiving broadcasting messages. (hootch)
+- FIX: NDASBUS did require read/write access to NDAS device when reading DIB. (hootch)
+- FIX: NDASBUS did not keep NDASSCSI's status correctly. (hootch)
+- FIX: NDASBUS did call ZwXXX functions at APC_LEVEL(hootch)
+- FIX: NDASBUS might not plug in NDAS devices on some systems with Windwows Server 2003 at the boot time. (hootch)
+- FIX: NDASSCSI did not recognize each hard drives correctly in two hard drive NDAS device. (hootch)
+- FIX: NDASSCSI did not complete SRBs sometimes. (hootch)
+- FIX: NDASSCSI did sometimes cause crash when stopping due to driver installation or power saving mode. (hootch)
+
+3.11.1315 R5641 - Oct 13, 2005
+- Build purpose: Internal test
+
+- ADD: NDASSCSI monitors and delays LPX binding device's power state
+       not to perform operation after NICs are down. (hootch)
+- CHG: Does the acutal Stop/Restart NDASSCSI adapter by worker thread. (hootch)
+- CHG: Does not send NOOP to the NDAS device after NDASSCSI recives STOP SCSI command. (hootch)
+- CHG: Changes read block-size dynamically if packet drop occurs in lpx layer. 
+       This reduces problems caused by small network buffer.
+	   (sjcho)
+- CHG: Set LPX maximum packet size to 1500. This fixes a jumbo frame issue.
+- FIX: Network property change made some problems: Crash, LFS primary broadcast stopping - fixed.
+- ADD: Added retransmission time set/get and encryption option to 'vendorctl'
+- FIX: Privileged Connection requires 
+  	   NDASCOMM_CNF_DISABLE_LOCK_CLEANUP_ON_CONNECT flag.
+  	   'vendorctl' is fixed.
+
+3.11.1314 patria R5581 - Oct 5, 2005
+- Build purpose: Internal test
+
+- FIX: NDASOP returns "invalid parameter" error.
+       Fixed parameters calling NDASCOMM functions 
+       in NDASOP.DLL (patria)
+- FIX: ndascmd returns error between mount/mountex (patria)
+- CHG: Changed ndascmd internal function names (patria)
+- FIX: Logical device status remains UNMOUNT_PENDING 
+       even after EjectEx failed. (patria)
+- CHG: ndasbind dialog size changed. (patria)
+- CHG: ndasbind TreeListView styles are changed to prevent
+       incorrect rendering. (patria)
+- CHG: ndasbind resources are fixed. (patria)
+
+3.11.1313 Sep 27, 2005
+- Build purpose: Internal test
+
+- More API functions.
+- More properties in Device Properties.
+- Improved version of the LPX protocol is applied.
+
+3.11.1312 R5457 Sep 12, 2005
+- Build purpose: Internal test
+- Initial build for 3.11 product cycle
+
+
+3.10.1234 R5317 Aug 19, 2005
+
+3.10.1233 R5301 Aug 18, 2005
+
+3.10.1232 R5242 Aug 11, 2005
+
+3.10.1231 R4914 July 15, 2005
+
+3.10.1240 R4416 May 8, 2005
+	Changed structure alignment to 8 byte
+	Added registration flags (volatile, hidden, etc)
+	Overhauled 'ndascmd'
+
+3.10.1230 R4502 May 24, 2005
+	Build purpose: Public release
+
+3.10.1229 R4177 March 31, 2005
+
+3.10.1228 R4077 March 17, 2005
+
+3.10.1227 R3912 March 1, 2005
+	Added suspend mode warning in NDAS device management.
+	Added prevention of name duplication in NDAS Management.
+	Allow only single instance of NDAS Bind Management process in a session
+	
+
+3.10.1226 February 9, 2005
+	Fixed dialog resizes for other languages than English
+	Fixed NDAS SCSI Controller to prevent initialization error event
+	Added jumbo packet support in LPX
+
+3.10.1225
+	Build for RedDotNet.
+	Updated RedDotNet installation.
+	Fixed NoOperation's unconditional success.
+	Fixed reference count error in NDAS service.
+	Added buffer overflow check in Kernel lanscsi lib.
+
+3.10.1224
+	Build for NewTech.
+	Added support for out-of-ranged read/write command.
+
+3.10.1223
+	Fixed LfsFilt caused system hang when disk full
+	Improved RAID facility.
+	Added Write flow control.
+	Improved alarm baloon window.
+
+3.10.1222
+	Build for customer support and full test in Korea.
+	Added first time driver installation detection to prevent double driver loading.
+
+3.10.1221
+	Build for internal test.
+	Fixed 'teamup.exe' DOS program issue.
+	Added optimization option to LanscsiMiniport and Hash library release version.
+
+3.10.1220
+	Build for RedDotNet release.
+	Fixed indirect memory leak due to non-closed event handle.
+
+3.10.1219
+	Added a workaround for handling delayed initalization of the IDE device
+	Added some parameters for Reconnection Timeout, etc.
+	Auto-registered entries are marked as volatile.
+	Updater now handles FullSetup and SmallSetup.
+	Fixed incorrect NDAS read/write count.
+	Added support NDIS4 in lpx.inf
+
+3.10.1218
+	Fixed issues with automatic mounting feature on boot
+
+3.10.1217
+	Build RedDotNet
+
+3.06.1022
+	Release for IoData in Japan. Requested by Shinhwan Hwang.
+
+3.06.1021
+	Updated incorrect Moritani folder name to XIMETA.
+
+3.05.1019
+	Updated LfsFilt.
+
+3.04.1018
+	Updated UIStrings for Intl
+	Updated "IDS_FILE_IN_USE" in NDInst.rc
+
+3.04.1017
+	Updated Intl Tips & Guides text in NDInst.rc file
+	Changed Portuguese(Brazil) to Portuguese(Portuguese) in InstallShield
+
+3.04.1016
+	Internal build.
+	Build Note not available .
+
+3.04.1015
+	removed iomega oem
+	fixed all oem install shield projects
+	fixed UIStrings for all oems
+	from next build, portuguese will use protugal as default language
+	release for gennetworks
+
+
+3.03.1014
+	Wall street release
+	Fixed firstrun dialog size bug for windows xp
+
+3.03.1013
+	* LPX : fixed some bugs
+	* UI Resource
+	Modified texts, pictures, progresses.
+	Modified First run dialog.
+	At the moment, only english is valid, all languages else will be applied on next build.
+	* ND Inst
+	Modified Few tips and guides dialog
+	At the moment, only english is valid, all languages else will be applied on next build.
+
+3.02.1009
+	* LPX : fixed bugs
+		SNAP problem
+		PnP NIC removal problem
+
+	* LanscsiBus : fixed bugs		
+
+	* LDServ : Added followings
+		Blocking auto enable after system crash
+		Netdisk will not enable if any non-compatible netdisk software is running.
+
+	* NetDisk Administrator :
+		Added some parameters as following
+		/L Language ID : You can launch Administrator with chosen languange code.
+		/B : All messages which has only 'OK' button will be displayed in balloon tool tip.
+		/C : Administrator will accept WM_COPYDATA message. ndas_cmd application can control Administrator.
+
+		Netdisk Add Dialog supports copy & paste for full sized serial number.
+		After copy serial number(20 or 25) and click any edit box. Serial number will be copied automatically.
+
+	* LFS : ask ktkim@ximeta.com for details.
+
+	* Pulled out windows includes to c:\winhdr . repository will contain those files.
+
+3.0.1007
+	* Multi-write initiated version.
+	* Iomega
+
+2.3.1.519
+	* Added EULAs (Franch, Germany, Portugues, Italian, Spanish) international retail release.
+	* Fixed some texts in Germany application.
+	* Removed 'FALSE' of italian component condition from install shield(retail) project.
+
+2.3.1.517
+	* Added reconnect ability
+	Admin will notify user with balloon tip when netdisk has lost connection.
+
+	* Fixed many things for windows 98
+	Disabled aggregated or mirrored disks.
+	Added read only connection mode.
+	Removed CallLanscsiBus.cpp from XP/2K Build
+	Removed snmp.cpp from 98/ME Build
+
+	* Miscellaneous
+	Fixed syntex LDSERV_IDS_MIRROR_MASTER_DISCON
+	Fixed syntex of Gennetwork
+	Fixed Setup of Gennetwork
+	Changed copyrights from '2003' to '2003-2004'
+	Fixed NDInst.dll
+	Fixed Autorun. Autorun has suresaver install icon now.
+	Fixed lots of parts in every *.xml.
+
+2.3.0.516
+	* Corrected the following UI strings:
+
+	IDS_NOTMIRR
+        IDS_NOTREGISTER
+        IDS_REGISTERED_SAMEND 
+        IDS_NONETDISK_NETWORK
+        IDS_NONETDISK2
+
+	* "Read / Write" is replaced with "Read/Write" (no space)
+	* "Could not" is replaced with "Cannot"
+
+	IDS_NOTAGGR
+	IDS_NOTDISABLE
+	IDS_NOTEDIT
+	IDS_NOTENABLE
+	IDS_NOTUNBIND
+	IDS_TURN_READONLY
+
+	* 1033, 1041, and 1042 resources are only corrected. Others should be followed.
+	* Added Moritani (Eoseed) directory
+	
+	--- Bug fixes:
+
+	* "Remove" and "Disable" menu item is no longer displayed for the slave NetDisk of the aggregation.
+	* Updated to support the separate splash screen and install guide screen for Eoseed.
+	* Changed to asks the user to choose from "ABORT, RETRY or IGNORE" 
+	  when the setup fails to install device drivers.
+	* Added ND_CleanupDriverFiles custom action to every oem setup project.
+	
+2.3.0.515
+
+	Added Gennetworks OEM release
+
+---------------------------------------------------------------------------
+2.3.0 RELEASES
+---------------------------------------------------------------------------
+
+2.3.0.512	XiMeta NetDisk 2.3.0 US Release
+2.3.0.513	Iomega Network Hard Drive 2.3.0 US Release
+2.3.0.515	Gennetworks NetDisk 2.3.0 Korea Release
+2.3.0.???      	Moritani Eoseed 2.3.0 Japan Release
+2.3.0.???  	Logitec LHD-LU2 2.3.0 Japan Release
+
+---------------------------------------------------------------------------
+
+2.3.0.514 -- Iomega Network Hard Drive 2.3 US Release
+
+	Iomega International Relase is delayed. Only 2.3 US Release is distributed.
+	This build contains minor fixes and updated dialogs.
+
+	Next build will reflect the changes in this build to other releases.
+
+2.3.0.513 -- Iomega Network Hard Drive 2.3 International Release (discarded)
+          -- Logitec LHD-LU2 2.3 Japan Release
+
+	Base Revision 319
+
+	Basically this is the same build as 512 but for the completion of OEM branding
+        for Iomega and Logitec.
+	To support OEM branding and localization, there are slight changes
+	in the user interfaces - only adjustment of the size of controls
+
+	This build has only the follows as official releases:
+
+	- Iomega_NetHD_230_513_INTL
+	- Logitec_LHD-LU2_230_513_JAPAN
+
+2.3.0.512 --- XiMeta NetDisk US RELEASE for 2.3 
+
+	Base Revision 307
+
+	Drivers are quite stabilized and this is a first release of
+	NetDisk Software 2.3 for XiMeta NetDisk US Release.
+
+	* Fixed retransmission timeout values for bursty or wireless network.
+
+	This build has only the follows as official releases:
+
+	- XiMeta_NetDisk_230_512_US
+
+2.2.0.511 -- PRERELEASE for 2.2
+
+	Base Revision 282
+	
+	* Fixed LPX service stop handling
+	* Added OEM Support for Logitec (Japan)
+	* Enhanced localization and OEM branding support
+	* Enhanced suppport for the build-up
+	* Default buttons are changed in accordance with the application context
+	  (Not always the first button is the default one)
+
+2.2.0.510 -- PRERELEASE for 2.2 
+
+	Base Revision 275
+	Reflected recent 2.2 driver bugs
+	
+	* LPX and drivers are quite stablized.
+	* Release candidate for the 2.2 release
+
+2.2.0.509 -- INTERNAL BUILD
+
+	Base Revision 262
+	Source Tree Layout is completely changed.
+	OEM Build Support Test Release
+	Released to Iomega as PRERELEASE
+
+	* Driver fixes are not yet reflected and will be incorporated in the later build
+
+2.2.0.508 -- (PRE)RELEASE for 2.2 INTERNATIONAL RELEASE
+
+	Base Revision 256
+	Build for the release for making European CD.
+	Minor bugs may be fixed at the later build.
+	(This build note may be updated)	
+
+	* Fixed 2.2.0.504 bugs
+	* Not a stable version yet, this build is released temporarily at this time.	
+	* This version may be used as an official release,
+	  and is marked as RELEASE in the setup - No PRERELEASE tag in the SETUP.
+
+2.2.0.507 -- PRERELEASE for 2.2
+
+	Base Revision 212
+	Test build for fix 2.2 bugs
+
+	- fixed drive verifier/timer tick problem
+	- fixed lanscsiminiport completion roution deadlock
+	- fixed lanscsibus wmi/write-buffer/non-paged
+	- fixed lpx timer tick
+
+2.2.0.506 -- PRERELEASE for Proof-reading (International Release)
+
+	* 2.2.0.505 is obsolete at this time and will be updated after proof-reading.
+
+2.2.0.505 -- RELEASE AS 2.2 (International Release)
+
+	Built for the release for XiMeta 2.2 International Release CD
+
+	* Supported Languages: English, German, French, Spanish, Italian and Korean
+	* Setup and AUTORUN is somewhat internationalized now.
+	  (Not fully completed yet)
+        * OEM Build is still incomplete. Next build will support this.
+
+2.2.0.504 -- RELEASE AS 2.2 (US English only)
+
+	Build for the release for XiMeta 2.2 CD
+        
+	* Internationalization features are available for programs
+	* Setup and AUTORUN is not yet fully internationalized
+        * OEM Build is incomplete
+
+2.1.5.503 -- INTERNAL BULID 11-12-2003
+
+	Build test for the lastest lanscsibus, lpx "Enable/Disable Fix"
+	Build procedure reconcilation
+
+2.1.5.502 -- RELEASED AS 2.1.5
+
+	Build for the release for Moritani
+	RELEASE to 2.1.5 to Moritani
+
+2.1.5.501 -- INTERNAL BUILD
+

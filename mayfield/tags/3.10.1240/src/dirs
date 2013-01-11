@@ -1,0 +1,4 @@
+DIRS= common drivers umapps setuphlp
+
+OPTIONDIRS= .
+

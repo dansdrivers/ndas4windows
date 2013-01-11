@@ -1,0 +1,1107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="ndasbind" version="3.41.1610" lang="rus" oem="ximeta" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/13/09">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation><![CDATA[Установлена несовместимая версия файла NDASUSER.DLL.\r\nПожалуйста, проверьте установку программного обеспечения.]]></translation>
+  </string>
+  <string id="/STR/13/10">
+    <base><![CDATA[Incompatible NDASCOMM.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation><![CDATA[Установлена несовместимая версия файла NDASCOMM.DLL.\r\nПожалуйста, проверьте установку программного обеспечения.]]></translation>
+  </string>
+  <string id="/STR/18/14">
+    <base><![CDATA[%1!3d!.%2!02d! GB]]></base>
+    <translation><![CDATA[%1!3d!.%2!02d! Гб]]></translation>
+  </string>
+  <string id="/STR/19/02">
+    <base><![CDATA[A disk cannot be mirrored by the smaller disk in size.]]></base>
+    <translation><![CDATA[Диск не может быть зеркалирован диском меньшего размера.]]></translation>
+  </string>
+  <string id="/STR/20/05">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation><![CDATA[NDAS Bind Management]]></translation>
+  </string>
+  <string id="/STR/20/07">
+    <base><![CDATA[Component]]></base>
+    <translation><![CDATA[Компонент]]></translation>
+  </string>
+  <string id="/STR/20/08">
+    <base><![CDATA[Version]]></base>
+    <translation><![CDATA[Версия]]></translation>
+  </string>
+  <string id="/STR/20/11">
+    <base><![CDATA[Name]]></base>
+    <translation><![CDATA[Имя]]></translation>
+  </string>
+  <string id="/STR/20/12">
+    <base><![CDATA[NDAS ID]]></base>
+    <translation><![CDATA[Идентификатор]]></translation>
+  </string>
+  <string id="/STR/20/13">
+    <base><![CDATA[Capacity]]></base>
+    <translation><![CDATA[Емкость]]></translation>
+  </string>
+  <string id="/STR/20/14">
+    <base><![CDATA[Number]]></base>
+    <translation><![CDATA[Номер]]></translation>
+  </string>
+  <string id="/STR/21/06">
+    <base><![CDATA[NDAS Bind Management]]></base>
+    <translation><![CDATA[NDAS Bind Management]]></translation>
+  </string>
+  <string id="/STR/22/02">
+    <base><![CDATA[NDAS Bind Error]]></base>
+    <translation><![CDATA[Ошибка NDAS Bind]]></translation>
+  </string>
+  <string id="/STR/22/03">
+    <base><![CDATA[Failed to convert the selected disk to a basic disk.]]></base>
+    <translation><![CDATA[Невозможно конвертировать указанный диск в основной.]]></translation>
+  </string>
+  <string id="/STR/22/04">
+    <base><![CDATA[This feature is not implemented yet.]]></base>
+    <translation><![CDATA[Эта функция еще не выполнена.]]></translation>
+  </string>
+  <string id="/STR/22/09">
+    <base><![CDATA[Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!]]></base>
+    <translation><![CDATA[Устройство: NDAS 0x%1!04X!\r\nКод ошибки: %2!u! (0x%2!04X!)\r\n%3!s!]]></translation>
+  </string>
+  <string id="/STR/22/10">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation><![CDATA[Код ошибки: %1!u! (0x%1!04X!)\r\n%2!s!]]></translation>
+  </string>
+  <string id="/STR/22/11">
+    <base><![CDATA[All of the data will be lost once the disks are bound. Are you sure you want to bind the disks?]]></base>
+    <translation><![CDATA[При объединении дисков все данные будут утеряны. Вы уверены, что хотите объединить эти диски?]]></translation>
+  </string>
+  <string id="/STR/22/12">
+    <base><![CDATA[Some version of Windows cannot access a disk larger than 2 TBytes and the size of bound disks is larger than the limit. Do you want to continue?]]></base>
+    <translation><![CDATA[Некоторые версии Windows не могут работать с дисками более 2Тб. Общий размер объединенных дисков превышает 2Тб. Вы хотите продолжить?]]></translation>
+  </string>
+  <string id="/STR/23/00">
+    <base><![CDATA[%1!s! does not have Write access privilege. The NDAS device's Write Key is required to be registered to gain Write access.]]></base>
+    <translation><![CDATA[%1!s! не имеет прав на запись. Необходимо зарегистрировать ключ, позволяющий запись на устройство.]]></translation>
+  </string>
+  <string id="/STR/23/05">
+    <base><![CDATA[All of the data will be lost once the disks are unbound. Are you sure you want to unbind the disks?]]></base>
+    <translation><![CDATA[При разъединении дисков все данные будут утеряны. Вы уверены, что хотите разъединить эти диски?]]></translation>
+  </string>
+  <string id="/STR/23/06">
+    <base><![CDATA[Selected disks are successfully unbound. You must first mount and then format each of the unbound disks before using them.]]></base>
+    <translation><![CDATA[Диски успешно разъединены. Перед началом использования Вам необходимо подключить, а затем отформатировать их.]]></translation>
+  </string>
+  <string id="/STR/23/08">
+    <base><![CDATA[A problem occurred while operating on the NDAS device '%1!s!'.]]></base>
+    <translation><![CDATA[Возникла ошибка при работе с NDAS устройством '%1!s!'.]]></translation>
+  </string>
+  <string id="/STR/23/09">
+    <base><![CDATA[A problem occurred while operating on the NDAS devices.]]></base>
+    <translation><![CDATA[Возникла ошибка при работе с NDAS устройствами.]]></translation>
+  </string>
+  <string id="/STR/24/00">
+    <base><![CDATA[Bind type]]></base>
+    <translation><![CDATA[Тип объединения]]></translation>
+  </string>
+  <string id="/STR/24/01">
+    <base><![CDATA[Striped Disk (RAID-0)]]></base>
+    <translation><![CDATA[Расщепленный Диск (RAID-0)]]></translation>
+  </string>
+  <string id="/STR/24/02">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation><![CDATA[Зеркальный диск (RAID-1)]]></translation>
+  </string>
+  <string id="/STR/24/03">
+    <base><![CDATA[RAID-2 Disk]]></base>
+    <translation><![CDATA[RAID-2 Диск]]></translation>
+  </string>
+  <string id="/STR/24/04">
+    <base><![CDATA[RAID-3 Disk]]></base>
+    <translation><![CDATA[RAID-3 Диск]]></translation>
+  </string>
+  <string id="/STR/24/05">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation><![CDATA[RAID-4 Диск]]></translation>
+  </string>
+  <string id="/STR/24/06">
+    <base><![CDATA[RAID-5 Disk]]></base>
+    <translation><![CDATA[RAID-5 Диск]]></translation>
+  </string>
+  <string id="/STR/24/07">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation><![CDATA[Агрегированный диск]]></translation>
+  </string>
+  <string id="/STR/24/08">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation><![CDATA[Флэш накопитель]]></translation>
+  </string>
+  <string id="/STR/24/09">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation><![CDATA[DVD привод]]></translation>
+  </string>
+  <string id="/STR/24/10">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation><![CDATA[Зеркальный диск]]></translation>
+  </string>
+  <string id="/STR/24/11">
+    <base><![CDATA[MO Drive]]></base>
+    <translation><![CDATA[MO привод]]></translation>
+  </string>
+  <string id="/STR/24/12">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation><![CDATA[Основной диск]]></translation>
+  </string>
+  <string id="/STR/24/13">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation><![CDATA[Неизвестный тип (0x%1!08X!)]]></translation>
+  </string>
+  <string id="/STR/24/14">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation><![CDATA[Виртуальный DVD привод]]></translation>
+  </string>
+  <string id="/STR/25/02">
+    <base><![CDATA[Device not found]]></base>
+    <translation><![CDATA[Устройство не обнаружено]]></translation>
+  </string>
+  <string id="/STR/25/03">
+    <base><![CDATA[Status]]></base>
+    <translation><![CDATA[Статус]]></translation>
+  </string>
+  <string id="/STR/25/04">
+    <base><![CDATA[RAID status]]></base>
+    <translation><![CDATA[Статус RAID]]></translation>
+  </string>
+  <string id="/STR/25/05">
+    <base><![CDATA[Comment]]></base>
+    <translation><![CDATA[Комментарий]]></translation>
+  </string>
+  <string id="/STR/25/07">
+    <base><![CDATA[Yes]]></base>
+    <translation><![CDATA[Да]]></translation>
+  </string>
+  <string id="/STR/25/08">
+    <base><![CDATA[No]]></base>
+    <translation><![CDATA[Нет]]></translation>
+  </string>
+  <string id="/STR/25/09">
+    <base><![CDATA[Missing Member]]></base>
+    <translation><![CDATA[Отсутствующее устройство]]></translation>
+  </string>
+  <string id="/STR/25/10">
+    <base><![CDATA[Yes (Need Resynchronizing)]]></base>
+    <translation><![CDATA[Да (Необходима повторная синхронизация)]]></translation>
+  </string>
+  <string id="/STR/25/12">
+    <base><![CDATA[Offline]]></base>
+    <translation><![CDATA[Не в сети]]></translation>
+  </string>
+  <string id="/STR/25/13">
+    <base><![CDATA[In use]]></base>
+    <translation><![CDATA[Уже используется]]></translation>
+  </string>
+  <string id="/STR/25/14">
+    <base><![CDATA[No Write Key]]></base>
+    <translation><![CDATA[Отсутствует ключ на запись]]></translation>
+  </string>
+  <string id="/STR/25/15">
+    <base><![CDATA[Ready]]></base>
+    <translation><![CDATA[Готов]]></translation>
+  </string>
+  <string id="/STR/26/00">
+    <base><![CDATA[Migrates mirrored disks to recoverable disks\nMigrate]]></base>
+    <translation><![CDATA[Перемещение зеркальных дисков на восстанавливаемые\nПереместить]]></translation>
+  </string>
+  <string id="/STR/26/01">
+    <base><![CDATA[Disabled]]></base>
+    <translation><![CDATA[Отключено]]></translation>
+  </string>
+  <string id="/STR/26/02">
+    <base><![CDATA[Do you want to unbind the following disks?]]></base>
+    <translation><![CDATA[Вы хотите разъединить эти диски?]]></translation>
+  </string>
+  <string id="/STR/26/03">
+    <base><![CDATA[Selected disks are successfully unbound.]]></base>
+    <translation><![CDATA[Выбранные диски успешно разъединены.]]></translation>
+  </string>
+  <string id="/STR/27/06">
+    <base><![CDATA[NDAS Bind Wizard]]></base>
+    <translation><![CDATA[Мастер объединения дисков]]></translation>
+  </string>
+  <string id="/STR/27/07">
+    <base><![CDATA[Select Bind Type]]></base>
+    <translation><![CDATA[Выберите тип объединения]]></translation>
+  </string>
+  <string id="/STR/27/08">
+    <base><![CDATA[You can select the bind type.]]></base>
+    <translation><![CDATA[Вы можете выбрать тип объединения.]]></translation>
+  </string>
+  <string id="/STR/27/09">
+    <base><![CDATA[Select Disk]]></base>
+    <translation><![CDATA[Выберите диск]]></translation>
+  </string>
+  <string id="/STR/27/10">
+    <base><![CDATA[You can select the disks to be bound.]]></base>
+    <translation><![CDATA[Вы можете выбрать диски для объединения.]]></translation>
+  </string>
+  <string id="/STR/27/13">
+    <base><![CDATA[Verdana]]></base>
+    <translation><![CDATA[Verdana]]></translation>
+  </string>
+  <string id="/STR/27/14">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[12]]></translation>
+  </string>
+  <string id="/STR/28/01">
+    <base><![CDATA[You have successfully completed the Disk Bind Wizard. You must first mount and then format the bound disks before using them.]]></base>
+    <translation><![CDATA[Вы успешно завершили работу Мастера объединения дисков. Перед началом использования Вам необходимо подключить, а затем отформатировать их.]]></translation>
+  </string>
+  <string id="/STR/28/02">
+    <base><![CDATA[You have failed to bind disks.]]></base>
+    <translation><![CDATA[Диски не объединены.]]></translation>
+  </string>
+  <string id="/STR/28/03">
+    <base><![CDATA[Bind Type: %1!s!]]></base>
+    <translation><![CDATA[Тип объединения: %1!s!]]></translation>
+  </string>
+  <string id="/STR/28/04">
+    <base><![CDATA[Disks selected:]]></base>
+    <translation><![CDATA[Выбранные диски:]]></translation>
+  </string>
+  <string id="/STR/28/05">
+    <base><![CDATA[Disks size: %1!s!]]></base>
+    <translation><![CDATA[Объем дисков:%1!s!]]></translation>
+  </string>
+  <string id="/STR/28/06">
+    <base><![CDATA[Failed device: %1!s!]]></base>
+    <translation><![CDATA[Ошибка устройства: %1!s!]]></translation>
+  </string>
+  <string id="/STR/28/07">
+    <base><![CDATA[An aggregated disk is made up of more than one disks. Create an aggregated disk if you need a disk that is too large for a basic disk.]]></base>
+    <translation><![CDATA[Агрегированный диск состоит более чем из одного диска. Создайте агрегированный диск, если Вам необходим диск большего размера, чем основной.]]></translation>
+  </string>
+  <string id="/STR/28/08">
+    <base><![CDATA[A striped disk (RAID-0) stores data in stripes on two or more disks. A striped disk gives you faster access to your data than a basic or aggregated volume.]]></base>
+    <translation><![CDATA[Расщепленный диск (RAID-0) хранит данные на двух и более дисках. Расщепленный диск предоставляет более быстрый доступ к данным, чем основной или агрегированный.]]></translation>
+  </string>
+  <string id="/STR/28/09">
+    <base><![CDATA[A mirrored disk (RAID-1) duplicates your data on two disks. Create a mirrored disk if you want to keep two separate copies of all your information to prevent data loss.]]></base>
+    <translation><![CDATA[Зеркальный диск (RAID-1) дублирует данные на двух дисках. Создайте зеркальный диск, если Вы хотите иметь две отдельные копии Ваших данных, это повышает надежность хранения.]]></translation>
+  </string>
+  <string id="/STR/28/10">
+    <base><![CDATA[A RAID-4 disk stores data in stripes on three or more disks. It provides a way of recovering data if part of the data is lost.]]></base>
+    <translation><![CDATA[RAID-4 диск хранит данные на трех и более дисках. Это позволяет восстановить данные, даже если часть из них повреждена.]]></translation>
+  </string>
+  <string id="/STR/28/11">
+    <base><![CDATA[Mirrored Disk (RAID-1) (Deprecated)]]></base>
+    <translation><![CDATA[Зеркальный диск (RAID-1) ]]></translation>
+  </string>
+  <string id="/STR/28/12">
+    <base><![CDATA[RAID-4 Disk (Deprecated)]]></base>
+    <translation><![CDATA[RAID-4 Диск ]]></translation>
+  </string>
+  <string id="/STR/28/13">
+    <base><![CDATA[Mirrored Disk (RAID-1)]]></base>
+    <translation><![CDATA[Зеркальный диск (RAID-1)]]></translation>
+  </string>
+  <string id="/STR/28/14">
+    <base><![CDATA[RAID-4 Disk]]></base>
+    <translation><![CDATA[RAID-4 диск]]></translation>
+  </string>
+  <string id="/STR/28/15">
+    <base><![CDATA[Not registered]]></base>
+    <translation><![CDATA[Не зарегистрирован]]></translation>
+  </string>
+  <string id="/STR/29/00">
+    <base><![CDATA[A RAID-5 disk stores data in stripes on three or more disks. It provides a way of recovering data if part of the data is lost.]]></base>
+    <translation><![CDATA[RAID-5 диск хранит данные на трех или более дисках. Это позволяет восстановить данные, даже если часть из них повреждена.]]></translation>
+  </string>
+  <string id="/STR/29/01">
+    <base><![CDATA[Failed to migrate.]]></base>
+    <translation><![CDATA[Невозможно переместить.]]></translation>
+  </string>
+  <string id="/STR/29/02">
+    <base><![CDATA[Requested operation cannot be processed while the NDAS device is offline or in use in other hosts.]]></base>
+    <translation><![CDATA[Запрошенная операция не может быть выполнена пока диск не в сети или используется другим хостом.]]></translation>
+  </string>
+  <string id="/STR/29/03">
+    <base><![CDATA[Failed to fix raid state.]]></base>
+    <translation><![CDATA[Невозможно исправить состояние RAID]]></translation>
+  </string>
+  <string id="/STR/68/06">
+    <base><![CDATA[Press the start button to continue.]]></base>
+    <translation><![CDATA[Нажмите кнопку Старт чтобы продолжить.]]></translation>
+  </string>
+  <string id="/STR/68/07">
+    <base><![CDATA[Synchronizing devices...]]></base>
+    <translation><![CDATA[Синхронизация устройств...]]></translation>
+  </string>
+  <string id="/STR/68/08">
+    <base><![CDATA[Synchronization completed.]]></base>
+    <translation><![CDATA[Синхронизация завершена.]]></translation>
+  </string>
+  <string id="/STR/68/09">
+    <base><![CDATA[Failed to synchronize devices.]]></base>
+    <translation><![CDATA[Невозможно синхронизировать устройства.]]></translation>
+  </string>
+  <string id="/STR/68/10">
+    <base><![CDATA[Add mirror disk]]></base>
+    <translation><![CDATA[Добавить зеркальный диск]]></translation>
+  </string>
+  <string id="/STR/68/13">
+    <base><![CDATA[Adds a spare disk to the fault tolerant RAID disk group.\nAdd Spare Disk]]></base>
+    <translation><![CDATA[Добавить резервный диск к отказоустойчивому RAID массиву.\nДобавить дополнительный диск]]></translation>
+  </string>
+  <string id="/STR/68/14">
+    <base><![CDATA[Removes a spare disk from the fault tolerant RAID disk group.\nRemove Spare Disk]]></base>
+    <translation><![CDATA[Удалить резервный диск из отказоустойчивого RAID массива.\nУдалить резервный диск]]></translation>
+  </string>
+  <string id="/STR/69/05">
+    <base><![CDATA[Select a spare disk]]></base>
+    <translation><![CDATA[Выбрать резервный диск]]></translation>
+  </string>
+  <string id="/STR/69/06">
+    <base><![CDATA[Select a disk to be used as a spare disk for the RAID]]></base>
+    <translation><![CDATA[Выбрать диск для использования как резервный из RAID массива]]></translation>
+  </string>
+  <string id="/STR/69/08">
+    <base><![CDATA[The disk is too small to be used as a spare disk.]]></base>
+    <translation><![CDATA[Этот диск слишком мал, чтобы быть использованным как резервный.]]></translation>
+  </string>
+  <string id="/STR/69/09">
+    <base><![CDATA[Select a mirror disk]]></base>
+    <translation><![CDATA[Выберите зеркальный диск]]></translation>
+  </string>
+  <string id="/STR/69/10">
+    <base><![CDATA[Select a backup disk to make a mirror.]]></base>
+    <translation><![CDATA[Выберите дублирующий диск, чтобы создать зеркальный том.]]></translation>
+  </string>
+  <string id="/STR/69/11">
+    <base><![CDATA[Unbind]]></base>
+    <translation><![CDATA[Разъединить]]></translation>
+  </string>
+  <string id="/STR/69/12">
+    <base><![CDATA[Data on the following disks will be deleted.\nAre you sure you want to unbind them?]]></base>
+    <translation><![CDATA[Данные на следующих дисках будут удалены.\nВы уверены, что хотите разъединить их?]]></translation>
+  </string>
+  <string id="/STR/69/13">
+    <base><![CDATA[Replace the selected device in RAID with another one.]]></base>
+    <translation><![CDATA[Заменить выделенное устройство в RAID массиве.]]></translation>
+  </string>
+  <string id="/STR/69/14">
+    <base><![CDATA[Use this device as RAID member.]]></base>
+    <translation><![CDATA[Использовать данное устройство в RAID массиве.]]></translation>
+  </string>
+  <string id="/STR/69/15">
+    <base><![CDATA[The requested operation has not succeeded.]]></base>
+    <translation><![CDATA[Запрошенная операция не выполнена.]]></translation>
+  </string>
+  <string id="/STR/70/00">
+    <base><![CDATA[Removing a spare disk]]></base>
+    <translation><![CDATA[Удаление резервного диска]]></translation>
+  </string>
+  <string id="/STR/70/01">
+    <base><![CDATA[Are you sure you want to remove the selected spare disk?]]></base>
+    <translation><![CDATA[Вы уверены, что хотите удалить выделенный резервный диск?]]></translation>
+  </string>
+  <string id="/STR/70/02">
+    <base><![CDATA[Convert to the Basic Disk]]></base>
+    <translation><![CDATA[Конвертировать в основной диск]]></translation>
+  </string>
+  <string id="/STR/70/03">
+    <base><![CDATA[All of the data will be lost once the disk is reset to a basic disk. Would you like to continue?]]></base>
+    <translation><![CDATA[При конвертировании диска в основной, все данные будут утеряны. Вы хотите продолжить?]]></translation>
+  </string>
+  <string id="/STR/70/14">
+    <base><![CDATA[Select a replace disk]]></base>
+    <translation><![CDATA[Выберите диск для замены]]></translation>
+  </string>
+  <string id="/STR/70/15">
+    <base><![CDATA[Select a disk to be used as a replacement.]]></base>
+    <translation><![CDATA[Выберите заменяющий диск.]]></translation>
+  </string>
+  <string id="/STR/71/00">
+    <base><![CDATA[Replace a hard drive]]></base>
+    <translation><![CDATA[Заменить жесткий диск]]></translation>
+  </string>
+  <string id="/STR/71/01">
+    <base><![CDATA[Press OK if you want to replace a missing drive with new one.]]></base>
+    <translation><![CDATA[Нажмите OK, если Вы хотите заменить отсутствующий диск другим.]]></translation>
+  </string>
+  <string id="/STR/71/02">
+    <base><![CDATA[Migrate]]></base>
+    <translation><![CDATA[Перенос]]></translation>
+  </string>
+  <string id="/STR/71/03">
+    <base><![CDATA[Previous version of NDAS software may not be able to use these devices after migration.\nAre you sure you want to migrate them?]]></base>
+    <translation><![CDATA[Предыдущая версия программного обеспечения может некорректно работать с устройствами после переноса.\nВы уверены, что хотите перенести их?]]></translation>
+  </string>
+  <string id="/STR/71/04">
+    <base><![CDATA[Reset bind information to remove unrecognized bind information.]]></base>
+    <translation><![CDATA[Сбросьте информацию чтобы удалить данные о нераспознанных объединенных дисках.]]></translation>
+  </string>
+  <string id="/STR/71/05">
+    <base><![CDATA[Clear defective flag from the disk.]]></base>
+    <translation><![CDATA[Убрать флаг повреждения с диска.]]></translation>
+  </string>
+  <string id="/STR/71/06">
+    <base><![CDATA[Remove disk from RAID set. Disk type is not changed.]]></base>
+    <translation><![CDATA[Удалить диск из RAID массива. Тип диска не изменен.]]></translation>
+  </string>
+  <string id="/STR/71/07">
+    <base><![CDATA[Remove disk from RAID set and convert it to basic disk.]]></base>
+    <translation><![CDATA[Удалить диск из RAID массива с изменением его в основной.]]></translation>
+  </string>
+  <string id="/STR/71/08">
+    <base><![CDATA[Cannot replace the selected disk. \nReplacement will break RAID.]]></base>
+    <translation><![CDATA[Невозможно заменить выбранный диск.\nЗамена разрушит RAID массив.]]></translation>
+  </string>
+  <string id="/STR/71/09">
+    <base><![CDATA[Not all member disks are accessible.\nChanging RAID configuration with missing member can make RAID fail.\nDo you want to continue?]]></base>
+    <translation><![CDATA[Не все элементы массива доступны.\nЗамена недоступного элемента массива может разрушить RAID.\nВы хотите продолжить?]]></translation>
+  </string>
+  <string id="/STR/71/10">
+    <base><![CDATA[The disk is too small to be used as this RAID member.]]></base>
+    <translation><![CDATA[Этот диск слишком мал для использования в данном RAID массиве.]]></translation>
+  </string>
+  <string id="/STR/71/11">
+    <base><![CDATA[The data of this disk will be lost and if this disk is a member of another RAID, it may be broken.Do you want to continue?]]></base>
+    <translation><![CDATA[Данные на этом диске будут потеряны, и если этот диск является элементом RAID массива, он может быть разрушен. Вы хотите продолжить?]]></translation>
+  </string>
+  <string id="/STR/71/12">
+    <base><![CDATA[RAID containing this disk may be broken after this operation. Do you want to continue?]]></base>
+    <translation><![CDATA[RAID массив, содержащий этот диск может быть разрушен после выполнения этой операции. Вы хотите продолжить?]]></translation>
+  </string>
+  <string id="/STR/71/13">
+    <base><![CDATA[Cannot remove the selected disk.\nIt will break RAID.]]></base>
+    <translation><![CDATA[Невозможно удалить диск из RAID массива.\nЭто разрушит RAID.]]></translation>
+  </string>
+  <string id="/STR/71/14">
+    <base><![CDATA[Not all member disks are accessible.]]></base>
+    <translation><![CDATA[Не все элементы массива доступны.]]></translation>
+  </string>
+  <string id="/STR/71/15">
+    <base><![CDATA[Corrupted RAID information]]></base>
+    <translation><![CDATA[Поврежденные данные RAID]]></translation>
+  </string>
+  <string id="/STR/72/00">
+    <base><![CDATA[Member of another RAID]]></base>
+    <translation><![CDATA[Элемент другого RAID массива]]></translation>
+  </string>
+  <string id="/STR/72/02">
+    <base><![CDATA[Read failure]]></base>
+    <translation><![CDATA[Ошибка чтения]]></translation>
+  </string>
+  <string id="/STR/72/03">
+    <base><![CDATA[Not a RAID member]]></base>
+    <translation><![CDATA[Не является элементом RAID массива]]></translation>
+  </string>
+  <string id="/STR/72/04">
+    <base><![CDATA[Bad disk]]></base>
+    <translation><![CDATA[Поврежденный диск]]></translation>
+  </string>
+  <string id="/STR/72/05">
+    <base><![CDATA[Bad sector found]]></base>
+    <translation><![CDATA[Обнаружены поврежденные сектора]]></translation>
+  </string>
+  <string id="/STR/72/06">
+    <base><![CDATA[Unknown defect]]></base>
+    <translation><![CDATA[Неизвестное повреждение]]></translation>
+  </string>
+  <string id="/STR/72/07">
+    <base><![CDATA[Out-of-sync]]></base>
+    <translation><![CDATA[Не синхронизован]]></translation>
+  </string>
+  <string id="/STR/72/08">
+    <base><![CDATA[Spare disk]]></base>
+    <translation><![CDATA[Резервный диск]]></translation>
+  </string>
+  <string id="/STR/72/09">
+    <base><![CDATA[RAID information on this disk is corrupted. \nTry "%1!s!" menu.]]></base>
+    <translation><![CDATA[Данные о RAID на этом диске повреждены. \nВоспользуйтесь меню "%1!s!".]]></translation>
+  </string>
+  <string id="/STR/72/11">
+    <base><![CDATA[Cannot read. Replace disk or remove from RAID]]></base>
+    <translation><![CDATA[Чтение невозможно. Замените или удалите диск из RAID массива]]></translation>
+  </string>
+  <string id="/STR/72/12">
+    <base><![CDATA[Reconfigure RAID members.]]></base>
+    <translation><![CDATA[Настроить элементы RAID.]]></translation>
+  </string>
+  <string id="/STR/72/13">
+    <base><![CDATA[Replace bad disk with new one and run "%1!s!" menu\n or use "%2!s!" menu to ignore defect and retry]]></base>
+    <translation><![CDATA[Заменить диск новым и запустить меню "%1!s!"\n или воспользоваться меню "%2!s!" и проигнорировать ошибку, а затем повторить попытку]]></translation>
+  </string>
+  <string id="/STR/72/14">
+    <base><![CDATA[Data of this disk is out of sync with another RAID member's data.]]></base>
+    <translation><![CDATA[Данные на этом диске не синхронизованы с данными на другом элементе RAID массива.]]></translation>
+  </string>
+  <string id="/STR/72/15">
+    <base><![CDATA[This disk will be used as active RAID member when any of other member fails.]]></base>
+    <translation><![CDATA[Этот диск будет использован как элемент RAID массива в случае отказа какого-либо из текущих элементов RAID.]]></translation>
+  </string>
+  <string id="/STR/73/00">
+    <base><![CDATA[This disk may be configured by higher version of NDAS software.\n Use "%1!s!" menu to convert to a single disk]]></base>
+    <translation><![CDATA[Этот диск может быть настроен с помощью более поздней версии программного обеспечения NDAS.\n Воспользуйтесь меню "%1!s!", чтобы конвертировать в отдельный диск]]></translation>
+  </string>
+  <string id="/STR/73/01">
+    <base><![CDATA[Migration required]]></base>
+    <translation><![CDATA[Необходим перенос]]></translation>
+  </string>
+  <string id="/STR/73/02">
+    <base><![CDATA[Unsupported RAID]]></base>
+    <translation><![CDATA[Неподдерживаемый RAID]]></translation>
+  </string>
+  <string id="/STR/73/04">
+    <base><![CDATA[Irreconcilable state]]></base>
+    <translation><![CDATA[Состояние конфликта]]></translation>
+  </string>
+  <string id="/STR/73/05">
+    <base><![CDATA[Non-mountable\nRAID information is corrupted]]></base>
+    <translation><![CDATA[Неподключаемый\nRAID информация о RAID повреждена]]></translation>
+  </string>
+  <string id="/STR/73/06">
+    <base><![CDATA[Missing member]]></base>
+    <translation><![CDATA[Элемент отсутствует]]></translation>
+  </string>
+  <string id="/STR/73/07">
+    <base><![CDATA[Migration required]]></base>
+    <translation><![CDATA[Необходим перенос]]></translation>
+  </string>
+  <string id="/STR/73/08">
+    <base><![CDATA[Defective disk]]></base>
+    <translation><![CDATA[Диск поврежден]]></translation>
+  </string>
+  <string id="/STR/73/09">
+    <base><![CDATA[Non-mountable]]></base>
+    <translation><![CDATA[Неподключаемый]]></translation>
+  </string>
+  <string id="/STR/73/10">
+    <base><![CDATA[Degraded mode]]></base>
+    <translation><![CDATA[Режим с ограниченной функциональностью]]></translation>
+  </string>
+  <string id="/STR/73/11">
+    <base><![CDATA[Need resynchronizing\n%1!d!%% in sync]]></base>
+    <translation><![CDATA[Необходима повторная синхронизация \n%1!d!%%]]></translation>
+  </string>
+  <string id="/STR/73/12">
+    <base><![CDATA[Need resynchronizing]]></base>
+    <translation><![CDATA[Необходима повторная синхронизация]]></translation>
+  </string>
+  <string id="/STR/73/13">
+    <base><![CDATA[Healthy]]></base>
+    <translation><![CDATA[Ошибки не обнаружены]]></translation>
+  </string>
+  <string id="/STR/73/14">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nIf any of the disk is missing, unbind RAID and create it again]]></base>
+    <translation><![CDATA[Соедините все элементы и используйте меню "%1!s!".\nЕсли какой-либо из дисков отсутствует, разъедините RAID и повторно объедините]]></translation>
+  </string>
+  <string id="/STR/73/15">
+    <base><![CDATA[Connect all member devices and use "%1!s!" menu.\nYou cannot migrate with missing member]]></base>
+    <translation><![CDATA[Соедините все элементы и используйте меню "%1!s!".\nВы не можете перемещать диски, если какой-либо из элементов отсутствует]]></translation>
+  </string>
+  <string id="/STR/74/00">
+    <base><![CDATA[This RAID is created by higher version of software. Please update NDAS software]]></base>
+    <translation><![CDATA[Этот RAID массив собран более поздней версией программного обеспечения NDAS. Пожалуйста, обновите программное обеспечение NDAS.]]></translation>
+  </string>
+  <string id="/STR/74/01">
+    <base><![CDATA[Each member has been used in degraded mode separately.\nYou need to convert one member to basic disk or unbind RAID.]]></base>
+    <translation><![CDATA[Каждый элемент использовался в режиме с ограниченной функциональностью.\nВам нужно конвертировать элемент в основной диск или разъединить RAID.]]></translation>
+  </string>
+  <string id="/STR/74/02">
+    <base><![CDATA[Reconfigure the corrupted member disk.]]></base>
+    <translation><![CDATA[Перенастройте поврежденный элемент.]]></translation>
+  </string>
+  <string id="/STR/74/03">
+    <base><![CDATA[Non fault-tolerant RAID.\nAll members should be available to mount this RAID set.]]></base>
+    <translation><![CDATA[Неустойчивый к ошибкам RAID.\nВсе элементы должны быть доступны для использования RAID массива.]]></translation>
+  </string>
+  <string id="/STR/74/04">
+    <base><![CDATA[The number of valid members is not enough to mount.]]></base>
+    <translation><![CDATA[Количество доступных элементов недостаточно для подключения.]]></translation>
+  </string>
+  <string id="/STR/74/05">
+    <base><![CDATA[This RAID is created by older version of NDAS software.\nOnce migrated, this RAID cannot be used by older version of NDAS software]]></base>
+    <translation><![CDATA[Данный RAID массив создан более ранней версией программного обеспечения NDAS.\nПосле переноса, этот RAID не может использоваться более поздней версией программного обеспечения]]></translation>
+  </string>
+  <string id="/STR/74/06">
+    <base><![CDATA[Disk has defects. Replace the defective disk.]]></base>
+    <translation><![CDATA[Диск имеет повреждения. Замените диск.]]></translation>
+  </string>
+  <string id="/STR/74/07">
+    <base><![CDATA[RAID will work without fault-tolerant feature due to missing member(s).]]></base>
+    <translation><![CDATA[RAID не будет работать в устойчивом к ошибкам режиме так как отсутствуют некоторые элементы массива.]]></translation>
+  </string>
+  <string id="/STR/74/08">
+    <base><![CDATA[Resynchronizing will be started when RAID is mounted in Read/Write mode.]]></base>
+    <translation><![CDATA[Повторная синхронизация будет запущена после подключения RAID массива в режиме чтение/запись.]]></translation>
+  </string>
+  <string id="/STR/74/09">
+    <base><![CDATA[Invalid member]]></base>
+    <translation><![CDATA[Недействительный элемент]]></translation>
+  </string>
+  <string id="/STR/74/11">
+    <base><![CDATA[RAID can be mounted only when all members are registered]]></base>
+    <translation><![CDATA[RAID может быть подключен только если все его элементы зарегистрированы.]]></translation>
+  </string>
+  <string id="/STR/74/12">
+    <base><![CDATA[RAID can be mounted only when all members are enabled]]></base>
+    <translation><![CDATA[RAID может быть подключен только если все его элементы доступны.]]></translation>
+  </string>
+  <string id="/STR/74/13">
+    <base><![CDATA[Not registered]]></base>
+    <translation><![CDATA[Не зарегистрирован]]></translation>
+  </string>
+  <string id="/STR/74/14">
+    <base><![CDATA[Spare used]]></base>
+    <translation><![CDATA[Используется резервное устройство]]></translation>
+  </string>
+  <string id="/STR/74/15">
+    <base><![CDATA[After spare disk is used, RAID needs reconfiguration.]]></base>
+    <translation><![CDATA[После подключения резервного диска нужно перенастроить RAID.]]></translation>
+  </string>
+  <string id="/STR/75/00">
+    <base><![CDATA[Inconsistent bind information]]></base>
+    <translation><![CDATA[Неконсистентные данные]]></translation>
+  </string>
+  <string id="/STR/75/01">
+    <base><![CDATA[Bind information on the disk is inconsistent or unrecognizable.\nUse "%1!s!" menu to use as a single disk.]]></base>
+    <translation><![CDATA[Данные об объединении диска недоступны.\nВоспользуйтесь меню "%1!s!" для использования отдельного диска.]]></translation>
+  </string>
+  <string id="/STR/75/02">
+    <base><![CDATA[Replaced by spare]]></base>
+    <translation><![CDATA[Заменен резервным]]></translation>
+  </string>
+  <string id="/STR/75/03">
+    <base><![CDATA[This disk's role is replaced by the spare disk. Reconfigure the RAID using \n"%1!s!" or "%2!s!" or "%3!s!" menu.]]></base>
+    <translation><![CDATA[Этот диск заменен резервным. Перенастройте RAID используя \n меню "%1!s!" или "%2!s!" или "%3!s!".]]></translation>
+  </string>
+  <string id="/STR/75/04">
+    <base><![CDATA[Used in degraded mode]]></base>
+    <translation><![CDATA[Использование в режиме с ограниченной функциональностью]]></translation>
+  </string>
+  <string id="/STR/75/05">
+    <base><![CDATA[This disk is used in degraded mode and may have different data.\nUse "%1!s!" menu to retain the data in this disk.]]></base>
+    <translation><![CDATA[Этот диск используется в режиме с ограниченной функциональностью и может содержать поврежденные данные.\nВоспользуйтесь меню "%1!s!" чтобы сохранить данные на этом диске.]]></translation>
+  </string>
+  <string id="/STR/75/06">
+    <base><![CDATA[This operation will reset all configuration information which may be used by a higher version of NDAS software. Do you want to continue?]]></base>
+    <translation><![CDATA[Эта операция сбросит все настройки, которые могут использоваться более поздними версиями программного обеспечения NDAS. Вы хотите продолжить?]]></translation>
+  </string>
+  <string id="/STR/75/07">
+    <base><![CDATA[RAID is in broken status. Requested operation cannot be processed.]]></base>
+    <translation><![CDATA[RAID разрушен. Требуемая команда не может быть выполнена.]]></translation>
+  </string>
+  <string id="/STR/75/08">
+    <base><![CDATA[Cannot clear defect mark because no valid copy of data exists.\nPlease unbind RAID and try to recover data from each disk\n]]></base>
+    <translation><![CDATA[Невозможно очистить поврежденную метку т.к. не существуюет подлинной копии данных.\nПожалуйста, разъедините RAID массив и попробуйте восстановить данные с каждого диска по отдельности.]]></translation>
+  </string>
+  <string id="/STR/75/09">
+    <base><![CDATA[Failed to bind NDAS devices. Read next message for error information.]]></base>
+    <translation><![CDATA[Ошибка при объединении NDAS устройств. Прочтите следующее сообщения для получения информации об ошибке.]]></translation>
+  </string>
+  <string id="/STR/76/00">
+    <base><![CDATA[Defective]]></base>
+    <translation><![CDATA[Поврежден]]></translation>
+  </string>
+  <string id="/STR/76/01">
+    <base><![CDATA[Do you want to fix the RAID status so that you can mount them?]]></base>
+    <translation><![CDATA[Вы хотите исправить статус RAID для того, чтобы Вы могли подключить их?]]></translation>
+  </string>
+  <string id="/STR/2049/05">
+    <base><![CDATA[Quit application\nExit]]></base>
+    <translation><![CDATA[Выйти из приложения\nВыход]]></translation>
+  </string>
+  <string id="/STR/2049/06">
+    <base><![CDATA[Bind disks\nBind]]></base>
+    <translation><![CDATA[Объединенные диски\nОбъединить]]></translation>
+  </string>
+  <string id="/STR/2049/08">
+    <base><![CDATA[Unbind aggregated/mirrored disks into basic disks\nUnbind]]></base>
+    <translation><![CDATA[Разъединить агрегированные/зеркальные диски в основные\nРазъединить]]></translation>
+  </string>
+  <string id="/STR/2049/09">
+    <base><![CDATA[Convert the selected disk to a basic disk]]></base>
+    <translation><![CDATA[Конвертировать объединенные диски в основные]]></translation>
+  </string>
+  <string id="/STR/2049/11">
+    <base><![CDATA[Resynchronize an outdated bound disk.\nResynchronize]]></base>
+    <translation><![CDATA[Повторно синхронизировать диски.\nПересинхронизировать]]></translation>
+  </string>
+  <string id="/STR/2049/14">
+    <base><![CDATA[Displays program information, version number and copyright\nAbout NDAS Software]]></base>
+    <translation><![CDATA[Информация о программе, версии и авторких правах\nО программном обеспечении NDAS]]></translation>
+  </string>
+  <string id="/STR/2050/07">
+    <base><![CDATA[Adds a mirrored disk to a basic disk\nAdd Mirror]]></base>
+    <translation><![CDATA[Добавление зеркального диска к основному\nДобавить]]></translation>
+  </string>
+  <string id="/STR/2050/08">
+    <base><![CDATA[Refresh the NDAS device list\nRefresh]]></base>
+    <translation><![CDATA[Обновить список статусов NDAS устройств\nОбновить]]></translation>
+  </string>
+  <string id="/STR/2050/11">
+    <base><![CDATA[Append a disk to span disk volume.\nAppend a Disk]]></base>
+    <translation><![CDATA[Добавить диск к существующему пространству.\nДобавить диск]]></translation>
+  </string>
+  <string id="/STR/2050/12">
+    <base><![CDATA[Select a disk to append]]></base>
+    <translation><![CDATA[Выберите диск для добавления]]></translation>
+  </string>
+  <string id="/STR/2050/13">
+    <base><![CDATA[Select a disk to be added to aggregated disks]]></base>
+    <translation><![CDATA[Выберите диск, чтобы добавить его к агрегированным дискам]]></translation>
+  </string>
+  <string id="/STR/2050/14">
+    <base><![CDATA[Adjust state of selected RAID disk group to mount it correctly.]]></base>
+    <translation><![CDATA[Исправить состояние выбранного RAID-массива для корректного подключения.]]></translation>
+  </string>
+  <string id="/STR/2057/03">
+    <base><![CDATA[The selected RAID should be fixed before mounting]]></base>
+    <translation><![CDATA[Выбранный RAID массив должен быть исправлен до подключения]]></translation>
+  </string>
+  <string id="/DLG/100">
+    <base><![CDATA[About NDAS Software]]></base>
+    <translation><![CDATA[О программном обеспечении NDAS]]></translation>
+  </string>
+  <string id="/DLG/100/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[ОК]]></translation>
+  </string>
+  <string id="/DLG/100/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation><![CDATA[Программное обеспечение NDAS]]></translation>
+  </string>
+  <string id="/DLG/100/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation><![CDATA[Версия %1!s!]]></translation>
+  </string>
+  <string id="/DLG/100/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation><![CDATA[http://www.ximeta.com]]></translation>
+  </string>
+  <string id="/DLG/100/04">
+    <base><![CDATA[Copyright (c) 2002-2008 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+    <translation><![CDATA[Copyright (c) 2002-2008 XIMETA, Inc.\r\nAll rights reserved.]]></translation>
+  </string>
+  <string id="/DLG/100/06">
+    <base><![CDATA[Components]]></base>
+    <translation><![CDATA[Компоненты]]></translation>
+  </string>
+  <string id="/DLG/242">
+    <base><![CDATA[Unbind]]></base>
+    <translation><![CDATA[Разъединить]]></translation>
+  </string>
+  <string id="/DLG/242/00">
+    <base><![CDATA[&Yes]]></base>
+    <translation><![CDATA[&Да]]></translation>
+  </string>
+  <string id="/DLG/242/01">
+    <base><![CDATA[&No]]></base>
+    <translation><![CDATA[&Нет]]></translation>
+  </string>
+  <string id="/DLG/242/03">
+    <base><![CDATA[The following disks will be unbound.\nAre you sure you want to unbind them?]]></base>
+    <translation><![CDATA[Следующие диски будут разъединены.\nВы уверены, что хотите разъединить их?]]></translation>
+  </string>
+  <string id="/DLG/249">
+    <base><![CDATA[Synchronize disks]]></base>
+    <translation><![CDATA[Синхронизировать диски]]></translation>
+  </string>
+  <string id="/DLG/249/00">
+    <base><![CDATA[Bind Type:]]></base>
+    <translation><![CDATA[Тип объединения:]]></translation>
+  </string>
+  <string id="/DLG/249/01">
+    <base><![CDATA[Type]]></base>
+    <translation><![CDATA[Тип]]></translation>
+  </string>
+  <string id="/DLG/249/02">
+    <base><![CDATA[Target:]]></base>
+    <translation><![CDATA[Объект:]]></translation>
+  </string>
+  <string id="/DLG/249/03">
+    <base><![CDATA[Name]]></base>
+    <translation><![CDATA[Имя]]></translation>
+  </string>
+  <string id="/DLG/249/06">
+    <base><![CDATA[Time Remaining:]]></base>
+    <translation><![CDATA[Осталось времени:]]></translation>
+  </string>
+  <string id="/DLG/249/07">
+    <base><![CDATA[MB/s]]></base>
+    <translation><![CDATA[Мб/с]]></translation>
+  </string>
+  <string id="/DLG/249/08">
+    <base><![CDATA[Start]]></base>
+    <translation><![CDATA[Старт]]></translation>
+  </string>
+  <string id="/DLG/249/09">
+    <base><![CDATA[Close]]></base>
+    <translation><![CDATA[Закрыть]]></translation>
+  </string>
+  <string id="/DLG/249/10">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Отмена]]></translation>
+  </string>
+  <string id="/DLG/249/12">
+    <base><![CDATA[00:00:00]]></base>
+    <translation><![CDATA[00:00:00]]></translation>
+  </string>
+  <string id="/DLG/249/14">
+    <base><![CDATA[0.0]]></base>
+    <translation><![CDATA[0.0]]></translation>
+  </string>
+  <string id="/DLG/340">
+    <base><![CDATA[NDAS Bind Management Error]]></base>
+    <translation><![CDATA[Ошибка NDAS Bind Management]]></translation>
+  </string>
+  <string id="/DLG/340/00">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[ОК]]></translation>
+  </string>
+  <string id="/DLG/406">
+    <base><![CDATA[Repair fault tolerant disks]]></base>
+    <translation><![CDATA[Восстановить устойчивые к ошибкам диски]]></translation>
+  </string>
+  <string id="/DLG/406/00">
+    <base><![CDATA[Select one of the NDAS Device listed below. It will be used as a replacement for the broken NDAS Device]]></base>
+    <translation><![CDATA[Выберите одно из приведенных ниже устройств. Оно будет использовано для замены поврежденного NDAS устройства]]></translation>
+  </string>
+  <string id="/DLG/406/01">
+    <base><![CDATA[&Devices:]]></base>
+    <translation><![CDATA[&Устройства:]]></translation>
+  </string>
+  <string id="/DLG/406/02">
+    <base><![CDATA[List1]]></base>
+    <translation><![CDATA[List1]]></translation>
+  </string>
+  <string id="/DLG/406/03">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[ОК]]></translation>
+  </string>
+  <string id="/DLG/406/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Отмена]]></translation>
+  </string>
+  <string id="/DLG/411">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation><![CDATA[Мастер объединения дисков]]></translation>
+  </string>
+  <string id="/DLG/411/00">
+    <base><![CDATA[This wizard helps you create bound disks.]]></base>
+    <translation><![CDATA[Этот мастер поможет Вам объединить диски.]]></translation>
+  </string>
+  <string id="/DLG/411/01">
+    <base><![CDATA[You can bind disks of NDAS Devices to build a new disk with faster speed, larger capacity and fault tolerance. Many bind types are given to fit your needs.]]></base>
+    <translation><![CDATA[Вы можете объединить NDAS устройства и построить более быстрый диск, том большего объема или более устойчивое к сбоям хранилище данных. Реализовано большое количество типов объединения, максимально соответствующих Вашим требованиям.]]></translation>
+  </string>
+  <string id="/DLG/411/02">
+    <base><![CDATA[Welcome to the Disk Bind Wizard]]></base>
+    <translation><![CDATA[Добро пожаловать в Мастер объединения дисков]]></translation>
+  </string>
+  <string id="/DLG/411/03">
+    <base><![CDATA[To continue, click Next.]]></base>
+    <translation><![CDATA[Чтобы продолжить, нажмите Далее.]]></translation>
+  </string>
+  <string id="/DLG/413">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation><![CDATA[Мастер объединения дисков]]></translation>
+  </string>
+  <string id="/DLG/413/00">
+    <base><![CDATA[Select the bind type you want to create:]]></base>
+    <translation><![CDATA[Выберите тип объединения:]]></translation>
+  </string>
+  <string id="/DLG/413/01">
+    <base><![CDATA[Aggregation]]></base>
+    <translation><![CDATA[Агрегирование]]></translation>
+  </string>
+  <string id="/DLG/413/02">
+    <base><![CDATA[Stripe (RAID 0)]]></base>
+    <translation><![CDATA[Stripe (RAID 0)]]></translation>
+  </string>
+  <string id="/DLG/413/03">
+    <base><![CDATA[Mirror (RAID 1)]]></base>
+    <translation><![CDATA[Зеркало (RAID 1)]]></translation>
+  </string>
+  <string id="/DLG/413/04">
+<base><![CDATA[RAID 4]]></base>
+<translation><![CDATA[-]]></translation>
+</string>
+<string id="/DLG/413/05">
+<base><![CDATA[RAID 5]]></base>
+<translation><![CDATA[-]]></translation>
+</string>
+<string id="/DLG/413/06">
+<base><![CDATA[Number of disks:]]></base>
+    <translation><![CDATA[Количество дисков:]]></translation>
+  </string>
+  <string id="/DLG/413/08">
+    <base><![CDATA[Description]]></base>
+    <translation><![CDATA[Описание]]></translation>
+  </string>
+  <string id="/DLG/415">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation><![CDATA[Мастер объединения дисков]]></translation>
+  </string>
+  <string id="/DLG/415/00">
+    <base><![CDATA[Available:]]></base>
+    <translation><![CDATA[Доступно:]]></translation>
+  </string>
+  <string id="/DLG/415/02">
+    <base><![CDATA[&Add >]]></base>
+    <translation><![CDATA[&Добавить >]]></translation>
+  </string>
+  <string id="/DLG/415/03">
+    <base><![CDATA[< &Remove]]></base>
+    <translation><![CDATA[< &Удалить]]></translation>
+  </string>
+  <string id="/DLG/415/04">
+    <base><![CDATA[< Re&move All]]></base>
+    <translation><![CDATA[< Удалить все]]></translation>
+  </string>
+  <string id="/DLG/415/05">
+    <base><![CDATA[Selected:]]></base>
+    <translation><![CDATA[Выбранные:]]></translation>
+  </string>
+  <string id="/DLG/415/07">
+    <base><![CDATA[Total number of disks required:]]></base>
+    <translation><![CDATA[Общее количество необходимых дисков:]]></translation>
+  </string>
+  <string id="/DLG/415/09">
+    <base><![CDATA[Total disk size in gigabytes (GB):]]></base>
+    <translation><![CDATA[Общий объем дискового пространства (Гб):]]></translation>
+  </string>
+  <string id="/DLG/415/11">
+    <base><![CDATA[Note: The data on the disks will be deleted once binding is completed.]]></base>
+    <translation><![CDATA[Внимание! После объединения данные на дисках будут удалены.]]></translation>
+  </string>
+  <string id="/DLG/420">
+    <base><![CDATA[Disk Bind Wizard]]></base>
+    <translation><![CDATA[Мастер объединения дисков]]></translation>
+  </string>
+  <string id="/DLG/420/00">
+    <base><![CDATA[Completing the Disk Bind Wizard]]></base>
+    <translation><![CDATA[Выйти из Мастера объединения дисков]]></translation>
+  </string>
+  <string id="/DLG/420/02">
+    <base><![CDATA[The binding results are followings:]]></base>
+    <translation><![CDATA[Результаты объединения:]]></translation>
+  </string>
+  <string id="/DLG/420/04">
+    <base><![CDATA[To close this wizard, click Finish.]]></base>
+    <translation><![CDATA[Чтобы покинуть Мастер объединения диков нажмите Завершить.]]></translation>
+  </string>
+  <string id="/DLG/1091/01">
+    <base><![CDATA[OK]]></base>
+    <translation><![CDATA[ОК]]></translation>
+  </string>
+  <string id="/DLG/1091/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation><![CDATA[Отмена]]></translation>
+  </string>
+  <string id="/MNU/128/00">
+    <base><![CDATA[&File]]></base>
+    <translation><![CDATA[&Файл]]></translation>
+  </string>
+  <string id="/MNU/128/00/00">
+    <base><![CDATA[E&xit]]></base>
+    <translation><![CDATA[&Выход]]></translation>
+  </string>
+  <string id="/MNU/128/01">
+    <base><![CDATA[&Tool]]></base>
+    <translation><![CDATA[&Инструменты]]></translation>
+  </string>
+  <string id="/MNU/128/01/00">
+    <base><![CDATA[&Refresh]]></base>
+    <translation><![CDATA[&Обновить]]></translation>
+  </string>
+  <string id="/MNU/128/01/01">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation><![CDATA[&Объединить диски]]></translation>
+  </string>
+  <string id="/MNU/128/01/02">
+    <base><![CDATA[&Unbind]]></base>
+    <translation><![CDATA[&Разъединить]]></translation>
+  </string>
+  <string id="/MNU/128/01/03">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation><![CDATA[Добавить зеркало]]></translation>
+  </string>
+  <string id="/MNU/128/01/04">
+    <base><![CDATA[A&ppend a Disk]]></base>
+    <translation><![CDATA[Добавить диск]]></translation>
+  </string>
+  <string id="/MNU/128/01/05">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation><![CDATA[Добавить &резервный диск]]></translation>
+  </string>
+  <string id="/MNU/128/01/06">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation><![CDATA[Заменить &устройство]]></translation>
+  </string>
+  <string id="/MNU/128/01/07">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation><![CDATA[Настроить RAID без этого диска]]></translation>
+  </string>
+  <string id="/MNU/128/01/08">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation><![CDATA[&Очистить поврежденную метку]]></translation>
+  </string>
+  <string id="/MNU/128/01/09">
+    <base><![CDATA[Mi&grate]]></base>
+    <translation><![CDATA[Переместить]]></translation>
+  </string>
+  <string id="/MNU/128/01/10">
+    <base><![CDATA[R&eset bind information]]></base>
+    <translation><![CDATA[Сбросить информацию об объединенных дисках]]></translation>
+  </string>
+  <string id="/MNU/128/02">
+    <base><![CDATA[&Help]]></base>
+    <translation><![CDATA[&Помощь]]></translation>
+  </string>
+  <string id="/MNU/128/02/00">
+    <base><![CDATA[&About NDAS Software]]></base>
+    <translation><![CDATA[&О программном обеспечении NDAS]]></translation>
+  </string>
+  <string id="/MNU/448/00/00">
+    <base><![CDATA[&Bind Disks]]></base>
+    <translation><![CDATA[&Объединить диски]]></translation>
+  </string>
+  <string id="/MNU/448/00/01">
+    <base><![CDATA[Add &Mirror]]></base>
+    <translation><![CDATA[Добавить &зеркало]]></translation>
+  </string>
+  <string id="/MNU/448/00/02">
+    <base><![CDATA[A&ppend a Disk]]></base>
+    <translation><![CDATA[Добавить диск]]></translation>
+  </string>
+  <string id="/MNU/448/00/03">
+    <base><![CDATA[&Reset bind information]]></base>
+    <translation><![CDATA[&Сбросить информацию об объединенных дисках]]></translation>
+  </string>
+  <string id="/MNU/448/01/00">
+    <base><![CDATA[&Unbind]]></base>
+    <translation><![CDATA[&Отсоединить]]></translation>
+  </string>
+  <string id="/MNU/448/01/01">
+    <base><![CDATA[A&ppend a Disk]]></base>
+    <translation><![CDATA[Добавить диск]]></translation>
+  </string>
+  <string id="/MNU/448/01/02">
+    <base><![CDATA[Add &Spare Disk]]></base>
+    <translation><![CDATA[Добавить &резервный диск]]></translation>
+  </string>
+  <string id="/MNU/448/01/03">
+    <base><![CDATA[&Migrate]]></base>
+    <translation><![CDATA[&Переместить]]></translation>
+  </string>
+  <string id="/MNU/448/02/00">
+    <base><![CDATA[Replace &Device]]></base>
+    <translation><![CDATA[Заменить &устройство]]></translation>
+  </string>
+  <string id="/MNU/448/02/01">
+    <base><![CDATA[Con&figure RAID without this disk]]></base>
+    <translation><![CDATA[Настроить RAID без этого диска]]></translation>
+  </string>
+  <string id="/MNU/448/02/02">
+    <base><![CDATA[&Clear defective mark]]></base>
+    <translation><![CDATA[&Очистить поврежденную метку]]></translation>
+  </string>
+</localization>

@@ -1,0 +1,13 @@
+LIBRARY ndasport.sys
+EXPORTS
+	DllInitialize PRIVATE
+	DllUnload PRIVATE
+#if _WIN32_WINNT <= 0x0500
+    W2kTraceMessage @1 NONAME
+#endif
+    NdasPortGetLogicalUnit
+    NdasPortCompleteRequest
+    NdasPortNotification
+    NdasPortExAllocateWorkItem
+    NdasPortExGetWdmDeviceObject
+;    NdasPortGetLpxLocalAddressList

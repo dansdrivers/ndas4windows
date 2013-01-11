@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment>
+    <DirectoryRef Id="NdasApplicationFolder" src="$(var.SetupFileSource)">
+      <Component Id="ndasapcm.dll" DiskId="1" Guid="$(var.ndasapcm.dll_GUID)" Win64="$(var.Win64.YesNo)">
+        <File Id="ndasapcm.dll" Name="ndasapcm.dll" />
+        <Registry Root="HKCR" Key="AppID\ndasapcm.DLL" Name="AppID" Value="{299C09EF-9715-42F2-85BE-8C6943680147}" Type="string" />
+        <Registry Root="HKCR" Key="AppID\{299C09EF-9715-42F2-85BE-8C6943680147}" Value="NdasAutoplayConfigModule" Type="string" />
+        <Registry Root="HKCR" Key="AppID\{299C09EF-9715-42F2-85BE-8C6943680147}" Name="DllSurrogate" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}" Value="AutoPlayConfig Class" Type="string" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}" Name="AppID" Value="{299C09EF-9715-42F2-85BE-8C6943680147}" Type="string" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}" Name="LocalizedString" Value="@[#ndasapcm.dll],-101" Type="string" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}\Elevation" Name="Enabled" Value="1" Type="integer" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}\InprocServer32" Value="[#ndasapcm.dll]" Type="string" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}\InprocServer32" Name="ThreadingModel" Value="Apartment" Type="string" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}\ProgID" Value="NDAS.AutoPlayConfig.1" Type="string" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}\Programmable" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}\TypeLib" Value="{199A5D6E-B2EF-4FCD-935E-BC66D2CA813B}" Type="string" />
+        <Registry Root="HKCR" Key="CLSID\{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}\VersionIndependentProgID" Value="NDAS.AutoPlayConfig" Type="string" />
+        <Registry Root="HKCR" Key="NDAS.AutoPlayConfig" Value="AutoPlayConfig Class" Type="string" />
+        <Registry Root="HKCR" Key="NDAS.AutoPlayConfig\CLSID" Value="{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}" Type="string" />
+        <Registry Root="HKCR" Key="NDAS.AutoPlayConfig\CurVer" Value="NDAS.AutoPlayConfig.1" Type="string" />
+        <Registry Root="HKCR" Key="NDAS.AutoPlayConfig.1" Value="AutoPlayConfig Class" Type="string" />
+        <Registry Root="HKCR" Key="NDAS.AutoPlayConfig.1\CLSID" Value="{8EFCA4CA-B6CD-43b7-904E-2D486B99E356}" Type="string" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

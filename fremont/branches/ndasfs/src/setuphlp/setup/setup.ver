@@ -1,0 +1,5 @@
+// Uses default product version
+//#define VER_FILEMAJORVERSION	3
+//#define VER_FILEMINORVERSION	10
+//#define VER_FILEBUILD			1216
+//#define VER_FILEBUILD_QFE		0

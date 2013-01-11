@@ -1,0 +1,60 @@
+#pragma namespace("\\\\.\\root")
+
+instance of __Namespace
+{
+    Name = "WMI" ;
+} ;
+
+#pragma namespace("\\\\.\\root\\WMI")
+
+[
+	Dynamic, Provider("WMIProv"),
+	WMI,
+	Description("NDAS Port Driver Information"),
+	guid("{EA8A400F-E09B-479D-980A-748ECBF7D0EA}"),
+	locale("MS\\0x409")
+]
+class NdasPortWmiInformation
+{
+    [key, read] string InstanceName;
+    [read] boolean Active;
+
+    [
+		WmiDataId(1), read, write,
+		Description("Number of logical units in the ndas port driver.")
+    ]
+    uint32 LogicalUnitCount;
+
+};
+
+[
+	Dynamic, 
+	Provider("WMIProv"),
+	WMI,
+	Description("NDAS Port Driver Event"),
+	guid("{B37B7251-451D-4766-ABE8-582AC0B15F91}"),
+	locale("MS\\0x409")
+]
+
+class NdasPortWmiEvent : WMIEvent
+{
+	[key, read] string InstanceName;
+	[read] boolean Active;
+	
+	[
+		WmiDataId(1), read,
+		Description("EventType"),
+		Values {
+			"LogicalUnitIsReady", 
+			"LogicalUnitIsRemoved"
+		}
+	] 
+	uint32 EventType;
+	[
+		WmiDataId(2), read,
+		Description("Logical Unit Address")
+	]
+	uint32 LogicalUnitAddress;
+};
+
+#include ("../ndasata/ndasata.mof")

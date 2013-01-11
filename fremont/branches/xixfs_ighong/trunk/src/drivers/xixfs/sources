@@ -1,0 +1,71 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=xixfs
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+
+
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\ntstrsafe.lib			\
+	$(NDAS_LIB_PATH)\libdes.lib				\
+	$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib	
+	
+
+INCLUDES=$(INCLUDES);$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+
+
+
+SOURCES=\
+	XixFsSupport.c\
+	XixFsTransAddr.c\
+	XixFSAddressInfo.c\
+	XixFsRawDeviceOp.c\
+	XixFsChangeEndian.c\
+	XixFsSafeEndianOp.c\
+	XixFsRawDiskAccessOp.c\
+	XixFsLotInfo.c\
+	XixFsRawDirStub.c\
+	XixFsNdasDeviceControl.c\
+	XixFsLotLock.c\
+	XixFsLotBitMapOp.c\
+	XixFsComProto.c\
+	XixFsAllocate.c\
+	XixFsRawFileStub.c\
+	XixFsdInit.c\
+	XixFsdDispatch.c\
+	XixFsdCreateCloseMisc.c\
+	XixFsdFilePurgeFlushMisc.c\
+	XixFsdMisc.c\
+	XixFsdFcbTable.c\
+	XixFsdFileStub.c\
+	XixFsdFastIo.c\
+	XixFsdRead.c\
+	XixFsdWrite.c\
+	XixFsdCreate.c\
+	XixFsdCleanUp.c\
+	XixFsdClose.c\
+	XixFsdVolumeStub.c\
+	XixFsdFileSystemCtrl.c\
+	XixFsdFileCtrl.c\
+	XixFsdDirCtrl.c\
+	XixFsdEa.c\
+	XixFsdFileLock.c\
+	XixFsdFlushCtrl.c\
+	XixFsdPnpCtrl.c\
+	XixFsdVolumeCtrl.c\
+	XixFsdEventComSerCli.c\
+	XixFsdNetEvent.c\
+	XixFsdDeviceCtrl.c\
+	XixFsdSecurityCtrl.c
+	
+	
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_WIN2K_COMPAT_SLIST_USAGE 
+
+MSC_OPTIMIZATION=/Od

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="desc" ProjectGUID="{E1EEAF1B-E21A-40BC-86C1-11989A74A8DB}" RootNamespace="desc" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+		<Platform Name="x64" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="objchk_w2k_x86\i386" IntermediateDirectory="objchk_w2k_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET2K chk . -c0i" Output="objchk_w2k_x86\i386\desc.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="objfre_w2k_x86\i386" IntermediateDirectory="objfre_w2k_x86\i386" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET2K fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET2K fre . -c0i" Output="objfre_w2k_x86\i386\desc.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="objchk_wnet_amd64\amd64" IntermediateDirectory="objchk_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 chk . -c0i" Output="objchk_wnet_amd64\amd64\desc.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="objfre_wnet_amd64\amd64" IntermediateDirectory="objfre_wnet_amd64\amd64" ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -eMPwi" ReBuildCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -ceMPwi" CleanCommandLine="..\..\..\bin\xbuild -WNET amd64 fre . -c0i" Output="objfre_wnet_amd64\amd64\desc.lib" PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+    <Filter Name="Source Files" Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml" UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+    <File RelativePath=".\desc.c" /><File RelativePath=".\md2c.c" /><File RelativePath=".\md4c.c" /><File RelativePath=".\md5c.c" /><File RelativePath=".\nn.c" /><File RelativePath=".\prime.c" /><File RelativePath=".\rsa.c" /><File RelativePath=".\r_dh.c" /><File RelativePath=".\r_encode.c" /><File RelativePath=".\r_enhanc.c" /><File RelativePath=".\r_keygen.c" /><File RelativePath=".\r_random.c" /><File RelativePath=".\r_stdlib.c" /><File RelativePath=".\shsc.c" /></Filter>
+    <Filter Name="Header Files" Filter="h;hpp;hxx;hm;inl;xsd" UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+    <File RelativePath=".\des.h" /><File RelativePath=".\global.h" /><File RelativePath=".\md2.h" /><File RelativePath=".\md4.h" /><File RelativePath=".\md5.h" /><File RelativePath=".\nn.h" /><File RelativePath=".\prime.h" /><File RelativePath=".\rsa.h" /><File RelativePath=".\rsaeuro.h" /><File RelativePath=".\rsaref.h" /><File RelativePath=".\r_random.h" /><File RelativePath=".\shs.h" /></Filter>
+    <Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx" UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+    </Filter>
+  <File RelativePath=".\des386.s" /><File RelativePath=".\makefile" /><File RelativePath=".\makefile.inc" /><File RelativePath=".\rsa386.s" /><File RelativePath=".\rsa68k.s" /><File RelativePath=".\rsasparc.s" /><File RelativePath=".\sources" /><File RelativePath=".\targets.mak" /></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

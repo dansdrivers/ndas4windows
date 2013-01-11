@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Include xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+
+<?include ..\CommonConfig.wxi?>
+
+<?ifndef TargetLanguageName?>
+<?define TargetLanguageName="English"?>
+<?endif?>
+
+<?ifndef TargetLanguage?>
+<?define TargetLanguage="0"?>
+<?endif?>
+
+<?ifndef TargetCodepage?>
+<?define TargetCodepage="1252"?>
+<?endif?>
+
+<?ifndef TargetVersion?>
+<?define TargetVersion="$(var.NdasScMsmVersion)"?>
+<?endif?>
+
+<?ifndef TargetDisplayVersion?>
+<?define TargetDisplayVersion="$(var.NdasScMsmDisplayVersion)"?>
+<?endif?>
+
+<?ifndef TargetProductCode?>
+<?define TargetProductCode="$(var.NdasScMsmProductCode)"?>
+<?endif?>
+
+<?ifndef SISCodepage?>
+<?define SISCodepage="$(var.TargetCodepage)"?>
+<?endif?>
+
+<?ifndef SISLanguages?>
+<?define SISLanguages="0"?>
+<?endif?>
+
+</Include>

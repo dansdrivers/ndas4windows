@@ -1,0 +1,40 @@
+TARGETNAME=eulaca
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+INCLUDES=$(PSDK_INC_PATH)
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+DLLDEF=
+UMTYPE=console
+
+#
+# Without DLLENTRY, you won't get DllMain run
+#
+
+DLLENTRY=_DllMainCRTStartup
+C_DEFINES=/DUNICODE /D_UNICODE
+RCOPTIONS=/I$(NDAS_INC_PATH)
+USER_C_FLAGS=/Wp64
+
+!IF $(FREEBUILD)
+#USE_LIBCMT=1
+#USE_MSVCRT=1
+MSC_OPTIMIZATION=/Osi1
+!ELSE
+#USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+VC7_SYMBOLS=1
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\msi.lib
+
+SOURCES= \
+    eulaca.cpp \
+    msisup.cpp \
+	dllentry.cpp \
+    eulaca.rc

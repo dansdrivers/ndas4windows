@@ -1,0 +1,70 @@
+TARGETNAME=lfsfilt
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+!IF "$(_BUILDARCH)" == "AMD64" || "$(_BUILDARCH)" == "64"
+
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\ntstrsafe.lib			\
+    $(NDAS_DRIVER_LIB_PATH)\liblfsfilt.lib	\
+	$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib	\
+	$(NDAS_DRIVER_LIB_PATH)\libwxpfat.lib	\
+	$(NDAS_DRIVER_LIB_PATH)\libwnetfat.lib
+
+INCLUDES=$(INCLUDES);..\WxpNtfsLib;..\WxpFatLib;..\WnetFatLib
+
+!ELSE
+
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\ntstrsafe.lib			\
+    $(NDAS_DRIVER_LIB_PATH)\liblfsfilt.lib	\
+	$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib	\
+	$(NDAS_DRIVER_LIB_PATH)\libw2kfat.lib	\
+	$(NDAS_DRIVER_LIB_PATH)\libwxpfat.lib	\
+	$(NDAS_DRIVER_LIB_PATH)\libwnetfat.lib	
+
+INCLUDES=$(INCLUDES);..\WxpNtfsLib;..\WxpFatLib;..\W2kFatLib;..\W2kNtfsLib;..\WnetFatLib
+
+!ENDIF
+
+
+INCLUDES=$(INCLUDES);$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;..\LfsFiltLib;$(NDAS_INC_PATH)
+
+SOURCES=filespy.c					\
+        fspyLib.c					\
+        fspyCtx.c					\
+        fspyHash.c					\
+		Lfs.c						\
+		Primary.c					\
+		PrimarySession.c			\
+		LfsTable.c					\
+		LfsLib.c					\
+		Secondary.c					\
+		SecondaryRedirectIrp.c		\
+		SecondaryThread.c			\
+		ReadOnly.c					\
+		LfsDbg.c					\
+		MemoryMap.c					\
+		FastIoDispatch.c			\
+		LfsProto.c					\
+		LfsDGSvrCli.c				\
+		md5.c						\
+		NetdiskManager.c			\
+		PrimarySessionThread.c		\
+		PrimarySessionDispatch.c	\
+		lfsfilt.rc	
+		
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_WIN2K_COMPAT_SLIST_USAGE
+
+#C_DEFINES=$(C_DEFINES) -D__TEST_MODE__
+#C_DEFINES=$(C_DEFINES) -D__LFS_HCT_TEST_MODE__
+#C_DEFINES=$(C_DEFINES) -D__LFSDBG_MEMORY__
+#C_DEFINES=$(C_DEFINES) -D__PROCESS_SECONDARY_REQUEST_LOCALLY__
+
+
+MSC_OPTIMIZATION=/Od
+
+PRECOMPILED_INCLUDE=lfsproc.h
+PRECOMPILED_PCH=lfsproc.pch
+PRECOMPILED_OBJ=lfsproc.obj

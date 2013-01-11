@@ -1,0 +1,37 @@
+Following languages are supported at this time.
+Localization files reside in ndas.msi\loc and ndasscui.msm\loc.
+
+Completed
+
+[ ] da-DK
+[ ] de-DE
+[ ] en-US
+[ ] es-ES
+[ ] fr-FR
+[ ] ja-JP
+[ ] ko-KR
+[ ] nb-NO
+[ ] nl-NL
+[ ] pt-PT
+[ ] ru-RU
+[ ] sv-SE
+
+Incomplete
+
+[ ] bg-BG
+[ ] ca-ES
+[ ] cs-CZ
+[ ] el-GR
+[ ] eu-ES
+[ ] fi-FI
+[ ] fr-CA
+[ ] hr-HR
+[ ] hu-HU
+[ ] id-ID
+[ ] pl-PL
+[ ] ro-RO
+[ ] sk-SK
+[ ] sl-SI
+[ ] sr-Cyrl-CS
+[ ] th-TH
+[ ] tr-TR

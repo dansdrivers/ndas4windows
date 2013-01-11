@@ -1,0 +1,26 @@
+TARGETNAME=wshlpx
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib \
+           $(SDK_LIB_PATH)\advapi32.lib \
+           $(SDK_LIB_PATH)\wsock32.lib \
+           $(SDK_LIB_PATH)\tdi.lib \
+           $(SDK_LIB_PATH)\user32.lib \
+           $(SDK_LIB_PATH)\ntdll.lib  
+
+DLLENTRY=_DllMainCRTStartup
+UMTYPE=console
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+USER_INCLUDES=$(NDAS_INC_PATH)
+
+SOURCES=wshsmple.c \
+        wshlpx.rc
+

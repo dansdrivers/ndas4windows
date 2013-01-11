@@ -1,0 +1,2 @@
+DIRS=dll
+OPTIONAL_DIRS=test

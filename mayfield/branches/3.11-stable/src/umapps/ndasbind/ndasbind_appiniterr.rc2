@@ -1,0 +1,11 @@
+#include "ndasbind_appiniterr.h"
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+STRINGTABLE
+BEGIN
+	IDS_APP_INIT_ERROR_TITLE				"Application Initialization Error"
+	IDS_APP_INIT_ERROR_OUT_OF_MEMORY		"Application cannot start due to the following reason.\r\nOut of memory.\r\nClose other applications and try again."
+	IDS_APP_INIT_ERROR_RESOURCE_LOAD		"Cannot load resource DLL.\r\nPlease check the installation of the software."
+	IDS_APP_INIT_ERROR_NO_RESOURCE			"No compatible resources DLL's are available.\r\nPlease check the installation of the software."
+END
+

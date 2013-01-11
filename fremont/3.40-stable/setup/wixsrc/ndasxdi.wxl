@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+
+	<String Id="ActionData.NDASBUS">NDAS Bus</String>
+	<String Id="ActionData.NDASSCSI">NDAS SCSI HBA Miniport</String>
+	<String Id="ActionData.NDASPORT">NDAS Host Initiator</String>
+	<String Id="ActionData.LPX">LPX Protocol</String>
+	<String Id="ActionData.LFSFILT">LFS Filter</String>
+	<String Id="ActionData.NDASFS">NDAS File System Mini Filter</String>
+	<String Id="ActionData.NDASDLU">NDAS Logical Unit Driver</String>
+
+	<String Id="ActionData.NDASFAT">NDAS FAT File System Driver</String>
+	<String Id="ActionData.NDASNTFS">NDAS NTFS File System Driver</String>
+  <String Id="ActionData.NDASROFS">NDAS ROFS File System Driver</String>
+
+  <String Id="ActionData.NDASSVC">NDAS Service</String>
+
+	<String Id="ActionText.XixfsShutdown">Shutting down XIX File System</String>
+	<String Id="ActionText.NdasFatShutdown">Shutting down NDAS FAT File System</String>
+	<String Id="ActionText.NdasNtfsShutdown">Shutting down NDAS NTFS File System</String>
+  <String Id="ActionText.NdasRofsShutdown">Shutting down NDAS ROFS File System</String>
+
+</WixLocalization>

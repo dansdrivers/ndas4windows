@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+
+	<Fragment>
+
+		<DirectoryRef Id="NdasApplicationFolder" FileSource="$(var.SetupFileSource)">
+
+			<Component Id="ndassvc.exe" Guid="$(var.NDAS_NDASSVC_EXE_GUID)"
+								 SharedDllRefCount="yes" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+
+				<File Id="ndassvc.exe" Name="ndassvc.exe" KeyPath="yes" Checksum="yes" />
+
+				<Registry Root="HKLM" Key="Software\NDAS">
+					<Registry Key="Keys" Action="removeKeyOnUninstall" />
+					<Registry Key="ndassvc\ARFlags" Action="removeKeyOnUninstall" />
+				</Registry>
+
+				<Registry Root="HKLM" Key="Software\NDAS\LogDevices" Action="removeKeyOnUninstall" />
+				<Registry Root="HKLM" Key="Software\NDAS\LogDevices" Action="removeKeyOnInstall" />
+
+				<Registry Root="HKLM" Key="SYSTEM\CurrentControlSet\Services\Eventlog\Application\ndassvc">
+					<Registry Name="EventMessageFile" Type="string" Value="[#ndasmsg.dll]"/>
+					<Registry Name="TypesSupported" Type="integer" Value="7" />
+				</Registry>
+
+				<ServiceControl Id="DefaultEvent" Name="ndassvc" Stop="both" Remove="both" />
+
+				<ServiceInstall Id="NDASSVCInstall" Name="ndassvc"
+								DisplayName="NDAS Service" Type="ownProcess" Start="auto" ErrorControl="normal"
+								Description="User-mode service for NDAS Device Management">
+					<!-- Start 'demand' will be changed to 'auto' by the custom action -->
+					<ServiceDependency Id="lpx" />
+				</ServiceInstall>
+
+			</Component>
+
+		</DirectoryRef>
+
+	<?ifdef WixCustomTableLocBug?>
+	<?define ActionData.NDASSVC = "NDAS Service" ?>
+	<?endif?>
+
+    <CustomTable Id="xDriverInstall">
+      <Row>
+        <Data Column="Id">StartNDASSVC</Data>
+		<?ifdef WixCustomTableLocBug?>
+        <Data Column="ActionData">$(var.ActionData.NDASSVC)</Data>
+		<?else?>
+        <Data Column="ActionData">$(loc.ActionData.NDASSVC)</Data>
+		<?endif?>
+        <Data Column="Phase">4</Data>
+        <Data Column="Type">StartService</Data>
+        <Data Column="HardwareId">ndassvc</Data>
+        <Data Column="Flags">0</Data>
+        <Data Column="Sequence">$(var.Sequence.NDASSVC.Start)</Data>
+        <Data Column="Condition">($ndassvc.exe=3)</Data>
+        <Data Column="Error">28001</Data>
+      </Row>
+    </CustomTable>
+    
+    </Fragment>
+</Wix>
+<!-- Local Variables: -->
+<!-- mode: xml -->
+<!-- tab-width: 2 -->
+<!-- End: -->

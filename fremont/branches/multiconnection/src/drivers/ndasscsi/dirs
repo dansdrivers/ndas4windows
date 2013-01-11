@@ -1,0 +1,2 @@
+DIRS=ndasminiport
+#OPTIONAL_DIRS=ndasscsiport

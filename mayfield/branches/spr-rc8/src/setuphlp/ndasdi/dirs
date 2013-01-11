@@ -1,0 +1,2 @@
+DIRS=dll slib
+OPTIONAL_DIRS=cmdtool

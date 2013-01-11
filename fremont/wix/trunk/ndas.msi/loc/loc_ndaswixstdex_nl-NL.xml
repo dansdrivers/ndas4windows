@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="COND_X64_IS_NOT_SUPPORTED">
+    <base>This setup package is for 32-bit version of Windows. Please install the 64-bit version of this software.</base>
+    <translation>Dit installatiepakket is bedoeld voor de 32-bits versie van Windows. Installeer de 64-bits versie van deze software.</translation>
+  </string>
+  <string id="COND_REQUIRE_WIN2000">
+    <base>[ProductName] requires that your computer is running Windows 2000, Windows XP or Windows 2003 Server.</base>
+    <translation>[ProductName] vereist dat Windows 2000, Windows XP of Windows 2003 Server op uw computer wordt uitgevoerd.</translation>
+  </string>
+  <string id="COND_NOT_PRIVILEGED">
+    <base>You do not have sufficient privileges to complete this installation. Log on as an administrator and then retry this installation.</base>
+    <translation>U beschikt over onvoldoende rechten om deze installatie te voltooien. Meld u aan als beheerder en probeer de installatie opnieuw uit te voeren.</translation>
+  </string>
+  <string id="ProductName64Suffix">
+    <base> (64-bit Windows)</base>
+    <translation>(64-bits Windows)</translation>
+  </string>
+  <string id="Text.SetupVersion">
+    <base>[NdasSetupVersion]</base>
+    <translation>[NdasSetupVersion]</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText2">
+    <base>It is recommended that this product is used in 100Mbps wired LAN or 802.11g/a wireless LAN environment.</base>
+    <translation>Het wordt aanbevolen dit product te gebruiken in een bekabeld LAN van 100 Mbps of een 802.11g/a draadloos LAN.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeText1">
+    <base>If you are using this product in a wired 10Mbps LAN or wireless 802.11b LAN environment, there is a possiblity of data transmit error or unstable connection.</base>
+    <translation>Als u dit product gebruikt in een bekabeld LAN van 10 Mbps of een 802.11b draadloos LAN, treedt er mogelijk een fout met de gegevensoverdracht op of is de verbinding instabiel.</translation>
+  </string>
+  <string id="ReadyToInstall.NoticeGroupBox">
+    <base>Notice</base>
+    <translation>Opmerking</translation>
+  </string>
+  <string id="SFWarning.SFWarnCheck">
+    <base>I &amp;acknowledge this warning message.</base>
+    <translation>Ik &amp;bevestig deze waarschuwing.</translation>
+  </string>
+  <string id="SFWarning.DlgDesc">
+    <base>Setup detected a software.</base>
+    <translation>Setup heeft software gedetecteerd.</translation>
+  </string>
+  <string id="SFWarning.DlgTitle">
+    <base>{&amp;MSSansBold8}Compatibility Warning</base>
+    <translation>{&amp;MSSansBold8}Compatibiliteitswaarschuwing</translation>
+  </string>
+  <string id="SFWarning.MemoLine1">
+    <base>{&amp;Arial8BoldBlue}Setup has found that StarForce Copy Protection software is installed in your system. Some old versions of this software may cause a system crash for using thirdy party storage device drivers.</base>
+    <translation>{&amp;Arial8BoldBlue}Setup heeft ontdekt dat StarForce-software voor kopieerbeveiliging op uw systeem is geïnstalleerd. Sommige oudere versies van deze software kunnen ertoe leiden dat het systeem vastloopt als u stuurprogramma's voor opslagapparaten van andere fabrikanten gebruikt.</translation>
+  </string>
+  <string id="SFWarning.MemoLine2">
+    <base>It is highly recommended to update the StarForce Copy Protection software before proceeding the installation. Check the web site of the Protection Technology (http://www.star-force.com) for the updates.</base>
+    <translation>Het wordt ten zeerste aanbevolen een update uit te voeren van de StarForce-software voor kopieerbeveiliging voordat u verdergaat met de installatie. Bezoek de website van Protection Technology (http://www.star-force.com) voor updates.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgDesc">
+    <base>Setup has found a previous version of the software.</base>
+    <translation>Setup heeft een vorige versie van de software aangetroffen.</translation>
+  </string>
+  <string id="UpgradeConfirm.DlgTitle">
+    <base>{&amp;MSSansBold8}Upgrade Confirmation</base>
+    <translation>{&amp;MSSansBold8}Upgradebevestiging</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine1">
+    <base>Setup has found a previous version of the software and will perform an upgrade. During an upgrade, you may have to reboot the system twice.</base>
+    <translation>Setup heeft een vorige versie van de software aangetroffen en zal een upgrade uitvoeren. Tijdens de upgrade moet u het systeem mogelijk tweemaal opnieuw opstarten.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine2">
+    <base>To ensure proper operation, please do not interrupt the system reboot and follow the instructions until the setup is completed.</base>
+    <translation>Voor een juiste werking mag u de herstart van het systeem niet onderbreken en dient u de aanwijzingen te volgen totdat de installatie is voltooid.</translation>
+  </string>
+  <string id="UpgradeConfirm.MemoLine3">
+    <base>Click Next to continue installation.</base>
+    <translation>Klik op Volgende om de installatie te vervolgen.</translation>
+  </string>
+  <string id="Error.25900">
+    <base>Newer version of the software is already installed. If you have to downgrade the software, uninstall the higher version software first.</base>
+    <translation>Er is al een nieuwere versie van de software geïnstalleerd. Als u een downgrade van de software wilt uitvoeren, dient u eerst de hogere versie van de software te verwijderen.</translation>
+  </string>
+  <string id="Error.27500">
+    <base>This setup requires Internet Information Server 4.0 or higher for configuring IIS Virtual Roots. Please make sure that you have IIS 4.0 or higher.</base>
+    <translation>Voor deze installatie is Internet Information Server 4.0 of hoger vereist voor het configureren van IIS Virtual Roots. Zorg dat u over IIS 4.0 of hoger beschikt.</translation>
+  </string>
+  <string id="Error.27501">
+    <base>This setup requires Administrator privileges for configuring IIS Virtual Roots.</base>
+    <translation>Deze configuratie vereist beheerdersrechten voor het configureren van IIS Virtual Roots.</translation>
+  </string>
+</localization>

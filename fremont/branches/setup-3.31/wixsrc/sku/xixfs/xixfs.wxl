@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+  <!-- Summary Information Stream -->
+  <String Id="SIS_MANUFACTURER">XIMETA, Inc.</String>
+  <String Id="SIS_KEYWORDS">Installer,MSI,Database,NDAS</String>
+  <String Id="SIS_COMMENTS">NDAS Software and Device Drivers for NetDisks and other NDAS devices</String>
+  <!-- Add/Remove Program Properties -->
+  <String Id="ARPURLUPDATEINFO">http://www.ximeta.com</String>
+  <String Id="ARPHELPLINK">http://www.ximeta.com/support/</String>
+  <String Id="ARPURLINFOABOUT">http://www.ximeta.com</String>
+  <String Id="ARPCONTACT">Customer Support</String>
+  <String Id="ARPCOMMENTS">XIX File System for NDAS</String>
+  <!-- General -->
+  <String Id="ProductName">XIX File System for NDAS</String>
+  <String Id="PackageDescription">XIX File System for NDAS</String>
+  <String Id="Manufacturer">XIMETA, Inc.</String>
+  <String Id="DialogCaption">Windows Installer Setup</String>
+  <!-- Features -->
+  <String Id="Ndasmgmt.Feature.Title">NDAS Device Management</String>
+  <String Id="Ndasmgmt.Feature.Description">NDAS Device Management</String>
+  <String Id="Ndasbind.Feature.Title">NDAS Bind Management</String>
+  <String Id="Ndasbind.Feature.Description">NDAS Bind Management</String>
+  <String Id="Ndascmd.Feature.Title">NDAS Command Line Interface</String>
+  <String Id="Ndascmd.Feature.Description">NDAS Command Line Interface</String>
+  <String Id="Main.Feature.Title">NDAS Software</String>
+  <String Id="Main.Feature.Description">NDAS Software</String>
+  <!-- Folders -->
+  <String Id="ProgramFilesCompanyFolder83">.</String>
+  <String Id="ProgramFilesCompanyFolder">.</String>
+  <String Id="ProgramFilesGroupFolder83">NDAS</String>
+  <String Id="ProgramFilesGroupFolder">NDAS</String>
+  <!-- Program Menu -->
+  <String Id="ProgramMenuCompanyFolder83">.</String> 
+  <String Id="ProgramMenuCompanyFolder">.</String>
+  <String Id="ProgramMenuGroupFolder83">NDAS</String>
+  <String Id="ProgramMenuGroupFolder">NDAS Software</String>
+</WixLocalization>

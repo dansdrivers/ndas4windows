@@ -1,0 +1,30 @@
+TARGETNAME=ndasmsg
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+MC_FLAGS=-suc -x $(PASS0_HEADERDIR)
+
+RESOURCE_ONLY_DLL=1
+
+INCLUDES=$(NDAS_INC_PATH);$(PASS0_HEADERDIR)
+
+#USE_MAKEFILE_INC=1
+
+NTTARGETFILE1=msgcomp
+
+USER_INCLUDES=\
+	$(O)\_ndasmsg.mc \
+	$(O)\_ndasmsg.rc \
+	$(NDAS_PUBLIC_INC_PATH)\ndas\ndasmsg.h
+
+# to publish headers
+NTTARGETFILES=$(NDAS_PUBLIC_INC_PATH)\ndas\ndasmsg.h
+
+PASS0_SOURCEDIR=$(O)
+PASS0_HEADERDIR=$(O)
+MC_SOURCEDIR=$(O)
+
+SOURCES=\
+	ndasmsg.rc \
+	$(O)\_ndasmsg.rc \
+	$(O)\_ndasmsg.mc \

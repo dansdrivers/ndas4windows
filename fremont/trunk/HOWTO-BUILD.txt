@@ -1,0 +1,295 @@
+
+*********************************************************************
+
+		  Building NDAS Software for Windows
+
+*********************************************************************
+
+Last Updated: June 7, 2007 Chesong Lee <cslee@ximeta.com>
+
+=====================================================================
+		      SOFTWARE DEVELOPMENT KITS
+=====================================================================
+
+  You need the following component to build the product.
+
+  o Microsoft Windows SDK for Windows Vista
+
+   (Local)
+   \\liah\apps\SDK\WINDOWSSDK-6.0.6000
+
+   (Web Download)
+   http://www.microsoft.com/downloads/details.aspx?familyid=C2B1E300-F358-4523-B479-F53D234CDCCF
+
+   Note: Make sure to select AMD64 libraries when installing the SDK.
+   	 Otherwise, build may fail later.
+
+  o Microsoft Windows Driver Kit (WDK) 6000
+
+   (Local)
+   \\liah\apps\SDK\WINDDK-6000
+
+   (Web)
+   Available from MSDN Subscription Download
+
+=====================================================================
+			 OPTIONAL COMPONENTS
+=====================================================================
+
+  Following components are required only for the setup and the localization processors
+
+  o Microsoft .NET Framework Version 2.0 Redistributable Package (x86)
+
+   http://www.microsoft.com/downloads/details.aspx?FamilyID=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5
+
+
+  o Microsoft .NET Framework 2.0 Service Pack 1 (x86)
+   http://www.microsoft.com/downloads/details.aspx?familyid=79BC3B77-E02C-4AD3-AACF-A7633F706BA5
+
+=====================================================================
+			    CONFIGURATIONS
+=====================================================================
+
+ o Default values (PLEASE READ THIS!!!!)
+
+   It is recommended use default values instead of defining variables.
+
+   1. Install WINDDK/WINSDK in its default path 
+
+      e.g. WINDDK: %SystemDrive%\WINDDK\6000
+      	   WINSDK: %ProgramFiles%\Microsoft SDKs\Windows\v6.0      
+
+   2. Designate XM_VENDOR_PATH to %SystemDrive%\WINDDK\Supplement
+
+   3. Run <ndasroot>\bin\configenv.cmd
+      This script will check each required components and also
+      will create appropriate symbolic links for WINSDK 3890 and 6000
+      if installed.
+
+ o DDK Environment Variable
+
+   WLHBASE:  WINDDK 6000 Path (e.g. C:\WINDDK\6000)
+   WNETBASE: WINDDK 3790.1830 Path (e.g. C:\WINDDK\3790.1830)
+
+   Note: xbuild.cmd will resolve these settings automatically, 
+   	 if not defined and DDKs are installed in 
+	 %SystemDrive%\WINDDK\xxxx
+
+ o External headers and libraries
+
+   available from: http://svn.ximeta.local/devel/dist/buildtools
+
+   Extract the external headers and libraries [+] to the
+   XM_VENDOR_PATH.
+
+                i386                      x64 (amd64)
+   ------------------------------------------------------
+   MSVCRT 7.1   crt71.zip                 crt71_amd64.zip
+   ATL 7.1      atl71.zip                 atl71_amd64.zip
+   WTL 8.0      wtl80.zip                 (n/a)
+   boost 1.33.0 boost_1_33_0-includes.zip (n/a)
+   ------------------------------------------------------
+
+ o Build Variables
+
+   The following variables can be either environment variables or
+   variables that is set in "<ndasroot>\src\config.inc".  To use
+   "config.inc", copy "config.in" to "config.inc" and edit it.
+
+   * XM_VENDOR_PATH
+
+      Path to external headers and libraries
+
+      Default: %SystemDrive%\WINDDK\Supplement
+
+   * XM_NTOS_INC_PATH
+
+     Path to Windows OS headers 
+
+     Default: %XM_VENDOR_PATH%\ntoskit
+     Source : \\liah\public\devel\ndasbuild\ntosinc.zip
+
+   * WINSDK_PATH
+
+     Path to Windows SDK for Windows Vista (6000)
+
+     Default: %XM_VENDOR_PATH%\winsdk60 
+      
+   * PSDK_PATH
+
+     Path to Microsoft Platform SDK (3790.1830)
+     Default: %XM_VENDOR_PATH%\psdk
+
+   Note: Variables cannot contain spaces.
+
+     This means you cannot use "C:\Program Files\Microsoft Platform SDK"
+     in PSDK_PATH, PSDK_INC_PATH or PSDK_LIB_PATH. 
+
+     Workaround for this is to make a symbolic link of the actual path.
+     The old way of using a short path has problems with compiling 
+     with attributes (midl invoked by the linker always make use
+     of the actual long path without quotes)
+  
+     The following command will make a symbolic link of
+     %ProgramFiles%\Microsoft SDK at %XM_VENDOR_PATH%\psdk. [+]
+
+     c:\src>linkd.exe "%ProgramFiles%\Microsoft SDK" %XM_VENDOR_PATH%\psdk
+
+=====================================================================
+                           BUILD
+=====================================================================
+
+  * Run 'build_publish.cmd' to rebuild the entire project.
+    Binary files will be placed in publish\{chk,fre}\i386
+
+  * If %XM_SIGNCODE_CMD% is set, digital signatures will be generated
+    by 'mkcat.cmd' after the build is complete
+
+    Official build machine has this environment variable set. For
+    private build machines, you can use this variable to test digital
+    signing process.
+
+  * Run 'build_sdk.cmd' to build the NDAS Software SDK after build_publish
+    is done.
+
+  * "bin\zipbin.cmd" and "bin\zipsdk.cmd" will make zip files for the
+    output such as:
+
+        o dist\ndas-X.YY.ZZZZ-bin.zip
+        o dist\ndas-X.YY.ZZZZ-sdk.zip
+
+=====================================================================
+                    POST BUILD PROCESSES
+=====================================================================
+
+NDAS 3.11.1310 or later replaces old InstallShield-based MSI setup with
+WiX-based MSI setup using Wix toolset [#]. Wix Projects are hosted at
+http://svn.ximeta.local/netdisk/mayfield/wix/{trunk,tags,branches}
+
+For each build wix project is also tagged from from its own trunk.
+
+Refer the Wix Project documentation for more details.
+
+----
+
+Previous project contains the setup project in this tree. Since RXXXX,
+NDAS Setup project is separated into
+
+http://svn/repos/netdisk/mayfield/setup/{trunk,branches,tags} 
+
+Each NDAS software project is linked to the branch in this NDAS Setup
+Project. 
+
+NDAS 3.10.1228 through 3.10.1230 use the following branch:
+
+http://svn/repos/netdisk/mayfield/setup/branches/R1003
+
+NDAS 3.10.1231 use the following branch:
+
+http://svn/repos/netdisk/mayfield/setup/branches/R1003a
+
+NDAS 3.11.1301, 1302, 1310 use the following branch:
+
+http://svn/repos/netdisk/mayfield/setup/branches/R1004
+
+Put the output (fre) from the NDAS Software Project into the Setup
+Project Data directory (ndas-3.XX.XXXX) and run 'createism' and
+'buildsetup' to build the final MSI output file.
+
+[#] Visit http://wix.sourceforge.net for more information.
+
+=====================================================================
+                       BUILD MACHINE
+=====================================================================
+
+* Test Phase
+
+cd /d d:\server\devel\buildsrc\ndas\trunk
+svn update
+build_publish
+build_sdk
+
+cd ..\wix\trunk
+svn update
+del /q .\SourceDir\*.*
+robocopy ..\..\trunk\publish\fre\i386 .\SourceDir /xf *.pdb
+xbuild -cegPwi *
+
+rem Files are available at .\publish\ndas-3.XX.YYYY-x86.msi
+rem Test the output files!
+
+* Official Build
+
+cd /d d:\server\devel\buildsrc\ndas
+svn copy http://svn/repos/netdisk/mayfield/trunk \
+    http://svn/repos/netdisk/mayfield/tags/3.XX.YYYY \
+    -m "Tagged for 3.XX.YYYY"
+svn checkout http://svn/repos/netdisk/mayfield/tags/3.XX.YYYY
+cd 3.XX.YYYY
+build_publish
+build_sdk
+zipbin
+zipsdk
+
+cd ..\wix
+svn copy http://svn/repos/netdisk/mayfield/wix/trunk \
+    http://svn/repos/netdisk/mayfield/wix/tags/3.XX.YYYY
+    -m "Tagged for 3.XX.YYYY"
+svn checkout http://svn/repos/netdisk/mayfield/tags/3.XX.YYYY
+cd 3.XX.YYYY
+del /q .\SourceDir\*.*
+robocopy ..\..\3.XX.YYYY\publish\fre\i386 .\SourceDir /xf *.pdb
+xbuild -cegPwi *
+cd publish
+
+run d:\server\devel\buildsrc\ndas\sympub_ndas.cmd 3.XX.YYYY
+
+============================================================
+                         REVISIONS
+============================================================
+
+2007-06-07 patria
+
+  Updated to use WDK 6000 and SDK 6000
+
+2005-12-16 patria
+
+  Updated prerequisites
+
+2005-11-14 patria
+
+  Boost is separated into the externals 
+  
+2005-11-10 hootch
+
+  Added atlprov.dll
+
+2005-11-10 patria
+
+  Added CRT71 headers and libraries
+
+2005-03-29 patria
+    
+  Setup project has been removed from the project source tree.
+
+2004-11-18 patria
+
+  Revised for the new build environment.
+
+2004-08-24 patria
+       
+  Now the whole project is made from build.exe (in DDK).  And the
+  prerequisites are changed.
+       
+2004-05-14 patria
+
+  As of 3.03.1020.0, InstallShield is upgraded to the version 9.0
+  SP1.  Some pre-requisites are changed.
+
+2004-03-08 hootch
+
+  WINHDR.zip is added to the prerequisite components.
+
+2003 patria
+
+  Initial documents

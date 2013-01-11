@@ -1,0 +1,17 @@
+K 10
+svn:ignore
+V 130
+objchk*\
+buildchk_*.log
+buildchk_*.wrn
+buildchk_*.err
+objfre*\
+buildfre_*.log
+buildfre_*.wrn
+buildfre_*.err
+*.bsc
+*.suo
+*.ncb
+lib
+
+END

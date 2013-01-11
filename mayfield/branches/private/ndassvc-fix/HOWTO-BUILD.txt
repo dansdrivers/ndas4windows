@@ -1,0 +1,129 @@
+
+NetDisk Build Procedure
+
+Revision:
+
+2004-11-18 patria
+
+           Revised for the new build environment.
+
+2004-08-24 patria
+	   
+	   Now the whole project is made from build.exe (in DDK).
+	   And the prerequisites are changed.
+	   
+2004-05-14 patria
+
+	   As of 3.03.1020.0, 
+	   InstallShield is upgraded to the version 9.0 SP1.
+	   Some pre-requisites are changed.
+
+2004-03-08 hootch
+
+	   WINHDR.zip is added to the prerequisite components.
+
+2003	   patria
+
+	   Initial documents
+
+=====================================================================
+PREREQUISITE
+=====================================================================
+
+You need the following component to build the product.
+
+ o Microsoft Platform SDK 2003 February or later
+
+ o Microsoft Windows Server 2003 DDK (3790 or later)
+
+ o InstallShield 9 Stand-alone builder and components
+
+     * InstallShield Stand-alone Build SP1
+
+        - InstallShield DevStudio 9 Standalone Build.msi
+	  (from \\liah\public\devel\InstallShield )
+
+     * InstallShield Eastern and Western Language Pack Redistributable 
+       for Stand-alone Build
+
+        - ISSA9SP1_LANGPACK_REDIST.zip 
+	  ( from \\liah\public\devel\InstallShield )
+
+        - Unzip this file to 
+	  "C:\Program Files\InstallShield\StandaloneBuild9SP1\Redist" 
+   
+	- After extracting files, you should modify C:\Program Files\Installshield\StandaloneBuild9SP1\langs.ini
+	  to set all languages keys to "Installed"
+    
+     -- If you are to work with InstallShield Project, you need the following components:
+
+     * InstallShield DevStuio 9.0 with Service Pack 1
+     
+     * InstallShield 9.0 Eastern Language Pack 
+       (Required only for builds including Korean and Japanese languages)
+     
+     * InstallShield 9.0 Western Language Pack
+       (Required only for International Build)
+
+Preconfiguration:
+
+ o Builder Environment Variable
+
+   WNETBASE       : IFS Installation Path 
+                    (default: C:\WINDDK\3790)
+
+
+ o Build Variables
+
+   The following variables can be either environment variables or
+   variables that is set in "<ndasroot>\src\config.inc".
+   To use "config.inc", copy "config.in" to "config.inc" and edit it.
+
+
+   PSDK_INC_PATH  : Platform SDK include path 
+                    (default: short path of %ProgramFiles%\Microsoft SDK\include)
+
+   PSDK_LIB_PATH  : Platform SDK library path
+                    (default: short path of %ProgramFiles%\Microsoft SDK\lib)
+
+   XM_VENDOR_PATH : Path to external headers and libraries (ATL71, WTL71, etc: Use \\liah\public\devel\AtlWtl.zip)
+                    (default: none, usually c:\Development\xmvendor)
+
+   XM_NTOS_INC_PATH : Path to Windows OS headers
+                      (default: none, usually c:\Development\ntosinc. Use \\liah\public\devel\ndasbuild\ntosinc.zip)
+
+   * All variables MUST NOT contain spaces. For example,
+     if you should set PSDK_INC_PATH to "C:\Program Files\Microsoft SDK",
+     run <ndasroot>\bin\shrtpath.exe and get the short name of the path and use it.
+
+     e.g. c:\src>bin\shrtpath.exe "C:\Program Files\Microsoft SDK"
+          c:\PROGRA~1\MICROS~1
+          
+          c:\src>SETX PSDK_INC_PATH c:\PROGRA~1\MICROS~1\include
+          c:\src>SETX PSDK_LIB_PATH c:\PROGRA~1\MICROS~1\lib
+          
+---------------------------------------------------------------------
+AT BUILD MACHINE ONLY
+---------------------------------------------------------------------
+
+ o The following "setver.cmd" feature is not yet supported.
+
+ PRODUCTVER.TXT contains the version of the software.
+ This version file can be used to synchronize with file following files
+ using "setver.cmd":
+
+ - \lanscsisystemv2\src\inc\prodver.h
+ - \installer\NetDiskSetup.ism
+ - \oem\<vendor>\installer\NetDiskSetup.ism
+
+ * From InstallShield 9.0, we no longer maintain separate isv and ism file.
+   We only use XML-format ISM file.
+   
+---------------------------------------------------------------------
+
+=====================================================================
+RETAIL BUILD
+=====================================================================
+
+File Locations:
+	

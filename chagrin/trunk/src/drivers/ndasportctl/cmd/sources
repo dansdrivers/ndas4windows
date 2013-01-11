@@ -1,0 +1,39 @@
+TARGETNAME=ndasportctl
+TARGETPATH=obj
+TARGETTYPE=PROGRAM
+
+MSC_WARNING_LEVEL=-W4 -Wp64
+UMTYPE=console
+UMENTRY=wmain
+
+INCLUDES=$(PSDK_INC_PATH);$(NDAS_INC_PATH)
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Ox
+LINK_TIME_CODE_GENERATION=1
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+SOURCES=\
+	..\ndasportcmd.cpp \
+	ndasportctl.rc
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE -DWPP_TRACING
+
+TARGETLIBS=\
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	..\slib\$(O)\libndasportctl.lib
+
+!IF $(_NT_TARGET_VERSION) <= 0x500
+WPP_TEMPLATE=um-w2k.tpl
+!ELSE
+WPP_TEMPLATE=um-default.tpl
+!ENDIF
+
+RUN_WPP=$(SOURCES) -um -gen:{$(WPP_TEMPLATE)}*.tmh -func:CTRACE(LEVEL,FLAG,MSG,...)

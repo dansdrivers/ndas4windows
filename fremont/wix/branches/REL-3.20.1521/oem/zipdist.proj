@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="ZipPackage" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+	<ZipDropPath>0_dist</ZipDropPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<ZipExe Include="..\bin\zip.exe" />
+  </ItemGroup>
+
+  <PropertyGroup>
+	<Oem></Oem>
+	<Release></Release>
+	<Platform></Platform>
+	<ProductName></ProductName>
+	<ProductVersion></ProductVersion>
+  </PropertyGroup>
+
+  <Import Project="$(config).config" />
+  <Import Project="productversion.include" />
+
+  <UsingTask TaskName="XIMETA.GetDateTimeString" AssemblyFile="..\bin\msbuild\XIMETA.Tasks.dll" />
+
+  <PropertyGroup>
+	<PackageDir>$(Oem)\package\$(Release)_$(Platform)</PackageDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<MainMSI Include="$(PackageDir)\*.msi" />
+	<SourceFile Include="$(PackageDir)\*.*" />
+  </ItemGroup>
+
+  <Target Name="ZipPackage"
+		  Inputs="@(SourceFile)"
+		  Outputs="$(ZipDropPath)\$(ZipTimestampFileName)"
+		  DependsOnTargets="SetPropertiesForZipPackage">
+
+	<Delete Files="$(ZipDropPath)\$(ZipTimestampFileName)" />
+
+	<Exec Command="%(zipexe.fullpath) $(ZipFileName) *.*" WorkingDirectory="$(PackageDir)" />
+
+	<CreateItem Include="$(PackageDir)\$(ZipFileName)">
+	  <Output TaskParameter="Include" PropertyName="TmpZipFilePath" />
+	</CreateItem>
+
+	<Copy SourceFiles="$(TmpZipFilePath)" DestinationFolder="$(ZipDropPath)" />
+
+	<Delete Files="$(TmpZipFilePath)" />
+
+	<WriteLinesToFile File="$(ZipDropPath)\$(ZipTimestampFileName)" Lines="" />
+
+  </Target>
+
+  <Target Name="SetPropertiesForZipPackage">
+
+	<XIMETA.GetDateTimeString Format="yyyyMMdd">
+	  <Output TaskParameter="Value" PropertyName="ZipFileSuffix" />
+	</XIMETA.GetDateTimeString>
+
+	<Message Text="$(ZipFileSuffix)" />
+
+	<CreateProperty Value="$(Oem)_$(ProductName)_$(ProductVersion)_$(Release)_$(Platform).$(ZipFileSuffix).zip">
+	  <Output TaskParameter="Value" PropertyName="ZipFileName" />
+	</CreateProperty>
+
+	<CreateProperty Value="$(Oem)_$(ProductName)_$(ProductVersion)_$(Release)_$(Platform).timestamp">
+	  <Output TaskParameter="Value" PropertyName="ZipTimestampFileName" />
+	</CreateProperty>
+
+	
+  </Target>
+  
+</Project>

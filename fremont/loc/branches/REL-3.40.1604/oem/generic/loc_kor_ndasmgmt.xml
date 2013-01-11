@@ -1,0 +1,1603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="ndasmgmt" version="3.40.1604" lang="kor" oem="ximeta" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="/STR/09/00">
+    <base><![CDATA[ndasmgmt]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="/STR/64/14">
+    <base><![CDATA[In the future, do not show me this dialog box.]]></base>
+    <translation>이 메세지를 다시 표시 안함</translation>
+  </string>
+  <string id="/STR/126/05">
+    <base><![CDATA[NDAS Software is configured to reject suspend/hibernation request when devices are mounted.\r\nYou can change this behavior from Options - Advanced.]]></base>
+    <translation>NDAS 장치가 마운트 되어 있을 때 대기/하이버네이션 요청을 거부하도록 되어 있습니다.\r\n옵션 - 고급 에서 이 설정을 변경할 수 있습니다.</translation>
+  </string>
+  <string id="/STR/126/06">
+    <base><![CDATA[Mount (&Read-only)]]></base>
+    <translation><![CDATA[마운트 (읽기 전용)(&R)]]></translation>
+  </string>
+  <string id="/STR/126/07">
+    <base><![CDATA[Mount (Read/&Write)]]></base>
+    <translation>마운트 (읽기/쓰기)(&amp;W)</translation>
+  </string>
+  <string id="/STR/126/08">
+    <base><![CDATA[Dismo&unt]]></base>
+    <translation>마운트 해제(&amp;U)</translation>
+  </string>
+  <string id="/STR/126/09">
+    <base><![CDATA[General]]></base>
+    <translation>일반</translation>
+  </string>
+  <string id="/STR/126/10">
+    <base><![CDATA[An NDAS device with the name you specified is already registered.\r\nSpecify a different NDAS device name.]]></base>
+    <translation>같은 이름의 NDAS장치가 이미 등록되어 있습니다.\r\n다른 이름을 지정해 주십시오.</translation>
+  </string>
+  <string id="/STR/126/11">
+    <base><![CDATA[An error occurred while checking duplicate NDAS device name.]]></base>
+    <translation>중복된 NDAS 디바이스 이름을 확인하는 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/126/12">
+    <base><![CDATA[[%1!d!] %2!s!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/126/13">
+    <base>NDAS Device Management</base>
+    <translation>NDAS 장치 관리자</translation>
+  </string>
+  <string id="/STR/126/14">
+    <base><![CDATA[Dismount &All]]></base>
+    <translation>모두 마운트 해제(&amp;A)</translation>
+  </string>
+  <string id="/STR/126/15">
+    <base><![CDATA[MAC Address]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="/STR/127/00">
+    <base><![CDATA[This application requires administrative privileges.\r\nLog on as a user in Administrators Group and run this application again.]]></base>
+    <translation>이 프로그램은 관리자 권한이 필요합니다..\r\n관리자 그룹으로 로그인후 다시 시도 하십시오.</translation>
+  </string>
+  <string id="/STR/127/01">
+    <base><![CDATA[Loading NDASUSER.DLL failed.\r\nPlease check the installation of the software.]]></base>
+    <translation>NDASUSER.DLL 로드 실패 .\r\n소프트웨어 설치를 점검 하십시오,</translation>
+  </string>
+  <string id="/STR/127/02">
+    <base><![CDATA[Window creation failed. Possibly system is running out of memory.\r\nClose other applications and try again.]]></base>
+    <translation>윈도우 생성 실패. 메모리가 부족할 수도 있습니다.\r\n다른 프로그램을 닫은 후 다시 시도하십시오.</translation>
+  </string>
+  <string id="/STR/127/03">
+    <base><![CDATA[Incompatible NDASUSER.DLL is installed.\r\nPlease check the installation of the software.]]></base>
+    <translation>호환되지 않는 NDASUSER.DLL이 설치되었습니다.\r\n소프트웨어 설치를 점검 하십시오.</translation>
+  </string>
+  <string id="/STR/127/04">
+    <base><![CDATA[Unknown]]></base>
+    <translation>알 수 없음</translation>
+  </string>
+  <string id="/STR/127/05">
+    <base><![CDATA[KB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/06">
+    <base><![CDATA[MB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/07">
+    <base><![CDATA[GB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/08">
+    <base><![CDATA[TB]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/09">
+    <base><![CDATA[Not Available]]></base>
+    <translation>사용 불가</translation>
+  </string>
+  <string id="/STR/127/10">
+    <base><![CDATA[Not Available]]></base>
+    <translation>사용 불가</translation>
+  </string>
+  <string id="/STR/127/11">
+    <base><![CDATA[NDAS Registration Files (*.ndas)]]></base>
+    <translation>NDAS 등록 파일 (*.ndas)</translation>
+  </string>
+  <string id="/STR/127/12">
+    <base><![CDATA[Encrypted Disk with %1!s! (%2!d! bits) R%3!X!.%4!X!]]></base>
+    <translation>디스크를 %1!s! (%2!d! bits) R%3!X!.%4!X! 로 암호화하였습니다.</translation>
+  </string>
+  <string id="/STR/127/13">
+    <base><![CDATA[AES]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/127/14">
+    <base><![CDATA[Simple]]></base>
+    <translation>보통</translation>
+  </string>
+  <string id="/STR/127/15">
+    <base><![CDATA[None]]></base>
+    <translation>없음</translation>
+  </string>
+  <string id="/STR/128/00">
+    <base><![CDATA[Unknown Encryption (%1!04X!)]]></base>
+    <translation>알려지지 않은 암호 (%1!04X!)</translation>
+  </string>
+  <string id="/STR/128/01">
+    <base><![CDATA[NDAS Registration Files (*.nda)]]></base>
+    <translation>NDAS 등록 파일  (*.nda)</translation>
+  </string>
+  <string id="/STR/128/02">
+    <base><![CDATA[All Files (*.*)]]></base>
+    <translation>모든 파일 (*.*)</translation>
+  </string>
+  <string id="/STR/128/03">
+    <base><![CDATA[*.ndas]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/04">
+    <base><![CDATA[*.nda]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/05">
+    <base><![CDATA[*.*]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/06">
+    <base><![CDATA[An error occurred during saving the registration.]]></base>
+    <translation>등록 정보를 저장하는 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/128/07">
+    <base><![CDATA[,\_]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/128/08">
+    <base><![CDATA[The NDAS device is already registered.]]></base>
+    <translation>NDAS 장치가 이미 등록되어 있습니다. </translation>
+  </string>
+  <string id="/STR/128/09">
+    <base><![CDATA['%1!s!' is registered successfully.\r\nClick the taskbar icon to use the registered NDAS device.]]></base>
+    <translation>'%1!s!' i 이 성공적으로 등록되었습니다 .\r\n 등록된 NDAS 장치를 사용하려면 작업 표시줄의 아이콘을 선택 하십시오.</translation>
+  </string>
+  <string id="/STR/128/10">
+    <base><![CDATA[Registered]]></base>
+    <translation>등록됨</translation>
+  </string>
+  <string id="/STR/128/11">
+    <base><![CDATA[Invalid]]></base>
+    <translation>비정상</translation>
+  </string>
+  <string id="/STR/128/12">
+    <base><![CDATA[New]]></base>
+    <translation>새 장치</translation>
+  </string>
+  <string id="/STR/128/13">
+    <base><![CDATA[Device ID: %1!s!-%2!s!-%3!s!-%4!s!\r\nWrite Key: %5!s!\r\n%6!s!]]></base>
+    <translation>장치 ID: %1!s!-%2!s!-%3!s!-%4!s!\r\n쓰기 키: %5!s!\r\n%6!s!</translation>
+  </string>
+  <string id="/STR/128/14">
+    <base><![CDATA[Name]]></base>
+    <translation>이름 </translation>
+  </string>
+  <string id="/STR/128/15">
+    <base><![CDATA[Status]]></base>
+    <translation>상태</translation>
+  </string>
+  <string id="/STR/129/00">
+    <base><![CDATA[Error (Code: %1!d!)]]></base>
+    <translation>오류 (Code: %1!d!)</translation>
+  </string>
+  <string id="/STR/129/01">
+    <base><![CDATA[An error occurred while reading the file '%1!s!'.]]></base>
+    <translation>파일 '%1!s!'을(를) 읽는 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/129/02">
+    <base><![CDATA[RW]]></base>
+    <translation>읽고 쓰기</translation>
+  </string>
+  <string id="/STR/129/03">
+    <base><![CDATA[RO]]></base>
+    <translation>읽기 전용</translation>
+  </string>
+  <string id="/STR/129/04">
+    <base><![CDATA[PIO]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/05">
+    <base><![CDATA[DMA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/06">
+    <base><![CDATA[UDMA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/07">
+    <base><![CDATA[LBA]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/08">
+    <base><![CDATA[LBA48]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/129/09">
+    <base><![CDATA[Shared RW]]></base>
+    <translation>다중 읽기/쓰기</translation>
+  </string>
+  <string id="/STR/129/10">
+    <base><![CDATA[Shared RW *]]></base>
+    <translation>다중 읽기/쓰기*</translation>
+  </string>
+  <string id="/STR/129/11">
+    <base><![CDATA[Exclusive RW]]></base>
+    <translation>단독 읽기/쓰기</translation>
+  </string>
+  <string id="/STR/129/12">
+    <base><![CDATA[Dismounting the NDAS device failed.]]></base>
+    <translation>NDAS 장치의 마운트 해제 실패하였습니다.</translation>
+  </string>
+  <string id="/STR/129/13">
+    <base><![CDATA[Dismount devices asynchronously]]></base>
+    <translation>동기화 없이 장치를 마운트 해제하기</translation>
+  </string>
+  <string id="/STR/129/14">
+    <base><![CDATA[Status]]></base>
+    <translation>상태</translation>
+  </string>
+  <string id="/STR/129/15">
+    <base><![CDATA[Logical Unit]]></base>
+    <translation>논리 유닛</translation>
+  </string>
+  <string id="/STR/130/00">
+    <base><![CDATA[Mounting (RO)]]></base>
+    <translation>마운트 중  (RO)</translation>
+  </string>
+  <string id="/STR/130/01">
+    <base><![CDATA[Mounting (RW)]]></base>
+    <translation>마운트 중 (RW)</translation>
+  </string>
+  <string id="/STR/130/02">
+    <base><![CDATA[Dismounting (RO)]]></base>
+    <translation>마운트 해제 중입니다.(읽기 전용)</translation>
+  </string>
+  <string id="/STR/130/03">
+    <base><![CDATA[Dismounting (RW)]]></base>
+    <translation>마운트 해제 중입니다.(읽기/쓰기)</translation>
+  </string>
+  <string id="/STR/130/04">
+    <base><![CDATA[Failed]]></base>
+    <translation>실패했습니다.</translation>
+  </string>
+  <string id="/STR/130/05">
+    <base><![CDATA[Dismounted]]></base>
+    <translation>마운트 해제되었습니다.</translation>
+  </string>
+  <string id="/STR/130/06">
+    <base><![CDATA[Revision]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="/STR/130/07">
+    <base><![CDATA[The NDAS disk is successfully mounted, but no available partitions are detected on the disk. You have to run "Disk Management" to create or update partitions in order to use the disk.]]></base>
+    <translation>NDAS 디스크가 성공적으로 마운트 되었습니다, 하지만 사용가능한 파티션이 발견되자 않았습니다. 디스크를 사용하기 위해선 "디스크 관리자"를 통해 파티션을 만들거나 업데이트를 해야합니다.</translation>
+  </string>
+  <string id="/STR/130/08">
+    <base><![CDATA[The NDAS disk is mounted.]]></base>
+    <translation>NDAS 디스크가 마운트 되었습니다.</translation>
+  </string>
+  <string id="/STR/130/09">
+    <base><![CDATA[Launch Disk Management]]></base>
+    <translation>디스크 관리자 시작</translation>
+  </string>
+  <string id="/STR/130/10">
+    <base><![CDATA[Applications are using the NDAS device. Close any programs that might be using it, and then try again.]]></base>
+    <translation>어플리케이션이 NDAS 장치를 사용 중 입니다. NDAS를 사용할만한 다른 프로그램을 닫은 후 다시 시도하십시오.</translation>
+  </string>
+  <string id="/STR/188/09">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation><![CDATA[http://www.ximeta.com]]></translation>
+  </string>
+  <string id="/STR/188/10">
+    <base><![CDATA[&Add]]></base>
+    <translation>추가(&amp;A)</translation>
+  </string>
+  <string id="/STR/188/11">
+    <base><![CDATA[The host (%1!s!) is requesting the Write Access of "%2!s!'s".\r\nDo you want to accept the request and dismount the NDAS device?]]></base>
+    <translation>호스트 (%1!s!) 가 "%2!s!'s"의 쓰기 접속을 요청하고 있습니다. .\r\n허락하고 NDAS 장치를 마운트 해제 하시겠습니까?</translation>
+  </string>
+  <string id="/STR/188/12">
+    <base><![CDATA[Verdana]]></base>
+    <translation>굴림체</translation>
+  </string>
+  <string id="/STR/188/13">
+    <base><![CDATA[12]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/188/14">
+    <base><![CDATA[Connection to the following NDAS devices has been lost.\r\n%1!s!]]></base>
+    <translation>다음의 NDAS 장치의 접속이 끊어졌습니다.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/188/15">
+    <base><![CDATA[NDAS Device Disconnected]]></base>
+    <translation>NDAS 장치의 접속이 끊어짐</translation>
+  </string>
+  <string id="/STR/189/00">
+    <base><![CDATA[Connection to the following NDAS devices are restored.\r\n%1!s!]]></base>
+    <translation>다음의 NDAS 장치의 접속이 회복되었습니다.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/189/02">
+    <base><![CDATA[Connection to the following devices are unstable.\r\nThe system is reconnecting to the devices...\r\n%1!s!]]></base>
+    <translation>다음의 장치의 접속이 불안정합니다.\r\n재접속중입니다...\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/189/04">
+    <base><![CDATA[Are you sure you want to exit from NDAS Device Management?]]></base>
+    <translation>NDAS 장치 관리자를 종료하시겠습니까?</translation>
+  </string>
+  <string id="/STR/189/05">
+    <base><![CDATA[Are you sure you want to dismount the NDAS device?]]></base>
+    <translation>NDAS 장치를 마운트 해제 하시겠습니까?</translation>
+  </string>
+  <string id="/STR/189/06">
+    <base><![CDATA[Are you sure you want to dismount all NDAS devices?]]></base>
+    <translation>모든 NDAS 장치를 마운트 해제 하시겠습니까?</translation>
+  </string>
+  <string id="/STR/189/07">
+    <base><![CDATA[Are you sure you want to dismount %1!s!?]]></base>
+    <translation>"%1!s!"을(를) 마운트 해제하시겠습니까?</translation>
+  </string>
+  <string id="/STR/189/08">
+    <base><![CDATA[Are you sure you want to remove the %1!s!?]]></base>
+    <translation>%1!s!을(를) 제거 하겠습니까?</translation>
+  </string>
+  <string id="/STR/189/09">
+    <base><![CDATA[Are you sure you want to deregister "%1!s!"?]]></base>
+    <translation>"%1!s!"을(를) 등록 해제하시겠습니까?</translation>
+  </string>
+  <string id="/STR/189/10">
+    <base><![CDATA[Do you want to mount this device in degraded mode?]]></base>
+    <translation>이 장치를 복구 불가 모드로 마운트 하시겠습니까?</translation>
+  </string>
+  <string id="/STR/189/11">
+    <base><![CDATA[%1!s! Properties]]></base>
+    <translation>%1!s! 속성</translation>
+  </string>
+  <string id="/STR/189/12">
+    <base><![CDATA[Online]]></base>
+    <translation>온라인</translation>
+  </string>
+  <string id="/STR/189/13">
+    <base><![CDATA[Online *]]></base>
+    <translation>온라인 *</translation>
+  </string>
+  <string id="/STR/189/14">
+    <base>Deactivated</base>
+    <translation>비활성화됨</translation>
+  </string>
+  <string id="/STR/189/15">
+    <base><![CDATA[Offline]]></base>
+    <translation>오프라인</translation>
+  </string>
+  <string id="/STR/190/00">
+    <base><![CDATA[Error]]></base>
+    <translation>오류</translation>
+  </string>
+  <string id="/STR/190/01">
+    <base><![CDATA[Mounted (RO)]]></base>
+    <translation>마운트 됨 (읽기전용)</translation>
+  </string>
+  <string id="/STR/190/02">
+    <base><![CDATA[Mounted (RW)]]></base>
+    <translation>마운트 됨 (읽기쓰기)</translation>
+  </string>
+  <string id="/STR/190/03">
+    <base><![CDATA[Unknown]]></base>
+    <translation>알 수 없음</translation>
+  </string>
+  <string id="/STR/190/04">
+    <base><![CDATA[Hardware]]></base>
+    <translation>하드웨어</translation>
+  </string>
+  <string id="/STR/190/05">
+    <base><![CDATA[Max LUs]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="/STR/190/06">
+    <base><![CDATA[Max Transfer Blocks]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="/STR/190/07">
+    <base><![CDATA[Max Unit Devices]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="/STR/190/08">
+    <base><![CDATA[Command Processing Slots]]></base>
+    <translation>명령 처리 슬롯</translation>
+  </string>
+  <string id="/STR/190/09">
+    <base><![CDATA[The dismounting may fail if applications are accessing the NDAS device.]]></base>
+    <translation>어플리케이션이 NDAS 장치를 사용하고 있으면 마운트 해제가 실패할 수 있습니다.</translation>
+  </string>
+  <string id="/STR/190/10">
+    <base><![CDATA[Version]]></base>
+    <translation>버전</translation>
+  </string>
+  <string id="/STR/190/11">
+    <base><![CDATA[Device Type]]></base>
+    <translation>장치 종류</translation>
+  </string>
+  <string id="/STR/190/12">
+    <base><![CDATA[Firmware Revision]]></base>
+    <translation>펌웨어 리비전</translation>
+  </string>
+  <string id="/STR/190/13">
+    <base><![CDATA[LBA Mode]]></base>
+    <translation>LBA 모드</translation>
+  </string>
+  <string id="/STR/190/14">
+    <base><![CDATA[Model]]></base>
+    <translation>모델</translation>
+  </string>
+  <string id="/STR/190/15">
+    <base><![CDATA[Serial Number]]></base>
+    <translation>일련 번호</translation>
+  </string>
+  <string id="/STR/191/00">
+    <base><![CDATA[Unit Device %1!d!]]></base>
+    <translation>유닛 장치 %1!d!</translation>
+  </string>
+  <string id="/STR/191/01">
+    <base><![CDATA[Transfer Mode]]></base>
+    <translation>전송 모드</translation>
+  </string>
+  <string id="/STR/191/02">
+    <base><![CDATA[Registration is finished successfully and the device is now ready to use.]]></base>
+    <translation>등록이 성공하여 이제부터 장치를 사용할 수 있습니다.</translation>
+  </string>
+  <string id="/STR/191/03">
+    <base><![CDATA[Please wait while checking the NDAS device status...]]></base>
+    <translation>NDAS 장치 상태를 점검중입니다.  기다려 주십시오...</translation>
+  </string>
+  <string id="/STR/191/04">
+    <base><![CDATA[&Disable]]></base>
+    <translation>사용 안함(&amp;D)</translation>
+  </string>
+  <string id="/STR/191/05">
+    <base><![CDATA[Enter the NDAS device ID to register.]]></base>
+    <translation>등록하려는 NDAS 장치의 ID를 입력하십시오.</translation>
+  </string>
+  <string id="/STR/191/06">
+    <base><![CDATA[NDAS device ID]]></base>
+    <translation>NDAS 장치 ID</translation>
+  </string>
+  <string id="/STR/191/07">
+    <base><![CDATA[Specify the name for the NDAS device.]]></base>
+    <translation>NDAS 장치의 이름을 지정하십시요.</translation>
+  </string>
+  <string id="/STR/191/08">
+    <base><![CDATA[NDAS Device Name]]></base>
+    <translation>NDAS 장치 이름</translation>
+  </string>
+  <string id="/STR/191/09">
+    <base><![CDATA[The Wizard will guide you through the NADS device registration. Before continuing to the next step, please do the following:\r\n\r\n- Connect the NDAS device to the network.\r\n- Turn on the NDAS device.\r\n\r\nTo continue, click "Next".]]></base>
+    <translation>마법사가 NDAS 장치 등록을 도와드리겠습니다. 다음으로 진행하기 전에 다음을 실행해 주십시요:\r\n\r\n- NDAS 장치를 네트워크에 연결.\r\n- NDAS 장치 켜기.\r\n\r\n계속하시려면 "다음"을 클릭해주십시요.</translation>
+  </string>
+  <string id="/STR/191/10">
+    <base><![CDATA[NDAS Device Registration Wizard]]></base>
+    <translation>NDAS 장치 등록 마법사</translation>
+  </string>
+  <string id="/STR/191/11">
+    <base><![CDATA[Do you want to mount this NDAS device now?]]></base>
+    <translation>지금 이 NDAS 장치를 마운트하시겠습니까?</translation>
+  </string>
+  <string id="/STR/191/12">
+    <base><![CDATA[Mount NDAS Device]]></base>
+    <translation>NDAS 장치 마운트</translation>
+  </string>
+  <string id="/STR/191/13">
+    <base><![CDATA[NDAS Device Registration Wizard]]></base>
+    <translation>NDAS 장치 등록 마법사</translation>
+  </string>
+  <string id="/STR/191/14">
+    <base><![CDATA[This RAID will run in degraded mode due to a missing/defective member and it may cause irreconcilable RAID status.\r\n(Use NDAS Bind management for more information)]]></base>
+    <translation>이 RAID는 없거나/결함이 있는 멤버로 인해 복구 불가 모드로 작동 되고 안정적이지 못한 RAID 상태를 만들수 있습니다.\r\n(자세한 정보는 NDAS 결합 관리자를 이용하십시오.)</translation>
+  </string>
+  <string id="/STR/191/15">
+    <base><![CDATA[An error has occurred while setting up a Write Key.]]></base>
+    <translation>쓰기 키를 설정하는 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/00">
+    <base><![CDATA[An error occurred while disabling an NDAS device.]]></base>
+    <translation>NDAS 장치를 사용하지 않도록 하는 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/01">
+    <base><![CDATA[An error occurred while enabling an NDAS device.]]></base>
+    <translation>NDAS 장치를 사용하도록 하는 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/02">
+    <base><![CDATA[An error occurred while mounting an NDAS device as Read-Only Mode.]]></base>
+    <translation>NDAS 장치를 읽기 전용으로 마운트 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/03">
+    <base><![CDATA[An error occurred while mounting an NDAS device as Read/Write Mode.]]></base>
+    <translation>NDAS 장치를 읽기/쓰기 모드로 마운트 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/04">
+    <base><![CDATA[Facility: NDAS 0x%1!04X!\r\nError Code: %2!u! (0x%2!04X!)\r\n%3!s!]]></base>
+    <translation>해석: NDAS 0x%1!04X!\r\n오류 코드: %2!u! (0x%2!04X!)\r\n%3!s!</translation>
+  </string>
+  <string id="/STR/192/05">
+    <base><![CDATA[An error occurred during registration.]]></base>
+    <translation>등록 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/06">
+    <base><![CDATA[An error occurred while removing a Write Key.]]></base>
+    <translation>쓰기 키 삭제 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/07">
+    <base><![CDATA[An error occurred while renaming an NDAS device.]]></base>
+    <translation>NDAS 장치의 이름 변경 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/08">
+    <base><![CDATA[Error Code: %1!u! (0x%1!04X!)\r\n%2!s!]]></base>
+    <translation>오류 코드: %1!u! (0x%1!04X!)\r\n%2!s!</translation>
+  </string>
+  <string id="/STR/192/09">
+    <base>NDAS Device Management Error</base>
+    <translation>NDAS 장치 관리자 오류</translation>
+  </string>
+  <string id="/STR/192/10">
+    <base><![CDATA[An error occurred while dismounting an NDAS device.]]></base>
+    <translation>NDAS 장치 마운트 해제 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/11">
+    <base><![CDATA[An error occurred while deregistering an NDAS device.]]></base>
+    <translation>NDAS 장치 등록 해제 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/12">
+    <base><![CDATA[An error occurred while updating an NDAS device list.]]></base>
+    <translation>NDAS 장치 목록 갱신 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/192/13">
+    <base><![CDATA[NDAS device ID is 20 characters long and it is composed of alphanumeric characters!\r\n]]></base>
+    <translation>NDAS 장치 ID는 20글자내에 영문과 숫자 조합입니다!\r\n</translation>
+  </string>
+  <string id="/STR/192/14">
+    <base><![CDATA[Invalid Device ID!]]></base>
+    <translation>장치 ID가 올바르지 않습니다.</translation>
+  </string>
+  <string id="/STR/192/15">
+    <base><![CDATA[Unknown Host]]></base>
+    <translation>알려지지 않은 호스트</translation>
+  </string>
+  <string id="/STR/193/00">
+    <base><![CDATA[Automatic]]></base>
+    <translation>자동</translation>
+  </string>
+  <string id="/STR/193/01">
+    <base><![CDATA[Changing the user interface language requires application restart. Do you want to restart the application now?]]></base>
+    <translation>언어 변경을 적용하려면 어플리케이션을 다시 시작해야 됩니다. 지금 다시 시작하겠습니까?</translation>
+  </string>
+  <string id="/STR/193/02">
+    <base><![CDATA[An error occurred while resetting the NDAS device.]]></base>
+    <translation>NDAS 장치 리셋 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/193/11">
+    <base><![CDATA[Unavailable]]></base>
+    <translation>사용 불가</translation>
+  </string>
+  <string id="/STR/193/14">
+    <base><![CDATA[Mounted in Read-only mode]]></base>
+    <translation>읽기 전용 모드로 마운트 됨</translation>
+  </string>
+  <string id="/STR/193/15">
+    <base><![CDATA[Mounted in Read/Write mode]]></base>
+    <translation>읽기/쓰기 모드로 마운트 됨</translation>
+  </string>
+  <string id="/STR/194/00">
+    <base><![CDATA[Mounting]]></base>
+    <translation>마운트 중</translation>
+  </string>
+  <string id="/STR/194/01">
+    <base><![CDATA[Not Mountable]]></base>
+    <translation>마운트 불가</translation>
+  </string>
+  <string id="/STR/194/02">
+    <base><![CDATA[Unknown Status (0x%1!08X!)]]></base>
+    <translation>알 수 없는 상태 (0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/194/03">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation>마운트 되지 않음</translation>
+  </string>
+  <string id="/STR/194/04">
+    <base><![CDATA[Dismounting]]></base>
+    <translation>마운트 해제 중입니다.</translation>
+  </string>
+  <string id="/STR/194/05">
+    <base><![CDATA[Aggregated Disk]]></base>
+    <translation>Aggregated 디스크</translation>
+  </string>
+  <string id="/STR/194/06">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>컴팩트 플래시 드라이브</translation>
+  </string>
+  <string id="/STR/194/08">
+    <base><![CDATA[DVD Drive]]></base>
+    <translation>DVD 드라이브 </translation>
+  </string>
+  <string id="/STR/194/09">
+    <base><![CDATA[Mirrored Disk]]></base>
+    <translation>Mirrored 디스크 </translation>
+  </string>
+  <string id="/STR/194/10">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO 드라이브</translation>
+  </string>
+  <string id="/STR/194/11">
+    <base><![CDATA[Basic Disk]]></base>
+    <translation>기본 디스크 </translation>
+  </string>
+  <string id="/STR/194/12">
+    <base><![CDATA[Unknown Type (0x%1!08X!)]]></base>
+    <translation>알 수 없는 종류(0x%1!08X!)</translation>
+  </string>
+  <string id="/STR/194/13">
+    <base><![CDATA[Virtual DVD Drive]]></base>
+    <translation>가상 DVD 드라이브 </translation>
+  </string>
+  <string id="/STR/194/14">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS 장치 관리자</translation>
+  </string>
+  <string id="/STR/194/15">
+    <base><![CDATA[Online]]></base>
+    <translation>온라인 </translation>
+  </string>
+  <string id="/STR/195/00">
+    <base><![CDATA[Deactivated]]></base>
+    <translation>비활성화됨</translation>
+  </string>
+  <string id="/STR/195/01">
+    <base><![CDATA[Offline]]></base>
+    <translation>오프라인 </translation>
+  </string>
+  <string id="/STR/195/02">
+    <base><![CDATA[Unknown]]></base>
+    <translation>알 수 없음</translation>
+  </string>
+  <string id="/STR/195/03">
+    <base><![CDATA[NDAS Device %1!d!]]></base>
+    <translation>NDAS 장치 %1!d!</translation>
+  </string>
+  <string id="/STR/195/04">
+    <base><![CDATA[(No NDAS Device)]]></base>
+    <translation>( NDAS 장치 없음)</translation>
+  </string>
+  <string id="/STR/195/05">
+    <base><![CDATA[Do not show the confirmation dialog on exit]]></base>
+    <translation>종료시 확인 창을 출력하지 않기</translation>
+  </string>
+  <string id="/STR/195/06">
+    <base><![CDATA[Show NDAS Device Status text]]></base>
+    <translation>NDAS 장치 상태 표시</translation>
+  </string>
+  <string id="/STR/195/07">
+    <base><![CDATA[Show Dismount All command]]></base>
+    <translation>모두 마운트 해제 표시</translation>
+  </string>
+  <string id="/STR/195/08">
+    <base><![CDATA[Options]]></base>
+    <translation>옵션</translation>
+  </string>
+  <string id="/STR/195/09">
+    <base><![CDATA[Confirmation]]></base>
+    <translation>확인 </translation>
+  </string>
+  <string id="/STR/195/10">
+    <base><![CDATA[Menu]]></base>
+    <translation>메뉴</translation>
+  </string>
+  <string id="/STR/195/11">
+    <base><![CDATA[You have successfully completed the NDAS device Registration Wizard.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation>NDAS 장치 등록 마법사를 성공적으로 마쳤습니다.\r\n\r\n이 마법사를 닫으려면 마침을 클릭하십시오.</translation>
+  </string>
+  <string id="/STR/195/12">
+    <base><![CDATA[You have successfully registered the NDAS device. \r\n\r\nHowever, the NDAS device is not found and cannot be connected at this time. Please check the NDAS device connection.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation>등록이 성공하였습니다. \r\n\r\n그러나 지금은 NDAS 장치를 찾을수 없어 접속이 되지 않습니다. NDAS 장치 접속을 점검하십시오.\r\n\r\n이 마법사를 닫으려면 마침을 클릭하십시오.</translation>
+  </string>
+  <string id="/STR/195/13">
+    <base><![CDATA[You have successfully registered and the NDAS device is connected. \r\n\r\nHowever, there is no mountable NDAS device found at this time. Please check the status from the task bar icon menu.\r\n\r\nTo close this wizard, click Finish.]]></base>
+    <translation>등록이 성공하여 NDAS 장치가 연결되었습니다.\r\n\r\n그러나 지금은 마운트 할 수 있는 NDAS 장치를 찾을수 없습니다. 테스크 바 아이콘 메뉴를 확이하십시오.\r\n\r\n이 마법사를 닫으려면 마침을 클릭하십시오.</translation>
+  </string>
+  <string id="/STR/195/14">
+    <base><![CDATA[Remo&ve]]></base>
+    <translation>삭제(&amp;V)</translation>
+  </string>
+  <string id="/STR/195/15">
+    <base><![CDATA[Are you sure you want to remove the Write Key?]]></base>
+    <translation>쓰기 키를 제거하시겠습니까?</translation>
+  </string>
+  <string id="/STR/196/00">
+    <base><![CDATA[Remove Write Key]]></base>
+    <translation>쓰기 키 삭제</translation>
+  </string>
+  <string id="/STR/196/01">
+    <base><![CDATA[Would you like to request the Read/Write access of the NDAS device from other hosts?]]></base>
+    <translation>다른 호스트에 NDAS 디바이스의 읽기/쓰기 접근을 요청하시겠습니까? </translation>
+  </string>
+  <string id="/STR/196/02">
+    <base><![CDATA[&Properties...]]></base>
+    <translation>속성(&amp;P)</translation>
+  </string>
+  <string id="/STR/196/03">
+    <base><![CDATA[Please wait while connecting to the host...]]></base>
+    <translation>호스트에 연결중입니다.  기다려 주십시오...</translation>
+  </string>
+  <string id="/STR/196/04">
+    <base><![CDATA[Waiting for a response...]]></base>
+    <translation>응답을 기다리고 있습니다...</translation>
+  </string>
+  <string id="/STR/196/05">
+    <base><![CDATA[Unit Device information is not available]]></base>
+    <translation>유닛 장치 정보가 없습니다.</translation>
+  </string>
+  <string id="/STR/196/06">
+    <base><![CDATA[Other]]></base>
+    <translation>기타</translation>
+  </string>
+  <string id="/STR/196/07">
+    <base><![CDATA[Mounted]]></base>
+    <translation>마운트 됨</translation>
+  </string>
+  <string id="/STR/196/08">
+    <base><![CDATA[Not Mounted]]></base>
+    <translation>마운트 되지 않음</translation>
+  </string>
+  <string id="/STR/196/09">
+    <base><![CDATA[You cannot mount this device as Read/Write anymore without the Write Key.]]></base>
+    <translation>쓰기 키가 없으면 이 장치를 읽기/쓰기 모드로 마운트 할 수 없습니다.</translation>
+  </string>
+  <string id="/STR/196/10">
+    <base><![CDATA[Unknown (%1!d!)]]></base>
+    <translation>알 수 없음 (%1!d!)</translation>
+  </string>
+  <string id="/STR/196/11">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation>CD/DVD 드라이브</translation>
+  </string>
+  <string id="/STR/196/12">
+    <base><![CDATA[Compact Flash Drive]]></base>
+    <translation>컴팩트 플래시 드라이브</translation>
+  </string>
+  <string id="/STR/196/13">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>디스크 드라이브</translation>
+  </string>
+  <string id="/STR/196/14">
+    <base><![CDATA[MO Drive]]></base>
+    <translation>MO 드라이브</translation>
+  </string>
+  <string id="/STR/196/15">
+    <base>Unknown Type (%1!08X!)</base>
+    <translation>알 수 없는 종류 (%1!08X!)</translation>
+  </string>
+  <string id="/STR/197/00">
+    <base><![CDATA[CD/DVD Drive]]></base>
+    <translation>CD/DVD 드라이브</translation>
+  </string>
+  <string id="/STR/197/01">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>디스크 드라이브</translation>
+  </string>
+  <string id="/STR/197/02">
+    <base><![CDATA[Member of Aggregated Disk]]></base>
+    <translation>Aggregated 드라이브 멤버</translation>
+  </string>
+  <string id="/STR/197/03">
+    <base><![CDATA[Member of Mirrored Disk (Primary)]]></base>
+    <translation>Mirrored 디스크 멤버 (원본)</translation>
+  </string>
+  <string id="/STR/197/04">
+    <base><![CDATA[Member of Mirrored Disk (Secondary)]]></base>
+    <translation>Mirrored 디스크 멤버 (사본)</translation>
+  </string>
+  <string id="/STR/197/05">
+    <base><![CDATA[Disk Drive]]></base>
+    <translation>디스크 드라이브</translation>
+  </string>
+  <string id="/STR/197/06">
+    <base><![CDATA[Disk Drive (Unrecognized Type %1!04X!)]]></base>
+    <translation>디스크 드라이브 (알 수 없는 종류 %1!04X!)</translation>
+  </string>
+  <string id="/STR/197/07">
+    <base><![CDATA[Unknown Type (0x%1!04X!)]]></base>
+    <translation>알 수 없는 종류(0x%1!04X!)</translation>
+  </string>
+  <string id="/STR/197/08">
+    <base><![CDATA[Unknown Unit Device Type]]></base>
+    <translation>알 수 없는 유닛 장치 종류</translation>
+  </string>
+  <string id="/STR/197/09">
+    <base><![CDATA[&Deregister]]></base>
+    <translation>등록 해제(&amp;D)</translation>
+  </string>
+  <string id="/STR/197/10">
+    <base><![CDATA[None]]></base>
+    <translation>없음</translation>
+  </string>
+  <string id="/STR/197/11">
+    <base><![CDATA[Present]]></base>
+    <translation>현재</translation>
+  </string>
+  <string id="/STR/197/12">
+    <base><![CDATA[Do not show a confirmation dialog on removing the Write Key]]></base>
+    <translation>쓰기 키를 제거할 때 확인 창을 출력하지 않기</translation>
+  </string>
+  <string id="/STR/197/13">
+    <base>Do not show a confirmation dialog on deregistering an NDAS device</base>
+    <translation>NDAS 장치를 등록 해제할 때 확인 창을 출력하지 않기</translation>
+  </string>
+  <string id="/STR/197/14">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting an NDAS device]]></base>
+    <translation>NDAS 장치를 마운트 해제할 때 확인 창을 출력하지 않기</translation>
+  </string>
+  <string id="/STR/197/15">
+    <base><![CDATA[Do not show a confirmation dialog on dismounting all of the NDAS devices]]></base>
+    <translation>모든 NDAS 장치를 마운트 해제할 때 확인 창을 출력하지 않기</translation>
+  </string>
+  <string id="/STR/198/00">
+    <base><![CDATA[Use Wizard for Registration]]></base>
+    <translation>등록 마법사 사용</translation>
+  </string>
+  <string id="/STR/198/01">
+    <base><![CDATA[NDAS Device Management is running now.\r\nClick here to register a new NDAS Device to your system.]]></base>
+    <translation>NDAS 장치 관리자가 이미 실행중입니다.\r\n새로운 NDAS 장치를 시스템에 등록하려면 여기를 클릭하십시오.</translation>
+  </string>
+  <string id="/STR/198/02">
+    <base><![CDATA[NDAS Device Management is running]]></base>
+    <translation>NDAS 장치 관리자가 이미 실행중입니다.</translation>
+  </string>
+  <string id="/STR/198/03">
+    <base>NDAS Device Management is already running.\r\nClick the task bar icon to show the menu such that you can access the features.</base>
+    <translation>NDAS 장치 관리자가 이미 실행중입니다.\r\n작업 표시줄 아이콘을 클릭하여 기능들을 사용할수 있습니다.</translation>
+  </string>
+  <string id="/STR/198/04">
+    <base>NDAS Device Management is already running</base>
+    <translation>NDAS 장치 관리자가 이미 실행중입니다.</translation>
+  </string>
+  <string id="/STR/198/05">
+    <base><![CDATA[Access]]></base>
+    <translation>접속</translation>
+  </string>
+  <string id="/STR/198/06">
+    <base><![CDATA[Hostname]]></base>
+    <translation>호스트 이름</translation>
+  </string>
+  <string id="/STR/198/07">
+    <base><![CDATA[Network Address]]></base>
+    <translation>네트워크 주소</translation>
+  </string>
+  <string id="/STR/198/08">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d!]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/STR/198/09">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Not registered)]]></base>
+    <translation>[%1!d!] %2!s!:%3!d! (등록되지 않음)</translation>
+  </string>
+  <string id="/STR/198/10">
+    <base><![CDATA[[%1!d!] %2!s!:%3!d! (Unavailable)]]></base>
+    <translation>[%1!d!] %2!s!:%3!d! (사용 불가능)</translation>
+  </string>
+  <string id="/STR/198/11">
+    <base>Please wait while mounting a requested NDAS device...</base>
+    <translation>NDAS 장치를 마운트 중입니다.  기다려 주십시오...</translation>
+  </string>
+  <string id="/STR/198/12">
+    <base><![CDATA[Please wait while dismounting a requested NDAS device...]]></base>
+    <translation>NDAS 장치를 마운트 해제 중입니다.  기다려 주십시오...</translation>
+  </string>
+  <string id="/STR/198/13">
+    <base><![CDATA[The new user interface language will be applied when you restart the application.]]></base>
+    <translation>어플리케이션을 다시 시작하면 새로운 사용자 인터페이스 언어가 적용됩니다.</translation>
+  </string>
+  <string id="/STR/198/14">
+    <base><![CDATA[Suspend/Hibernation Support]]></base>
+    <translation>대기/하이버네이션 지원</translation>
+  </string>
+  <string id="/STR/198/15">
+    <base><![CDATA[Allow suspend/hibernation]]></base>
+    <translation>대기/하이버네이션을 허가</translation>
+  </string>
+  <string id="/STR/199/00">
+    <base><![CDATA[NDAS Device Management is running now.\r\nClick the task bar icon to show the menu such that you can access the features.]]></base>
+    <translation>NDAS 장치 관리자가 이미 실행중입니다.\r\n작업 표시줄 아이콘을 클릭하여 기능들을 사용할수 있습니다.</translation>
+  </string>
+  <string id="/STR/199/01">
+    <base><![CDATA[Deny suspend/hibernation if there are mounted devices]]></base>
+    <translation>마운트된 장치들이 있으면 대기/하이버네이션 거부</translation>
+  </string>
+  <string id="/STR/199/02">
+    <base><![CDATA[Allowing suspend/hibernation may cause a data corruption and the device may not be available on resuming in multi-write mode.\r\nAre you sure you want to enable this feature?]]></base>
+    <translation>다중 쓰기 모드에서 대기/하이버네이션을 허가할 경우 데이터가 손상될 수 있고 시스템이 깨어 날 때 장치를 사용하지 못할 수 있습니다.\r\n이 기능을 사용하기를 원하십니까?</translation>
+  </string>
+  <string id="/STR/199/03">
+    <base><![CDATA[&Activate]]></base>
+    <translation>활성화(&amp;A)</translation>
+  </string>
+  <string id="/STR/199/04">
+    <base><![CDATA[[%1!d!] %2!s! (Unavailable)]]></base>
+    <translation>[%1!d!] %2!s! (사용 불가능)</translation>
+  </string>
+  <string id="/STR/199/05">
+    <base><![CDATA[Are you sure you want to deactivate this NDAS device?]]></base>
+    <translation>이 NDAS 장치를 비활성화하시겠습니까?</translation>
+  </string>
+  <string id="/STR/199/06">
+    <base><![CDATA[Are you sure you want to reset the connection to this NDAS device?]]></base>
+    <translation>이 NDAS 장치의 연결을 리셋하시겠습니까?</translation>
+  </string>
+  <string id="/STR/199/07">
+    <base><![CDATA[A member of RAID is inaccessible or not configured correctly. RAID system will be running in degraded mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation>RAID의 구성 유닛에 접근이 안되거나 설정이 잘못되어 있습니다. RAID 시스템은 복구 불가 모드로 작동하게 됩니다. 더 자세한 정보는 NDAS 결합 관리자를 이용해 주십시오.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/08">
+    <base><![CDATA[The NDAS Device is running in degraded mode]]></base>
+    <translation>NDAS 장치가 복구 불가 모드 작동중입니다.</translation>
+  </string>
+  <string id="/STR/199/09">
+    <base><![CDATA[Component]]></base>
+    <translation>구성</translation>
+  </string>
+  <string id="/STR/199/10">
+    <base><![CDATA[Version]]></base>
+    <translation>버전</translation>
+  </string>
+  <string id="/STR/199/11">
+    <base><![CDATA[NDAS Device status]]></base>
+    <translation>NDAS 장치 상태</translation>
+  </string>
+  <string id="/STR/199/12">
+    <base><![CDATA[NDAS Device is running in normal status\r\n%1!s!]]></base>
+    <translation>NDAS 장치가 정상 모드로 작동 중입니다.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/13">
+    <base><![CDATA[The RAID is now running in recovery mode. Use NDAS Bind Management tool for more information.\r\n%1!s!]]></base>
+    <translation>RAID가 복구 모드로 작동중입니다. 자세한 정보는 NDAS 결합 관리자를 사용하십시오.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/14">
+    <base><![CDATA[Connection(s) to one or more NDAS device(s) has been recovered.\r\n%1!s!]]></base>
+    <translation>하나 이상의 NDAS 장치에 대한 접속이 복구 되었습니다.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/199/15">
+    <base><![CDATA[The RAID is now fully recovered.\r\n%1!s!]]></base>
+    <translation>RAID가 완전히 복구 되었습니다.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/200/00">
+    <base><![CDATA[[%1!d!] %2!s! (Not registered)]]></base>
+    <translation>[%1!d!] %2!s! (등록 안됨)</translation>
+  </string>
+  <string id="/STR/200/01">
+    <base><![CDATA[Re&set]]></base>
+    <translation>리셋(&amp;S)</translation>
+  </string>
+  <string id="/STR/200/02">
+    <base><![CDATA[The RAID is in failure state. Use NDAS Bind Management tool for more information\r\n%1!s!]]></base>
+    <translation>RAID가 실패 상태입니다. NDAS 결합 관리자를 사용하십시오.\r\n%1!s!</translation>
+  </string>
+  <string id="/STR/200/03">
+    <base><![CDATA[After deactivating, you can reactivate this device from the menu.]]></base>
+    <translation>비활성화 후, 메뉴에서 이 장치를 재활성화 할 수 있습니다.</translation>
+  </string>
+  <string id="/STR/200/04">
+    <base><![CDATA[Shared-write mode cannot be used at this time. There are another NDAS host using this device in a non-shared write mode or an incompatible shared-write mode.]]></base>
+    <translation>지금은 다중 쓰기 모드를 사용할 수 없습니다. 다른 컴퓨터가 이 장치에 단독 쓰기를 하고 있거나 호환되지 않는 다중 쓰기 모드로 사용중입니다.</translation>
+  </string>
+  <string id="/STR/200/05">
+    <base><![CDATA[An error occurred while mounting an NDAS device.\r\nDo you want to proceed mounting?]]></base>
+    <translation>NDAS 장치 마운트 중 오류가 발생했습니다.\r\n계속 마운트를 하시겠습니까?</translation>
+  </string>
+<string id="/STR/200/06">
+<base><![CDATA[Ndas Pnp Support]]></base>
+<translation><![CDATA[NDAS PNP 지원]]></translation>
+</string>
+<string id="/STR/200/07">
+<base><![CDATA[Allow Ndas Pnp]]></base>
+<translation><![CDATA[NDAS PNP 허용]]></translation>
+</string>
+<string id="/STR/200/08">
+<base><![CDATA[Deny Ndas Pnp]]></base>
+<translation><![CDATA[NDAS PNP 거부]]></translation>
+</string>
+  <string id="/STR/251/02">
+    <base><![CDATA[NDAS Device Management\r\nNDAS Service is not available.]]></base>
+    <translation>NDAS 장치 관리자\r\nNDAS 서비스를 사용할 수 없습니다.</translation>
+  </string>
+  <string id="/STR/251/12">
+    <base><![CDATA[Connecting]]></base>
+    <translation>연결중</translation>
+  </string>
+  <string id="/STR/257/04">
+    <base><![CDATA[Disk (RAID-0)]]></base>
+    <translation>디스크 (RAID-0)</translation>
+  </string>
+  <string id="/STR/257/05">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation>Mirrored 디스크 (RAID-1) Rev.1</translation>
+  </string>
+  <string id="/STR/257/08">
+    <base><![CDATA[Disk (RAID-4) Rev.1]]></base>
+    <translation>디스크 (RAID-4) Rev.1</translation>
+  </string>
+  <string id="/STR/257/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation>Mirrored 디스크 (RAID-1) Rev.2</translation>
+  </string>
+  <string id="/STR/257/11">
+    <base><![CDATA[Disk (RAID-4) Rev.2]]></base>
+    <translation>디스크 (RAID-4) Rev.2</translation>
+  </string>
+  <string id="/STR/257/14">
+    <base><![CDATA[Member of Striped Disk (RAID-0)]]></base>
+    <translation>Striped 디스크 멤버 (RAID-0)</translation>
+  </string>
+  <string id="/STR/257/15">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.1]]></base>
+    <translation>Mirrored 디스크 멤버(RAID-1) Rev.1</translation>
+  </string>
+  <string id="/STR/258/02">
+    <base><![CDATA[Member of RAID-4 Disk Rev. 1]]></base>
+    <translation>RAID-4 Rev. 1 디스크 멤버</translation>
+  </string>
+  <string id="/STR/258/04">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.2]]></base>
+    <translation>Mirrored 디스크 멤버(RAID-1) Rev.2 </translation>
+  </string>
+  <string id="/STR/258/05">
+    <base><![CDATA[Member of RAID-4 Disk Rev.2]]></base>
+    <translation>RAID-4 Rev. 2 디스크 멤버</translation>
+  </string>
+  <string id="/STR/258/08">
+    <base><![CDATA[Member of Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation>Mirrored 디스크 멤버(RAID-1) Rev.3</translation>
+  </string>
+  <string id="/STR/258/09">
+    <base><![CDATA[Member of RAID-4 Disk Rev.3]]></base>
+    <translation>RAID-4 Rev. 3 디스크 멤버</translation>
+  </string>
+  <string id="/STR/258/10">
+    <base><![CDATA[Mirrored Disk (RAID-1) Rev.3]]></base>
+    <translation>Mirrored 디스크 (RAID-1) Rev.3</translation>
+  </string>
+  <string id="/STR/258/11">
+    <base><![CDATA[Disk (RAID-4) Rev.3]]></base>
+    <translation>디스크 (RAID-4) Rev.3</translation>
+  </string>
+  <string id="/STR/258/12">
+    <base><![CDATA[Missing member]]></base>
+    <translation>빠진 멤버</translation>
+  </string>
+  <string id="/STR/258/13">
+    <base><![CDATA[Migration is required. Use NDAS Bind management to migrate.]]></base>
+    <translation>마이그레이션이 필요합니다. NDAS 결합 관리자를 이용해 마이그레이션 하십시오.</translation>
+  </string>
+  <string id="/STR/258/14">
+    <base><![CDATA[Conflicting RAID information. Use NDAS Bind management to resolve conflicts.]]></base>
+    <translation>RAID 정보가 충돌합니다. Use NDAS 결합 관리자를 이용해 해결하십시오.</translation>
+  </string>
+  <string id="/STR/258/15">
+    <base><![CDATA[Mountable in degraded mode]]></base>
+    <translation>복구 불가 모드로 마운트 할 수 있음</translation>
+  </string>
+  <string id="/STR/259/00">
+    <base><![CDATA[Do not show a warning dialog when mounting RAID in degraded mode]]></base>
+    <translation>복구 불가 모드로 마운트할떄 경고 창을 출력하지 않기</translation>
+  </string>
+  <string id="/STR/259/01">
+    <base>Member of RAID-5 Disk</base>
+    <translation>RAID-5 디스크 멤버</translation>
+  </string>
+  <string id="/STR/259/02">
+    <base><![CDATA[Disk (RAID-5)]]></base>
+    <translation>디스크 (RAID-5)</translation>
+  </string>
+  <string id="/STR/307/05">
+    <base><![CDATA[Please wait while checking for a software update...]]></base>
+    <translation>스프트웨어 업데이트를 점검하고 있습니다. 기다려 주십시오...</translation>
+  </string>
+  <string id="/STR/307/06">
+    <base><![CDATA[An error occurred while checking a software update.]]></base>
+    <translation>소프트웨어의 업데이트 확인 중 오류가 발생했습니다.</translation>
+  </string>
+  <string id="/STR/313/14">
+    <base><![CDATA[Mounting the NDAS device...]]></base>
+    <translation>NDAS 장치를 마운트하고 있습니다.</translation>
+  </string>
+  <string id="/STR/313/15">
+    <base><![CDATA[Dismounting the NDAS device...]]></base>
+    <translation>NDAS 장치의 마운트 해제중입니다...</translation>
+  </string>
+  <string id="/STR/625/15">
+    <base><![CDATA[English]]></base>
+    <translation>한국어(Korean)</translation>
+  </string>
+  <string id="/STR/757/04">
+    <base><![CDATA[OK]]></base>
+    <translation>확인</translation>
+  </string>
+  <string id="/STR/757/05">
+    <base><![CDATA[&Yes]]></base>
+    <translation>예(&amp;Y)</translation>
+  </string>
+  <string id="/STR/757/06">
+    <base><![CDATA[&No]]></base>
+    <translation>아니오(&amp;N)</translation>
+  </string>
+  <string id="/STR/757/07">
+    <base><![CDATA[&Retry]]></base>
+    <translation>재시도(&amp;R)</translation>
+  </string>
+  <string id="/STR/757/08">
+    <base><![CDATA[Cancel]]></base>
+    <translation>취소</translation>
+  </string>
+  <string id="/STR/757/09">
+    <base>&amp;Close</base>
+    <translation>닫기(&amp;C)</translation>
+  </string>
+  <string id="/STR/757/10">
+    <base><![CDATA[See &details >>]]></base>
+    <translation>상세 정보 보기(&amp;D) &gt;&gt;</translation>
+  </string>
+  <string id="/STR/757/11">
+    <base><![CDATA[Hide &details <<]]></base>
+    <translation>상세 정보 숨기기(&amp;D) &lt;&lt;</translation>
+  </string>
+  <string id="/DLG/301">
+    <base>About NDAS Software</base>
+    <translation>NDAS 소프트웨어 정보</translation>
+  </string>
+  <string id="/DLG/301/00">
+    <base><![CDATA[OK]]></base>
+    <translation>확인</translation>
+  </string>
+  <string id="/DLG/301/01">
+    <base><![CDATA[NDAS Software]]></base>
+    <translation>NDAS 소프트웨어</translation>
+  </string>
+  <string id="/DLG/301/02">
+    <base><![CDATA[Version %1!s!]]></base>
+    <translation>버전 %1!s!</translation>
+  </string>
+  <string id="/DLG/301/03">
+    <base><![CDATA[http://www.ximeta.com]]></base>
+    <translation><![CDATA[http://www.ximeta.com]]></translation>
+  </string>
+  <string id="/DLG/301/04">
+    <base><![CDATA[Copyright (c) 2002-2008 XIMETA, Inc.\r\nAll rights reserved.]]></base>
+    <translation><![CDATA[Copyright © 2002-2008 XIMETA, Inc.\r\nAll rights reserved.]]></translation>
+  </string>
+  <string id="/DLG/301/06">
+    <base><![CDATA[Components]]></base>
+    <translation>구성</translation>
+  </string>
+  <string id="/DLG/301/08">
+    <base><![CDATA[Check for &Updates]]></base>
+    <translation><![CDATA[-]]></translation>
+  </string>
+  <string id="/DLG/302">
+    <base><![CDATA[Enter the Write Key]]></base>
+    <translation>쓰기 키를 넣으십시오.</translation>
+  </string>
+  <string id="/DLG/302/01">
+    <base><![CDATA[OK]]></base>
+    <translation>확인</translation>
+  </string>
+  <string id="/DLG/302/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>취소</translation>
+  </string>
+  <string id="/DLG/302/05">
+    <base><![CDATA[Device Name:]]></base>
+    <translation>장치 이름:</translation>
+  </string>
+  <string id="/DLG/302/06">
+    <base>Device ID:</base>
+    <translation>장치 ID:</translation>
+  </string>
+  <string id="/DLG/302/07">
+    <base><![CDATA[Write Key:]]></base>
+    <translation>쓰기 키:</translation>
+  </string>
+  <string id="/DLG/306">
+    <base><![CDATA[General]]></base>
+    <translation>일반</translation>
+  </string>
+  <string id="/DLG/306/00">
+    <base><![CDATA[Device Name:]]></base>
+    <translation>장치 이름:</translation>
+  </string>
+  <string id="/DLG/306/02">
+    <base><![CDATA[&Rename]]></base>
+    <translation>이름 변경(&amp;R)</translation>
+  </string>
+  <string id="/DLG/306/03">
+    <base>Device ID:</base>
+    <translation>장치 ID:</translation>
+  </string>
+  <string id="/DLG/306/05">
+    <base><![CDATA[Write Key:]]></base>
+    <translation>쓰기 키:</translation>
+  </string>
+  <string id="/DLG/306/07">
+    <base><![CDATA[&Add]]></base>
+    <translation>추가(&amp;A)</translation>
+  </string>
+  <string id="/DLG/306/08">
+    <base><![CDATA[Status:]]></base>
+    <translation>상태:</translation>
+  </string>
+  <string id="/DLG/306/10">
+    <base><![CDATA[Unit Device Information]]></base>
+    <translation>유닛 장치 정보</translation>
+  </string>
+  <string id="/DLG/306/14">
+    <base><![CDATA[Status]]></base>
+    <translation>상태</translation>
+  </string>
+  <string id="/DLG/306/16">
+    <base><![CDATA[Capacity]]></base>
+    <translation>용량</translation>
+  </string>
+  <string id="/DLG/306/18">
+    <base><![CDATA[Read-Only Access]]></base>
+    <translation>읽기 전용 접속</translation>
+  </string>
+  <string id="/DLG/306/20">
+    <base><![CDATA[Read/Write Access]]></base>
+    <translation>읽기/쓰기 접속</translation>
+  </string>
+  <string id="/DLG/306/22">
+    <base><![CDATA[Logical Device Information:]]></base>
+    <translation>논리 장치 정보:</translation>
+  </string>
+  <string id="/DLG/307">
+    <base><![CDATA[Hosts]]></base>
+    <translation>호스트</translation>
+  </string>
+  <string id="/DLG/307/01">
+    <base><![CDATA[The following hosts are using this NDAS device.\r\nSome information may not be available.]]></base>
+    <translation>다음의 호스트들이 이 NDAS 장치를 사용하고 있습니다.\r\n얻을 수 없는 정보도 있습니다.</translation>
+  </string>
+  <string id="/DLG/307/02">
+    <base><![CDATA[Click here to refresh the list.]]></base>
+    <translation>목록을 갱신합니다.</translation>
+  </string>
+  <string id="/DLG/308">
+    <base><![CDATA[Hardware]]></base>
+    <translation>하드웨어</translation>
+  </string>
+  <string id="/DLG/308/00">
+    <base><![CDATA[Hardware Information about your NDAS device]]></base>
+    <translation>NDAS 장치 하드웨어 정보</translation>
+  </string>
+  <string id="/DLG/310/00">
+    <base><![CDATA[Completing the NDAS Device Registration Wizard]]></base>
+    <translation>NDAS 장치 등록 마법사 완료</translation>
+  </string>
+  <string id="/DLG/310/02">
+    <base><![CDATA[Click here to save as a file.]]></base>
+    <translation>등록 정보를 파일로 저장합니다.</translation>
+  </string>
+  <string id="/DLG/310/03">
+    <base><![CDATA[Optionally, you can save the registration to the file for registering from other computers.]]></base>
+    <translation>등록 정보를 파일로 저장하여 다른 컴퓨터에서 등록할 수 있습니다.</translation>
+  </string>
+  <string id="/DLG/311/00">
+    <base><![CDATA[To register the NDAS device, please enter the NDAS device ID. The ID and Write Key are located on the bottom of the NDAS device.\r\n\r\nNDAS device ID is composed of 20 characters.]]></base>
+    <translation>NDAS 장치들 등록하려면 NDAS 장치 ID를 입력하십시오. ID와 쓰기 키는 NDAS 장치 밑 부분에 있습니다.\r\n\r\nNDAS 장치 ID는 20글자의 영문과 숫자 조합입니다</translation>
+  </string>
+  <string id="/DLG/311/01">
+    <base><![CDATA[Please enter the NDAS device ID.]]></base>
+    <translation>NDAS 장치 ID를 넣으십시오.</translation>
+  </string>
+  <string id="/DLG/311/06">
+    <base><![CDATA[Write Key is needed for Read/Write mode. It is composed of 5 characters.]]></base>
+    <translation>읽기/쓰기 모드는 쓰기 키가 필요합니다. 쓰기 키는 5글자입니다.</translation>
+  </string>
+  <string id="/DLG/311/08">
+    <base><![CDATA[Click Next when you finish.\r\nIf the NDAS device ID and/or the Write Key is invalid, Next will not be enabled.]]></base>
+    <translation>완료하면 다음을 클릭하십시오.\r\nNDAS장치 ID/키가 틀리면 다음을 선택할 수 없습니다.</translation>
+  </string>
+  <string id="/DLG/311/09">
+    <base><![CDATA[Please enter the Write Key. (Optional)]]></base>
+    <translation>쓰기 키를 넣으십시요. (옵션)</translation>
+  </string>
+  <string id="/DLG/313/00">
+    <base><![CDATA[Please choose a name for the NDAS device. This name will be used to identify the NDAS device in your system only.]]></base>
+    <translation>NDAS 장치의 이름을 선택하십시오. 이 이름은 이 시스템에서 NDAS 장치를 구분할 때만 사용됩니다.</translation>
+  </string>
+  <string id="/DLG/313/01">
+    <base><![CDATA[The name can be up to 30 characters long.]]></base>
+    <translation>이름은 30글자까지 가능합니다.</translation>
+  </string>
+  <string id="/DLG/313/02">
+    <base><![CDATA[Please enter the name.]]></base>
+    <translation>이름을 넣으십시오.</translation>
+  </string>
+  <string id="/DLG/313/04">
+    <base><![CDATA[Click Next when you finish.]]></base>
+    <translation>완료하면 다음을 클릭하십시오.</translation>
+  </string>
+  <string id="/DLG/314/00">
+    <base><![CDATA[Welcome to the NDAS Device Registration Wizard]]></base>
+    <translation>NDAS 장치 관리자 마법사 시작</translation>
+  </string>
+<string id="/DLG/314/02">
+<base><![CDATA[Disable Ndas PNP]]></base>
+<translation><![CDATA[NDAS PNP 비활성화]]></translation>
+</string>
+  <string id="/DLG/315/01">
+    <base><![CDATA[Do you want to mount the NDAS device to your system now?]]></base>
+    <translation>지금 NDAS 장치를 마운트 하시겠습니까?</translation>
+  </string>
+  <string id="/DLG/315/02">
+    <base><![CDATA[Yes, I want to mount this NDAS device as Read/Write Mode.]]></base>
+    <translation>네, 이 NDAS 장치를 읽기/쓰기 모드로 마운트 하겠습니다.</translation>
+  </string>
+  <string id="/DLG/315/03">
+    <base><![CDATA[Yes, I want to mount this NDAS device as Read-Only Mode.]]></base>
+    <translation>네, 이 NDAS 장치를 읽기 전용 모드로 마운트 하겠습니다.</translation>
+  </string>
+  <string id="/DLG/315/04">
+    <base><![CDATA[No, I don't want to mount this NDAS device now.]]></base>
+    <translation>아니요, 지금 이 NDAS 장치를 마운트하지 않겠습니다.</translation>
+  </string>
+  <string id="/DLG/317">
+    <base><![CDATA[Export Registration]]></base>
+    <translation>등록 정보 저장</translation>
+  </string>
+  <string id="/DLG/317/02">
+    <base><![CDATA[Select a &NDAS Device to export:]]></base>
+    <translation>저장할 NDAS 장치 선택:</translation>
+  </string>
+  <string id="/DLG/317/04">
+    <base><![CDATA[You need to complete the following information to export the registration data.]]></base>
+    <translation>등록 정보를 저장하려면 다음 정보를 입력하여야 합니다.</translation>
+  </string>
+  <string id="/DLG/317/05">
+    <base>Device &amp;ID:</base>
+    <translation>장치 ID(&amp;I):</translation>
+  </string>
+  <string id="/DLG/317/10">
+    <base><![CDATA[&Write Key:]]></base>
+    <translation>쓰기 키(&amp;W):</translation>
+  </string>
+  <string id="/DLG/317/12">
+    <base><![CDATA[Do not export the Write Key.]]></base>
+    <translation>쓰기 키를 저장하지 않기</translation>
+  </string>
+  <string id="/DLG/317/13">
+    <base><![CDATA[Des&cription:]]></base>
+    <translation>설명(&amp;C):</translation>
+  </string>
+  <string id="/DLG/317/15">
+    <base><![CDATA[&Save]]></base>
+    <translation>저장(&amp;S)</translation>
+  </string>
+  <string id="/DLG/317/16">
+    <base><![CDATA[Cancel]]></base>
+    <translation>취소 </translation>
+  </string>
+  <string id="/DLG/318">
+    <base><![CDATA[NDAS Device Management Error]]></base>
+    <translation>NDAS 장치 관리자 오류</translation>
+  </string>
+  <string id="/DLG/318/00">
+    <base><![CDATA[OK]]></base>
+    <translation>확인</translation>
+  </string>
+  <string id="/DLG/319">
+    <base><![CDATA[Advanced]]></base>
+    <translation>고급</translation>
+  </string>
+  <string id="/DLG/319/01">
+    <base><![CDATA[Advanced settings:]]></base>
+    <translation>고급 셋팅:</translation>
+  </string>
+  <string id="/DLG/322">
+    <base><![CDATA[Rename]]></base>
+    <translation>이름 변경</translation>
+  </string>
+  <string id="/DLG/322/01">
+    <base><![CDATA[OK]]></base>
+    <translation>확인</translation>
+  </string>
+  <string id="/DLG/322/02">
+    <base><![CDATA[Cancel]]></base>
+    <translation>취소 </translation>
+  </string>
+  <string id="/DLG/322/03">
+    <base><![CDATA[&New name:]]></base>
+    <translation>새 이름:</translation>
+  </string>
+  <string id="/DLG/2009">
+    <base><![CDATA[General]]></base>
+    <translation>일반</translation>
+  </string>
+  <string id="/DLG/2009/00">
+    <base><![CDATA[User Interface]]></base>
+    <translation>사용자 인터페이스 </translation>
+  </string>
+  <string id="/DLG/2009/01">
+    <base><![CDATA[Display menus and dialogs in the following language:]]></base>
+    <translation>다음 언어로 메뉴와 대화창을 표시합니다.:</translation>
+  </string>
+  <string id="/DLG/2009/03">
+    <base><![CDATA[Alerts]]></base>
+    <translation>경고창</translation>
+  </string>
+  <string id="/DLG/2009/05">
+    <base><![CDATA[Display an alert when connection to an NDAS device is lost.]]></base>
+    <translation>NDAS 장치의 접속이 끊어지면 경고 출력</translation>
+  </string>
+  <string id="/DLG/2009/06">
+    <base><![CDATA[Display an alert when connection to an NDAS device is unstable.]]></base>
+    <translation>NDAS 장치의 접속이 불안정해지면 경고 출력</translation>
+  </string>
+  <string id="/DLG/2009/08">
+    <base><![CDATA[Auto Play Configuration]]></base>
+    <translation>자동 실행 설정</translation>
+  </string>
+  <string id="/DLG/2009/09">
+    <base><![CDATA[Disable Auto Play for all fixed hard drives.]]></base>
+    <translation>모든 고정 하드 디스크에 자동 실행을 하지 않기.</translation>
+  </string>
+  <string id="/DLG/4001">
+    <base><![CDATA[NDAS Device Available]]></base>
+    <translation>NDAS 장치 사용 가능</translation>
+  </string>
+  <string id="/DLG/4001/00">
+    <base><![CDATA[OK]]></base>
+    <translation>확인</translation>
+  </string>
+  <string id="/DLG/4001/01">
+    <base><![CDATA[Yes, I want to mount this device as Read/Write access mode.]]></base>
+    <translation>네, 이 장치를 읽기/쓰기 모드로 마운트 하겠습니다.</translation>
+  </string>
+  <string id="/DLG/4001/02">
+    <base><![CDATA[%1!s! is now available to mount.\r\nDo you want to mount the device to your system now?]]></base>
+    <translation>%1!s!을 마운트 할 수 있습니다.\r\n장치를 마운트 하시겠습니까?</translation>
+  </string>
+  <string id="/DLG/4001/03">
+    <base><![CDATA[Yes, I want to mount this device as Read-Only access mode.]]></base>
+    <translation>네, 이 장치를 읽기 전용 모드로 마운트 하겠습니다.</translation>
+  </string>
+  <string id="/DLG/4001/04">
+    <base><![CDATA[No, I don't want to mount this device now.]]></base>
+    <translation>아니요, 지금 이 장치를 마운트하지 않겠습니다.</translation>
+  </string>
+  <string id="/DLG/4002">
+    <base><![CDATA[Advanced]]></base>
+    <translation>고급</translation>
+  </string>
+  <string id="/DLG/4002/00">
+    <base><![CDATA[Deactivate NDAS device]]></base>
+    <translation>NDAS 장치 비활성화</translation>
+  </string>
+  <string id="/DLG/4002/02">
+    <base><![CDATA[Deactivation of the NDAS device will end communication between your system and the device. However, the device is still registered on your system. This allows the device to be activated without re-registration.]]></base>
+    <translation>NDAS 장치를 비활성화 하면 시스템과 NDAS 장치의 연결이 중단됩니다. 그러나 장치는 그대로 시스템에 등록되어 있으며 재등록 없이 활성화 할 수 있습니다.</translation>
+  </string>
+  <string id="/DLG/4002/03">
+    <base><![CDATA[&Deactivate]]></base>
+    <translation>비활성화(&amp;D)</translation>
+  </string>
+  <string id="/DLG/4002/04">
+    <base><![CDATA[Reset NDAS Device Connection]]></base>
+    <translation>NDAS 장치의 접속을 리셋</translation>
+  </string>
+  <string id="/DLG/4002/06">
+    <base><![CDATA[You can reset the connection to the NDAS device.]]></base>
+    <translation>NDAS 디바이스의 접속을 리셋할 수 있습니다.</translation>
+  </string>
+  <string id="/DLG/4002/07">
+    <base><![CDATA[&Reset]]></base>
+    <translation>리셋(&amp;R)</translation>
+  </string>
+  <string id="/DLG/4002/08">
+    <base><![CDATA[Export]]></base>
+    <translation>저장</translation>
+  </string>
+  <string id="/DLG/4002/10">
+    <base><![CDATA[You can save the registration to the file and import it from other computers.]]></base>
+    <translation>등록 정보를 파일로 저장하여 다른 컴퓨터에서 등록할 수 있습니다.</translation>
+  </string>
+  <string id="/DLG/4002/11">
+    <base><![CDATA[E&xport]]></base>
+    <translation>저장</translation>
+  </string>
+  <string id="/DLG/4003">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS 장치 관리자</translation>
+  </string>
+  <string id="/DLG/4003/00">
+    <base><![CDATA[&Close]]></base>
+    <translation>닫기(&amp;C)</translation>
+  </string>
+  <string id="/DLG/4003/01">
+    <base><![CDATA[Mounting the requested NDAS device, please wait...]]></base>
+    <translation>요청한 NDAS 장치를 마운트하고 있읍니다. 기다려 주십시오....</translation>
+  </string>
+  <string id="/DLG/4004">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS 장치 관리자</translation>
+  </string>
+  <string id="/DLG/4004/01">
+    <base><![CDATA[Dismounting the requested NDAS device, please wait...]]></base>
+    <translation>해당 NDAS 장치를 해제하고 있습니다. 기다려 주십시오...</translation>
+  </string>
+  <string id="/DLG/4004/03">
+    <base><![CDATA[&Retry]]></base>
+    <translation>재시도(&amp;R)</translation>
+  </string>
+  <string id="/DLG/4004/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>취소 </translation>
+  </string>
+  <string id="/DLG/4008">
+    <base><![CDATA[Import Registration]]></base>
+    <translation>등록정보 읽기</translation>
+  </string>
+  <string id="/DLG/4008/02">
+    <base><![CDATA[Select &NDAS Devices to register:]]></base>
+    <translation>등록할 NDAS장치 선택:</translation>
+  </string>
+  <string id="/DLG/4008/04">
+    <base><![CDATA[Des&cription:]]></base>
+    <translation>설명(&amp;C):</translation>
+  </string>
+  <string id="/DLG/4008/06">
+    <base><![CDATA[&Register]]></base>
+    <translation>등록(&amp;R)</translation>
+  </string>
+  <string id="/DLG/4008/07">
+    <base><![CDATA[Close]]></base>
+    <translation>닫기</translation>
+  </string>
+  <string id="/DLG/4009">
+    <base><![CDATA[NDAS Device Management]]></base>
+    <translation>NDAS 장치 관리자</translation>
+  </string>
+  <string id="/DLG/4009/01">
+    <base><![CDATA[Dismounting NDAS devices, please wait...]]></base>
+    <translation>NDAS 장치를 마운트 해제하는 중입니다. 기다려 주십시오...</translation>
+  </string>
+  <string id="/DLG/4009/03">
+    <base><![CDATA[&Retry]]></base>
+    <translation>재시도(&amp;R)</translation>
+  </string>
+  <string id="/DLG/4009/04">
+    <base><![CDATA[Cancel]]></base>
+    <translation>취소 </translation>
+  </string>
+  <string id="/MNU/2013/00/01">
+    <base><![CDATA[Register a &New Device...]]></base>
+    <translation>새로운 장치 등록.</translation>
+  </string>
+  <string id="/MNU/2013/00/02">
+    <base><![CDATA[Dismo&unt All]]></base>
+    <translation>모두 마운트 해제( &amp;U)</translation>
+  </string>
+  <string id="/MNU/2013/00/03">
+    <base><![CDATA[&Refresh Status]]></base>
+    <translation>새로 고침(&amp;R)</translation>
+  </string>
+  <string id="/MNU/2013/00/05">
+    <base><![CDATA[&About NDAS Software...]]></base>
+    <translation>&amp;NDAS 소프트웨어의 정보</translation>
+  </string>
+  <string id="/MNU/2013/00/06">
+    <base><![CDATA[&Options...]]></base>
+    <translation>옵션(&amp;O)</translation>
+  </string>
+  <string id="/MNU/2013/00/08">
+    <base><![CDATA[E&xit]]></base>
+    <translation>종료(&amp;X)</translation>
+  </string>
+</localization>

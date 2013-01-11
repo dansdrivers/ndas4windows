@@ -1,0 +1,100 @@
+;
+; Copyright (C) 2006-2007 XIMETA, Inc. All rights reserved.
+;
+[Version]
+Signature   = "$Windows NT$"
+Class       = "ActivityMonitor" ;This is determined by the work this filter driver does
+Provider    = %PROVIDER%
+DriverVer   = 10/09/2001,1.0.0.0
+CatalogFile = ndasfs.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+NdasFs.DriverFiles = 12      ;%windir%\system32\drivers
+NdasFs.UserFiles = 10,FltMgr ;%windir%\FltMgr
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc = %NdasFsServiceDesc%
+; CopyFiles = NdasFs.DriverFiles, NdasFs.UserFiles
+CopyFiles = NdasFs.DriverFiles
+
+[DefaultInstall.Services]
+AddService = %NdasFsServiceName%,,NdasFs.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+; DelFiles = NdasFs.DriverFiles, NdasFs.UserFiles
+DelFiles = NdasFs.DriverFiles
+ 
+[DefaultUninstall.Services]
+DelService = NdasFs,0x200      ;Ensure service is stopped before deleting
+
+;
+; Services Section
+;
+
+[NdasFs.Service]
+DisplayName      = %NdasFsServiceName%
+Description      = %NdasFsServiceDesc%
+ServiceBinary    = %12%\ndasfs.sys     ;%windir%\system32\drivers\ndasfs.sys
+ServiceType      = 2                    ;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 0                    ;SERVICE_DEMAND_START
+ErrorControl     = 1                    ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = "FSFilter Activity Monitor"
+AddReg           = NdasFs.AddRegistry
+Dependencies     = FltMgr
+
+;
+; Registry Modifications
+;
+
+[NdasFs.AddRegistry]
+HKR,%RegInstancesSubkeyName%,%RegDefaultInstanceValueName%,0x00000000,%DefaultInstance%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegAltitudeValueName%,0x00000000,%Instance1.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance1.Name%,%RegFlagsValueName%,0x00010001,%Instance1.Flags%
+HKR,%RegInstancesSubkeyName%"\"%Instance2.Name%,%RegAltitudeValueName%,0x00000000,%Instance2.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance2.Name%,%RegFlagsValueName%,0x00010001,%Instance2.Flags%
+HKR,%RegInstancesSubkeyName%"\"%Instance3.Name%,%RegAltitudeValueName%,0x00000000,%Instance3.Altitude%
+HKR,%RegInstancesSubkeyName%"\"%Instance3.Name%,%RegFlagsValueName%,0x00010001,%Instance3.Flags%
+
+;
+; Copy Files
+;
+
+[NdasFs.DriverFiles]
+ndasfs.sys
+
+[NdasFs.UserFiles]
+ndasfs.exe
+
+;;
+;; String Section
+;;
+
+[Strings]
+PROVIDER                    = "XIMETA, Inc."
+NdasFsServiceDesc           = "NdasFs mini-filter driver"
+NdasFsServiceName           = "ndasfs"
+RegInstancesSubkeyName      = "Instances"
+RegDefaultInstanceValueName = "DefaultInstance"
+RegAltitudeValueName        = "Altitude"
+RegFlagsValueName           = "Flags"
+
+;Instances specific information.
+DefaultInstance    = "NdasFs - Top Instance"
+Instance1.Name     = "NdasFs - Middle Instance"
+Instance1.Altitude = "370000"
+Instance1.Flags    = 0x1 ; Suppress automatic attachments
+Instance2.Name     = "NdasFs - Bottom Instance"
+Instance2.Altitude = "365000"
+Instance2.Flags    = 0x1 ; Suppress automatic attachments
+Instance3.Name     = "NdasFs - Top Instance"
+Instance3.Altitude = "385000"
+Instance3.Flags    = 0x0 ; Suppress automatic attachments

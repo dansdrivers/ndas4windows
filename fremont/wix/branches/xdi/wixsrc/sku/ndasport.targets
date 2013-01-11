@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!-- MSI Properties -->
+	<PropertyGroup>
+		<ProductCode></ProductCode>
+		<ProductVersion Condition="'$(ProductVersion)'==''">3.30.1601</ProductVersion>
+		<ProductDisplayVersion Condition="'$(ProductDisplayVersion)'==''">$(ProductVersion)</ProductDisplayVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!-- default SKU is NDASPORT (others: NDASSCSI) -->
+		<SKU Condition="'$(SKU)'==''">NDASPORT</SKU>
+
+		<WixSrcBaseDir>..\..\</WixSrcBaseDir>
+		<WixProjectRoot>$(WixSrcBaseDir)..\</WixProjectRoot>
+		<WixToolPath>$(WixProjectRoot)bin\wix-2.0.4820.0</WixToolPath>
+		<OutputName Condition="'$(OutputName)'==''">ndas</OutputName>
+		<OutputType>package</OutputType>
+		<ToolPath>$(WixToolPath)</ToolPath>
+
+		<!-- normalize platform strings: i386, amd64, ia64 -->
+		<Platform Condition=" '$(Platform)' == '' ">i386</Platform>
+		<Platform Condition=" '$(Platform)' == 'x86' ">i386</Platform>
+		<Platform Condition=" '$(Platform)' == 'x64' ">amd64</Platform>
+
+		<!-- configuration -->
+		<Configuration Condition=" '$(Configuration)' == '' ">fre</Configuration>
+		<ConfigurationSuffix Condition=" '$(Configuration)'=='chk' ">d</ConfigurationSuffix>
+
+		<OutputPath Condition=" '$(OutputPath)' == '' ">obj$(ConfigurationSuffix)\bin\$(Platform)\</OutputPath>
+		<IntermediateOutputPath Condition=" '$(IntermediateOutputPath)' == '' ">obj$(ConfigurationSuffix)\$(Platform)\</IntermediateOutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(DontUsePlatformSuffix)'==''">
+		<OutputName Condition="'$(Platform)'=='i386'">$(OutputName)_x86</OutputName>
+		<OutputName Condition="'$(Platform)'=='amd64'">$(OutputName)_x64</OutputName>
+		<OutputName Condition="'$(Configuration)'=='chk'">$(OutputName)_chk</OutputName>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<BinPubConfig Condition=" '$(BinPubConfig)' == '' ">$(Configuration)</BinPubConfig>
+		<SetupFileSource Condition="'$(SetupFileSource)'==''">$(WixProjectRoot)..\publish\$(Configuration)\$(Platform)\</SetupFileSource>
+		<CustomActionDllPath Condition="'$(CustomActionDllPath)'==''">$(SetupFileSource)setup</CustomActionDllPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DefineConstants Condition="'$(Platform)'=='amd64'">Win64Build=1</DefineConstants>
+		<DefineConstants>$(DefineConstants);NdasMsiVersion=$(ProductVersion)</DefineConstants>
+		<DefineConstants>$(DefineConstants);NdasMsiDisplayVersion=$(ProductDisplayVersion)</DefineConstants>
+		<DefineConstants>$(DefineConstants);ExternalMergeModulePath=$(WixSrcBaseDir)..\supplements\msm</DefineConstants>
+		<DefineConstants>$(DefineConstants);BinPubConfig=$(BinPubConfig)</DefineConstants>
+		<DefineConstants Condition="'$(SKU)'=='NDASSCSI'">$(DefineConstants);SKU.NDASSCSI;SKU.LFSFILT</DefineConstants>
+		<DefineConstants Condition="'$(SKU)'=='NDASPORT'">$(DefineConstants);SKU.NDASPORT;SKU.LFSFILT</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupDataDir.CustomActionDll=$(CustomActionDllPath)</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupDataDir.Ibd=$(WixSrcBaseDir)ibd</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupDataDir.Icon=$(WixSrcBaseDir)ibd</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupDataDir.EULA=$(WixSrcBaseDir)eula</DefineConstants>
+		<DefineConstants>$(DefineConstants);SetupFileSource=$(SetupFileSource)</DefineConstants>
+
+		<DefineConstants Condition="'$(Configuration)'=='chk'">$(DefineConstants);ProductNameTag= (Debug)</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--<Compile Include="*.wxs" />-->
+		<Compile Include="$(WixSrcBaseDir)ndasmsi.wxs" />
+		<Compile Include="$(WixSrcBaseDir)xdi.wxs" />
+		<Compile Include="$(WixSrcBaseDir)directories.wxs" />
+		<Compile Include="$(WixSrcBaseDir)binary.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)lfsfilt.wxs" />
+		<Compile Include="$(WixSrcBaseDir)lpx.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasapcm.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasapcm_ps.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasbind.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndascmd.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndascomm.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasfs.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasiomg.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasmgmt.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasmsg.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasnif.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasop.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasscsi.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndassvc.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasuser.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasvol.wxs" />
+		<Compile Include="$(WixSrcBaseDir)ndasmisc.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)ndasbus.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)xixfs.wxs" />
+
+		<Compile Include="$(WixSrcBaseDir)ui\*.wxs" />
+		<LocalizationFile Include="$(WixSrcBaseDir)*.wxl" />
+		<LocalizationFile Include="$(WixSrcBaseDir)ui\*.wxl" />
+		<IncludeSearchPath Include="$(WixSrcBaseDir)." />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!--<WixLibrary Include="$(WixToolPath)\wixui.wixlib" />-->
+		<!--<LocalizedStringFile Include="$(WixToolPath)\WixUI_en-US.wxl" />-->
+	</ItemGroup>
+
+	<Import Project="..\..\bin\msbuild\wix2.targets" />
+
+	<Target Name="Rebuild" DependsOnTargets="Clean;Build">
+		<Copy SourceFiles="@(LightOutputFile)" 
+					DestinationFolder="$(MsiPublishFolder)" 
+					Condition="'$(MsiPublishFolder)'!=''" />		
+	</Target>
+
+</Project>

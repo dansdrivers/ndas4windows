@@ -1,0 +1,49 @@
+
+Version Management for Driver Files
+
+Sep. 12, 2004 Chesong Lee <cslee@ximeta.com>
+
+Each driver's versions are managed indivisually, apart from the
+product version. Product name and version resource fields are excluded
+from the driver files. This separation is made because of the driver
+signing. Driver signing, required by WHQL (or HCL) from Microsoft,
+does not make it possible to change the file's contents and any
+changes made to driver files or inf files, will incur resubmission to
+the HCL. This will cause the release delay, even for the slight
+changes to other components, which in turn causes an increment to the
+product version. 
+
+To be free from the product version change, we introduced separate
+driver version from the product one.
+
+However, it is not easy to maintain the separate version of the
+driver. Slight changes in the driver's source code and its dependent
+libraries should increment the version, which we should make it
+automatic as it is so difficult to track any changes to each dependent
+components for the developers.
+
+The version is composed of the following:
+
+Major.Minor.Build.Private
+
+The Major and Minor version will be maintained manually. Major and
+Minor versions are notational and we should maintain those not to
+much biased from the product version.
+
+Build.Private will be maintained automatically. Any changes to the
+driver itself and its dependent library source codes will increment
+the Build number from the build machine.
+
+The tracking for the changes will be done at the binary level.
+Not the source code level, using MD5 hash to the binary file.
+It is too difficult to track the source codes and the actual output
+binary file is the only way to track changes.
+
+Each drivers keep its current build number and its MD5 hash in the
+file ({outputname}.md5). When the actual build occurs the build
+machines build the driver file and calculate the MD5 hash of the file
+against the {outputname}.md5}. If those are different the build
+machine will increase the build number in {outputname}.vrc and rebuild
+the driver, and commit the changes of vrc file to the source code
+repository. 
+

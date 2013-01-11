@@ -1,0 +1,47 @@
+[
+	Dynamic, Provider("WMIProv"),
+	WMI,
+	Description("NDAS Port Driver Information"),
+	guid("{96376E43-4437-447d-A2B0-FCA99E35556C}"),
+	locale("MS\\0x409")
+]
+class NdasPortInformation
+{
+    [key, read]
+     string InstanceName;
+    [read] boolean Active;
+
+    [WmiDataId(1),
+     read,
+     Description("Number of errors that occurred on this device")]
+    uint32   ErrorCount;
+
+    [WmiDataId(2),
+     read,
+     write,
+     Description("The DebugPrintLevel property indicates the debug output level of NDAS Port device.")]
+    uint32 DebugPrintLevel;
+
+};
+
+[
+	Dynamic, 
+	Provider("WMIProv"),
+	WMI,
+	Description("NDAS Port Driver Event"),
+	guid("{0C3B8098-9FF8-40dd-8EB0-C8A38CF83B46}"),
+	locale("MS\\0x409")
+]
+
+class NdasPort_Event : WMIEvent
+{
+	[key, read]
+	string InstanceName;
+	
+	[read]
+	boolean Active;
+	
+	[WmiDataId(1), read] uint32 EventInfo;
+};
+
+

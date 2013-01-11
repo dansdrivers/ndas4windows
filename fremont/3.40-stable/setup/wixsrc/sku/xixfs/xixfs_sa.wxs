@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+
+	<Product Id="470BFDC7-899E-4E0A-865C-81AD231D6BA4" UpgradeCode="B01E12F9-542B-4FC4-8BF2-98C881F2624B"
+					 Name="$(loc.ProductName)" Version="$(var.TargetVersion)" 
+					 Manufacturer="$(loc.Manufacturer)"
+					 Language="$(var.TargetLanguage)"
+					 Codepage="$(var.TargetCodepage)">
+
+		<Package Id="????????-????-????-????-????????????"
+				 Compressed="$(var.CompressedPackage)"
+				 Keywords="$(loc.SIS_KEYWORDS)"
+				 Description="$(loc.PackageDescription)$(var.ProductNameSuffix)"
+				 Comments="$(loc.SIS_COMMENTS)"
+				 Manufacturer="$(loc.SIS_MANUFACTURER)"
+				 InstallerVersion="200"
+				 Platforms="$(var.SISPlatforms)"
+				 Languages="$(var.TargetLanguage)"
+				 SummaryCodepage="$(var.SISCodepage)"
+				 ShortNames="$(var.ShortNames)"
+				 InstallPrivileges="elevated" />
+
+		<!-- Cabinet Definitions -->
+
+		<Media Cabinet="ndas.cab" EmbedCab="yes" Id="$(var.media.ndas)" />
+		<Media Cabinet="ndasapp.cab" EmbedCab="yes" Id="$(var.media.ndasapp)" />
+
+		<Media Cabinet="xixfs.cab" EmbedCab="yes" Id="$(var.media.xixfs)" />
+		<Media Cabinet="uxixfs.cab" EmbedCab="yes" Id="$(var.media.uxixfs)" />
+
+		<?ifdef Win32Build?>
+		<Media Cabinet="msvcrt.cab" EmbedCab="yes" Id="$(var.media.msvcrt)" />
+		<Media Cabinet="msvcp60.cab" EmbedCab="yes" Id="$(var.media.msvcp60)" />
+		<?endif?>
+
+		<!-- Prevent installation on x64 systems. x64 flag will be enabled later -->
+		<?ifndef Win64Build?>
+		<Condition Message="$(loc.COND_X64_IS_NOT_SUPPORTED)">Not VersionNT64</Condition>
+		<?endif?>
+		<Condition Message="$(loc.COND_REQUIRE_WIN2000)">VersionNT &gt;= 500</Condition>
+		<Condition Message="$(loc.COND_NOT_PRIVILEGED)">Privileged</Condition>
+		<!-- prevent the use of Language Neutral version of the package -->
+		<Condition Message="$(loc.Condition.NeutralUsed)"><![CDATA[ProductLanguage <> 0]]></Condition>
+
+		<Feature Id="NdasSoftware" Title="NDAS Software" Level="1" Display="expand">
+
+			<?ifdef Win32Build?>
+			<!--<MergeRef Id="MSVCRT.51D569E0_8A28_11D2_B962_006097C4DE24" />-->
+			<!--<MergeRef Id="MSVCP60.51D569E3_8A28_11D2_B962_006097C4DE24" />-->
+			<?endif?>
+
+			<Feature Id="NdasDeviceDrivers" Level="1">
+
+				<?ifdef Include.XIXFS?>
+				<Feature Id="XixFileSystem" Level="1" Title="XIX File System"
+						 Description="XIX File System provides file-system level storage sharing capability.">
+					<ComponentRef Id="xixfs" />
+				</Feature>
+				<?endif?>
+
+				<?ifdef Include.XIXFSFORMATTER?>
+				<Feature Id="XixFileSystemFormatter" Level="1" Title="XIX File System Formatter"
+						 Description="Format a disk with XIX file system">
+					<ComponentRef Id="uxixfs" />
+					<?ifdef Include.XIXFSFORMATTER_EXTRA_DEPS?>
+					<ComponentRef Id="uxixfs_deps" />
+					<ComponentRef Id="ndasuser.dll" />
+					<ComponentRef Id="ndasvol.dll" />
+					<?endif?>
+				</Feature>
+				<?endif?>
+			</Feature>
+
+		</Feature>
+
+		<!-- Windows Installer Built-in Properties -->
+		<Property Id="ALLUSERS">1</Property>
+		<Property Id="INSTALLLEVEL">100</Property>
+		<Property Id="DiskPrompt">1</Property>
+		<Property Id="ProductID">none</Property>
+		<Property Id="NOCOMPANYNAME">1</Property>
+		<Property Id="NOUSERNAME">1</Property>
+
+		<!-- APR Properties -->
+		<Property Id="ARPURLUPDATEINFO">$(loc.ARPURLUPDATEINFO)</Property>
+		<Property Id="ARPHELPLINK">$(loc.ARPHELPLINK)</Property>
+		<!-- <Property Id="ARPNOMODIFY"><![CDATA[1]]></Property> -->
+		<!-- <Property Id="ARPNOREPAIR"><![CDATA[1]]></Property> -->
+		<Property Id="ARPURLINFOABOUT">$(loc.ARPURLINFOABOUT)</Property>
+		<Property Id="ARPPRODUCTICON">$(var.iconid.setup)</Property>
+		<Property Id="ARPCONTACT">$(loc.ARPCONTACT)</Property>
+		<Property Id="ARPCOMMENTS">$(loc.ARPCOMMENTS)</Property>
+		<Property Id="ReinstallModeText"><![CDATA[aums]]></Property>
+
+		<!-- Fragment References -->
+		<FragmentRef Id="xdi" />
+
+		<!-- Merge Modules -->
+		<!--<?ifdef Win32Build?>-->
+		<!--<DirectoryRef Id="TARGETDIR">-->
+			<!--<Merge Id="MSVCRT.51D569E0_8A28_11D2_B962_006097C4DE24" Language="0" DiskId="$(var.media.msvcrt)" SourceFile="$(var.ExternalMergeModulePath)\MSVCRT.MSM" />-->
+			<!--<Merge Id="MSVCP60.51D569E3_8A28_11D2_B962_006097C4DE24" Language="0" DiskId="$(var.media.msvcp60)" SourceFile="$(var.ExternalMergeModulePath)\MSVCP60.MSM" />-->
+		<!--</DirectoryRef>-->
+		<!--<?endif?>-->
+
+		<AdvertiseExecuteSequence>
+			<!-- Nothing special in Advertise Execute Sequence -->
+		</AdvertiseExecuteSequence>
+
+		<AdminExecuteSequence>
+			<!-- Nothing special in Admin Execute Sequence -->
+		</AdminExecuteSequence>
+
+		<InstallExecuteSequence>
+			<LaunchConditions After="AppSearch"><![CDATA[Not Installed]]></LaunchConditions>
+			<RemoveExistingProducts After="InstallValidate" />
+			<AllocateRegistrySpace />
+		</InstallExecuteSequence>
+
+		<UIRef Id="WixUI_Minimal" />
+
+	</Product>
+
+</Wix>

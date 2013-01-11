@@ -1,0 +1,2 @@
+DIRS= ndasdi ndmsica ndupdate ndasetup
+OPTIONAL_DIRS=.

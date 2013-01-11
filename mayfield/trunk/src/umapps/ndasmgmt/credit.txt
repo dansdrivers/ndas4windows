@@ -1,0 +1,3 @@
+
+Portions Copyright (c) 2001 Bjarke Viksoe
+Portions Copyright (C) 2002 SoftGee LLC. All rights reserved

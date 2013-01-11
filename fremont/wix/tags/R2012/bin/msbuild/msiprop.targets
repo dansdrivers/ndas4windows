@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>		
+    <!-- AssemblyFile path is relative to ndaswix.targets -->
+    <NdasWixTaskDir Condition="'$(NdasWixTaskDir)'==''">.</NdasWixTaskDir>
+    <NdasWixProductCodeFile Condition="'$(NdasWixProductCodeFile)'==''">$(WixProjectRoot)\ndaswix.xml</NdasWixProductCodeFile>
+    <ProductVersionKeyFile>$(SetupDataDir)\ndassvc.exe</ProductVersionKeyFile>
+  </PropertyGroup>
+
+  <UsingTask TaskName="XIMETA.FileVersionInfo" AssemblyFile="$(NdasWixTaskDir)\XIMETA.Tasks.dll" />
+  <UsingTask TaskName="XIMETA.SetupUtil.GetProductCode" AssemblyFile="$(NdasWixTaskDir)\XIMETA.Tasks.dll" />
+
+  <Target Name="NdasWix_CheckPrecondition">
+    <Error Condition="'$(WixProjectRoot)'==''" Text="WixProjectRoot property is not set!" />
+  </Target>
+
+  <Target Name="GetProductVersion" Condition="'$(MsiProductVersion)'==''">
+    <XIMETA.FileVersionInfo TargetFileName="$(ProductVersionKeyFile)">
+      <Output TaskParameter="ProductMajorPart" PropertyName="PVMajor" />
+      <Output TaskParameter="ProductMinorPart" PropertyName="PVMinor" />
+      <Output TaskParameter="ProductBuildPart" PropertyName="PVBuild" />
+    </XIMETA.FileVersionInfo>
+    <CreateProperty Value="$(PVMajor).$(PVMinor).$(PVBuild)">
+      <Output TaskParameter="Value" PropertyName="MsiProductVersion" />
+    </CreateProperty>
+    <CreateProperty Value="$(PVMajor)$(PVMinor)">
+      <Output TaskParameter="Value" PropertyName="MsiProductVersionValue" />
+    </CreateProperty>
+    <Error Condition="'$(MsiProductVersion)'==''" Text="Cannot read ProductVersion. Set MsiProductVersion property." />
+    <Message Text="ProductVersion=$(MsiProductVersion)" />
+  </Target>
+
+  <Target Name="GetProductCode" Condition="'$(MsiProductCode)'==''">
+    <XIMETA.SetupUtil.GetProductCode ProductVersion="$(MsiProductVersion)" ConfigFile="$(NdasWixProductCodeFile)" Condition="'$(MsiProductCode)'==''">
+      <Output TaskParameter="ProductCode" PropertyName="MsiProductCode"/>
+    </XIMETA.SetupUtil.GetProductCode>
+    <Message Text="ProductCode=$(MsiProductCode)" />
+  </Target>
+
+</Project>

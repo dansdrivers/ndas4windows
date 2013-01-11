@@ -1,0 +1,831 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""windows.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WATERMARK256        BITMAP                  "res\\water256.bmp"
+IDB_BANNER256           BITMAP                  "res\\banner256.bmp"
+IDB_PROPTREE            BITMAP                  "res\\proptree.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TASKBAR MENU 
+BEGIN
+    POPUP "{TaskBar}"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "Registar um &novo dispositivo...",   IDR_REGISTER_DEVICE
+        MENUITEM "Desinstalar &Tudo",                IDR_UNMOUNT_ALL
+        MENUITEM "&Estado de actualização",             IDR_REFRESH_STATUS
+        MENUITEM SEPARATOR
+        MENUITEM "&Acerca de...",                   ID_APP_ABOUT
+        MENUITEM "&Opções...",                 IDR_APP_OPTION
+        MENUITEM SEPARATOR
+        MENUITEM "&Sair",                       ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CD_DRIVE            ICON                    "res\\cddrive.ico"
+IDR_MAINFRAME           ICON                    "res\\ndasmgmt.ico"
+IDR_TASKBAR             ICON                    "res\\taskbar.ico"
+IDI_DISK_DRIVE          ICON                    "res\\diskdrive.ico"
+IDI_DVD_DRIVE           ICON                    "res\\dvddrive.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 200
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Acerca de"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,207,178,50,14
+    LTEXT           "Software do NDAS",IDC_PRODNAME,7,48,251,14
+    LTEXT           "Versão %1!s!",IDC_PRODVER,7,60,251,8
+    LTEXT           "http://www.ximeta.com",IDC_LINK,7,73,251,8,WS_TABSTOP
+    LTEXT           "Copyright \251 2002-2004 XIMETA, Inc.\r\nTodos os direitos reservados.",
+                    IDC_STATIC,7,85,251,20
+    GROUPBOX        "Componentes",IDC_STATIC,7,106,251,67
+    CONTROL         "",IDC_COMPVER,"SysListView32",LVS_REPORT |
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,119,236,47
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,43,265,1
+    PUSHBUTTON      "Verificar se existem &actualizações",IDC_CHECK_UPDATE,8,178,80,14
+END
+
+IDR_OPTION_GENERAL DIALOGEX 0, 0, 293, 191
+STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Generalidades"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "Interface de utilizador",IDC_STATIC,7,7,279,43
+    LTEXT           "Apresenta menus e caixas de diálogo no seguinte idioma:",
+                    IDC_STATIC,47,18,221,8
+    COMBOBOX        IDC_UILANG,47,31,224,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Alertas",IDC_STATIC,7,53,279,51
+    ICON            "",IDC_STATIC,15,67,20,20
+    CONTROL         "Apresenta um alerta quando a ligação a um dispositivo NDAS é perdida.",
+                    IDC_ALERT_DISCONNECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,47,66,231,10
+    CONTROL         "Apresenta um alerta quando a ligação a um dispositivo NDAS é instável.",
+                    IDC_ALERT_RECONNECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,47,80,231,10
+END
+
+IDD_REGISTER_DEVICE DIALOGEX 0, 0, 212, 157
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Registar um novo dispositivo NDAS"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DEV_NAME,17,23,179,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_1,17,63,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_2,63,63,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_3,109,63,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_4,155,63,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_KEY,17,95,40,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "Active este dispositivo após o registo",
+                    IDC_ENABLE_DEVICE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    14,122,183,10
+    PUSHBUTTON      "&Registar",IDC_REGISTER,100,136,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "Cancelar",IDCANCEL,155,136,50,14
+    LTEXT           "Chave de escrita",IDC_STATIC,19,82,107,8
+    LTEXT           "A chave de escrita deve ser introduzida se desejar utilizar o dispositivo como modo de Leitura/Escrita",
+                    IDC_STATIC,64,94,132,17
+    GROUPBOX        "Nome do Dispositivo NDAS",IDC_STATIC,7,7,197,40
+    GROUPBOX        "ID do Dispositivo NDAS",IDC_STATIC,7,50,198,67
+END
+
+IDD_DEVPROP_GENERAL DIALOGEX 0, 0, 256, 227
+STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Generalidades"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Nome do dispositivo:",IDC_STATIC,7,10,54,8
+    EDITTEXT        IDC_DEVICE_NAME,66,7,128,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Mudar o nome",IDC_RENAME,197,6,50,14
+    LTEXT           "ID do dispositivo:",IDC_STATIC,7,27,54,8
+    EDITTEXT        IDC_DEVICE_ID,66,25,183,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Chave de escrita:",IDC_STATIC,7,46,54,8
+    EDITTEXT        IDC_DEVICE_WRITE_KEY,66,43,128,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&Adicionar",IDC_ADD_WRITE_KEY,197,43,50,14
+    LTEXT           "Estado:",IDC_STATIC,7,64,54,8
+    EDITTEXT        IDC_DEVICE_STATUS,66,61,183,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    ICON            "",IDC_UNITDEVICE_TYPE_ICON,18,97,20,20
+    LTEXT           "Estado",IDC_STATIC,64,94,22,8
+    EDITTEXT        IDC_UNITDEVICE_STATUS,144,91,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Capacidade",IDC_STATIC,64,111,29,8
+    EDITTEXT        IDC_UNITDEVICE_CAPACITY,144,108,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Acesso Só de Leitura",IDC_STATIC,64,128,59,8
+    EDITTEXT        IDC_UNITDEVICE_RO_HOSTS,144,125,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Modo de Leitura/Escrita",IDC_STATIC,64,145,62,8
+    EDITTEXT        IDC_UNITDEVICE_RW_HOSTS,144,142,96,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "{Unit Device Info Placeholder}",IDC_UNITDEVICE_TYPE,7,
+                    82,242,138
+    LTEXT           "Este dispositivo da unidade é uma parte do dispositivo lógico:",
+                    IDC_STATIC,15,159,224,8
+    CONTROL         "",IDC_LOGDEV_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | WS_BORDER | WS_TABSTOP,15,169,225,46,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DEVPROP_HW DIALOGEX 0, 0, 256, 227
+STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hardware"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Informação do hardware acerca do dispositivo NDAS",IDC_STATIC,
+                    7,7,242,8
+    LISTBOX         IDC_PROPLIST,7,24,242,196,LBS_OWNERDRAWVARIABLE | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_RENAME DIALOGEX 0, 0, 243, 48
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Mudar o nome"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DEVICE_NAME,53,7,183,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,130,27,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,186,27,50,14
+    LTEXT           "&Novo nome:",IDC_STATIC,7,10,37,8
+END
+
+IDD_DEVREG_WIZARD_INTRO DIALOGEX 0, 0, 317, 186
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Caixa de diálogo"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Não volte a utilizar este assistente para registar.",
+                    IDC_DONT_SHOW_REGWIZ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,167,195,10
+    LTEXT           "Bem-vindo ao Assistente de Registo do Dispositivo NDAS",
+                    IDC_BIG_BOLD_TITLE,115,8,195,24
+    LTEXT           "{intro1}",IDC_INTRO_1,115,40,195,119
+END
+
+IDD_DEVREG_WIZARD_COMPLETE DIALOGEX 0, 0, 317, 186
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Caixa de diálogo"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "A terminar o Assistente de Registo do Dispositivo NDAS",
+                    IDC_BIG_BOLD_TITLE,115,8,195,24
+    LTEXT           "{Complete Message Placeholder}",IDC_COMPLETE_MESSAGE,
+                    115,46,195,85
+END
+
+IDD_DEVREG_WIZARD_DEVICE_ID DIALOGEX 0, 0, 317, 143
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Caixa de diálogo"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Para registar o dispositivo NDAS, introduza a ID. A ID e a chave de escrita encontram-se na parte inferior do dispositivo NDAS.\r\n\r\nA ID do dispositivo NDAS é composta por 20 caracteres.",
+                    IDC_STATIC,21,1,275,35
+    LTEXT           "Introduza a ID do dispositivo NDAS.",IDC_STATIC,21,38,275,
+                    8
+    EDITTEXT        IDC_DEV_ID_1,21,51,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_2,65,51,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_3,109,51,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEV_ID_4,153,51,40,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "A chave de escrita é necessária para o modo de Leitura/Escrita. É composta por 5 caracteres.",
+                    IDC_STATIC,21,73,275,11
+    EDITTEXT        IDC_DEV_KEY,21,100,40,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Clique em Seguinte quando terminar.\r\nSe a ID do dispositivo NDAS e/ou a chave de escrita forem inválidas, o botão Seguinte não fica activado.",
+                    IDC_STATIC,21,123,275,18
+    LTEXT           "Introduza a chave de escrita. (Opcional)",IDC_STATIC,21,
+                    87,275,8
+END
+
+IDD_DEVREG_WIZARD_DEVICE_NAME DIALOGEX 0, 0, 317, 143
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Caixa de diálogo"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Escolha um nome para o dispositivo NDAS. Este nome será utilizado para identificar o dispositivo NDAS apenas no seu sistema.",
+                    -1,21,1,275,21
+    LTEXT           "O nome pode ter até 30 caracteres.",-1,21,30,275,
+                    21
+    LTEXT           "Introduza o nome.",-1,21,52,275,8
+    EDITTEXT        IDC_DEV_NAME,21,65,197,14,ES_AUTOHSCROLL
+    LTEXT           "Clique em Seguinte quando terminar.",-1,21,124,275,18
+END
+
+IDD_DEVREG_WIZARD_MOUNT DIALOGEX 0, 0, 317, 143
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Caixa de diálogo"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "{Status Message Placeholder}",IDC_MOUNT_STATUS,21,1,275,
+                    16
+    LTEXT           "Deseja instalar o dispositivo NDAS no seu sistema agora?",
+                    IDC_MOUNT_QUESTION,21,20,275,15
+    LTEXT           "Ao instalar o dispositivo NDAS, poderá aparecer uma mensagem de aviso de segurança. Deve clicar em ""Continuar"" para instalar o dispositivo NDAS com êxito. Caso contrário, este não será instalado.",
+                    IDC_MOUNT_WARNING,21,120,275,18
+    CONTROL         "Sim, desejo instalar este dispositivo NDAS como modo de Leitura/Escrita.",
+                    IDC_MOUNT_RW,"Button",BS_AUTORADIOBUTTON,21,33,275,12
+    CONTROL         "Sim, desejo instalar este dispositivo NDAS como modo Só de Leitura.",
+                    IDC_MOUNT_RO,"Button",BS_AUTORADIOBUTTON,21,45,275,12
+    CONTROL         "Não, não desejo instalar o dispositivo NDAS agora.",
+                    IDC_DONT_MOUNT,"Button",BS_AUTORADIOBUTTON,21,57,275,12
+END
+
+IDD_ADD_WRITE_KEY DIALOGEX 0, 0, 201, 93
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Introduza a chave de escrita"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_DEVICE_WRITE_KEY,66,43,48,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,90,72,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,144,72,50,14
+    EDITTEXT        IDC_DEVICE_NAME,66,7,128,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    EDITTEXT        IDC_DEVICE_ID,66,25,128,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    LTEXT           "Nome do dispositivo:",IDC_STATIC,7,10,54,8
+    LTEXT           "ID do dispositivo:",IDC_STATIC,7,28,54,8
+    LTEXT           "Chave de escrita:",IDC_STATIC,7,46,54,8
+END
+
+IDD_DEVPROP_LOGDEV DIALOGEX 0, 0, 284, 177
+STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "{Unit Device XX}"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Informação do dispositivo lógico",IDC_STATIC,39,109,85,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,83,151,180,1
+END
+
+IDD_WAIT DIALOGEX 0, 0, 251, 63
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "{Dialog}"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Fechar",IDCANCEL,194,42,50,14
+    LTEXT           "{Static}",IDC_WAIT_MESSAGE,36,7,208,31
+    ICON            IDR_MAINFRAME,IDC_WAIT_ICON,7,7,21,20
+END
+
+IDD_DEVPROP_HOSTINFO DIALOGEX 0, 0, 254, 227
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Anfitriões"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_HOST_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,34,240,186
+    LTEXT           "Os anfitriões que se seguem estão a utilizar este dispositivo NDAS.\r\nAlguma informação poderá não estar disponível.",
+                    IDC_STATIC,7,7,240,22
+END
+
+IDD_WORKING DIALOGEX 0, 0, 248, 65
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Gestão de dispositivo NDAS"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,137,44,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,191,44,50,14
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,12,21,20
+    LTEXT           "{Progress Message Placeholder}",IDC_PROGRESS_MESSAGE,46,
+                    7,195,24
+END
+
+IDD_ERROR DIALOGEX 0, 0, 304, 100
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Erro de Gestão do Dispositivo NDAS"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,247,79,50,14
+    LTEXT           "{Error Message Placeholder}",IDC_ERROR_MESSAGE,37,11,
+                    260,13
+    EDITTEXT        IDC_ERROR_DESCRIPTION,37,28,260,47,ES_MULTILINE | 
+                    ES_READONLY | NOT WS_BORDER
+    ICON            "",IDC_ERROR_ICON,7,11,21,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,38,24,260,1
+END
+
+IDD_OPTION_ADVANCED DIALOGEX 0, 0, 293, 191
+STYLE DS_SHELLFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Avançado"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_OPTION_TREE,"SysTreeView32",TVS_NOSCROLL | 
+                    WS_BORDER | WS_TABSTOP,7,21,279,163
+    LTEXT           "Definições avançadas:",IDC_STATIC,7,7,279,13
+END
+
+IDD_CONFIRM DIALOGEX 0, 0, 275, 83
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "{Dialog}"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Sim",IDYES,147,43,58,14
+    PUSHBUTTON      "&Não",IDNO,210,43,58,14
+    ICON            IDR_TASKBAR,IDC_CONFIRM_ICON,10,10,20,20
+    LTEXT           "{Confirmation message placeholder}",IDC_CONFIRM_MESSAGE,
+                    41,14,224,24
+    CONTROL         "Não desejo voltar a ver esta caixa de diálogo.",
+                    IDC_DONT_SHOW_AGAIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,67,163,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,63,275,1
+    CONTROL         "",IDC_HIDDEN,"Static",SS_BLACKFRAME,0,63,275,20
+END
+
+IDD_DEVICE_AVAIL DIALOGEX 0, 0, 289, 79
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dispositivo NDAS disponível"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,232,7,50,14
+    CONTROL         "Sim, desejo instalar este dispositivo NDAS como modo de Leitura/Escrita.",
+                    IDC_MOUNT_RW,"Button",BS_AUTORADIOBUTTON,7,28,275,12
+    LTEXT           "%1!s! está agora disponível para instalar.\r\nDeseja instalar o dispositivo no seu sistema agora?",
+                    IDC_MOUNT_QUESTION,7,7,218,21
+    CONTROL         "Sim, desejo instalar este dispositivo como modo de Só de Leitura.",
+                    IDC_MOUNT_RO,"Button",BS_AUTORADIOBUTTON,7,41,275,12
+    CONTROL         "Não, não desejo instalar o dispositivo agora.",
+                    IDC_DONT_MOUNT,"Button",BS_AUTORADIOBUTTON,7,55,275,12
+END
+
+IDD_DEVPROP_ADVANCED DIALOGEX 0, 0, 256, 227
+STYLE DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Avançado"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "A desactivação do dispositivo NDAS irá terminar a comunicação entre o seu sistema e o dispositivo. No entanto, o dispositivo mantém-se registado no sistema. Isto permite que este seja activado sem ter de ser novamente registado.",
+                    IDC_STATIC,43,16,198,45
+    PUSHBUTTON      "&Desactivar",IDC_DEACTIVATE_DEVICE,191,64,50,14
+    GROUPBOX        "Desactivar o dispositivo NDAS",IDC_STATIC,7,3,242,81
+    ICON            "",IDC_STATIC,15,17,20,20
+    GROUPBOX        "Restabelecer a ligação do dispositivo NDAS",IDC_STATIC,7,87,242,58
+    ICON            "",IDC_STATIC,15,100,21,20
+    LTEXT           "Pode restabelecer a ligação ao dispositivo NDAS.",
+                    IDC_STATIC,44,99,198,27
+    PUSHBUTTON      "&Restabelecer",IDC_RESET_DEVICE,192,125,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDR_OPTION_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_REGISTER_DEVICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_DEVPROP_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_DEVPROP_HW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_RENAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 41
+    END
+
+    IDD_DEVREG_WIZARD_COMPLETE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 8
+    END
+
+    IDD_DEVREG_WIZARD_DEVICE_ID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 21
+        VERTGUIDE, 296
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_DEVREG_WIZARD_DEVICE_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 21
+        VERTGUIDE, 296
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_DEVREG_WIZARD_MOUNT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        VERTGUIDE, 21
+        VERTGUIDE, 296
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_ADD_WRITE_KEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_DEVPROP_LOGDEV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_WAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DEVPROP_HOSTINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_WORKING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_OPTION_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+        HORZGUIDE, 20
+    END
+
+    IDD_CONFIRM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_DEVICE_AVAIL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_DEVPROP_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// IMAGE
+//
+
+IDB_ABOUT_HEADER        IMAGE                   "res\\aboutheader.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ndasmgmt"
+    IDR_NDD_MOUNT_RO        "Instalar (&Só de Leitura)"
+    IDR_NDD_MOUNT_RW        "Instalar (Leitura/&Escrita)"
+    IDR_NDD_UNMOUNT         "&Desinstalar"
+    IDR_OPTION_GENERAL      "Generalidades"
+    IDR_TASKBAR             "Gestão de dispositivo NDAS"
+    IDR_UNMOUNT_ALL         "Desinstalar &Tudo"
+    IDS_ABOUTDLG_HYPERLINK  "http://www.ximeta.com"
+    IDS_ACTIVATE_DEVICE     "&Activar"
+    IDS_ADD_WRITE_KEY       "&Adicionar"
+    IDS_ASK_SURRENDER_REQUEST_FMT	"O anfitrião está a pedir o acesso de escrita do ""%2!s!'s"".\r\nDeseja aceitar o pedido e desinstalar o dispositivo NDAS?"
+    IDS_BIG_BOLD_FONT_NAME  "Verdana"
+    IDS_BIG_BOLD_FONT_SIZE  "12"
+    IDS_BT_DISCONNECTED_INFO	"A ligação aos seguintes dispositivos NDAS foi perdida.\r\n%s"
+    IDS_BT_DISCONNECTED_INFO_TITLE "Dispositivo NDAS desligado"
+    IDS_BT_RECONNECTED_INFO "A ligação aos seguintes dispositivos NDAS foi restabelecida.\r\n%s"
+    IDS_BT_RECONNECTED_INFO_TITLE "Dispositivo NDAS religado"
+    IDS_BT_RECONNECTING_INFO	"As ligações aos seguintes dispositivos estão instáveis.\r\nO sistema está a efectuar novamente a ligação aos dispositivos...\r\n%s"
+    IDS_BT_RECONNECTING_INFO_TITLE "A religar ao dispositivo NDAS"
+    IDS_BT_EMERGENCY_INFO	"A ligação a um ou mais dispositivos NDAS foi perdida no sistema RAID recuperável. O RAID está agora a ser executado no modo de emergência...\r\n%s"
+    IDS_BT_EMERGENCY_INFO_TITLE "O dispositivo NDAS RAID está agora a ser executado no modo de emergência"
+    IDS_CONFIRM_DEACTIVATE_DEVICE	"Tem a certeza que deseja desactivar este dispositivo NDAS?\r\nDepois da desactivação deverá activar novamente este dispositivo a partir do menu"
+    IDS_CONFIRM_EXIT        "Tem a certeza que deseja sair da Gestão do Dispositivo NDAS?"
+    IDS_CONFIRM_RESET_DEVICE	"Tem a certeza que deseja restabelecer a ligação a este dispositivo NDAS?"
+    IDS_CONFIRM_UNMOUNT     "ATem a certeza que deseja desinstalar o dispositivo NDAS?\r\nA desmontagem pode falhar se algumas aplicações estiverem a aceder ao dispositivo NDAS."
+    IDS_CONFIRM_UNMOUNT_ALL "Tem a certeza que deseja desinstalar todos os dispositivos NDAS?\r\nA desmontagem pode falhar se algumas aplicações estiverem a aceder ao dispositivo NDAS."
+    IDS_CONFIRM_UNMOUNT_FMT "Tem a certeza que deseja desinstalar %1!s!\r\nA desmontagem pode falhar se algumas aplicações estiverem a aceder ao dispositivo NDAS."
+    IDS_CONFIRM_UNREGISTER  "Tem a certeza que deseja remover o %1!s!?"
+    IDS_CONFIRM_UNREGISTER_FMT	"Tem a certeza que deseja anular o registo de ""%1!s!""?"
+    IDS_DEVICE_PROP_TITLE   "Propriedades do %1!s!"
+    IDS_DEVMST_CONNECTED    "Ligado"
+    IDS_DEVMST_CONNECTED_MOUNTED_ANOTHER "Ligado *"
+    IDS_DEVMST_DEACTIVATED  "Desactivado"
+    IDS_DEVMST_DISCONNECTED "Desligado"
+    IDS_DEVMST_ERROR        "Erro"
+    IDS_DEVMST_MOUNTED_RO   "Só de Leitura"
+    IDS_DEVMST_MOUNTED_RW   "Leitura/Escrita"
+    IDS_DEVMST_UNKNOWN      "Desconhecido"
+    IDS_DEVPROP_CATEGORY_HARDWARE "Hardware"
+    IDS_DEVPROP_HW_MAX_LU_COUNT "LUs máx."
+    IDS_DEVPROP_HW_MAX_REQUEST_BLOCKS "Blocos de pedido máx."
+    IDS_DEVPROP_HW_MAX_TARGET_COUNT "Destinos máx."
+    IDS_DEVPROP_HW_SLOT_COUNT "Ranhuras"
+    IDS_DEVPROP_HW_TARGET_COUNT "Destinos"
+    IDS_DEVPROP_HW_VERSION  "Versão"
+    IDS_DEVPROP_UNITDEV_DEVICE_TYPE "Tipo de dispositivo"
+    IDS_DEVPROP_UNITDEV_FWREV "Rev. do firmware"
+    IDS_DEVPROP_UNITDEV_LBA_MODE "Modo LBA"
+    IDS_DEVPROP_UNITDEV_MODEL "Modelo"
+    IDS_DEVPROP_UNITDEV_SERIALNO "Número de série"
+    IDS_DEVPROP_UNITDEV_TITLE_FMT "Dispositivo %1!d!"
+    IDS_DEVPROP_UNITDEV_TRANSFER_MODE "Modo de transferência"
+    IDS_DEVWIZ_MOUNT_STATUS_NORMAL	"O registo foi efectuado com êxito e o dispositivo está agora pronto a ser utilizado."
+    IDS_DEVWIZ_MOUNT_STATUS_WAIT	"Aguarde enquanto está a ser verificado o estado do dispositivo NDAS..."
+    IDS_DISABLE_DEVICE      "&Desactivar"
+    IDS_DRZ_DEVICE_ID_HEADER_SUBTITLE "Introduza a ID do dispositivo NDAS para registar."
+    IDS_DRZ_DEVICE_ID_HEADER_TITLE "ID do Dispositivo NDAS"
+    IDS_DRZ_DEVICE_NAME_HEADER_SUBTITLE	"Especifique o nome para o dispositivo NDAS."
+    IDS_DRZ_DEVICE_NAME_HEADER_TITLE "Nome do Dispositivo NDAS"
+    IDS_DRZ_INTRO_1         "O assistente irá guiá-lo ao longo do registo do dispositivo NDAS. Antes de passar ao passo seguinte, faça o seguinte:\r\n\r\n- Ligue o dispositivo à rede.\r\n- Ligue o dispositivo NDAS.\r\n\r\nPara continuar, clique em ""Seguinte""."
+    IDS_DRZ_INTRO_TITLE     "Assistente Registar dispositivo NDAS"
+    IDS_DRZ_MOUNT_HEADER_SUBTITLE "Deseja instalar o dispositivo NDAS agora?"
+    IDS_DRZ_MOUNT_HEADER_TITLE "Instalar o dispositivo NDAS"
+    IDS_DRZ_TITLE           "Assistente Registar dispositivo NDAS"
+    IDS_ERROR_ADD_WRITE_KEY "Ocorreu um erro ao definir a chave de escrita."
+    IDS_ERROR_CHECK_UPDATE  "Ocorreu um erro ao procurar uma actualização do software."
+    IDS_ERROR_DISABLE_DEVICE	"Ocorreu um erro ao desactivar o nome do dispositivo NDAS."
+    IDS_ERROR_ENABLE_DEVICE	"Ocorreu um erro ao activar o dispositivo NDAS."
+    IDS_ERROR_MOUNT_DEVICE_RO	"Ocorreu um erro ao instalar um dispositivo NDAS como modo Só de Leitura."
+    IDS_ERROR_MOUNT_DEVICE_RW	"Ocorreu um erro ao instalar um dispositivo NDAS como modo Leitura/Escrita."
+    IDS_ERROR_NDAS_DESCRIPTION_FMT	"Função: NDAS 0x%1!04X!\r\nCódigo de erro: %2!u! (0x%2!04X!)\r\n%3!s!"
+    IDS_ERROR_REGISTER_DEVICE_FAILURE	"Ocorreu um erro durante o registo."
+    IDS_ERROR_REMOVE_WRITE_KEY "Ocorreu um erro ao remover a chave de escrita."
+    IDS_ERROR_RENAME_DEVICE "Ocorreu um erro ao mudar o nome do dispositivo NDAS."
+    IDS_ERROR_SYSTEM_DESCRIPTION_FMT "Código de erro: %1!u! (0x%1!04X!)\r\n%2!s!"
+    IDS_ERROR_TITLE         "NDAS Device Management Erro"
+    IDS_ERROR_UNMOUNT_DEVICE	"Ocorreu um erro ao desinstalar o dispositivo NDAS."
+    IDS_ERROR_UNREGISTER_DEVICE	"Ocorreu um erro ao anular o registo do dispositivo NDAS."
+    IDS_ERROR_UPDATE_DEVICE_LIST	"Ocorreu um erro ao actualizar a lista de dispositivos NDAS."
+    IDS_HOSTSTAT_ACCESS     "Acesso"
+    IDS_HOSTSTAT_HOSTNAME   "Nome de anfitrião"
+    IDS_HOSTSTAT_NETWORK_ADDRESS "Endereço de rede"
+    IDS_INVALID_DEVICE_ID_TOOLTIP_TEXT	"A ID do dispositivo NDAS tem 20 caracteres e é composta por caracteres alfanuméricos!\r\n"
+    IDS_INVALID_DEVICE_ID_TOOLTIP_TITLE "ID do Dispositivo inválido!"
+    IDS_KNOWN_NDAS_HOST     "Anfitrião desconhecido"
+    IDS_LANGUAGE_CHANGE     "Será aplicado o idioma da nova interface de utilizador depois de reiniciar a aplicação."
+    IDS_LANG_AUTO           "Automático"
+    IDS_LANG_CHANGE         "A alteração do idioma da interface de utilizador necessita da reinicialização da aplicação. Deseja reiniciar a aplicação agora?"
+    IDS_LOGDEV_INFO_UNAVAILABLE "Indisponível"
+    IDS_LOGDEV_LOCATION     "Localização: "
+    IDS_LOGDEV_LOCATION_FMT "Localização - Ranhura %1!d!, ID do destino  %2!d!, LUN %3!d!"
+    IDS_LOGDEV_STATUS_MOUNTED_RO "Instalado como modo Só de Leitura"
+    IDS_LOGDEV_STATUS_MOUNTED_RW "Instalado como Modo de Leitura/Escrita"
+    IDS_LOGDEV_STATUS_MOUNT_PENDING "Instalação pendente"
+    IDS_LOGDEV_STATUS_NOT_MOUNTABLE "Não instalável"
+    IDS_LOGDEV_STATUS_UNKNOWN_FMT "Estado desconhecido (0x%1!08X!)"
+    IDS_LOGDEV_STATUS_UNMOUNTED "Não instalado"
+    IDS_LOGDEV_STATUS_UNMOUNT_PENDING "Desinstalação pendente"
+    IDS_LOGDEV_TYPE_AGGREGATED_DISK "Disco agregado"
+    IDS_LOGDEV_TYPE_CF_DRIVE "Unidade Compact Flash"
+    IDS_LOGDEV_TYPE_DISK_RAID0 "Disco (RAID 0)"
+    IDS_LOGDEV_TYPE_DISK_RAID1 "Disco (RAID 1 - Replicado)"
+    IDS_LOGDEV_TYPE_DISK_RAID2 "Disco (RAID 2)"
+    IDS_LOGDEV_TYPE_DISK_RAID3 "Disco (RAID 3)"
+    IDS_LOGDEV_TYPE_DISK_RAID4 "Disco (RAID 4)"
+    IDS_LOGDEV_TYPE_DISK_RAID5 "Disco (RAID 5)"
+    IDS_LOGDEV_TYPE_DVD_DRIVE "Unidade de DVD"
+    IDS_LOGDEV_TYPE_MIRRORED_DISK "Disco replicado"
+    IDS_LOGDEV_TYPE_MO_DRIVE "Unidade MO"
+    IDS_LOGDEV_TYPE_SINGLE_DISK "Disco (Único)"
+    IDS_LOGDEV_TYPE_UNKNOWN_FMT "Tipo desconhecido (0x%1!08X!)"
+    IDS_LOGDEV_TYPE_VIRTUAL_DVD_DRIVE "Unidade de DVD virtual"
+    IDS_LOGICALDEVICE_ENTRY_FMT "[%1!d!] %2!s!:%3!d! "
+    IDS_LOGICALDEVICE_ENTRY_MISSING_FMT "[%1!d!] Entrada não existente"
+    IDS_LOGICALDEVICE_ENTRY_UNAVAILABLE_FMT	"[%1!d!] Indisponível(%2!s!:%3!d!)"
+    IDS_MAIN_TITLE          "NDAS Device Management"
+    IDS_NDASMGMT_ALREADY_RUNNING_TITLE	"A Gestão do Dispositivo NDAS já está a ser executada."
+    IDS_NDASMGMT_ALREADY_RUNNING_TOOLTIP "A Gestão do Dispositivo NDAS já está a ser executada.\r\nClique no ícone da barra de tarefas para mostrar o menu para que possa aceder às funções."
+    IDS_NDASMGMT_WELCOME_TITLE "Gestão do Dispositivo NDAS a ser executada"
+    IDS_NDASMGMT_WELCOME_TOOLTIP	"A Gestão do Dispositivo NDAS está a ser executada.\r\nClique aqui para registar um novo dispositivo NDAS no sistema."
+    IDS_NDAS_DEVICE_STATUS_CONNECTED "Ligado"
+    IDS_NDAS_DEVICE_STATUS_DISABLED "Desactivar"
+    IDS_NDAS_DEVICE_STATUS_DISCONNECTED "Desligado"
+    IDS_NDAS_DEVICE_STATUS_UNKNOWN "Desconhecido"
+    IDS_NEW_DEVICE_NAME_TEMPLATE "NetDisk %1!d!"
+    IDS_NO_DEVICE           "(Nenhum dispositivo NDAS)"
+    IDS_OG_DONT_CONFIRM_EXIT "Não mostrar a caixa de diálogo de confirmação ao sair"
+    IDS_OG_DONT_CONFIRM_REMOVE_WRITE_KEY	"Não mostrar uma caixa de diálogo de confirmação ao remover a chave de escrita"
+    IDS_OG_DONT_CONFIRM_UNMOUNT		"Não mostrar uma caixa de diálogo de confirmação ao desinstalar um dispositivo NDAS"
+    IDS_OG_DONT_CONFIRM_UNMOUNT_ALL	"Não mostrar uma caixa de diálogo de confirmação ao desinstalar todos os dispositivos NDAS"
+    IDS_OG_DONT_CONFIRM_UNREGISTER	"Não mostrar uma caixa de diálogo de confirmação ao anular o registo de um dispositivo NDAS"
+    IDS_OG_MENU_DISPLAY_STATUS_TEXT "Mostrar o texto de estado do dispositivo NDAS"
+    IDS_OG_MENU_DISPLAY_UNMOUNT_ALL "Mostrar desinstaçação de todos os comandos"
+    IDS_OG_MENU_USE_REG_WIZARD	"Utilize o assistente para registar"
+    IDS_OG_SUSPEND_ALLOW    "Permitir suspensão/hibernação"
+    IDS_OG_SUSPEND_DENY     "Recusar suspensão/hibernação caso haja dispositivos instalados"
+    IDS_OPTIONDLG_TITLE     "Opções"
+    IDS_OPTION_GROUP_CONFIRM "Confirmação"
+    IDS_OPTION_GROUP_MENU   "Menu"
+    IDS_OPTION_GROUP_SUSPEND "Suporte à suspensão/Hibernação"
+    IDS_REGWIZ_COMPLETE_NORMAL "Terminou com êxito o Assistente Registo do dispositivo NDAS.\r\n\r\nPara fechar este assistente, clique em Terminar."
+    IDS_REGWIZ_COMPLETE_NOT_CONNECTED "Terminou com êxito o registo do dispositivo NDAS. \r\n\r\nNo entanto, o dispositivo NDAS não foi encontrado e não pode ser ligado neste momento. Verifique a ligação do dispositivo NDAS.\r\n\r\nPara fechar este assistente, clique em Terminar."
+    IDS_REGWIZ_COMPLETE_NOT_MOUNTABLE "Terminou com êxito o registo do dispositivo NDAS e este está ligado. \r\n\r\nNo entanto, não foi encontrado neste momento nenhum dispositivo NDAS instalado. Verifique o estado a partir do menu do ícone da barra de tarefas.\r\n\r\nPara fechar este assistente, clique em Terminar."
+    IDS_REMOVE_WRITE_KEY    "Remo&ver"
+    IDS_REMOVE_WRITE_KEY_CONFIRM "Tem a certeza que deseja remover a chave de escrita?\r\nNão pode voltar a instalar este dispositivo como Leitura/Escrita sem a chave de escrita."
+    IDS_REMOVE_WRITE_KEY_CONFIRM_TITLE "Remover chave de escrita"
+    IDS_REQUEST_SURRENDER_RW_ACCESS	"Este dispositivo NDAS está a ser utilizado por outro anfitrião que tem o acesso de Leitura/Escrita para o dispositivo NDAS.\r\nDeseja pedir o acesso de Leitura/Escrita do dispositivo NDAS?"
+    IDS_SHOW_DEVICE_PROPERTIES "&Propriedades..."
+    IDS_SURRENDER_REQUEST_CONNECTING	"A ligar ao anfitrião. Aguarde..."
+    IDS_SURRENDER_REQUEST_WAITING "A aguardar resposta..."
+    IDS_SUSPEND_WARNING     "A permissão da suspensão/hibernação pode danificar os dados se os dispositivos montados não estiverem disponíveis ao reiniciar o computador.\r\nTem a certeza que deseja activar esta função?"
+    IDS_UNITDEVICE_NONE     "Não disponível"
+    IDS_UNITDEVICE_STATUS_MOUNTED "Instalado"
+    IDS_UNITDEVICE_STATUS_NOT_MOUNTED "Não instalado"
+    IDS_UNITDEVICE_STATUS_UNKNOWN_FMT "Desconhecido(%1!04X!)"
+    IDS_UNITDEV_MEDIA_TYPE_CDROM "Unidade de CD/DVD"
+    IDS_UNITDEV_MEDIA_TYPE_COMPACT_FLASH "Unidade Compact Flash"
+    IDS_UNITDEV_MEDIA_TYPE_DISK "Unidade de disco"
+    IDS_UNITDEV_MEDIA_TYPE_OPMEM "Unidade MO"
+    IDS_UNITDEV_MEDIA_TYPE_UNKNOWN_FMT "Tipo desconhecido (%1!08X!)"
+    IDS_UNITDEV_TYPE_CDROM  "Unidade de CD/DVD"
+    IDS_UNITDEV_TYPE_DISK   "Unidade de disco"
+    IDS_UNITDEV_TYPE_DISK_AGGREGATED "Unidade de disco (Agregado)"
+    IDS_UNITDEV_TYPE_DISK_MIRROR_MASTER "Unidade de disco (Replicação Principal)"
+    IDS_UNITDEV_TYPE_DISK_MIRROR_SLAVE "Unidade de disco (Replicação Secundária)"
+    IDS_UNITDEV_TYPE_DISK_RAID0 "Unidade de disco (RAID 0)"
+    IDS_UNITDEV_TYPE_DISK_RAID1 "Unidade de disco (RAID 1 - Replicado)"
+    IDS_UNITDEV_TYPE_DISK_RAID2 "Unidade de disco (RAID 2)"
+    IDS_UNITDEV_TYPE_DISK_RAID3 "Unidade de disco (RAID 3)"
+    IDS_UNITDEV_TYPE_DISK_RAID4 "Unidade de disco (RAID 4)"
+    IDS_UNITDEV_TYPE_DISK_RAID5 "Unidade de disco (RAID 5)"
+    IDS_UNITDEV_TYPE_DISK_SINGLE "Unidade de disco"
+    IDS_UNITDEV_TYPE_DISK_UNKNOWN_FMT "Unidade de dsico (Tipo %1!04X! não reconhecido)"
+    IDS_UNITDEV_TYPE_UNKNOWN_FMT "Tipo desconhecido (0x%1!04X!)"
+    IDS_UNKNOWN_UNITDEVICE_TYPE "Tipo de dispositivo desconhecido"
+    IDS_UNREGISTER_DEVICE   "&Cancelar registo"
+    IDS_WAIT_CHECK_UPDATE   "Please wait while checking for a software update..."
+    IDS_WAIT_MOUNT          "Aguarde enquanto é instalado um dispositivo NDAS pedido..."
+    IDS_WAIT_UNMOUNT        "Aguarde enquanto é desinstalado um dispositivo NDAS pedido..."
+    IDS_WRITE_KEY_NONE      "nenhum"
+    IDS_WRITE_KEY_PRESENT   "Presente"
+        IDS_ABOUTDLG_COL_COMPONENT	"Componente"
+	IDS_ABOUTDLG_COL_VERSION	"Versão"
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_CURRENT_LANGUAGE "Português - Portuguese"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,334 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: efs - Win32 Debug--------------------
+</h3>
+
+OSR DDKBUILD.BAT V5.3 - OSR, Open Systems Resources, Inc.
+
+F:\WorkSpace\WinXp\base\fs\efs>rem ///////////////////////////////////////////////////////////////////////////// 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    This sofware is supplied for instructional purposes only. 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    OSR Open Systems Resources, Inc. (OSR) expressly disclaims any warranty 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    for this software.  THIS SOFTWARE IS PROVIDED  "AS IS" WITHOUT WARRANTY 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    THE IMPLIED WARRANTIES OF MECHANTABILITY OR FITNESS FOR A PARTICULAR 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    PURPOSE.  THE ENTIRE RISK ARISING FROM THE USE OF THIS SOFTWARE REMAINS 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    WITH YOU.  OSR's entire liability and your exclusive remedy shall not 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    exceed the price paid for this material.  In no event shall OSR or its 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    suppliers be liable for any damages whatsoever (including, without 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    limitation, damages for loss of business profit, business interruption, 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    loss of business information, or any other pecuniary loss) arising out 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    of the use or inability to use this software, even if OSR has been 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    advised of the possibility of such damages.  Because some states/ 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    jurisdictions do not allow the exclusion or limitation of liability for 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    consequential or incidental damages, the above limitation may not apply 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    to you. 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    OSR Open Systems Resources, Inc. 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    105 Route 101A Suite 19 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    Amherst, NH 03031  (603) 595-6500 FAX: (603) 595-6503 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    email bugs to: bugs@osr.com 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    MODULE: 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        ddkbuild.bat  
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    ABSTRACT: 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //      This file allows drivers to be build with visual studio and visual studio.net 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    AUTHOR(S): 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        OSR Open Systems Resources, Inc. 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //  
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    REVISION:   V5.3 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //      Fix a couple of bugs where the parameter was suppose to be "parameter" 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    REQUIREMENTS:  Environment variables that must be set. 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //  BASEDIR - Automatically set up by NT4 DDK. (e.g. D:\NT4DDK ) 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //      W2KBASE - must be set up by user to point to W2K DDK  (e.g D:\Nt50DDK ) 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //      WXPBASE - must be set up by user to point to WXP DDK  (e.g D:\WINDDK\2600) 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //      WNETBASE - must be set up by user to point to WNET DDK (e.g D:\WINDDK\3615)  
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    COMMAND FORMAT: 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //  ddkbuild -PLATFORM BUILDTYPE DIRECTORY [FLAGS] 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //              PLATFORM is either  
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //                   WXP, WXP64, WXP2K - builds using WXP DDK 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //                   W2K, W2K64,  - builds using W2k DDK 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //                   WNET, WNET64, WNET2K, WNETXP, WNETXP64 - builds using WNET DDK 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //                   NT4  - build using NT4 DDK (NT4 is the default) 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //              BUILDTYPE - free, checked, chk or fre 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    DIRECTORY is the path to the directory to be build.  It can be "." 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //       
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //   BROWSE FILES: 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //  
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //       This procedure supports the building of BROWSE files to be used by  
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //       Visual Studio 6 and by Visual Studio.Net  However, the BSCfiles created 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //       by bscmake for the 2 studios are not compatible. When this command procedure 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //       runs, it selects the first bscmake.exe found in the path.   So, make 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //       sure that the correct bscmake.exe is in the path.... 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    COMPILERS: 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        If you are building NT4 or Windows 2000 drivers you should really 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        be using the VC 6 compiler.   If you are building a WXP driver, 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        you should be using the compiler that comes with the DDK.  This  
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        procedure should use the correct compiler. 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //    GENERAL COMMENTS: 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        This procedure is not written to be elegant!  It is written to work  
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        and to be easy to debug.   While we could have reused a bunch of 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem //        code, we decided not to.    
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem /////////////////////////////////////////////////////////////////////////////// 
+
+F:\WorkSpace\WinXp\base\fs\efs>set scriptDebug=on 
+
+F:\WorkSpace\WinXp\base\fs\efs>setlocal ENABLEEXTENSIONS 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // Check for NT 4 Build 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>if /I -WNETXP NEQ -NT4 goto NoNT4Base 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // Check for WNET Windows 2000 Build using WNET DDK 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>if /I -WNETXP NEQ -WNET2K goto NoWNET2KBase 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // Check for WXP Build using WNET DDK 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\efs>if /I -WNETXP NEQ -WNETXP goto NoWNETXPBase 
+WXP BUILD using WNET DDK
+
+F:\WorkSpace\WinXp\base\fs\efs>set BASEDIR=d:\winddk\3790 
+
+F:\WorkSpace\WinXp\base\fs\efs>shift
+
+F:\WorkSpace\WinXp\base\fs\efs>if "d:\winddk\3790" == "" goto ErrNoBASEDIR 
+
+F:\WorkSpace\WinXp\base\fs\efs>set path=d:\winddk\3790\bin;C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files\Microsoft Visual Studio\VC98\BIN;C:\Program Files\Microsoft Visual Studio\Common\TOOLS;C:\Program Files\Microsoft Visual Studio\Common\TOOLS\WINNT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem 
+
+F:\WorkSpace\WinXp\base\fs\efs>set mode= 
+
+F:\WorkSpace\WinXp\base\fs\efs>for %f in (free FREE fre FRE) do if %f == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\efs>if free == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\efs>if FREE == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\efs>if fre == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\efs>if FRE == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\efs>for %f in (checked CHECKED chk CHK) do if %f == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\efs>if checked == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\efs>if CHECKED == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\efs>if chk == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\efs>if CHK == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\efs>if "chk" == "" goto ErrBadMode 
+
+F:\WorkSpace\WinXp\base\fs\efs>if "." == "" goto ErrNoDir 
+
+F:\WorkSpace\WinXp\base\fs\efs>if not exist . goto ErrNoDir 
+
+F:\WorkSpace\WinXp\base\fs\efs>pushd . 
+
+F:\WorkSpace\WinXp\base\fs\efs>call d:\winddk\3790\bin\setenv.bat d:\winddk\3790 chk WXP  
+
+F:\WorkSpace\WinXp\base\fs\efs>goto RegularBuild 
+
+F:\WorkSpace\WinXp\base\fs\efs>set mpFlag=-M 
+
+F:\WorkSpace\WinXp\base\fs\efs>if "chk_wxp_x86" == "" goto NT4 
+
+F:\WorkSpace\WinXp\base\fs\efs>rem win2k sets this! 
+
+F:\WorkSpace\WinXp\base\fs\efs>set W2kEXT=chk_wxp_x86 
+
+F:\WorkSpace\WinXp\base\fs\efs>set mpFlag=-MI 
+
+F:\WorkSpace\WinXp\base\fs\efs>if "4" == "" set mpFlag= 
+
+F:\WorkSpace\WinXp\base\fs\efs>if "4" == "1" set mpFlag= 
+build in directory . with arguments  (basedir d:\winddk\3790)
+
+F:\WorkSpace\WinXp\base\fs\efs>cd /D . 
+
+F:\WorkSpace\WinXp\base\fs\efs>set bflags=-Ze 
+
+F:\WorkSpace\WinXp\base\fs\efs>set bscFlags="" 
+
+F:\WorkSpace\WinXp\base\fs\efs>if "" == "" goto done 
+
+F:\WorkSpace\WinXp\base\fs\efs>if EXIST buildchk_wxp_x86.err erase buildchk_wxp_x86.err 
+
+F:\WorkSpace\WinXp\base\fs\efs>if EXIST buildchk_wxp_x86.wrn erase buildchk_wxp_x86.wrn 
+
+F:\WorkSpace\WinXp\base\fs\efs>if EXIST buildchk_wxp_x86.log erase buildchk_wxp_x86.log 
+run build -Ze -MI for chk version in .
+
+F:\WorkSpace\WinXp\base\fs\efs>pushd . 
+
+F:\WorkSpace\WinXp\base\fs\efs>build  -Ze -MI 
+BUILD: Adding /Y to COPYCMD so xcopy ops won't hang.
+BUILD: Using 4 child processes
+BUILD: Object root set to: ==> objchk_wxp_x86
+BUILD: Compile and Link for i386
+BUILD: Examining f:\workspace\winxp\base\fs\efs directory for files to compile.
+    f:\workspace\winxp\base\fs\efs 
+BUILD: Compiling f:\workspace\winxp\base\fs\efs directory
+Compiling - efs.c for i386
+Compiling - create.c for i386
+Compiling - control.c for i386
+Compiling - efsrtl.c for i386
+Compiling - efsrtlsp.c for i386
+Compiling - encrypt.c for i386
+Compiling - generating code... for i386
+Building Library - objchk_wxp_x86\i386\efs.lib for i386
+Building Browse File - objchk_wxp_x86\i386\efs.lib for all platforms
+Building Browse File - objchk_wxp_x86\i386\efs.lib for all platforms
+BUILD: Done
+
+    7 files compiled
+    1 library built
+    2 browse databases built
+
+F:\WorkSpace\WinXp\base\fs\efs>popd
+
+F:\WorkSpace\WinXp\base\fs\efs>rem assume that the onscreen errors are complete! 
+=============== build warnings ======================
+
+F:\WorkSpace\WinXp\base\fs\efs>if exist buildchk_wxp_x86.log findstr "warning.*[CLU][0-9]*" buildchk_wxp_x86.log 
+ 
+ 
+build complete
+building browse information files
+
+F:\WorkSpace\WinXp\base\fs\efs>if EXIST buildbrowse.cmd goto doBrowsescript 
+
+F:\WorkSpace\WinXp\base\fs\efs>set sbrlist=sbrList.txt 
+
+F:\WorkSpace\WinXp\base\fs\efs>if not EXIST sbrListx86.txt goto sbrDefault 
+
+F:\WorkSpace\WinXp\base\fs\efs>if not EXIST sbrList.txt goto end 
+ddkbuild complete
+
+
+
+<h3>Results</h3>
+efs.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

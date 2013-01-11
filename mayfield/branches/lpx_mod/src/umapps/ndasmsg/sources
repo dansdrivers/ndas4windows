@@ -1,0 +1,16 @@
+TARGETNAME=ndasmsg
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+RESOURCE_ONLY_DLL=1
+
+USE_MAKEFILE_INC=1
+# to publish headers
+NTTARGETFILES=$(NDAS_INC_PATH)\ndas\ndasmsg.h
+
+INCLUDES=$(NDAS_INC_PATH)
+
+SOURCES=ndasmsg.c \
+	_ndasmsg.rc \
+	ndasmsg.rc
+

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ndupdate"
+	ProjectGUID="{579AB25C-E753-4092-A423-DED628F41DF6}"
+	RootNamespace="ndupdate"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+		<Platform
+			Name="x64" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="dll\objchk_w2k_x86\i386"
+			IntermediateDirectory="dll\objchk_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 chk . -c0i"
+				Output="dll\objchk_w2k_x86\i386\ndupdate.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="dll\objchk_wnet_amd64\amd64"
+			IntermediateDirectory="dll\objchk_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="dll\objchk_wnet_amd64\amd64\ndupdate.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="dll\objfre_w2k_x86\i386"
+			IntermediateDirectory="dll\objfre_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 fre . -c0i"
+				Output="dll\objfre_w2k_x86\i386\ndupdate.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="dll\objfre_wnet_amd64\amd64"
+			IntermediateDirectory="dll\objfre_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="dll\objfre_wnet_amd64\amd64\ndupdate.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\dllentry.cpp"></File>
+			<File
+				RelativePath=".\ndupdate.cpp"></File>
+			<File
+				RelativePath=".\ndupdateui.cpp"></File>
+			<File
+				RelativePath=".\stdafx.cpp"></File>
+			<File
+				RelativePath=".\updateui.cpp"></File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\resource.h"></File>
+			<File
+				RelativePath=".\stdafx.h"></File>
+			<File
+				RelativePath=".\trace.h"></File>
+			<File
+				RelativePath=".\updateui.h"></File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\ndupdate.loc.chs.rc"></File>
+			<File
+				RelativePath=".\ndupdate.loc.deu.rc"></File>
+			<File
+				RelativePath=".\ndupdate.loc.esn.rc"></File>
+			<File
+				RelativePath=".\ndupdate.loc.fra.rc"></File>
+			<File
+				RelativePath=".\ndupdate.loc.ita.rc"></File>
+			<File
+				RelativePath=".\ndupdate.loc.jpn.rc"></File>
+			<File
+				RelativePath=".\ndupdate.loc.kor.rc"></File>
+			<File
+				RelativePath=".\ndupdate.loc.ptg.rc"></File>
+			<File
+				RelativePath=".\ndupdate.rc"></File>
+			<File
+				RelativePath=".\ndupdate_ver.rc"></File>
+		</Filter>
+		<Filter
+			Name=".apitest"
+			UniqueIdentifier="{F087FE75-AAA3-4FF8-8615-93EF6F367CBE}">
+			<File
+				RelativePath=".\apitest\apitest.cpp"></File>
+			<File
+				RelativePath=".\apitest\makefile"></File>
+			<File
+				RelativePath=".\apitest\sources"></File>
+		</Filter>
+		<Filter
+			Name=".dll"
+			UniqueIdentifier="{68AA99A1-05B1-493D-B789-60A00A26E056}">
+			<File
+				RelativePath=".\dll\makefile"></File>
+			<File
+				RelativePath=".\dll\sources"></File>
+		</Filter>
+		<Filter
+			Name=".res"
+			UniqueIdentifier="{7299A7ED-6CBA-4FF9-8E48-EACA8DB6DC4E}">
+			<File
+				RelativePath=".\res\update.ico"></File>
+		</Filter>
+		<Filter
+			Name=".slib"
+			UniqueIdentifier="{71DA9358-C0A8-4B6F-AE83-E6B9C99BBBAF}">
+			<File
+				RelativePath=".\slib\makefile"></File>
+			<File
+				RelativePath=".\slib\sources"></File>
+		</Filter>
+		<File
+			RelativePath=".\dirs"></File>
+		<File
+			RelativePath=".\ndasupdate.ini"></File>
+		<File
+			RelativePath=".\ndupdate.src"></File>
+		<File
+			RelativePath=".\ndupdate.ver"></File>
+		<File
+			RelativePath=".\sources.inc"></File>
+		<File
+			RelativePath=".\xmatl.mk"></File>
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

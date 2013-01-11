@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="FullBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+	<MSBuildAllProjects>$(MSBuildProjectFile)</MSBuildAllProjects>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SetupLanguage Condition="'$(SetupLanguage)'==''">en-US</SetupLanguage>
+	<wxllang Condition="'$(SetupLanguage)'!=''">_$(SetupLanguage)</wxllang>
+	<wxllang Condition="$(SetupLanguage)==0">_en-US</wxllang>
+	<wxldir>.</wxldir>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<nsf_ndasddus>no</nsf_ndasddus>
+		<nsf_itscmd>no</nsf_itscmd>
+	</PropertyGroup>
+	
+	<ItemGroup>
+    <Compile Include="ActionText.wxs" />
+    <Compile Include="Binary.wxs" />
+    <Compile Include="Components.wxs" />
+    <Compile Include="Dialogs.wxs" />
+    <Compile Include="directories.wxs" />
+    <Compile Include="Error.wxs" />
+    <Compile Include="ErrorEx.wxs" />
+    <Compile Include="features.wxs" />
+    <Compile Include="icon.wxs" />
+    <Compile Include="ndas.wxs" />
+    <Compile Include="starforce.wxs" />
+    <Compile Include="TextStyles.wxs" />
+    <Compile Include="UI.wxs" />
+    <Compile Include="UIText.wxs" />
+    <Compile Include="ndasapcm.wxs" />
+    <Compile Include="ndasapcm_ps.wxs" />
+		<Compile Include="ndasddus.wxs" />
+		<Compile Include="itscmd.wxs" />
+		<BaseLocalizedStringFile Include="*.wxl" />
+  </ItemGroup>
+
+  <!-- Targets -->
+
+  <PropertyGroup>
+    <OutputType Condition="'$(OutputType)'==''">package</OutputType>
+    <OutputName>ndas</OutputName>
+    <Config Condition="'$(Config)'==''">retail</Config>
+    <!-- 
+    Supress sw1000 (this is not a merge module!)
+    warning CNDL1000 : The Icon/@Id attribute's value, '{0}', will be too long if modularized.
+    Binary and icon identifiers shouldn't be longer than 18 characters to allow for
+    modularization (appending a guid for merge modules).
+    -->
+    <SupressWarnings>1000</SupressWarnings>
+    <LanguageGroup></LanguageGroup>
+    <DefineConstants Condition="'$(SetupLanguage)'!=''">$(DefineConstants);SetupLanguage=$(SetupLanguage)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<DefineConstants>$(DefineConstants);$(AdditonalCandleDefines)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<!-- res.en-US;res.fr-FR;res.de-DE -->
+	<DefineConstants>$(DefineConstants);$(rescomp)</DefineConstants>
+  </PropertyGroup>
+
+  <!-- NdasMergeModulePath -->
+  <PropertyGroup Condition="'$(NdasMergeModulePath)'!=''">
+	<DefineConstants>$(DefineConstants);NdasMergeModulePath=$(NdasMergeModulePath)</DefineConstants>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(SetupDataDir)'!=''">
+	<DefineConstants>$(DefineConstants);SourceDir=$(SetupDataDir)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(NdasSetupVersionTag)'!=''">
+	<DefineConstants>$(DefineConstants);NdasSetupVersionTag=$(NdasSetupVersionTag)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(ExternalEula)'!=''">
+	<DefineConstants>$(DefineConstants);ExternalEula=$(ExternalEula)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(CompressedPackage)'!=''">
+    <DefineConstants>$(DefineConstants);CompressedPackage=$(CompressedPackage)</DefineConstants>
+  </PropertyGroup>
+  
+  <!-- support for merged icons and installer binary data -->
+
+  <PropertyGroup Condition="'$(IconDir)'!=''">
+	<DefineConstants>$(DefineConstants);icondir=$(IconDir)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IbdDir)'!=''">
+	<DefineConstants>$(DefineConstants);binarydir=$(IbdDir)</DefineConstants>
+  </PropertyGroup>
+
+  <!-- be sure to declare WixProjectRoot before importing ndaswix.targets -->
+
+  <PropertyGroup>
+    <WixProjectRoot>..</WixProjectRoot>
+  </PropertyGroup>
+
+  <PropertyGroup>
+
+    <LanguageGroupSuffix>_$(LanguageGroup)</LanguageGroupSuffix>
+    <LanguageGroupSuffix Condition="'$(LanguageGroupSuffix)'=='_'"></LanguageGroupSuffix>
+
+    <SetupLanguageSuffix>_$(SetupLanguage)</SetupLanguageSuffix>
+    <SetupLanguageSuffix Condition="'$(SetupLanguageSuffix)'=='_'"></SetupLanguageSuffix>
+    <SetupLanguageSuffix Condition="'$(SetupLanguageSuffix)'=='_0'"></SetupLanguageSuffix>
+    <SetupLanguageSuffix Condition="'$(SetupLanguageSuffix)'=='_NEU'"></SetupLanguageSuffix>
+
+    <PlatformSuffix>_$(Platform)</PlatformSuffix>
+    <PlatformSuffix Condition="'$(PlatformSuffix)'=='_'"></PlatformSuffix>
+
+  </PropertyGroup>
+  
+  <!-- import common project targets -->
+  <Import Project="..\bin\msbuild\ndaswix2.targets" />
+  <Import Project="..\bin\msbuild\codesign.targets" />
+
+  <Target Name="CreateSigningTargets">
+    <CreateItem Include="$(TargetPath)">
+      <Output TaskParameter="Include" ItemName="SigningFile" />
+    </CreateItem>
+  </Target>
+
+  <Target Name="SignTarget" 
+          DependsOnTargets="CreateSigningTargets;SignCode" 
+          Condition="'$(OutputType)'!='library' and '$(XM_SIGNCODE_CMD)'!=''"/>
+
+  <Target Name="PostBuild"
+		  Inputs="$(TargetPath)"
+		  Outputs="$(PostBuildOutput)"
+		  DependsOnTargets="SignTarget;SetPropertiesForPostBuild">
+    <Copy SourceFiles="$(TargetPath)" 
+		  DestinationFiles="$(PostBuildOutput)" />
+  </Target>
+
+  <Target Name="SetPropertiesForPostBuild">
+	<Message Text="ProductVersion=$(MsiProductVersion)" />
+	<CreateProperty Value="_$(MsiProductVersion)">
+	  <Output TaskParameter="Value" PropertyName="ProductVersionSuffix" />
+	</CreateProperty>
+	<CreateProperty Condition="'$(ProductVersionSuffix)'=='_'" Value="">
+	  <Output TaskParameter="Value" PropertyName="ProductVersionSuffix" />
+	</CreateProperty>
+	<CreateProperty Value="$(BinDropDir)\$(OutputName)$(ProductVersionSuffix)$(PlatformSuffix)$(SetupLanguageSuffix)$(TargetExt)">
+	  <Output TaskParameter="Value" PropertyName="PostBuildOutput" />
+	</CreateProperty>
+  </Target>
+
+  <Target Name="PreBuild">
+    <MakeDir Directories="$(ObjectDir)" />
+	<CreateItem Include="$(wxldir)\%(BaseLocalizedStringFile.filename)%(BaseLocalizedStringFile.extension)">
+	  <Output TaskParameter="Include" ItemName="LocalizedStringFile" />
+	</CreateItem>
+  </Target>
+
+</Project>
+

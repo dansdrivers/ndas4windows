@@ -1,0 +1,281 @@
+#include "stdafx.h"
+#include "ndasmgmt.h"
+#include "menubitmap.h"
+
+namespace
+{
+	HFONT pGetMenuFont(BOOL bBoldFont = FALSE)
+	{
+		//get system font for any owner drawing
+		NONCLIENTMETRICS metrics = { sizeof(metrics) };
+		::SystemParametersInfo(SPI_GETNONCLIENTMETRICS,sizeof(metrics),&metrics,0);
+		if (bBoldFont)
+		{
+			if (metrics.lfMenuFont.lfCharSet == ANSI_CHARSET)
+			{
+				metrics.lfMenuFont.lfWeight = FW_BOLD;
+			}
+		}
+		return ::CreateFontIndirect(&metrics.lfMenuFont);
+	}
+}
+
+static
+void
+pDrawSquare(
+	CDCHandle& dc, 
+	CONST CRect& rect, 
+	COLORREF color,
+	COLORREF borderColor = RGB(192,192,192),
+	int nWidth = 1)
+{
+	CPen pen = ::CreatePen(PS_SOLID, nWidth, borderColor);
+	CPenHandle oldPen = dc.SelectPen(pen);
+
+	CBrush brush = ::CreateSolidBrush(color);
+	CBrushHandle oldBrush = dc.SelectBrush(brush);
+
+	(void) dc.Rectangle(rect); 
+
+	(void) dc.SelectBrush(oldBrush);
+	(void) dc.SelectPen(oldPen);
+}
+
+static
+VOID
+pDrawError(CDCHandle& dc, CONST CRect& rect)
+{
+	pDrawSquare(dc, rect, RGB(200,30,30));
+}
+
+static
+VOID 
+pDrawDisconnected(CDCHandle& dc, CONST CRect& rect)
+{
+	pDrawSquare(dc, rect, RGB(10,10,10));
+}
+
+static
+VOID 
+pDrawDisabled(CDCHandle& dc, CONST CRect& rect)
+{
+	CBrush brush;
+	brush.CreateSolidBrush(RGB(255,255,255)); // ::GetSysColor(COLOR_MENU));
+	HBRUSH hOldBrush = dc.SelectBrush(brush);
+
+	CPen pen;
+	pen.CreatePen(PS_SOLID | PS_COSMETIC, 2, RGB(254,0,0)); 
+	HPEN hOldPen = dc.SelectPen(pen);
+
+	dc.Pie(rect, 
+		CPoint(rect.right, rect.top), 
+		CPoint(rect.left, rect.bottom));
+
+	dc.Pie(rect, 
+		CPoint(rect.left, rect.bottom),
+		CPoint(rect.right, rect.top)); 
+
+	dc.SelectBrush(hOldBrush);
+	dc.SelectPen(hOldPen);
+}
+
+static
+VOID
+pDrawUnknown(CDCHandle& dc, CONST CRect& rect)
+{
+	pDrawSquare(dc, rect, RGB(128,128,0));
+	dc.TextOut(4,4,_T("?"));
+}
+
+static
+VOID
+pDrawConnected(CDCHandle& dc, CONST CRect& rect, BYTE siPart)
+{
+	COLORREF borderColor = RGB(192,192,192);
+	COLORREF bgColor = RGB(53,53,251);
+
+	switch (siPart & 0x0F) {
+	case NDSI_PART_MOUNTED_RW:
+		bgColor = RGB(53,53,251);
+		break;
+	case NDSI_PART_MOUNTED_RO:
+		bgColor = RGB(53,251,53);
+		break;
+	case NDSI_PART_UNMOUNTED:
+	default:
+		bgColor = RGB(244,244,244);
+		break;
+	}
+
+	pDrawSquare(dc, rect, bgColor, borderColor);
+
+	if (siPart & NDSI_PART_CONTENT_IS_ENCRYPTED)
+	{
+		CPoint pts[] = {
+			CPoint(rect.right, rect.top),
+			CPoint(rect.left, rect.bottom),
+			CPoint(rect.right, rect.bottom) };
+
+		INT npts = RTL_NUMBER_OF(pts);
+		CPen pen = ::CreatePen(PS_SOLID, 1, borderColor);
+		CBrush brush = ::CreateSolidBrush(RGB(92,92,92));
+		CPenHandle oldPen= dc.SelectPen(pen);
+		CBrushHandle oldBrush = dc.SelectBrush(brush);
+		(void) dc.PolyPolygon(pts, &npts, 1);
+		(void) dc.SelectPen(oldPen);
+		(void) dc.SelectBrush(oldBrush);
+	}
+
+
+	return;
+}
+
+VOID
+CNdasMenuBitmapHandler::OnDrawStatusText(LPDRAWITEMSTRUCT lpDrawItemStruct)
+{
+	CDCHandle dc = lpDrawItemStruct->hDC;
+	CRect rect(&lpDrawItemStruct->rcItem);
+	rect.bottom -= 2;
+
+	COLORREF oldBkColor = dc.SetBkColor(RGB(255,255,225));
+
+	CBrush brush = ::CreateSolidBrush(RGB(255,255,225));
+	
+	CPen pen = ::CreatePen(PS_SOLID, 1, ::GetSysColor(COLOR_3DDKSHADOW)); 
+
+	HBRUSH hOldBrush = dc.SelectBrush(brush);
+	HPEN hOldPen = dc.SelectPen(pen);
+
+	dc.Rectangle(rect);
+
+//	dc.RoundRect(rect,CPoint(rect.Height() /4, rect.Height() / 4));
+
+	(VOID) dc.SelectPen(hOldPen);
+	(VOID) dc.SelectBrush(hOldBrush);
+
+	CRect rectText(rect);
+	rectText.left += GetSystemMetrics(SM_CXMENUCHECK) + 2;
+
+	CString strStatus, strStatusOut;
+	BOOL fSuccess = strStatus.LoadString(lpDrawItemStruct->itemData);
+	ATLASSERT(fSuccess);
+//	fSuccess = strStatusOut.Format(_T("Status\r\n%s"), strStatus);
+//	ATLASSERT(fSuccess);
+
+	CFontHandle curFont = dc.GetCurrentFont();
+	LOGFONT logFont;
+	curFont.GetLogFont(&logFont);
+	logFont.lfWeight = FW_BOLD;
+	CFont newFont = CreateFontIndirect(&logFont);
+	CFontHandle oldFont = dc.SelectFont(newFont);
+
+//	COLORREF oldTextColor = dc.SetTextColor(RGB(40,40,233));
+
+	dc.DrawText(
+		strStatus,
+		strStatus.GetLength(),
+		&rectText,
+		DT_SINGLELINE | DT_WORD_ELLIPSIS | DT_NOPREFIX | 
+		DT_VCENTER);
+
+	dc.SelectFont(oldFont);
+//	dc.SetTextColor(oldTextColor);
+	dc.SetBkColor(oldBkColor);
+}
+
+VOID 
+CNdasMenuBitmapHandler::OnDrawItem(
+	UINT nIDCtl, 
+	LPDRAWITEMSTRUCT lpDrawItemStruct)
+{
+
+	if (100 == lpDrawItemStruct->itemID) {
+		OnDrawStatusText(lpDrawItemStruct);
+		return;
+	}
+
+	NDSI_DATA si;
+	si.ulongCaster = lpDrawItemStruct->itemData;
+
+	//
+	// DrawData is interpreted as SI_DATA
+	//
+
+	CDCHandle dc = lpDrawItemStruct->hDC;
+	CRect rect(&lpDrawItemStruct->rcItem);
+	rect.DeflateRect(3,3);
+	
+	switch (si.Status) {
+	case NDSI_UNKNOWN:
+		pDrawUnknown(dc, rect);
+		break;
+	case NDSI_ERROR:
+		pDrawError(dc, rect);
+		break;
+	case NDSI_DISABLED:
+		pDrawDisabled(dc, rect);
+		break;
+	case NDSI_DISCONNECTED:
+		pDrawDisconnected(dc, rect);
+		break;
+	case NDSI_CONNECTED:
+		ATLASSERT(si.nParts <= 2);
+		if (0 == si.nParts) {
+			pDrawConnected(dc, rect, NDSI_PART_UNMOUNTED);
+		} else if (1 == si.nParts) {
+			pDrawConnected(dc, rect, si.StatusPart[0]);
+		} else if (2 == si.nParts) {
+
+			CRect rect(&lpDrawItemStruct->rcItem);
+
+			CRect rect1(rect.TopLeft(), CSize(rect.Height(), rect.Height()));
+			rect1.DeflateRect(3,3);
+
+			CRect rect2 = rect1;
+			rect2.OffsetRect(rect2.Width() + 1, 0);
+
+			pDrawConnected(dc, rect1, si.StatusPart[0]);
+			pDrawConnected(dc, rect2, si.StatusPart[1]);
+		}
+		break;
+	default:
+		ATLASSERT(FALSE);
+	}
+}
+
+void
+CNdasMenuBitmapHandler::OnMeasureItem(
+	UINT nIDCtl, 
+	LPMEASUREITEMSTRUCT lpMeasureItemStruct)
+{
+	if (100 == lpMeasureItemStruct->itemID) 
+	{
+		//
+		// Calculate width for each item
+		//
+		CString strStatus;
+		BOOL fSuccess = strStatus.LoadString(lpMeasureItemStruct->itemData);
+		ATLASSERT(fSuccess);
+
+		CDC dc = GetDC(::GetDesktopWindow());
+		CFont newFont = pGetMenuFont(TRUE);
+		CFontHandle oldFont = dc.SelectFont(newFont);
+
+		CSize textSize;
+		dc.GetTextExtent(strStatus,strStatus.GetLength(),&textSize);
+
+		(void) dc.SelectFont(oldFont);
+
+		int margin = ::GetSystemMetrics(SM_CXMENUCHECK);
+		lpMeasureItemStruct->itemWidth =  textSize.cx + margin; // plus margin
+		lpMeasureItemStruct->itemHeight = textSize.cy + 6;
+	} 
+	else 
+	{
+		NDSI_DATA si;
+		si.ulongCaster = lpMeasureItemStruct->itemData;
+		DWORD nParts = max(si.nParts, 1);
+		lpMeasureItemStruct->itemWidth = 
+			nParts * lpMeasureItemStruct->itemHeight - 3 * (nParts - 1);
+	}
+}

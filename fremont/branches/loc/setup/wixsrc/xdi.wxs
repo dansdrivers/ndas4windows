@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+	<Fragment Id="xdi">
+		
+		<Binary Id="xdimsi.dll" SourceFile="$(var.SetupDataDir.CustomActionDll)\xdimsi.dll" />
+
+		<InstallExecuteSequence>
+			<Custom Action="xDiMsiStopServices" After="DeleteServices" />
+			<Custom Action="xDiMsiRemoveDrivers" After="xDiMsiStopServices" />
+			<Custom Action="xDiMsiInstallDrivers" Before="xDiMsiStartServices" />
+			<Custom Action="xDiMsiStartServices" Before="InstallExecute" />
+			<InstallExecute Before="xDiMsiUpdateForceReboot" />
+			<Custom Action="xDiMsiUpdateForceReboot" Before="InstallFinalize" />
+			<Custom Action="xDiMsiUpdateScheduledReboot" After="InstallFinalize" />
+		</InstallExecuteSequence>
+
+		<CustomAction Id="xDiMsiStopServices" BinaryKey="xdimsi.dll" DllEntry="xDiMsiProcessDrivers3" Execute="immediate" Return="check" />
+		<CustomAction Id="xDiMsiRemoveDrivers"  BinaryKey="xdimsi.dll" DllEntry="xDiMsiProcessDrivers1" Execute="immediate" Return="check" />
+		<CustomAction Id="xDiMsiInstallDrivers" BinaryKey="xdimsi.dll" DllEntry="xDiMsiProcessDrivers2" Execute="immediate" Return="check" />
+		<CustomAction Id="xDiMsiStartServices" BinaryKey="xdimsi.dll" DllEntry="xDiMsiProcessDrivers4" Execute="immediate" Return="check" />
+		<CustomAction Id="xDiMsiProcessDriversPhase5" BinaryKey="xdimsi.dll" DllEntry="xDiMsiProcessDrivers5" Execute="immediate" Return="check" />
+		<CustomAction Id="xDiMsiProcessDriverScheduled" BinaryKey="xdimsi.dll" DllEntry="xDiMsiProcessDriverScheduled" Execute="deferred" HideTarget="yes" Return="check" Impersonate="no" />
+		<CustomAction Id="xDiMsiProcessDriverRollback" BinaryKey="xdimsi.dll" DllEntry="xDiMsiProcessDriverScheduled" Execute="rollback" HideTarget="yes" Return="check" Impersonate="no" />
+		<CustomAction Id="xDiMsiUpdateForceReboot" BinaryKey="xdimsi.dll" DllEntry="xDiMsiUpdateForceReboot"  Execute="immediate" Return="check" />
+		<CustomAction Id="xDiMsiUpdateScheduledReboot" BinaryKey="xdimsi.dll" DllEntry="xDiMsiUpdateScheduledReboot" Execute="immediate" Return="check" />
+
+		<Property Id="xDiMsiProcessDriverRollback" Hidden="yes"/>
+		<Property Id="xDiMsiProcessDriverScheduled" Hidden="yes"/>
+
+		<CustomTable Id="xDriverInstall">
+			<Column Id="Id" Category="Identifier" Type="string" PrimaryKey="yes"/>
+			<Column Id="ActionData" Category="Text" Type="string" Localizable="yes" Nullable="yes"/>
+			<Column Id="Phase" Category="Integer" Type="int" Width="4"/>
+			<Column Id="Type" Category="Text" Set="InstallFromInfSection;InstallPnpRootDevice;InstallPnpDeviceInf;InstallNetworkComponent;UninstallPnpDevice;UninstallNetworkComponent;CleanupOEMInf;StartService;StopService;QueueScheduleReboot" Type="string" Width="32"/>
+			<Column Id="HardwareId" Category="Text" Type="string" Nullable="yes" />
+			<Column Id="INF" Category="Formatted" Type="string" Nullable="yes"/>
+			<Column Id="Flags" Category="Integer" Type="int" Width="4" Nullable="yes" />
+			<Column Id="Condition" Category="Condition" Type="string" Nullable="yes" />
+			<Column Id="Sequence" Category="Integer" Type="int" Width="4"/>
+			<Column Id="Error" Category="Integer" Type="int" Width="4" Nullable="yes"/>
+			<Column Id="Registry_" Category="Identifier" Type="string" KeyTable="Registry" KeyColumn="1" Nullable="yes" />
+			<!--<Column Id="RegRoot" Category="Integer" Type="int" Width="4" Nullable="yes"/>
+				<Column Id="RegKey" Category="RegPath" Type="string" Nullable="yes"/>
+				<Column Id="RegName" Category="Formatted" Type="string" Nullable="yes"/>-->
+		</CustomTable>
+
+		<UI>
+			<ProgressText Action="InstallInitialize">$(loc.xdi.ActionText.InstallInitialize)</ProgressText>
+			<ProgressText Action="InstallExecute">$(loc.xdi.ActionText.InstallExecute)</ProgressText>
+			<ProgressText Action="InstallFinalize">$(loc.xdi.ActionText.InstallFinalize)</ProgressText>
+			<ProgressText Action="ValidateProductID">$(loc.xdi.ActionText.ValidateProductID)</ProgressText>
+		</UI>
+		<UI>
+			<ProgressText Action="xDiMsiStopServices" Template="[1]">$(loc.xdi.ActionText.xDiMsiStopService)</ProgressText>
+			<ProgressText Action="xDiMsiRemoveDrivers" Template="[1]">$(loc.xdi.ActionText.xDiMsiRemoveDrivers)</ProgressText>
+			<ProgressText Action="xDiMsiInstallDrivers" Template="[1]">$(loc.xdi.ActionText.xDiMsiInstallDrivers)</ProgressText>
+			<ProgressText Action="xDiMsiStartServices" Template="[1]">$(loc.xdi.ActionText.xDiMsiStartService)</ProgressText>
+			<ProgressText Action="xDiMsiProcessDriverScheduled">$(loc.xdi.ActionText.xDiMsiProcessDriverScheduled)</ProgressText>
+			<ProgressText Action="xDiMsiProcessDriverRollback">$(loc.xdi.ActionText.xDiMsiProcessDriverRollback)</ProgressText>
+			<ProgressText Action="xDiMsiUpdateForceReboot">$(loc.xdi.ActionText.xDiMsiUpdateForceReboot)</ProgressText>
+			<ProgressText Action="xDiMsiUpdateScheduledReboot">$(loc.xdi.ActionText.xDiMsiUpdateScheduledReboot)</ProgressText>
+			
+			<ProgressText Action="xDiMsiInitialize">$(loc.xdi.ActionText.xDiMsiInitialize)</ProgressText>
+			<ProgressText Action="xDiInstallFromInfSection" Template="$(loc.xdi.ActionText.xDiInstallFromInfSection.Template)">$(loc.xdi.ActionText.xDiInstallFromInfSection)</ProgressText>
+			<ProgressText Action="xDiInstallLegacyPnpDevice" Template="$(loc.xdi.ActionText.xDiInstallLegacyPnpDevice.Template)">$(loc.xdi.ActionText.xDiInstallLegacyPnpDevice)</ProgressText>
+			<ProgressText Action="xDiInstallPnpDeviceInf" Template="$(loc.xdi.ActionText.xDiInstallPnpDeviceInf.Template)">$(loc.xdi.ActionText.xDiInstallPnpDeviceInf)</ProgressText>
+			<ProgressText Action="xDiInstallNetworkComponent" Template="$(loc.xdi.ActionText.xDiInstallNetworkComponent.Template)">$(loc.xdi.ActionText.xDiInstallNetworkComponent)</ProgressText>
+			<ProgressText Action="xDiUninstallPnpDevice" Template="$(loc.xdi.ActionText.xDiUninstallPnpDevice.Template)">$(loc.xdi.ActionText.xDiUninstallPnpDevice)</ProgressText>
+			<ProgressText Action="xDiUninstallNetworkComponent" Template="$(loc.xdi.ActionText.xDiUninstallNetworkComponent.Template)">$(loc.xdi.ActionText.xDiUninstallNetworkComponent)</ProgressText>
+			<ProgressText Action="xDiCleanupOEMInf" Template="$(loc.xdi.ActionText.xDiCleanupOEMInf.Template)">$(loc.xdi.ActionText.xDiCleanupOEMInf)</ProgressText>
+			<ProgressText Action="xDiStartService" Template="$(loc.xdi.ActionText.xDiStartService.Template)">$(loc.xdi.ActionText.xDiStartService)</ProgressText>
+			<ProgressText Action="xDiStopService" Template="$(loc.xdi.ActionText.xDiStopService.Template)">$(loc.xdi.ActionText.xDiStopService)</ProgressText>
+			<ProgressText Action="xDiQueueScheduleReboot">$(loc.xdi.ActionText.xDiQueueScheduleReboot)</ProgressText>
+			<ProgressText Action="xDiCheckServicesInfSection" Template="$(loc.xdi.ActionText.xDiCheckServicesInfSection.Template)">$(loc.xdi.ActionText.xDiCheckServicesInfSection)</ProgressText>
+			
+			<Error Id="28001">$(loc.xdi.Error.28001)</Error>
+		</UI>
+
+	</Fragment>
+</Wix>

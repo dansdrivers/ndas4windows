@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Include>
+<?define iconid.uninst="uninst.exe"?>
+<?define iconid.ndasmgmt="ndasmgmt.exe"?>
+<?define iconid.ndasnif="ndasnif.exe"?>
+<?define iconid.ndasbind="ndasbind.exe"?>
+<?define iconid.setup="setup.exe"?>
+</Include>

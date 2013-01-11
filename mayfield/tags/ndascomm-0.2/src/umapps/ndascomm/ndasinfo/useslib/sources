@@ -1,0 +1,3 @@
+USE_NDASCOMM_DLL=0
+SOURCES_USED=..\sources.inc
+!INCLUDE ..\sources.inc

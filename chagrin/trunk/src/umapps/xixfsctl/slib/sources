@@ -1,0 +1,7 @@
+TARGETNAME=libxixfsctl
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+BUILD_PRODUCES=libxixfsctl
+
+!include ..\sources.inc

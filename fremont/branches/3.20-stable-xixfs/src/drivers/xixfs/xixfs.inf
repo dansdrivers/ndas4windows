@@ -1,0 +1,66 @@
+;-------------------------------------------------------------------------
+; xixfs.inf
+; 
+; Installation file (.inf) for Xix File System Service
+;
+; Copyright (c) 2002-2007, XIMETA, Inc.
+;-------------------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Provider    = %Provider%
+DriverVer   = 08/28/2000,1.0.0.1
+CatalogFile = xixfs.cat
+
+[DestinationDirs]
+DefaultDestDir    = 12 ; DIRID_DRIVERS
+xixfs.DriverFiles = 12 ; DIRID_DRIVERS
+
+[DefaultInstall]
+OptionDesc          = %xixfs.ServiceDesc%
+CopyFiles           = xixfs.DriverFiles
+
+[DefaultInstall.Services]
+AddService=%xixfs.ServiceName%,,xixfs.Service
+
+[DefaultUninstall]
+DelFiles = xixfs.DriverFiles
+DelReg   = xixfs.DelReg
+
+[DefaultUninstall.Services]
+DelService =%xixfs.ServiceName%
+; ,0x200		; Flags note to stop service first
+
+[xixfs.Service]
+DisplayName      = %xixfs.DisplayName%
+Description      = %xixfs.ServiceDesc%
+ServiceBinary    = %12%\xixfs.sys ;DIRID_DRIVERS\xixfs.sys
+ServiceType      = 2                ;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 1                ;SERVICE_SYSTEM_START
+ErrorControl     = 1                ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = %xixfs.LoadOrderGroup%
+AddReg           = xixfs.AddReg
+
+[xixfs.AddReg]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\NdasIoMg.dll"
+
+[xixfs.DriverFiles]
+xixfs.sys
+
+[SourceDisksNames]
+1=%DiskId1%
+
+[SourceDisksFiles]
+xixfs.sys=1
+
+[Strings]
+; Non-localizable Strings
+xixfs.ServiceName         = "xixfs"
+xixfs.RegPath             = "SYSTEM\CurrentControlSet\Services\xixfs"
+xixfs.LoadOrderGroup      = "File System"
+
+; Localizable Strings
+Provider            = "XIMETA"
+xixfs.DisplayName = "NDAS Xix File System Service"
+xixfs.ServiceDesc = "NDAS Xix File System Service"
+DiskId1             = "NDAS Device Driver Installation Disk"

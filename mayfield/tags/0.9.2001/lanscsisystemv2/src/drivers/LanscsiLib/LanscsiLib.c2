@@ -1,0 +1,358 @@
+#include <basetyps.h>
+#include <stdlib.h>
+#include <wtypes.h>
+#include <setupapi.h>
+#include <stdio.h>
+#include <string.h>
+#include <winioctl.h>
+
+#include <initguid.h>
+#include "..\inc\lanscsiLib.h"
+
+
+static HANDLE
+OpenBusInterface(
+	VOID
+	)
+{
+    HDEVINFO							hardwareDeviceInfo;
+    SP_INTERFACE_DEVICE_DATA			deviceInterfaceData;
+    HANDLE                              file;
+    PSP_INTERFACE_DEVICE_DETAIL_DATA    deviceInterfaceDetailData = NULL;
+    ULONG                               predictedLength = 0;
+    ULONG                               requiredLength = 0;
+
+    hardwareDeviceInfo = SetupDiGetClassDevs (
+							(LPGUID)&GUID_LANSCSI_BUS_ENUMERATOR_INTERFACE_CLASS,
+							NULL, // Define no enumerator (global)
+							NULL, // Define no
+							(DIGCF_PRESENT | // Only Devices present
+							DIGCF_INTERFACEDEVICE) // Function class devices.
+							);
+
+    if(INVALID_HANDLE_VALUE == hardwareDeviceInfo)
+    {
+        printf("SetupDiGetClassDevs failed: %x\n", GetLastError());
+        return NULL;
+    }
+
+    deviceInterfaceData.cbSize = sizeof (SP_INTERFACE_DEVICE_DATA);
+
+    if (SetupDiEnumDeviceInterfaces (
+			hardwareDeviceInfo,
+            0, // No care about specific PDOs
+            (LPGUID)&GUID_LANSCSI_BUS_ENUMERATOR_INTERFACE_CLASS,
+            0, //
+            &deviceInterfaceData)) 
+	{
+    } else if (ERROR_NO_MORE_ITEMS == GetLastError()) 
+	{
+        printf("Error:Interface GUID_LANSCSI_BUS_ENUMERATOR_INTERFACE_CLASS is not registered\n");
+		return NULL;
+    }
+
+    SetupDiGetInterfaceDeviceDetail (
+            hardwareDeviceInfo,
+            &deviceInterfaceData,
+            NULL, // probing so no output buffer yet
+            0, // probing so output buffer length of zero
+            &requiredLength,
+            NULL // not interested in the specific dev-node
+			);
+
+    predictedLength = requiredLength;
+
+    deviceInterfaceDetailData = malloc (predictedLength);
+    deviceInterfaceDetailData->cbSize = 
+                    sizeof (SP_INTERFACE_DEVICE_DETAIL_DATA);
+
+    
+    if (! SetupDiGetInterfaceDeviceDetail (
+               hardwareDeviceInfo,
+               &deviceInterfaceData,
+               deviceInterfaceDetailData,
+               predictedLength,
+               &requiredLength,
+               NULL)) 
+	{
+        printf("Error in SetupDiGetInterfaceDeviceDetail\n");
+        free (deviceInterfaceDetailData);
+	    SetupDiDestroyDeviceInfoList (hardwareDeviceInfo);
+        return NULL;
+    }
+
+    printf("Opening %s\n", deviceInterfaceDetailData->DevicePath);
+
+    file = CreateFile ( deviceInterfaceDetailData->DevicePath,
+                        GENERIC_READ | GENERIC_WRITE,
+                        0, // FILE_SHARE_READ | FILE_SHARE_WRITE
+                        NULL, // no SECURITY_ATTRIBUTES structure
+                        OPEN_EXISTING, // No special create flags
+                        0, // No special attributes
+                        NULL); // No template file
+
+    if (INVALID_HANDLE_VALUE == file) {
+        printf("Device not ready: %x", GetLastError());
+        free (deviceInterfaceDetailData);
+	    SetupDiDestroyDeviceInfoList (hardwareDeviceInfo);
+        return NULL;
+    }
+    
+    printf("Bus interface opened!!!\n");	
+	
+	return file;
+}
+
+BOOLEAN
+LanscsiPlugin(
+	ULONG   SerialNo
+	)
+{
+    HANDLE						file;
+	BOOLEAN						result;
+	ULONG						bytes;
+    ULONG						bytesReturned;
+	PBUSENUM_PLUGIN_HARDWARE	lanscsiPluginData;	
+
+
+	printf("SerialNo. of the device to be enumerated: %d\n", SerialNo);
+
+	file = OpenBusInterface();
+	if(file == NULL) {
+		return FALSE;
+	}
+
+
+    lanscsiPluginData = malloc (bytes = (sizeof (BUSENUM_PLUGIN_HARDWARE) 
+											+ BUS_HARDWARE_IDS_LENGTH));
+
+    lanscsiPluginData->Size = sizeof (BUSENUM_PLUGIN_HARDWARE);
+	lanscsiPluginData->SerialNo = SerialNo;
+
+	memcpy(
+		lanscsiPluginData->HardwareIDs,
+		BUS_HARDWARE_IDS,
+        BUS_HARDWARE_IDS_LENGTH
+		);
+
+    if (!DeviceIoControl (
+			file,
+			IOCTL_BUSENUM_PLUGIN_HARDWARE,
+            lanscsiPluginData,
+			bytes,
+            lanscsiPluginData,
+			bytes,
+            &bytesReturned, 
+			NULL)) 
+	{
+		printf("PlugIn failed:0x%x\n", GetLastError());
+		result = FALSE;
+    } else
+		result = TRUE;
+
+	free(lanscsiPluginData);
+    CloseHandle(file);
+
+	return result;
+}
+
+
+BOOLEAN
+LanscsiEject(
+	ULONG   SerialNo
+	)
+{
+    HANDLE					file;
+	BOOLEAN					result;
+    ULONG					bytesReturned;
+    BUSENUM_EJECT_HARDWARE  eject;
+
+
+	printf("SerialNo. of the device to be ejected: %d\n", SerialNo);
+
+	file = OpenBusInterface();
+	if(file == NULL) {
+		return FALSE;
+	}
+
+
+	eject.SerialNo = SerialNo;
+    eject.Size = sizeof (eject);
+
+    if (!DeviceIoControl (
+			file,
+			IOCTL_BUSENUM_EJECT_HARDWARE,
+            &eject,
+			sizeof (eject),
+            &eject,
+			sizeof (eject),
+            &bytesReturned, 
+			NULL)) 
+	{
+		printf("LanscsiEject failed:0x%x\n", GetLastError());
+		result = FALSE;
+    } else
+		result = TRUE;
+
+    CloseHandle(file);
+
+	return result;
+}
+
+
+BOOLEAN
+LanscsiUnplug(
+	ULONG   SerialNo
+	)
+{
+    HANDLE					file;
+	BOOLEAN					result;
+    ULONG					bytesReturned;
+    BUSENUM_UNPLUG_HARDWARE unplug;
+
+
+	printf("SerialNo. of the device to be unpluged: %d\n", SerialNo);
+
+	file = OpenBusInterface();
+	if(file == NULL) {
+		return FALSE;
+	}
+
+
+	unplug.SerialNo = SerialNo;
+    unplug.Size = sizeof (unplug);
+
+    if (!DeviceIoControl (
+			file,
+			IOCTL_BUSENUM_UNPLUG_HARDWARE,
+            &unplug,
+			sizeof (unplug),
+            &unplug,
+			sizeof (unplug),
+            &bytesReturned, 
+			NULL)) 
+	{
+		printf("LanscsiUnplug failed:0x%x\n", GetLastError());
+		result = FALSE;
+    } else
+		result = TRUE;
+
+    CloseHandle(file);
+
+	return result;
+}
+
+
+BOOLEAN
+LanscsiAddTarget(
+    PLANSCSI_ADD_TARGET_DATA	AddTargetData
+	)
+{
+    HANDLE					file;
+	BOOLEAN					result;
+    ULONG					bytesReturned;
+
+
+	printf("SerialNo. of the device to add target: %d\n", AddTargetData->SerialNo);
+
+	file = OpenBusInterface();
+	if(file == NULL) {
+		return FALSE;
+	}
+
+    if (!DeviceIoControl (
+			file,
+			IOCTL_LANSCSI_ADD_TARGET,
+            AddTargetData,
+			sizeof (*AddTargetData),
+            AddTargetData,
+			sizeof (*AddTargetData),
+            &bytesReturned, 
+			NULL)) 
+	{
+		printf("LanscsiAddTarget failed:0x%x\n", GetLastError());
+		result = FALSE;
+    } else
+		result = TRUE;
+
+    CloseHandle(file);
+
+	return result;
+}
+
+
+BOOLEAN
+LanscsiRemoveTarget(
+    PLANSCSI_REMOVE_TARGET_DATA	RemoveTargetData
+	)
+{
+    HANDLE					file;
+	BOOLEAN					result;
+    ULONG					bytesReturned;
+
+
+	printf("SerialNo. of the device to add target: %d\n", RemoveTargetData->SerialNo);
+
+	file = OpenBusInterface();
+	if(file == NULL) {
+		return FALSE;
+	}
+
+    if (!DeviceIoControl (
+			file,
+			IOCTL_LANSCSI_REMOVE_TARGET,
+            RemoveTargetData,
+			sizeof (*RemoveTargetData),
+            RemoveTargetData,
+			sizeof (*RemoveTargetData),
+            &bytesReturned, 
+			NULL)) 
+	{
+		printf("LanscsiRemoveTarget failed:0x%x\n", GetLastError());
+		result = FALSE;
+    } else
+		result = TRUE;
+
+    CloseHandle(file);
+
+	return result;
+}
+
+
+BOOLEAN
+LanscsiCopyTarget(
+    PLANSCSI_COPY_TARGET_DATA	CopyTargetData
+	)
+{
+    HANDLE					file;
+	BOOLEAN					result;
+    ULONG					bytesReturned;
+
+
+	printf("LanscsiCopyTarget\n");
+
+	file = OpenBusInterface();
+	if(file == NULL) {
+		return FALSE;
+	}
+
+    if (!DeviceIoControl (
+			file,
+			IOCTL_LANSCSI_COPY_TARGET,
+            CopyTargetData,
+			sizeof (PLANSCSI_COPY_TARGET_DATA),
+            CopyTargetData,
+			sizeof (PLANSCSI_COPY_TARGET_DATA),
+            &bytesReturned, 
+			NULL)) 
+	{
+		printf("LanscsiCopyTarget failed:0x%x\n", GetLastError());
+		result = FALSE;
+    } else
+		result = TRUE;
+
+    CloseHandle(file);
+
+	return result;
+}
+

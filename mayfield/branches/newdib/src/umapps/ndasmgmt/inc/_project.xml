@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<projectDefinition>
+  <project>
+    <name>ndasmgmt_inc</name>
+    <type>none</type>
+    <filter recursive="true">*.*</filter>
+  </project>
+</projectDefinition>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+		 DefaultTargets="Build">
+
+  <ItemGroup>
+	<ChildProject Include="**\loc.proj" />
+  </ItemGroup>
+
+  <Target Name="Build">
+	<MSBuild Targets="Build" Projects="%(ChildProject.identity)" />
+  </Target>
+
+  <Target Name="ReBuild">
+	<MSBuild Targets="ReBuild" Projects="%(ChildProject.identity)" />
+  </Target>
+
+  <Target Name="Clean">
+	<MSBuild Targets="Clean" Projects="%(ChildProject.identity)" />
+  </Target>
+
+  <Target Name="DistClean">
+	<MSBuild Targets="DistClean" Projects="%(ChildProject.identity)" />
+  </Target>
+
+</Project>

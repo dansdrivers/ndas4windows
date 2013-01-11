@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<Target 
+		Name="IncrementalBuild" 
+		DependsOnTargets="SetIncrementalBuildProperties;Build" />
+
+	<Target 
+		Name="RevisionBuild"
+		DependsOnTargets="SetRevisionBuildProperties;Build;IndexSources;StoreSymbols;DistributeBuild" />
+
+	<Target
+		Name="OfficialBuild" 
+		DependsOnTargets="SetOfficialBuildProperties;Build;IndexSources;StoreSymbols" />
+
+	<PropertyGroup>
+		<BuildSourceTargets>Rebuild</BuildSourceTargets>
+		<BuildSourceProperties></BuildSourceProperties>
+
+		<BuildSetupTargets>Rebuild</BuildSetupTargets>
+		<BuildSetupProperties></BuildSetupProperties>
+
+		<IndexSourcesTargets>IndexSources</IndexSourcesTargets>
+		<IndexSourcesProperties></IndexSourcesProperties>
+
+		<StoreSymbolsTargets>Build</StoreSymbolsTargets>
+		<StoreSymbolsProperties></StoreSymbolsProperties>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OfficialCodeSign>false</OfficialCodeSign>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<SkipBuildSource Condition="''=='$(SkipBuildSource)'">false</SkipBuildSource>
+		<SkipBuildSetup Condition="''=='$(SkipBuildSetup)'">false</SkipBuildSetup>
+	</PropertyGroup>
+
+	<Target 
+		Name="Build" 
+		DependsOnTargets="BuildSource;ZipBaseBinFiles;BuildSetup;CopySetupFiles" />
+
+	<PropertyGroup>
+		<ProjectBaseDirFromSymstore>..\..\</ProjectBaseDirFromSymstore>
+		<OfficialSymstoreDir>D:\build\symbols</OfficialSymstoreDir>
+		<RevisionSymstoreDir>$(ProjectBaseDirFromSymstore)..\symbols</RevisionSymstoreDir>
+		<DistributionDir>..\dist\</DistributionDir>
+	</PropertyGroup>
+
+	<Target Name="SetOfficialBuildProperties">
+		<CreateProperty Value="true">
+			<Output TaskParameter="Value" PropertyName="OfficialCodeSign" />
+		</CreateProperty>
+		<CreateProperty Value="false">
+			<Output TaskParameter="Value" PropertyName="UseProductRevision" />
+		</CreateProperty>
+		<CreateProperty Value="SymstoreLogFile=$(ProjectBaseDirFromSymstore)scratch\_symstore.log;
+							   SymstoreDir=$(OfficialSymstoreDir)">
+			<Output TaskParameter="Value" PropertyName="StoreSymbolsProperties" />
+		</CreateProperty>
+	</Target>
+
+	<Target Name="SetRevisionBuildProperties">
+		<CreateProperty Value="true">
+			<Output TaskParameter="Value" PropertyName="OfficialCodeSign" />
+		</CreateProperty>
+		<CreateProperty Value="SymstoreLogFile=$(ProjectBaseDirFromSymstore)scratch\_symstore.log;
+							   SymstoreDir=$(RevisionSymstoreDir)">
+			<Output TaskParameter="Value" PropertyName="StoreSymbolsProperties" />
+		</CreateProperty>
+	</Target>
+
+	<Target Name="SetIncrementalBuildProperties">
+		<!-- incremental build targets 'build' instead of 'rebuild' -->
+		<CreateProperty Value="Build">
+			<Output TaskParameter="Value" PropertyName="BuildSourceTargets" />
+		</CreateProperty>
+	</Target>
+
+	<!-- Build source tree -->
+
+	<Target Name="BuildSource" 
+			Condition="!$(SkipBuildSource)">
+		<Exec Command="bin\update_version.cmd" />
+		<MSBuild Projects="src\build.proj" 
+				 Targets="$(BuildSourceTargets)"
+				 Properties="$(BuildSourceProperties);
+							 OfficialCodeSign=$(OfficialCodeSign)" />
+	</Target>
+
+	<!-- Build setup -->
+
+	<PropertyGroup>
+		<SetupPublishDir>publish</SetupPublishDir>
+	</PropertyGroup>
+
+	<Target Name="BuildSetup" DependsOnTargets="BuildSetupNdasPort;BuildSetupNdasScsi" />
+
+	<Target Name="BuildSetupNdasPort" 
+			Condition="!$(SkipBuildSetup)"
+			DependsOnTargets="GetVersionInfo">
+		<!-- ProductVersion and ProductRevision are created from
+			 ReadProductVersion -->
+		<MSBuild Projects="setup\setup.proj" 
+				 Targets="$(BuildSetupTargets)"
+				 Properties="ProductVersion=$(ProductVersion);
+							 ProductRevision=$(ProductRevision);
+							 OfficialCodeSign=$(OfficialCodeSign)"
+				 RebaseOutputs="true">
+			<Output TaskParameter="TargetOutputs" ItemName="SetupOutputFiles" />
+		</MSBuild>
+		<MSBuild Projects="setup\setup.proj" 
+				 Targets="$(BuildSetupTargets)"
+				 Properties="ProductVersion=$(ProductVersion);
+							 ProductRevision=$(ProductRevision);
+							 OfficialCodeSign=$(OfficialCodeSign);
+							 Configuration=chk"
+				 RebaseOutputs="true">
+			<Output TaskParameter="TargetOutputs" ItemName="SetupOutputFiles" />
+		</MSBuild>
+	</Target>
+
+	<Target Name="BuildSetupNdasScsi" 
+			Condition="!$(SkipBuildSetup)"
+			DependsOnTargets="GetVersionInfo">
+		<!-- ProductVersion and ProductRevision are created from
+			 ReadProductVersion -->
+		<MSBuild Projects="setup\setup.proj" 
+				 Targets="$(BuildSetupTargets)"
+				 Properties="ProductVersion=$(ProductVersion);
+							 ProductRevision=$(ProductRevision);
+							 OfficialCodeSign=$(OfficialCodeSign);
+							 SKU=ndasscsi"
+				 RebaseOutputs="true">
+			<Output TaskParameter="TargetOutputs" ItemName="SetupOutputFiles" />
+		</MSBuild>
+		<MSBuild Projects="setup\setup.proj" 
+				 Targets="$(BuildSetupTargets)"
+				 Properties="ProductVersion=$(ProductVersion);
+							 ProductRevision=$(ProductRevision);
+							 OfficialCodeSign=$(OfficialCodeSign);
+							 Configuration=chk;
+							 SKU=ndasscsi"
+				 RebaseOutputs="true">
+			<Output TaskParameter="TargetOutputs" ItemName="SetupOutputFiles" />
+		</MSBuild>
+	</Target>
+
+	<Target Name="CopySetupFiles"
+			Inputs="@(SetupOutputFiles)"
+			Outputs="@(SetupOutputFiles->'$(SetupPublishDir)\%(Filename)%(Extension)')">
+		<Copy SourceFiles="@(SetupOutputFiles)" DestinationFolder="$(SetupPublishDir)">
+			<Output TaskParameter="CopiedFiles" ItemName="CopiedSetupOutputFiles" />
+		</Copy>
+	</Target>
+
+	<!-- Index Sources -->
+
+	<Target Name="IndexSources">
+		<MSBuild Projects="bin\msbuild\srcindex.proj"
+				 Targets="$(IndexSourcesTargets)"
+				 Properties="$(IndexSourcesProperties)">
+		</MSBuild>
+	</Target>
+
+	<!-- Publish Symbols -->
+
+	<Target Name="StoreSymbols"
+			DependsOnTargets="GetVersionInfo">
+		<MSBuild Projects="bin\msbuild\symstore.proj"
+				 Targets="$(StoreSymbolsTargets)"
+				 Properties="ProductVersion=$(ProductVersion);
+							 ProductRevision=$(ProductRevision);
+							 $(StoreSymbolsProperties)">
+		</MSBuild>
+	</Target>
+
+	<!-- Distribute Output Files -->
+
+	<Target Name="DistributeBuild" Outputs="@(DistributeFiles)">
+		<Copy SourceFiles="@(SetupOutputFiles)" DestinationFolder="$(DistributionDir)">
+			<Output TaskParameter="CopiedFiles" ItemName="DistributionFiles" />
+		</Copy>
+		<Copy SourceFiles="@(ZippedBaseBinFiles)" DestinationFolder="$(DistributionDir)">
+			<Output TaskParameter="CopiedFiles" ItemName="DistributionFiles" />
+		</Copy>
+	</Target>
+
+	<!-- import MSBuild.Community.Tasks -->
+
+	<PropertyGroup>
+		<LocalMSBuildPath>bin\msbuild\</LocalMSBuildPath>
+		<!-- MSBuildCommunityTasksPath should be relative to the path
+			 of the MSBuild.Community.Tasks.Targets -->
+		<MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+	</PropertyGroup>
+
+	<Import Project="$(LocalMSBuildPath)MSBuild.Community.Tasks.Targets"/>
+
+	<!-- import ReadProductVersion from verinfo.targets -->
+
+	<PropertyGroup>
+		<VersionInfoBaseDir>.</VersionInfoBaseDir>
+	</PropertyGroup>
+
+	<Import Project="$(LocalMSBuildPath)verinfo.targets" />
+
+	<Target Name="ZipBaseBinFiles" DependsOnTargets="GetVersionInfo">
+		<MSBuild Projects="$(LocalMSBuildPath)zipdist.proj" 
+				 Targets="Zip" 
+				 Properties="ProductVersion=$(ProductVersion);
+							 ProductRevision=$(ProductRevision)"
+				 RebaseOutputs="true">
+			<Output TaskParameter="TargetOutputs" ItemName="ZippedBaseBinFiles" />
+		</MSBuild>
+		<MSBuild Projects="$(LocalMSBuildPath)zipdist.proj" 
+				 Targets="Zip" 
+				 Properties="ProductVersion=$(ProductVersion);
+							 ProductRevision=$(ProductRevision);
+							 Configuration=chk" 
+				 RebaseOutputs="true">
+			<Output TaskParameter="TargetOutputs" ItemName="ZippedBaseBinFiles" />
+		</MSBuild>
+	</Target>
+
+</Project>

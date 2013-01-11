@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ndasportctl"
+	ProjectGUID="{DB9AA6FB-36AA-488D-8AD5-29AD401BDE22}"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="xbuild -ePwi"
+				ReBuildCommandLine="xbuild -cePwi"
+				CleanCommandLine="xbuild -c0"
+				Output=""
+				PreprocessorDefinitions="WIN32;_DEBUG;"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="xbuild fre -ePwi"
+				ReBuildCommandLine="xbuild fre -cePwi"
+				CleanCommandLine="xbuild fre -c0"
+				Output=""
+				PreprocessorDefinitions="WIN32;NDEBUG;"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
+			<File
+				RelativePath=".\ndasportctl.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
+			>
+		</Filter>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
+			<File
+				RelativePath=".\ndasportcmd.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ndasportctl.cpp"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\dirs"
+			>
+		</File>
+		<File
+			RelativePath=".\cmd\makefile"
+			>
+		</File>
+		<File
+			RelativePath=".\slib\makefile"
+			>
+		</File>
+		<File
+			RelativePath=".\cmd\ndasportctl.exe.manifest"
+			>
+		</File>
+		<File
+			RelativePath=".\cmd\ndasportctl.ver"
+			>
+		</File>
+		<File
+			RelativePath=".\slib\sources"
+			>
+		</File>
+		<File
+			RelativePath=".\cmd\sources"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

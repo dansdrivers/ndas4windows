@@ -1,0 +1,1 @@
+This file should be replaced with an actual catalog file.

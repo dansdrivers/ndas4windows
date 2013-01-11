@@ -1,0 +1,11 @@
+ISSetupFile	FileName	Stream	Language	Splash	Path
+s72	S255	V0	S50	I2	S0
+ISSetupFile	ISSetupFile
+SetupFile1	setup.bmp		0	1	<ISProjectDataFolder>\binary\setup.bmp
+SetupFile2	setup_deu.bmp		1031	1	<ISProjectDataFolder>\binary\setup_deu.bmp
+SetupFile3	setup_esp.bmp		1034	1	<ISProjectDataFolder>\binary\setup_esp.bmp
+SetupFile4	setup_fra.bmp		1036	1	<ISProjectDataFolder>\binary\setup_fra.bmp
+SetupFile5	setup_ita.bmp		1040	1	<ISProjectDataFolder>\binary\setup_ita.bmp
+SetupFile6	setup_ptb.bmp		1046	1	<ISProjectDataFolder>\binary\setup_ptb.bmp
+SetupFile7	setup_frc.bmp		3084	1	<ISProjectDataFolder>\binary\setup_frc.bmp
+SetupFile8	setup_ptg.bmp		2070	1	<ISProjectDataFolder>\binary\setup_ptg.bmp

@@ -1,0 +1,13 @@
+TARGETNAME=libdes
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=libdes
+
+# to publish headers
+NTTARGETFILE1=$(NDAS_INC_PATH)\des.h
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME).lib}
+
+SOURCES=des.c key.c

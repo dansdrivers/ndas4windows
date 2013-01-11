@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="Dialogs">
+	<UI>
+	  <!-- AdminChangeFolder -->
+	  <Dialog Id="AdminChangeFolder" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Tail" Type="PathEdit" X="21" Y="207" Width="332" Height="17" Property="TARGETDIR" />
+		<Control Id="OK" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.OK)">
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		  <Publish Event="SetTargetPath" Value="TARGETDIR">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="Reset" Value="0">1</Publish>
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		</Control>
+		<Control Id="ComboText" Type="Text" X="21" Y="50" Width="99" Height="14" TabSkip="no" Text="$(loc.Text.LookIn)" />
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Up" Type="PushButton" X="310" Y="66" Width="19" Height="19" ToolTip="Up one level" Icon="yes" FixedSize="yes" IconSize="16" Text="Up.ibd">
+		  <Publish Event="DirectoryListUp" Value="0">1</Publish>
+		</Control>
+		<Control Id="NewFolder" Type="PushButton" X="335" Y="66" Width="19" Height="19" ToolTip="Create new folder" Icon="yes" FixedSize="yes" IconSize="16" Text="New.ibd">
+		  <Publish Event="DirectoryListNew" Value="0">1</Publish>
+		</Control>
+		<Control Id="List" Type="DirectoryList" X="21" Y="90" Width="332" Height="97" Property="TARGETDIR" Sunken="yes" TabSkip="no" />
+		<Control Id="TailText" Type="Text" X="21" Y="193" Width="99" Height="13" TabSkip="no" Text="$(loc.Text.FolderName)" />
+		<Control Id="Combo" Type="DirectoryCombo" X="21" Y="64" Width="277" Height="80" Property="TARGETDIR" Removable="yes" Fixed="yes" Remote="yes" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+      <Text>$(loc.AdminChangeFolder.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+      <Text>$(loc.AdminChangeFolder.DlgTitle)</Text>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+	  </Dialog>
+
+	  <!-- AdminNetworkLocation -->
+	  <Dialog Id="AdminNetworkLocation" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="InstallNow" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Install)">
+		  <Publish Event="SetTargetPath" Value="TARGETDIR">1</Publish>
+		  <Publish Event="NewDialog" Value="OutOfSpace">
+			<![CDATA[OutOfNoRbDiskSpace = 1]]>
+		  </Publish>
+		  <Publish Event="EndDialog" Value="Return">
+			<![CDATA[OutOfNoRbDiskSpace <> 1]]>
+		  </Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="SetupPathEdit" Type="PathEdit" X="21" Y="102" Width="330" Height="17" Property="TARGETDIR" />
+		<Control Id="Browse" Type="PushButton" X="286" Y="124" Width="66" Height="17" Text="$(loc.Text.Change)">
+		  <Publish Event="SpawnDialog" Value="AdminChangeFolder">1</Publish>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="AdminWelcome">1</Publish>
+		</Control>
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+      <Text>$(loc.AdminNetworkLocation.DlgDesc)</Text>
+    </Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.AdminNetworkLocation.DlgTitle)</Text>
+		</Control>
+		<Control Id="DlgText" Type="Text" X="21" Y="51" Width="326" Height="40">
+      <Text>$(loc.AdminNetworkLocation.DlgText)</Text>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="LBBrowse" Type="Text" X="21" Y="90" Width="100" Height="10" Text="$(loc.Text.NetworkLocation)" />
+	  </Dialog>
+	  
+	  <!-- AdminWelcome -->
+	  <Dialog Id="AdminWelcome" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="AdminNetworkLocation">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Back)" />
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="TextLine2" Type="Text" X="135" Y="55" Width="228" Height="45" Transparent="yes">
+		  <Text>$(loc.AdminWelcome.TextLine2)</Text>
+		</Control>
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="326" Height="0" />
+		<Control Id="Image" Type="Bitmap" X="0" Y="0" Width="374" Height="234" Text="DialogBitmap.ibd" />
+		<Control Id="TextLine1" Type="Text" X="135" Y="8" Width="225" Height="45" Transparent="yes">
+		  <Text>$(loc.AdminWelcome.TextLine1)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- CancelSetup -->
+	  <Dialog Id="CancelSetup" Width="260" Height="85" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="No" Type="PushButton" X="135" Y="57" Width="66" Height="17" Default="yes" Cancel="yes" Text="$(loc.Text.N)">
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		</Control>
+		<Control Id="Yes" Type="PushButton" X="62" Y="57" Width="66" Height="17" Text="$(loc.Text.Y)">
+		  <Publish Event="EndDialog" Value="Exit">1</Publish>
+		</Control>
+		<Control Id="Text" Type="Text" X="48" Y="15" Width="194" Height="30">
+		  <Text>$(loc.CancelSetup.Text)</Text>
+		</Control>
+		<Control Id="Icon" Type="Icon" X="15" Y="15" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="WarningIcon.ibd" />
+	  </Dialog>
+	  
+	  <!-- CustomerInformation -->
+	  <!--
+	  <Dialog Id="CustomerInformation" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="NameEdit" Type="Edit" X="21" Y="63" Width="237" Height="17" Property="USERNAME" Text="{\Tahoma8}{50}" />
+		<Control Id="CompanyLabel" Type="Text" X="21" Y="89" Width="75" Height="10" TabSkip="no" Text="&amp;Organization:" />
+		<Control Id="CompanyEdit" Type="Edit" X="21" Y="100" Width="237" Height="17" Property="COMPANYNAME" Text="{\Tahoma8}{80}" />
+		<Control Id="SerialLabel" Type="Text" X="21" Y="127" Width="109" Height="10" Hidden="yes" TabSkip="no" Text="&amp;Serial Number:">
+		  <Condition Action="show">
+			<![CDATA[SERIALNUMSHOW]]>
+		  </Condition>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="RadioGroup" Type="RadioButtonGroup" X="63" Y="170" Width="300" Height="50" Property="ApplicationUsers">
+		  <RadioButtonGroup Property="ApplicationUsers">
+			<RadioButton Value="AllUsers" X="1" Y="7" Width="290" Height="14" Text="&amp;Anyone who uses this computer (all users)" />
+			<RadioButton Value="OnlyCurrentUser" X="1" Y="23" Width="290" Height="14" Text="Only for &amp;me ([USERNAME])" />
+		  </RadioButtonGroup>
+		  <Condition Action="hide">
+			<![CDATA[NOT Privileged]]>
+		  </Condition>
+		  <Condition Action="hide">
+			<![CDATA[ProductState > 0]]>
+		  </Condition>
+		  <Condition Action="hide">
+			<![CDATA[Version9X]]>
+		  </Condition>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="LicenseAgreement">1</Publish>
+		</Control>
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Property="ALLUSERS" Value="1">
+			<![CDATA[ApplicationUsers = "AllUsers" And Privileged]]>
+		  </Publish>
+		  <Publish Property="ALLUSERS" Value="{}">
+			<![CDATA[ApplicationUsers = "OnlyCurrentUser" And Privileged]]>
+		  </Publish>
+		  <Publish Event="EndDialog" Value="Exit">
+			<![CDATA[(SERIALNUMVALRETRYLIMIT) And (SERIALNUMVALRETRYLIMIT<0) And (SERIALNUMVALRETURN<>SERIALNUMVALSUCCESSRETVAL)]]></Publish>
+		  <Publish Event="NewDialog" Value="SetupType"><![CDATA[(Not SERIALNUMVALRETURN) OR (SERIALNUMVALRETURN=SERIALNUMVALSUCCESSRETVAL)]]></Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup"><![CDATA[1]]></Publish>
+		</Control>
+		<Control Id="NameLabel" Type="Text" X="21" Y="52" Width="75" Height="10" TabSkip="no" Text="&amp;User Name:" />
+		<Control Id="SerialNumber" Type="MaskedEdit" X="21" Y="138" Width="237" Height="17" Property="ISX_SERIALNUM" Hidden="yes">
+		  <Condition Action="show"><![CDATA[SERIALNUMSHOW]]></Condition>
+		</Control>
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text><![CDATA[Please enter your information.]]></Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text><![CDATA[{&MSSansBold8}Customer Information]]></Text>
+		</Control>
+		<Control Id="DlgRadioGroupText" Type="Text" X="21" Y="161" Width="300" Height="14">
+		  <Text><![CDATA[Install this application for:]]></Text>
+		  <Condition Action="hide"><![CDATA[NOT Privileged]]></Condition>
+		  <Condition Action="hide"><![CDATA[ProductState > 0]]>
+		  </Condition>
+		  <Condition Action="hide">
+			<![CDATA[Version9X]]>
+		  </Condition>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+	  </Dialog>
+	  -->
+
+	  <!-- CustomSetup -->
+	  <Dialog Id="CustomSetup" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes" TrackDiskSpace="yes">
+		<Control Id="Tree" Type="SelectionTree" X="8" Y="70" Width="220" Height="118" Property="_BrowseProperty" Sunken="yes" TabSkip="no" />
+		<Control Id="ChangeFolder" Type="PushButton" X="301" Y="203" Width="66" Height="17" Text="$(loc.Text.Change)">
+		  <Publish Event="SelectionBrowse" Value="InstallChangeFolder">1</Publish>
+		  <Condition Action="hide">
+			<![CDATA[Installed]]>
+		  </Condition>
+		</Control>
+		<Control Id="Help" Type="PushButton" X="22" Y="243" Width="66" Height="17" Text="$(loc.Text.Help)">
+		  <Publish Event="SpawnDialog" Value="CustomSetupTips">1</Publish>
+		</Control>
+		<Control Id="Details" Type="PushButton" X="93" Y="243" Width="66" Height="17" Text="$(loc.Text.Space)">
+		  <Publish Event="SelectionBrowse" Value="DiskSpaceRequirements">1</Publish>
+		  <Condition Action="hide">
+			<![CDATA[Installed]]>
+		  </Condition>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="MaintenanceType">
+			<![CDATA[Installed]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="SetupType">
+			<![CDATA[NOT Installed  AND FALSE]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="DestinationFolder">
+			<![CDATA[NOT Installed And AxShowDestinationFolder = 1]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="LicenseAgreement">
+			<![CDATA[NOT Installed And AxShowDestinationFolder <> 1]]>
+		  </Publish>
+		</Control>
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="OutOfSpace">
+			<![CDATA[OutOfNoRbDiskSpace = 1]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="ReadyToInstall">
+			<![CDATA[OutOfNoRbDiskSpace <> 1]]>
+		  </Publish>
+		  <Publish Property="_IsSetupTypeMin" Value="Custom">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Size" Type="Text" X="241" Y="133" Width="120" Height="50" Text="$(loc.CustomSetup.Size)">
+		  <Subscribe Event="SelectionSize" Attribute="Text" />
+		</Control>
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="17" Y="23" Width="292" Height="25" Transparent="yes">
+      <Text>$(loc.CustomSetup.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="9" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.CustomSetup.DlgTitle)</Text>
+		</Control>
+		<Control Id="DlgText" Type="Text" X="9" Y="51" Width="360" Height="10">
+		  <Text>$(loc.CustomSetup.DlgText)</Text>
+		</Control>
+		<Control Id="InstallLabel" Type="Text" X="8" Y="190" Width="360" Height="10" Text="$(loc.CustomSetup.InstallLabel)">
+		  <Condition Action="hide">
+			<![CDATA[Installed]]>
+		  </Condition>
+		</Control>
+		<Control Id="ItemDescription" Type="Text" X="241" Y="80" Width="120" Height="50">
+		  <Text>$(loc.CustomSetup.ItemDescription)</Text>
+		  <Subscribe Event="SelectionDescription" Attribute="Text" />
+		</Control>
+		<Control Id="Location" Type="Text" X="8" Y="203" Width="291" Height="20">
+		  <Text>$(loc.CustomSetup.Location)</Text>
+		  <Subscribe Event="SelectionPath" Attribute="Text" />
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="FeatureGroup" Type="GroupBox" X="235" Y="67" Width="131" Height="120" Text="$(loc.CustomSetup.FeatureGroup)" />
+	  </Dialog>
+
+	  <!-- CustomSetupTips -->
+	  <Dialog Id="CustomSetupTips" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.CustomSetupTips.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.CustomSetupTips.DlgTitle)</Text>
+		</Control>
+		<Control Id="OK" Type="PushButton" X="301" Y="243" Width="66" Height="17" Default="yes" Cancel="yes" TabSkip="yes" Text="$(loc.Text.OK)">
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="DontInstall" Type="Icon" X="21" Y="155" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="DontInstall.ibd" />
+		<Control Id="DontInstallText" Type="Text" X="60" Y="155" Width="300" Height="20">
+		  <Text>$(loc.CustomSetupTips.DontInstallText)</Text>
+		</Control>
+		<Control Id="FirstInstallText" Type="Text" X="60" Y="180" Width="300" Height="20">
+		  <Text>$(loc.CustomSetupTips.FirstInstallText)</Text>
+		</Control>
+		<Control Id="Install" Type="Icon" X="21" Y="105" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="Install.ibd" />
+		<Control Id="InstallFirstUse" Type="Icon" X="21" Y="180" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="InsFirstUse.ibd" />
+		<Control Id="InstallPartial" Type="Icon" X="21" Y="130" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="InsPartial.ibd" />
+		<Control Id="InstallStateMenu" Type="Icon" X="21" Y="52" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="InsStateMenu.ibd" />
+		<Control Id="InstallStateText" Type="Text" X="21" Y="91" Width="300" Height="10">
+		  <Text>$(loc.CustomSetupTips.InstallStateText)</Text>
+		</Control>
+		<Control Id="InstallText" Type="Text" X="60" Y="105" Width="300" Height="20">
+		  <Text>$(loc.CustomSetupTips.InstallText)</Text>
+		</Control>
+		<Control Id="MenuText" Type="Text" X="50" Y="52" Width="300" Height="36">
+		  <Text>$(loc.CustomSetupTips.MenuText)</Text>
+		</Control>
+		<Control Id="NetworkInstall" Type="Icon" X="21" Y="205" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="NetworkInstall.ibd" />
+		<Control Id="NetworkInstallText" Type="Text" X="60" Y="205" Width="300" Height="20">
+		  <Text>$(loc.CustomSetupTips.NetworkInstallText)</Text>
+		</Control>
+		<Control Id="PartialText" Type="Text" X="60" Y="130" Width="300" Height="20">
+		  <Text>$(loc.CustomSetupTips.PartialText)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- DatabaseFolder -->
+	  <!--
+	  <Dialog Id="DatabaseFolder" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="SetupType">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="ChangeFolder" Type="PushButton" X="301" Y="65" Width="66" Height="17" Text="$(loc.Text.Change)">
+		  <Publish Event="SpawnDialog" Value="InstallChangeFolder">1</Publish>
+		  <Publish Property="_BrowseProperty" Value="DATABASEDIR">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="CustomerInformation">1</Publish>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>
+			<![CDATA[Click Next to install to this folder, or click Change to install to a different folder.]]>
+		  </Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>
+			<![CDATA[{&MSSansBold8}Database Folder]]>
+		  </Text>
+		</Control>
+		<Control Id="DatabaseFolder" Type="Icon" X="21" Y="52" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="DestIcon.ibd" />
+		<Control Id="Location" Type="Text" X="57" Y="65" Width="240" Height="40" Property="_BrowseProperty" Text="[DATABASEDIR]" />
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="LocLabel" Type="Text" X="57" Y="52" Width="290" Height="10">
+		  <Text>
+			<![CDATA[Install [ProductName] database to:]]>
+		  </Text>
+		</Control>
+	  </Dialog>
+	  -->
+
+	  <!-- DestinationFolder -->
+	  <Dialog Id="DestinationFolder" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="CustomSetup">
+			<![CDATA[AxShowCustomSetup = 1]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="ReadyToInstall">
+			<![CDATA[AxShowCustomSetup <> 1]]>
+		  </Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="ChangeFolder" Type="PushButton" X="301" Y="65" Width="66" Height="17" Text="$(loc.Text.Change)">
+		  <Publish Event="SpawnDialog" Value="InstallChangeFolder">1</Publish>
+		  <Publish Property="_BrowseProperty" Value="INSTALLDIR">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="LicenseAgreement">1</Publish>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="DestFolder" Type="Icon" X="21" Y="52" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="DestIcon.ibd" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.DestinationFolder.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.DestinationFolder.DlgTitle)</Text>
+		</Control>
+		<Control Id="Location" Type="Text" X="57" Y="65" Width="240" Height="40" Property="_BrowseProperty" Text="[INSTALLDIR]" />
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="LocLabel" Type="Text" X="57" Y="52" Width="290" Height="10">
+		  <Text>$(loc.DestinationFolder.LocLabel)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- DiskSpaceRequirements -->
+	  <Dialog Id="DiskSpaceRequirements" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="17" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.DiskSpaceRequirements.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="9" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.DiskSpaceRequirements.DlgTitle)</Text>
+		</Control>
+		<Control Id="DlgText" Type="Text" X="10" Y="185" Width="358" Height="41">
+		  <Text>$(loc.DiskSpaceRequirements.DlgText)</Text>
+		</Control>
+		<Control Id="OK" Type="PushButton" X="301" Y="243" Width="66" Height="17" Default="yes" Cancel="yes" TabSkip="yes" Text="$(loc.Text.OK)">
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="List" Type="VolumeCostList" X="8" Y="55" Width="358" Height="125" Sunken="yes" Fixed="yes" Remote="yes">
+		  <Text>$(loc.DiskSpaceRequirements.List)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- FilesInUse -->
+	  <Dialog Id="FilesInUse" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes" KeepModeless="yes">
+		<Control Id="Retry" Type="PushButton" X="164" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.R)">
+		  <Publish Event="EndDialog" Value="Retry">1</Publish>
+		</Control>
+		<Control Id="Ignore" Type="PushButton" X="230" Y="243" Width="66" Height="17" Text="$(loc.Text.I)">
+		  <Publish Event="EndDialog" Value="Ignore">1</Publish>
+		</Control>
+		<Control Id="Exit" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Exit)">
+		  <Publish Event="EndDialog" Value="Exit">1</Publish>
+		</Control>
+		<Control Id="List" Type="ListBox" X="21" Y="87" Width="331" Height="135" Property="FileInUseProcess" Sunken="yes" />
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.FilesInUse.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+      <Text>$(loc.FilesInUse.DlgTitle)</Text>
+    </Control>
+    <Control Id="DlgText" Type="Text" X="21" Y="51" Width="348" Height="29">
+      <Text>$(loc.FilesInUse.DlgText)</Text>
+    </Control>
+    <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+	  </Dialog>
+
+	  <!-- InstallChangeFolder -->
+	  <Dialog Id="InstallChangeFolder" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Tail" Type="PathEdit" X="21" Y="207" Width="332" Height="17" Property="_BrowseProperty" Sunken="yes" Indirect="yes" />
+		<Control Id="OK" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.OK)">
+		  <Publish Event="SetTargetPath" Value="[_BrowseProperty]">1</Publish>
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="Reset" Value="0">1</Publish>
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		</Control>
+		<Control Id="ComboText" Type="Text" X="21" Y="50" Width="99" Height="14" TabSkip="no" Text="$(loc.Text.LookIn)" />
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Up" Type="PushButton" X="310" Y="66" Width="19" Height="19" ToolTip="Up One Level" Icon="yes" FixedSize="yes" IconSize="16" Text="Up.ibd">
+		  <Publish Event="DirectoryListUp" Value="0">1</Publish>
+		</Control>
+		<Control Id="NewFolder" Type="PushButton" X="335" Y="66" Width="19" Height="19" ToolTip="Create New Folder" Icon="yes" FixedSize="yes" IconSize="16" Text="New.ibd">
+		  <Publish Event="DirectoryListNew" Value="0">1</Publish>
+		</Control>
+		<Control Id="List" Type="DirectoryList" X="21" Y="90" Width="332" Height="97" Property="_BrowseProperty" Sunken="yes" Indirect="yes" TabSkip="no" />
+		<Control Id="TailText" Type="Text" X="21" Y="193" Width="99" Height="13" TabSkip="no" Text="$(loc.Text.FolderName)" />
+		<Control Id="Combo" Type="DirectoryCombo" X="21" Y="64" Width="277" Height="80" Property="_BrowseProperty" Indirect="yes" Removable="yes" Fixed="yes" Remote="yes" CDROM="yes" RAMDisk="yes" Floppy="yes" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.InstallChangeFolder.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.InstallChangeFolder.DlgTitle)</Text>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+	  </Dialog>
+
+	  <Dialog Id="InstallWelcome" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="LicenseAgreement">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Back)">
+		  <!--
+		  <Publish Event="NewDialog" Value="SplashBitmap">Display_IsBitmapDlg</Publish>
+		  -->
+		</Control>
+		<Control Id="Copyright" Type="Text" X="135" Y="144" Width="228" Height="73" Transparent="yes" TabSkip="no">
+      <Text>$(loc.InstallWelcome.Copyright)</Text>
+		  <Condition Action="hide"><![CDATA[SHOWCOPYRIGHT="No"]]></Condition>
+		  <Condition Action="show"><![CDATA[SHOWCOPYRIGHT="Yes"]]></Condition>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="TextLine2" Type="Text" X="135" Y="55" Width="228" Height="45" Transparent="yes">
+      <Text>$(loc.InstallWelcome.TextLine2)</Text>
+		</Control>
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Image" Type="Bitmap" X="0" Y="0" Width="374" Height="234" Text="DialogBitmap.ibd" />
+		<Control Id="TextLine1" Type="Text" X="135" Y="8" Width="225" Height="45" Transparent="yes">
+      <Text>$(loc.InstallWelcome.TextLine1)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- LicenseAgreement -->
+	  <Dialog Id="LicenseAgreement" Width="374" Height="266" Title="$(loc.Text.Title)" Hidden="yes" NoMinimize="yes">
+		<Control Id="Agree" Type="RadioButtonGroup" X="8" Y="190" Width="330" Height="40" Property="AgreeToLicense">
+		  <RadioButtonGroup Property="AgreeToLicense">
+			<RadioButton Value="No" X="0" Y="15" Width="295" Height="15" Text="$(loc.LicenseAgreement.DontAgree)" />
+			<RadioButton Value="Yes" X="0" Y="0" Width="295" Height="15" Text="$(loc.LicenseAgreement.Agree)" />
+		  </RadioButtonGroup>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="InstallWelcome">1</Publish>
+		</Control>
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="SFWarning">AgreeToLicense = "Yes" AND SF_INSTALLED</Publish>
+		  <Publish Event="NewDialog" Value="UpgradeConfirm">AgreeToLicense = "Yes" AND NOT SF_INSTALLED AND NDAS_UPGRADE</Publish>
+		  <Publish Event="NewDialog" Value="ReadyToInstall">AgreeToLicense = "Yes" AND NOT SF_INSTALLED AND NOT NDAS_UPGRADE</Publish>
+		  <Condition Action="disable">AgreeToLicense &lt;&gt; "Yes"</Condition>
+		  <Condition Action="enable">AgreeToLicense = "Yes"</Condition>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="yes" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.LicenseAgreement.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.LicenseAgreement.DlgTitle)</Text>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Memo" Type="ScrollableText" X="8" Y="55" Width="358" Height="130" Sunken="yes">
+		  <Text src="$(var.euladir)\$(var.EULAFile)" />
+		</Control>
+	  </Dialog>
+
+	  <!-- MaintenanceType -->
+	  <Dialog Id="MaintenanceType" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="RadioGroup" Type="RadioButtonGroup" X="21" Y="55" Width="290" Height="170" Property="_IsMaintenance">
+		  <RadioButtonGroup Property="_IsMaintenance">
+			<RadioButton Value="Change" X="0" Y="0" Width="290" Height="14" Text="$(loc.MaintenanceType.Modify)" />
+			<RadioButton Value="Reinstall" X="0" Y="60" Width="290" Height="14" Text="$(loc.MaintenanceType.Repair)" />
+			<RadioButton Value="Remove" X="0" Y="120" Width="290" Height="14" Text="$(loc.MaintenanceType.Remove)" />
+		  </RadioButtonGroup>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="MaintenanceWelcome">1</Publish>
+		</Control>
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Property="ProgressType0" Value="Repair">
+			<![CDATA[_IsMaintenance = "Reinstall"]]>
+		  </Publish>
+		  <Publish Property="ProgressType0" Value="Modify">
+			<![CDATA[_IsMaintenance = "Change"]]>
+		  </Publish>
+		  <Publish Property="ProgressType1" Value="Modifying">
+			<![CDATA[_IsMaintenance = "Change"]]>
+		  </Publish>
+		  <Publish Property="ProgressType1" Value="Repairing">
+			<![CDATA[_IsMaintenance = "Reinstall"]]>
+		  </Publish>
+		  <Publish Property="ProgressType2" Value="repairs">
+			<![CDATA[_IsMaintenance = "Reinstall"]]>
+		  </Publish>
+		  <Publish Property="ProgressType2" Value="modified">
+			<![CDATA[_IsMaintenance = "Change"]]>
+		  </Publish>
+		  <Publish Property="ProgressType3" Value="modifies">
+			<![CDATA[_IsMaintenance = "Change"]]>
+		  </Publish>
+		  <Publish Property="ProgressType3" Value="repairs">
+			<![CDATA[_IsMaintenance = "Reinstall"]]>
+		  </Publish>
+		  <Publish Event="ReinstallMode" Value="[ReinstallModeText]">
+			<![CDATA[_IsMaintenance = "Reinstall"]]>
+		  </Publish>
+		  <Publish Event="Reinstall" Value="ALL">
+			<![CDATA[_IsMaintenance = "Reinstall"]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="ReadyToRemove">
+			<![CDATA[_IsMaintenance = "Remove"]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="CustomSetup">
+			<![CDATA[_IsMaintenance = "Change"]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="ReadyToInstall">
+			<![CDATA[_IsMaintenance = "Reinstall"]]>
+		  </Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.MaintenanceType.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+      <Text>$(loc.MaintenanceType.DlgTitle)</Text>
+    </Control>
+    <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+    <Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Ico1" Type="Icon" X="35" Y="75" Width="24" Height="24" FixedSize="yes" IconSize="32">
+		  <Text>
+			<![CDATA[CustomSetup.ibd]]>
+		  </Text>
+		</Control>
+		<Control Id="Ico2" Type="Icon" X="35" Y="135" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="ReinstIco.ibd" />
+		<Control Id="Ico3" Type="Icon" X="35" Y="195" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="RemoveIco.ibd" />
+		<Control Id="Text1" Type="Text" X="80" Y="72" Width="260" Height="35">
+      <Text>$(loc.MaintenanceType.Text1)</Text>
+    </Control>
+    <Control Id="Text2" Type="Text" X="80" Y="135" Width="260" Height="35">
+      <Text>$(loc.MaintenanceType.Text2)</Text>
+    </Control>
+    <Control Id="Text3" Type="Text" X="80" Y="192" Width="260" Height="35">
+      <Text>$(loc.MaintenanceType.Text3)</Text>
+    </Control>
+  </Dialog>
+
+  <!-- MaintenanceWelcome -->
+	  <Dialog Id="MaintenanceWelcome" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="MaintenanceType">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Back)" />
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="TextLine2" Type="Text" X="135" Y="55" Width="228" Height="50" Transparent="yes">
+		  <Text>$(loc.MaintenanceWelcome.TextLine2)</Text>
+		</Control>
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Image" Type="Bitmap" X="0" Y="0" Width="374" Height="234" Text="DialogBitmap.ibd" />
+		<Control Id="TextLine1" Type="Text" X="135" Y="8" Width="225" Height="45" Transparent="yes">
+      <Text>$(loc.MaintenanceWelcome.TextLine1)</Text>
+    </Control>
+  </Dialog>
+
+  <!-- OutOfSpace -->
+	  <Dialog Id="OutOfSpace" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.OutOfSpace.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+      <Text>$(loc.OutOfSpace.DlgTitle)</Text>
+    </Control>
+    <Control Id="DlgText" Type="Text" X="21" Y="51" Width="326" Height="43">
+      <Text>$(loc.OutOfSpace.DlgText)</Text>
+    </Control>
+    <Control Id="Resume" Type="PushButton" X="301" Y="243" Width="66" Height="17" Default="yes" Cancel="yes" TabSkip="yes" Text="$(loc.Text.OK)">
+      <Publish Event="NewDialog" Value="AdminNetworkLocation">
+			<![CDATA[ACTION = "ADMIN"]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="CustomSetup">
+			<![CDATA[ACTION <> "ADMIN"]]>
+		  </Publish>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="List" Type="VolumeCostList" X="21" Y="95" Width="332" Height="120" Sunken="yes" Fixed="yes" Remote="yes">
+		  <Text>$(loc.OutOfSpace.List)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- PatchWelcome -->
+	  <Dialog Id="PatchWelcome" Width="374" Height="266" Title="$(loc.Text.PatchTitle)" NoMinimize="yes">
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Update)">
+		  <Publish Event="Reinstall" Value="ALL">
+			<![CDATA[PATCH And REINSTALL=""]]>
+		  </Publish>
+		  <Publish Event="ReinstallMode" Value="omus">
+			<![CDATA[PATCH And REINSTALLMODE=""]]>
+		  </Publish>
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Back)">
+		  <!--
+		  <Publish Event="NewDialog" Value="SplashBitmap">Display_IsBitmapDlg</Publish>
+		  -->
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="TextLine2" Type="Text" X="135" Y="54" Width="228" Height="45" Transparent="yes">
+		  <Text>$(loc.PatchWelcome.TextLine2)</Text>
+		</Control>
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Image" Type="Bitmap" X="0" Y="0" Width="374" Height="234" Text="DialogBitmap.ibd" />
+		<Control Id="TextLine1" Type="Text" X="135" Y="8" Width="225" Height="45" Transparent="yes">
+      <Text>$(loc.PatchWelcome.TextLine1)</Text>
+    </Control>
+  </Dialog>
+
+  <!-- ReadyToInstall -->
+	  <Dialog Id="ReadyToInstall" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes" TrackDiskSpace="yes">
+		<Control Id="InstallNow" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Install)">
+		  <Publish Event="EndDialog" Value="Return">
+			<![CDATA[OutOfNoRbDiskSpace <> 1]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="OutOfSpace">
+			<![CDATA[OutOfNoRbDiskSpace = 1]]>
+		  </Publish>
+		  <Publish Property="ProgressType1" Value="Installing">1</Publish>
+		  <Publish Property="ProgressType2" Value="installed">1</Publish>
+		  <Publish Property="ProgressType3" Value="installs">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="SetupType">
+			<![CDATA[FALSE AND NOT Installed AND _IsSetupTypeMin <> "Custom"]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="CustomSetup">
+			<![CDATA[Installed OR _IsSetupTypeMin = "Custom"]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="MaintenanceType">
+			<![CDATA[Installed AND _IsMaintenance = "Reinstall"]]>
+		  </Publish>
+		  <!--
+		  <Publish Event="NewDialog" Value="DestinationFolder">
+			<![CDATA[NOT Installed AND (AxShowDestinationFolder = 1) AND (AxShowCustomSetup <> 1)]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="LicenseAgreement">
+			<![CDATA[NOT Installed AND (AxShowCustomSetup <> 1) AND (AxShowDestinationFolder <> 1) AND Not NDAS_UPGRADE]]>
+		  </Publish>
+		  -->
+		  <Publish Event="NewDialog" Value="UpgradeConfirm">NOT Installed AND NDAS_UPGRADE</Publish>
+		  <Publish Event="NewDialog" Value="SFWarning">NOT Installed AND NOT NDAS_UPGRADE AND SF_INSTALLED</Publish>
+		  <Publish Event="NewDialog" Value="LicenseAgreement">NOT Installed AND NOT NDAS_UPGRADE AND NOT SF_INSTALLED</Publish>
+		</Control>
+		<Control Id="NoticeGroupBox" Type="GroupBox" X="22" Y="133" Width="340" Height="84" Hidden="yes" TabSkip="no" Text="$(loc.ReadyToInstall.NoticeGroupBox)">
+		  <Condition Action="show">
+			<![CDATA[AxShowNoticeOnReadyToInstall <> 0]]>
+		  </Condition>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="yes" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="NoticeText2" Type="Text" X="28" Y="181" Width="331" Height="32" Hidden="yes" Transparent="yes" TabSkip="no">
+		  <Text>$(loc.ReadyToInstall.NoticeText2)</Text>
+		  <Condition Action="show">
+			<![CDATA[AxShowNoticeOnReadyToInstall <> 0]]>
+		  </Condition>
+		</Control>
+		<Control Id="NoticeText1" Type="Text" X="28" Y="149" Width="331" Height="32" Hidden="yes" Transparent="yes" TabSkip="no">
+		  <Text>$(loc.ReadyToInstall.NoticeText1)</Text>
+		  <Condition Action="show">
+			<![CDATA[AxShowNoticeOnReadyToInstall <> 0]]>
+		  </Condition>
+		</Control>
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.ReadyToInstall.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.ReadyToInstall.DlgTitle)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType0="Modify"]]>
+		  </Condition>
+		</Control>
+		<Control Id="DlgText" Type="Text" X="21" Y="51" Width="326" Height="20">
+		  <Text>$(loc.ReadyToInstall.DlgText)</Text>
+		</Control>
+		<Control Id="DlgTitle2" Type="Text" X="13" Y="6" Width="292" Height="25" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.ReadyToInstall.DlgTitle2)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType0="Repair"]]>
+		  </Condition>
+		</Control>
+		<Control Id="DlgTitle3" Type="Text" X="13" Y="6" Width="292" Height="25" Hidden="yes" Transparent="yes">
+      <Text>$(loc.ReadyToInstall.DlgTitle3)</Text>
+      <Condition Action="show">
+			<![CDATA[ProgressType0="install"]]>
+		  </Condition>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="DlgText1" Type="Text" X="21" Y="70" Width="330" Height="24">
+		  <Text>$(loc.ReadyToInstall.DlgText1)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- ReadyToRemove -->
+	  <Dialog Id="ReadyToRemove" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="RemoveNow" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Remove)">
+		  <Publish Property="ProgressType1" Value="Uninstalling">1</Publish>
+		  <Publish Property="ProgressType2" Value="uninstalled">1</Publish>
+		  <Publish Property="ProgressType3" Value="uninstalls">1</Publish>
+		  <Publish Event="Remove" Value="ALL">1</Publish>
+		  <Publish Event="NewDialog" Value="OutOfSpace">
+			<![CDATA[OutOfNoRbDiskSpace = 1]]>
+		  </Publish>
+		  <Publish Event="EndDialog" Value="Return">
+			<![CDATA[OutOfNoRbDiskSpace <> 1]]>
+		  </Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="MaintenanceType">1</Publish>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.ReadyToRemove.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.ReadyToRemove.DlgTitle)</Text>
+		</Control>
+		<Control Id="DlgText" Type="Text" X="21" Y="51" Width="326" Height="24">
+		  <Text>$(loc.ReadyToRemove.DlgText)</Text>
+		</Control>
+		<Control Id="DlgText2" Type="Text" X="21" Y="102" Width="330" Height="24" />
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="DlgText1" Type="Text" X="21" Y="79" Width="330" Height="23">
+		  <Text>$(loc.ReadyToRemove.DlgText1)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- SetupCompleteError -->
+	  <Dialog Id="SetupCompleteError" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Finish" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Cancel="yes" Text="$(loc.Text.Finish)">
+		  <Publish Event="EndDialog" Value="Exit">1</Publish>
+		  <Condition Action="default">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Property="Suspend" Value="1">1</Publish>
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		  <Condition Action="disable">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="enable">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Back)">
+		  <Publish Property="Suspend" Value="{}">1</Publish>
+		  <Publish Event="EndDialog" Value="Return">1</Publish>
+		  <Condition Action="disable">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="enable">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="default">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="FinishText1" Type="Text" X="135" Y="80" Width="228" Height="50" Transparent="yes">
+		  <Text>$(loc.SetupCompleteError.FinishText1)</Text>
+		  <Condition Action="hide">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="FinishText2" Type="Text" X="135" Y="135" Width="228" Height="25" Transparent="yes">
+		  <Text>$(loc.SetupCompleteError.FinishText2)</Text>
+		  <Condition Action="hide">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="RestContText1" Type="Text" X="135" Y="80" Width="228" Height="50" Transparent="yes">
+		  <Text>$(loc.SetupCompleteError.RestContText1)</Text>
+		  <Condition Action="hide">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="RestContText2" Type="Text" X="135" Y="135" Width="228" Height="25" Transparent="yes">
+		  <Text>$(loc.SetupCompleteError.RestContText2)</Text>
+		  <Condition Action="hide">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="TextLine2" Type="Text" X="135" Y="55" Width="228" Height="25" Transparent="yes">
+		  <Text>$(loc.SetupCompleteError.TextLine2)</Text>
+		</Control>
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Image" Type="Bitmap" X="0" Y="0" Width="374" Height="234" Text="DialogBitmap.ibd" />
+		<Control Id="TextLine1" Type="Text" X="135" Y="8" Width="225" Height="45" Transparent="yes">
+		  <Text>$(loc.SetupCompleteError.TextLine1)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- SetupCompleteSuccess -->
+	  <Dialog Id="SetupCompleteSuccess" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="OK" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Cancel="yes" Text="$(loc.Text.Finish)">
+		  <!--					<Publish Event="DoAction" Value="IS_LAUNCH_MY_PROGRAM_PLEASE"><![CDATA[LAUNCHPROGRAM]]></Publish> -->
+		  <Publish Event="EndDialog" Value="Exit">1</Publish>
+		  <!--					<Publish Event="DoAction" Value="CheckForProductUpdates"><![CDATA[ISCHECKFORPRODUCTUPDATES="1" And ISENABLEDWUSFINISHDIALOG And NOT ISREBOOTREQUIRED And NOT Installed And ACTION="INSTALL"]]></Publish> -->
+		  <!--					<Publish Event="DoAction" Value="CheckForProductUpdatesOnReboot"><![CDATA[ISCHECKFORPRODUCTUPDATES="1" And ISENABLEDWUSFINISHDIALOG And ISREBOOTREQUIRED And NOT Installed And ACTION="INSTALL"]]></Publish> -->
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Cancel)" />
+		<Control Id="Image" Type="Bitmap" X="0" Y="0" Width="374" Height="234" TabSkip="no" Text="DialogBitmap.ibd" />
+		<Control Id="CheckBoxUpdates" Type="CheckBox" X="135" Y="164" Width="10" Height="9" Property="ISCHECKFORPRODUCTUPDATES" Hidden="yes" Text="$(loc.SetupCompleteSuccess.CheckBoxUpdates)">
+		  <Condition Action="show">
+			<![CDATA[ISENABLEDWUSFINISHDIALOG And NOT Installed And ACTION="INSTALL"]]>
+		  </Condition>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Back)" />
+		<Control Id="TextLine2" Type="Text" X="135" Y="55" Width="228" Height="45" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupCompleteSuccess.TextLine2)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType2="installed" And ((ACTION<>"INSTALL") OR (NOT ISENABLEDWUSFINISHDIALOG) OR (ISENABLEDWUSFINISHDIALOG And Installed))]]>
+		  </Condition>
+		</Control>
+		<Control Id="CheckForUpdatesText" Type="Text" X="152" Y="162" Width="190" Height="30" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupCompleteSuccess.CheckForUpdatesText)</Text>
+		  <Condition Action="show">
+			<![CDATA[ISENABLEDWUSFINISHDIALOG And NOT Installed And ACTION="INSTALL"]]>
+		  </Condition>
+		</Control>
+		<Control Id="CheckLaunchProgram" Type="CheckBox" X="151" Y="114" Width="10" Height="9" Property="LAUNCHPROGRAM" Hidden="yes" TabSkip="yes">
+		  <Condition Action="show">
+			<![CDATA[SHOWLAUNCHPROGRAM="-1" And PROGRAMFILETOLAUNCHATEND <> "" And NOT Installed And NOT ISENABLEDWUSFINISHDIALOG AND Not REBOOT]]>
+		  </Condition>
+		</Control>
+		<Control Id="CheckLaunchReadme" Type="CheckBox" X="151" Y="148" Width="10" Height="9" Property="LAUNCHREADME" Hidden="yes" TabSkip="yes">
+		  <Condition Action="show">
+			<![CDATA[SHOWLAUNCHREADME="-1"  And READMEFILETOLAUNCHATEND <> "" And NOT Installed And NOT ISENABLEDWUSFINISHDIALOG]]>
+		  </Condition>
+		</Control>
+		<Control Id="LaunchProgramText" Type="Text" X="164" Y="112" Width="198" Height="15" Hidden="yes" Transparent="yes" Text="$(loc.SetupCompleteSuccess.LaunchProgramText)">
+		  <Condition Action="show">
+			<![CDATA[SHOWLAUNCHPROGRAM="-1" And PROGRAMFILETOLAUNCHATEND <> "" And NOT Installed And NOT ISENABLEDWUSFINISHDIALOG]]>
+		  </Condition>
+		</Control>
+		<Control Id="LaunchReadmeText" Type="Text" X="164" Y="148" Width="198" Height="13" Hidden="yes" Transparent="yes" Text="$(loc.SetupCompleteSuccess.LaunchReadmeText)">
+		  <Condition Action="show">
+			<![CDATA[SHOWLAUNCHREADME="-1"  And READMEFILETOLAUNCHATEND <> "" And NOT Installed And NOT ISENABLEDWUSFINISHDIALOG]]>
+		  </Condition>
+		</Control>
+		<Control Id="TextLine3" Type="Text" X="135" Y="55" Width="228" Height="45" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupCompleteSuccess.TextLine3)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType2="uninstalled" And ((ACTION<>"INSTALL") OR (NOT ISENABLEDWUSFINISHDIALOG) OR (ISENABLEDWUSFINISHDIALOG And Installed))]]>
+		  </Condition>
+		</Control>
+		<Control Id="UpdateTextLine1" Type="Text" X="135" Y="30" Width="228" Height="45" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupCompleteSuccess.UpdateTextLine1)</Text>
+		  <Condition Action="show">
+			<![CDATA[ISENABLEDWUSFINISHDIALOG And NOT Installed And ACTION="INSTALL"]]>
+		  </Condition>
+		</Control>
+		<Control Id="UpdateTextLine2" Type="Text" X="135" Y="79" Width="228" Height="45" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupCompleteSuccess.UpdateTextLine2)</Text>
+		  <Condition Action="show">
+			<![CDATA[ISENABLEDWUSFINISHDIALOG And NOT Installed And ACTION="INSTALL"]]>
+		  </Condition>
+		</Control>
+		<Control Id="UpdateTextLine3" Type="Text" X="135" Y="120" Width="228" Height="45" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupCompleteSuccess.UpdateTextLine3)</Text>
+		  <Condition Action="show">
+			<![CDATA[ISENABLEDWUSFINISHDIALOG And NOT Installed And ACTION="INSTALL"]]>
+		  </Condition>
+		</Control>
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="TextLine1" Type="Text" X="135" Y="8" Width="225" Height="45" Transparent="yes">
+		  <Text>$(loc.SetupCompleteSuccess.TextLine1)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- SetupError -->
+	  <!-- Y="10"  -->
+	  <Dialog Id="SetupError" Width="343" Height="110" Title="$(loc.Text.ErrorTitle)" ErrorDialog="yes">
+		<Control Id="ErrorText" Type="Text" X="49" Y="14" Width="283" Height="50" Hidden="yes" TabSkip="no">
+		  <Text>$(loc.SetupError.ErrorText)</Text>
+		</Control>
+		<Control Id="Y" Type="PushButton" X="192" Y="80" Width="66" Height="17" TabSkip="yes" Text="$(loc.Text.Y)">
+		  <Publish Event="EndDialog" Value="ErrorYes">1</Publish>
+		</Control>
+		<Control Id="N" Type="PushButton" X="192" Y="80" Width="66" Height="17" TabSkip="yes" Text="$(loc.Text.N)">
+		  <Publish Event="EndDialog" Value="ErrorNo">1</Publish>
+		</Control>
+		<Control Id="A" Type="PushButton" X="192" Y="80" Width="66" Height="17" TabSkip="yes" Text="$(loc.Text.A)">
+		  <Publish Event="EndDialog" Value="ErrorAbort">1</Publish>
+		</Control>
+		<Control Id="C" Type="PushButton" X="192" Y="80" Width="66" Height="17" Cancel="yes" TabSkip="yes" Text="$(loc.Text.C)">
+		  <Publish Event="EndDialog" Value="ErrorCancel">1</Publish>
+		</Control>
+		<Control Id="I" Type="PushButton" X="192" Y="80" Width="66" Height="17" TabSkip="yes" Text="$(loc.Text.I)">
+		  <Publish Event="EndDialog" Value="ErrorIgnore">1</Publish>
+		</Control>
+		<Control Id="O" Type="PushButton" X="192" Y="80" Width="66" Height="17" Default="yes" TabSkip="yes" Text="$(loc.Text.O)">
+		  <Publish Event="EndDialog" Value="ErrorOk">1</Publish>
+		</Control>
+		<Control Id="R" Type="PushButton" X="192" Y="80" Width="66" Height="17" TabSkip="yes" Text="$(loc.Text.R)">
+		  <Publish Event="EndDialog" Value="ErrorRetry">1</Publish>
+		</Control>
+		<Control Id="ErrorIcon" Type="Icon" X="15" Y="15" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="WarningIcon.ibd" />
+	  </Dialog>
+
+	  <!-- SetupInitialization -->
+	  <Dialog Id="SetupInitialization" Width="374" Height="266" Title="$(loc.Text.Title)" Modeless="yes">
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="ActionText" Type="Text" X="135" Y="109" Width="220" Height="36" Transparent="yes">
+		  <Subscribe Event="ActionText" Attribute="Text" />
+		</Control>
+		<Control Id="ActionData" Type="Text" X="135" Y="125" Width="228" Height="12" Transparent="yes">
+		  <Subscribe Event="ActionData" Attribute="Text" />
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Default="yes" Cancel="yes" TabSkip="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" TabSkip="yes" Text="$(loc.Text.Back)" />
+		<Control Id="TextLine2" Type="Text" X="135" Y="55" Width="228" Height="30" Transparent="yes">
+		  <Text>$(loc.SetupInitialization.TextLine2)</Text>
+		</Control>
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Disabled="yes" TabSkip="yes" Text="$(loc.Text.Next)" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Image" Type="Bitmap" X="0" Y="0" Width="374" Height="234" Text="DialogBitmap.ibd" />
+		<Control Id="TextLine1" Type="Text" X="135" Y="8" Width="225" Height="45" Transparent="yes">
+		  <Text>$(loc.SetupInitialization.TextLine1)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- SetupInterrupted -->
+	  <Dialog Id="SetupInterrupted" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Disabled="yes" TabSkip="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Property="Suspend" Value="1">1</Publish>
+		  <Publish Event="EndDialog" Value="Exit">1</Publish>
+		  <Condition Action="disable">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="enable">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" TabSkip="yes" Text="$(loc.Text.Back)">
+		  <Publish Property="Suspend" Value="{}">1</Publish>
+		  <Publish Event="EndDialog" Value="Exit">1</Publish>
+		  <Condition Action="disable">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="enable">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="default">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="Finish" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Cancel="yes" TabSkip="yes" Text="$(loc.Text.Finish)">
+		  <Publish Event="EndDialog" Value="Exit">1</Publish>
+		  <Condition Action="default">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="FinishText1" Type="Text" X="135" Y="80" Width="228" Height="50" Transparent="yes">
+		  <Text>$(loc.SetupInterrupted.FinishText1)</Text>
+		  <Condition Action="hide">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="FinishText2" Type="Text" X="135" Y="135" Width="228" Height="25" Transparent="yes">
+		  <Text>$(loc.SetupInterrupted.FinishText2)</Text>
+		  <Condition Action="hide">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="RestContText1" Type="Text" X="135" Y="80" Width="228" Height="50" Transparent="yes">
+		  <Text>$(loc.SetupInterrupted.RestContText1)</Text>
+		  <Condition Action="hide">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="RestContText2" Type="Text" X="135" Y="135" Width="228" Height="25" Transparent="yes">
+		  <Text>$(loc.SetupInterrupted.RestContText2)</Text>
+		  <Condition Action="hide">
+			<![CDATA[NOT UpdateStarted]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[UpdateStarted]]>
+		  </Condition>
+		</Control>
+		<Control Id="TextLine2" Type="Text" X="135" Y="55" Width="228" Height="25" Transparent="yes">
+		  <Text>$(loc.SetupInterrupted.TextLine2)</Text>
+		</Control>
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Image" Type="Bitmap" X="0" Y="0" Width="374" Height="234" Text="DialogBitmap.ibd" />
+		<Control Id="TextLine1" Type="Text" X="135" Y="8" Width="225" Height="45" Transparent="yes">
+		  <Text>$(loc.SetupInterrupted.TextLine1)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- SetupProgress -->
+	  <Dialog Id="SetupProgress" Width="374" Height="266" Title="$(loc.Text.Title)" Modeless="yes">
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Default="yes" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Back)" />
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Next)" />
+		<Control Id="ActionData" Type="Text" X="59" Y="165" Width="273" Height="41" Property="ActionData" Hidden="yes" Transparent="yes" TabSkip="no" />
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="ActionText" Type="Text" X="59" Y="100" Width="275" Height="12">
+		  <Subscribe Event="ActionText" Attribute="Text" />
+		</Control>
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupProgress.DlgDesc)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType2="installed"]]>
+		  </Condition>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupProgress.DlgTitle)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType1="Installing"]]>
+		  </Condition>
+		</Control>
+		<Control Id="DlgText" Type="Text" X="59" Y="51" Width="275" Height="30" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupProgress.DlgText)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType3="installs"]]>
+		  </Condition>
+		</Control>
+		<Control Id="DlgTitle2" Type="Text" X="13" Y="6" Width="292" Height="25" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupProgress.DlgTitle2)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType1="Uninstalling"]]>
+		  </Condition>
+		</Control>
+		<Control Id="DlgText2" Type="Text" X="59" Y="50" Width="275" Height="30" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupProgress.DlgText2)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType3="uninstalls"]]>
+		  </Condition>
+		</Control>
+		<Control Id="DlgDesc2" Type="Text" X="21" Y="23" Width="292" Height="25" Hidden="yes" Transparent="yes">
+		  <Text>$(loc.SetupProgress.DlgDesc2)</Text>
+		  <Condition Action="show">
+			<![CDATA[ProgressType2="uninstalled"]]>
+		  </Condition>
+		</Control>
+		<Control Id="ActionProgress95" Type="ProgressBar" X="59" Y="113" Width="275" Height="12" ProgressBlocks="yes" Text="$(loc.SetupProgress.ActionProgress95)">
+		  <Subscribe Event="InstallFiles" Attribute="Progress" />
+		  <Subscribe Event="MoveFiles" Attribute="Progress" />
+		  <Subscribe Event="RemoveFiles" Attribute="Progress" />
+		  <Subscribe Event="RemoveRegistryValues" Attribute="Progress" />
+		  <Subscribe Event="WriteIniValues" Attribute="Progress" />
+		  <Subscribe Event="WriteRegistryValues" Attribute="Progress" />
+		  <Subscribe Event="UnmoveFiles" Attribute="Progress" />
+		  <Subscribe Event="AdminInstallFinalize" Attribute="Progress" />
+		  <Subscribe Event="SetProgress" Attribute="Progress" />
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="LbSec" Type="Text" X="172" Y="139" Width="32" Height="12" Hidden="yes" Text="$(loc.SetupProgress.LbSec)" />
+		<Control Id="LbStatus" Type="Text" X="59" Y="85" Width="70" Height="12" Text="$(loc.SetupProgress.LbStatus)" />
+		<Control Id="SetupIcon" Type="Icon" X="21" Y="51" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="SetupIcon.ibd" />
+		<Control Id="ShowTime" Type="Text" X="155" Y="139" Width="17" Height="12" Hidden="yes" Text="$(loc.SetupProgress.ShowTime)" />
+		<Control Id="TextTime" Type="Text" X="59" Y="139" Width="96" Height="12" Hidden="yes">
+		  <Text>$(loc.SetupProgress.TextTime)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- SetupResume -->
+	  <Dialog Id="SetupResume" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="OutOfSpace">
+			<![CDATA[OutOfNoRbDiskSpace = 1]]>
+		  </Publish>
+		  <Publish Event="EndDialog" Value="Return">
+			<![CDATA[OutOfNoRbDiskSpace <> 1]]>
+		  </Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Back)" />
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="PreselectedText" Type="Text" X="135" Y="55" Width="228" Height="45" Transparent="yes">
+		  <Text>$(loc.SetupResume.PreselectedText)</Text>
+		  <Condition Action="hide">
+			<![CDATA[RESUME]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[NOT RESUME]]>
+		  </Condition>
+		</Control>
+		<Control Id="ResumeText" Type="Text" X="135" Y="46" Width="228" Height="45" Transparent="yes">
+		  <Text>$(loc.SetupResume.ResumeText)</Text>
+		  <Condition Action="hide">
+			<![CDATA[NOT RESUME]]>
+		  </Condition>
+		  <Condition Action="show">
+			<![CDATA[RESUME]]>
+		  </Condition>
+		</Control>
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Image" Type="Bitmap" X="0" Y="0" Width="374" Height="234" Text="DialogBitmap.ibd" />
+		<Control Id="TextLine1" Type="Text" X="135" Y="8" Width="225" Height="45" Transparent="yes">
+		  <Text>$(loc.SetupResume.TextLine1)</Text>
+		</Control>
+	  </Dialog>
+
+	  <!-- SetupType -->
+	  <Dialog Id="SetupType" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="RadioGroup" Type="RadioButtonGroup" X="21" Y="79" Width="264" Height="120" Property="_IsSetupTypeMin">
+		  <RadioButtonGroup Property="_IsSetupTypeMin">
+			<RadioButton Value="Typical" X="0" Y="0" Width="264" Height="14" Text="$(loc.SetupType.Complete)" />
+			<RadioButton Value="Custom" X="0" Y="60" Width="264" Height="14" Text="$(loc.SetupType.Custom)" />
+		  </RadioButtonGroup>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="DestinationFolder">1</Publish>
+		</Control>
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="CustomSetup">
+			<![CDATA[_IsSetupTypeMin = "Custom"]]>
+		  </Publish>
+		  <Publish Event="NewDialog" Value="ReadyToInstall">
+			<![CDATA[_IsSetupTypeMin <> "Custom"]]>
+		  </Publish>
+		  <Publish Event="AddLocal" Value="ALL">
+			<![CDATA[_IsSetupTypeMin = "Typical"]]>
+		  </Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.SetupType.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.SetupType.DlgTitle)</Text>
+		</Control>
+		<Control Id="DlgText" Type="Text" X="21" Y="51" Width="326" Height="10">
+		  <Text>$(loc.SetupType.DlgText)</Text>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="CompText" Type="Text" X="80" Y="94" Width="246" Height="35">
+		  <Text>$(loc.SetupType.CompText)</Text>
+		</Control>
+		<Control Id="CompleteIco" Type="Icon" X="34" Y="94" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="CompleteSetup.ibd" />
+		<Control Id="CustText" Type="Text" X="80" Y="154" Width="246" Height="35">
+		  <Text>$(loc.SetupType.CustText)</Text>
+		</Control>
+		<Control Id="CustomIco" Type="Icon" X="34" Y="154" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="CustomSetup.ibd" />
+	  </Dialog>
+
+	  <!-- SplashBitmap -->
+	  <!--
+	  <Dialog Id="SplashBitmap" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="InstallWelcome">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Cancel="yes" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Disabled="yes" Text="$(loc.Text.Back)" />
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="no" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Image" Type="Bitmap" X="13" Y="12" Width="374" Height="211" Text="DialogBitmap.ibd" />
+	  </Dialog>
+	  -->
+
+	  <!-- SFWarning -->
+	  <Dialog Id="SFWarning" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="SFWarnCheck" Type="CheckBox" X="59" Y="210" Width="275" Height="17" Property="SFWarnAck" Text="$(loc.SFWarning.SFWarnCheck)" CheckBoxValue="Yes" />
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="UpgradeConfirm">NDAS_UPGRADE</Publish>
+		  <Publish Event="NewDialog" Value="ReadyToInstall">NOT NDAS_UPGRADE</Publish>
+		  <Condition Action="disable">SFWarnAck &lt;&gt; "Yes"</Condition>
+		  <Condition Action="enable">SFWarnAck = "Yes"</Condition>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="LicenseAgreement">1</Publish>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="yes" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.SFWarning.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.SFWarning.DlgTitle)</Text>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Memo" Type="Text" X="59" Y="51" Width="275" Height="130" Sunken="no" Transparent="yes">
+		  <Text>$(loc.SFWarning.MemoLine1)
+
+$(loc.SFWarning.MemoLine2)</Text>
+		</Control>
+		<Control Id="WarningIcon" Type="Icon" X="21" Y="51" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="WarningIcon.ibd" />
+	  </Dialog>
+
+	  <!-- UpgradeConfirm -->
+	  <Dialog Id="UpgradeConfirm" Width="374" Height="266" Title="$(loc.Text.Title)" NoMinimize="yes">
+		<Control Id="Next" Type="PushButton" X="230" Y="243" Width="66" Height="17" Default="yes" Text="$(loc.Text.Next)">
+		  <Publish Event="NewDialog" Value="ReadyToInstall">1</Publish>
+		</Control>
+		<Control Id="Cancel" Type="PushButton" X="301" Y="243" Width="66" Height="17" Text="$(loc.Text.Cancel)">
+		  <Publish Event="SpawnDialog" Value="CancelSetup">1</Publish>
+		</Control>
+		<Control Id="Back" Type="PushButton" X="164" Y="243" Width="66" Height="17" Text="$(loc.Text.Back)">
+		  <Publish Event="NewDialog" Value="SFWarning">SF_INSTALLED</Publish>
+		  <Publish Event="NewDialog" Value="LicenseAgreement">NOT SF_INSTALLED</Publish>
+		</Control>
+		<Control Id="SetupVersionText" Type="Text" X="5" Y="244" Width="145" Height="14" Disabled="yes" Transparent="yes" TabSkip="yes" Text="$(loc.Text.SetupVersion)" />
+		<Control Id="Banner" Type="Bitmap" X="0" Y="0" Width="374" Height="44" Text="Banner.ibd" />
+		<Control Id="DlgDesc" Type="Text" X="21" Y="23" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.UpgradeConfirm.DlgDesc)</Text>
+		</Control>
+		<Control Id="DlgTitle" Type="Text" X="13" Y="6" Width="292" Height="25" Transparent="yes">
+		  <Text>$(loc.UpgradeConfirm.DlgTitle)</Text>
+		</Control>
+		<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="374" Height="0" />
+		<Control Id="DlgLine" Type="Line" X="0" Y="234" Width="374" Height="0" />
+		<Control Id="Memo" Type="Text" X="59" Y="51" Width="275" Height="130" Sunken="no" Transparent="yes">
+		  <Text>$(loc.UpgradeConfirm.MemoLine1)
+
+$(loc.UpgradeConfirm.MemoLine2)
+
+$(loc.UpgradeConfirm.MemoLine3)</Text>
+		</Control>
+		<Control Id="SetupIcon" Type="Icon" X="21" Y="51" Width="24" Height="24" FixedSize="yes" IconSize="32" Text="SetupIcon.ibd" />
+	  </Dialog>
+
+	</UI>
+  </Fragment>
+</Wix>

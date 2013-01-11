@@ -1,0 +1,27 @@
+TARGETNAME=lanscsiop
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+INCLUDES=$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+# to publish headers
+# NTTARGETFILES=$(NDAS_INC_PATH)\lanscsiop.h
+
+# publish lib files to the project root
+PASS1_PUBLISH= {$(O)\$(TARGETNAME).lib=$(NDAS_LIB_PATH)\$(TARGETNAME).lib}
+
+#BROWSER_INFO=1
+#BROWSERFILE=$(TARGETNAME).bsc -n
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+#SOURCES=lanscsioplib.c ndasoplib.c
+SOURCES=lanscsioplib.c

@@ -1,0 +1,30 @@
+NDAS_SDK_INC_PATH=..\inc
+
+OBJ_DIR=obj
+OUTPUT_DIR=dll
+MSXSL=msxsl
+MC=mc
+MC_FLAGS=-suc
+LINK=link
+LINK_FLAGS=/nologo /noentry /nodefaultlib /dll /release /machine:x86
+
+all: $(OUTPUT_DIR) $(OBJ_DIR) $(OUTPUT_DIR)\ndasmsg.dll 
+
+$(OBJ_DIR):
+	@if not exist $(OBJ_DIR) mkdir $(OBJ_DIR)
+
+$(OUTPUT_DIR):
+	@if not exist $(OUTPUT_DIR) mkdir $(OUTPUT_DIR)
+	
+clean:
+	;
+
+$(OUTPUT_DIR)\ndasmsg.dll: $(OBJ_DIR)\_ndasmsg.res 
+	$(LINK) $(LINK_FLAGS) /out:$@ $**
+
+$(OBJ_DIR)\_ndasmsg.rc: $(OBJ_DIR)\_ndasmsg.mc
+	$(MC) -x $(OBJ_DIR) -h $(OBJ_DIR) -r $(OBJ_DIR) $(MC_FLAGS) $**
+
+$(OBJ_DIR)\_ndasmsg.mc: ndasmsg.xml string2mc.xsl
+	$(MSXSL) -o $@ $**
+

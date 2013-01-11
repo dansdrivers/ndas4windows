@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+	<BaseMsi />
+	<TargetMsiProp/>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<TargetMsi Include="$(TargetMsiProp)" />
+  </ItemGroup>
+
+  <Import Project="0_msitransform.targets" />
+
+</Project>

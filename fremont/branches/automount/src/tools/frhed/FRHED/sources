@@ -1,0 +1,68 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=frhed
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+!IF $(FREEBUILD)
+#USE_MSVCRT=1
+!ELSE
+#USE_LIBCMT=1
+#USE_MSVCRT=1
+DEBUG_CRTS=1
+!ENDIF
+
+C_DEFINES=/D_WINDOWS
+# /D__NDASBIND_DISABLE_RAID4__
+
+INCLUDES=$(NDAS_PUBLIC_INC_PATH);$(PSDK_INC_PATH);$(NDAS_INC_PATH)
+
+USECXX_FLAG=/Tp
+USE_NATIVE_EH=1
+
+UMTYPE=windows
+UMENTRY=winmain
+
+MSC_STDCALL=0
+
+TARGETLIBS=\
+	$(NDAS_PUBLIC_LIB_PATH)\ndascomm.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\comdlg32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(PSDK_LIB_PATH)\shell32.lib \
+	$(PSDK_LIB_PATH)\comctl32.lib \
+	$(PSDK_LIB_PATH)\ole32.lib \
+	$(PSDK_LIB_PATH)\oleaut32.lib \
+	$(PSDK_LIB_PATH)\uuid.lib
+
+PRECOMPILED_INCLUDE=precomp.h
+PRECOMPILED_CXX=1
+
+SOURCES=\
+  diagbox.cpp \
+  gktools.cpp \
+  gtools.cpp \
+  hexwnd.cpp \
+  ido.cpp \
+  ids.cpp \
+  idt.cpp \
+  InvokeHtmlHelp.cpp \
+  main.cpp \
+  PDrive95.cpp \
+  PDriveNDAS.cpp \
+  PDriveNT.cpp \
+  PhysicalDrive.cpp \
+  PMemoryBlock.cpp \
+  toolbar.cpp \
+	script1.rc
+
+# Platform SDK Windows 2003 Server SP1 lib files are VC7 symbols
+VC7_SYMBOLS=1

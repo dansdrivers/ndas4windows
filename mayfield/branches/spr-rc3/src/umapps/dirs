@@ -1,0 +1,12 @@
+DIRS=lanscsiop \
+	lfsfiltctl rofiltctl lsbusctl nhixnotify \
+	ndasmsg \
+	ndascomm ndasop \	
+	ndasuser \
+	ndassvc \
+	ndasmgmt ndascmd \
+	ndasbind \
+	ndashear
+
+OPTIONDIRS= .
+

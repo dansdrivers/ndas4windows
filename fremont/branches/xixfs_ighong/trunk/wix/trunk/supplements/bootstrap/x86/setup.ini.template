@@ -1,0 +1,54 @@
+; NDAS SETUP.EXE settings file.
+
+[MSI]
+; The MSI section gives the name of the MSI file to install. This file must be in 
+; the same folder as Setup.exe, and both must be in the root of the installation 
+; tree.
+MSI=
+
+[Product]
+ProductCode=
+ProductName=
+ProductVersion=
+Recache=1
+
+[MUI]
+PROMPT=1
+1033=1
+
+[Options]
+; The option section is used for specifying individual Installer Properties.
+
+[Display]
+; The diplay section is used for overriding the default UI
+;       Value           Default         Description
+;       Display         full            Option to override the default UI
+;                                       [none, quiet, basic, reduced, full]
+;       CompletionNotice Yes            Option to display a setup completion 
+;                                       notice for otherwise quiet setup
+;Display=None
+;CompletionNotice=Yes
+
+[Logging]
+; The logging section provides settings for controlling the Setup log files.
+;       Value           Default         Description
+;       Type            vpiwaeo         Logging modes  
+;                                       [a, c, e, i, m, o, p, r, u , v, 
+;                                       w, *, +]
+;       Path            %TEMP%          Path to create logfiles
+;       Template        SetupLog(*).txt File name for log file should end in 
+;                                       "(*).txt"; the * is replaced with a 4 
+;                                       digit number to make the file name unique
+;Path=%TEMP%
+Template=NDAS Software Setup(*).txt
+Type=v*
+
+[MinOSRequirement]
+VersionNT_1=500
+WindowsBuild_1=2195
+ServicePackLevel_1=0
+
+[MSIEngine]
+Version=200
+Installer=instmsiw.exe /c:"msiinst.exe /delayrebootq"
+

@@ -1,0 +1,36 @@
+TARGETNAME=lspxtest
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+INCLUDES=$(NDAS_INC_PATH);$(NDAS_INC_PATH)\lspx;$(PSDK_INC_PATH)
+
+UMTYPE=console
+UMENTRY=main
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Ox
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+MSC_WARNING_LEVEL=-W3 -WX -Wp64
+
+# $(NDAS_LIB_PATH)\liblsp.lib
+
+TARGETLIBS=\
+	$(SDK_LIB_PATH)\ws2_32.lib \
+	$(SDK_LIB_PATH)\ntdll.lib
+
+# for user-mode payload debugging
+#TARGETLIBS=$(TARGETLIBS) $(NDAS_LIB_PATH)\liblspx_udbg.lib
+
+# non-debugging library
+TARGETLIBS=$(TARGETLIBS) $(NDAS_LIB_PATH)\liblspx.lib
+
+SOURCES=\
+	lsptest.c \
+	lsptest_cmds.c \
+	lsptest_winsock.c \
+	mbr.c

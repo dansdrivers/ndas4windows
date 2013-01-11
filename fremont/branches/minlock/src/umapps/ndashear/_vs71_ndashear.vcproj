@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="ndashear"
+	ProjectGUID="{FF67D413-892E-48B6-AA67-680BCBC3D5E0}"
+	RootNamespace="ndashear"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="dll\objchk_w2k_x86\i386"
+			IntermediateDirectory="dll\objchk_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 chk . -c0i"
+				Output="dll\objchk_w2k_x86\i386\ndashear.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="dll\objfre_w2k_x86\i386"
+			IntermediateDirectory="dll\objfre_w2k_x86\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild i386 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild i386 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild i386 fre . -c0i"
+				Output="dll\objfre_w2k_x86\i386\ndashear.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug (x64)|Win32"
+			OutputDirectory="dll\objchk_wnet_amd64\amd64"
+			IntermediateDirectory="dll\objchk_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 chk . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 chk . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 chk . -c0i"
+				Output="dll\objchk_wnet_amd64\amd64\ndashear.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release (x64)|Win32"
+			OutputDirectory="dll\objfre_wnet_amd64\amd64"
+			IntermediateDirectory="dll\objfre_wnet_amd64\amd64"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\xbuild amd64 fre . -eMPwi"
+				ReBuildCommandLine="..\..\..\bin\xbuild amd64 fre . -ceMPwi"
+				CleanCommandLine="..\..\..\bin\xbuild amd64 fre . -c0i"
+				Output="dll\objfre_wnet_amd64\amd64\ndashear.dll"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;xml"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\dllmain.cpp" />
+			<File
+				RelativePath=".\main.cpp" />
+			<File
+				RelativePath=".\ndashear.cpp" />
+			<File
+				RelativePath=".\ndasheartbeat.cpp" />
+			<File
+				RelativePath=".\task.cpp" />
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\ndasheartbeat.h" />
+			<File
+				RelativePath=".\task.h" />
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"></Filter>
+		<File
+			RelativePath=".\dirs" />
+		<File
+			RelativePath=".\sources.inc" />
+		<Filter
+			Name=".dll"
+			Filter=""
+			UniqueIdentifier="{2D446B4C-C345-4E58-8BA4-0D29A9681476}">
+			<File
+				RelativePath=".\dll\makefile" />
+			<File
+				RelativePath=".\dll\sources" />
+		</Filter>
+		<Filter
+			Name=".dlltest"
+			Filter=""
+			UniqueIdentifier="{5BA54E52-AA5C-4115-A3B7-0EECA9E870DB}">
+			<File
+				RelativePath=".\dlltest\makefile" />
+			<File
+				RelativePath=".\dlltest\sources" />
+			<File
+				RelativePath=".\dlltest\test.c" />
+		</Filter>
+		<Filter
+			Name=".exe"
+			Filter=""
+			UniqueIdentifier="{A253564C-F835-4E79-8B7E-D1360743C35C}">
+			<File
+				RelativePath=".\exe\makefile" />
+			<File
+				RelativePath=".\exe\sources" />
+		</Filter>
+		<Filter
+			Name=".slib"
+			Filter=""
+			UniqueIdentifier="{A8E46092-3D0E-4515-8E2F-8B52AE1741A0}">
+			<File
+				RelativePath=".\slib\makefile" />
+			<File
+				RelativePath=".\slib\sources" />
+		</Filter>
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

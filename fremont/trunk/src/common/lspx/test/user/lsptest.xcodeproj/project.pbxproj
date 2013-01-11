@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD76F6A0486A84900D96B5E /* lsptest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* lsptest.1 */; };
+		C3202D4F0BF0088D005267BE /* lsptest_cmds.c in Sources */ = {isa = PBXBuildFile; fileRef = C3202D490BF0088D005267BE /* lsptest_cmds.c */; };
+		C3202D500BF0088D005267BE /* lsptest_cmds.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D4A0BF0088D005267BE /* lsptest_cmds.h */; };
+		C3202D510BF0088D005267BE /* lsptest_macsock.c in Sources */ = {isa = PBXBuildFile; fileRef = C3202D4B0BF0088D005267BE /* lsptest_macsock.c */; };
+		C3202D520BF0088D005267BE /* lsptest_transport.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D4C0BF0088D005267BE /* lsptest_transport.h */; };
+		C3202D530BF0088D005267BE /* lsptest.c in Sources */ = {isa = PBXBuildFile; fileRef = C3202D4D0BF0088D005267BE /* lsptest.c */; };
+		C3202D540BF0088D005267BE /* lsptest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D4E0BF0088D005267BE /* lsptest.h */; };
+		C3202D5B0BF008BC005267BE /* lsp_binparm.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D550BF008BC005267BE /* lsp_binparm.h */; };
+		C3202D5C0BF008BC005267BE /* lsp_hash.c in Sources */ = {isa = PBXBuildFile; fileRef = C3202D560BF008BC005267BE /* lsp_hash.c */; };
+		C3202D5E0BF008BC005267BE /* lsp_type_internal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D580BF008BC005267BE /* lsp_type_internal.h */; };
+		C3202D5F0BF008BC005267BE /* lsp_util.c in Sources */ = {isa = PBXBuildFile; fileRef = C3202D590BF008BC005267BE /* lsp_util.c */; };
+		C3202D600BF008BC005267BE /* lsp.c in Sources */ = {isa = PBXBuildFile; fileRef = C3202D5A0BF008BC005267BE /* lsp.c */; };
+		C3202D6E0BF008CE005267BE /* lsp_hash.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D610BF008CE005267BE /* lsp_hash.h */; };
+		C3202D6F0BF008CE005267BE /* lsp_host.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D620BF008CE005267BE /* lsp_host.h */; };
+		C3202D700BF008CE005267BE /* lsp_ide_def.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D630BF008CE005267BE /* lsp_ide_def.h */; };
+		C3202D710BF008CE005267BE /* lsp_spec.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D640BF008CE005267BE /* lsp_spec.h */; };
+		C3202D720BF008CE005267BE /* lsp_type.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D650BF008CE005267BE /* lsp_type.h */; };
+		C3202D730BF008CE005267BE /* lsp_util.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D660BF008CE005267BE /* lsp_util.h */; };
+		C3202D740BF008CE005267BE /* lsp.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D670BF008CE005267BE /* lsp.h */; };
+		C3202D750BF008CE005267BE /* lspspecstring.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D680BF008CE005267BE /* lspspecstring.h */; };
+		C3202D760BF008CE005267BE /* poppack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D690BF008CE005267BE /* poppack.h */; };
+		C3202D770BF008CE005267BE /* pshpack1.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D6A0BF008CE005267BE /* pshpack1.h */; };
+		C3202D780BF008CE005267BE /* pshpack2.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D6B0BF008CE005267BE /* pshpack2.h */; };
+		C3202D790BF008CE005267BE /* pshpack4.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D6C0BF008CE005267BE /* pshpack4.h */; };
+		C3202D7A0BF008CE005267BE /* pshpack8.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3202D6D0BF008CE005267BE /* pshpack8.h */; };
+		C3A6FC330C189AF0002E4463 /* mbr.c in Sources */ = {isa = PBXBuildFile; fileRef = C3A6FC310C189AF0002E4463 /* mbr.c */; };
+		C3A6FC340C189AF0002E4463 /* mbr.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3A6FC320C189AF0002E4463 /* mbr.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* lsptest.1 in CopyFiles */,
+				C3202D500BF0088D005267BE /* lsptest_cmds.h in CopyFiles */,
+				C3202D520BF0088D005267BE /* lsptest_transport.h in CopyFiles */,
+				C3202D540BF0088D005267BE /* lsptest.h in CopyFiles */,
+				C3202D5B0BF008BC005267BE /* lsp_binparm.h in CopyFiles */,
+				C3202D5E0BF008BC005267BE /* lsp_type_internal.h in CopyFiles */,
+				C3202D6E0BF008CE005267BE /* lsp_hash.h in CopyFiles */,
+				C3202D6F0BF008CE005267BE /* lsp_host.h in CopyFiles */,
+				C3202D700BF008CE005267BE /* lsp_ide_def.h in CopyFiles */,
+				C3202D710BF008CE005267BE /* lsp_spec.h in CopyFiles */,
+				C3202D720BF008CE005267BE /* lsp_type.h in CopyFiles */,
+				C3202D730BF008CE005267BE /* lsp_util.h in CopyFiles */,
+				C3202D740BF008CE005267BE /* lsp.h in CopyFiles */,
+				C3202D750BF008CE005267BE /* lspspecstring.h in CopyFiles */,
+				C3202D760BF008CE005267BE /* poppack.h in CopyFiles */,
+				C3202D770BF008CE005267BE /* pshpack1.h in CopyFiles */,
+				C3202D780BF008CE005267BE /* pshpack2.h in CopyFiles */,
+				C3202D790BF008CE005267BE /* pshpack4.h in CopyFiles */,
+				C3202D7A0BF008CE005267BE /* pshpack8.h in CopyFiles */,
+				C3A6FC340C189AF0002E4463 /* mbr.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8DD76F6C0486A84900D96B5E /* lsptest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lsptest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3202D490BF0088D005267BE /* lsptest_cmds.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = lsptest_cmds.c; sourceTree = "<group>"; };
+		C3202D4A0BF0088D005267BE /* lsptest_cmds.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = lsptest_cmds.h; sourceTree = "<group>"; };
+		C3202D4B0BF0088D005267BE /* lsptest_macsock.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = lsptest_macsock.c; sourceTree = "<group>"; };
+		C3202D4C0BF0088D005267BE /* lsptest_transport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = lsptest_transport.h; sourceTree = "<group>"; };
+		C3202D4D0BF0088D005267BE /* lsptest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = lsptest.c; sourceTree = "<group>"; };
+		C3202D4E0BF0088D005267BE /* lsptest.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = lsptest.h; sourceTree = "<group>"; };
+		C3202D550BF008BC005267BE /* lsp_binparm.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lsp_binparm.h; path = ../../lsp_binparm.h; sourceTree = SOURCE_ROOT; };
+		C3202D560BF008BC005267BE /* lsp_hash.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = lsp_hash.c; path = ../../lsp_hash.c; sourceTree = SOURCE_ROOT; };
+		C3202D580BF008BC005267BE /* lsp_type_internal.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lsp_type_internal.h; path = ../../lsp_type_internal.h; sourceTree = SOURCE_ROOT; };
+		C3202D590BF008BC005267BE /* lsp_util.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = lsp_util.c; path = ../../lsp_util.c; sourceTree = SOURCE_ROOT; };
+		C3202D5A0BF008BC005267BE /* lsp.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = lsp.c; path = ../../lsp.c; sourceTree = SOURCE_ROOT; };
+		C3202D610BF008CE005267BE /* lsp_hash.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lsp_hash.h; path = ../../../inc/lspx/lsp_hash.h; sourceTree = SOURCE_ROOT; };
+		C3202D620BF008CE005267BE /* lsp_host.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lsp_host.h; path = ../../../inc/lspx/lsp_host.h; sourceTree = SOURCE_ROOT; };
+		C3202D630BF008CE005267BE /* lsp_ide_def.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lsp_ide_def.h; path = ../../../inc/lspx/lsp_ide_def.h; sourceTree = SOURCE_ROOT; };
+		C3202D640BF008CE005267BE /* lsp_spec.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lsp_spec.h; path = ../../../inc/lspx/lsp_spec.h; sourceTree = SOURCE_ROOT; };
+		C3202D650BF008CE005267BE /* lsp_type.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lsp_type.h; path = ../../../inc/lspx/lsp_type.h; sourceTree = SOURCE_ROOT; };
+		C3202D660BF008CE005267BE /* lsp_util.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lsp_util.h; path = ../../../inc/lspx/lsp_util.h; sourceTree = SOURCE_ROOT; };
+		C3202D670BF008CE005267BE /* lsp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lsp.h; path = ../../../inc/lspx/lsp.h; sourceTree = SOURCE_ROOT; };
+		C3202D680BF008CE005267BE /* lspspecstring.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = lspspecstring.h; path = ../../../inc/lspx/lspspecstring.h; sourceTree = SOURCE_ROOT; };
+		C3202D690BF008CE005267BE /* poppack.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = poppack.h; path = ../../../inc/lspx/poppack.h; sourceTree = SOURCE_ROOT; };
+		C3202D6A0BF008CE005267BE /* pshpack1.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pshpack1.h; path = ../../../inc/lspx/pshpack1.h; sourceTree = SOURCE_ROOT; };
+		C3202D6B0BF008CE005267BE /* pshpack2.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pshpack2.h; path = ../../../inc/lspx/pshpack2.h; sourceTree = SOURCE_ROOT; };
+		C3202D6C0BF008CE005267BE /* pshpack4.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pshpack4.h; path = ../../../inc/lspx/pshpack4.h; sourceTree = SOURCE_ROOT; };
+		C3202D6D0BF008CE005267BE /* pshpack8.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pshpack8.h; path = ../../../inc/lspx/pshpack8.h; sourceTree = SOURCE_ROOT; };
+		C3A6FC310C189AF0002E4463 /* mbr.c */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.c; path = mbr.c; sourceTree = "<group>"; };
+		C3A6FC320C189AF0002E4463 /* mbr.h */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.h; path = mbr.h; sourceTree = "<group>"; };
+		C6859E8B029090EE04C91782 /* lsptest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = lsptest.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* lsptest */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6FC310C189AF0002E4463 /* mbr.c */,
+				C3A6FC320C189AF0002E4463 /* mbr.h */,
+				C3202D610BF008CE005267BE /* lsp_hash.h */,
+				C3202D620BF008CE005267BE /* lsp_host.h */,
+				C3202D630BF008CE005267BE /* lsp_ide_def.h */,
+				C3202D640BF008CE005267BE /* lsp_spec.h */,
+				C3202D650BF008CE005267BE /* lsp_type.h */,
+				C3202D660BF008CE005267BE /* lsp_util.h */,
+				C3202D670BF008CE005267BE /* lsp.h */,
+				C3202D680BF008CE005267BE /* lspspecstring.h */,
+				C3202D690BF008CE005267BE /* poppack.h */,
+				C3202D6A0BF008CE005267BE /* pshpack1.h */,
+				C3202D6B0BF008CE005267BE /* pshpack2.h */,
+				C3202D6C0BF008CE005267BE /* pshpack4.h */,
+				C3202D6D0BF008CE005267BE /* pshpack8.h */,
+				C3202D550BF008BC005267BE /* lsp_binparm.h */,
+				C3202D560BF008BC005267BE /* lsp_hash.c */,
+				C3202D580BF008BC005267BE /* lsp_type_internal.h */,
+				C3202D590BF008BC005267BE /* lsp_util.c */,
+				C3202D5A0BF008BC005267BE /* lsp.c */,
+				C3202D490BF0088D005267BE /* lsptest_cmds.c */,
+				C3202D4A0BF0088D005267BE /* lsptest_cmds.h */,
+				C3202D4B0BF0088D005267BE /* lsptest_macsock.c */,
+				C3202D4C0BF0088D005267BE /* lsptest_transport.h */,
+				C3202D4D0BF0088D005267BE /* lsptest.c */,
+				C3202D4E0BF0088D005267BE /* lsptest.h */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = lsptest;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* lsptest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* lsptest.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* lsptest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "lsptest" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lsptest;
+			productInstallPath = "$(HOME)/bin";
+			productName = lsptest;
+			productReference = 8DD76F6C0486A84900D96B5E /* lsptest */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "lsptest" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* lsptest */;
+			projectDirPath = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* lsptest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3202D4F0BF0088D005267BE /* lsptest_cmds.c in Sources */,
+				C3202D510BF0088D005267BE /* lsptest_macsock.c in Sources */,
+				C3202D530BF0088D005267BE /* lsptest.c in Sources */,
+				C3202D5C0BF008BC005267BE /* lsp_hash.c in Sources */,
+				C3202D5F0BF008BC005267BE /* lsp_util.c in Sources */,
+				C3202D600BF008BC005267BE /* lsp.c in Sources */,
+				C3A6FC330C189AF0002E4463 /* mbr.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = lsptest;
+				USER_HEADER_SEARCH_PATHS = "../../../inc ../../../inc/lspx";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = lsptest;
+				USER_HEADER_SEARCH_PATHS = "../../../inc ../../../inc/lspx";
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "lsptest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "lsptest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

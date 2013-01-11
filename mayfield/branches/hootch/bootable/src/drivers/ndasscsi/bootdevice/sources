@@ -1,0 +1,61 @@
+!INCLUDE ..\minisrcs.inc
+
+TARGETNAME=ndasmini
+TARGETTYPE=MINIPORT
+TARGETPATH=obj
+
+BUILD_PRODUCES=ndasmini
+BUILD_CONSUMES=libntkrnl libndasbootdevice libndaskbootdevice liblpxtdi libscrc32 libhash libaes
+
+
+#MULTIBOOT=multiboot
+C_DEFINES = -D__NDASBOOT__ $(C_DEFINES)
+!IFDEF MULTIBOOT
+C_DEFINES = -D__DIVIDED_MULTI_BOOT__ $(C_DEFINES)
+!ENDIF
+C_DEFINES = -D__REDUCED_REQUEST_SIZE_TO_NDAS_DEVICE_PATCH__ $(C_DEFINES)
+
+
+SOURCES_USED=..\minisrcs.inc
+SOURCES=$(SOURCES)
+
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\hal.lib     \
+    $(DDK_LIB_PATH)\ntoskrnl.lib \
+    $(DDK_LIB_PATH)\tdi.lib     \
+    $(DDK_LIB_PATH)\scsiport.lib \
+    $(DDK_LIB_PATH)\scsiwmi.lib \
+    $(DDK_LIB_PATH)\bufferoverflowK.lib \
+    $(DDK_LIB_PATH)\ntstrsafe.lib \
+    $(NDAS_LIB_PATH)\libhash.lib \
+    $(NDAS_LIB_PATH)\libaes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+    $(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib
+    
+TARGETLIBS=$(TARGETLIBS) \
+	$(NDAS_DRIVER_LIB_PATH)\libndasbootdevice.lib \
+    $(NDAS_DRIVER_LIB_PATH)\libndaskbootdevice.lib
+
+#
+# CDF Copy
+#
+
+NTTARGETFILES=cdfcopy
+CDFSRCFILE=..\ndasmini.cdf
+CDFFILE=$(O)\ndasmini.cdf
+
+#
+# Set INF File Version
+#
+INFFILENAME=$(TARGETNAME)
+
+!IF "$(_BUILDARCH)" == "AMD64"
+INFSRCNAME=$(INFFILENAME).amd64
+!ELSE
+INFSRCNAME=$(INFFILENAME)
+!ENDIF
+
+POST_BUILD_CMD=$(NDAS_TOOLS)\setinfver $(O)\$(TARGETNAME).sys $(INFSRCNAME).inf $(O)\$(INFFILENAME).inf
+
+BINPLACE_FLAGS=$(O)\$(INFFILENAME).inf $(CDFFILE)
+

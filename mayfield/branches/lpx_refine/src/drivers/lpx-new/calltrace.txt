@@ -1,0 +1,219 @@
+Flags:  
+	l: check code is converted for lpx.
+	v: Function is called and checked.
+	s: Check for lock & SMP
+	c: Completed. 
+	r: reviewed
+	+: code is traced into 
+	*: Current item
+	
+address.c
+v	LpxParseTdiAddress
+v	LpxValidateTdiAddress
+	LpxOpenAddress
+	LpxAllocateAddress
+	LpxDeallocateAddress
+	LpxCreateAddress
+	LpxVerifyAddressObject
+	LpxDestroyAddress
+	LpxRefAddress
+	LpxDerefAddress
+	LpxAllocateAddressFile
+	LpxDeallocateAddressFile
+	LpxCreateAddressFile
+	LpxDestroyAddressFile
+	LpxReferenceAddressFile
+	LpxDereferenceAddressFile
+	LpxStopAddressFile
+	LpxCloseAddress
+
+connect.c:
+	LpxTdiAccept
+	LpxTdiAssociateAddress
+	LpxTdiDisassociateAddress
+	LpxTdiConnect
+	LpxTdiDisconnect
+	LpxTdiListen
+	LpxOpenConnection
+	LpxCloseConnection
+
+connobj.c
+	LpxAllocateConnection
+	LpxDeallocateConnection
+	LpxCreateConnection
+	LpxVerifyConnectionObject
+	LpxDestroyAssociation
+	LpxDestroyConnection
+	LpxRefConnection
+	LpxDerefConnection
+	LpxDerefConnectionSpecial
+
+devctx.c
+	LpxRefDeviceContext
+	LpxDerefDeviceContext
+	LpxCreateDeviceContext
+	LpxDestroyDeviceContext
+
+
+event.c:
+	LpxTdiSetEventHandler
+
+info.c:
+	LpxTdiQueryInformation
+	LpxTdiSetInformation
+
+lpx.c
+	CallUserDisconnectHandlerForDCDisable
+	LpxCancelIrp
+	LpxCancelSend
+	LpxCancelRecv
+	LpxCancelConnect
+	LpxCancelDisconnect
+	LpxCancelListen
+	SmpReadPacket
+	LpxAssignPort
+	LpxLookupAddress
+	LpxAssociateAddress
+	LpxConnect
+	LpxListen
+	LpxAccept
+	LpxDisconnect
+	LpxReceiveIndicate
+	LpxTransferDataComplete
+	LpxReceiveComplete
+	LpxSend
+	LpxCallUserReceiveHandler
+	LpxRecv
+	LpxSendDatagram
+	LpxCancelIrp
+	SmpPrintState
+	LpxInitServicePoint
+	LpxCloseServicePoint
+	SmpCancelIrps
+	TransmitPacket
+	TransmitPacket_AvoidAddrSvcDeadLock
+	ProcessSentPacket
+	RoutePacketRequest
+	RoutePacket
+	LpxSendComplete
+	SmpSendTest
+	CalculateRTT
+	SmpReadPacket
+	SmpDoReceiveRequest
+	SmpDoReceive
+	SmpRetransmitCheck
+	SmpDoMoreWorkDpcRequest
+	SmpWorkDpcRoutine
+	SmpTimerDpcRoutineRequest
+	SmpTimerDpcRoutine
+	CallUserDisconnectHandler
+
+lpxpacket.c
+	PacketDequeue
+	PacketFree
+	PacketAllocate
+	PacketClone
+	PacketCopy
+	PacketQueueEmpty
+	PacketPeek
+
+lpxtdi.c:
+	...
+	
+nbfcnfg.c:	
+v	LpxConfigureTransport
++		LpxOpenParametersKey
++		LpxCloseParametersKey
++		LpxReadLinkageInformation
+		
+
+nbfdrvr.c
+v	DriverEntry
+   		Register callbacks:
+			LpxDispatchOpenClose
+			LpxDispatchInternal
+			LpxDispatch
+			LpxUnload
++		LpxRegisterProtocol
++		LpxDeregisterProtocol
+	LpxUnload
+	LpxFreeResources
+	LpxDispatch
+	LpxDispatchOpenClose
+	LpxDeviceControl
+	LpxDispatchPnPPower
+	LpxDispatchInternal
+*	LpxInitializeOneDeviceContext
+		LpxCreateDeviceContext
+		LpxReInitializeDeviceContext
+		LpxInitializeNdis
+		MacReturnMaxDataSize
+		LpxAllocateConnection
+		LpxAllocateAddressFile
+		LpxAllocateAddress
+		
+	LpxReInitializeDeviceContext
+	
+nbfmac.c:
+	MacReturnMaxDataSize
+
+nbfndis.c:
+v*	LpxRegisterProtocol
+		Register callbacks:
++*			LpxProtocolBindAdapter
+			LpxProtocolUnbindAdapter
+			LpxProtocolPnPEventHandler
+			LpxOpenAdapterComplete
+			LpxCloseAdapterComplete
+			LpxResetComplete
+			LpxRequestComplete
+			LpxSendComplete
+			LpxTransferDataComplete
+			LpxReceiveIndicate
+			LpxStatusIndication
+			LpxStatusComplete
+v 	LpxDeregisterProtocol
+ 	LpxSubmitNdisRequest
+ 	LpxInitializeNdis
+ 	LpxCloseNdis
+ 	LpxCloseAdapterComplete
+ 	LpxResetComplete
+ 	LpxRequestComplete
+	LpxStatusIndication
+	LpxProcessStatusClosing
+	LpxStatusComplete
+	LpxGetNdisStatus
+
+ nbfpnp.c:
+* 	LpxProtocolBindAdapter
++ 		LpxConfigureTransport
++ 		LpxGetExportNameFromRegistry
+* 		LpxInitializeOneDeviceContext
+		LpxCreateControlDevice
+ 		
+ 	LpxProtocolUnbindAdapter 		
+ 	LpxProtocolPnPEventHandler
+ 	LpxPnPEventDispatch
+ 	LpxPnPEventComplete
+ 	LpxPnPBindsComplete
+
+rcv.c
+	LpxTdiReceive
+	LpxTdiReceiveDatagram
+	
+request.c
+	LpxRefSendIrp
+	LpxDerefSendIrp
+ 	
+send.c
+	LpxTdiSend
+	LpxTdiSendDatagram
+	
+socketnbf.c
+*	SocketLpxInitializeOneDeviceContext
+	LpxCreateControlDevice
+		SocketLpxInitializeOneDeviceContext
+	LpxDestroyControlDevice
+	LpxFindDeviceContext
+
+

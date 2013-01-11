@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+		 DefaultTargets="Build">
+
+  <PropertyGroup>
+	<ToolPath></ToolPath>
+	<ResXml>$(ToolPath)resxml.exe</ResXml>
+	<MsXsl>$(ToolPath)msxsl.exe</MsXsl>
+	<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildProjectFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<OEM>base</OEM>
+	<BasePath>..\base\bin\i386\</BasePath>
+	<MetaDataPath>..\base\meta\</MetaDataPath>
+	<LocOutputPath>..\base\loc\</LocOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<ResourceDllFile Include="$(BasePath)*.enu.dll" />
+	<ResourceDllFile Include="$(BasePath)*.en.dll" />
+	<ResourceDllFile Include="$(BasePath)*.en-US.dll" />
+	<MsgDllFile Include="$(BasePath)ndasmsg.dll" />
+  </ItemGroup>
+
+  <UsingTask TaskName="XIMETA.TextSplit" AssemblyFile="$(ToolPath)msbuild\XIMETA.Tasks.dll" />
+  <UsingTask TaskName="XIMETA.FileVersionInfo" AssemblyFile="$(ToolPath)msbuild\XIMETA.Tasks.dll" />
+  <UsingTask TaskName="XIMETA.Xml.XslTransform" AssemblyFile="$(ToolPath)msbuild\XIMETA.Tasks.dll" />
+  <UsingTask TaskName="XIMETA.ResXml.CreateResXml" AssemblyFile="$(ToolPath)msbuild\XIMETA.Tasks.dll" />
+
+  <Target Name="Build" 
+		  DependsOnTargets="CreateResXml;
+							ConvertResXmlToLocXml;
+							ConvertMsgXmlToLocXml">
+  </Target>
+
+
+  <!--
+	  tools\resxml extract base\bin\i386\ndasmgmt.enu.dll base\loc\ndasmgmt.enu.resxml
+	  tools\resxml extract base\bin\i386\ndasbind.enu.dll base\loc\ndasbind.enu.resxml
+	-->
+
+  <Target Name="CreateResXml"
+		  Inputs="%(ResourceDllFile.identity);$(MSBuildAllProjects)"
+		  Outputs="$(LocOutputPath)%(ResourceDllFile.filename).resxml">
+
+	<XIMETA.ResXml.CreateResXml
+	   ToolPath="$(ToolPath)"
+	   InputModuleFile="%(ResourceDllFile.identity)"
+	   OutputResXmlFile="$(LocOutputPath)%(ResourceDllFile.filename).resxml" />
+
+	   <!--
+		   <Exec Command="$(ResXml) extract %(ResourceDllFile.identity) $(LocOutputPath)%(ResourceDllFile.filename).resxml" />
+		   -->
+
+	<CreateItem Include="$(LocOutputPath)%(ResourceDllFile.filename).resxml">
+	  <Output TaskParameter="Include" ItemName="GeneratedResXml" />
+	</CreateItem>
+
+  </Target>
+
+  <Target Name="DeleteResXml">
+	<Delete Files="@(GeneratedResXml)" />
+  </Target>
+		  
+  <!--
+
+	  tools\msxsl base\loc\ndasmgmt.enu.resxml tools\resxml2loc.xsl 
+	   -o base\loc\loc_enu_ndasmgmt.xml 
+       version=3.11.1327 component=ndasmgmt oem=base lang=enu
+
+	  tools\msxsl base\loc\ndasbind.enu.resxml tools\resxml2loc.xsl 
+	   -o base\loc\loc_enu_ndasbind.xml
+	   version=3.11.1327 component=ndasbind oem=base lang=enu
+
+	-->
+
+  <Target Name="ConvertResXmlToLocXml"
+		  Inputs="%(ResourceDllFileSpec.identity);$(MSBuildAllProjects)"
+		  Outputs="%(ResourcedllFileSpec.Output)"
+		  DependsOnTargets="_CreateTaskItemsForResXmlToLocXml">
+
+	<XIMETA.FileVersionInfo TargetFileName="%(ResourceDllFileSpec.identity)">
+	  <Output TaskParameter="ProductVersion" PropertyName="ProductVersion" />
+	</XIMETA.FileVersionInfo>
+
+	<XIMETA.Xml.XslTransform
+	   SourceFile="%(ResourceDllFileSpec.resxml)"
+	   Stylesheet="$(ToolPath)resxml2loc.xsl"
+	   OutputFile="%(ResourceDllFileSpec.Output)"
+	   Arguments="component=%(ResourceDllFileSpec.basename);
+				  version=$(productversion);
+				  oem=$(oem);
+				  lang=%(ResourceDllFileSpec.language)" />
+
+	<!--
+	<Exec Command="$(msxsl) %(ResourceDllFileSpec.resxml) $(ToolPath)resxml2loc.xsl -o %(ResourceDllFileSpec.Output) component=%(ResourceDllFileSpec.basename) version=$(productversion) oem=$(oem) lang=%(ResourceDllFileSpec.language)" />
+	-->
+
+  </Target>
+
+  <!-- create task items for convert resxml to locxml -->
+  <Target Name="_CreateTaskItemsForResXmlToLocXml"
+		  Inputs="%(ResourceDllFile.identity)"
+		  Outputs="__always__">
+
+	<XIMETA.TextSplit Text="%(ResourceDllFile.filename)" Separators="." Index="0">
+	  <Output TaskParameter="Value" PropertyName="_ResourceDllBaseName" />
+	</XIMETA.TextSplit>
+
+	<XIMETA.TextSplit Text="%(ResourceDllFile.filename)" Separators="." Index="1">
+	  <Output TaskParameter="Value" PropertyName="_ResourceDllLanguage" />
+	</XIMETA.TextSplit>
+
+	<CreateItem Include="%(ResourceDllFile.identity)"
+				AdditionalMetadata="BaseName=$(_ResourceDllBaseName);
+									Language=$(_ResourceDllLanguage);
+									ResXml=$(LocOutputPath)%(ResourceDllFile.filename).resxml;
+									Output=$(LocOutputPath)loc_$(_ResourceDllLanguage)_$(_ResourceDllBaseName).xml">
+	  <Output TaskParameter="Include" ItemName="ResourceDllFileSpec" />
+	</CreateItem>
+  </Target>
+
+  <!--
+
+	  tools\msxsl base\meta\ndasmsg.xml tools\msgxml2loc.xsl
+       -o base\loc\loc_enu_ndasmsg.xml
+	   version=3.11.1327 component=ndasmsg oem=base lang=enu
+
+	-->
+
+  <Target Name="ConvertMsgXmlToLocXml"
+		  Inputs="%(MsgDllFileSpec.identity);$(MSBuildAllProjects)"
+		  Outputs="%(MsgDllFileSpec.Output)"
+		  DependsOnTargets="CreateTaskItemsForMsgXmlToLocXml">
+
+	<XIMETA.FileVersionInfo TargetFileName="%(MsgDllFileSpec.identity)">
+	  <Output TaskParameter="ProductVersion" PropertyName="ProductVersion" />
+	</XIMETA.FileVersionInfo>
+
+	<XIMETA.Xml.XslTransform
+	   SourceFile="%(MsgDllFileSpec.msgxml)"
+	   Stylesheet="$(ToolPath)msgxml2loc.xsl"
+	   OutputFile="%(MsgDllFileSpec.Output)"
+	   Arguments="component=%(MsgDllFileSpec.basename);
+				  version=$(productversion);
+				  oem=$(oem);
+				  lang=%(MsgDllFileSpec.language)" />
+
+	<!-- 
+	<Exec Command="$(msxsl) %(MsgDllFileSpec.msgxml) $(ToolPath)msgxml2loc.xsl -o %(MsgDllFileSpec.Output) component=%(MsgDllFileSpec.basename) version=$(productversion) oem=$(oem) lang=%(MsgDllFileSpec.language)" />
+	-->
+
+  </Target>
+
+  <!-- create task items for convert resxml to locxml -->
+  <Target Name="CreateTaskItemsForMsgXmlToLocXml"
+		  Inputs="%(MsgDllFile.identity)"
+		  Outputs="__always__">
+
+	<CreateItem Include="%(MsgDllFile.identity)"
+				AdditionalMetadata="BaseName=%(MsgDllFile.filename);
+									Language=enu;
+									MsgXml=$(MetaDataPath)%(MsgDllFile.filename).xml;
+									Output=$(LocOutputPath)loc_enu_%(MsgDllFile.filename).xml">
+	  <Output TaskParameter="Include" ItemName="MsgDllFileSpec" />
+	</CreateItem>
+  </Target>
+
+</Project>

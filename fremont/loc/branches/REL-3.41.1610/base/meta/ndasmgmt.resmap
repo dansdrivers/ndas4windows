@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<resmap module="ndasmgmt">
+  <resource type="BITMAP" name="#111" fileName="ndasmgmt_res_wizard_watermark.bmp" symbolName="IDB_WATERMARK256" />
+  <resource type="BITMAP" name="#103" fileName="ndasmgmt_res_wizard_banner.bmp" symbolName="IDB_BANNER256" />
+  <resource type="BITMAP" name="#104" fileName="ndasmgmt_res_proptree.bmp" symbolName="IDB_PROPTREE" />
+  <resource type="BITMAP" name="#4003" fileName="ndasmgmt_res_option_icons.bmp" symbolName="IDB_OPTION_ICONS" />
+  <resource type="BITMAP" name="#4005" fileName="ndasmgmt_res_unitdevices.bmp" symbolName="IDB_UNITDEVICES" />
+  <resource type="BITMAP" name="#4009" fileName="ndasmgmt_res_status.bmp" symbolName="IDB_STATUS" />
+  <resource type="ICON_GROUP" name="#128" fileName="ndasmgmt.ico" symbolName="IDR_MAINFRAME" />
+  <resource type="ICON_GROUP" name="#2013" fileName="ndasmgmt_res_taskbar.ico" symbolName="IDR_TASKBAR" />
+  <resource type="ICON_GROUP" name="#4002" fileName="ndasmgmt_res_taskbar_fail.ico" symbolName="IDR_TASKBAR_FAIL" />
+  <resource type="ICON_GROUP" name="#4011" fileName="ndasmgmt_res_nif.ico" symbolName="IDI_NIF" />
+  <resource type="IMAGE" name="#101" fileName="ndasmgmt_res_info_header.jpg" symbolName="IDB_ABOUT_HEADER" />
+  <resource type="AVI" name="#4006" fileName="ndasmgmt_res_findhosts.avi" symbolName="IDA_FINDHOSTS" />
+</resmap>

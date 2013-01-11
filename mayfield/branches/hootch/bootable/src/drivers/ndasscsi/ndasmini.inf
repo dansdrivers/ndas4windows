@@ -1,0 +1,86 @@
+;-------------------------------------------------------------------------
+; ndasmini.inf
+;
+; Installation file (.inf) for the Booting NDAS SCSI Device Driver
+;
+; Copyright (C) 2002-2004 XIMETA, Inc.
+;-------------------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = SCSIAdapter
+ClassGUID   = {4D36E97B-E325-11CE-BFC1-08002BE10318}
+Provider    = %PROVIDER%
+CatalogFile = ndasmini.cat
+DriverVer   =07/27/2005,3.10.1205.0
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[Manufacturer]
+%MANUFACTURER% = Models
+
+[Models]
+; DisplayName=Section, DeviceID
+; %LANSCSIMINIPORT.DeviceDesc=ndasmini.DDI, LANSCSIBus\NetDisk_V0
+%ndasmini.DeviceDesc%=ndasmini.DDI, NDAS\SCSIAdapter_R01
+
+[ndasmini.DDI]
+AddReg=ndasmini.AddReg
+CopyFiles=ndasmini.Files.Drivers
+
+[ndasmini.DDI.Services]
+AddService = ndasmini, 0x00000002 , ndasmini.ServiceInstall, ndasmini.EventLogInstall
+
+[ndasmini.AddReg]
+HKR,PnpInterface,	1,	0x00010001,	0x00000001
+HKR,PnpInterface,	15,	0x00010001,	0x00000001
+
+[ndasmini.Files.Drivers]
+ndasmini.sys
+
+[ndasmini.ServiceInstall]
+DisplayName    = %ndasmini.ServiceDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0x1                ; SERVICE_ERROR_NORMAL
+LoadOrderGroup = "SCSI miniport"
+ServiceBinary  = %12%\ndasmini.sys
+AddReg		= ndasmini.DDI.ServiceInstall.AddReg.PNPSafeISA
+
+[ndasmini.DDI.ServiceInstall.AddReg.PNPSafeISA]
+HKR, "Parameters\PnpInterface", "1", 0x00010001, 0x00000001
+HKR, "Parameters\PnpInterface", "15", 0x00010001, 0x00000001
+
+[ndasmini.EventLogInstall]
+AddReg = ndasmini.EventLogInstall.AddReg
+
+[ndasmini.EventLogInstall.AddReg]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\drivers\ndasmini.sys"
+HKR,,TypesSupported,0x00010001,7
+
+[SourceDisksNames.x86]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+ndasmini.sys = 1,,
+
+[Strings]
+;
+; Non-Localizable Strings
+;
+REG_SZ         = 0x00000000
+REG_MULTI_SZ   = 0x00010000
+REG_EXPAND_SZ  = 0x00020000
+REG_BINARY     = 0x00000001
+REG_DWORD      = 0x00010001
+SERVICEROOT    = "System\CurrentControlSet\Services"
+
+;
+; Localizable Strings
+;
+PROVIDER             = "XIMETA"
+MANUFACTURER         = "XIMETA"
+ndasmini.DeviceDesc  = "Booting NDAS SCSI Controller"
+ndasmini.ServiceDesc = "Booting NDAS SCSI Miniport Driver"
+DiskId1              = "Booting NDAS Device Driver Installation Disk"

@@ -1,0 +1,99 @@
+<html>
+<head>
+<style>
+body {
+	font-family: Arial;
+	font-size: 95%;
+	};
+hr {
+	color: navy;
+	height: 1px;
+	}
+h1 { font-size: 120%; }
+h2 { font-size: 110%; }
+</style>
+</head>
+<body>
+<h1>Release Note for NDAS Software 3.10</h1>
+<hr />
+<h2>What's New</h2>
+NDAS Software Version 3.10 is a new software release
+containing updated management framework for NDAS devices,
+including:
+<ul>
+<li>Improved User Interfaces
+	<ul>
+		<li>Added more hardware properties
+		<li>Added information about NDAS hosts using the device
+		<li>Added options dialogs
+		<li>Added Suspend/Hibernation support
+		<li>Unicode support for better multilingual support
+		<li>Added a feature to deactivate the unused NDAS devices
+	</ul>
+<li>Improved Setup
+	<ul>
+		<li>More robust support for device driver installations
+		<li>Single MSI for multiple languages (MUI version only)
+		<li>Upgrade support
+	</ul>
+<li>Software Update
+	<ul>
+		<li>Checks for the new software release from the setup and the management software
+	</ul>
+<li>Bind system
+	<ul>
+		<li>Supports new bind system of RAID 0, RAID 1. The aggregation system is supported also
+		<li>An user can recover the defected RAID 1 system using the bind management tool
+		<li>New bind system does not support a mirroring system anymore, but provides a function to migrate mirroring system to a RAID 1 system without losing any data
+	</ul>
+<li>Miscellaneous
+	<ul>
+		<li>SNMP components are removed from the software
+		<li>Smaller footprint of the software (around 900KB for the whole software without Windows Installer Redistributable)
+		<li>New Command-line interface to manage the NDAS devices
+	</ul>
+<li>NDAS SDK (OEM partners only)
+	<ul>
+		<li>New NDAS device management APIs are provided for customized applications
+	</ul>
+</ul>
+<h2>Build 1229</h2>
+<ul>
+	<li>Fixed incorrect host statistics for NDAS device 2.0
+	<li>Fixed NDAS Bind Management may fail during refresh
+	<li>Fixed NDAS service may fail when protocol binding is being changed
+</ul>
+
+<h2>Build 1228</h2>
+<ul>
+	<li>???
+</ul>
+
+<h2>Build 1225</h2>
+<ul>
+    <li>Improve harddisk Standby support.
+    <li>Fixed incorrect NDAS read/write count.
+    <li>Fixed indirect memory leak in LfsFilt.
+    <li>Fixed 'teamup.exe' DOS program issue.
+	<li>Added first time driver installation detection to prevent double driver loading.
+	<li>Fixed system hang when disk full.
+	<li>Improved RAID facility.
+	<li>Improved alarm baloon window.
+	<li>Fixed reference count error in NDAS service.
+	<li>Fixed buffer overflow in NDAS SCSI driver.
+</ul>
+<h2>Build 1218</h2>
+<ul>
+    <li>Fixed issues with automatic mounting feature on boot.
+    <li>Added support for old ethernet card drivers(NDIS4)
+</ul>
+<h2>Build 1216</h2>
+<ul>
+    <li>Fixed that 3.08 Mirroring was not able to be mounted on 3.10.
+    <li>Fixed that NDAS Bind did not complete Copy-and-mirror function.
+    <li>Fixed NULL pointer error during UnitDisk information invalidation.
+</ul>
+<hr/>
+<p>Copyright &copy; 2003-2005 XIMETA, Inc. All rights reserved</p>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<messages>
+	<!-- NDASSVC -->
+	<message id="0x021" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_DEVICE_ENTRY_NOT_FOUND">
+		<text lang="NEU">Device Entry Not Found.</text>
+		<text lang="KOR">디바이스를 찾을 수 없습니다.</text>
+	</message>
+	<message id="0x022" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_UNITDEVICE_ENTRY_NOT_FOUND">
+		<text lang="NEU">Unit Device Entry Not Found.</text>
+		<text lang="KOR">Unit Device Entry Not Found.</text>
+	</message>
+	<message id="0x023" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_LOGICALDEVICE_ENTRY_NOT_FOUND">
+		<text lang="NEU">Logical Device Entry Not Found.</text>
+		<text lang="KOR">Logical Device Entry Not Found.</text>
+	</message>
+	<message id="0x031" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_CANNOT_UNREGISTER_ENABLED_DEVICE">
+		<text lang="NEU">Unregistering an enabled device is not permitted.</text>
+		<text lang="KOR">Unregistering an enabled device is not permitted.</text>
+	</message>
+	<message id="0x032" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_INVALID_SLOT_NUMBER">
+		<text lang="NEU">Invalid slot number.</text>
+		<text lang="KOR">Invalid slot number.</text>
+	</message>
+	<message id="0x033" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_SLOT_ALREADY_OCCUPIED">
+		<text lang="NEU">Requested slot is used by alother device.</text>
+		<text lang="KOR">Requested slot is used by alother device.</text>
+	</message>
+	<message id="0x034" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_DUPLICATE_DEVICE_ENTRY">
+		<text lang="NEU">The requested device already exists.</text>
+		<text lang="KOR">The requested device already exists.</text>
+	</message>
+	<message id="0x035" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_DEVICE_ENTRY_SLOT_FULL">
+		<text lang="NEU">No more device slot is available.</text>
+		<text lang="KOR">No more device slot is available.</text>
+	</message>
+	<message id="0x041" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_NOT_INITIALIZED">
+		<text lang="NEU">Logical device is not initialized.</text>
+		<text lang="KOR">Logical device is not initialized.</text>
+	</message>
+	<message id="0x042" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_MEMBER_MISSING">
+		<text lang="NEU">Some logical device members are missing in the entry.</text>
+		<text lang="KOR">Some logical device members are missing in the entry.</text>
+	</message>
+	<message id="0x043" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_NOT_MOUNTED">
+		<text lang="NEU">Logical device is not mounted.</text>
+		<text lang="KOR">Logical device is not mounted.</text>
+	</message>
+	<message id="0x044" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_CONFLICT_LOGICALDEVICE_ENTRY">
+		<text lang="NEU">Logical device entry is conflicts with existing entries.</text>
+		<text lang="KOR">Logical device entry is conflicts with existing entries.</text>
+	</message>
+	<message id="0x045" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_DUPLICATE_LOGICALDEVICE_ENTRY">
+		<text lang="NEU">The requested logical device already exists.</text>
+		<text lang="KOR">The requested logical device already exists.</text>
+	</message>
+	<message id="0x046" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_LOGICALDEVICE_SLOT_FULL">
+		<text lang="NEU">No more logical device slot is available.</text>
+		<text lang="KOR">No more logical device slot is available.</text>
+	</message>
+	<message id="0x047" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_UNSUPPORTED_LOGICALDEVICE_TYPE">
+		<text lang="NEU">Unsupported logical device type.</text>
+		<text lang="KOR">Unsupported logical device type.</text>
+	</message>
+	<message id="0x050" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+		<text lang="NEU">Granted access for the logical device is insufficent to complete the operation.</text>
+		<text lang="KOR">Granted access for the logical device is insufficent to complete the operation.</text>
+	</message>
+	<message id="0x051" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+		<text lang="NEU">Requested access to the logical device is failed.</text>
+		<text lang="KOR">Requested access to the logical device is failed.</text>
+	</message>
+	<message id="0x0E0" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+		<text lang="NEU">Command version is unsupported.</text>
+		<text lang="KOR">Command version is unsupported.</text>
+	</message>
+	<message id="0x0E1" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_NOT_IMPLEMENTED">
+		<text lang="NEU">Requested feature is not supported.</text>
+		<text lang="KOR">Requested feature is not supported.</text>
+	</message>
+	<message id="0x0C0" severity="Error" facility="NDASSVC"
+		symbolicName="NDASHLPSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+		<text lang="NEU">Unsupported Read-only filter version.</text>
+		<text lang="KOR">Unsupported Read-only filter version.</text>
+	</message>
+
+	<!-- NDASUSER -->
+	<message id="0x01" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+		<text lang="NEU">Communication to the service failed.</text>
+		<text lang="KOR">Communication to the service failed.</text>
+	</message>
+	<message id="0x02" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+		<text lang="NEU">Device ID or Key is invalid.</text>
+		<text lang="KOR">Device ID or Key is invalid.</text>
+	</message>
+	<message id="0x03" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+		<text lang="NEU">Device ID is invalid.</text>
+		<text lang="KOR">Device ID is invalid.</text>
+	</message>
+	<message id="0x04" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+		<text lang="NEU">Device Key is invalid.</text>
+		<text lang="KOR">Device Key is invalid.</text>
+	</message>
+	<message id="0xFF" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_PARAMETER">
+		<text lang="NEU">Invalid parameter.</text>
+		<text lang="KOR">Invalid parameter.</text>
+	</message>
+	<message id="0x50" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+		<text lang="NEU">Logical device access denied.</text>
+		<text lang="KOR">Logical device access denied.</text>
+	</message>
+	<message id="0x101" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+		<text lang="NEU">Service does not support the requested operation.</text>
+		<text lang="KOR">Service does not support the requested operation.</text>
+	</message>
+	<message id="0x102" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+		<text lang="NEU">Operation is invalid to the service.</text>
+		<text lang="KOR">Operation is invalid to the service.</text>
+	</message>
+	<message id="0x103" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+		<text lang="NEU">Service is terminating.</text>
+		<text lang="KOR">Service is terminating.</text>
+	</message>
+	<message id="0x104" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+		<text lang="NEU">Unsupported service version.</text>
+		<text lang="KOR">Unsupported service version.</text>
+	</message>
+	<message id="0x200" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+		<text lang="NEU">Unsupport service event version.</text>
+		<text lang="KOR">Unsupport service event version.</text>
+	</message>
+	<message id="0x201" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+		<text lang="NEU">No more event callback is available.</text>
+		<text lang="KOR">No more event callback is available.</text>
+	</message>
+	<message id="0x202" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+		<text lang="NEU">Invalid event callback handle.</text>
+		<text lang="KOR">Invalid event callback handle.</text>
+	</message>
+	<message id="0x0E1" severity="Error" facility="NDASUSER"
+		symbolicName="NDASUSER_ERROR_NOT_IMPLEMENTED">
+		<text lang="NEU">Requested feature is not supported.</text>
+		<text lang="KOR">Requested feature is not supported.</text>
+	</message>
+
+	<!-- NDASDM - Drive Match Library -->
+	<message id="0x100" severity="Error" facility="NDASDM"
+		symbolicName="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+		<text lang="NEU">Non-SCSI type device is found.</text>
+		<text lang="KOR">Non-SCSI type device is found.</text>
+	</message>
+	<message id="0x102" severity="Error" facility="NDASDM"
+		symbolicName="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+		<text lang="NEU">SRB IO CONTROL Error</text>
+		<text lang="KOR">SRB IO CONTROL Error</text>
+	</message>
+	
+<!--
+
+You can specify the following escape sequences for formatting message 
+text for use by the event viewer or your application. The percent sign 
+character (%) begins all escape sequences. Any other character following 
+a percent sign is displayed without the percent sign.
+
+%n[!format_specifier!] 
+Describes an insert. Each insert is an entry in the Arguments array in 
+the FormatMessage function. The value of n can be a number between 1 and 99. 
+The format specifier is optional. If no value is specified, the default 
+is !s!. For more information, see wsprintf. The format specifier can use * 
+for either the precision or the width. When specified, they consume inserts 
+numbered n+1 and n+2.
+
+%0 
+Terminates a message text line without a trailing newline character. 
+This can be used to build a long line or terminate a prompt message 
+without a trailing newline character. 
+%. 
+Generates a single period. This can be used to display a period at the 
+beginning of a line, which would otherwise terminate the message text. 
+%! 
+Generates a single exclamation point. This can be used to specify an 
+exclamation point immediately after an insert. 
+%% 
+Generates a single percent sign. 
+%\ 
+Generates a hard line break when it occurs at the end of a line. This 
+can be used with FormatMessage to ensure that the message fits a certain width. 
+%b 
+Generates a space character. This can be used to ensure an appropriate 
+number of trailing spaces on a line. 
+%r 
+Generates a hard carriage return without a trailing newline character.
+
+-->
+
+</messages>

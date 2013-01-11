@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="Visual C++" Version="8.00" Name="_inc_ndas_public" ProjectGUID="{5052B92F-1150-493D-815F-0A4B3AF06410}" RootNamespace="_inc_ndas_public" Keyword="MakeFileProj">
+	<Platforms>
+		<Platform Name="Win32" />
+		<Platform Name="x64" />
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration Name="Debug|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|Win32" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Debug|x64" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+		<Configuration Name="Release|x64" OutputDirectory="." IntermediateDirectory="." ConfigurationType="0">
+			<Tool Name="VCNMakeTool" BuildCommandLine="echo." ReBuildCommandLine="echo." CleanCommandLine="echo." Output=".\." PreprocessorDefinitions="" IncludeSearchPath="" ForcedIncludes="" AssemblySearchPath="" ForcedUsingAssemblies="" CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+  <File RelativePath=".\dirs" /><File RelativePath=".\_project.xml" /><Filter Name=".ndas" Filter="" UniqueIdentifier="{A251B202-D9EA-48CE-AEA0-5A7D4DB50CBF}"><File RelativePath=".\ndas\dirs" /><File RelativePath=".\ndas\ndascomm.h" /><File RelativePath=".\ndas\ndascomm_type.h" /><File RelativePath=".\ndas\ndasevent.h" /><File RelativePath=".\ndas\ndashear.h" /><File RelativePath=".\ndas\ndashostinfo.h" /><File RelativePath=".\ndas\ndasiomsg.h" /><File RelativePath=".\ndas\ndasmsg.h" /><File RelativePath=".\ndas\ndasop.h" /><File RelativePath=".\ndas\ndassvcparam.h" /><File RelativePath=".\ndas\ndastype.h" /><File RelativePath=".\ndas\ndasuser.h" /></Filter></Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

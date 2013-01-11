@@ -1,0 +1,9 @@
+# Microsoft Developer Studio Generated Dependency File, included by LanScsiOpLib.mak
+
+.\WanScsiOpLib.c : \
+	"..\inc\binaryparameters.h"\
+	"..\inc\hash.h"\
+	"..\inc\hdreg.h"\
+	"..\inc\lanscsi.h"\
+	"..\inc\LanScsiOp.h"\
+	

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<resmap module="ndasbind">
+  <resource type="ICON_GROUP" name="#128" fileName="ndasbind.ico" symbolName="IDR_MAINFRAME" />
+  <resource type="ICON_GROUP" name="#329" fileName="ndasbind_res_device_normal.ico" symbolName="IDI_DEVICE_BASIC" />
+  <resource type="ICON_GROUP" name="#330" fileName="ndasbind_res_device_fail.ico" symbolName="IDI_DEVICE_FAIL" />
+  <resource type="ICON_GROUP" name="#331" fileName="ndasbind_res_device_bound.ico" symbolName="IDI_DEVICE_BOUND" />
+  <resource type="ICON_GROUP" name="#332" fileName="ndasbind_res_device_warn.ico" symbolName="IDI_DEVICE_WARN" />
+  <resource type="ICON_GROUP" name="#452" fileName="ndasbind_res_device_invalid.ico" symbolName="IDI_DEVICE_INVALID" />
+  <resource type="BITMAP" name="#128" fileName="ndasbind_res_toolbar.bmp" symbolName="IDR_MAINFRAME" />
+  <resource type="BITMAP" name="#130" fileName="ndasbind_res_toolbar_empty.bmp" symbolName="IDR_EMPTY_TOOLBAR" />
+  <resource type="BITMAP" name="#111" fileName="ndasbind_res_wizard_watermark.bmp" symbolName="IDB_WATERMARK256" />
+  <resource type="BITMAP" name="#103" fileName="ndasbind_res_wizard_banner.bmp" symbolName="IDB_BANNER256" />
+  <resource type="IMAGE" name="#216" fileName="ndasbind_res_info_header.jpg" symbolName="IDB_ABOUT_HEADER" />
+</resmap>

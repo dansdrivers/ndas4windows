@@ -1,0 +1,18 @@
+TARGETNAME=lsp_hash_test
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+MSC_OPTIMIZATION=/Ox
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIf
+
+UMTYPE=console
+
+INCLUDES=..\..\..\..\inc;..\..\..\..\inc\lspx
+SOURCES=lsp_hash_test.c
+
+TARGETLIBS=..\..\slib\$(O)\liblspx.lib

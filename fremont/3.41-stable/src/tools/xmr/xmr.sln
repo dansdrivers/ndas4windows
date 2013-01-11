@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dvdrip", "src\dvdrip\dvdrip.vcproj", "{933E186A-5A08-42AA-BA07-67BA02F4175D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jukebox", "src\jukebox\jukebox.vcproj", "{4BFCEE5B-5ADB-480C-A671-6F14DAD6D8E9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hash", "src\hash\hash.vcproj", "{9AA5ED3D-71A4-4B68-B112-C81739FC8E93}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LanScsiOp", "src\LanScsiOp\LanScsiOp.vcproj", "{6ED79B0D-D7DB-491B-AD86-738390BA5C26}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xmr", "src\xmr\xmr.vcproj", "{3C82E87B-516D-4474-A3DC-BC10FB029FAB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xmrlocal", "src\xmrlocal\xmrlocal.vcproj", "{CA6A5270-6472-4CB6-80A1-9857EFF7CE27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{933E186A-5A08-42AA-BA07-67BA02F4175D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{933E186A-5A08-42AA-BA07-67BA02F4175D}.Debug|Win32.Build.0 = Debug|Win32
+		{933E186A-5A08-42AA-BA07-67BA02F4175D}.Release|Win32.ActiveCfg = Release|Win32
+		{933E186A-5A08-42AA-BA07-67BA02F4175D}.Release|Win32.Build.0 = Release|Win32
+		{4BFCEE5B-5ADB-480C-A671-6F14DAD6D8E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BFCEE5B-5ADB-480C-A671-6F14DAD6D8E9}.Debug|Win32.Build.0 = Debug|Win32
+		{4BFCEE5B-5ADB-480C-A671-6F14DAD6D8E9}.Release|Win32.ActiveCfg = Release|Win32
+		{4BFCEE5B-5ADB-480C-A671-6F14DAD6D8E9}.Release|Win32.Build.0 = Release|Win32
+		{9AA5ED3D-71A4-4B68-B112-C81739FC8E93}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9AA5ED3D-71A4-4B68-B112-C81739FC8E93}.Debug|Win32.Build.0 = Debug|Win32
+		{9AA5ED3D-71A4-4B68-B112-C81739FC8E93}.Release|Win32.ActiveCfg = Release|Win32
+		{9AA5ED3D-71A4-4B68-B112-C81739FC8E93}.Release|Win32.Build.0 = Release|Win32
+		{6ED79B0D-D7DB-491B-AD86-738390BA5C26}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6ED79B0D-D7DB-491B-AD86-738390BA5C26}.Debug|Win32.Build.0 = Debug|Win32
+		{6ED79B0D-D7DB-491B-AD86-738390BA5C26}.Release|Win32.ActiveCfg = Release|Win32
+		{6ED79B0D-D7DB-491B-AD86-738390BA5C26}.Release|Win32.Build.0 = Release|Win32
+		{3C82E87B-516D-4474-A3DC-BC10FB029FAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3C82E87B-516D-4474-A3DC-BC10FB029FAB}.Debug|Win32.Build.0 = Debug|Win32
+		{3C82E87B-516D-4474-A3DC-BC10FB029FAB}.Release|Win32.ActiveCfg = Release|Win32
+		{3C82E87B-516D-4474-A3DC-BC10FB029FAB}.Release|Win32.Build.0 = Release|Win32
+		{CA6A5270-6472-4CB6-80A1-9857EFF7CE27}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CA6A5270-6472-4CB6-80A1-9857EFF7CE27}.Debug|Win32.Build.0 = Debug|Win32
+		{CA6A5270-6472-4CB6-80A1-9857EFF7CE27}.Release|Win32.ActiveCfg = Release|Win32
+		{CA6A5270-6472-4CB6-80A1-9857EFF7CE27}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

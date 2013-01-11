@@ -1,0 +1,8 @@
+TARGETNAME=liblpxtrans_wpp
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=liblpxtrans_wpp
+
+ENABLE_WPP=1
+!include ..\sources.inc

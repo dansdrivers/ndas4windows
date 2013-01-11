@@ -1,0 +1,26 @@
+LIBRARY ndascomm
+EXPORTS
+	NdasCommGetAPIVersion @1
+	NdasCommInitialize @2 NONAME
+	NdasCommConnect @3 NONAME
+	NdasCommDisconnect @4 NONAME
+	NdasCommBlockDeviceRead @5 NONAME
+	NdasCommBlockDeviceWrite @6 NONAME
+	NdasCommBlockDeviceWriteSafeBuffer @7 NONAME
+	NdasCommBlockDeviceVerify @8 NONAME
+	NdasCommSetFeatures @9 NONAME
+	NdasCommGetDeviceInfo @10 NONAME
+	NdasCommGetUnitDeviceInfo @11 NONAME
+	NdasCommGetUnitDeviceStat @12 NONAME
+	NdasCommGetDeviceID @13 NONAME
+	NdasCommIdeCommand @14 NONAME
+	NdasCommVendorCommand @15 NONAME
+	NdasCommUninitialize @16 NONAME
+	NdasCommGetTransmitTimeout @17 NONAME
+	NdasCommSetTransmitTimeout @18 NONAME
+	NdasCommGetHostAddress @19 NONAME
+	NdasCommLockDevice @20 NONAME
+	NdasCommUnlockDevice @21 NONAME
+	NdasCommCleanupDeviceLocks @22 NONAME
+	NdasCommBlockDeviceLockedWrite @23 NONAME
+	NdasCommBlockDeviceLockedWriteSafeBuffer @24 NONAME

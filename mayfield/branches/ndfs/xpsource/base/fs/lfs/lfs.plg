@@ -1,0 +1,344 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: lfs - Win32 Debug--------------------
+</h3>
+
+OSR DDKBUILD.BAT V5.3 - OSR, Open Systems Resources, Inc.
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem ///////////////////////////////////////////////////////////////////////////// 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    This sofware is supplied for instructional purposes only. 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    OSR Open Systems Resources, Inc. (OSR) expressly disclaims any warranty 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    for this software.  THIS SOFTWARE IS PROVIDED  "AS IS" WITHOUT WARRANTY 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    THE IMPLIED WARRANTIES OF MECHANTABILITY OR FITNESS FOR A PARTICULAR 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    PURPOSE.  THE ENTIRE RISK ARISING FROM THE USE OF THIS SOFTWARE REMAINS 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    WITH YOU.  OSR's entire liability and your exclusive remedy shall not 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    exceed the price paid for this material.  In no event shall OSR or its 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    suppliers be liable for any damages whatsoever (including, without 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    limitation, damages for loss of business profit, business interruption, 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    loss of business information, or any other pecuniary loss) arising out 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    of the use or inability to use this software, even if OSR has been 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    advised of the possibility of such damages.  Because some states/ 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    jurisdictions do not allow the exclusion or limitation of liability for 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    consequential or incidental damages, the above limitation may not apply 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    to you. 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    OSR Open Systems Resources, Inc. 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    105 Route 101A Suite 19 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    Amherst, NH 03031  (603) 595-6500 FAX: (603) 595-6503 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    email bugs to: bugs@osr.com 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    MODULE: 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        ddkbuild.bat  
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    ABSTRACT: 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //      This file allows drivers to be build with visual studio and visual studio.net 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    AUTHOR(S): 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        OSR Open Systems Resources, Inc. 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //  
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    REVISION:   V5.3 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //      Fix a couple of bugs where the parameter was suppose to be "parameter" 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    REQUIREMENTS:  Environment variables that must be set. 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //  BASEDIR - Automatically set up by NT4 DDK. (e.g. D:\NT4DDK ) 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //      W2KBASE - must be set up by user to point to W2K DDK  (e.g D:\Nt50DDK ) 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //      WXPBASE - must be set up by user to point to WXP DDK  (e.g D:\WINDDK\2600) 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //      WNETBASE - must be set up by user to point to WNET DDK (e.g D:\WINDDK\3615)  
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    COMMAND FORMAT: 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //  ddkbuild -PLATFORM BUILDTYPE DIRECTORY [FLAGS] 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //              PLATFORM is either  
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //                   WXP, WXP64, WXP2K - builds using WXP DDK 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //                   W2K, W2K64,  - builds using W2k DDK 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //                   WNET, WNET64, WNET2K, WNETXP, WNETXP64 - builds using WNET DDK 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //                   NT4  - build using NT4 DDK (NT4 is the default) 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //              BUILDTYPE - free, checked, chk or fre 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    DIRECTORY is the path to the directory to be build.  It can be "." 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //       
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //   BROWSE FILES: 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //  
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //       This procedure supports the building of BROWSE files to be used by  
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //       Visual Studio 6 and by Visual Studio.Net  However, the BSCfiles created 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //       by bscmake for the 2 studios are not compatible. When this command procedure 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //       runs, it selects the first bscmake.exe found in the path.   So, make 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //       sure that the correct bscmake.exe is in the path.... 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    COMPILERS: 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        If you are building NT4 or Windows 2000 drivers you should really 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        be using the VC 6 compiler.   If you are building a WXP driver, 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        you should be using the compiler that comes with the DDK.  This  
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        procedure should use the correct compiler. 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //    GENERAL COMMENTS: 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        This procedure is not written to be elegant!  It is written to work  
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        and to be easy to debug.   While we could have reused a bunch of 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem //        code, we decided not to.    
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem /////////////////////////////////////////////////////////////////////////////// 
+
+F:\WorkSpace\WinXp\base\fs\lfs>set scriptDebug=on 
+
+F:\WorkSpace\WinXp\base\fs\lfs>setlocal ENABLEEXTENSIONS 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // Check for NT 4 Build 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if /I -WNETXP NEQ -NT4 goto NoNT4Base 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // Check for WNET Windows 2000 Build using WNET DDK 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if /I -WNETXP NEQ -WNET2K goto NoWNET2KBase 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // Check for WXP Build using WNET DDK 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem // 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if /I -WNETXP NEQ -WNETXP goto NoWNETXPBase 
+WXP BUILD using WNET DDK
+
+F:\WorkSpace\WinXp\base\fs\lfs>set BASEDIR=d:\winddk\3790 
+
+F:\WorkSpace\WinXp\base\fs\lfs>shift
+
+F:\WorkSpace\WinXp\base\fs\lfs>if "d:\winddk\3790" == "" goto ErrNoBASEDIR 
+
+F:\WorkSpace\WinXp\base\fs\lfs>set path=d:\winddk\3790\bin;C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files\Microsoft Visual Studio\VC98\BIN;C:\Program Files\Microsoft Visual Studio\Common\TOOLS;C:\Program Files\Microsoft Visual Studio\Common\TOOLS\WINNT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem 
+
+F:\WorkSpace\WinXp\base\fs\lfs>set mode= 
+
+F:\WorkSpace\WinXp\base\fs\lfs>for %f in (free FREE fre FRE) do if %f == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if free == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if FREE == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if fre == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if FRE == checked set mode=fre 
+
+F:\WorkSpace\WinXp\base\fs\lfs>for %f in (checked CHECKED chk CHK) do if %f == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if checked == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if CHECKED == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if chk == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if CHK == checked set mode=chk 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if "chk" == "" goto ErrBadMode 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if "." == "" goto ErrNoDir 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if not exist . goto ErrNoDir 
+
+F:\WorkSpace\WinXp\base\fs\lfs>pushd . 
+
+F:\WorkSpace\WinXp\base\fs\lfs>call d:\winddk\3790\bin\setenv.bat d:\winddk\3790 chk WXP  
+
+F:\WorkSpace\WinXp\base\fs\lfs>goto RegularBuild 
+
+F:\WorkSpace\WinXp\base\fs\lfs>set mpFlag=-M 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if "chk_wxp_x86" == "" goto NT4 
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem win2k sets this! 
+
+F:\WorkSpace\WinXp\base\fs\lfs>set W2kEXT=chk_wxp_x86 
+
+F:\WorkSpace\WinXp\base\fs\lfs>set mpFlag=-MI 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if "4" == "" set mpFlag= 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if "4" == "1" set mpFlag= 
+build in directory . with arguments  (basedir d:\winddk\3790)
+
+F:\WorkSpace\WinXp\base\fs\lfs>cd /D . 
+
+F:\WorkSpace\WinXp\base\fs\lfs>set bflags=-Ze 
+
+F:\WorkSpace\WinXp\base\fs\lfs>set bscFlags="" 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if "" == "" goto done 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if EXIST buildchk_wxp_x86.err erase buildchk_wxp_x86.err 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if EXIST buildchk_wxp_x86.wrn erase buildchk_wxp_x86.wrn 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if EXIST buildchk_wxp_x86.log erase buildchk_wxp_x86.log 
+run build -Ze -MI for chk version in .
+
+F:\WorkSpace\WinXp\base\fs\lfs>pushd . 
+
+F:\WorkSpace\WinXp\base\fs\lfs>build  -Ze -MI 
+BUILD: Adding /Y to COPYCMD so xcopy ops won't hang.
+BUILD: Using 4 child processes
+BUILD: Object root set to: ==> objchk_wxp_x86
+BUILD: Compile and Link for i386
+BUILD: Examining f:\workspace\winxp\base\fs\lfs directory tree for files to compile.
+    f:\workspace\winxp\base\fs\lfs 
+    f:\workspace\winxp\base\fs\lfs\mp 
+BUILD: Compiling f:\workspace\winxp\base\fs\lfs\mp directory
+Precompiling - mp\lfsprocs.h for i386
+Compiling - mp\cachesup.c for i386
+Compiling - mp\lbcbsup.c for i386
+Compiling - mp\lfsdata.c for i386
+Compiling - mp\logpgsup.c for i386
+Compiling - mp\logrcsup.c for i386
+Compiling - mp\lsnsup.c for i386
+Compiling - mp\querylog.c for i386
+Compiling - mp\registry.c for i386
+Compiling - mp\restart.c for i386
+Compiling - mp\rstrtsup.c for i386
+Compiling - mp\strucsup.c for i386
+Compiling - mp\sysinit.c for i386
+Compiling - mp\verfysup.c for i386
+Compiling - mp\write.c for i386
+Compiling - mp\generating code... for i386
+Building Library - mp\objchk_wxp_x86\i386\lfs.lib for i386
+Building Browse File - mp\objchk_wxp_x86\i386\lfs.lib for all platforms
+Building Browse File - mp\objchk_wxp_x86\i386\lfs.lib for all platforms
+BUILD: Done
+
+    16 files compiled
+    1 library built
+    2 browse databases built
+
+F:\WorkSpace\WinXp\base\fs\lfs>popd
+
+F:\WorkSpace\WinXp\base\fs\lfs>rem assume that the onscreen errors are complete! 
+=============== build warnings ======================
+
+F:\WorkSpace\WinXp\base\fs\lfs>if exist buildchk_wxp_x86.log findstr "warning.*[CLU][0-9]*" buildchk_wxp_x86.log 
+ 
+ 
+build complete
+building browse information files
+
+F:\WorkSpace\WinXp\base\fs\lfs>if EXIST buildbrowse.cmd goto doBrowsescript 
+
+F:\WorkSpace\WinXp\base\fs\lfs>set sbrlist=sbrList.txt 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if not EXIST sbrListx86.txt goto sbrDefault 
+
+F:\WorkSpace\WinXp\base\fs\lfs>if not EXIST sbrList.txt goto end 
+ddkbuild complete
+
+
+
+<h3>Results</h3>
+lfs.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

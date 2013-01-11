@@ -1,0 +1,103 @@
+;-------------------------------------------------------------------------
+; lfsfilterw2k.inf
+; 
+; Installation file (.inf) for Lean File Sharing Filter
+;
+; Copyright (c) 2002-2003, XiMeta, Inc.
+;-------------------------------------------------------------------------
+
+[Version]
+signature   =   "$Windows NT$"
+Class		=	"ActivityMonitor"						;This is determined by the work this filter driver does
+ClassGuid 	= 	{b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}	;This value is determined by the Class
+Provider 	=   %Msft%
+DriverVer   =   08/28/2000,1.0.0.1
+CatalogFile     = lfsfilter.cat                                   ; A CatalogFile entry is required for a WHQL signature.
+                                                                ; The actual catalog file will be provided by WHQL.  The
+                                                                ; catalog file for this sample is not provided for use.
+
+[DestinationDirs]
+DefaultDestDir	         = 12
+LFSFilter.DriverFiles      = 12 			;%windir%\system32\drivers
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %LFSFilterServiceDesc%
+CopyFiles           = LFSFilter.DriverFiles
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+LfsFilt.sys = 1
+
+[DefaultInstall.Services]
+AddService          = %LFSFilterServiceName%,,LFSFilter.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = LFSFilter.DriverFiles
+DelReg			 = LFSFilter.DelRegistry
+
+[DefaultUninstall.Services]
+DelService = lfsfilt,0x200		; Flags note to stop service first
+
+;
+; Services Section
+;
+
+[LFSFilter.Service]
+DisplayName      = %LFSFilterDisplayName%
+Description      = %LFSFilterServiceDesc%
+ServiceBinary    = %12%\lfsfilt.sys			;%windir%\system32\drivers\LfsFilt.sys
+ServiceType      = 2					;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 3					;SERVICE_DEMAND_START
+ErrorControl     = 1					;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = "filter"
+AddReg           = LFSFilter.AddRegistry
+
+;
+; Registry Modifications
+;
+
+[LFSFilter.AddRegistry]
+HKLM,%LFSFilterRegistry%,%LFSFilterMaxRecords%,0x00010001 ,500
+HKLM,%LFSFilterRegistry%,%LFSFilterMaxNames%,0x00010001 ,500
+HKLM,%LFSFilterRegistry%,%LFSFilterDebugFlags%,0x00010001 ,0
+HKLM,%LFSFilterRegistry%,%LFSFilterAttachMode%,0x00010001 ,2
+
+[LFSFilter.DelRegistry]
+HKLM,%LFSFilterRegistry%,%LFSFilterMaxRecords%
+HKLM,%LFSFilterRegistry%,%LFSFilterMaxNames%
+HKLM,%LFSFilterRegistry%,%LFSFilterDebugFlags%
+HKLM,%LFSFilterRegistry%,%LFSFilterAttachMode%
+
+;
+; Copy Files
+;
+
+[LFSFilter.DriverFiles]
+LfsFilt.sys
+
+;;
+;; String Section
+;;
+
+[Strings]
+Msft			= "XiMeta, Inc."
+LFSFilterDIsplayName = "Lean File Sharing"
+LFSFilterServiceDesc = "Lean File Sharing"
+LFSFilterServiceName = "lfsfilt"
+LFSFilterRegistry    = "system\currentcontrolset\services\lfsfilt"
+LFSFilterMaxRecords  = "MaxRecords"
+LFSFilterMaxNames	   = "MaxNames"
+LFSFilterDebugFlags  = "DebugFlags"
+LFSFilterAttachMode  = "AttachMode"
+Disk1              = "LFSFilter Source Media"
+

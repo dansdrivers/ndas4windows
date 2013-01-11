@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+
+	<Fragment>
+
+		<?ifndef NdasSetupFlags_NoShortcut ?>
+		<Icon Id="$(var.iconid.ndasbind)" src="$(var.SetupDataDir.Icon)\ndasbind.ico" />
+		<?endif?>
+
+		<DirectoryRef Id="NdasApplicationFolder" FileSource="$(var.SetupFileSource)">
+
+			<Component Id="ndasbind.exe" Guid="$(var.ndasbind.exe_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.exe" Name="ndasbind.exe" KeyPath="yes" Checksum="yes">
+					<?ifndef NdasSetupFlags_NoShortcut ?>
+					<Shortcut Id="NdasbindPMenuShortcut" Directory="NdasProgramMenuFolder"
+							Name="NDASBIND" LongName="$(loc.Ndasbind.LongName)"
+							Description="$(loc.Ndasbind.Description)"
+							Icon="$(var.iconid.ndasbind)"
+							IconIndex="0"
+							Advertise="yes"
+							Show="normal"
+							WorkingDirectory="NdasAppFolder" />
+					<?endif?>
+				</File>
+				<Registry Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\ndasbind.exe" Type="string" Value="[#ndasbind.exe]">
+					<Registry Name="Path" Type="string" Value="[$ndasbind.exe]" />
+				</Registry>
+			</Component>
+			
+			<Component Id="ndasbind.enu.dll" Guid="$(var.ndasbind.enu.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.enu.dll" Name="ndasbind.enu" LongName="ndasbind.enu.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			
+			<?ifdef res.zh-CN ?>
+			<Component Id="ndasbind.chs.dll" Guid="$(var.ndasbind.chs.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.chs.dll" Name="ndasbind.chs" LongName="ndasbind.chs.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.zh-TW ?>
+			<Component Id="ndasbind.cht.dll" Guid="$(var.ndasbind.cht.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.cht.dll" Name="ndasbind.cht" LongName="ndasbind.cht.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.de-DE ?>
+			<Component Id="ndasbind.deu.dll" Guid="$(var.ndasbind.deu.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.deu.dll" Name="ndasbind.deu" LongName="ndasbind.deu.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.es-ES ?>
+			<Component Id="ndasbind.esn.dll" Guid="$(var.ndasbind.esn.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.esn.dll" Name="ndasbind.esn" LongName="ndasbind.esn.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.fr-FR ?>
+			<Component Id="ndasbind.fra.dll" Guid="$(var.ndasbind.fra.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.fra.dll" Name="ndasbind.fra" LongName="ndasbind.fra.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.it-IT ?>
+			<Component Id="ndasbind.ita.dll" Guid="$(var.ndasbind.ita.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.ita.dll" Name="ndasbind.ita" LongName="ndasbind.ita.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.ja-JP ?>
+			<Component Id="ndasbind.jpn.dll" Guid="$(var.ndasbind.jpn.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.jpn.dll" Name="ndasbind.jpn" LongName="ndasbind.jpn.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.ko-KR ?>
+			<Component Id="ndasbind.kor.dll" Guid="$(var.ndasbind.kor.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.kor.dll" Name="ndasbind.kor" LongName="ndasbind.kor.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.pt-PT ?>
+			<Component Id="ndasbind.ptg.dll" Guid="$(var.ndasbind.ptg.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.ptg.dll" Name="ndasbind.ptg" LongName="ndasbind.ptg.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.da-DK ?>
+			<Component Id="ndasbind.dan.dll" Guid="$(var.ndasbind.dan.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.dan.dll" Name="ndasbind.dan" LongName="ndasbind.dan.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+
+			<?ifdef res.nl-NL ?>
+			<Component Id="ndasbind.nld.dll" Guid="$(var.ndasbind.nld.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.nld.dll" Name="ndasbind.nld" LongName="ndasbind.nld.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.nb-NO ?>
+			<Component Id="ndasbind.nor.dll" Guid="$(var.ndasbind.nor.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.nor.dll" Name="ndasbind.nor" LongName="ndasbind.nor.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+
+			<?ifdef res.sv-SE ?>
+			<Component Id="ndasbind.sve.dll" Guid="$(var.ndasbind.sve.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.sve.dll" Name="ndasbind.sve" LongName="ndasbind.sve.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+			<?ifdef res.ru-RU ?>
+			<Component Id="ndasbind.rus.dll" Guid="$(var.ndasbind.rus.dll_GUID)" SharedDllRefCount="yes" DiskId="$(var.media.ndasapp)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbind.rus.dll" Name="ndasbind.rus" LongName="ndasbind.rus.dll" KeyPath="yes" Checksum="yes" />
+			</Component>
+			<?endif?>
+			
+		</DirectoryRef>
+
+	</Fragment>
+</Wix>

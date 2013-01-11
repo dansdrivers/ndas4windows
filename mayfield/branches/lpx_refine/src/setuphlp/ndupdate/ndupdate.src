@@ -1,0 +1,9 @@
+LIBRARY	ndupdate
+
+EXPORTS
+#if defined(_AMD64_)
+#else
+	NdasUpdateGetAPIVersion
+	NdasUpdateGetUpdateInfo
+	NdasUpdateDoUpdate
+#endif

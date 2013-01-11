@@ -1,0 +1,97 @@
+dedAddress->AddressLength);
+			status = NCommVerifyNdasDevWithDIB(addTargetData, &bindAddr);
+		} else {
+			status = NCommVerifyNdasDevWithDIB(addTargetData, NULL);
+		}
+
+		if(!NT_SUCCESS(status)) {
+			ExFreePool(addTargetData);
+			ExFreePool(plugIn);
+			ZwClose(ndasDevInst);
+			Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("LSBus_VerifyLurDescWithDIB() failed. NTSTATUS:%08lx\n", status));
+			continue;
+		}
+
+
+		//
+		//	Rewrite AddTargetData
+		//
+
+		status =RewriteTargetInstantly(ndasDevInst, 0, addTargetData);
+		if(!NT_SUCCESS(status)) {
+			ExFreePool(addTargetData);
+			ExFreePool(plugIn);
+			ZwClose(ndasDevInst);
+			Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("Reg_OpenTarget() failed. NTSTATUS:%08lx\n", status));
+			continue;
+		}
+
+
+		//
+		//	Close handle here
+		//
+
+		ZwClose(ndasDevInst);
+
+
+		//
+		//	Plug in a LanscsiBus device.
+		//
+
+		status = LSBus_PlugInLSBUSDevice(FdoData, plugIn);
+		if(!NT_SUCCESS(status)) {
+			ExFreePool(addTargetData);
+			ExFreePool(plugIn);
+			Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("LSBus_PlugInLSBUSDevice() failed. NTSTATUS:%08lx\n", status));
+			continue;
+		}
+
+
+		//
+		//	Add a target to the device which was just plugged in.
+		//
+
+		status = LSBus_AddTarget(FdoData, addTargetData);
+		if(!NT_SUCCESS(status)) {
+			LSBus_PlugOutLSBUSDevice(FdoData, plugIn->SlotNo, FALSE);
+
+			ExFreePool(addTargetData);
+			ExFreePool(plugIn);
+
+			Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("LSBus_AddTarget() failed. NTSTATUS:%08lx\n", status));
+			continue;
+		}
+
+
+		//
+		//	Free resources
+		//
+
+		ExFreePool(addTargetData);
+		ExFreePool(plugIn);
+	}
+
+	ExFreePool(keyInfo);
+
+	Bus_KdPrint_Def(BUS_DBG_SS_ERROR, ("Enumerating NDAS devices from registry is completed. NTSTATUS:%08lx\n", status));
+
+	return STATUS_SUCCESS;
+}
+
+
+//
+//	Plug in NDAS devices by reading registry.
+//	Called by enum worker thread.
+//
+
+NTSTATUS
+LSBus_PlugInDeviceFromRegistry(
+		PFDO_DEVICE_DATA	FdoData,
+		PTA_ADDRESS			AddedAddress,
+		ULONG				PlugInTimeMask
+) {
+	NTSTATUS			status;
+	HANDLE				DeviceReg;
+	HANDLE				NdasDeviceReg;
+
+	ASSERT(KeGetCurrentIrq

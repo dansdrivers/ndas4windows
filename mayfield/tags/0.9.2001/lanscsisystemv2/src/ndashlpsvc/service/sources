@@ -1,0 +1,85 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=ndashlpsvc
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+#COMPILER_WARNINGS=
+
+NTTARGETFILE0=mofcomp
+#NTTARGETFILE1=deploy
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+INCLUDES=.\inc;..\support;$(NDAS_INC_PATH);$(NDAS_INC_PATH)\ndas;$(PSDK_INC_PATH)
+RCOPTIONS=/i $(NDAS_SDK_INC_PATH) 
+USECXX_FLAG=/Tp
+USER_C_FLAGS=/EHsc
+USE_STL=1
+UMENTRY=wmain
+UMTYPE=console
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+!IF [echo BUILDMSG: USE_LIBCMT and DEBUG_CRTS]
+!ENDIF
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+BUILD_CONSUMES=ndashlpsvcsup
+BUILD_CONSUMES=lanscsiop
+BUILD_CONSUMES=lsbusctl
+BUILD_CONSUMES=hash
+
+TARGETLIBS= \
+	..\lib\$(BUILD_ALT_DIR)\*\ndashlpsvcsup.lib \
+	$(PSDK_LIB_PATH)\kernel32.lib \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\setupapi.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib \
+	$(PSDK_LIB_PATH)\crypt32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(PSDK_LIB_PATH)\Iphlpapi.lib \
+	$(NDAS_LIB_PATH)\lanscsiop.lib \
+	$(NDAS_LIB_PATH)\lsbusctl.lib \
+	$(NDAS_LIB_PATH)\hash.lib 
+	
+#BROWSER_INFO=1
+#BROWSERFILE=$(TARGETNAME).bsc -n
+
+MSC_WARNING_LEVEL=-W3 -WX
+#MSC_OPTIMIZATION=/Oitb2
+MSC_OPTIMIZATION=/Od /Oi
+
+PRECOMPILED_INCLUDE=stdafx.h
+PRECOMPILED_CXX=1
+
+SOURCES= \
+	ndashlpsvc.rc \
+	lpxcomm.cpp \
+	ndasdev.cpp \
+	ndasunitdev.cpp \
+	ndasdevreg.cpp \
+	ndaslogdev.cpp \
+	ndaslogdevman.cpp \
+	ndasdevhb.cpp \
+	ndassvc.cpp \
+	ndasinstman.cpp \
+	ndasmain.cpp \
+	ndascmdproc.cpp \
+	ndascmdserver.cpp \
+	ndaspnp.cpp \
+	drivematch.cpp \
+	rofiltctl.cpp \
+	ndascfg.cpp \
+	ndaseventmon.cpp \
+	ndasix.cpp \
+	ndaseventpub.cpp
+	

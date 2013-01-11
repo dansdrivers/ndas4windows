@@ -1,0 +1,12 @@
+2005-11-14    Chesong Lee <cslee@ximeta.com>
+
+        * xtlautores.h: Added operator overloading support for AutoProcessHeapPtr
+        * xtlstr.h: Fix parameter for CStaticStringBufferW.AppendFormat
+                    Added Reset() method
+        * xtltrace.h: Added non-implemented method CXtlTrace::VPrintfExWithError (unicode)
+                      Sanitized codes for Compiler Warnining Level 4
+        
+                  
+                    
+        
+

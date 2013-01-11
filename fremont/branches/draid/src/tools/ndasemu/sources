@@ -1,0 +1,84 @@
+TARGETNAME=ndasemu
+TARGETTYPE=PROGRAM
+TARGETPATH=obj
+
+INCLUDES=..;$(NDAS_INC_PATH);$(PSDK_INC_PATH);$(NDAS_EXTERN_INC_PATH)
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+UMTYPE=console
+UMENTRY=main
+
+#
+#	Specify defines
+#
+
+C_DEFINES=/DUNICODE /D_UNICODE
+
+#
+#	Enable time machine disk support by setting one to the following variable
+#
+
+TMD_SUPPORT=0
+!IF $(TMD_SUPPORT)
+C_DEFINES=$(C_DEFINES) /D_XPL_TARGET_W32 /D_TMD_SERVER_MODE_ /D__TMD_SUPPORT__
+!ENDIF
+
+#
+#	Enable two disk support by setting one to the following variable
+#
+
+#C_DEFINES=$(C_DEFINES) /D__TWO_DISK__
+
+#
+#	Enable 4096 bytes of sector size
+#
+
+#C_DEFINES=$(C_DEFINES)  /D__ENABLE_SECTOR_4096__
+
+#
+#	Enable sparse file for the disk image
+#	NTFS support sparse file.
+#	To work on FAT or a file system that does not support sparse file,
+#	Turn off this define.
+#
+
+C_DEFINES=$(C_DEFINES)  /D__ENABLE_SPARSE_FILE__
+
+
+USECXX_FLAG=/Tp
+USER_C_FLAGS=/Wp64
+USE_NATIVE_EH=1
+USE_STL=1
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+MSC_OPTIMIZATION=/Ox
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+TARGETLIBS= \
+	$(PSDK_LIB_PATH)\user32.lib \
+	$(PSDK_LIB_PATH)\ws2_32.lib \
+	$(PSDK_LIB_PATH)\shlwapi.lib \
+	$(NDAS_LIB_PATH)\libhash.lib
+
+
+!IF $(TMD_SUPPORT)
+TARGETLIBS=$(TARGETLIBS) \
+	$(NDAS_EXTERN_LIB_PATH)\i386\xplat_w32.lib \
+	$(NDAS_EXTERN_LIB_PATH)\i386\tmdcore_w32.lib
+
+!ENDIF
+
+SOURCES=$(SOURCES) \
+	ndasemu.cpp    \
+	emucomm.cpp    \
+	atainter.cpp   \
+	atadisk.cpp    \
+	tmdemu.cpp     \
+	gplock.cpp     \
+	sparsefile.cpp
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment Id="NDASMSM_ActionText">
+		<UI>
+			<ProgressText Action="NcRemove_NDASSCSI_INF_XC">$(loc.ActionText.NcRemove_NDASSCSI_INF)</ProgressText>
+			<ProgressText Action="NcRemove_NDASBUS_INF_XC">$(loc.ActionText.NcRemove_NDASBUS_INF)</ProgressText>
+			<ProgressText Action="NcRemove_LPX_INF_XC">$(loc.ActionText.NcRemove_LPX_INF)</ProgressText>
+			<ProgressText Action="NcRemove_AllOemInf_XC">$(loc.ActionText.NcRemove_AllOemInf)</ProgressText>
+			<ProgressText Action="NcSetARFlags_XC">$(loc.ActionText.NcSetARFlags)</ProgressText>
+			<ProgressText Action="NcSetECFlags_XC">$(loc.ActionText.NcSetECFlags)</ProgressText>
+			<ProgressText Action="NcRemove_NDASSCSI_XC">$(loc.ActionText.NcRemove_NDASSCSI)</ProgressText>
+			<ProgressText Action="NcRemove_NDASBUS_XC">$(loc.ActionText.NcRemove_NDASBUS)</ProgressText>
+			<ProgressText Action="NcRemove_ROFILT_XC">$(loc.ActionText.NcRemove_ROFILT)</ProgressText>
+			<ProgressText Action="NcRemove_LFSFILT_XC">$(loc.ActionText.NcRemove_LFSFILT)</ProgressText>
+			<ProgressText Action="NcRemove_LPX_XC">$(loc.ActionText.NcRemove_LPX)</ProgressText>
+			<ProgressText Action="NcPreRemove_LANSCSIMP_XC">$(loc.ActionText.NcPreRemove_LANSCSIMP)</ProgressText>
+			<ProgressText Action="NcPreRemove_LANSCSIBUS_XC">$(loc.ActionText.NcPreRemove_LANSCSIBUS)</ProgressText>
+			<ProgressText Action="NcCheckPreboot_LFSFILT_XC">$(loc.ActionText.NcCheckPreboot_LFSFILT)</ProgressText>
+			<ProgressText Action="NcCheckPreboot_LPX_XC">$(loc.ActionText.NcCheckPreboot_LPX)</ProgressText>
+			<ProgressText Action="NcCheckPreboot_NDASBUS_XC">$(loc.ActionText.NcCheckPreboot_NDASBUS)</ProgressText>
+			<ProgressText Action="NcCheckPreboot_NDASSCSI_XC">$(loc.ActionText.NcCheckPreboot_NDASSCSI)</ProgressText>
+			<ProgressText Action="NcCheckPreboot_NDASSVC_XC">$(loc.ActionText.NcCheckPreboot_NDASSVC)</ProgressText>
+			<ProgressText Action="NcCheckPreboot_ROFILT_XC">$(loc.ActionText.NcCheckPreboot_ROFILT)</ProgressText>
+			<ProgressText Action="NcRBack_Remove_LFSFILT_XC">$(loc.ActionText.NcRBack_Remove_LFSFILT)</ProgressText>
+			<ProgressText Action="NcRBack_Remove_NDASBUS_XC">$(loc.ActionText.NcRBack_Remove_NDASBUS)</ProgressText>
+			<ProgressText Action="NcRBack_Remove_LPX_XC">$(loc.ActionText.NcRBack_Remove_LPX)</ProgressText>
+			<ProgressText Action="NcRBackRem_NDASSCSI_INF_XC">$(loc.ActionText.NcRBackRem_NDASSCSI_INF)</ProgressText>
+			<ProgressText Action="NcRBackRem_NDASBUS_INF_XC">$(loc.ActionText.NcRBackRem_NDASBUS_INF)</ProgressText>
+			<ProgressText Action="NcRBackRem_LPX_INF_XC">$(loc.ActionText.NcRBackRem_LPX_INF)</ProgressText>
+			<ProgressText Action="NcInstall_LPX_XC">$(loc.ActionText.NcInstall_LPX)</ProgressText>
+			<ProgressText Action="NcInstall_NDASBUS_XC">$(loc.ActionText.NcInstall_NDASBUS)</ProgressText>
+			<ProgressText Action="NcInstall_LFSFILT_XC">$(loc.ActionText.NcInstall_LFSFILT)</ProgressText>
+			<ProgressText Action="NcInstall_ROFILT_XC">$(loc.ActionText.NcInstall_ROFILT)</ProgressText>
+			<ProgressText Action="NcInstall_NDASSCSI_INF_XC">$(loc.ActionText.NcInstall_NDASSCSI_INF)</ProgressText>
+			<ProgressText Action="NcSetNdasSvcAutoStart_XC">$(loc.ActionText.NcSetNdasSvcAutoStart)</ProgressText>
+			<ProgressText Action="NcStartNDASSVCOnNoReboot_XC"	Template="$(loc.ActionText.NcStartNDASSVCOnNoReboot.Template)">$(loc.ActionText.NcStartNDASSVCOnNoReboot)</ProgressText>
+
+			<?ifdef NdasSetupFlags_HAVE_NDASFAT?>
+			<ProgressText Action="NcInstall_NDASFAT_XC">$(loc.ActionText.NcInstall_NDASFAT)</ProgressText>
+			<ProgressText Action="NcRemove_NDASFAT_XC">$(loc.ActionText.NcRemove_NDASFAT)</ProgressText>
+			<ProgressText Action="NcCheckPreboot_NDASFAT_XC">$(loc.ActionText.NcCheckPreboot_NDASFAT)</ProgressText>
+			<ProgressText Action="NcRBack_Remove_NDASFAT_XC">$(loc.ActionText.NcRBack_Remove_NDASFAT)</ProgressText>
+			<?endif?>
+			
+			<?ifdef NdasSetupFlags_HAVE_NDASNTFS?>
+			<ProgressText Action="NcInstall_NDASNTFS_XC">$(loc.ActionText.NcInstall_NDASNTFS)</ProgressText>
+			<ProgressText Action="NcRemove_NDASNTFS_XC">$(loc.ActionText.NcRemove_NDASNTFS)</ProgressText>
+			<ProgressText Action="NcCheckPreboot_NDASNTFS_XC">$(loc.ActionText.NcCheckPreboot_NDASNTFS)</ProgressText>
+			<ProgressText Action="NcRBack_Remove_NDASNTFS_XC">$(loc.ActionText.NcRBack_Remove_NDASNTFS)</ProgressText>
+			<?endif?>
+			
+		</UI>
+	</Fragment>
+</Wix>

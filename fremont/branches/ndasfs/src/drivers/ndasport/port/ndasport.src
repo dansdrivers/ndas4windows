@@ -1,0 +1,16 @@
+LIBRARY ndasport.sys
+EXPORTS
+	DllInitialize                   PRIVATE
+	DllUnload                       PRIVATE
+    NdasPortGetLogicalUnit          @11 NONAME
+    NdasPortCompleteRequest         @12 NONAME
+    NdasPortNotification            @13 NONAME
+    NdasPortExAllocateWorkItem      @21 NONAME
+    NdasPortExGetWdmDeviceObject    @22 NONAME
+    NdasPortFirePnpEvent            @23 NONAME
+;    NdasPortGetLpxLocalAddressList @24 NONAME
+#if _WIN32_WINNT <= 0x0500
+    W2kTraceMessage                 @31 NONAME
+#endif
+	__DisablePersistentLogicalUnits PRIVATE
+	__DisableDriverLoad             PRIVATE

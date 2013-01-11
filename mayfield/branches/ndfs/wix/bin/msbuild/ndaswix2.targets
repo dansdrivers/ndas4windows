@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="FullBuild" 
+		 InitialTargets="NdasWixTarget_CheckPrecondition;NdasWixTarget_ResolveRuntimeProperties" 
+		 xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Config Condition="'$(Config)'==''">retail</Config>
+    <Platform Condition="'$(Platform)'==''">x86</Platform>
+    <Configuration Condition=" '$(Configuration)' == '' ">$(Config)</Configuration>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- ToolPath is relative to the project file -->
+    <WixToolPath Condition="'$(WixToolPath)'==''">$(WixProjectRoot)\bin\wix-2.0.3309.0</WixToolPath>
+    <ToolPath>$(WixProjectRoot)\bin\wix-2.0.3309.0</ToolPath>
+    <!-- AssemblyFile path is relative to ndaswix.targets -->
+    <NdasWixTaskDir Condition="'$(NdasWixTaskDir)'==''">.</NdasWixTaskDir>
+    <NdasWixProductVersionFile Condition="'$(NdasWixProductVersionFile)'==''">$(WixProjectRoot)\productver.txt</NdasWixProductVersionFile>
+    <NdasWixProductCodeFile Condition="'$(NdasWixProductCodeFile)'==''">$(WixProjectRoot)\ndaswix.xml</NdasWixProductCodeFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ObjectRootDir>obj\</ObjectRootDir>
+    <ObjectDir>$(ObjectRootDir)$(Config)\</ObjectDir>
+    <BinDropDir>..\publish</BinDropDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)'=='x64'">
+    <DefineConstants>$(DefineConstants);Win64Build</DefineConstants>
+  </PropertyGroup>
+
+  <!-- Default output type and path properties -->
+  <!--
+  <PropertyGroup>
+    <TargetName Condition="'$(TargetName)'==''">$(OutputName)</TargetName>
+    <TargetFileName Condition="'$(TargetFileName)'==''">$(TargetName)$(TargetExt)</TargetFileName>
+    <TargetPath Condition="'$(TargetPath)'==''">$(ObjectDir)$(TargetFileName)</TargetPath>
+  </PropertyGroup>
+  -->
+
+  <Target Name="NdasWixTarget_ResolveRuntimeProperties">
+	<XIMETA.GetCurrentFilePath>
+	  <Output TaskParameter="FilePath" PropertyName="_NdasWixTargetFilePath" />
+	</XIMETA.GetCurrentFilePath>
+	<CreateProperty Value="$(MSBuildAllProjects);$(_NdasWixTargetFilePath)">
+	  <Output TaskParameter="Value" PropertyName="MSBuildAllProjects" />
+	</CreateProperty>
+  </Target>
+
+  <UsingTask TaskName="GetProductCode" AssemblyFile="$(NdasWixTaskDir)\XIMETA.MSBuild.Tasks.dll" />
+
+  <Target Name="NdasWixTarget_CheckPrecondition">
+    <Error Condition="'$(WixProjectRoot)'==''" Text="WixProjectRoot property is not set!" />
+    <!--
+    <Message Text="WixProjectRoot=$(WixProjectRoot)" />
+    -->
+  </Target>
+
+  <Target Name="PreBuild">
+    <MakeDir Directories="$(ObjectDir)" />
+  </Target>
+
+  <Target Name="Clean">
+    <RemoveDir Directories="$(ObjectRootDir);$(BinDropDir)" />
+  </Target>
+
+  <Target Name="GetProductVersion" Condition="'$(MsiProductVersion)'==''">
+    <ReadLinesFromFile File="$(NdasWixProductVersionFile)" Condition="'$(MsiProductVersion)'==''">
+      <Output TaskParameter="Lines" PropertyName="MsiProductVersion" />
+    </ReadLinesFromFile>
+    <Error Condition="'$(MsiProductVersion)'==''" Text="Cannot read ProductVersion. Set MsiProductVersion property." />
+    <Message Text="ProductVersion=$(MsiProductVersion)" />
+  </Target>
+
+  <Target Name="GetProductCode" Condition="'$(MsiProductCode)'==''">
+    <GetProductCode ProductVersion="$(MsiProductVersion)" ConfigFile="$(NdasWixProductCodeFile)" Condition="'$(MsiProductCode)'==''">
+      <Output TaskParameter="ProductCode" PropertyName="MsiProductCode"/>
+    </GetProductCode>
+    <Message Text="ProductCode=$(MsiProductCode)" />
+  </Target>
+
+  <Target Name="SetRuntimeProperties" DependsOnTargets="GetProductVersion;GetProductCode">
+    <CreateProperty Value="$(DefineConstants);NdasMsiVersion=$(MsiProductVersion)">
+      <Output TaskParameter="Value" PropertyName="DefineConstants" />
+    </CreateProperty>
+    <CreateProperty Value="$(DefineConstants);NdasMsiDisplayVersion=$(MsiProductVersion)">
+      <Output TaskParameter="Value" PropertyName="DefineConstants" />
+    </CreateProperty>
+    <CreateProperty Value="$(DefineConstants);NdasMsiProductCode=$(MsiProductCode)">
+      <Output TaskParameter="Value" PropertyName="DefineConstants" />
+    </CreateProperty>
+    <CreateProperty Value="$(DefineConstants);NdasMsiVersionValue=311">
+      <Output TaskParameter="Value" PropertyName="DefineConstants" />
+    </CreateProperty>
+  </Target>
+
+  <!-- Default output type and path properties -->
+  <PropertyGroup>
+
+    <SetupLanguageSuffix>_$(SetupLanguage)</SetupLanguageSuffix>
+    <SetupLanguageSuffix Condition="'$(SetupLanguageSuffix)'=='_'"></SetupLanguageSuffix>
+    <SetupLanguageSuffix Condition="'$(SetupLanguageSuffix)'=='_0'"></SetupLanguageSuffix>
+    <SetupLanguageSuffix Condition="'$(SetupLanguageSuffix)'=='_NEU'"></SetupLanguageSuffix>
+
+    <PlatformSuffix>_$(Platform)</PlatformSuffix>
+    <PlatformSuffix Condition="'$(PlatformSuffix)'=='_'"></PlatformSuffix>
+
+    <OutputPath Condition=" '$(OutputPath)' == '' ">bin\$(Configuration)$(PlatformSuffix)$(SetupLanguageSuffix)\</OutputPath>
+    <BaseOutputPath Condition=" '$(BaseOutputPath)' == '' ">obj\</BaseOutputPath>                      <!-- Example, obj\ -->
+    <IntermediateOutputPath Condition=" '$(IntermediateOutputPath)' == '' ">$(BaseOutputPath)$(Configuration)$(PlatformSuffix)$(SetupLanguageSuffix)\</IntermediateOutputPath> <!-- Example, obj\Debug\ -->
+
+  </PropertyGroup>
+
+  <Import Project="wix2.targets" />
+
+  <PropertyGroup>
+    <BuildDependsOn>SetRuntimeProperties;Compile;Lib;Link</BuildDependsOn>
+  </PropertyGroup>
+
+  <Target Name="PreBuild" />
+  <Target Name="PostBuild" />
+  <Target Name="FullBuild" DependsOnTargets="PreBuild;Build;PostBuild" />
+    
+</Project>

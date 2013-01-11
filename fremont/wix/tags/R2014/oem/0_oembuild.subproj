@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- wix target properties -->
+  <PropertyGroup>
+	<WixProjectRoot>..</WixProjectRoot>
+	<OutputType>package</OutputType>
+  </PropertyGroup>
+
+  <!-- oem, release, platform, language, properties -->
+  <!--
+  <PropertyGroup>
+	<Oem>coworld</Oem>
+	<Release>eu3</Release>
+	<Platform>x86</Platform>
+	<Language>en-US</Language>
+  </PropertyGroup>
+  -->
+
+  <PropertyGroup>
+	<!-- path properties -->
+	<ReleasePath>$(oem)\release_$(release)_$(platform)</ReleasePath>
+	<WixLibPath>$(oem)\obj\release_$(release)_$(platform)\wixlib</WixLibPath>
+	<OutDir>$(oem)</OutDir>
+
+	<OutputPath>$(oem)\obj\release_$(release)_$(platform)\msi\</OutputPath>
+	<IntermediateOutputPath>$(outputpath)</IntermediateOutputPath>
+	<BaseInputPath>$(oem)</BaseInputPath>
+
+	<!-- suffix properties -->
+	<PlatformSuffix>_$(Platform)</PlatformSuffix>
+	<PlatformSuffix Condition="'$(PlatformSuffix)'=='_'"></PlatformSuffix>
+
+	<WxlLanguage>$(SetupLanguage)</WxlLanguage>
+	<WxlLanguage Condition="$(SetupLanguage)==0">en-US</WxlLanguage>
+
+	<LocSuffix>_$(SetupLanguage)</LocSuffix>
+	<LocSuffix Condition="$(SetupLanguage)==0">_en-US</LocSuffix>
+
+	<SetupLanguageSuffix>_$(SetupLanguage)</SetupLanguageSuffix>
+	<SetupLanguageSuffix Condition="'$(SetupLanguageSuffix)'=='_'"></SetupLanguageSuffix>
+	<SetupLanguageSuffix Condition="'$(SetupLanguageSuffix)'=='_0'"></SetupLanguageSuffix>
+
+	<!-- Create output name: ndas_x86_en-US -->
+	<!-- product name may be customized, e.g. ndas, LHD-LU2, etc -->
+	<ProductName>ndas</ProductName>
+
+	<ProductVersionSuffix>_$(MsiProductVersion)</ProductVersionSuffix>
+	<ProductVersionSuffix Condition="'$(ProductVersionSuffix)'=='_'"></ProductVersionSuffix>
+
+	<!-- base output name is based on the product name -->
+	<!-- use platform suffix e.g. _x86, _x64 -->
+	<!-- use language suffix e.g. _en-US -->
+	<OutputName>$(ProductName)$(ProductVersionSuffix)$(OutputName)$(PlatformSuffix)$(SetupLanguageSuffix)</OutputName>
+
+	<WxlDir>$(oem)\obj\loc\$(WxlLanguage)</WxlDir>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+	<WixLibrary Include="$(wixlibpath)\ndas$(ProductVersionSuffix)$(PlatformSuffix)$(SetupLanguageSuffix).wixlib" />
+	<BaseLocalizedStringFile Include="..\ndas.msi\*.wxl" />
+  </ItemGroup>
+
+  <!-- import common project targets -->
+  <Import Project="..\bin\msbuild\ndaswix2.targets" />
+  <Import Project="..\bin\msbuild\codesign.targets" />
+
+  <Target Name="CreateSigningTargets">
+    <CreateItem Include="$(TargetPath)">
+      <Output TaskParameter="Include" ItemName="SigningFile" />
+    </CreateItem>
+  </Target>
+
+  <Target Name="SignTarget" 
+          DependsOnTargets="CreateSigningTargets;SignCode" 
+          Condition="'$(XM_SIGNCODE_CMD)'!=''"/>
+
+  <Target Name="PostBuild"
+        DependsOnTargets="SignTarget">
+  </Target>
+
+  <!-- override prebuild -->
+  <Target Name="PreBuild" DependsOnTargets="CreateLocalizedStringFileItem">
+  </Target>
+
+  <Target Name="CreateLocalizedStringFileItem">
+	<CreateItem Include="$(wxldir)\%(BaseLocalizedStringFile.filename)%(BaseLocalizedStringFile.extension)">
+	  <Output TaskParameter="Include" ItemName="LocalizedStringFile" />
+	</CreateItem>
+  </Target>
+
+</Project>

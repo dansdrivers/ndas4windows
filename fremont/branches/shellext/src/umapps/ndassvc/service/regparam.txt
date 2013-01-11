@@ -1,0 +1,157 @@
+
+Key : HKLM\Software\NDAS\ndassvc
+
+--------------------------------------------------------------------------
+General
+--------------------------------------------------------------------------
+
+* Maximum NDAS Device Discover Command Tryout on failure
+
+  Value : MaxHeartbeatFailure (REG_DWORD)
+  Data  : 1 - 65535 (default: 10)
+
+*
+
+  Value : MaxUnitDeviceIdentifyFailure (REG_DWORD)
+  Data  : 1 - MAX (default: 4, 0 means to use default)
+
+*
+
+  Value : UnitDeviceIdentifyFailureRetryInterval (REG_DWORD)
+  Data  : 0 - 300000 (2500) (ms)
+
+*
+
+  Value : NoForceSafeRemoval (REG_DWORD as BOOL)
+  Data  : 0 or 1 (default: 0)
+
+*
+
+  Value : DisableRAIDWriteShare (REG_DWORD as BOOL)
+  Data  : 0 or 1 (default: 0)
+ 
+
+--------------------------------------------------------------------------
+LFS Write Sharing Directive
+--------------------------------------------------------------------------
+
+* Do not use LFSFilter write sharing 
+
+  Value : NoPSWriteShare (REG_DWORD as BOOL)
+  Data  : 0 or 1 (default: 0)
+
+* Maximum NDFS Compatibility Check Tryout on failure
+
+  Value : MaxWriteAccessCheck (REG_DWORD)
+  Data  : 0 - 60 (default: 10)
+
+* Timeout to discover the primary host using HIX
+
+  Value : WriteShareCheckTimeout (REG_DWORD)
+  Data  : 0 - MAX (default: 5000 ms)
+
+--------------------------------------------------------------------------
+Logical Device Reconnection
+--------------------------------------------------------------------------
+
+* Override Logical Device Reconnection Parameter
+
+  Value : OverrideLogDevReconnect (REG_DWORD as BOOL)
+  Data  : 0 or 1 (default: 0)
+
+  The following values are effective only if 
+  OverrideLogDevReconnect is set:
+
+* Maximum Reconnection Attempt Count
+
+  Value : LogDevReconnect (REG_DWORD)
+  Data  : 0 to 19 (default: 19)
+
+* Reconnection Attempt Interval 
+
+  Value : LogDevReconnectInterval (REG_DWORD)
+  Data  : 0 - 60000 (default: 3000) (ms)
+
+--------------------------------------------------------------------------
+Advanced
+--------------------------------------------------------------------------
+
+* LUR Options
+
+  Value : LUROptions (REG_DWORD)
+  Data  : 0 - 0xFFFFFFFF (default: 0)
+
+ (Use this value to override LUR options described in lurdesc.h)
+
+LUROPTION_ON_OOB_WRITE				0x00000001	// Turn On the OOB write to an NDAS device
+LUROPTION_OFF_OOB_WRITE				0x00000002	// Turn Off the OOB write to an NDAS device
+LUROPTION_ON_SIMULTANEOUS_WRITE		0x00000004	// Turn On the the simultaneous write to an NDAS device
+LUROPTION_OFF_SIMULTANEOUS_WRITE	0x00000008	// Turn Off the the simultaneous write to an NDAS device
+LUROPTION_ON_NDAS_2_0_WRITE_CHECK 	0x00000010	// Turn on the write-check for NDAS 2.0
+LUROPTION_OFF_NDAS_2_0_WRITE_CHECK	0x00000020	// Turn off the write-check for NDAS 2.0. Default on
+ LUROPTION_ON_DYNAMIC_REQUEST_SIZE  0x00004000	// Turn on dynamic request size. Default on.
+ LUROPTION_OFF_DYNAMIC_REQUEST_SIZE	0x00008000	// Turn off dynamic request size.
+
+
+* Max Request Block Limit
+
+  Maximum Request Block size limit for a unit device. This parameter is added
+  for a workaround to prevent Gigabit NDAS Chipset bug.
+
+  Version Specific
+
+  Value : MaxRequestBlockLimit.{0,1,2} (REG_DWORD)
+  Data  : 1 to unlimited (default: 128)
+
+  Global
+
+  Value : MaxRequestBlockLimit (REG_DWORD)
+  Data  : 1 to unlimited (default: 128)
+
+
+--------------------------------------------------------------------------
+Debugging (obsolete)
+--------------------------------------------------------------------------
+
+* DebugOutputLevel:
+
+#define XDBG_OL_NOISE	0x50
+#define XDBG_OL_TRACE	0x40
+#define XDBG_OL_INFO	0x30
+#define XDBG_OL_WARNING	0x20
+#define XDBG_OL_ERROR	0x10
+#define XDBG_OL_NONE	0x00
+
+* DebugOutputFlags: 
+
+   SystemOutputFlags     = 0x00000001 
+   ConsoleOutputFlags    = 0x00000002
+   EventTraceOutputFlags = 0x00000004
+
+* DebugModuleFlags: 
+
+#define XDF_LPXCOMM		0x00000001
+#define XDF_INSTMAN		0x00000002
+#define XDF_EVENTPUB		0x00000004	
+#define XDF_EVENTMON		0x00000008
+#define XDF_NDASLOGDEV		0x00000010
+#define XDF_NDASLOGDEVMAN	0x00000020
+#define XDF_NDASPNP         	0x00000040
+#define XDF_SERVICE		0x00000080
+#define XDF_CMDPROC         	0x00000100
+#define XDF_CMDSERVER       	0x00000200
+#define XDF_NDASDEV         	0x00000400
+#define XDF_NDASDEVHB       	0x00000800
+#define XDF_NDASDEVREG		0x00001000
+#define XDF_DRVMATCH        	0x00002000
+#define XDF_NDASIX		0x00004000
+#define XDF_PNPEVENT		0x00010000
+#define XDF_NDASUNITDEV		0x00020000
+#define XDF_TRANSPORT		0x00040000
+#define XDF_TASK		0x00080000
+#define XDF_HIXSERVER		0x00100000
+#define XDF_LIBRARY  		0x40000000
+#define XDF_MAIN		0x80000000
+
+* DebugLibraryFlags:
+

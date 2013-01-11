@@ -1,0 +1,46 @@
+!IF 0
+
+Copyright (C)2002-2004 XIMETA, Inc.
+All rights reserved.
+
+!ENDIF
+
+TARGETNAME=ndassvc_support
+TARGETTYPE=LIBRARY
+TARGETPATH=obj
+
+BUILD_PRODUCES=ndassvc_support
+
+C_DEFINES=/DUNICODE /D_UNICODE
+INCLUDES=.\inc;..\inc;$(NDAS_INC_PATH);$(PSDK_INC_PATH)
+RCOPTIONS=/i $(PSDK_INC_PATH)
+USECXX_FLAG=/Tp
+USER_C_FLAGS=/EHsc
+USE_STL=1
+UMENTRY=wmain
+UMTYPE=console
+
+!IF $(FREEBUILD)
+USE_MSVCRT=1
+!ELSE
+USE_LIBCMT=1
+DEBUG_CRTS=1
+!ENDIF
+
+MSC_WARNING_LEVEL=-W3 -WX
+MSC_OPTIMIZATION=/Oitb2
+
+PRECOMPILED_INCLUDE=stdafx.h
+PRECOMPILED_CXX=1
+
+# to publish library
+PASS1_PUBLISH= \
+	{$(O)\$(TARGETNAME).lib=..\lib\$(DDKBUILDENV)\$(TARGET_DIRECTORY)\$(TARGETNAME).lib}
+
+SOURCES= \
+	task.cpp \
+	transport.cpp \
+	svchelp.cpp \
+	pnpevent.cpp \
+	syncobj.cpp \
+	confmgr.cpp

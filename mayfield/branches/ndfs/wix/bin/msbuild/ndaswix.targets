@@ -1,0 +1,148 @@
+<Project DefaultTargets="Build" InitialTargets="NdasWix_CheckPrecondition" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Config Condition="'$(Config)'==''">retail</Config>
+    <Platform Condition="'$(Platform)'==''">x86</Platform>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- ToolPath is relative to the project file -->
+    <WixToolPath Condition="'$(WixToolPath)'==''">$(WixProjectRoot)\bin\wix-2.0.3309.0</WixToolPath>
+    <!-- AssemblyFile path is relative to ndaswix.targets -->
+    <NdasWixTaskDir Condition="'$(NdasWixTaskDir)'==''">.</NdasWixTaskDir>
+    <NdasWixProductVersionFile Condition="'$(NdasWixProductVersionFile)'==''">$(WixProjectRoot)\productver.txt</NdasWixProductVersionFile>
+    <NdasWixProductCodeFile Condition="'$(NdasWixProductCodeFile)'==''">$(WixProjectRoot)\ndaswix.xml</NdasWixProductCodeFile>
+    </PropertyGroup>
+
+  <PropertyGroup>
+    <ObjectRootDir>obj\</ObjectRootDir>
+    <ObjectDir>$(ObjectRootDir)$(Config)\</ObjectDir>
+    <BinDropDir>..\publish\</BinDropDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)'=='x64'">
+    <CandleDefines>$(CandleDefines);Win64Build</CandleDefines>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CandleDefines>$(CandleDefines);WixArchTag=$(Platform)</CandleDefines>
+  </PropertyGroup>
+  
+  <!-- Define the default file extensions -->
+  <PropertyGroup>
+    <TargetExt Condition="'$(OutputType)'=='package'">.msi</TargetExt>
+    <TargetExt Condition="'$(OutputType)'=='module'">.msm</TargetExt>
+    <TargetExt Condition="'$(OutputType)'=='library'">.wixlib</TargetExt>
+    <IntermediateExt Condition="'$(IntermediateExt)'==''">.wixobj</IntermediateExt>
+  </PropertyGroup>
+
+  <!-- Default output type and path properties -->
+  <PropertyGroup>
+	<TargetName Condition="'$(TargetName)'==''">$(OutputName)</TargetName>
+	<TargetFileName Condition="'$(TargetFileName)'==''">$(TargetName)$(TargetExt)</TargetFileName>
+	<TargetPath Condition="'$(TargetPath)'==''">$(ObjectDir)$(TargetFileName)</TargetPath>
+  </PropertyGroup>
+
+  <UsingTask TaskName="GetProductCode" AssemblyFile="$(NdasWixTaskDir)\XIMETA.MSBuild.Tasks.dll" />
+  <UsingTask TaskName="Candle" AssemblyFile="$(NdasWixTaskDir)\wixtasks.dll" />
+  <UsingTask TaskName="Lit" AssemblyFile="$(NdasWixTaskDir)\wixtasks.dll" />
+  <UsingTask TaskName="Light" AssemblyFile="$(NdasWixTaskDir)\wixtasks.dll" />
+
+  <Target Name="NdasWix_CheckPrecondition">
+    <Error Condition="'$(WixProjectRoot)'==''" Text="WixProjectRoot property is not set!" />
+    <!--
+    <Message Text="WixProjectRoot=$(WixProjectRoot)" />
+    -->
+  </Target>
+
+  <Target Name="PreBuild">
+    <MakeDir Directories="$(ObjectDir)" />
+  </Target>
+
+  <Target Name="Clean">
+    <RemoveDir Directories="$(ObjectRootDir);$(BinDropDir)" />
+  </Target>
+
+  <Target Name="ResolveProps">
+    <ReadLinesFromFile File="$(NdasWixProductVersionFile)" Condition="'$(MsiProductVersion)'==''">
+      <Output TaskParameter="Lines" PropertyName="MsiProductVersion" />
+    </ReadLinesFromFile>
+    <Error Condition="'$(MsiProductVersion)'==''" Text="Cannot resolve ProductVersion. Set MsiProductVersion property." />
+    <Message Text="ProductVersion=$(MsiProductVersion)" />
+    <GetProductCode ProductVersion="$(MsiProductVersion)" ConfigFile="$(NdasWixProductCodeFile)" Condition="'$(MsiProductCode)'==''">
+      <Output TaskParameter="ProductCode" PropertyName="MsiProductCode"/>
+    </GetProductCode>
+    <Message Text="ProductCode=$(MsiProductCode)" />
+    <CreateProperty Value="$(CandleDefines);NdasMsiVersion=$(MsiProductVersion)">
+      <Output TaskParameter="Value" PropertyName="CandleDefines" />
+    </CreateProperty>
+    <CreateProperty Value="$(CandleDefines);NdasMsiDisplayVersion=$(MsiProductVersion)">
+      <Output TaskParameter="Value" PropertyName="CandleDefines" />
+    </CreateProperty>
+    <CreateProperty Value="$(CandleDefines);NdasMsiVersionValue=311">
+      <Output TaskParameter="Value" PropertyName="CandleDefines" />
+    </CreateProperty>
+  </Target>
+
+  <Target Name="Compile" DependsOnTargets="">
+    <Candle 
+      SourceFiles="@(WxsFiles)" 
+      OutputFile="$(ObjectDir)" 
+      ToolPath="$(WixToolPath)"
+      DefineConstants="$(CandleDefines)"/>
+  </Target>
+
+  <Target 
+    Name="Link" 
+    DependsOnTargets=""
+    Condition=" '$(OutputType)'=='package' Or '$(OutputType)'=='module' ">
+    <Light
+      ToolPath="$(WixToolPath)" 
+      ObjectFiles="@(WxsFiles->'$(ObjectDir)%(filename).wixobj')"
+      LocalizedStringFile="@(WxlFiles)" 
+      OutputFile="$(ObjectDir)$(TargetFileName)" />
+  </Target>
+
+  <Target
+    Name="Lib"
+    Inputs="$(CompileObjOutput);
+                @(WixObject);
+                $(MSBuildAllProjects)"
+    Outputs="$(OutDir)$(TargetFileName)"
+    DependsOnTargets="$(LibDependsOn)"
+    Condition=" '$(OutputType)' == 'library' ">
+
+    <Lit
+        ObjectFiles="@(WixObject);@(WixLibrary);$(CompileObjOutput)"
+        NoLogo="$(LibNoLogo)"
+        OutputFile="$(OutDir)$(TargetFileName)"
+        Extensions="@(LibExtension)" 
+        SuppressSchemaValidation="$(LibSuppressSchemaValidation)"
+        SuppressIntermediateFileVersionMatching="$(LibSuppressIntermediateFileVersionMatching)" 
+        SuppressAllWarnings="$(LibSuppressAllWarnings)" 
+        UseSmallTableDefinitions="$(LibUseSmallTableDefinitions)" 
+        TreatWarningsAsErrors="$(LibTreatWarningsAsErrors)" 
+        WarningLevel="$(LibWarningLevel)" 
+        VerboseOutput="$(LibVerboseOutput)" 
+        VerboseOutputLevel="$(LibVerboseOutputLevel)" 
+        ToolPath="$(ToolPath)"
+        />
+  </Target>
+
+  <Target Name="CoreBuild" DependsOnTargets="PreBuild;ResolveProps;Compile;Link">
+  </Target>
+
+  <PropertyGroup>
+    <BuildDependsOn>BeforeBuild;CoreBuild;AfterBuild</BuildDependsOn>
+  </PropertyGroup>
+
+  <Target
+      Name="Build"
+      Condition=" '$(_InvalidConfigurationWarning)' != 'true' "
+      DependsOnTargets="$(BuildDependsOn)"
+      Outputs="$(TargetPath)"/>
+
+  <Target Name="BeforeBuild"></Target>
+  <Target Name="AfterBuild"></Target>
+
+</Project>

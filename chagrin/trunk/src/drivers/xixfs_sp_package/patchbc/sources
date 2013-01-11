@@ -1,0 +1,18 @@
+
+TARGETNAME=patchbc
+TARGETPATH=obj
+TARGETTYPE=LIBRARY
+
+INCLUDES=..\.;	\
+	..\..\inc;	\
+	$(XM_WXP_INC_PATH)\public\sdk\inc;	\
+	$(XM_WXP_INC_PATH)\public\ddk\inc;	\
+	$(DDK_INC_PATH)
+
+
+SOURCES=patchbc.c
+
+BROWSER_INFO=1
+BROWSERFILE=$(TARGETNAME).bsc -n
+
+

@@ -1,0 +1,58 @@
+==== What's New ====
+
+* NDAS Software 3.11 build 1327
+  NDAS Software Version 3.11 is a new software release with following improvements and bug fixes
+
+    * New icons and UI for NDAS management tool and bind management tool.
+    * Improved RAID1 mechanism.
+          o Users of mirroring or RAID1 made by prior version of software are required to use "Migrate" command from NDAS bind management tool.
+          o New RAID1 disks cannot be used by older software. Aggregation or striped (RAID0) disk can still be used by older software.
+          o Supports write-sharing of RAID1 disks.
+          o Supports spare disk for RAID 1. Spare disk is used as RAID1 member when one of RAID1 member disk is missing.
+          o Automatic RAID1 recovery is added. Manual RAID1 recovery is now obsolete and removed from bind management tool.
+    * Added "Export" function
+          o Export function is used for transferring NDAS registration information from one PC to another.
+          o You can access this function from NDAS device's property menu and registration wizard.
+          o NDAS export files can be used on another host just by double-clicking the export file.
+    * Restricted usage of NDAS device when it is needed.
+          o Operations that require a whole disk access such as scandisk, changing partition and formatting are not available when multiple hosts are accessing the NDAS devices to prevent loss of data.
+          o While one host is using the NDAS device exclusively, another host cannot access the NDAS device.
+    * Notable bug fixes
+          o Fixed a problem that volume name changed by another host is not reflected.
+          o Fixed a problem that write-sharing did not work in some systems when they rebooted with NDAS device mounted.
+          o Fixed a problem that write-sharing did not work when a user changes properties of network interface.
+          o Fixed a problem that a crash occurs when some systems with multiple CPUs run with high network and CPU loads.
+          o Fixed a problem that system crash (blue screen) occurs when jumbo frame is enabled.
+          o Fixed a problem that the performance is low with network configurations that gigabit network and 100Mbps network are mixed, and with the situation that multiple NDAS devices are used at the same time.
+          o Fixed a problem that NDAS management tool sometimes stalls when NDAS device is a broken unit.
+    * Miscellaneous
+          o One-step registration is removed to reduce confusion. Registration wizard is available only when registering new NDAS devices.
+
+* NDAS Software 3.10 build 1230
+  NDAS Software Version 3.10 is a new software release containing updated management framework for NDAS devices, including:
+
+    * Improved User Interfaces
+          o Added more hardware properties
+          o Added information about NDAS hosts using the device
+          o Added options dialogs
+          o Added Suspend/Hibernation support
+          o Unicode support for better multilingual support
+          o Added a feature to deactivate the unused NDAS devices
+    * Improved Setup
+          o More robust support for device driver installations
+          o Single MSI for multiple languages (MUI version only)
+          o Upgrade support
+    * Software Update
+          o Checks for the new software release from the setup and the management software
+    * Bind system
+          o Supports new bind system of RAID 0, RAID 1. The aggregation system is supported also
+          o An user can recover the defected RAID 1 system using the bind management tool
+          o New bind system does not support a mirroring system anymore, but provides a function to migrate mirroring system to a RAID 1 system without losing any data
+    * Miscellaneous
+          o SNMP components are removed from the software
+          o Smaller footprint of the software (around 900KB for the whole software without Windows Installer Redistributable)
+          o New Command-line interface to manage the NDAS devices
+    * NDAS SDK (OEM partners only)
+          o New NDAS device management APIs are provided for customized applications
+
+Copyright (c) 2003-2006 XIMETA, Inc. All rights reserved

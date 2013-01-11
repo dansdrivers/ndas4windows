@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+	<String Id="ndasddus.Feature.Title">NDAS Device Driver Update Service</String>
+	<String Id="ndasddus.Feature.Description">NDAS Device Driver Update Service</String>
+	<String Id="ndasddus.Service.DisplayName">NDAS Device Driver Update Service</String>
+	<String Id="ndasddus.Service.Description">Supresses device driver update wizard when the disk is mounted</String>
+</WixLocalization>

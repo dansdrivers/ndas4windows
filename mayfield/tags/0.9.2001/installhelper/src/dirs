@@ -1,0 +1,2 @@
+DIRS= AutoRun NDDeviceLib NDFilterLib NDLogLib NDNetCompLib NDInst
+OPTIONDIRS= .

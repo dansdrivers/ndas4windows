@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization component="ndasmsg" version="3.40.1604" lang="kor" oem="ximeta" xmlns="http://schemas.ximeta.com/meta/loc/2006">
+  <string id="NDAS_ERROR_INVALID_ID_FORMAT">
+    <base><![CDATA[NDAS device ID or Key is invalid.]]></base>
+    <translation>NDAS 장치 ID 혹은 키가 유효하지 않습니다.</translation>
+  </string>
+  <string id="NDAS_ERROR_INVALID_BACL_ON_DISK">
+    <base><![CDATA[BACL data on the disk is invalid.]]></base>
+    <translation>디스크에 있는 BACL 정보가 유효하지 않습니다.</translation>
+  </string>
+  <string id="NDAS_ERROR_NEWER_DIB_VERSION">
+    <base><![CDATA[DIB version on the disk is higher than the supported one.]]></base>
+    <translation>DIB 버전이 지원되는 버전보다 높습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Device Entry Not Found.]]></base>
+    <translation>NDAS 장치를 찾을 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNITDEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Unit Device Entry Not Found.]]></base>
+    <translation>NDAS 유닛 장치를 찾을 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_ENTRY_NOT_FOUND">
+    <base><![CDATA[NDAS Logical Device Entry Not Found.]]></base>
+    <translation>NDAS 논리 장치를 찾을 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_DISABLE_MOUNTED_DEVICE">
+    <base><![CDATA[Disabling the NDAS device containing any of the mounted unit device is not allowed.]]></base>
+    <translation>마운트 된 유닛 장치가 있어 비사용 상태로 만들 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_CANNOT_UNREGISTER_ENABLED_DEVICE">
+    <base><![CDATA[Unregistering an enabled NDAS device is not permitted.]]></base>
+    <translation>사용중인 NDAS 장치는 삭제할 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SLOT_NUMBER">
+    <base><![CDATA[Invalid NDAS slot number.]]></base>
+    <translation>NDAS 슬롯 번호가 잘못되었습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_SLOT_ALREADY_OCCUPIED">
+    <base><![CDATA[Requested slot is used by another device.]]></base>
+    <translation>해당 슬롯은 다른 장치가 사용중입니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_DEVICE_ENTRY">
+    <base><![CDATA[The requested NDAS device already exists.]]></base>
+    <translation>해당 NDAS 장치는 이미 있습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DEVICE_ENTRY_SLOT_FULL">
+    <base><![CDATA[No more NDAS device slot is available.]]></base>
+    <translation>더 이상 NDAS 장치의 슬롯을 할당할 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_INITIALIZED">
+    <base><![CDATA[NDAS Logical device is not initialized.]]></base>
+    <translation>NDAS 논리 장치가 초기화 되지 않았습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MEMBER_MISSING">
+    <base><![CDATA[Some NDAS logical device members are missing in the entry.]]></base>
+    <translation>NDAS 논리 장치에 빠진 장치가 있습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_MOUNTED">
+    <base><![CDATA[NDAS Logical device is not mounted.]]></base>
+    <translation>NDAS 논리 장치가 마운트되어 있지 않습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_CONFLICT_LOGICALDEVICE_ENTRY">
+    <base><![CDATA[NDAS Logical device entry is conflicts with existing entries.]]></base>
+    <translation>NDAS 논리 장치가 엔트리가 기존 엔트리와 충돌합니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_DUPLICATE_LOGICALDEVICE_ENTRY">
+    <base><![CDATA[The requested NDAS logical device already exists.]]></base>
+    <translation>해당  NDAS 논리 장치가 이미 있습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_LOGICALDEVICE_SLOT_FULL">
+    <base><![CDATA[No more NDAS logical device slot is available.]]></base>
+    <translation>더 이상 NDAS 논리 장치 슬롯을 할당할 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNSUPPORTED_LOGICALDEVICE_TYPE">
+    <base><![CDATA[Unsupported NDAS logical device type.]]></base>
+    <translation>지원되지 않는 NDAS 논리 장치입니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_INVALID_BIND_INFORMATION">
+    <base><![CDATA[The bind information in NDAS device is invalid.]]></base>
+    <translation>NDAS 장치의 바인드 정보가 잘못되었습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_MODIFIED_BIND_INFORMATION">
+    <base><![CDATA[The bind information in NDAS device is changed.]]></base>
+    <translation>NDAS 장치의 바인드 정보가 변경되었습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base><![CDATA[Granted access for the NDAS logical device is insufficient to complete the operation.]]></base>
+    <translation>이 NDAS 논리 장치에 부여된 권한으로는 이 작업을 수행할 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+    <base><![CDATA[Requested access to the NDAS logical device is failed.]]></base>
+    <translation>이 NDAS 논리 장치에 요청한 작업이 실패하였습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_NOT_UNMOUNTED">
+    <base><![CDATA[NDAS logical device is not in a mountable status.]]></base>
+    <translation>NDAS 논리 장치가 마운트 가능한 상태가 아닙니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_UNITDEVICE_NOT_MOUNTED">
+    <base><![CDATA[NDAS Unit device is not mounted.]]></base>
+    <translation>NDAS 유닛 장치가 마운트 되지 않았습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_HOST_INFO_NOT_FOUND">
+    <base><![CDATA[NDAS Host Information cannot be found.]]></base>
+    <translation>NDAS 호스트 정보를 찾을 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_DEVICE_COMMUNICATION_FAILURE">
+    <base><![CDATA[Communication to the NDAS Device has failed.]]></base>
+    <translation>NDAS 장치와 통신이 실패했습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_MULTIPLE_WRITE_ACCESS_NOT_ALLOWED">
+    <base><![CDATA[Multiple Write Access is not allowed for the specified NDAS unit device.]]></base>
+    <translation>해당 NDAS 유닛 장치에 다중 쓰기 접속을 할 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_INCOMPATIBLE_HOSTS_FOR_MULTIPLE_WRITE_ACCESS">
+    <base><![CDATA[Incompatible NDAS hosts for multiple write-access are found for the specified NDAS unit device.]]></base>
+    <translation>해당 NDAS 유닛 장치에 다중 쓰기 접속의 호환이 되지 않는 호스트가 있습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NO_MORE_DVD_WRITE_ACCESS_INSTANCE_ALLOWED">
+    <base>No more than constrained instances of DVD Drives as Read/Write mode is allowed.</base>
+    <translation>DVD 드라이브는 다중 쓰기 접속을 할 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_CORRUPTED_BIND_INFORMATION">
+    <base><![CDATA[The NDAS device is corrupted and need to be recovered before mounting.]]></base>
+    <translation>이 NDAS 장치 내용이 손상되어 마운트 전에 복구해야 합니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_UNKNOWN_VENDOR_ID">
+    <base><![CDATA[The NDAS device ID cannot be used with the current version of the software. Upgrade the software to the most recent version or use the vendor-provided software.]]></base>
+    <translation>이 NDAS 장치 ID는 현재 버전의 소프트웨어에서 사용할 수 없습니다. 제조사의 최신 소프트웨어로 업그레이드 하십시요.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_OPERATION_NOT_ALLOWED_WHILE_CONNECTING">
+    <base><![CDATA[The requested operation is not allowed while the system is connecting to the NDAS device.]]></base>
+    <translation>시스템이 NDAS 장치와 연결되어 있어 요청한 작업을 수행할 수 없습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALDEVICE_FIX_REQUIRED">
+    <base><![CDATA[The NDAS logical device does not have correction status. Fix status in the NDAS Bind Management.]]></base>
+    <translation>이 NDAS 논리 장치의 상태가 비정상적입니다. NDAS 바인드 관리자 에서 상태를 수정하십시오.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_IS_INCOMPLETE">
+    <base>The NDAS logical unit cannot use required NDAS units to complete the operation. For fault-tolerant RAID sets, you can mount it in degrade mode without all members. You should use NDAS Bind Management to mark the RAID set in degrade mode before you mount it.</base>
+    <translation>이 NDAS 논리 장치의 유닛이 충분하지 않아 작업을 수행할 수 없습니다. 복구 가능한 RAID의 경우 구성 유닛이 빠진 복구 불가 모드로 마운트 할 수 있습니다. 마운트 하기 전에 NDAS 바인드 관리자로 RAID 셋을 복구 불가 모드로 변경할 수 있습니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_HAS_BAD_DISK">
+    <base><![CDATA[The NDAS logical unit has some bad disks. It is recommended to fix the warning(s).]]></base>
+    <translation>이 NDAS 논리 유닛 중 불량 디스크가 있습니다. 문제를 해결을 권합니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_HAS_BAD_SECTOR">
+    <base><![CDATA[The NDAS logical unit has some disks with bad sectors. It is recommended to fix the warning(s).]]></base>
+    <translation>이 NDAS 논리 유닛 중 배드 섹터가 있는 디스크가 있습니다. 문제를 해결을 권합니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_REPLACED_DEVICE_WITH_SPARE">
+    <base><![CDATA[The NDAS logical unit has a disk replaced by a spare disk. It is recommended to fix the warning(s).]]></base>
+    <translation>이 NDAS 논리 유닛 중 예비 디스크가 사용된 유닛이 있습니다. 문제를 해결을 권합니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NDAS_LOGICALUNIT_ASK_EMREGENCY_MOUNT">
+    <base><![CDATA[The NDAS logical unit has too many defective disks to recover. If you proceed, the RAID will mount in non-recoverable emergency mode.]]></base>
+    <translation>이 NDAS 논리 유닛 중 비정상 디스크가 너무 많습니다. 무시할 경우 RAID는 복구 불가 비상 모드로 마운트됩니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+    <base><![CDATA[Command version is unsupported.]]></base>
+    <translation>지원되지 않는 명령입니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>지원되지 않는 기능입니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+    <base><![CDATA[Unsupported Read-only filter version.]]></base>
+    <translation>지원되지 않는 버전의 Read-only filter입니다.</translation>
+  </string>
+  <string id="NDASSVC_ERROR_INVALID_SERVICE_PARAMETER">
+    <base><![CDATA[Invalid service parameter.]]></base>
+    <translation>않은 서비스 파라미터가 잘못되었습니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+    <base><![CDATA[Communication to the NDAS service failed.]]></base>
+    <translation>NDAS 서비스와 연결이 실패하였습니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+    <base><![CDATA[NDAS Device ID or Key is invalid.]]></base>
+    <translation>NDAS 장치 ID 혹은 키가 틀립니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+    <base><![CDATA[NDAS Device ID is invalid.]]></base>
+    <translation>NDAS 장치 ID가 틀립니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+    <base><![CDATA[NDAS Device Key is invalid.]]></base>
+    <translation>NDAS 장치 키가 틀립니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>파라미터가 잘못되었습니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+    <base><![CDATA[NDAS Logical device access denied.]]></base>
+    <translation>NDAS 논리 장치의 접속이 거부되었습니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+    <base><![CDATA[NDAS Service does not support the requested operation.]]></base>
+    <translation>NDAS 서비스가 요청한 작업을 지원하지 않습니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+    <base><![CDATA[Operation is invalid to the NDAS service.]]></base>
+    <translation>NDAS 서비스에 요청한 작업이 잘못되었습니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+    <base><![CDATA[NDAS Service is terminating.]]></base>
+    <translation>NDAS 서비스를 종료하고 있습니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+    <base><![CDATA[Unsupported NDAS service version.]]></base>
+    <translation>지원되지 않는 버전의 NDAS 서비스입니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+    <base><![CDATA[Unsupport NDAS service event version.]]></base>
+    <translation>지원되지 않는 버전의 NDAS 서비스 이벤트입니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+    <base><![CDATA[No more NDAS event callback is available.]]></base>
+    <translation>더 이상의 NDAS 이벤트 콜백사용이 불가능합니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+    <base><![CDATA[Invalid NDAS event callback handle.]]></base>
+    <translation>NDAS 이벤트 콜백 핸들이 잘못되었습니다.</translation>
+  </string>
+  <string id="NDASUSER_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>요청한 기능은 지원하지 않습니다.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INTERNAL">
+    <base><![CDATA[Internal error.]]></base>
+    <translation>내부 오류</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>요청한 기능은 지원하지 않습니다.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>파라미터가 잘못 되었습니다.</translation>
+  </string>
+  <string id="NDASCOMM_WARNING_CONNECTION_FAIL">
+    <base><![CDATA[Connection failed to the NDAS device.]]></base>
+    <translation>NDAS 서비스와 연결 실패 </translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_COMMUNICATION">
+    <base><![CDATA[Communication error during login process.]]></base>
+    <translation>로그인중 통신 오류</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_NOT_EXIST.]]></base>
+    <translation>내부 오류: NDASCOMM_ERROR_RI_NOT_EXIST.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.]]></base>
+    <translation>내부 오류: NDASCOMM_ERROR_RI_BAD_COMMAND.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.]]></base>
+    <translation>내부 오류: NDASCOMM_ERROR_RI_COMMAND_FAILED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.]]></base>
+    <translation>내부 오류: NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_NOT_EXIST">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_NOT_EXIST.]]></base>
+    <translation>내부 오류: NDASCOMM_ERROR_T_NOT_EXIST.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BAD_COMMAND">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.]]></base>
+    <translation>내부 오류: NDASCOMM_ERROR_T_BAD_COMMAND.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_COMMAND_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.]]></base>
+    <translation>내부 오류: NDASCOMM_ERROR_T_COMMAND_FAILED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_T_BROKEN_DATA">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.]]></base>
+    <translation>내부 오류: NDASCOMM_ERROR_T_BROKEN_DATA.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RI_AUTH_FAILED">
+    <base><![CDATA[Internal error : NDASCOMM_ERROR_RI_AUTH_FAILED.]]></base>
+    <translation>내부 오류: NDASCOMM_ERROR_RI_AUTH_FAILED.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+    <base><![CDATA[Unknown error for login process.]]></base>
+    <translation>로그인 중 알 수 없는 오류</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_RW_USER_EXIST">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s) with read-write access privilege.]]></base>
+    <translation>다른 프로세스나 호스트가 이 NDAS 장치를 읽기/쓰기 권한으로 사용중입니다.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation>메모리가 부족합니다.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_PROTOCOL">
+    <base><![CDATA[Lanscsi protocol error.]]></base>
+    <translation>Lanscsi protocol 오류.</translation>
+  </string>
+  <string id="NDASCOMM_ERROR_INVALID_OPERATION">
+    <base><![CDATA[Invalid operation.]]></base>
+    <translation>잘못된 작업.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>요청한 기능은 지원하지 않습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_FAIL">
+    <base><![CDATA[Accessing to the device is failed.]]></base>
+    <translation>장치에 접속 실패하였습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_SINGLE_DISK">
+    <base><![CDATA[The NDAS device must be a single disk to operate this job.]]></base>
+    <translation>이 작업은 기본 디스크의 NDAS 장치에만 가능합니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+    <base><![CDATA[The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.]]></base>
+    <translation>이 NDAS 장치는 지원하지 않습니다.  하드 디스크일 경우, 작업 전 기본 디스크로 변경해 주십시오.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_BOUND_DISK">
+    <base><![CDATA[The NDAS device must be a bound disk to operate this job.]]></base>
+    <translation>결합된 NDAS 장치에만 가능한 작업입니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_PARAMETER">
+    <base><![CDATA[Invalid parameter.]]></base>
+    <translation>파라미터가 잘못 되었습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+    <base><![CDATA[Not enough memory to complete job.]]></base>
+    <translation>메모리가 부족합니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_DISK_COUNT">
+    <base><![CDATA[Incorrect disk count to bind disks.]]></base>
+    <translation>결합할 디스크 수가 맞지 않습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_ALREADY_USED">
+    <base><![CDATA[The NDAS device is being used by another process(es) or host(s).]]></base>
+    <translation>다른 프로세스나 호스트가 이 NDAS 장치를 사용중입니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+    <base><![CDATA[The NDAS device has invalid bind information to migrate.]]></base>
+    <translation>이 NDAS 장치의 결합 정보가 잘못되어 이전할 수 없습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_SIZE_LIMIT">
+    <base><![CDATA[The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.]]></base>
+    <translation>결합된 디스크의 전체 크기는 2테라바이트를 넘을 수 없습니다. 
+이것은 윈도우즈 OS에 의한 제한입니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+    <base><![CDATA[There is too many missing member to replace(repair) in bound disks.]]></base>
+    <translation>빠진 구성 유닛이 많아 교체(복구)할 수 없습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_NO_MISSING_MEMBER">
+    <base><![CDATA[There is no missing NDAS device to replace(repair) in bound disks.]]></base>
+    <translation>빠진 구성 유닛이 없어 교체(수리)할 필요가 없습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_CRITICAL_REPAIR">
+    <base><![CDATA[There was a critical error while replacing(repairing) bound disks.]]></base>
+    <translation>교체(수리)중 결합된 디스크 중 심각한 오류가 발생했습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_REPLACE_TOO_SMALL">
+    <base><![CDATA[Size of a replacement disk is too small.]]></base>
+    <translation>교체용 디스크 용량이 너무 작습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_BIND_UNSUPPORTED">
+    <base><![CDATA[This type of RAID does not support the requested command.]]></base>
+    <translation>이 종류의 RAID는 해당 작업을 지원하지 않습니다. </translation>
+  </string>
+  <string id="NDASOP_ERROR_NOT_ENOUGH_CAPACITY">
+    <base><![CDATA[The device does not have enough capacity to operate request command.]]></base>
+    <translation>이 장치의 용량이 부족해 해당 작업을 수행할 수 없습니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_INVALID_RAID">
+    <base><![CDATA[The RAID is not valid anymore.]]></base>
+    <translation>더 이상 유효하지 않은 RAID입니다.</translation>
+  </string>
+  <string id="NDASOP_ERROR_DEVICE_1_0_NOT_SUPPORTED">
+    <base><![CDATA[NDAS device v1.0 does not support the operation. Check the hardware version of the NDAS device in property page of the NDAS device management.]]></base>
+    <translation>v1.0 NDAS 장치는 지원하지 않는 작업입니다. NDAS 장치 관리자 정보창에서 하드웨어 버전을 확인하십시오.</translation>
+  </string>
+  <string id="NDASVOL_ERROR_NON_NDAS_VOLUME">
+    <base><![CDATA[The specified volume is not related with the NDAS devices.]]></base>
+    <translation>지정한 볼륨은 NDAS 장치와 연관이 없습니다.</translation>
+  </string>
+  <string id="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+    <base><![CDATA[Requested feature is not supported.]]></base>
+    <translation>요청한 기능은 지원되지 않습니다.</translation>
+  </string>
+  <string id="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+    <base><![CDATA[Non-SCSI type device is found.]]></base>
+    <translation>SCSI가 아닌 장치가 발견되었습니다.</translation>
+  </string>
+  <string id="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+    <base><![CDATA[SRB IO CONTROL Error]]></base>
+    <translation>SRB IO CONTROL Error</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+    <base><![CDATA[The NDAS disk is encrypted and the corresponding NDAS system key is not registered in the system.]]></base>
+    <translation>이 NDAS 디스크는 암호화되어 있지만 일치하는 NDAS 시스템 키가 이 시스템에 등록되어 있지 않습니다.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+    <base><![CDATA[NDAS system key does not match with the NDAS disk key.]]></base>
+    <translation>NDAS 시스템 키가 NDAS 디스크 키와 맞지 않습니다.</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+    <base><![CDATA[Invalid CEB CRC.]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+    <base><![CDATA[Unsupported CEB Revision.]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+    <base><![CDATA[CEB Key Length is invalid.]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+    <base><![CDATA[Failed to read CEB.]]></base>
+    <translation>-</translation>
+  </string>
+  <string id="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+    <base><![CDATA[CE key generation failed.]]></base>
+    <translation>CE 키 생성이 실패했습니다.</translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+    <base><![CDATA[A new NDAS Device is found from the network and is being registered.]]></base>
+    <translation>네트워크에서 새 NDAS 장치를 찾아 등록중입니다.</translation>
+  </string>
+  <string id="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+    <base><![CDATA[Unsupported hardware version (%2) detected from the NDAS Device (%1).]]></base>
+    <translation>NDAS 장치 (%1)에서 지원하지 않는 하드웨어 버전 (%2)를 찾았습니다.</translation>
+  </string>
+</localization>

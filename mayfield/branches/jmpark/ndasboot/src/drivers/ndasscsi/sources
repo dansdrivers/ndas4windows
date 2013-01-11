@@ -1,0 +1,121 @@
+TARGETNAME=ndasscsi
+TARGETTYPE=MINIPORT
+TARGETPATH=obj
+
+BUILD_PRODUCES=lanscsiminiport
+BUILD_CONSUMES=libntkrnl libndasboot libndask liblpxtdi libscrc32 libhash libaes
+
+# We do not support interrupt after NDASDRV 3.07 version.
+# INTERRUPT_SUPPORT1=interruptsupport
+COMPLETION=completion
+
+NDASBOOT=ndasboot
+LOADER=loader
+MULTIBOOT=multiboot
+
+!IFDEF COMPLETION
+C_DEFINES=-D__COMPLETION__
+!ENDIF
+
+INCLUDES=$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+#PRECOMPILED_INCLUDE=port.h
+MSC_WARNING_LEVEL=-W3 -WX -Wp64 
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/O2
+!ELSE
+!ENDIF
+
+SOURCES=ndasscsi.c \
+		ndsccomp.c \
+		ndscioctl.c \
+        ndasscsi.rc
+
+!IFDEF NDASBOOT
+TARGETLIBS=$(TARGETLIBS) $(NDAS_DRIVER_LIB_PATH)\libndasboot.lib
+
+!IFDEF LOADER
+TARGETLIBS=$(TARGETLIBS) \
+    $(DDK_LIB_PATH)\scsiport.lib \
+    $(DDK_LIB_PATH)\scsiwmi.lib \
+	$(DDK_LIB_PATH)\ntstrsafe.lib \
+	$(NDAS_LIB_PATH)\libhash.lib \
+    $(NDAS_LIB_PATH)\libaes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+    $(NDAS_DRIVER_LIB_PATH)\libndask.lib \
+    $(NDAS_DRIVER_LIB_PATH)\libntkrnl.lib
+!ELSE
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\hal.lib     \
+    $(DDK_LIB_PATH)\ntoskrnl.lib \
+    $(DDK_LIB_PATH)\tdi.lib     \
+    $(DDK_LIB_PATH)\scsiport.lib \
+    $(DDK_LIB_PATH)\scsiwmi.lib \
+    $(DDK_LIB_PATH)\bufferoverflowK.lib \
+    $(DDK_LIB_PATH)\ntstrsafe.lib \
+    $(NDAS_LIB_PATH)\libhash.lib \
+    $(NDAS_LIB_PATH)\libaes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+    $(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib \
+    $(NDAS_DRIVER_LIB_PATH)\libndask.lib
+    
+!ENDIF
+!ELSE
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\hal.lib     \
+    $(DDK_LIB_PATH)\ntoskrnl.lib \
+    $(DDK_LIB_PATH)\tdi.lib     \
+    $(DDK_LIB_PATH)\scsiport.lib \
+    $(DDK_LIB_PATH)\scsiwmi.lib \
+    $(DDK_LIB_PATH)\bufferoverflowK.lib \
+    $(DDK_LIB_PATH)\ntstrsafe.lib \
+    $(NDAS_LIB_PATH)\libhash.lib \
+    $(NDAS_LIB_PATH)\libaes.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+    $(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib \
+    $(NDAS_DRIVER_LIB_PATH)\libndask.lib
+    
+!ENDIF
+
+!IF $(ALPHA) || $(AXP64) || $(IA64)
+TARGETLIBS=$(TARGETLIBS) $(CRT_LIB_PATH)\libcntpr.lib
+!ENDIF
+
+#
+# CDF Copy
+#
+
+NTTARGETFILES=cdfcopy
+CDFSRCFILE=ndasscsi.cdf
+CDFFILE=$(O)\ndasscsi.cdf
+
+#
+# Set INF File Version
+#
+INFFILENAME=$(TARGETNAME)
+
+!IF "$(_BUILDARCH)" == "AMD64"
+INFSRCNAME=$(INFFILENAME).amd64
+!ELSE
+INFSRCNAME=$(INFFILENAME)
+!ENDIF
+
+POST_BUILD_CMD=$(NDAS_TOOLS)\setinfver $(O)\$(TARGETNAME).sys $(INFSRCNAME).inf $(O)\$(INFFILENAME).inf
+
+BINPLACE_FLAGS=$(O)\$(INFFILENAME).inf $(CDFFILE)
+
+!IFDEF NDASBOOT
+C_DEFINES = -D__NDASBOOT__ $(C_DEFINES)
+!IFDEF LOADER
+C_DEFINES = -D__ENABLE_LOADER__ $(C_DEFINES)
+!ENDIF
+!ENDIF
+
+!IFDEF MULTIBOOT
+C_DEFINES = -D__DIVIDED_MULTI_BOOT__ $(C_DEFINES)
+!ENDIF
+
+#C_DEFINES=$(C_DEFINES) -D__NDFS__
+

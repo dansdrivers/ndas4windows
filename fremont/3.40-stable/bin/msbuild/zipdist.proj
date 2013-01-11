@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<MSBuildCommunityTasksPath>.\</MSBuildCommunityTasksPath>
+	</PropertyGroup>
+
+	<Import Project="MSBuild.Community.Tasks.Targets"/>
+
+	<PropertyGroup>
+		<DistDir>..\..\publish\</DistDir>
+		<Configuration Condition="''=='$(Configuration)'">fre</Configuration>
+		<BaseBinDir>..\..\publish\$(Configuration)\</BaseBinDir>
+	</PropertyGroup>
+
+	<!-- ProductVersion is a required property -->
+	<!-- ProductRevision is an optional property -->
+
+	<ItemGroup Condition="''!='$(ProductVersion)'">
+		<ZipFiles Include="$(BaseBinDir)i386\*.*" />
+		<ZipFiles Include="$(BaseBinDir)amd64\*.*" />
+	</ItemGroup>
+
+	<Target Name="Zip" Outputs="@(DistZipFiles)">
+		<CallTarget Targets="GetVersionAndZip" Condition="''=='$(ProductVersion)'">
+			<Output TaskParameter="TargetOutputs" ItemName="DistZipFiles" />
+		</CallTarget>
+		<CallTarget Targets="ZipDist" Condition="''!='$(ProductVersion)'">
+			<Output TaskParameter="TargetOutputs" ItemName="DistZipFiles" />
+		</CallTarget>
+		<Message Text="Zipped to %(DistZipFiles.Identity)" />
+	</Target>
+
+	<ItemGroup>
+		<DistFiles Include="$(DistDir)\*.*" />
+	</ItemGroup>
+
+	<Target Name="Clean">
+		<Delete Files="@(DistFiles)" />
+	</Target>
+
+	<PropertyGroup>
+		<ProductRevisionTag Condition="''!='$(ProductRevision)'">-r$(ProductRevision)</ProductRevisionTag>
+		<ConfigurationTag Condition="'fre'!='$(Configuration)'">-$(Configuration)</ConfigurationTag>
+		<DistZipFileName>ndas-$(ProductVersion)$(ProductRevisionTag)-base-bin$(ConfigurationTag).zip</DistZipFileName>
+	</PropertyGroup>
+
+	<Target Name="GetVersionAndZip" Outputs="@(DistZipFiles)" DependsOnTargets="GetVersionInfo">
+		<MSBuild Projects="$(MSBuildProjectFile)" 
+				 Properties="ProductVersion=$(ProductVersion);ProductRevision=$(ProductRevision)" 
+				 Targets="Zip">
+			<Output TaskParameter="TargetOutputs" ItemName="DistZipFiles" />
+		</MSBuild>
+		<MSBuild Projects="$(MSBuildProjectFile)" 
+				 Properties="ProductVersion=$(ProductVersion);ProductRevision=$(ProductRevision);Configuration=chk" 
+				 Targets="Zip">
+			<Output TaskParameter="TargetOutputs" ItemName="DistZipFiles" />
+		</MSBuild>
+	</Target>
+
+	<Target Name="ZipDist" Outputs="$(DistDir)$(DistZipFileName)" DependsOnTargets="CreateDistDirectory;ZipBaseBin">
+	</Target>
+
+	<Target Name="CreateDistDirectory">
+		<MakeDir Directories="publish" />
+	</Target>
+
+	<Target Name="ZipBaseBin" DependsOnTargets="GetVersionInfo" Inputs="@(ZipFiles)" Outputs="$(DistDir)$(DistZipFileName)">
+		<Zip Files="@(ZipFiles)" ZipFileName="$(DistDir)$(DistZipFileName)" WorkingDirectory="$(BaseBinDir)" ZipLevel="9">
+		</Zip>
+	</Target>
+
+	<PropertyGroup>
+		<VersionInfoBaseDir>..\..</VersionInfoBaseDir>
+	</PropertyGroup>
+
+	<!-- GetVersionInfo is in verinfo.targets -->
+	<Import Project="verinfo.targets" />
+
+</Project>

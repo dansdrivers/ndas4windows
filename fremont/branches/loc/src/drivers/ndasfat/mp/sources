@@ -1,0 +1,51 @@
+NT_UP=0
+
+TARGETNAME=fastfat
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+!include ..\sources.inc
+
+
+TARGETNAME=ndasfat
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+MSC_WARNING_LEVEL=$(MSC_WARNING_LEVEL) /WX /W3
+
+!IF $(FREEBUILD)
+MSC_OPTIMIZATION=/Od /Oi
+!ENDIF
+
+C_DEFINES=$(C_DEFINES) -D_WDM_INCLUDED_
+
+INCLUDES=$(INCLUDES);$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+
+SOURCES=$(SOURCES)							\
+	..\NdasFat.c							\
+	..\md5c.c								\
+	..\Secondary.c							\
+	..\SecondaryThread.c					\
+	..\SecondaryRecovery.c					\
+	..\SecondaryRecoveryLib.c				\
+	..\SecondaryFileIo.c					\
+	..\SecondaryCreate.c					\
+	..\SecondaryWrite.c						\
+	..\SecondaryCleanUp.c					\
+	..\SecondaryFileInfo.c					\
+	..\SecondaryDirctrl.c					\
+	..\SecondaryFsctrl.c					\
+	..\SecondaryFlush.c						\
+	..\PrimarySession.c						\
+	..\PrimarySessionThread.c				\
+	..\PrimarySessionDispatchRequest.c		\
+	..\PrimarySessionDispatchWinXpRequest.c	\
+	..\SecondaryRead.c						\
+	..\ndasflowcontrol.c	
+
+TARGETLIBS=\
+    $(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib
+
+NTTARGETFILES=
+MISCFILES=$(O)\ndasfat.inf $(O)\ndasfat.cdf

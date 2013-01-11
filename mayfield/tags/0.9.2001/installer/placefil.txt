@@ -1,0 +1,2 @@
+autorun.exe	release\cd\default\
+ndinst.dll	netdisksetup\binary\

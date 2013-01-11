@@ -1,0 +1,8 @@
+LIBRARY DSIG
+EXPORTS
+	_DSABB__
+	_DSA99__
+        _DSACC__
+	_DSAAF__
+        _DSA23__
+	_DSA43__

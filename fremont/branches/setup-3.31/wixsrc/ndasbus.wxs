@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<?include config.wxi?>
+	<Fragment>
+
+		<?ifdef Include.NDASBUS?>
+
+		<?ifdef WixCustomTableLocBug?>
+		<?define ActionData.NDASBUS  = "NDAS Bus" ?>
+		<?endif?>
+
+		<DirectoryRef Id="NdasDriverFolder" FileSource="$(var.SetupFileSource)">
+			<Component Id="ndasbus" Guid="$(var.NDASBUS.GUID)" DiskId="$(var.media.ndas)" Win64="$(var.Win64.YesNo)">
+				<File Id="ndasbus.sys" Name="ndasbus.sys" KeyPath="yes" Checksum="yes" />
+				<File Id="ndasbus.inf" Name="ndasbus.inf" Checksum="yes" />
+				<File Id="ndasbus.cat" Name="ndasbus.cat" Checksum="yes" />
+				<Registry Id="ndasbus" Root="HKLM" Key="SOFTWARE\NDAS\Install\OEMINF" Type="string" Name="NDASBUS" />
+			</Component>
+		</DirectoryRef>
+
+		<CustomTable Id="xDriverInstall">
+			<Row>
+				<Data Column="Id">UninstallNDASBUS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASBUS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASBUS)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="HardwareId">root\ndasbus</Data>
+				<Data Column="Type">UninstallPnpDevice</Data>
+				<Data Column="INF"></Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASBUS.Uninstall)</Data>
+				<Data Column="Condition">(?ndasbus=3) AND ($ndasbus=2 OR $ndasbus=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasbus</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">CleanupInfNDASBUS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASBUS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASBUS)</Data>
+				<?endif?>
+				<Data Column="Phase">1</Data>
+				<Data Column="Type">CleanupOEMInf</Data>
+				<Data Column="HardwareId">root\ndasbus</Data>
+				<Data Column="INF"></Data>
+				<Data Column="Flags">0</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASBUS.Install)</Data>
+				<Data Column="Condition">(?ndasbus=3) AND ($ndasbus=2 OR $ndasbus=4)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasbus</Data>
+			</Row>
+			<Row>
+				<Data Column="Id">InstallNDASBUS</Data>
+				<?ifdef WixCustomTableLocBug?>
+				<Data Column="ActionData">$(var.ActionData.NDASBUS)</Data>
+				<?else?>
+				<Data Column="ActionData">$(loc.ActionData.NDASBUS)</Data>
+				<?endif?>
+				<Data Column="Phase">2</Data>
+				<Data Column="Type">InstallLegacyPnpDevice</Data>
+				<Data Column="HardwareId">root\ndasbus</Data>
+				<Data Column="INF">[#ndasbus.inf]</Data>
+				<!-- SINGLE INSTANCE ONLY -->
+				<Data Column="Flags">1</Data>
+				<Data Column="Sequence">$(var.Sequence.NDASBUS.Cleanup)</Data>
+				<Data Column="Condition">($ndasbus=3)</Data>
+				<Data Column="Error">28001</Data>
+				<Data Column="Registry_">ndasbus</Data>
+			</Row>
+		</CustomTable>
+
+		<?endif?>
+
+	</Fragment>
+</Wix>

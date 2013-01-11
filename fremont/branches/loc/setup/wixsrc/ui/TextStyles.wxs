@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment Id="TextStyles">
+    <UI>
+      <TextStyle Id="MSShellDlg8" FaceName="MS Shell Dlg" Size="8" />
+      <TextStyle Id="MSShellDlg28" FaceName="MS Shell Dlg 2" Size="8" />
+      <TextStyle Id="Tahoma8" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="Arial8" FaceName="Arial" Size="8" />
+      <TextStyle Id="SegoeUI8" FaceName="Segoe UI" Size="9" />
+      <TextStyle Id="Arial8BoldBlue" FaceName="Arial" Size="8" Red="0" Green="0" Blue="128" Bold="yes"/>
+      <!--
+      <TextStyle Id="Arial8Link" FaceName="Arial" Size="8" Red="0" Green="0" Blue="255"/>
+      -->
+      <TextStyle Id="Arial9" FaceName="Arial" Size="9" />
+      <TextStyle Id="ArialBlue10" FaceName="Arial" Size="10" Red="0" Green="0" Blue="255" />
+      <TextStyle Id="ArialBlueStrike10" FaceName="Arial" Size="10" Red="0" Green="0" Blue="255" Strike="yes" />
+      <TextStyle Id="CourierNew8" FaceName="Courier New" Size="8" />
+      <TextStyle Id="CourierNew9" FaceName="Courier New" Size="9" />
+      <TextStyle Id="MSGothic9" FaceName="MS Gothic" Size="9" />
+      <TextStyle Id="MSSGreySerif8" FaceName="MS Sans Serif" Size="8" Red="128" Green="128" Blue="128" />
+      <TextStyle Id="MSSWhiteSerif8" FaceName="Tahoma" Size="8" Red="255" Green="255" Blue="255" />
+      <TextStyle Id="MSSansBold8" FaceName="Tahoma" Size="8" Bold="yes" />
+      <TextStyle Id="MSSansSerif8" FaceName="MS Sans Serif" Size="8" />
+      <TextStyle Id="MSSansSerif9" FaceName="MS Sans Serif" Size="9" />
+      <TextStyle Id="Tahoma10" FaceName="Tahoma" Size="10" />
+      <TextStyle Id="Tahoma9" FaceName="Tahoma" Size="9" />
+      <TextStyle Id="TahomaBold10" FaceName="Tahoma" Size="10" Bold="yes" />
+      <TextStyle Id="TahomaBold8" FaceName="Tahoma" Size="8" Bold="yes" />
+      <TextStyle Id="Times8" FaceName="Times New Roman" Size="8" />
+      <TextStyle Id="Times9" FaceName="Times New Roman" Size="9" />
+      <TextStyle Id="TimesItalic12" FaceName="Times New Roman" Size="12" Italic="yes" />
+      <TextStyle Id="TimesItalicBlue10" FaceName="Times New Roman" Size="10" Red="0" Green="0" Blue="255" Italic="yes" />
+      <TextStyle Id="TimesRed16" FaceName="Times New Roman" Size="16" Red="255" Green="0" Blue="0" />
+      <TextStyle Id="VerdanaBold14" FaceName="Verdana" Size="14" Bold="yes" />
+    </UI>
+  </Fragment>
+</Wix>

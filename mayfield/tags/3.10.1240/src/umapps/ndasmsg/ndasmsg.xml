@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mc>
+  <messageId type="DWORD" />
+  <facilities>
+    <facility name="NDAS" value="0x00F" />
+    <facility name="NDASUSER" value="0x001" />
+    <facility name="NDASCOMM" value="0x002" />
+    <facility name="NDASOP" value="0x003" />
+    <facility name="NDASPATCH" value="0x004" />
+    <facility name="NDASSVC" value="0x010" />
+    <facility name="NDASDM" value="0x110" />
+    <facility name="EVT_NDASSVC" value="0xF00" />
+  </facilities>
+  <severities>
+    <severity name="Success" value="0x0" code="STATUS_SEVERITY_SUCCESS" />
+    <severity name="Informational" value="0x1" code="STATUS_SEVERITY_INFORMATIONAL" />
+    <severity name="Warning" value="0x2" code="STATUS_SEVERITY_WARNING" />
+    <severity name="Error" value="0x3" code="STATUS_SEVERITY_ERROR" />
+  </severities>
+  <languages>
+    <language name="NEU" value="0" output="ndasmsg_neu" />
+    <language name="ENU" value="0x409" output="ndasmsg_enu" />
+    <language name="CHS" value="0x804" output="ndasmsg_chs" />
+    <language name="DEU" value="0x407" output="ndasmsg_deu" />
+    <language name="ESN" value="0xC0A" output="ndasmsg_esn" />
+    <language name="FRA" value="0x40C" output="ndasmsg_fra" />
+    <language name="ITA" value="0x410" output="ndasmsg_ita" />
+    <language name="JPN" value="0x411" output="ndasmsg_jpn" />
+    <language name="KOR" value="0x412" output="ndasmsg_kor" />
+    <language name="PTG" value="0x816" output="ndasmsg_ptg" />
+  </languages>
+  <messages>
+    <!-- NDASSVC -->
+    <message id="0x001" severity="Error" facility="NDAS" symbolicName="NDAS_ERROR_INVALID_ID_FORMAT">
+      <text lang="ENU">NDAS device ID or Key is invalid.</text>
+    </message>
+    <message id="0x021" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_DEVICE_ENTRY_NOT_FOUND">
+      <text lang="ENU">NDAS Device Entry Not Found.</text>
+    </message>
+    <message id="0x022" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_UNITDEVICE_ENTRY_NOT_FOUND">
+      <text lang="ENU">NDAS Unit Device Entry Not Found.</text>
+    </message>
+    <message id="0x023" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_LOGICALDEVICE_ENTRY_NOT_FOUND">
+      <text lang="ENU">NDAS Logical Device Entry Not Found.</text>
+    </message>
+    <message id="0x24" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_CANNOT_DISABLE_MOUNTED_DEVICE">
+      <text lang="ENU">Disabling the NDAS device containing any of the mounted unit device is not allowed.</text>
+    </message>
+    <message id="0x031" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_CANNOT_UNREGISTER_ENABLED_DEVICE">
+      <text lang="ENU">Unregistering an enabled NDAS device is not permitted.</text>
+    </message>
+    <message id="0x032" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_INVALID_SLOT_NUMBER">
+      <text lang="ENU">Invalid NDAS slot number.</text>
+    </message>
+    <message id="0x033" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_SLOT_ALREADY_OCCUPIED">
+      <text lang="ENU">Requested slot is used by another device.</text>
+    </message>
+    <message id="0x034" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_DUPLICATE_DEVICE_ENTRY">
+      <text lang="ENU">The requested NDAS device already exists.</text>
+    </message>
+    <message id="0x035" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_DEVICE_ENTRY_SLOT_FULL">
+      <text lang="ENU">No more NDAS device slot is available.</text>
+    </message>
+    <message id="0x041" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_NOT_INITIALIZED">
+      <text lang="ENU">NDAS Logical device is not initialized.</text>
+    </message>
+    <message id="0x042" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_MEMBER_MISSING">
+      <text lang="ENU">Some NDAS logical device members are missing in the entry.</text>
+    </message>
+    <message id="0x043" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_NOT_MOUNTED">
+      <text lang="ENU">NDAS Logical device is not mounted.</text>
+    </message>
+    <message id="0x044" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_CONFLICT_LOGICALDEVICE_ENTRY">
+      <text lang="ENU">NDAS Logical device entry is conflicts with existing entries.</text>
+    </message>
+    <message id="0x045" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_DUPLICATE_LOGICALDEVICE_ENTRY">
+      <text lang="ENU">The requested NDAS logical device already exists.</text>
+    </message>
+    <message id="0x046" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_LOGICALDEVICE_SLOT_FULL">
+      <text lang="ENU">No more NDAS logical device slot is available.</text>
+    </message>
+    <message id="0x047" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_UNSUPPORTED_LOGICALDEVICE_TYPE">
+      <text lang="ENU">Unsupported NDAS logical device type.</text>
+    </message>
+    <message id="0x048" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_INVALID_BIND_INFORMATION">
+      <text lang="ENU">The bind information in NDAS device is invalid.</text>
+    </message>
+    <message id="0x049" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_MODIFIED_BIND_INFORMATION">
+      <text lang="ENU">The bind information in NDAS device is changed.</text>
+    </message>
+    <message id="0x050" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+      <text lang="ENU">Granted access for the NDAS logical device is insufficent to complete the operation.</text>
+    </message>
+    <message id="0x051" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_ACCESS_FAILED">
+      <text lang="ENU">Requested access to the NDAS logical device is failed.</text>
+    </message>
+    <message id="0x052" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_NOT_UNMOUNTED">
+      <text lang="ENU">NDAS logical device is not in a mountable status.</text>
+    </message>
+    <message id="0x053" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_UNITDEVICE_NOT_MOUNTED">
+      <text lang="ENU">NDAS Unit device is not mounted.</text>
+    </message>
+    <message id="0x061" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_HOST_INFO_NOT_FOUND">
+      <text lang="ENU">NDAS Host Information cannot be found.</text>
+    </message>
+    <message id="0x062" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_DEVICE_COMMUNICATION_FAILURE">
+      <text lang="ENU">Communication to the NDAS Device has failed.</text>
+    </message>
+    <message id="0x063" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_MULTIPLE_WRITE_ACCESS_NOT_ALLOWED">
+      <text lang="ENU">Multiple Write Access is not allowed for the specified NDAS unit device.</text>
+    </message>
+    <message id="0x064" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_INCOMPATIBLE_HOSTS_FOR_MULTIPLE_WRITE_ACCESS">
+      <text lang="ENU">Incompatible NDAS hosts for multiple write-access are found for the specified NDAS unit device.</text>
+    </message>
+    <message id="0x065" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NO_MORE_DVD_WRITE_ACCESS_INSTANCE_ALLOWED">
+      <text lang="ENU">No more than constrained instances of DVD Drives as Read/Write mode is allowed.</text>
+    </message>
+    <message id="0x066" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NDAS_LOGICALDEVICE_CORRUPTED_BIND_INFORMATION">
+      <text lang="ENU">The NDAS device is corrupted and need to be recovered before mounting.</text>
+    </message>
+    <message id="0x0E0" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_COMMAND_VERSION_NOT_SUPPORTED">
+      <text lang="ENU">Command version is unsupported.</text>
+    </message>
+    <message id="0x0E1" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <message id="0x0C0" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_ROFILTER_VERSION_MISMATCH">
+      <text lang="ENU">Unsupported Read-only filter version.</text>
+    </message>
+    <message id="0x0D0" severity="Error" facility="NDASSVC" symbolicName="NDASHLPSVC_ERROR_INVALID_SERVICE_PARAMETER">
+      <text lang="ENU">Invalid service parameter.</text>
+    </message>
+    <!-- NDASUSER -->
+    <message id="0x01" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_CONNECTION_FAILURE">
+      <text lang="ENU">Communication to the NDAS service failed.</text>
+    </message>
+    <message id="0x02" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID_OR_KEY">
+      <text lang="ENU">NDAS Device ID or Key is invalid.</text>
+    </message>
+    <message id="0x03" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_ID">
+      <text lang="ENU">NDAS Device ID is invalid.</text>
+    </message>
+    <message id="0x04" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_DEVICE_STRING_KEY">
+      <text lang="ENU">NDAS Device Key is invalid.</text>
+    </message>
+    <message id="0xFF" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_PARAMETER">
+      <text lang="ENU">Invalid parameter.</text>
+    </message>
+    <message id="0x50" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_NDAS_LOGICALDEVICE_ACCESS_DENIED">
+      <text lang="ENU">NDAS Logical device access denied.</text>
+    </message>
+    <message id="0x101" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_NOT_IMPLEMENTED">
+      <text lang="ENU">NDAS Service does not support the requested operation.</text>
+    </message>
+    <message id="0x102" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_INVALID_REQUEST">
+      <text lang="ENU">Operation is invalid to the NDAS service.</text>
+    </message>
+    <message id="0x103" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_TERMINATION">
+      <text lang="ENU">NDAS Service is terminating.</text>
+    </message>
+    <message id="0x104" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_SERVICE_RETURNED_UNSUPPORTED_VERSION">
+      <text lang="ENU">Unsupported NDAS service version.</text>
+    </message>
+    <message id="0x200" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_EVENT_VERSION_MISMATCH">
+      <text lang="ENU">Unsupport NDAS service event version.</text>
+    </message>
+    <message id="0x201" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_EVENT_CALLBACK_FULL">
+      <text lang="ENU">No more NDAS event callback is available.</text>
+    </message>
+    <message id="0x202" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_INVALID_EVENT_CALLBACK_HANDLE">
+      <text lang="ENU">Invalid NDAS event callback handle.</text>
+    </message>
+    <message id="0x0E1" severity="Error" facility="NDASUSER" symbolicName="NDASUSER_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <!-- NDASCOMM API -->
+    <message id="0x0000" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_INTERNAL">
+      <text lang="ENU">Internal error.</text>
+    </message>
+    <message id="0x0001" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <message id="0x0002" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_INVALID_PARAMETER">
+      <text lang="ENU">Invalid parameter.</text>
+    </message>
+    <message id="0x0003" severity="Warning" facility="NDASCOMM" symbolicName="NDASCOMM_WARNING_CONNECTION_FAIL">
+      <text lang="ENU">Connection failed to the NDAS device.</text>
+    </message>
+    <message id="0x0004" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_LOGIN_COMMUNICATION">
+      <text lang="ENU">Communication error during login process.</text>
+    </message>
+    <message id="0x0005" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RI_NOT_EXIST">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_RI_NOT_EXIST.</text>
+    </message>
+    <message id="0x0006" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RI_BAD_COMMAND">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_RI_BAD_COMMAND.</text>
+    </message>
+    <message id="0x0007" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RI_COMMAND_FAILED">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_RI_COMMAND_FAILED.</text>
+    </message>
+    <message id="0x0008" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_HARDWARE_UNSUPPORTED">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_HARDWARE_UNSUPPORTED.</text>
+    </message>
+    <message id="0x0009" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_T_NOT_EXIST">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_T_NOT_EXIST.</text>
+    </message>
+    <message id="0x000A" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_T_BAD_COMMAND">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_T_BAD_COMMAND.</text>
+    </message>
+    <message id="0x000B" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_T_COMMAND_FAILED">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_T_COMMAND_FAILED.</text>
+    </message>
+    <message id="0x000C" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_T_BROKEN_DATA">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_T_BROKEN_DATA.</text>
+    </message>
+    <message id="0x000D" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RI_AUTH_FAILED">
+      <text lang="ENU">Internal error : NDASCOMM_ERROR_RI_AUTH_FAILED.</text>
+    </message>
+    <message id="0x000E" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_LOGIN_UNKNOWN">
+      <text lang="ENU">Unknown error for login process.</text>
+    </message>
+    <message id="0x000F" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_RW_USER_EXIST">
+      <text lang="ENU">The NDAS device is being used by another process(es) or host(s) with read-write access privilege.</text>
+    </message>
+    <message id="0x0010" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_NOT_ENOUGH_MEMORY">
+      <text lang="ENU">Not enough memory to complete job.</text>
+    </message>
+    <message id="0x0011" severity="Error" facility="NDASCOMM" symbolicName="NDASCOMM_ERROR_PROTOCOL">
+      <text lang="ENU">Lanscsi protocol error.</text>
+    </message>
+    <!-- NDASOP API -->
+    <message id="0x0001" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <message id="0x0002" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_DEVICE_FAIL">
+      <text lang="ENU">Accessing to the device is failed.</text>
+    </message>
+    <message id="0x0003" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NOT_SINGLE_DISK">
+      <text lang="ENU">The NDAS device must be a single disk to operate this job.</text>
+    </message>
+    <message id="0x0004" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_DEVICE_UNSUPPORTED">
+      <text lang="ENU">The NDAS device is not supported. If the device is HDD device, convert the device to a single disk before doing this job.</text>
+    </message>
+    <message id="0x0005" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NOT_BOUND_DISK">
+      <text lang="ENU">The NDAS device must be a bound disk to operate this job.</text>
+    </message>
+    <message id="0x0006" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_INVALID_PARAMETER">
+      <text lang="ENU">Invalid parameter.</text>
+    </message>
+    <message id="0x0007" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NOT_ENOUGH_MEMORY">
+      <text lang="ENU">Not enough memory to complete job.</text>
+    </message>
+    <message id="0x0008" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_INVALID_DISK_COUNT">
+      <text lang="ENU">Incorrect disk count to bind disks.</text>
+    </message>
+    <message id="0x0009" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_ALREADY_USED">
+      <text lang="ENU">The NDAS device is being used by another process(es) or host(s).</text>
+    </message>
+    <message id="0x000A" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_INVALID_BIND_MIGRATE">
+      <text lang="ENU">The NDAS device has invalid bind information to migrate.</text>
+    </message>
+    <message id="0x000B" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_BIND_SIZE_LIMIT">
+      <text lang="ENU">The total size of the bound disks cannot exceed 2TB. This limitation is imposed by Windows OS.</text>
+    </message>
+    <message id="0x000C" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_TOO_MANY_MISSING_MEMBER">
+      <text lang="ENU">There is too many missing member to replace(repair) in bound disks.</text>
+    </message>
+    <message id="0x000D" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_NO_MISSING_MEMBER">
+      <text lang="ENU">There is no missing NDAS device to replace(repair) in bound disks.</text>
+    </message>
+    <message id="0x000E" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_CRITICAL_REPAIR">
+      <text lang="ENU">There was a critial error while replaceing(repairing) bound disks.</text>
+    </message>
+    <message id="0x000F" severity="Error" facility="NDASOP" symbolicName="NDASOP_ERROR_REPLACE_TOO_SMALL">
+      <text lang="ENU">Size of a replacement disk is too small.</text>
+    </message>
+    <!-- NDASPATCH LIB -->
+    <message id="0x0B1" severity="Error" facility="NDASPATCH" symbolicName="NDASPATCH_ERROR_NOT_IMPLEMENTED">
+      <text lang="ENU">Requested feature is not supported.</text>
+    </message>
+    <!-- NDASDM - Drive Match Library -->
+    <message id="0x100" severity="Error" facility="NDASDM" symbolicName="NDASDM_ERROR_NON_SCSI_TYPE_DEVICE">
+      <text lang="ENU">Non-SCSI type device is found.</text>
+    </message>
+    <message id="0x102" severity="Error" facility="NDASDM" symbolicName="NDASDM_ERROR_SRB_IO_CONTROL_ERROR">
+      <text lang="ENU">SRB IO CONTROL Error</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x101" symbolicName="EVT_NDASSVC_ERROR_GET_SYS_KEY">
+      <text lang="ENU">The NDAS disk is encrypted and the corresponding NDAS system key is not registered in the system.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x102" symbolicName="EVT_NDASSVC_ERROR_SYS_KEY_MISMATCH">
+      <text lang="ENU">NDAS system key does not match with the NDAS disk key.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x103" symbolicName="EVT_NDASSVC_ERROR_CEB_CRC_MISMATCH">
+      <text lang="ENU">Invalid CEB CRC.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x104" symbolicName="EVT_NDASSVC_ERROR_CEB_UNSUPPORTED_REVISION">
+      <text lang="ENU">Unsupported CEB Revision.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x105" symbolicName="EVT_NDASSVC_ERROR_CEB_INVALID_KEY_LENGTH">
+      <text lang="ENU">CEB Key Length is invalid.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x106" symbolicName="EVT_NDASSVC_ERROR_CEB_READ_FAILURE">
+      <text lang="ENU">Failed to read CEB.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Error" id="0x107" symbolicName="EVT_NDASSVC_ERROR_KEY_GENERATION_FAILURE">
+      <text lang="ENU">CE key generation failed.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Informational" id="0x108" symbolicName="EVT_NDASSVC_INFO_AUTOREG_NDAS_DEVICE_FOUND">
+      <text lang="ENU">A new NDAS Device is found from the network and is being registered.</text>
+    </message>
+    <message facility="EVT_NDASSVC" severity="Informational" id="0x109" symbolicName="EVT_NDASSVC_INFO_NDASDEV_UNKNOWN_VERSION_FMT2">
+      <text lang="ENU">Unsupported hardware version (%2) detected from the NDAS Device (%1).</text>
+    </message>
+    <!--
+
+You can specify the following escape sequences for formatting message
+text for use by the event viewer or your application. The percent sign
+character (%) begins all escape sequences. Any other character following
+a percent sign is displayed without the percent sign.
+
+%n[!format_specifier!]
+Describes an insert. Each insert is an entry in the Arguments array in
+the FormatMessage function. The value of n can be a number between 1 and 99.
+The format specifier is optional. If no value is specified, the default
+is !s!. For more information, see wsprintf. The format specifier can use *
+for either the precision or the width. When specified, they consume inserts
+numbered n+1 and n+2.
+
+%0
+Terminates a message text line without a trailing newline character.
+This can be used to build a long line or terminate a prompt message
+without a trailing newline character.
+%.
+Generates a single period. This can be used to display a period at the
+beginning of a line, which would otherwise terminate the message text.
+%!
+Generates a single exclamation point. This can be used to specify an
+exclamation point immediately after an insert.
+%%
+Generates a single percent sign.
+%\
+Generates a hard line break when it occurs at the end of a line. This
+can be used with FormatMessage to ensure that the message fits a certain width.
+%b
+Generates a space character. This can be used to ensure an appropriate
+number of trailing spaces on a line.
+%r
+Generates a hard carriage return without a trailing newline character.
+
+-->
+  </messages>
+  <preamble><![CDATA[;/////////////////////////////////////////////////////////////////////////
+;//
+;// Copyright (C) 2004-2005 XIMETA, Inc.
+;// All rights reserved.
+;//
+;// Module Name:
+;//
+;//    ndasmsg.h
+;//
+;// Abstract:
+;//
+;//    NDAS Error Messages and Event Log Messages
+;//
+;//Notes:
+;//
+;//	   DO NOT EDIT THIS FILE BY HAND!
+;//
+;//    This file is GENERATED from the 'ndasmsg.xml'.
+;//
+;//////////////////////////////////////////////////////////////////////////
+;
+;
+;#ifndef __NDASMSG_H_
+;#define __NDASMSG_H_
+;
+]]></preamble>
+<postscript>
+
+;#endif /* __NDASMSG_H_ */
+
+</postscript>
+</mc>

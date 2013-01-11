@@ -1,0 +1,246 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            
+//  IIIIIII SSSSSS                                                            
+//    II    SS                          InstallShield (R)                     
+//    II    SSSSSS      (c) 1996-2001, InstallShield Software Corporation     
+//    II        SS                     All rights reserved.             
+//  IIIIIII SSSSSS                  
+//                                                                            
+//                                                                            
+//  This template script provides the code necessary to build an entry-point 
+//  function to be called in an InstallScript custom action. 
+//                                                                            
+//                                                                            
+//    File Name:  Setup.rul                                                   
+//                                                                            
+//  Description:  InstallShield script                                        
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Include Isrt.h for built-in InstallScript function prototypes.
+#include "isrt.h"
+
+// Include Iswi.h for Windows Installer API function prototypes and constants,
+// and to declare code for the OnBegin and OnEnd events.
+#include "iswi.h"
+
+    // The keyword export identifies MyFunction() as an entry-point function.
+    // The argument it accepts must be a handle to the Installer database.
+
+	EXPORT prototype DeleteSystemDriverFiles(HWND) ;
+	EXPORT prototype DeleteTempFiles(HWND) ;
+    EXPORT prototype CopyDriverFiles(HWND);
+    EXPORT prototype DeleteDriverFiles(HWND);
+	EXPORT prototype InstallDriver_SetData(HWND);
+	EXPORT prototype DeleteSystemInfFiles(HWND);
+	  
+    // To Do:  Declare global variables, define constants, and prototype user-
+    //         defined and DLL functions here.
+ 
+
+// To Do:  Create a custom action for this entry-point function:
+// 1.  Right-click on "Custom Actions" in the Sequences/Actions view.
+// 2.  Select "Custom Action Wizard" from the context menu.
+// 3.  Proceed through the wizard and give the custom action a unique name.
+// 4.  Select "Run InstallScript code" for the custom action type, and in
+//     the next panel select "MyFunction" (or the new name of the entry-
+//     point function) for the source. 
+// 5.  Click Next, accepting the default selections until the wizard 
+//     creates the custom action.
+//
+// Once you have made a custom action, you must execute it in your setup by 
+// inserting it into a sequence or making it the result of a dialog's 
+// control event.
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  MyFunction
+//                                                                           
+//  Purpose:  This function will be called by the script engine when 
+//            Windows(TM) Installer executes your custom action (see the "To 
+//            Do," above).
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+
+//
+//	clean up device drivers before installation : Miniport, Bus, LPX
+//	TODO : Reboot when bReboot is set.
+//
+//	Return Value :
+//   	0 : succeed
+//		-1 : fail
+function DeleteSystemDriverFiles(hMSI)
+    STRING infDir ;
+    STRING dllDir ;
+    STRING drvDir ;
+    STRING oemFile ;
+  	number oemFile_len ;
+    STRING	pnfFile ;
+    STRING line ;
+    number result, lineno ;
+begin
+	
+	infDir = WINDIR ^ "INF" ;        // C:\WINDOWS\INF 
+	dllDir = WINSYSDIR ;      		 // C:\WINDOWS\SYSTEM32
+	drvDir = WINSYSDIR ^ "drivers" ; // C:\WINDOWS\SYSTEM32\DRIVERS
+
+	/////////////////////////////////////////////////////////////////////////////
+	//
+	//  delete inf files which are related to NetDisks
+	//	The files contain "; Lanscsiminiport.inf", "; LanscsiBus.inf", "; netLpx.INF"
+	result = FindAllFiles(infDir, "oem*.inf", oemFile, RESET) ;
+
+	while(result = 0)
+//		SprintfBox ( INFORMATION, oemFile, "We found %s\n", oemFile );
+		if(	FileGrep(oemFile, "; Lanscsiminiport.inf",line, lineno, RESTART) = 0 ||
+			FileGrep(oemFile, "; LanscsiBus.inf",line, lineno, RESTART) = 0 ||
+			FileGrep(oemFile, "; netLpx.INF",line, lineno, RESTART) = 0) then
+
+//			SprintfBox ( INFORMATION, oemFile, "We will delete %s\n", oemFile );
+			if( DeleteFile(oemFile) != 0) then
+//				SprintfBox ( INFORMATION, oemFile, "We couldn't delete %s\n", oemFile );
+			endif ;
+			oemFile_len = StrLength(oemFile) ;
+			pnfFile = oemFile ;
+			pnfFile[oemFile_len-3] = 'P' ;
+			pnfFile[oemFile_len-2] = 'N' ;
+			pnfFile[oemFile_len-1] = 'F' ;			
+//			SprintfBox ( INFORMATION, oemFile, "We will delete %s\n", pnfFile );
+			if(DeleteFile(pnfFile) != 0) then
+//				SprintfBox ( INFORMATION, oemFile, "We couldn't delete %s\n", oemFile );
+			endif ;
+		endif ;
+
+		result = FindAllFiles(infDir, "oem*.inf", oemFile, CONTINUE) ;
+	endwhile ;
+
+
+
+	/////////////////////////////////////////////////////////////////////////////
+	// delete driver & dll files
+	//
+	if(DeleteFile(drvDir ^ "lanscsiminiport.sys") < 0) then
+//		MessageBox("Could not delete lanscsiminiport.sys", SEVERE);
+	endif ;
+	if(DeleteFile(drvDir ^ "LanscsiBus.sys") < 0) then
+//		MessageBox("Could not delete LanscsiBus.sys", SEVERE);
+	endif ;
+	if(DeleteFile(drvDir ^ "Lpx.sys") < 0) then
+//		MessageBox("Could not delete Lpx.sys", SEVERE);
+	endif ;
+	if(DeleteFile(drvDir ^ "ROFilt.sys") < 0) then
+//		MessageBox("Could not delete RoFilt.sys", SEVERE);
+	endif ;
+	if(DeleteFile(drvDir ^ "LfsFilt.sys") < 0) then
+//		MessageBox("Could not delete LfsFilt.sys", SEVERE);
+	endif ;
+
+	// WSHLPX dll
+	if(DeleteFile(dllDir ^ "wshLpx.dll") < 0) then
+//		MessageBox("Could not delete wshLpx.dll", SEVERE);
+	endif ;
+	
+	
+
+	return 0 ;
+end ;
+
+//
+//	clean up temporary files
+//
+//	Return Value :
+//   	0 : succeed
+//		-1 : fail
+function DeleteTempFiles(hMSI)
+    STRING drvDir ;
+    number result ;
+
+begin
+	drvDir = INSTALLDIR ^ "drivers" ;
+
+	/////////////////////////////////////////////////////////////////////////////
+	// delete files
+	//
+	if(DeleteFile(drvDir ^ "*.TMP") < 0) then
+//		MessageBox("Could not delete lanscsiminiport.sys", SEVERE);
+	endif ;
+	if(DeleteFile(INSTALLDIR ^ "*.TMP") < 0) then
+//		MessageBox("Could not delete LanscsiBus.sys", SEVERE);
+	endif ;
+
+	return 0 ;
+end ;
+
+function CopyDriverFiles(hMSI)
+	STRING szSrcFiles;
+	STRING szTargetDir;
+begin
+	szSrcFiles = SUPPORTDIR ^ "DRIVERS\*.*";
+	MessageBox(szSrcFiles, INFORMATION);
+	szTargetDir = INSTALLDIR ^ "DRIVERS";
+	MessageBox(szTargetDir, INFORMATION);
+	if (XCopyFile(szSrcFiles, szTargetDir, COMP_NORMAL) < 0) then
+		MessageBox("Copying Driver files failed", SEVERE);
+	endif;
+	return 0;
+end;
+
+function DeleteDriverFiles(hMSI)
+begin
+	DeleteDir(INSTALLDIR ^ "DRIVERS", ALLCONTENTS);
+end;
+
+function InstallDriver_SetData(hMSI)
+	int nLangID;
+	STRING vLangID;
+	STRING vProperty;
+begin
+	// nLangID = MsiGetLanguage(hMSI);
+	nLangID = SELECTED_LANGUAGE;
+	NumToStr(vLangID, nLangID);
+	vProperty = vLangID + ";" + INSTALLDIR;
+	MsiSetProperty(hMSI, "ND_InstallDriver", vProperty);
+end;
+
+function DeleteSystemInfFiles(hMSI)
+    STRING infDir ;
+    STRING dllDir ;
+    STRING drvDir ;
+    STRING oemFile ;
+  	number oemFile_len ;
+    STRING	pnfFile ;
+    STRING line ;
+    number result, lineno ;
+begin
+	
+	infDir = WINDIR ^ "INF" ;        // C:\WINDOWS\INF 
+
+	/////////////////////////////////////////////////////////////////////////////
+	//
+	//  delete inf files which are related to NetDisks
+	//	The files contain "; Lanscsiminiport.inf", "; LanscsiBus.inf", "; netLpx.INF"
+	result = FindAllFiles(infDir, "oem*.inf", oemFile, RESET) ;
+
+	while(result = 0)
+		if(	FileGrep(oemFile, "; lanscsiminiport.inf",line, lineno, RESTART) = 0 ||
+			FileGrep(oemFile, "; lanscsibus.inf",line, lineno, RESTART) = 0 ||
+			FileGrep(oemFile, "; netlpx.inf",line, lineno, RESTART) = 0) then
+
+			if( DeleteFile(oemFile) != 0) then
+//				SprintfBox ( INFORMATION, oemFile, "We couldn't delete %s\n", oemFile );
+			endif ;
+			oemFile_len = StrLength(oemFile) ;
+			pnfFile = oemFile ;
+			pnfFile[oemFile_len-3] = 'P' ;
+			pnfFile[oemFile_len-2] = 'N' ;
+			pnfFile[oemFile_len-1] = 'F' ;			
+			if(DeleteFile(pnfFile) != 0) then
+//				SprintfBox ( INFORMATION, oemFile, "We couldn't delete %s\n", oemFile );
+			endif ;
+		endif ;
+
+		result = FindAllFiles(infDir, "oem*.inf", oemFile, CONTINUE) ;
+	endwhile ;
+
+	return 0 ;
+end ;

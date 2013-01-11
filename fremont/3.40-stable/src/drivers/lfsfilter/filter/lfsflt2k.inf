@@ -1,0 +1,72 @@
+;-------------------------------------------------------------------------
+; lfsfilt.inf
+; 
+; Installation file (.inf) for Lean File Sharing Filter
+;
+; Copyright (c) 2002-2004, XIMETA, Inc.
+;-------------------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = "ActivityMonitor"
+;ClassGuid   = {b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}
+Provider    = %Provider%
+DriverVer   = 08/28/2000,1.0.0.1
+CatalogFile = lfsflt2k.cat
+
+[DestinationDirs]
+DefaultDestDir      = 12 ; DIRID_DRIVERS
+LFSFilt.DriverFiles = 12 ; DIRID_DRIVERS
+
+[DefaultInstall]
+OptionDesc          = %LFSFilt.ServiceDesc%
+CopyFiles           = LFSFilt.DriverFiles
+
+[DefaultInstall.Services]
+AddService=%LFSFilt.ServiceName%,,LFSFilt.Service
+
+[DefaultUninstall]
+DelFiles = LFSFilt.DriverFiles
+DelReg   = LFSFilt.DelReg
+
+[DefaultUninstall.Services]
+;DelService = lfsfilt,0x200		; Flags note to stop service first
+DelService = lfsfilt
+
+[LFSFilt.Service]
+DisplayName      = %LFSFilt.DisplayName%
+Description      = %LFSFilt.ServiceDesc%
+ServiceBinary    = %12%\lfsfilt.sys ;DIRID_DRIVERS\lfsfilt.sys
+ServiceType      = 2                ;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 0                ;SERVICE_BOOT_START
+ErrorControl     = 1                ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = %LFSFilt.LoadOrderGroup%
+AddReg           = LFSFilt.AddReg
+
+[LFSFilt.AddReg]
+HKR,,EventMessageFile,0x00020000,"%SystemRoot%\System32\IoLogMsg.dll;%SystemRoot%\System32\NdasIoMg.dll"
+
+[LFSFilt.DriverFiles]
+lfsfilt.sys
+
+[SourceDisksNames]
+1=%DiskId1%
+
+[SourceDisksFiles]
+lfsfilt.sys=1
+
+[Strings]
+; Non-localizable Strings
+LFSFilt.ServiceName         = "lfsfilt"
+LFSFilt.RegPath             = "SYSTEM\CurrentControlSet\Services\lfsfilt"
+LFSFilt.RegValue.MaxRecords = "MaxRecords"
+LFSFilt.RegValue.MaxNames   = "MaxNames"
+LFSFilt.RegValue.DebugFlags = "DebugFlags"
+LFSFilt.RegValue.AttachMode = "AttachMode"
+LFSFilt.LoadOrderGroup      = "System Bus Extender"
+
+; Localizable Strings
+Provider            = "XIMETA"
+LFSFilt.DisplayName = "NDAS Lean File Sharing Service"
+LFSFilt.ServiceDesc = "NDAS Lean File Sharing Service"
+DiskId1             = "NDAS Device Driver Installation Disk"

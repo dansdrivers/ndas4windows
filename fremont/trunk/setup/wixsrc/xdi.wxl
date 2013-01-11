@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2003/11/localization">
+
+	<String Id="xdi.ActionText.InstallInitialize">Initializing installation</String>
+	<String Id="xdi.ActionText.InstallExecute">Executing action scripts</String>
+	<String Id="xdi.ActionText.InstallFinalize">Finalizing installation</String>
+	<String Id="xdi.ActionText.ValidateProductID">Validating Product ID</String>
+	<!--<String Id="xdi.ActionText.xDiMsiInitialize">Initializing device driver processor</String>-->
+	<String Id="xdi.ActionText.xDiMsiValidateDriverServices">Validating driver services</String>
+	<String Id="xdi.ActionText.xDiMsiRemoveDrivers">Processing device driver removal</String>
+	<String Id="xdi.ActionText.xDiMsiInstallDrivers">Processing device driver installation</String>
+	<String Id="xdi.ActionText.xDiMsiProcessDriverScheduled">Processing device drivers</String>
+	<String Id="xdi.ActionText.xDiMsiProcessDriverRollback">Rollback device driver installation</String>
+	<String Id="xdi.ActionText.xDiMsiUpdateForceReboot">Evaluating reboot conditions</String>
+	<String Id="xdi.ActionText.xDiMsiUpdateScheduledReboot">Evaluating reboot conditions</String>
+	<String Id="xdi.ActionText.xDiMsiStopService">Stopping driver services</String>
+	<String Id="xdi.ActionText.xDiMsiStartService">Starting driver services</String>
+	<String Id="xdi.Error.28001">Error processing device driver (Error: [2])[4][3]</String>
+
+  <String Id="xdi.ActionText.xDiMsiInitialize">Initializing device driver processor</String>
+  <String Id="xdi.ActionText.xDiInstallFromInfSection">Installing device drivers</String>
+  <String Id="xdi.ActionText.xDiInstallFromInfSection.Template">Driver: [1]</String>
+  <String Id="xdi.ActionText.xDiInstallLegacyPnpDevice">Installing device drivers</String>
+  <String Id="xdi.ActionText.xDiInstallLegacyPnpDevice.Template">Driver: [1]</String>
+  <String Id="xdi.ActionText.xDiInstallPnpDeviceInf">Installing device drivers</String>
+  <String Id="xdi.ActionText.xDiInstallPnpDeviceInf.Template">Driver: [1]</String>
+  <String Id="xdi.ActionText.xDiInstallNetworkComponent">Installing device drivers</String>
+  <String Id="xdi.ActionText.xDiInstallNetworkComponent.Template">Driver: [1]</String>
+  <String Id="xdi.ActionText.xDiUninstallPnpDevice">Removing device drivers</String>
+  <String Id="xdi.ActionText.xDiUninstallPnpDevice.Template">Driver: [1]</String>
+  <String Id="xdi.ActionText.xDiUninstallNetworkComponent">Removing device drivers</String>
+  <String Id="xdi.ActionText.xDiUninstallNetworkComponent.Template">Driver: [1]</String>
+  <String Id="xdi.ActionText.xDiCleanupOEMInf">Removing device drivers</String>
+  <String Id="xdi.ActionText.xDiCleanupOEMInf.Template">Driver: [1]</String>
+  <String Id="xdi.ActionText.xDiStartService">Starting driver services</String>
+  <String Id="xdi.ActionText.xDiStartService.Template">Service: [1]</String>
+  <String Id="xdi.ActionText.xDiStopService">Stopping driver services</String>
+  <String Id="xdi.ActionText.xDiStopService.Template">Service: [1]</String>
+  <String Id="xdi.ActionText.xDiQueueScheduleReboot">Queueing reboot</String>
+  <String Id="xdi.ActionText.xDiCheckServicesInfSection">Validating driver services</String>
+  <String Id="xdi.ActionText.xDiCheckServicesInfSection.Template">Driver: [1]</String>
+
+</WixLocalization>

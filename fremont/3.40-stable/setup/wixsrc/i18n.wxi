@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Include>
+
+	<!-- language name substitution -->
+	<?if $(var.SetupLanguage)="NEU"?><?undef SetupLanguage?><?define SetupLanguage="0"?><?endif?>
+
+	<?if $(var.SetupLanguage)="ENU"?><?undef SetupLanguage?><?define SetupLanguage="en-US"?><?endif?>
+	<?if $(var.SetupLanguage)="CHS"?><?undef SetupLanguage?><?define SetupLanguage="zh-CN"?><?endif?>
+	<?if $(var.SetupLanguage)="CHT"?><?undef SetupLanguage?><?define SetupLanguage="zh-TW"?><?endif?>
+	<?if $(var.SetupLanguage)="DEU"?><?undef SetupLanguage?><?define SetupLanguage="de-DE"?><?endif?>
+	<?if $(var.SetupLanguage)="ESN"?><?undef SetupLanguage?><?define SetupLanguage="es-ES"?><?endif?>
+	<?if $(var.SetupLanguage)="FRA"?><?undef SetupLanguage?><?define SetupLanguage="fr-FR"?><?endif?>
+	<?if $(var.SetupLanguage)="ITA"?><?undef SetupLanguage?><?define SetupLanguage="it-IT"?><?endif?>
+	<?if $(var.SetupLanguage)="JPN"?><?undef SetupLanguage?><?define SetupLanguage="ja-JP"?><?endif?>
+	<?if $(var.SetupLanguage)="KOR"?><?undef SetupLanguage?><?define SetupLanguage="ko-KR"?><?endif?>
+	<?if $(var.SetupLanguage)="PTG"?><?undef SetupLanguage?><?define SetupLanguage="pt-PT"?><?endif?>
+	<?if $(var.SetupLanguage)="RUS"?><?undef SetupLanguage?><?define SetupLanguage="ru-RU"?><?endif?>
+
+	<!-- Language Codes and Code Pages -->
+
+	<?if $(var.SetupLanguage)="0"?>
+	<?define TargetLanguage="0"?>
+	<?define TargetCodepage="0"?>
+	<?define SISCodepage="1252"?>
+
+	<?elseif $(var.SetupLanguage)="en-US"?><?define TargetLanguage="1033"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="zh-CN"?><?define TargetLanguage="2052"?><?define TargetCodepage="936"?>
+	<?elseif $(var.SetupLanguage)="zh-TW"?><?define TargetLanguage="1028"?><?define TargetCodepage="950"?>
+	<?elseif $(var.SetupLanguage)="de-DE"?><?define TargetLanguage="1031"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="es-ES"?><?define TargetLanguage="3082"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="fr-FR"?><?define TargetLanguage="1036"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="it-IT"?><?define TargetLanguage="1040"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="ja-JP"?><?define TargetLanguage="1041"?><?define TargetCodepage="932"?>
+	<?elseif $(var.SetupLanguage)="ko-KR"?><?define TargetLanguage="1042"?><?define TargetCodepage="949"?>
+	<?elseif $(var.SetupLanguage)="pt-PT"?><?define TargetLanguage="2070"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="da-DK"?><?define TargetLanguage="1030"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="nl-NL"?><?define TargetLanguage="1043"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="nb-NO"?><?define TargetLanguage="1044"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="sv-SE"?><?define TargetLanguage="1053"?><?define TargetCodepage="1252"?>
+	<?elseif $(var.SetupLanguage)="ru-RU"?><?define TargetLanguage="1049"?><?define TargetCodepage="1251"?>
+	<?else?>
+	<!-- undefined language -->
+	<?define Setup_Language_Is_Unknown="1"?>
+	<?define Setup_Language_Is_Unknown="2"?>
+	<?endif?>
+
+</Include>

@@ -1,0 +1,111 @@
+
+8/22/2004 Chesong Lee <cslee@ximeta.com>
+
+There is an interesting post about driver signing policy manipulation.
+It seems that it is based on reverse engineering of the signtab.dll
+by Au Chtu Ng.
+
+This implementation does work for Windows XP (all of First Release, SP1, SP2) only.
+Windows 2003 Server need a little bit changes in the code.
+
+Our implementation - based on different source - fully supports 
+Windows XP and Windows 2003 Server (including XP SP2 and future releases)
+until Microsoft makes changes to its own implementation.
+
+-------------------------------------------------------------------------
+Availble from
+
+http://groups.google.com/groups?selm=5876405f.0207131200.6da637cc%40posting.google.com
+
+-------------------------------------------------------------------------
+
+From: Au Chtu Ng (auchtung2k@yahoo.com)
+Subject: Controlling Driver Signing Policy in XP from the application
+This is the only article in this thread
+View: Original Format
+Newsgroups: comp.os.ms-windows.programmer.win32, comp.os.ms-windows.programmer.drivers, comp.os.ms-windows.programmer.misc
+Date: 2002-07-13 13:00:40 PST 
+
+#include <windows.h>
+
+enum e_policy
+{
+  ep_ignore,
+  ep_warn,
+  ep_block
+};
+
+enum e_policy_type
+{
+  ept_non_driver,
+  ept_driver
+};
+
+
+bool set_signing_policy(e_policy pol, e_policy_type type)
+{
+  typedef void (__stdcall * f_entry)(void *);
+
+  HKEY   hKey = 0;
+  DWORD  dwType, dwSize = 4;
+  WORD   wSeed[2];
+
+  HMODULE  hLib = 0;
+  f_entry  f;
+  
+  char     magic[16];
+  
+  bool r = false;
+
+  //
+  //
+  //
+  if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, 
+                   "SYSTEM\\CurrentControlSet\\Control\\Session Manager\\WPA\\PnP",
+                   0,
+                   KEY_QUERY_VALUE,
+                   &hKey) != ERROR_SUCCESS)
+    goto done;
+
+  if (RegQueryValueEx(hKey, "seed", 0, &dwType, (BYTE*)wSeed, &dwSize) ||
+      dwSize != 4 ||
+      dwType != REG_DWORD)
+    goto done;
+
+  //
+  // 
+  //
+  hLib = LoadLibrary("setupapi.dll");
+  if (! hLib)
+    goto done;
+
+  f = (f_entry)GetProcAddress(hLib, "pSetupGetRealSystemTime");
+  if (! f)
+    goto done;
+
+
+  magic[0x04] = (type & 0x01) << 2;  // driver signing policy
+  magic[0x0F] = (pol & 0x03) << 2;   // value
+
+  *(WORD*)(magic+0x00) = wSeed[1];
+  *(WORD*)(magic+0x0A) = wSeed[0];
+
+  f(magic);
+
+  r = true;
+
+done:
+
+  if (hLib)
+    FreeLibrary(hLib);
+
+  if (hKey)
+    RegCloseKey(hKey);
+
+  return r;
+}
+
+void main()
+{
+  set_signing_policy(ep_ignore, ept_driver);
+}

@@ -1,0 +1,11 @@
+// Do not open this file from Resource Editor
+#ifndef APSTUDIO_INVOKED
+#include <windows.h>
+
+// LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+NDASATABMF MOFDATA "ndasata.bmf"
+
+#endif /* APSTUDIO_INVOKED */

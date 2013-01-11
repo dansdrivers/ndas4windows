@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndassvc", "service\ndassvc.vcproj", "{C6D8A7C9-6511-4AA9-BF25-196B24837744}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FDDA59D9-1C02-4BC6-BDC0-53E1CBF689A6} = {FDDA59D9-1C02-4BC6-BDC0-53E1CBF689A6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ndassup", "support\ndassup.vcproj", "{FDDA59D9-1C02-4BC6-BDC0-53E1CBF689A6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lpxtrans", "lpxtrans\lpxtrans.vcproj", "{E5D495C4-C03A-4E00-BD7B-58C9AFEFB990}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C6D8A7C9-6511-4AA9-BF25-196B24837744}.Debug.ActiveCfg = Debug|Win32
+		{C6D8A7C9-6511-4AA9-BF25-196B24837744}.Debug.Build.0 = Debug|Win32
+		{C6D8A7C9-6511-4AA9-BF25-196B24837744}.Release.ActiveCfg = Release|Win32
+		{C6D8A7C9-6511-4AA9-BF25-196B24837744}.Release.Build.0 = Release|Win32
+		{FDDA59D9-1C02-4BC6-BDC0-53E1CBF689A6}.Debug.ActiveCfg = Debug|Win32
+		{FDDA59D9-1C02-4BC6-BDC0-53E1CBF689A6}.Debug.Build.0 = Debug|Win32
+		{FDDA59D9-1C02-4BC6-BDC0-53E1CBF689A6}.Release.ActiveCfg = Release|Win32
+		{FDDA59D9-1C02-4BC6-BDC0-53E1CBF689A6}.Release.Build.0 = Release|Win32
+		{E5D495C4-C03A-4E00-BD7B-58C9AFEFB990}.Debug.ActiveCfg = Debug|Win32
+		{E5D495C4-C03A-4E00-BD7B-58C9AFEFB990}.Debug.Build.0 = Debug|Win32
+		{E5D495C4-C03A-4E00-BD7B-58C9AFEFB990}.Release.ActiveCfg = Release|Win32
+		{E5D495C4-C03A-4E00-BD7B-58C9AFEFB990}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

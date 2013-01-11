@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(config).config" Condition="exists('$(Config).config')" />
+
+  <PropertyGroup>
+	<baseprojproperties>
+	  oem=$(oem);
+	  release=$(release);
+	  platform=$(platform)
+	</baseprojproperties>
+	<baseprojproperties Condition="'$(productname)'!=''">
+	  $(baseprojproperties);
+	  productname=$(productname)
+	</baseprojproperties>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <MUIPackage>false</MUIPackage>
+	<Clean>false</Clean>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<PlatformSuffix>_$(Platform)</PlatformSuffix>
+	<PlatformSuffix Condition="'$(PlatformSuffix)'=='_'"></PlatformSuffix>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <MsiDir>$(oem)\obj\release_$(release)_$(platform)\msi</MsiDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<WixProjectRoot>..</WixProjectRoot>
+	<Config>$(oem)_$(release)</Config>
+	<Cpu Condition="$(Platform)==x86">i386</Cpu>
+	<Cpu Condition="$(Platform)==x64">amd64</Cpu>
+	<MsmDropPath>..\oem\$(oem)\obj\release_$(release)_$(platform)\msm</MsmDropPath>
+	<WixLibDropPath>..\oem\$(oem)\obj\release_$(release)_$(platform)\wixlib</WixLibDropPath>
+	<C_SetupDataDir>..\oem\$(oem)\branded\$(cpu)</C_SetupDataDir>
+	<R_SetupDataDir>.\branded\$(cpu)</R_SetupDataDir>
+	<R_NdasMergeModulePath>.\obj\release_$(release)_$(platform)\msm</R_NdasMergeModulePath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NdasSetupVersionTagProperties Condition="'$(NoSetupVersionTag)'!='true'">NdasSetupVersionTag=.$(oem)-$(release)</NdasSetupVersionTagProperties>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+	<NdasscBuildProperties>
+	  $(NdasscBuildProperties);
+	  $(BaseProjectProperties);
+	  Config=$(Config);
+	  bindropdir=$(msmdroppath);
+	  setupdatadir=$(C_SetupDataDir)
+	</NdasscBuildProperties>
+	<NdasscuiBuildProperties>
+	  $(NdasscuiBuildProperties);
+	  $(BaseProjectProperties);
+	  Config=$(Config);
+	  bindropdir=$(msmdroppath)
+	</NdasscuiBuildProperties>
+	<NdasBuildProperties>
+      $(NdasBuildProperties);
+      $(BaseProjectProperties);
+      $(NdasSetupVersionTagProperties);
+      OutputType=library;
+      Config=$(Config);
+      bindropdir=$(wixlibdroppath);
+      setupdatadir=$(R_SetupDataDir);
+      NdasMergeModulePath=$(R_NdasMergeModulePath);
+      icondir=obj\ibd;
+      ibddir=obj\ibd;
+    </NdasBuildProperties>
+  </PropertyGroup>
+
+  <Target Name="Build" DependsOnTargets="CheckPrerequisites;PreBuild;CoreBuild;PostBuild" />
+  <Target Name="Clean" DependsOnTargets="SetPropertiesForClean;Build;CleanPackageFiles" />
+  <Target Name="DistClean" DependsOnTargets="Clean;RemoveObjDir;RemovePackageDir" />
+
+  <Target Name="PreBuild"  DependsOnTargets="PrepareBuild;MergeIbd;MergeWxl;BuildNdasscMsm;BuildNdasscuiMsm;BuildNdasWixlib" />
+  <Target Name="CoreBuild" DependsOnTargets="BuildNdasMsi" />
+  <Target Name="PostBuild" DependsOnTargets="GenerateLocalizedTransform;PackageFiles" />
+
+  <!-- clean needs to call every clean task in sub-projects -->
+  <Target Name="SetPropertiesForClean">
+	<CreateProperty Value="Clean">
+	  <Output TaskParameter="Value" PropertyName="SubProjectTargets" />
+	</CreateProperty>
+	<CreateProperty Value="true">
+	  <Output TaskParameter="Value" PropertyName="Clean" />
+	</CreateProperty>
+  </Target>
+
+  <Target Name="RemoveObjDir">
+    <RemoveDir Directories="$(oem)\obj" />
+  </Target>
+
+  <Target Name="RemovePackageDir">
+    <RemoveDir Directories="$(oem)\package" />
+  </Target>
+
+  <Target Name="CheckPrerequisites">
+	<Error Condition="'$(config)'=='' or '$(config)'=='_'" 
+		   Text="Config property is not set. Use /p:config=&lt;configname&gt;." />
+	<Error Condition="!exists('$(config).config')"
+		   Text="Configuration file $(config).config does not exist." />
+  </Target>
+
+  <Target Name="PrepareBuild" DependsOnTargets="GetProductVersion;GetProductCode">
+
+    <!-- if there are multiple languages, set MUIPackage property 'true' -->
+    <CreateProperty Condition="'@(Language)'!='@(Language,'')'" Value="true">
+      <Output TaskParameter="Value" PropertyName="MUIPackage" />
+    </CreateProperty>
+
+    <CreateProperty Value="_$(MsiProductVersion)">
+	  <Output TaskParameter="Value" PropertyName="ProductVersionSuffix" />
+	</CreateProperty>
+	<CreateProperty Value="$(RuntimeProperties);MsiProductVersion=$(MsiProductVersion)">
+	  <Output TaskParameter="Value" PropertyName="RuntimeProperties" />
+	</CreateProperty>
+	<CreateProperty Value="$(RuntimeProperties);MsiProductCode=$(MsiProductCode)">
+	  <Output TaskParameter="Value" PropertyName="RuntimeProperties" />
+	</CreateProperty>
+  </Target>
+
+  <!-- merge wxl file -->
+
+  <Target Name="MergeWxl" DependsOnTargets="CreateOemWxl" Condition="!$(Clean)"/>
+
+  <Target Name="CreateOemWxl">
+	<!-- oem wxl for ndas.msi -->
+	<MSBuild Projects="0_genwxl.proj" 
+			 Targets="$(SubProjectTargets)"
+			 Properties="oem=$(oem);WxlLanguage=%(language.identity);GenWxlPropertyFile=0_genwxl_ndas.properties" />
+	<!-- oem wxl for ndasscui.msm -->
+	<MSBuild Projects="0_genwxl.proj" 
+			 Targets="$(SubProjectTargets)"
+			 Properties="oem=$(oem);WxlLanguage=%(language.identity);GenWxlPropertyFile=0_genwxl_ndasscui.properties" />
+  </Target>
+
+  <!-- merge install binary data -->
+
+  <Target Name="MergeIbd" DependsOnTargets="CreateIbdItems;CopyBaseIbd;CopyOemIbd" Condition="!$(Clean)"/>
+
+  <Target Name="CreateIbdItems">
+	<CreateItem Include="$(oem)\ibd\*.*">
+	  <Output TaskParameter="Include" ItemName="OemIbd" />
+	</CreateItem>
+    <CreateItem Include="..\ndas.msi\ibd\*.*" Exclude="@(OemIbd->'..\ndas.msi\ibd\%(filename)%(extension)')">
+	  <Output TaskParameter="Include" ItemName="BaseIbd" />
+	</CreateItem>
+  </Target>
+
+  <Target Name="CopyBaseIbd"
+		  Inputs="@(BaseIbd)"
+		  Outputs="@(BaseIbd->'$(oem)\obj\ibd\%(filename)%(extension)')">
+    <Message Text="Base Install Binaries:" />
+    <Message Text="  %(BaseIbd.identity)" />
+    <Copy SourceFiles="@(BaseIbd)" DestinationFolder="$(oem)\obj\ibd" />
+  </Target>
+
+  <Target Name="CopyOemIbd"
+		  Inputs="@(OemIbd)"
+		  Outputs="@(OemIbd->'$(oem)\obj\ibd\%(filename)%(extension)')">
+    <Message Text="OEM Install Binaries:" />
+    <Message Text="  %(OemIbd.identity)" />
+    <Copy SourceFiles="@(OemIbd)" DestinationFolder="$(oem)\obj\ibd" />
+  </Target>
+
+  <Target Name="BuildNdasMsi" DependsOnTargets="BuildNeutralNdasMsi;BuildLocalizedNdasMsi" />
+
+  <Target Name="BuildNeutralNdasMsi" DependsOnTargets="PrepareBuild" Condition="$(MUIPackage)">
+    <MSBuild Projects="0_oembuild.subproj" Targets="$(SubProjectTargets)"
+			 Properties="$(baseprojproperties);$(runtimeproperties);SetupLanguage=0">
+    </MSBuild>
+  </Target>
+
+  <Target Name="BuildLocalizedNdasMsi" DependsOnTargets="PrepareBuild">
+    <MSBuild Projects="0_oembuild.subproj" Targets="$(SubProjectTargets)"
+			 Properties="$(baseprojproperties);$(runtimeproperties);SetupLanguage=%(language.identity)">
+    </MSBuild>
+  </Target>
+
+  <!-- generate msi transforms -->
+  <Target Name="GenerateLocalizedTransform"
+		  Condition="'@(language)'!='@(language,' ')'">
+	<CreateProperty Value="$(msidir)\$(productname)$(productversionsuffix)$(platformsuffix).msi">
+	  <Output TaskParameter="Value" PropertyName="BaseMsi" />
+	</CreateProperty>
+ 	<CreateItem Include="$(msidir)\$(productname)$(productversionsuffix)$(platformsuffix)_%(language.identity).msi">
+ 	  <Output TaskParameter="Include" ItemName="TargetMsi"/>
+	</CreateItem>
+	<CreateProperty Value="@(targetmsi)">
+	  <Output TaskParameter="Value" PropertyName="TargetMsiProp"/>
+	</CreateProperty>
+    <MSBuild Projects="0_msitransform.subproj"
+			 Targets="$(SubProjectTargets)"
+			 Properties="basemsi=$(basemsi);targetmsiprop=$(targetmsiprop)">
+    </MSBuild>
+  </Target>
+
+  <!-- make package files -->
+  <Target Name="PackageFiles"
+		  Condition="!$(Clean)"
+		  DependsOnTargets="SetPropertiesForPackageFiles">
+
+	<Copy SourceFiles="@(PackageFile)"
+		  DestinationFolder="$(PackageDirectory)" 
+		  SkipUnchangedFiles="true"/>
+
+    <Copy SourceFiles="@(PackageSourceDataFile)"
+          DestinationFiles="@(PackageDestinationDataFile)" 
+          SkipUnchangedFiles="true" />
+    <MSBuild Projects="0_bootstrapper.subproj"
+			 Properties="PackageDir=$(PackageDirectory)" />
+  </Target>
+
+  <Target Name="CleanPackageFiles" DependsOnTargets="SetPropertiesForPackageFiles">
+	<CreateItem Include="$(PackageDirectory)\**\*.*">
+	  <Output TaskParameter="Include" ItemName="DeletingPackageFile" />
+	</CreateItem>
+    <Delete Files="@(DeletingPackageFile)" />
+    <CreateItem Include="$(msidir)\**\*.*">
+      <Output TaskParameter="Include" ItemName="DeletingPackageFile" />
+    </CreateItem>
+    <Delete Files="@(DeletingPackageFile)" />
+  </Target>
+
+  <Target Name="SetPropertiesForPackageFiles">
+
+    <!-- in MUI packages -->
+	<CreateItem Condition="$(MUIPackage)" Include="$(msidir)\$(productname)$(productversionsuffix)$(platformsuffix).msi">
+	  <Output TaskParameter="Include" ItemName="PackageFile" />
+	</CreateItem>
+    <CreateItem Condition="$(MUIPackage)" Include="$(msidir)\$(productname)$(productversionsuffix)$(platformsuffix)_%(language.identity).mst">
+ 	  <Output TaskParameter="Include" ItemName="PackageFile"/>
+	</CreateItem>
+    
+	<!-- single language package -->
+ 	<CreateItem Condition="!$(MUIPackage)" Include="$(msidir)\$(productname)$(productversionsuffix)$(platformsuffix)_%(language.identity).msi">
+ 	  <Output TaskParameter="Include" ItemName="PackageFile"/>
+	</CreateItem>
+
+    <!-- package data files -->
+    <CreateProperty Value="$(msidir)">
+      <Output TaskParameter="Value" PropertyName="PackageSourceDirectory" />
+    </CreateProperty>
+
+    <CreateItem Include="$(msidir)\**\*.*" Exclude="$(msidir)\*.msi">
+      <Output TaskParameter="Include" ItemName="PackageSourceDataFile" />
+    </CreateItem>
+    
+    <!-- package directory -->
+    <CreateProperty Value="$(oem)\package\$(release)$(platformsuffix)">
+	  <Output TaskParameter="Value" PropertyName="PackageDirectory"/>
+	</CreateProperty>
+
+    <CreateItem Include="$(PackageDirectory)\%(PackageSourceDataFile.recursivedir)%(PackageSourceDataFile.filename)%(PackageSourceDataFile.extension)">
+      <Output TaskParameter="Include" ItemName="PackageDestinationDataFile" />
+    </CreateItem>
+
+  </Target>
+
+  <Target Name="BuildNdasscMsm">
+	<MSBuild Projects="..\ndassc.msm\ndassc.proj" Targets="$(SubProjectTargets)"
+			 Properties="$(NdasscBuildProperties);$(RuntimeProperties)">
+	  <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+	</MSBuild>
+  </Target>
+
+  <Target Name="BuildNdasscuiMsm" 
+          DependsOnTargets="BuildNeutralNdasscuiMsm;BuildLocalizedNdasscuiMsm" />
+  
+  <Target Name="BuildNeutralNdasscuiMsm" 
+          Condition="'@(Language)'!='@(Language,' ')'">
+	<MSBuild Projects="..\ndasscui.msm\ndasscui.proj" 
+             Targets="$(SubProjectTargets)"
+			 Properties="$(NdasscuiBuildProperties);$(RuntimeProperties);SetupLanguage=0;wxldir=..\oem\$(oem)\obj\loc\en-US"
+			 Condition="'@(Language)'!='@(Language,' ')'">
+	  <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+	</MSBuild>
+  </Target>
+
+  <Target Name="BuildLocalizedNdasscuiMsm"
+          Inputs="__%(Language.identity)__"
+          Outputs="__%(Language.identity)__">
+    <Message Text="Language=%(Language.identity)" />
+    <MSBuild Projects="..\ndasscui.msm\ndasscui.proj"
+             Targets="$(SubProjectTargets)"
+			 Properties="$(NdasscuiBuildProperties);$(RuntimeProperties);SetupLanguage=%(Language.identity);wxldir=..\oem\$(oem)\obj\loc\%(Language.identity)">
+      <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+    </MSBuild>
+  </Target>
+
+  <Target Name="BuildNdasWixlib" 
+          DependsOnTargets="CreateResCompItemsForNdasWixlib;
+                            BuildNeutralNdasWixlib;
+                            BuildLocalizedNdasWixLib">
+  </Target>
+
+  <Target Name="CreateResCompItemsForNdasWixlib">
+    <CreateItem Include="@(language->'res.%(identity)')">
+      <Output TaskParameter="Include" ItemName="ResCompItems" />
+    </CreateItem>
+    <CreateProperty Value="@(rescompitems)">
+      <Output TaskParameter="Value" PropertyName="ResCompProperties" />
+    </CreateProperty>
+    <CreateProperty Value="rescomp=$(ResCompProperties)" Condition="'$(ResCompProperties)'!=''">
+      <Output TaskParameter="Value" PropertyName="ResCompProperties" />
+    </CreateProperty>
+  </Target>
+
+  <Target Name="BuildNeutralNdasWixlib" 
+          Condition="'@(Language)'!='@(Language,' ')'">
+    <MSBuild Projects="..\ndas.msi\ndas.proj" 
+             Targets="$(SubProjectTargets)"
+			 Properties="$(NdasBuildProperties);$(ResCompProperties);$(RuntimeProperties);SetupLanguage=0"
+			 Condition="'@(Language)'!='@(Language,' ')'">
+	  <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+	</MSBuild>
+  </Target>
+
+  <Target Name="BuildLocalizedNdasWixlib" 
+          Inputs="__%(Language.identity)__" 
+          Outputs="__%(Language.identity)__">
+    <Message Text="Language=%(Language.identity)" />
+    <MSBuild Projects="..\ndas.msi\ndas.proj" 
+             Targets="$(SubProjectTargets)"
+             Properties="$(NdasBuildProperties);$(ResCompProperties);$(RuntimeProperties);SetupLanguage=%(Language.identity)">
+      <Output TaskParameter="TargetOutputs" ItemName="OutputFile" />
+    </MSBuild>
+  </Target>
+
+  <Import Project="..\bin\msbuild\msiprop.targets" />
+
+</Project>
+

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ndasportevent"
+	ProjectGUID="{D55BDFE7-1EDE-4F38-9C9E-235097F74B52}"
+	RootNamespace="ndasportevent"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32" />
+		<Platform
+			Name="x64" />
+	</Platforms>
+	<ToolFiles></ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objd\i386"
+			IntermediateDirectory="objd\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="xbuild -ePwi -M -I -b"
+				ReBuildCommandLine="xbuild -cePwi -M -I -b"
+				CleanCommandLine="xbuild -c0"
+				Output="objd\i386\ndasportevent.exe"
+				PreprocessorDefinitions="DBG"
+				IncludeSearchPath="..\inc;..\..\inc;..\..\..\inc;..\..\..\..\inc;..\..\..\..\..\inc"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="xbuild amd64 chk . -ePMwiI -b"
+				ReBuildCommandLine="xbuild amd64 chk . -cePMwiI -b"
+				CleanCommandLine="xbuild amd64 chk . -c0"
+				Output="objd\amd64\ndasportevent.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath="..\inc\kernel;..\..\inc;..\..\inc\ndas;..\..\inc\public;..\..\inc\public\ndas"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="obj\i386"
+			IntermediateDirectory="obj\i386"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="xbuild  fre -egPMwiI"
+				ReBuildCommandLine="xbuild i386 fre -cegPMwiI"
+				CleanCommandLine="xbuild i386 fre -c0"
+				Output="obj\i386\ndasportevent.exe"
+				PreprocessorDefinitions="WIN32;NDEBUG;"
+				IncludeSearchPath="..\inc;..\..\inc;..\..\..\inc;..\..\..\..\inc;..\..\..\..\..\inc"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="xbuild amd64 fre . -egPMwiI"
+				ReBuildCommandLine="xbuild amd64 fre . -cegPMwiI"
+				CleanCommandLine="xbuild amd64 fre . -c0"
+				Output="obj\amd64\ndasportevent.exe"
+				PreprocessorDefinitions="WIN32;NDEBUG;"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged="" />
+		</Configuration>
+	</Configurations>
+	<References></References>
+	<Files>
+		<File
+			RelativePath=".\eventwnd.cpp"></File>
+		<File
+			RelativePath=".\eventwnd.hpp"></File>
+		<File
+			RelativePath=".\makefile"></File>
+		<File
+			RelativePath=".\ndasportevent.cpp"></File>
+		<File
+			RelativePath=".\sources"></File>
+		<File
+			RelativePath=".\stdatl.hpp"></File>
+	</Files>
+	<Globals></Globals>
+</VisualStudioProject>

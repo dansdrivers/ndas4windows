@@ -1,0 +1,21 @@
+// Do not open this file from Resource Editor
+#ifndef APSTUDIO_INVOKED
+#include <windows.h>
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+#include "ndasiomg.ver"
+#include "ndasverp.h"
+
+#define VER_FILETYPE			VFT_DLL
+#define VER_FILESUBTYPE			VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR "NDAS IO Event Message DLL"
+#define VER_INTERNALNAME_STR	"ndasiomg.dll"
+
+#include "ndascommon.ver"
+
+#include "_ndasiomg.rc"
+
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="xdbgflags"
+	ProjectGUID="{437B0ADE-A06D-4471-A103-8DF75C218B22}"
+	RootNamespace=""
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="ddkbuild -WNET2K chk . -e"
+				ReBuildCommandLine="ddkbuild -WNET2K chk . -ceZ"
+				CleanCommandLine="ddkbuild -WNET2K chk . -c0"
+				Output="objchk_w2k_x86\i386\xdbgflag.exe"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="ddkbuild -WNET2K fre . -e"
+				ReBuildCommandLine="ddkbuild -WNET2K fre . -ceZ"
+				CleanCommandLine="ddkbuild -WNET2K fre . -c0"
+				Output="objfre_w2k_x86\i386\xdbgflag.exe"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\maindlg.cpp">
+			</File>
+			<File
+				RelativePath=".\stdafx.cpp">
+			</File>
+			<File
+				RelativePath=".\xdbgflags.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath=".\maindlg.h">
+			</File>
+			<File
+				RelativePath=".\resource.h">
+			</File>
+			<File
+				RelativePath=".\stdafx.h">
+			</File>
+			<File
+				RelativePath=".\xdbgflags.h">
+			</File>
+			<File
+				RelativePath=".\xdebug.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\xdbgflags.rc">
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\deploy.xml">
+		</File>
+		<File
+			RelativePath=".\makefile">
+		</File>
+		<File
+			RelativePath=".\sources">
+		</File>
+		<File
+			RelativePath=".\xmatl.mk">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

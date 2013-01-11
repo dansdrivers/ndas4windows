@@ -1,0 +1,50 @@
+TARGETNAME=ndasbus
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+
+NTTARGETFILE0=mofcomp
+
+C_DEFINES=$(C_DEFINES) -DUNICODE -D_UNICODE
+# Windows Vista support
+C_DEFINES=$(C_DEFINES) -D__VISTA_SUPPORT__
+
+INCLUDES=$(NDAS_DRIVER_INC_PATH);$(NDAS_DRIVER_INC_PATH)\kernel;$(NDAS_INC_PATH)
+RCOPTIONS=/i $(NDAS_INC_PATH)
+
+BUILD_CONSUMES=libhash liblpxtdi libndask libscrc32
+
+TARGETLIBS=\
+	$(DDK_LIB_PATH)\tdi.lib \
+	$(NDAS_LIB_PATH)\libscrc32.lib \
+	$(NDAS_LIB_PATH)\libhash.lib \
+	$(NDAS_DRIVER_LIB_PATH)\liblpxtdi.lib \
+	$(NDAS_DRIVER_LIB_PATH)\libndask.lib
+
+TARGETLIBS=$(TARGETLIBS) \
+	$(DDK_LIB_PATH)\ntstrsafe.lib
+
+SOURCES= busenum.rc \
+	busenum.c \
+	pnp.c \
+	power.c \
+	buspdo.c \
+	wmi.c \
+	ndasbus.c \
+	register.c \
+	utils.c
+
+# Set INF File Version
+NTTARGETFILES=
+INFFILENAME=$(TARGETNAME)
+CDFFILENAME=$(INFFILENAME)
+
+INFSRCNAME=$(INFFILENAME)
+CDFSRCNAME=$(CDFFILENAME)
+!if exists($(INFFILENAME).$(TARGET_DIRECTORY).inf)
+INFSRCNAME=$(INFSRCNAME).$(TARGET_DIRECTORY)
+!endif
+!if exists($(INFFILENAME).$(TARGET_DIRECTORY).cdf)
+CDFSRCNAME=$(CDFSRCNAME).$(TARGET_DIRECTORY)
+!endif
+
+MISCFILES=$(O)\$(INFFILENAME).inf $(O)\$(CDFFILENAME).cdf

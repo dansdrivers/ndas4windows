@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="lanscsiklib"
+	ProjectGUID="{D5436445-F946-4507-B260-6BF1816F62EB}"
+	RootNamespace=""
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="objchk_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K chk . -e"
+				ReBuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K chk . -ceZ"
+				CleanCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K chk . -c0"
+				Output="objchk_w2k_x86\i386\lanscsiklib.exe"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="objfre_w2k_x86\i386"
+			IntermediateDirectory="."
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K fre . -e"
+				ReBuildCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K fre . -ceZ"
+				CleanCommandLine="..\..\..\bin\ddkbuild.bat -WNET2K fre . -c0"
+				Output="objfre_w2k_x86\i386\lanscsiklib.exe"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\cipher.c">
+			</File>
+			<File
+				RelativePath=".\kdebug.c">
+			</File>
+			<File
+				RelativePath=".\lsccb.c">
+			</File>
+			<File
+				RelativePath=".\lslurn.c">
+			</File>
+			<File
+				RelativePath=".\lslurnassoc.c">
+			</File>
+			<File
+				RelativePath=".\lslurnide.c">
+			</File>
+			<File
+				RelativePath=".\lslurnidedisk.c">
+			</File>
+			<File
+				RelativePath=".\lslurnideodd.c">
+			</File>
+			<File
+				RelativePath=".\lsproto.c">
+			</File>
+			<File
+				RelativePath=".\lsprotoide.c">
+			</File>
+			<File
+				RelativePath=".\lstransport.c">
+			</File>
+			<File
+				RelativePath=".\lsutils.c">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath="..\inc\kernel\cipher.h">
+			</File>
+			<File
+				RelativePath="..\inc\kernel\kdebug.h">
+			</File>
+			<File
+				RelativePath="..\inc\kernel\lsccb.h">
+			</File>
+			<File
+				RelativePath="..\inc\kernel\lsklib.h">
+			</File>
+			<File
+				RelativePath="..\inc\kernel\lslurn.h">
+			</File>
+			<File
+				RelativePath=".\lslurnassoc.h">
+			</File>
+			<File
+				RelativePath="..\inc\kernel\lslurnide.h">
+			</File>
+			<File
+				RelativePath="..\inc\kernel\lsproto.h">
+			</File>
+			<File
+				RelativePath="..\inc\kernel\lsprotoide.h">
+			</File>
+			<File
+				RelativePath="..\inc\kernel\lstransport.h">
+			</File>
+			<File
+				RelativePath="..\inc\kernel\lsutils.h">
+			</File>
+			<File
+				RelativePath=".\ver.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+		</Filter>
+		<File
+			RelativePath=".\makefile">
+		</File>
+		<File
+			RelativePath=".\sources">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

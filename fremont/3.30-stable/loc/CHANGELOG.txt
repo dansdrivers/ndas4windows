@@ -1,0 +1,29 @@
+2006-07-18  Chesong Lee  <cslee@ximeta.com>
+
+	New MSBuild task files
+	
+	* tools\XIMETA.Tasks.dll
+	* tools\XIMETA.Loc.dll
+	* tools\ICSharpCode.sharpZipLib.dll 
+
+	* tools\createbaseloc.{proj,cmd}: Added Base Localization Project creator
+	* tools\resloc.exe, tools\resmap.exe, tools\msgloc.exe: now uses XIMETA.Loc.dll
+
+	Build Process has been mostly rewritten
+
+	* oem\build.proj
+	* oem\loc.targets
+	* oem\loc.items
+	* oem\{site}\loc.proj
+
+	Added documentation
+
+	* CHANGELOG.txt
+	* README.txt
+
+	New OEM Kit
+
+	* oemkit\oemkit.proj MSBuild project to generate OEM KIT 
+	* oemkit\readme.htm  README file for LBK
+	
+

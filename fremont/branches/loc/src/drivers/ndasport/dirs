@@ -1,0 +1,2 @@
+DIRS=port ndasportctl ndasata filedisk ndasdlu catalogs
+

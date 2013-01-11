@@ -1,0 +1,9 @@
+!include ..\sources.inc
+
+TARGETNAME=dsigcmd
+TARGETTYPE=PROGRAM
+UMTYPE=console
+UMENTRY=wmain
+
+INCLUDES=..
+SOURCES=$(SOURCES) main.cpp

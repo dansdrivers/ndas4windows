@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization>
+    <!-- Summary Information Stream -->
+    <String Id="SIS_MANUFACTURER">XIMETA, Inc.</String>
+    <String Id="SIS_KEYWORDS">Installer,MSI,Database,NDAS</String>
+    <String Id="SIS_COMMENTS">NDAS Software and Device Drivers for NetDisks and other NDAS devices</String>
+    <!-- Add/Remove Program Properties -->
+    <String Id="ARPURLUPDATEINFO">http://www.ximeta.com</String>
+    <String Id="ARPHELPLINK">http://www.ximeta.com/support/</String>
+    <String Id="ARPURLINFOABOUT">http://www.ximeta.com</String>
+    <String Id="ARPCONTACT">Customer Support</String>
+    <String Id="ARPCOMMENTS">NDAS Software</String>
+	<!-- General -->
+	<String Id="ProductName">NDAS Software (FS)</String>
+	<String Id="PackageDescription">NDAS Software (FS)</String>
+	<String Id="Manufacturer">XIMETA, Inc.</String>
+	<String Id="DialogCaption">Windows Installer Setup</String>
+</WixLocalization>

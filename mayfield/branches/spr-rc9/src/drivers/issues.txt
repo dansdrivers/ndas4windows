@@ -1,0 +1,9 @@
+
+- Non-up-to-date projects
+
+  These projects are not up-to-date from the trunk. (Not from here)
+
+  o afdtcp
+  o wanscsioplib
+
+

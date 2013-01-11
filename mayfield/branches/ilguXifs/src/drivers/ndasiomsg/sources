@@ -1,0 +1,24 @@
+TARGETNAME=ndasiomg
+TARGETTYPE=DYNLINK
+TARGETPATH=obj
+
+MC_FLAGS=-suc -x $(PASS0_HEADERDIR)
+RESOURCE_ONLY_DLL=1
+INCLUDES=$(NDAS_INC_PATH);$(PASS0_HEADERDIR)
+NTTARGETFILE0=$(O)\_ndasiomg.mc
+
+# to publish headers
+NTTARGETFILES=$(NDAS_PUBLIC_INC_PATH)\ndas\ndasiomsg.h
+
+USER_INCLUDES=\
+	$(O)\_ndasiomg.mc \
+	$(O)\_ndasiomg.rc \
+	$(NDAS_PUBLIC_INC_PATH)\ndas\ndasiomg.h
+
+PASS0_SOURCEDIR=$(O)
+PASS0_HEADERDIR=$(O)
+
+SOURCES=\
+	ndasiomg.rc \
+	$(O)\_ndasiomg.mc \
+	$(O)\_ndasiomg.rc
