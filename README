@@ -1,0 +1,20 @@
+These folders contain branches and versions from the NDAS legacy development.
+
+Mayfield was the last NetDisk software branch. 
+First transform from Mayfield was Freemont. 
+Last transform from Mayfield was Chagrin. 
+
+netdisk started in 2001
+|
+|-	Mayfield branch ended with NDAS v3.12
+	|
+	|- Freemont branch in this repo provides NDAS 3.50
+    |  Higher versions were released, but those are not
+    |  permitted in this Open Source release.
+	|
+	|- Chagrin (NDAS 4.0) was never released. It was a
+	|  branched to create a different algorithm for 
+	|  multiple write access. The role of access controller
+	|  would be more flexible and IO would be managed by
+	|  need, rather than by a single host at all times.
+
